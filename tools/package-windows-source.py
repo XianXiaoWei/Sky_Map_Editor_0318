@@ -20,6 +20,9 @@ excluded_suffixes = {'.bak', '.tmp', '.log', '.pyc', '.pyo', '.keystore', '.jks'
 # This numeric lookup table and author image are source/runtime inputs, not
 # original maps/models/textures or compiled executables.
 required_assets = {'docs/beamo-rsqrt-capability.bin', 'src/renderer/author-appreciation.png'}
+# Keep the README showcase images in source packages.
+required_assets.update(file.relative_to(root).as_posix()
+                       for file in (root / 'docs/screenshots').glob('*.png') if file.is_file())
 for folder in ['src', 'native', 'tools', 'tests', 'docs', 'evidence']:
     for file in (root / folder).rglob('*'):
         if not file.is_file():
