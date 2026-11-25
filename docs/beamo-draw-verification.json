@@ -1,0 +1,338 @@
+{
+  "dateUTC": "2026-11-21T15:11:12.072562+00:00",
+  "passed": true,
+  "scope": "Prepared Beamo/BeamoDecal LOD0 packed original upload, original material GLSL and recovered descriptor states in the editor. Full Model/Barn/GPU ownership, original scene lifecycle, Metal/game and Windows hardware parity remain pending.",
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "nativeUploadReplay": {
+    "cases": 189,
+    "source": "tests/fixtures/beamo-upload-native.json.gz",
+    "fixture": "tests/fixtures/beamo-draw-native.json.gz",
+    "fixtureSha256": "0aa62da86270dd53d569976d421dfd72fc2894e1c2bb71ef3bed8fc2dec023be",
+    "verticesIndicesCountsMaterialsAndOriginalSnapshotSha256Matched": true,
+    "reexecutedFullPreviouslyPassingUploadOracle": false
+  },
+  "arithmeticCapability": {
+    "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+    "sourceFixtureSha256": "416404ce310eec627a8133e90d46dea1c0722056246141a03b87c29fcf3c86f7",
+    "binarySha256": "a14ab2e4678aca2260ac5c6d1a1fc045ab89e505da211613525c8cca7ec6d1e8",
+    "observedCalls": 2912317,
+    "uniqueInputs": 2087452,
+    "fallbackLightingHex": "ff0076ffff00038080ff8000",
+    "scope": "Exact observed native RSQRTSS capability inputs/outputs; unknown inputs are an explicit boundary, never replaced by JavaScript reciprocal square root. Does not restore collision, GPU, Barn ownership or CPU hardware parity."
+  },
+  "gpuDescriptorCheck": {
+    "report": "docs/model-render-state-gpu-check.json",
+    "passed": true,
+    "checks": 14,
+    "scope": "Production Vulkan material pipelines: transparent RGB/alpha, first-two-attachment blend, later attachment overwrite, backface culling, depth test/write and no decal bias. Synthetic shaders isolate descriptor state; original Metal/GPU and Scene sorting remain unverified.",
+    "reusedPreviouslyPassingUnchangedNativeGpuCheck": true
+  },
+  "skyHub2": {
+    "draws": 197,
+    "terrainDraws": 20,
+    "modelDraws": 177,
+    "levelMeshDraws": 171,
+    "beamoDraws": 6,
+    "beamoInstances": 182,
+    "triangles": 336284,
+    "geometrySha256": "34408faf583128afdc76eed176fd76225d127456b26824512c046cbb59ca3e87"
+  },
+  "skyHub2Evidence": {
+    "report": "docs/model-material-SkyHub2-smoke.json",
+    "passed": true,
+    "renderedGeometrySha256": "34408faf583128afdc76eed176fd76225d127456b26824512c046cbb59ca3e87",
+    "cameraMatrix": "[0.9852117548196745,-3.469446951953614e-18,0.17134117475124774,0,0.05177316451049005,0.9532559006154415,-0.29769569593531775,0,-0.16333198585000844,0.3021641738225156,0.9391589186375484,0,480.00000000000034,245.00000000000003,115,1]",
+    "images": [
+      "docs/model-material-SkyHub2.png",
+      "docs/model-material-SkyHub2-viewport.png",
+      "docs/model-material-SkyHub2-render.png"
+    ],
+    "imageSha256": {
+      "docs/model-material-SkyHub2.png": "a2e9fcfca413dfd041d087137527011b048d98a1457ae85c49c88abe2e0f9256",
+      "docs/model-material-SkyHub2-viewport.png": "4171e6dc4abc8a6ca2939c5837eee4dc3f58d38bce9a510a21bac6e0b63c12a4",
+      "docs/model-material-SkyHub2-render.png": "bf989476baba3203426d796dd6f83cf845e6c367a7dd99c7b1531bd76211aa0e"
+    },
+    "pixelCheck": {
+      "minimum": 0,
+      "maximum": 229,
+      "colors": 17291,
+      "edges": 9070
+    },
+    "boundaries": [
+      {
+        "nodeId": 4,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 14,
+        "reason": "Native skinning/animation unavailable"
+      },
+      {
+        "nodeId": 137,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 148,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 206,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 250,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 275,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 289,
+        "reason": "Native skinning/animation unavailable"
+      },
+      {
+        "nodeId": 309,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 321,
+        "reason": "Native skinning/animation unavailable"
+      },
+      {
+        "nodeId": 382,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 428,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 449,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 535,
+        "reason": "Native skinning/animation unavailable"
+      },
+      {
+        "nodeId": 669,
+        "reason": "RenderList Skybox"
+      },
+      {
+        "nodeId": 689,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 785,
+        "reason": "Native skinning/animation unavailable"
+      },
+      {
+        "nodeId": 942,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 968,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 1161,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 1378,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 1431,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 1624,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 1636,
+        "reason": "RenderList Skybox"
+      },
+      {
+        "nodeId": 1668,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 1720,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 1835,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 1946,
+        "reason": "Native skinning/animation unavailable"
+      },
+      {
+        "nodeId": 2044,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 2107,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 2125,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 2139,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 2186,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 2195,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 2233,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 2270,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 2329,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 2385,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 2389,
+        "reason": "Native skinning/animation unavailable"
+      },
+      {
+        "nodeId": 1095,
+        "reason": "primary: Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 1388,
+        "reason": "primary: Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 1462,
+        "reason": "primary: Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 1704,
+        "reason": "primary: Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 1716,
+        "reason": "primary: Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 2114,
+        "reason": "primary: Uniform u_averageProbeColor: 0 parameters"
+      }
+    ]
+  },
+  "editorChecks": {
+    "report": "docs/beamo-edit-map-smoke.json",
+    "passed": true,
+    "checks": [
+      {
+        "name": "inspector-translation",
+        "originalX": 17.631250381469727,
+        "editedX": 25.631250381469727,
+        "originalGeometry": "7f29cb76ed1a74126b55972fad8b97d4cc4632f3c9a62a0b50d7c54411cf7af2",
+        "editedGeometry": "8c58c956b702abded05a82d57f05b6a35bbaf567733999abb2131b82b7deee9b",
+        "renderedSceneRevision": "4"
+      },
+      {
+        "name": "shared-material-texture",
+        "texture": "Black",
+        "owners": 83,
+        "renderedSceneRevision": "6"
+      },
+      {
+        "name": "undo-and-map-cleanup",
+        "emptyModelDraws": 0
+      }
+    ],
+    "completedFrameGeometryAndMaterialTextureHashesMatched": true,
+    "materialOnlyGeometryBytesPreserved": true,
+    "sourceFilesUnchanged": true
+  },
+  "projectChecks": {
+    "fullProjectBaselineTests": 424,
+    "fullProjectBaselineLog": "/root/sky-research/beamo-draw-resume-project-tests.log",
+    "afterFinalSourceChangesRelatedTests": 28,
+    "afterFinalSourceChangesRelatedLog": "/root/sky-research/beamo-draw-resume-related-tests.log",
+    "typecheckPassed": true,
+    "typecheckLog": "/root/sky-research/beamo-draw-resume-final-tsc.log",
+    "buildPassed": true,
+    "buildLog": "/root/sky-research/beamo-draw-resume-build.log",
+    "windowsNativeBinaryBuiltInPriorBatch": true,
+    "windowsHardwareVerified": false
+  },
+  "sourceIntegrity": {
+    "report": "/root/sky-research/beamo-draw-resume-source-integrity.json",
+    "originalMapSourceFilesUnchanged": 66,
+    "originalMeshSourceFilesUnchanged": 830,
+    "referenceExecutableUnchanged": true
+  },
+  "progress": {
+    "coreSubchainVerifiedClasses": 31,
+    "completeOriginalClasses": 0,
+    "completeOriginalInstances": 0,
+    "bstCheckpointsIncreased": false,
+    "avatarFullRuntimeAcceptanceIncreased": false
+  },
+  "delivery": {
+    "target": "/storage/emulated/0/Download/地图编辑器/sky-map-editor",
+    "syncReceipt": "/root/sky-research/beamo-draw-sync-verification.json",
+    "releaseRepackaged": false,
+    "referenceChanged": false
+  },
+  "remaining": [
+    "Actual Scene average probe binding and unsupported Skybox",
+    "Native skinning/animation",
+    "External weight volumes and unobserved edited RSQRTSS inputs",
+    "Complete ResourceManager IO, Model construction and LevelMesh +0x228 binding",
+    "Automatic LOD/Visibility, collision and complete Barn/GPU ownership, unload and original rebaking",
+    "Original Metal/game image and Windows hardware acceptance"
+  ],
+  "staticLevelMeshPreflight": {
+    "total": 4133,
+    "available": 3322,
+    "initiallyVisibleAvailable": 2781,
+    "boundaries": {
+      "Uniform u_waterSim: 0 parameters": 12,
+      "Resource asset unavailable: TutorialRocks_03": 13,
+      "Uniform u_averageProbeColor: 0 parameters": 344,
+      "Texture unavailable: BirdStripTex": 10,
+      "Native skinning/animation unavailable": 289,
+      "Texture unavailable: HeatTex": 37,
+      "RenderList Ghostly": 1,
+      "Texture unavailable: BasicGeoAtlas1": 28,
+      "RenderList Skybox": 28,
+      "Baked vertex lighting unavailable": 5,
+      "RenderList FogVolume": 3,
+      "Resource asset unavailable: CharOreoAAnim": 1,
+      "Uniform u_probeShR0: 0 parameters": 6,
+      "Resource asset unavailable: PropSpiritDarkCreatureFLAnim": 1,
+      "Texture unavailable: LifeForceMural02Sh": 1,
+      "Resource asset unavailable: CharSkyRayYoungAnim": 1,
+      "Uniform u_puddleSimNorm: 0 parameters": 31
+    },
+    "report": "docs/model-draw-availability.json",
+    "maps": 33,
+    "availableMeansShaderDependenciesOnly": true,
+    "completeRuntimeVerified": false
+  }
+}

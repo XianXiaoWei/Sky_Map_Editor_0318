@@ -1,0 +1,2467 @@
+{
+  "passed": true,
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "scope": "Full unmodified transform 0x10071e7f0 and mip reducer 0x100720560 executed under QEMU x86_64 -cpu max with original Update MXCSR |= 0xe040. Transform xyz includes counts <4, SIMD/scalar summation, last-four scalar overwrite, raw signed normals and 512 batching; W scratch lane and arithmetic NaN payloads excluded. Mips compare every raw word, padding, signed zeros, operand payload forwarding, neighboring mip alias reads and explicit guard memory. Resize layout loop 0x10071db19..0x10071dbae uses a return trampoline before allocation/GPU lifecycle; viewport-to-logical conversion is not included in that slice. SSE probe covers RTZ/FTZ/DAZ; QEMU RCPPS and MAX raw denormal forwarding are explicit capabilities, actual Intel/Mac hardware remains unverified. No rasterization, classification or GPU/game runtime claimed.",
+  "reciprocalCapability": "qemu-x86_64-max-rtz",
+  "maximumCapability": "qemu-daz-comparison-raw-operand-forwarding",
+  "math": {
+    "pairs": 8417,
+    "compared": 58919,
+    "failed": 0,
+    "mathFailuresByOperation": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "mathSamplesByOperation": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  },
+  "transform": {
+    "function": "0x10071e7f0",
+    "cases": 231,
+    "corpusMaps": 33,
+    "corpusVertices": 190987,
+    "compared": 1804779,
+    "failed": 0,
+    "transformSamples": []
+  },
+  "mips": {
+    "function": "0x100720560",
+    "cases": 132,
+    "compared": 62468,
+    "failed": 0,
+    "mipSamples": [],
+    "rows": [
+      {
+        "name": "mips-2-2",
+        "compared": 36,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-2-4",
+        "compared": 44,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-2-6",
+        "compared": 56,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-2-8",
+        "compared": 60,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-2-10",
+        "compared": 76,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-2-14",
+        "compared": 88,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-2-16",
+        "compared": 92,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-2-18",
+        "compared": 112,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-2-30",
+        "compared": 152,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-2-32",
+        "compared": 156,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-2-34",
+        "compared": 180,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-4-2",
+        "compared": 44,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-4-4",
+        "compared": 52,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-4-6",
+        "compared": 68,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-4-8",
+        "compared": 76,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-4-10",
+        "compared": 96,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-4-14",
+        "compared": 116,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-4-16",
+        "compared": 124,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-4-18",
+        "compared": 148,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-4-30",
+        "compared": 212,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-4-32",
+        "compared": 220,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-4-34",
+        "compared": 248,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-6-2",
+        "compared": 56,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-6-4",
+        "compared": 68,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-6-6",
+        "compared": 88,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-6-8",
+        "compared": 100,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-6-10",
+        "compared": 128,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-6-14",
+        "compared": 160,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-6-16",
+        "compared": 172,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-6-18",
+        "compared": 204,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-6-30",
+        "compared": 304,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-6-32",
+        "compared": 316,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-6-34",
+        "compared": 352,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-8-2",
+        "compared": 60,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-8-4",
+        "compared": 76,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-8-6",
+        "compared": 100,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-8-8",
+        "compared": 116,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-8-10",
+        "compared": 148,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-8-14",
+        "compared": 188,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-8-16",
+        "compared": 204,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-8-18",
+        "compared": 240,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-8-30",
+        "compared": 364,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-8-32",
+        "compared": 380,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-8-34",
+        "compared": 420,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-10-2",
+        "compared": 76,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-10-4",
+        "compared": 96,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-10-6",
+        "compared": 128,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-10-8",
+        "compared": 148,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-10-10",
+        "compared": 188,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-10-14",
+        "compared": 240,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-10-16",
+        "compared": 260,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-10-18",
+        "compared": 308,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-10-30",
+        "compared": 472,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-10-32",
+        "compared": 492,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-10-34",
+        "compared": 544,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-14-2",
+        "compared": 88,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-14-4",
+        "compared": 116,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-14-6",
+        "compared": 160,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-14-8",
+        "compared": 188,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-14-10",
+        "compared": 240,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-14-14",
+        "compared": 312,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-14-16",
+        "compared": 340,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-14-18",
+        "compared": 400,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-14-30",
+        "compared": 624,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-14-32",
+        "compared": 652,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-14-34",
+        "compared": 716,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-16-2",
+        "compared": 92,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-16-4",
+        "compared": 124,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-16-6",
+        "compared": 172,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-16-8",
+        "compared": 204,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-16-10",
+        "compared": 260,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-16-14",
+        "compared": 340,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-16-16",
+        "compared": 372,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-16-18",
+        "compared": 436,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-16-30",
+        "compared": 684,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-16-32",
+        "compared": 716,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-16-34",
+        "compared": 784,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-18-2",
+        "compared": 112,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-18-4",
+        "compared": 148,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-18-6",
+        "compared": 204,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-18-8",
+        "compared": 240,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-18-10",
+        "compared": 308,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-18-14",
+        "compared": 400,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-18-16",
+        "compared": 436,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-18-18",
+        "compared": 512,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-18-30",
+        "compared": 800,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-18-32",
+        "compared": 836,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-18-34",
+        "compared": 920,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-30-2",
+        "compared": 152,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-30-4",
+        "compared": 212,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-30-6",
+        "compared": 304,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-30-8",
+        "compared": 364,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-30-10",
+        "compared": 472,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-30-14",
+        "compared": 624,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-30-16",
+        "compared": 684,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-30-18",
+        "compared": 800,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-30-30",
+        "compared": 1272,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-30-32",
+        "compared": 1332,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-30-34",
+        "compared": 1456,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-32-2",
+        "compared": 156,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-32-4",
+        "compared": 220,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-32-6",
+        "compared": 316,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-32-8",
+        "compared": 380,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-32-10",
+        "compared": 492,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-32-14",
+        "compared": 652,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-32-16",
+        "compared": 716,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-32-18",
+        "compared": 836,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-32-30",
+        "compared": 1332,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-32-32",
+        "compared": 1396,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-32-34",
+        "compared": 1524,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-34-2",
+        "compared": 180,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-34-4",
+        "compared": 248,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-34-6",
+        "compared": 352,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-34-8",
+        "compared": 420,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-34-10",
+        "compared": 544,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-34-14",
+        "compared": 716,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-34-16",
+        "compared": 784,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-34-18",
+        "compared": 920,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-34-30",
+        "compared": 1456,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-34-32",
+        "compared": 1524,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-34-34",
+        "compared": 1668,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-62-2",
+        "compared": 280,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-62-4",
+        "compared": 404,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-62-6",
+        "compared": 592,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-62-8",
+        "compared": 716,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-62-10",
+        "compared": 936,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-62-14",
+        "compared": 1248,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-62-16",
+        "compared": 1372,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-62-18",
+        "compared": 1608,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-62-30",
+        "compared": 2576,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-62-32",
+        "compared": 2700,
+        "failed": 0,
+        "passed": true
+      },
+      {
+        "name": "mips-62-34",
+        "compared": 2944,
+        "failed": 0,
+        "passed": true
+      }
+    ]
+  },
+  "layout": {
+    "slice": "0x10071db19..0x10071dbae",
+    "cases": 144,
+    "compared": 5744,
+    "failed": 0,
+    "layoutSamples": []
+  },
+  "failures": [],
+  "rows": [
+    {
+      "name": "synthetic-0-0",
+      "vertices": 0,
+      "comparedComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-0-1",
+      "vertices": 0,
+      "comparedComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-0-2",
+      "vertices": 0,
+      "comparedComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-0-3",
+      "vertices": 0,
+      "comparedComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-0-4",
+      "vertices": 0,
+      "comparedComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-0-5",
+      "vertices": 0,
+      "comparedComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-1-0",
+      "vertices": 1,
+      "comparedComponents": 3,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-1-1",
+      "vertices": 1,
+      "comparedComponents": 3,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-1-2",
+      "vertices": 1,
+      "comparedComponents": 3,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-1-3",
+      "vertices": 1,
+      "comparedComponents": 3,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-1-4",
+      "vertices": 1,
+      "comparedComponents": 3,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-1-5",
+      "vertices": 1,
+      "comparedComponents": 3,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-2-0",
+      "vertices": 2,
+      "comparedComponents": 6,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-2-1",
+      "vertices": 2,
+      "comparedComponents": 6,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-2-2",
+      "vertices": 2,
+      "comparedComponents": 6,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-2-3",
+      "vertices": 2,
+      "comparedComponents": 6,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-2-4",
+      "vertices": 2,
+      "comparedComponents": 6,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-2-5",
+      "vertices": 2,
+      "comparedComponents": 6,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-3-0",
+      "vertices": 3,
+      "comparedComponents": 9,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-3-1",
+      "vertices": 3,
+      "comparedComponents": 9,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-3-2",
+      "vertices": 3,
+      "comparedComponents": 9,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-3-3",
+      "vertices": 3,
+      "comparedComponents": 9,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-3-4",
+      "vertices": 3,
+      "comparedComponents": 9,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-3-5",
+      "vertices": 3,
+      "comparedComponents": 9,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-4-0",
+      "vertices": 4,
+      "comparedComponents": 12,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-4-1",
+      "vertices": 4,
+      "comparedComponents": 12,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-4-2",
+      "vertices": 4,
+      "comparedComponents": 12,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-4-3",
+      "vertices": 4,
+      "comparedComponents": 12,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-4-4",
+      "vertices": 4,
+      "comparedComponents": 12,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-4-5",
+      "vertices": 4,
+      "comparedComponents": 12,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-5-0",
+      "vertices": 5,
+      "comparedComponents": 15,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-5-1",
+      "vertices": 5,
+      "comparedComponents": 15,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-5-2",
+      "vertices": 5,
+      "comparedComponents": 15,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-5-3",
+      "vertices": 5,
+      "comparedComponents": 15,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-5-4",
+      "vertices": 5,
+      "comparedComponents": 15,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-5-5",
+      "vertices": 5,
+      "comparedComponents": 15,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-7-0",
+      "vertices": 7,
+      "comparedComponents": 21,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-7-1",
+      "vertices": 7,
+      "comparedComponents": 21,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-7-2",
+      "vertices": 7,
+      "comparedComponents": 21,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-7-3",
+      "vertices": 7,
+      "comparedComponents": 21,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-7-4",
+      "vertices": 7,
+      "comparedComponents": 21,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-7-5",
+      "vertices": 7,
+      "comparedComponents": 21,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-8-0",
+      "vertices": 8,
+      "comparedComponents": 24,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-8-1",
+      "vertices": 8,
+      "comparedComponents": 24,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-8-2",
+      "vertices": 8,
+      "comparedComponents": 24,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-8-3",
+      "vertices": 8,
+      "comparedComponents": 24,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-8-4",
+      "vertices": 8,
+      "comparedComponents": 24,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-8-5",
+      "vertices": 8,
+      "comparedComponents": 24,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-9-0",
+      "vertices": 9,
+      "comparedComponents": 27,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-9-1",
+      "vertices": 9,
+      "comparedComponents": 27,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-9-2",
+      "vertices": 9,
+      "comparedComponents": 27,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-9-3",
+      "vertices": 9,
+      "comparedComponents": 27,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-9-4",
+      "vertices": 9,
+      "comparedComponents": 27,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-9-5",
+      "vertices": 9,
+      "comparedComponents": 27,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-11-0",
+      "vertices": 11,
+      "comparedComponents": 33,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-11-1",
+      "vertices": 11,
+      "comparedComponents": 33,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-11-2",
+      "vertices": 11,
+      "comparedComponents": 33,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-11-3",
+      "vertices": 11,
+      "comparedComponents": 33,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-11-4",
+      "vertices": 11,
+      "comparedComponents": 33,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-11-5",
+      "vertices": 11,
+      "comparedComponents": 33,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-12-0",
+      "vertices": 12,
+      "comparedComponents": 36,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-12-1",
+      "vertices": 12,
+      "comparedComponents": 36,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-12-2",
+      "vertices": 12,
+      "comparedComponents": 36,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-12-3",
+      "vertices": 12,
+      "comparedComponents": 36,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-12-4",
+      "vertices": 12,
+      "comparedComponents": 36,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-12-5",
+      "vertices": 12,
+      "comparedComponents": 36,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-15-0",
+      "vertices": 15,
+      "comparedComponents": 45,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-15-1",
+      "vertices": 15,
+      "comparedComponents": 45,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-15-2",
+      "vertices": 15,
+      "comparedComponents": 45,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-15-3",
+      "vertices": 15,
+      "comparedComponents": 45,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-15-4",
+      "vertices": 15,
+      "comparedComponents": 45,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-15-5",
+      "vertices": 15,
+      "comparedComponents": 45,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-16-0",
+      "vertices": 16,
+      "comparedComponents": 48,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-16-1",
+      "vertices": 16,
+      "comparedComponents": 48,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-16-2",
+      "vertices": 16,
+      "comparedComponents": 48,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-16-3",
+      "vertices": 16,
+      "comparedComponents": 48,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-16-4",
+      "vertices": 16,
+      "comparedComponents": 48,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-16-5",
+      "vertices": 16,
+      "comparedComponents": 48,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-31-0",
+      "vertices": 31,
+      "comparedComponents": 93,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-31-1",
+      "vertices": 31,
+      "comparedComponents": 93,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-31-2",
+      "vertices": 31,
+      "comparedComponents": 93,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-31-3",
+      "vertices": 31,
+      "comparedComponents": 93,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-31-4",
+      "vertices": 31,
+      "comparedComponents": 93,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-31-5",
+      "vertices": 31,
+      "comparedComponents": 93,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-32-0",
+      "vertices": 32,
+      "comparedComponents": 96,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-32-1",
+      "vertices": 32,
+      "comparedComponents": 96,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-32-2",
+      "vertices": 32,
+      "comparedComponents": 96,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-32-3",
+      "vertices": 32,
+      "comparedComponents": 96,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-32-4",
+      "vertices": 32,
+      "comparedComponents": 96,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-32-5",
+      "vertices": 32,
+      "comparedComponents": 96,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-511-0",
+      "vertices": 511,
+      "comparedComponents": 1533,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-511-1",
+      "vertices": 511,
+      "comparedComponents": 1533,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-511-2",
+      "vertices": 511,
+      "comparedComponents": 1533,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-511-3",
+      "vertices": 511,
+      "comparedComponents": 1533,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-511-4",
+      "vertices": 511,
+      "comparedComponents": 1533,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-511-5",
+      "vertices": 511,
+      "comparedComponents": 1533,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-512-0",
+      "vertices": 512,
+      "comparedComponents": 1536,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-512-1",
+      "vertices": 512,
+      "comparedComponents": 1536,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-512-2",
+      "vertices": 512,
+      "comparedComponents": 1536,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-512-3",
+      "vertices": 512,
+      "comparedComponents": 1536,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-512-4",
+      "vertices": 512,
+      "comparedComponents": 1536,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-512-5",
+      "vertices": 512,
+      "comparedComponents": 1536,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-513-0",
+      "vertices": 513,
+      "comparedComponents": 1539,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-513-1",
+      "vertices": 513,
+      "comparedComponents": 1539,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-513-2",
+      "vertices": 513,
+      "comparedComponents": 1539,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-513-3",
+      "vertices": 513,
+      "comparedComponents": 1539,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-513-4",
+      "vertices": 513,
+      "comparedComponents": 1539,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-513-5",
+      "vertices": 513,
+      "comparedComponents": 1539,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-515-0",
+      "vertices": 515,
+      "comparedComponents": 1545,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-515-1",
+      "vertices": 515,
+      "comparedComponents": 1545,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-515-2",
+      "vertices": 515,
+      "comparedComponents": 1545,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-515-3",
+      "vertices": 515,
+      "comparedComponents": 1545,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-515-4",
+      "vertices": 515,
+      "comparedComponents": 1545,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-515-5",
+      "vertices": 515,
+      "comparedComponents": 1545,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-516-0",
+      "vertices": 516,
+      "comparedComponents": 1548,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-516-1",
+      "vertices": 516,
+      "comparedComponents": 1548,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-516-2",
+      "vertices": 516,
+      "comparedComponents": 1548,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-516-3",
+      "vertices": 516,
+      "comparedComponents": 1548,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-516-4",
+      "vertices": 516,
+      "comparedComponents": 1548,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-516-5",
+      "vertices": 516,
+      "comparedComponents": 1548,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-1024-0",
+      "vertices": 1024,
+      "comparedComponents": 3072,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-1024-1",
+      "vertices": 1024,
+      "comparedComponents": 3072,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-1024-2",
+      "vertices": 1024,
+      "comparedComponents": 3072,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-1024-3",
+      "vertices": 1024,
+      "comparedComponents": 3072,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-1024-4",
+      "vertices": 1024,
+      "comparedComponents": 3072,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-1024-5",
+      "vertices": 1024,
+      "comparedComponents": 3072,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-1025-0",
+      "vertices": 1025,
+      "comparedComponents": 3075,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-1025-1",
+      "vertices": 1025,
+      "comparedComponents": 3075,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-1025-2",
+      "vertices": 1025,
+      "comparedComponents": 3075,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-1025-3",
+      "vertices": 1025,
+      "comparedComponents": 3075,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-1025-4",
+      "vertices": 1025,
+      "comparedComponents": 3075,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-1025-5",
+      "vertices": 1025,
+      "comparedComponents": 3075,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-CandleSpace-occluder0-0",
+      "vertices": 137,
+      "comparedComponents": 411,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-CandleSpace-occluder0-1",
+      "vertices": 137,
+      "comparedComponents": 411,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-CandleSpace-occluder0-2",
+      "vertices": 137,
+      "comparedComponents": 411,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-CandleSpaceEnd-occluder0-0",
+      "vertices": 5911,
+      "comparedComponents": 17733,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-CandleSpaceEnd-occluder0-1",
+      "vertices": 5911,
+      "comparedComponents": 17733,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-CandleSpaceEnd-occluder0-2",
+      "vertices": 5911,
+      "comparedComponents": 17733,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-CarryLand-occluder0-0",
+      "vertices": 6031,
+      "comparedComponents": 18093,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-CarryLand-occluder0-1",
+      "vertices": 6031,
+      "comparedComponents": 18093,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-CarryLand-occluder0-2",
+      "vertices": 6031,
+      "comparedComponents": 18093,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-CarryLand2-occluder0-0",
+      "vertices": 6080,
+      "comparedComponents": 18240,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-CarryLand2-occluder0-1",
+      "vertices": 6080,
+      "comparedComponents": 18240,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-CarryLand2-occluder0-2",
+      "vertices": 6080,
+      "comparedComponents": 18240,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-CarryLand3-occluder0-0",
+      "vertices": 6054,
+      "comparedComponents": 18162,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-CarryLand3-occluder0-1",
+      "vertices": 6054,
+      "comparedComponents": 18162,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-CarryLand3-occluder0-2",
+      "vertices": 6054,
+      "comparedComponents": 18162,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Dawn-occluder0-0",
+      "vertices": 6051,
+      "comparedComponents": 18153,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Dawn-occluder0-1",
+      "vertices": 6051,
+      "comparedComponents": 18153,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Dawn-occluder0-2",
+      "vertices": 6051,
+      "comparedComponents": 18153,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-DayEnd-occluder0-0",
+      "vertices": 6100,
+      "comparedComponents": 18300,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-DayEnd-occluder0-1",
+      "vertices": 6100,
+      "comparedComponents": 18300,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-DayEnd-occluder0-2",
+      "vertices": 6100,
+      "comparedComponents": 18300,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-DayHubCave-occluder0-0",
+      "vertices": 6076,
+      "comparedComponents": 18228,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-DayHubCave-occluder0-1",
+      "vertices": 6076,
+      "comparedComponents": 18228,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-DayHubCave-occluder0-2",
+      "vertices": 6076,
+      "comparedComponents": 18228,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Dusk-occluder0-0",
+      "vertices": 5971,
+      "comparedComponents": 17913,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Dusk-occluder0-1",
+      "vertices": 5971,
+      "comparedComponents": 17913,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Dusk-occluder0-2",
+      "vertices": 5971,
+      "comparedComponents": 17913,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-DuskGraveyard-occluder0-0",
+      "vertices": 6016,
+      "comparedComponents": 18048,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-DuskGraveyard-occluder0-1",
+      "vertices": 6016,
+      "comparedComponents": 18048,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-DuskGraveyard-occluder0-2",
+      "vertices": 6016,
+      "comparedComponents": 18048,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-DuskMid-occluder0-0",
+      "vertices": 5939,
+      "comparedComponents": 17817,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-DuskMid-occluder0-1",
+      "vertices": 5939,
+      "comparedComponents": 17817,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-DuskMid-occluder0-2",
+      "vertices": 5939,
+      "comparedComponents": 17817,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Dusk_CrabField-occluder0-0",
+      "vertices": 5988,
+      "comparedComponents": 17964,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Dusk_CrabField-occluder0-1",
+      "vertices": 5988,
+      "comparedComponents": 17964,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Dusk_CrabField-occluder0-2",
+      "vertices": 5988,
+      "comparedComponents": 17964,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-HubReveal-occluder0-0",
+      "vertices": 5872,
+      "comparedComponents": 17616,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-HubReveal-occluder0-1",
+      "vertices": 5872,
+      "comparedComponents": 17616,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-HubReveal-occluder0-2",
+      "vertices": 5872,
+      "comparedComponents": 17616,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Night-occluder0-0",
+      "vertices": 5856,
+      "comparedComponents": 17568,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Night-occluder0-1",
+      "vertices": 5856,
+      "comparedComponents": 17568,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Night-occluder0-2",
+      "vertices": 5856,
+      "comparedComponents": 17568,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-NightEnd-occluder0-0",
+      "vertices": 6142,
+      "comparedComponents": 18426,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-NightEnd-occluder0-1",
+      "vertices": 6142,
+      "comparedComponents": 18426,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-NightEnd-occluder0-2",
+      "vertices": 6142,
+      "comparedComponents": 18426,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-NightEntrance-occluder0-0",
+      "vertices": 6027,
+      "comparedComponents": 18081,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-NightEntrance-occluder0-1",
+      "vertices": 6027,
+      "comparedComponents": 18081,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-NightEntrance-occluder0-2",
+      "vertices": 6027,
+      "comparedComponents": 18081,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Prairie_ButterflyFields-occluder0-0",
+      "vertices": 6089,
+      "comparedComponents": 18267,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Prairie_ButterflyFields-occluder0-1",
+      "vertices": 6089,
+      "comparedComponents": 18267,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Prairie_ButterflyFields-occluder0-2",
+      "vertices": 6089,
+      "comparedComponents": 18267,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Prairie_Cave-occluder0-0",
+      "vertices": 6072,
+      "comparedComponents": 18216,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Prairie_Cave-occluder0-1",
+      "vertices": 6072,
+      "comparedComponents": 18216,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Prairie_Cave-occluder0-2",
+      "vertices": 6072,
+      "comparedComponents": 18216,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Prairie_NestAndKeeper-occluder0-0",
+      "vertices": 6051,
+      "comparedComponents": 18153,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Prairie_NestAndKeeper-occluder0-1",
+      "vertices": 6051,
+      "comparedComponents": 18153,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Prairie_NestAndKeeper-occluder0-2",
+      "vertices": 6051,
+      "comparedComponents": 18153,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Prairie_Village-occluder0-0",
+      "vertices": 6098,
+      "comparedComponents": 18294,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Prairie_Village-occluder0-1",
+      "vertices": 6098,
+      "comparedComponents": 18294,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Prairie_Village-occluder0-2",
+      "vertices": 6098,
+      "comparedComponents": 18294,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Rain-occluder0-0",
+      "vertices": 6099,
+      "comparedComponents": 18297,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Rain-occluder0-1",
+      "vertices": 6099,
+      "comparedComponents": 18297,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Rain-occluder0-2",
+      "vertices": 6099,
+      "comparedComponents": 18297,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-RainEnd-occluder0-0",
+      "vertices": 6060,
+      "comparedComponents": 18180,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-RainEnd-occluder0-1",
+      "vertices": 6060,
+      "comparedComponents": 18180,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-RainEnd-occluder0-2",
+      "vertices": 6060,
+      "comparedComponents": 18180,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-RainForest-occluder0-0",
+      "vertices": 10108,
+      "comparedComponents": 30324,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-RainForest-occluder0-1",
+      "vertices": 10108,
+      "comparedComponents": 30324,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-RainForest-occluder0-2",
+      "vertices": 10108,
+      "comparedComponents": 30324,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-RainMid-occluder0-0",
+      "vertices": 6107,
+      "comparedComponents": 18321,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-RainMid-occluder0-1",
+      "vertices": 6107,
+      "comparedComponents": 18321,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-RainMid-occluder0-2",
+      "vertices": 6107,
+      "comparedComponents": 18321,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-SkyHub2-occluder0-0",
+      "vertices": 5923,
+      "comparedComponents": 17769,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-SkyHub2-occluder0-1",
+      "vertices": 5923,
+      "comparedComponents": 17769,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-SkyHub2-occluder0-2",
+      "vertices": 5923,
+      "comparedComponents": 17769,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Storm-occluder0-0",
+      "vertices": 5987,
+      "comparedComponents": 17961,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Storm-occluder0-1",
+      "vertices": 5987,
+      "comparedComponents": 17961,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Storm-occluder0-2",
+      "vertices": 5987,
+      "comparedComponents": 17961,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-StormEnd-occluder0-0",
+      "vertices": 5923,
+      "comparedComponents": 17769,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-StormEnd-occluder0-1",
+      "vertices": 5923,
+      "comparedComponents": 17769,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-StormEnd-occluder0-2",
+      "vertices": 5923,
+      "comparedComponents": 17769,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Sunset-occluder0-0",
+      "vertices": 6043,
+      "comparedComponents": 18129,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Sunset-occluder0-1",
+      "vertices": 6043,
+      "comparedComponents": 18129,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Sunset-occluder0-2",
+      "vertices": 6043,
+      "comparedComponents": 18129,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-SunsetEnd-occluder0-0",
+      "vertices": 6055,
+      "comparedComponents": 18165,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-SunsetEnd-occluder0-1",
+      "vertices": 6055,
+      "comparedComponents": 18165,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-SunsetEnd-occluder0-2",
+      "vertices": 6055,
+      "comparedComponents": 18165,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-SunsetEnd2-occluder0-0",
+      "vertices": 5900,
+      "comparedComponents": 17700,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-SunsetEnd2-occluder0-1",
+      "vertices": 5900,
+      "comparedComponents": 17700,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-SunsetEnd2-occluder0-2",
+      "vertices": 5900,
+      "comparedComponents": 17700,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-SunsetRace-occluder0-0",
+      "vertices": 6094,
+      "comparedComponents": 18282,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-SunsetRace-occluder0-1",
+      "vertices": 6094,
+      "comparedComponents": 18282,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-SunsetRace-occluder0-2",
+      "vertices": 6094,
+      "comparedComponents": 18282,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-TitleWater-occluder0-0",
+      "vertices": 6127,
+      "comparedComponents": 18381,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-TitleWater-occluder0-1",
+      "vertices": 6127,
+      "comparedComponents": 18381,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-TitleWater-occluder0-2",
+      "vertices": 6127,
+      "comparedComponents": 18381,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-WorldEmpty-occluder0-0",
+      "vertices": 0,
+      "comparedComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-WorldEmpty-occluder0-1",
+      "vertices": 0,
+      "comparedComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-WorldEmpty-occluder0-2",
+      "vertices": 0,
+      "comparedComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,6694 @@
+{
+  "className": "OnFlame",
+  "functionGroup": "收集物、蜡烛与解锁",
+  "functionRole": "火焰集合、消耗、点燃与熄灭事件",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "partial",
+      "description": "OnFlame 的原默认值、继承初始化及 9 个序列化字段变体；原注册字段 8 项。"
+    },
+    {
+      "name": "火焰集合、消耗、点燃与熄灭事件",
+      "status": "partial",
+      "description": "原普通构造和共享保存字段已恢复；Candle 渲染记录保持未装载，Flame／Candle 完整装载、蜡量／点燃更新、音效粒子、绘制及卸载尚未闭合。 此类原事件调用体已独立核验，部分真实事件接共享 EventBarn；缺失转换／玩家／声音／Model 消费者的分支保留明确依赖，不能计为完整类。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Clump（308 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "OnFlame",
+    "category": "收集物、蜡烛与解锁",
+    "functionGroupId": "collectibles",
+    "functionRole": "火焰集合、消耗、点燃与熄灭事件",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "partial",
+        "description": "OnFlame 的原默认值、继承初始化及 9 个序列化字段变体；原注册字段 8 项。"
+      },
+      {
+        "name": "火焰集合、消耗、点燃与熄灭事件",
+        "status": "partial",
+        "description": "原普通构造和共享保存字段已恢复；Candle 渲染记录保持未装载，Flame／Candle 完整装载、蜡量／点燃更新、音效粒子、绘制及卸载尚未闭合。 此类原事件调用体已独立核验，部分真实事件接共享 EventBarn；缺失转换／玩家／声音／Model 消费者的分支保留明确依赖，不能计为完整类。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Clump（308 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Clump",
+        "references": 308
+      }
+    ],
+    "rttiWorkingGroup": "交互、事件与任务",
+    "role": "对象实例类型",
+    "instances": 154,
+    "nestedInstances": 0,
+    "referenceFields": 308,
+    "declaredLevels": 20,
+    "levels": [
+      {
+        "level": "CandleSpace",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Dawn",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DayEnd",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DayHubCave",
+        "nodes": 10,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Dusk",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DuskGraveyard",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "HubReveal",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Night",
+        "nodes": 69,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_ButterflyFields",
+        "nodes": 18,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Village",
+        "nodes": 18,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Rain",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainEnd",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainForest",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainMid",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SkyHub2",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Storm",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Sunset",
+        "nodes": 5,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SunsetEnd",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SunsetEnd2",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SunsetRace",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "consumeDuration",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "events",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "fireOnce",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "flames",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "minComplete",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "onExtinguish",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "onStoke",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "requireAll",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100caf7b0",
+    "nativeRegisteredFields": [
+      {
+        "name": "onStoke",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 72,
+        "registrationFunction": "0x1003439d0",
+        "propertyAddress": "0x100caecf0"
+      },
+      {
+        "name": "requireAll",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 73,
+        "registrationFunction": "0x1003439d0",
+        "propertyAddress": "0x100caed40"
+      },
+      {
+        "name": "fireOnce",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 74,
+        "registrationFunction": "0x1003439d0",
+        "propertyAddress": "0x100caed90"
+      },
+      {
+        "name": "onExtinguish",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 75,
+        "registrationFunction": "0x1003439d0",
+        "propertyAddress": "0x100caede0"
+      },
+      {
+        "name": "consumeDuration",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 76,
+        "registrationFunction": "0x1003439d0",
+        "propertyAddress": "0x100caee30"
+      },
+      {
+        "name": "minComplete",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 80,
+        "registrationFunction": "0x1003439d0",
+        "propertyAddress": "0x100caee80"
+      },
+      {
+        "name": "flames",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x1003439d0",
+        "propertyAddress": "0x100caeed0"
+      },
+      {
+        "name": "events",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 64,
+        "registrationFunction": "0x1003439d0",
+        "propertyAddress": "0x100caef20"
+      }
+    ],
+    "completedCheckpoints": 4,
+    "partialCheckpoints": 2,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 40,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": true,
+    "implementation": [
+      "src/core/environment-object-state.ts",
+      "src/core/object-item-construction-runtime.ts",
+      "src/core/nature-event-runtime.ts"
+    ],
+    "evidence": [
+      "docs/生物骨骼动画续接.md",
+      "docs/object-item-construction.json",
+      "docs/object-item-construction-oracle.json",
+      "docs/nature-event-audit.json",
+      "docs/nature-event-verification.json",
+      "docs/nature-event-oracle.json"
+    ],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 8 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "partial",
+        "note": "原普通构造和共享保存字段已恢复；Candle 渲染记录保持未装载，Flame／Candle 完整装载、蜡量／点燃更新、音效粒子、绘制及卸载尚未闭合。 此类原事件调用体已独立核验，部分真实事件接共享 EventBarn；缺失转换／玩家／声音／Model 消费者的分支保留明确依赖，不能计为完整类。",
+        "evidence": [
+          "docs/生物骨骼动画续接.md",
+          "docs/object-item-construction.json",
+          "docs/object-item-construction-oracle.json",
+          "docs/nature-event-audit.json",
+          "docs/nature-event-verification.json",
+          "docs/nature-event-oracle.json"
+        ]
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "partial",
+        "note": "原普通构造和共享保存字段已恢复；Candle 渲染记录保持未装载，Flame／Candle 完整装载、蜡量／点燃更新、音效粒子、绘制及卸载尚未闭合。 此类原事件调用体已独立核验，部分真实事件接共享 EventBarn；缺失转换／玩家／声音／Model 消费者的分支保留明确依赖，不能计为完整类。",
+        "evidence": [
+          "docs/生物骨骼动画续接.md",
+          "docs/object-item-construction.json",
+          "docs/object-item-construction-oracle.json",
+          "docs/nature-event-audit.json",
+          "docs/nature-event-verification.json",
+          "docs/nature-event-oracle.json"
+        ]
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "verified",
+        "note": "原普通构造和共享保存字段已恢复；Candle 渲染记录保持未装载，Flame／Candle 完整装载、蜡量／点燃更新、音效粒子、绘制及卸载尚未闭合。 此类原事件调用体已独立核验，部分真实事件接共享 EventBarn；缺失转换／玩家／声音／Model 消费者的分支保留明确依赖，不能计为完整类。",
+        "evidence": [
+          "docs/生物骨骼动画续接.md",
+          "docs/object-item-construction.json",
+          "docs/object-item-construction-oracle.json",
+          "docs/nature-event-audit.json",
+          "docs/nature-event-verification.json",
+          "docs/nature-event-oracle.json"
+        ]
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "原普通构造和共享保存字段已恢复；Candle 渲染记录保持未装载，Flame／Candle 完整装载、蜡量／点燃更新、音效粒子、绘制及卸载尚未闭合。 此类原事件调用体已独立核验，部分真实事件接共享 EventBarn；缺失转换／玩家／声音／Model 消费者的分支保留明确依赖，不能计为完整类。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "CandleSpace:n12",
+      "level": "CandleSpace",
+      "nodeId": 12,
+      "name": "BstNode_2446917755",
+      "className": "OnFlame",
+      "classIndex": 8,
+      "sourceOffset": 25490,
+      "sourceLength": 44,
+      "sourceSha256": "7f7744a52916b4fd4351deccee773f8806d3e0fce22613ccb101f7b711b47861",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n12/p7",
+          "fieldName": "flames",
+          "target": "CandleSpace:n470",
+          "targetNodeId": 470,
+          "offset": 25526
+        },
+        {
+          "fieldId": "n12/p8",
+          "fieldName": "events",
+          "target": "CandleSpace:n471",
+          "targetNodeId": 471,
+          "offset": 25530
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CandleSpace:n377",
+      "level": "CandleSpace",
+      "nodeId": 377,
+      "name": "BstNode_2529558720",
+      "className": "OnFlame",
+      "classIndex": 8,
+      "sourceOffset": 79699,
+      "sourceLength": 44,
+      "sourceSha256": "b52b88c34ee1613a0bc8ee84ac5922ced6667961e09fb6d5b5905eea253d1de8",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n377/p7",
+          "fieldName": "flames",
+          "target": "CandleSpace:n45",
+          "targetNodeId": 45,
+          "offset": 79735
+        },
+        {
+          "fieldId": "n377/p8",
+          "fieldName": "events",
+          "target": "CandleSpace:n284",
+          "targetNodeId": 284,
+          "offset": 79739
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n269",
+      "level": "Dawn",
+      "nodeId": 269,
+      "name": "BstNode_2446917643",
+      "className": "OnFlame",
+      "classIndex": 46,
+      "sourceOffset": 77036,
+      "sourceLength": 44,
+      "sourceSha256": "8c78441ac96ae54241afeaa93f6a4762e2dbdff5f02360ef8034fabd49225303",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n269/p7",
+          "fieldName": "flames",
+          "target": "Dawn:n1383",
+          "targetNodeId": 1383,
+          "offset": 77072
+        },
+        {
+          "fieldId": "n269/p8",
+          "fieldName": "events",
+          "target": "Dawn:n3046",
+          "targetNodeId": 3046,
+          "offset": 77076
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n828",
+      "level": "Dawn",
+      "nodeId": 828,
+      "name": "BstNode_2645622787",
+      "className": "OnFlame",
+      "classIndex": 46,
+      "sourceOffset": 164827,
+      "sourceLength": 44,
+      "sourceSha256": "47f6cd4b79bec41b5bd20ae2862b51f2ec68308b6fa71a079c537f0b102f802b",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n828/p7",
+          "fieldName": "flames",
+          "target": "Dawn:n3185",
+          "targetNodeId": 3185,
+          "offset": 164863
+        },
+        {
+          "fieldId": "n828/p8",
+          "fieldName": "events",
+          "target": "Dawn:n3186",
+          "targetNodeId": 3186,
+          "offset": 164867
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1575",
+      "level": "Dawn",
+      "nodeId": 1575,
+      "name": "BstNode_505",
+      "className": "OnFlame",
+      "classIndex": 46,
+      "sourceOffset": 272434,
+      "sourceLength": 37,
+      "sourceSha256": "f50e0d924fe125a037f7abcc522cc33144fb15b69281fc4e3a1fbce2f7df41db",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1575/p7",
+          "fieldName": "flames",
+          "target": "Dawn:n76",
+          "targetNodeId": 76,
+          "offset": 272463
+        },
+        {
+          "fieldId": "n1575/p8",
+          "fieldName": "events",
+          "target": "Dawn:n3401",
+          "targetNodeId": 3401,
+          "offset": 272467
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1650",
+      "level": "Dawn",
+      "nodeId": 1650,
+      "name": "BstNode_3122857032",
+      "className": "OnFlame",
+      "classIndex": 46,
+      "sourceOffset": 282247,
+      "sourceLength": 44,
+      "sourceSha256": "8a573bad1576186a502f42d6bce88764c7eb462095c44b6da01e572ccb9c64fc",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1650/p7",
+          "fieldName": "flames",
+          "target": "Dawn:n185",
+          "targetNodeId": 185,
+          "offset": 282283
+        },
+        {
+          "fieldId": "n1650/p8",
+          "fieldName": "events",
+          "target": "Dawn:n3415",
+          "targetNodeId": 3415,
+          "offset": 282287
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n360",
+      "level": "DayEnd",
+      "nodeId": 360,
+      "name": "BstNode_2446917696",
+      "className": "OnFlame",
+      "classIndex": 52,
+      "sourceOffset": 91579,
+      "sourceLength": 44,
+      "sourceSha256": "db00360589f2760d392287e3f8f5f32b7d6cbe00151d276dce55a6edd74f15ac",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n360/p7",
+          "fieldName": "flames",
+          "target": "DayEnd:n1169",
+          "targetNodeId": 1169,
+          "offset": 91615
+        },
+        {
+          "fieldId": "n360/p8",
+          "fieldName": "events",
+          "target": "DayEnd:n1315",
+          "targetNodeId": 1315,
+          "offset": 91619
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n1053",
+      "level": "DayEnd",
+      "nodeId": 1053,
+      "name": "BstNode_2446917700",
+      "className": "OnFlame",
+      "classIndex": 52,
+      "sourceOffset": 220997,
+      "sourceLength": 44,
+      "sourceSha256": "d09c88da5e1b269c0e3d6d14e25652af615ab6c75a3b5533a4d8368ff26645c2",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1053/p7",
+          "fieldName": "flames",
+          "target": "DayEnd:n1423",
+          "targetNodeId": 1423,
+          "offset": 221033
+        },
+        {
+          "fieldId": "n1053/p8",
+          "fieldName": "events",
+          "target": "DayEnd:n1424",
+          "targetNodeId": 1424,
+          "offset": 221037
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n1146",
+      "level": "DayEnd",
+      "nodeId": 1146,
+      "name": "BstNode_2446917709",
+      "className": "OnFlame",
+      "classIndex": 52,
+      "sourceOffset": 237130,
+      "sourceLength": 44,
+      "sourceSha256": "24d068548fdb8fce19c8ee8fc674f969a8d195ddc2c2c887549aea096f05bc0c",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1146/p7",
+          "fieldName": "flames",
+          "target": "DayEnd:n1436",
+          "targetNodeId": 1436,
+          "offset": 237166
+        },
+        {
+          "fieldId": "n1146/p8",
+          "fieldName": "events",
+          "target": "DayEnd:n1437",
+          "targetNodeId": 1437,
+          "offset": 237170
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayHubCave:n23",
+      "level": "DayHubCave",
+      "nodeId": 23,
+      "name": "BstNode_3156082789",
+      "className": "OnFlame",
+      "classIndex": 10,
+      "sourceOffset": 27459,
+      "sourceLength": 44,
+      "sourceSha256": "4008d8d85f0584429fdfe9cc1a97f06c003c383ee1435b4eb41a0e1feddcdc8a",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n23/p7",
+          "fieldName": "flames",
+          "target": "DayHubCave:n205",
+          "targetNodeId": 205,
+          "offset": 27495
+        },
+        {
+          "fieldId": "n23/p8",
+          "fieldName": "events",
+          "target": "DayHubCave:n963",
+          "targetNodeId": 963,
+          "offset": 27499
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayHubCave:n145",
+      "level": "DayHubCave",
+      "nodeId": 145,
+      "name": "BstNode_3156082776",
+      "className": "OnFlame",
+      "classIndex": 10,
+      "sourceOffset": 48973,
+      "sourceLength": 44,
+      "sourceSha256": "bc09e2898e3b6495077be480a7491f554f122998d1a46b47d18b6e6030618f13",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n145/p7",
+          "fieldName": "flames",
+          "target": "DayHubCave:n617",
+          "targetNodeId": 617,
+          "offset": 49009
+        },
+        {
+          "fieldId": "n145/p8",
+          "fieldName": "events",
+          "target": "DayHubCave:n991",
+          "targetNodeId": 991,
+          "offset": 49013
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayHubCave:n183",
+      "level": "DayHubCave",
+      "nodeId": 183,
+      "name": "BstNode_3156082778",
+      "className": "OnFlame",
+      "classIndex": 10,
+      "sourceOffset": 55481,
+      "sourceLength": 44,
+      "sourceSha256": "ecf4aea679f1efccfd438b1b84d0fb93dc263a64fd6f527bf7298c1918e98ac7",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n183/p7",
+          "fieldName": "flames",
+          "target": "DayHubCave:n352",
+          "targetNodeId": 352,
+          "offset": 55517
+        },
+        {
+          "fieldId": "n183/p8",
+          "fieldName": "events",
+          "target": "DayHubCave:n1000",
+          "targetNodeId": 1000,
+          "offset": 55521
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayHubCave:n187",
+      "level": "DayHubCave",
+      "nodeId": 187,
+      "name": "BstNode_3156082779",
+      "className": "OnFlame",
+      "classIndex": 10,
+      "sourceOffset": 56199,
+      "sourceLength": 44,
+      "sourceSha256": "46dcfc579accb91d1b8ed66059b7647f3d8d29bd88a04d132b978097498efd60",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n187/p7",
+          "fieldName": "flames",
+          "target": "DayHubCave:n271",
+          "targetNodeId": 271,
+          "offset": 56235
+        },
+        {
+          "fieldId": "n187/p8",
+          "fieldName": "events",
+          "target": "DayHubCave:n1001",
+          "targetNodeId": 1001,
+          "offset": 56239
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayHubCave:n193",
+      "level": "DayHubCave",
+      "nodeId": 193,
+      "name": "BstNode_3156082780",
+      "className": "OnFlame",
+      "classIndex": 10,
+      "sourceOffset": 56906,
+      "sourceLength": 44,
+      "sourceSha256": "e1433ed9e3bf1f49796615f14993311a2af7e8c28a15f018780ce0906f01cee8",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n193/p7",
+          "fieldName": "flames",
+          "target": "DayHubCave:n522",
+          "targetNodeId": 522,
+          "offset": 56942
+        },
+        {
+          "fieldId": "n193/p8",
+          "fieldName": "events",
+          "target": "DayHubCave:n1004",
+          "targetNodeId": 1004,
+          "offset": 56946
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayHubCave:n220",
+      "level": "DayHubCave",
+      "nodeId": 220,
+      "name": "BstNode_3156082777",
+      "className": "OnFlame",
+      "classIndex": 10,
+      "sourceOffset": 60846,
+      "sourceLength": 44,
+      "sourceSha256": "c9adf999fcd346c134b49c644918d82de86d6ae424380d30a5b02b82f36fc659",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n220/p7",
+          "fieldName": "flames",
+          "target": "DayHubCave:n5",
+          "targetNodeId": 5,
+          "offset": 60882
+        },
+        {
+          "fieldId": "n220/p8",
+          "fieldName": "events",
+          "target": "DayHubCave:n1008",
+          "targetNodeId": 1008,
+          "offset": 60886
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayHubCave:n234",
+      "level": "DayHubCave",
+      "nodeId": 234,
+      "name": "BstNode_3156082774",
+      "className": "OnFlame",
+      "classIndex": 10,
+      "sourceOffset": 62260,
+      "sourceLength": 44,
+      "sourceSha256": "eeb5532fc6cb69a33bd963533846cea10be2fdddde53dc8e673d18b5ad4406f4",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n234/p7",
+          "fieldName": "flames",
+          "target": "DayHubCave:n240",
+          "targetNodeId": 240,
+          "offset": 62296
+        },
+        {
+          "fieldId": "n234/p8",
+          "fieldName": "events",
+          "target": "DayHubCave:n1012",
+          "targetNodeId": 1012,
+          "offset": 62300
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayHubCave:n243",
+      "level": "DayHubCave",
+      "nodeId": 243,
+      "name": "BstNode_34603264",
+      "className": "OnFlame",
+      "classIndex": 10,
+      "sourceOffset": 63754,
+      "sourceLength": 42,
+      "sourceSha256": "ff680471e386df53666faa6b6677d7977351ba00e64a2deebdb942c88b64ef21",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n243/p7",
+          "fieldName": "flames",
+          "target": "DayHubCave:n486",
+          "targetNodeId": 486,
+          "offset": 63788
+        },
+        {
+          "fieldId": "n243/p8",
+          "fieldName": "events",
+          "target": "DayHubCave:n1013",
+          "targetNodeId": 1013,
+          "offset": 63792
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayHubCave:n335",
+      "level": "DayHubCave",
+      "nodeId": 335,
+      "name": "BstNode_3156082773",
+      "className": "OnFlame",
+      "classIndex": 10,
+      "sourceOffset": 84079,
+      "sourceLength": 44,
+      "sourceSha256": "ee080b66daa97cd9361c04eb1b7a16e98405182248fcc03b904c83678470bceb",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n335/p7",
+          "fieldName": "flames",
+          "target": "DayHubCave:n154",
+          "targetNodeId": 154,
+          "offset": 84115
+        },
+        {
+          "fieldId": "n335/p8",
+          "fieldName": "events",
+          "target": "DayHubCave:n1027",
+          "targetNodeId": 1027,
+          "offset": 84119
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayHubCave:n610",
+      "level": "DayHubCave",
+      "nodeId": 610,
+      "name": "BstNode_3156082775",
+      "className": "OnFlame",
+      "classIndex": 10,
+      "sourceOffset": 140163,
+      "sourceLength": 44,
+      "sourceSha256": "f99c857b4bee23946121a82d48e7b5aeaf9e5c0befcebd829be0305547b4b07e",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n610/p7",
+          "fieldName": "flames",
+          "target": "DayHubCave:n643",
+          "targetNodeId": 643,
+          "offset": 140199
+        },
+        {
+          "fieldId": "n610/p8",
+          "fieldName": "events",
+          "target": "DayHubCave:n1060",
+          "targetNodeId": 1060,
+          "offset": 140203
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n600",
+      "level": "Dusk",
+      "nodeId": 600,
+      "name": "BstNode_2446917757",
+      "className": "OnFlame",
+      "classIndex": 58,
+      "sourceOffset": 133925,
+      "sourceLength": 44,
+      "sourceSha256": "3346d6e84de59f1f91da31187f6d19692e7c74f12659181140eafdb65f0b875f",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n600/p7",
+          "fieldName": "flames",
+          "target": "Dusk:n1240",
+          "targetNodeId": 1240,
+          "offset": 133961
+        },
+        {
+          "fieldId": "n600/p8",
+          "fieldName": "events",
+          "target": "Dusk:n1241",
+          "targetNodeId": 1241,
+          "offset": 133965
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n738",
+      "level": "Dusk",
+      "nodeId": 738,
+      "name": "BstNode_34603740",
+      "className": "OnFlame",
+      "classIndex": 58,
+      "sourceOffset": 155709,
+      "sourceLength": 42,
+      "sourceSha256": "023427cf556de78929ff81f7b46838d7ed9dd3e5a4ad164351a7014ac7706cce",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n738/p7",
+          "fieldName": "flames",
+          "target": "Dusk:n1250",
+          "targetNodeId": 1250,
+          "offset": 155743
+        },
+        {
+          "fieldId": "n738/p8",
+          "fieldName": "events",
+          "target": "Dusk:n1251",
+          "targetNodeId": 1251,
+          "offset": 155747
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n1026",
+      "level": "Dusk",
+      "nodeId": 1026,
+      "name": "BstNode_34603726",
+      "className": "OnFlame",
+      "classIndex": 58,
+      "sourceOffset": 209686,
+      "sourceLength": 42,
+      "sourceSha256": "f78178d36fb9cfd548d2f26d9624e68214ca7ca887c8a0694317c485195843ac",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1026/p7",
+          "fieldName": "flames",
+          "target": "Dusk:n1280",
+          "targetNodeId": 1280,
+          "offset": 209720
+        },
+        {
+          "fieldId": "n1026/p8",
+          "fieldName": "events",
+          "target": "Dusk:n1281",
+          "targetNodeId": 1281,
+          "offset": 209724
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n1134",
+      "level": "Dusk",
+      "nodeId": 1134,
+      "name": "BstNode_34603730",
+      "className": "OnFlame",
+      "classIndex": 58,
+      "sourceOffset": 232439,
+      "sourceLength": 42,
+      "sourceSha256": "85c603ffa1c497acc016ccbcf7d841909e7ef900cbc40d2a8e0342d5b0df6694",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1134/p7",
+          "fieldName": "flames",
+          "target": "Dusk:n1285",
+          "targetNodeId": 1285,
+          "offset": 232473
+        },
+        {
+          "fieldId": "n1134/p8",
+          "fieldName": "events",
+          "target": "Dusk:n405",
+          "targetNodeId": 405,
+          "offset": 232477
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n286",
+      "level": "DuskGraveyard",
+      "nodeId": 286,
+      "name": "BstNode_34603862",
+      "className": "OnFlame",
+      "classIndex": 36,
+      "sourceOffset": 92168,
+      "sourceLength": 42,
+      "sourceSha256": "7bdad867f0242b4a4f8b9792f168d253d20f53745c8e70c5a859a9fab5730c32",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n286/p7",
+          "fieldName": "flames",
+          "target": "DuskGraveyard:n1719",
+          "targetNodeId": 1719,
+          "offset": 92202
+        },
+        {
+          "fieldId": "n286/p8",
+          "fieldName": "events",
+          "target": "DuskGraveyard:n1720",
+          "targetNodeId": 1720,
+          "offset": 92206
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n1025",
+      "level": "DuskGraveyard",
+      "nodeId": 1025,
+      "name": "BstNode_34603843",
+      "className": "OnFlame",
+      "classIndex": 36,
+      "sourceOffset": 270360,
+      "sourceLength": 42,
+      "sourceSha256": "55adae3b47913d62216a1ad6432e9ff493d5c3bf0e4d247c9cb6b2f530c151c3",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1025/p7",
+          "fieldName": "flames",
+          "target": "DuskGraveyard:n1758",
+          "targetNodeId": 1758,
+          "offset": 270394
+        },
+        {
+          "fieldId": "n1025/p8",
+          "fieldName": "events",
+          "target": "DuskGraveyard:n1539",
+          "targetNodeId": 1539,
+          "offset": 270398
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n1448",
+      "level": "DuskGraveyard",
+      "nodeId": 1448,
+      "name": "BstNode_34603863",
+      "className": "OnFlame",
+      "classIndex": 36,
+      "sourceOffset": 355961,
+      "sourceLength": 42,
+      "sourceSha256": "ed5b3e2e40f1df2318a512dfb56f7bee6714fe69e90bd28960d2dda83edb0e26",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1448/p7",
+          "fieldName": "flames",
+          "target": "DuskGraveyard:n1781",
+          "targetNodeId": 1781,
+          "offset": 355995
+        },
+        {
+          "fieldId": "n1448/p8",
+          "fieldName": "events",
+          "target": "DuskGraveyard:n1234",
+          "targetNodeId": 1234,
+          "offset": 355999
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n1035",
+      "level": "HubReveal",
+      "nodeId": 1035,
+      "name": "BstNode_2446917757",
+      "className": "OnFlame",
+      "classIndex": 90,
+      "sourceOffset": 202317,
+      "sourceLength": 44,
+      "sourceSha256": "c5a500b42e416a16242bc570bd257f76c5593d04e99907cdae4e91ebe39ff0f9",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1035/p7",
+          "fieldName": "flames",
+          "target": "HubReveal:n1707",
+          "targetNodeId": 1707,
+          "offset": 202353
+        },
+        {
+          "fieldId": "n1035/p8",
+          "fieldName": "events",
+          "target": "HubReveal:n1708",
+          "targetNodeId": 1708,
+          "offset": 202357
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n1246",
+      "level": "HubReveal",
+      "nodeId": 1246,
+      "name": "BstNode_1477",
+      "className": "OnFlame",
+      "classIndex": 90,
+      "sourceOffset": 241442,
+      "sourceLength": 38,
+      "sourceSha256": "c5afae99129406975c465a3808a34ff7f1fa452039e58eb119189338fdf41f1a",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1246/p7",
+          "fieldName": "flames",
+          "target": "HubReveal:n1744",
+          "targetNodeId": 1744,
+          "offset": 241472
+        },
+        {
+          "fieldId": "n1246/p8",
+          "fieldName": "events",
+          "target": "HubReveal:n1123",
+          "targetNodeId": 1123,
+          "offset": 241476
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n5",
+      "level": "Night",
+      "nodeId": 5,
+      "name": "BstNode_34604447",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 24818,
+      "sourceLength": 42,
+      "sourceSha256": "61fed37718101ce85c2680913ec476dd36138e8bdbb40d25f2b056a441302e42",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n5/p7",
+          "fieldName": "flames",
+          "target": "Night:n3106",
+          "targetNodeId": 3106,
+          "offset": 24852
+        },
+        {
+          "fieldId": "n5/p8",
+          "fieldName": "events",
+          "target": "Night:n327",
+          "targetNodeId": 327,
+          "offset": 24856
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n37",
+      "level": "Night",
+      "nodeId": 37,
+      "name": "BstNode_411",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 29047,
+      "sourceLength": 37,
+      "sourceSha256": "dc0ad3a698305a263601b847c66e122cc11995fd6a215fed9fa348101f32d853",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n37/p7",
+          "fieldName": "flames",
+          "target": "Night:n3112",
+          "targetNodeId": 3112,
+          "offset": 29076
+        },
+        {
+          "fieldId": "n37/p8",
+          "fieldName": "events",
+          "target": "Night:n145",
+          "targetNodeId": 145,
+          "offset": 29080
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n133",
+      "level": "Night",
+      "nodeId": 133,
+      "name": "BstNode_1252",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 42968,
+      "sourceLength": 38,
+      "sourceSha256": "195b613d26519e70830a55eb6aae168cb8e168598d1181ceb9f3e19ced592cad",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n133/p7",
+          "fieldName": "flames",
+          "target": "Night:n3140",
+          "targetNodeId": 3140,
+          "offset": 42998
+        },
+        {
+          "fieldId": "n133/p8",
+          "fieldName": "events",
+          "target": "Night:n2489",
+          "targetNodeId": 2489,
+          "offset": 43002
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n183",
+      "level": "Night",
+      "nodeId": 183,
+      "name": "BstNode_1217",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 48921,
+      "sourceLength": 38,
+      "sourceSha256": "8a08aebf208d3f3ffae3c28b8ff6eb5d4455510e0a6f8f32c61d5200870643ae",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n183/p7",
+          "fieldName": "flames",
+          "target": "Night:n3148",
+          "targetNodeId": 3148,
+          "offset": 48951
+        },
+        {
+          "fieldId": "n183/p8",
+          "fieldName": "events",
+          "target": "Night:n1507",
+          "targetNodeId": 1507,
+          "offset": 48955
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n241",
+      "level": "Night",
+      "nodeId": 241,
+      "name": "BstNode_400",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 58252,
+      "sourceLength": 37,
+      "sourceSha256": "ebadf624e6636536f2015b51a95b434d9cf0641f8f869341773ae36792c9f400",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n241/p7",
+          "fieldName": "flames",
+          "target": "Night:n3157",
+          "targetNodeId": 3157,
+          "offset": 58281
+        },
+        {
+          "fieldId": "n241/p8",
+          "fieldName": "events",
+          "target": "Night:n1735",
+          "targetNodeId": 1735,
+          "offset": 58285
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n250",
+      "level": "Night",
+      "nodeId": 250,
+      "name": "BstNode_1147",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 59086,
+      "sourceLength": 38,
+      "sourceSha256": "7d7c7bceb954ab96a9b619fb6bd35097827cd6a5f1857d78984d6bcfae5b1dc4",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n250/p7",
+          "fieldName": "flames",
+          "target": "Night:n1560",
+          "targetNodeId": 1560,
+          "offset": 59116
+        },
+        {
+          "fieldId": "n250/p8",
+          "fieldName": "events",
+          "target": "Night:n3159",
+          "targetNodeId": 3159,
+          "offset": 59120
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n267",
+      "level": "Night",
+      "nodeId": 267,
+      "name": "BstNode_2215",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 61893,
+      "sourceLength": 38,
+      "sourceSha256": "06c1efe716496fd378931f5a1391bbe6677416847e8fba9223e3138e1aa44c28",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n267/p7",
+          "fieldName": "flames",
+          "target": "Night:n3162",
+          "targetNodeId": 3162,
+          "offset": 61923
+        },
+        {
+          "fieldId": "n267/p8",
+          "fieldName": "events",
+          "target": "Night:n3163",
+          "targetNodeId": 3163,
+          "offset": 61927
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n302",
+      "level": "Night",
+      "nodeId": 302,
+      "name": "BstNode_1783",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 67536,
+      "sourceLength": 38,
+      "sourceSha256": "5c92bb7bcb91069997d640c71a34465fd1d3b3a503bf90ef04749d5597afd16e",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n302/p7",
+          "fieldName": "flames",
+          "target": "Night:n3169",
+          "targetNodeId": 3169,
+          "offset": 67566
+        },
+        {
+          "fieldId": "n302/p8",
+          "fieldName": "events",
+          "target": "Night:n95",
+          "targetNodeId": 95,
+          "offset": 67570
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n305",
+      "level": "Night",
+      "nodeId": 305,
+      "name": "BstNode_851",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 67936,
+      "sourceLength": 37,
+      "sourceSha256": "c1a7834201dc7eba8f6585af1d427154e301329882c7f6c7eb0c2e6a1d19a521",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n305/p7",
+          "fieldName": "flames",
+          "target": "Night:n3171",
+          "targetNodeId": 3171,
+          "offset": 67965
+        },
+        {
+          "fieldId": "n305/p8",
+          "fieldName": "events",
+          "target": "Night:n1326",
+          "targetNodeId": 1326,
+          "offset": 67969
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n360",
+      "level": "Night",
+      "nodeId": 360,
+      "name": "BstNode_1119",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 75391,
+      "sourceLength": 38,
+      "sourceSha256": "c68db68dd89876f9451a2a1841ce75c1c856654a506f49d3f8612c194a0547ba",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n360/p7",
+          "fieldName": "flames",
+          "target": "Night:n3182",
+          "targetNodeId": 3182,
+          "offset": 75421
+        },
+        {
+          "fieldId": "n360/p8",
+          "fieldName": "events",
+          "target": "Night:n2830",
+          "targetNodeId": 2830,
+          "offset": 75425
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n371",
+      "level": "Night",
+      "nodeId": 371,
+      "name": "BstNode_672",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 77940,
+      "sourceLength": 37,
+      "sourceSha256": "f1dd6cb09ca109319686afb200d53ce37dee68f4460ac9d39daf5f438e421e94",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n371/p7",
+          "fieldName": "flames",
+          "target": "Night:n3185",
+          "targetNodeId": 3185,
+          "offset": 77969
+        },
+        {
+          "fieldId": "n371/p8",
+          "fieldName": "events",
+          "target": "Night:n1748",
+          "targetNodeId": 1748,
+          "offset": 77973
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n386",
+      "level": "Night",
+      "nodeId": 386,
+      "name": "BstNode_731",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 80596,
+      "sourceLength": 37,
+      "sourceSha256": "357d76b3b8e01841f6fbaf22a425d9ba1be16c7a7fce42fea1685ae03ef187ee",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n386/p7",
+          "fieldName": "flames",
+          "target": "Night:n1821",
+          "targetNodeId": 1821,
+          "offset": 80625
+        },
+        {
+          "fieldId": "n386/p8",
+          "fieldName": "events",
+          "target": "Night:n654",
+          "targetNodeId": 654,
+          "offset": 80629
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n488",
+      "level": "Night",
+      "nodeId": 488,
+      "name": "BstNode_1152",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 96270,
+      "sourceLength": 38,
+      "sourceSha256": "faf67ddf56d4ade60df5340c64cd5d2aecae731686f9f1de1063b60f045a3cad",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n488/p7",
+          "fieldName": "flames",
+          "target": "Night:n3200",
+          "targetNodeId": 3200,
+          "offset": 96300
+        },
+        {
+          "fieldId": "n488/p8",
+          "fieldName": "events",
+          "target": "Night:n2020",
+          "targetNodeId": 2020,
+          "offset": 96304
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n565",
+      "level": "Night",
+      "nodeId": 565,
+      "name": "BstNode_782",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 106145,
+      "sourceLength": 37,
+      "sourceSha256": "e62666c827512db6718e44a8ebfdb6222d3dbb510eed71f8f1aa3b2530b7c787",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n565/p7",
+          "fieldName": "flames",
+          "target": "Night:n387",
+          "targetNodeId": 387,
+          "offset": 106174
+        },
+        {
+          "fieldId": "n565/p8",
+          "fieldName": "events",
+          "target": "Night:n3068",
+          "targetNodeId": 3068,
+          "offset": 106178
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n571",
+      "level": "Night",
+      "nodeId": 571,
+      "name": "BstNode_550",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 106604,
+      "sourceLength": 37,
+      "sourceSha256": "93e038050b18c5663b983be5573bd519d27b84eea641f4a9c3b5b06af6ab6942",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n571/p7",
+          "fieldName": "flames",
+          "target": "Night:n3215",
+          "targetNodeId": 3215,
+          "offset": 106633
+        },
+        {
+          "fieldId": "n571/p8",
+          "fieldName": "events",
+          "target": "Night:n2250",
+          "targetNodeId": 2250,
+          "offset": 106637
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n576",
+      "level": "Night",
+      "nodeId": 576,
+      "name": "BstNode_1132",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 107717,
+      "sourceLength": 38,
+      "sourceSha256": "e9ad0e241340e60bc8028ae8c521ce7cab23dce6dde81389e20fa92c47a9b81b",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n576/p7",
+          "fieldName": "flames",
+          "target": "Night:n3216",
+          "targetNodeId": 3216,
+          "offset": 107747
+        },
+        {
+          "fieldId": "n576/p8",
+          "fieldName": "events",
+          "target": "Night:n3025",
+          "targetNodeId": 3025,
+          "offset": 107751
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n589",
+      "level": "Night",
+      "nodeId": 589,
+      "name": "BstNode_382",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 110292,
+      "sourceLength": 37,
+      "sourceSha256": "5510a502dcd19dd00b066e49fdb1b5d8b2ca9b003e7dc2ff9f280d68ae6dd935",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n589/p7",
+          "fieldName": "flames",
+          "target": "Night:n3220",
+          "targetNodeId": 3220,
+          "offset": 110321
+        },
+        {
+          "fieldId": "n589/p8",
+          "fieldName": "events",
+          "target": "Night:n2882",
+          "targetNodeId": 2882,
+          "offset": 110325
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n655",
+      "level": "Night",
+      "nodeId": 655,
+      "name": "BstNode_1406",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 120522,
+      "sourceLength": 38,
+      "sourceSha256": "c6f7dad4d6620d71f3a84bd8dd1d43b026fc67625bf87e9e2a98d5c6da88a550",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n655/p7",
+          "fieldName": "flames",
+          "target": "Night:n3228",
+          "targetNodeId": 3228,
+          "offset": 120552
+        },
+        {
+          "fieldId": "n655/p8",
+          "fieldName": "events",
+          "target": "Night:n1339",
+          "targetNodeId": 1339,
+          "offset": 120556
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n698",
+      "level": "Night",
+      "nodeId": 698,
+      "name": "BstNode_1225",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 126565,
+      "sourceLength": 38,
+      "sourceSha256": "b7f29670c89599c95589d7f124db7f0a054697ed19f1212dac85a6bb3556d208",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n698/p7",
+          "fieldName": "flames",
+          "target": "Night:n3234",
+          "targetNodeId": 3234,
+          "offset": 126595
+        },
+        {
+          "fieldId": "n698/p8",
+          "fieldName": "events",
+          "target": "Night:n584",
+          "targetNodeId": 584,
+          "offset": 126599
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n725",
+      "level": "Night",
+      "nodeId": 725,
+      "name": "BstNode_722",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 130341,
+      "sourceLength": 37,
+      "sourceSha256": "35f0e673a1cbfd4475d8b93750b379edb5ab9ce50c08926a2323dda37b2bcbe3",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n725/p7",
+          "fieldName": "flames",
+          "target": "Night:n2847",
+          "targetNodeId": 2847,
+          "offset": 130370
+        },
+        {
+          "fieldId": "n725/p8",
+          "fieldName": "events",
+          "target": "Night:n3241",
+          "targetNodeId": 3241,
+          "offset": 130374
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n801",
+      "level": "Night",
+      "nodeId": 801,
+      "name": "BstNode_1099",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 143199,
+      "sourceLength": 38,
+      "sourceSha256": "4ce5d076bab22533b1c1feb0bd3b62ce8fbc92275e4295f6715db3ac102ed4be",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n801/p7",
+          "fieldName": "flames",
+          "target": "Night:n3249",
+          "targetNodeId": 3249,
+          "offset": 143229
+        },
+        {
+          "fieldId": "n801/p8",
+          "fieldName": "events",
+          "target": "Night:n1950",
+          "targetNodeId": 1950,
+          "offset": 143233
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n825",
+      "level": "Night",
+      "nodeId": 825,
+      "name": "BstNode_1209",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 146240,
+      "sourceLength": 38,
+      "sourceSha256": "c538a6487ba4c20d06865b794d08dcc6916ef065b49132e64ff98bce82472777",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n825/p7",
+          "fieldName": "flames",
+          "target": "Night:n3256",
+          "targetNodeId": 3256,
+          "offset": 146270
+        },
+        {
+          "fieldId": "n825/p8",
+          "fieldName": "events",
+          "target": "Night:n1298",
+          "targetNodeId": 1298,
+          "offset": 146274
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n833",
+      "level": "Night",
+      "nodeId": 833,
+      "name": "BstNode_1109",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 147345,
+      "sourceLength": 38,
+      "sourceSha256": "879d856e76336be121224f1fafc7ace95ff13793fa9e6d071080eeb4979a4d06",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n833/p7",
+          "fieldName": "flames",
+          "target": "Night:n1901",
+          "targetNodeId": 1901,
+          "offset": 147375
+        },
+        {
+          "fieldId": "n833/p8",
+          "fieldName": "events",
+          "target": "Night:n154",
+          "targetNodeId": 154,
+          "offset": 147379
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n873",
+      "level": "Night",
+      "nodeId": 873,
+      "name": "BstNode_1275",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 153786,
+      "sourceLength": 38,
+      "sourceSha256": "f37bbc64516d70b07857bacb26587761553bd319a94c31e0004c1a9d82d6fbb1",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n873/p7",
+          "fieldName": "flames",
+          "target": "Night:n3266",
+          "targetNodeId": 3266,
+          "offset": 153816
+        },
+        {
+          "fieldId": "n873/p8",
+          "fieldName": "events",
+          "target": "Night:n1574",
+          "targetNodeId": 1574,
+          "offset": 153820
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n919",
+      "level": "Night",
+      "nodeId": 919,
+      "name": "BstNode_1167",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 161144,
+      "sourceLength": 38,
+      "sourceSha256": "872ea8d956291934fd669b9aafbe7fe9bbfb6911c192afd7904a7a1a1ec53bd0",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n919/p7",
+          "fieldName": "flames",
+          "target": "Night:n3273",
+          "targetNodeId": 3273,
+          "offset": 161174
+        },
+        {
+          "fieldId": "n919/p8",
+          "fieldName": "events",
+          "target": "Night:n1365",
+          "targetNodeId": 1365,
+          "offset": 161178
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1071",
+      "level": "Night",
+      "nodeId": 1071,
+      "name": "BstNode_464",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 181619,
+      "sourceLength": 37,
+      "sourceSha256": "b1aa6a1437f640a792d3d90569368cc3f665b329b5879459c9455b0d4ddf5c0b",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1071/p7",
+          "fieldName": "flames",
+          "target": "Night:n3300",
+          "targetNodeId": 3300,
+          "offset": 181648
+        },
+        {
+          "fieldId": "n1071/p8",
+          "fieldName": "events",
+          "target": "Night:n278",
+          "targetNodeId": 278,
+          "offset": 181652
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1135",
+      "level": "Night",
+      "nodeId": 1135,
+      "name": "BstNode_1201",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 190169,
+      "sourceLength": 38,
+      "sourceSha256": "10f2a1ad38ced58dfcaa44aafc24c28e072ae87dc2426d8aeab504bf06e4a3ce",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1135/p7",
+          "fieldName": "flames",
+          "target": "Night:n3314",
+          "targetNodeId": 3314,
+          "offset": 190199
+        },
+        {
+          "fieldId": "n1135/p8",
+          "fieldName": "events",
+          "target": "Night:n2676",
+          "targetNodeId": 2676,
+          "offset": 190203
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1198",
+      "level": "Night",
+      "nodeId": 1198,
+      "name": "BstNode_469",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 199451,
+      "sourceLength": 37,
+      "sourceSha256": "2979cf0f840d1fae9f710fb9e0263d2f17201b698637d016e9c48eb3b93ed436",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1198/p7",
+          "fieldName": "flames",
+          "target": "Night:n3322",
+          "targetNodeId": 3322,
+          "offset": 199480
+        },
+        {
+          "fieldId": "n1198/p8",
+          "fieldName": "events",
+          "target": "Night:n560",
+          "targetNodeId": 560,
+          "offset": 199484
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1219",
+      "level": "Night",
+      "nodeId": 1219,
+      "name": "BstNode_1090",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 202382,
+      "sourceLength": 38,
+      "sourceSha256": "e733091896357702b0227e4d6a47cb0910d01f084a0d135d942eae1bfba24488",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1219/p7",
+          "fieldName": "flames",
+          "target": "Night:n3327",
+          "targetNodeId": 3327,
+          "offset": 202412
+        },
+        {
+          "fieldId": "n1219/p8",
+          "fieldName": "events",
+          "target": "Night:n249",
+          "targetNodeId": 249,
+          "offset": 202416
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1354",
+      "level": "Night",
+      "nodeId": 1354,
+      "name": "BstNode_651",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 221931,
+      "sourceLength": 37,
+      "sourceSha256": "ea36e96cd0120a386c8d392bca39201b436ad1c51918144c96e779772c434e85",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1354/p7",
+          "fieldName": "flames",
+          "target": "Night:n1565",
+          "targetNodeId": 1565,
+          "offset": 221960
+        },
+        {
+          "fieldId": "n1354/p8",
+          "fieldName": "events",
+          "target": "Night:n1600",
+          "targetNodeId": 1600,
+          "offset": 221964
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1372",
+      "level": "Night",
+      "nodeId": 1372,
+      "name": "BstNode_540",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 224141,
+      "sourceLength": 37,
+      "sourceSha256": "19229fd622b3168e20c93154d952161f183c83276aa6ccda784ca0ba98e0942e",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1372/p7",
+          "fieldName": "flames",
+          "target": "Night:n3356",
+          "targetNodeId": 3356,
+          "offset": 224170
+        },
+        {
+          "fieldId": "n1372/p8",
+          "fieldName": "events",
+          "target": "Night:n2396",
+          "targetNodeId": 2396,
+          "offset": 224174
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1387",
+      "level": "Night",
+      "nodeId": 1387,
+      "name": "BstNode_1300",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 225561,
+      "sourceLength": 38,
+      "sourceSha256": "7b700b32bea5008a73c578b6c6972dcdbc32db08b612380e5f513b185229e910",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1387/p7",
+          "fieldName": "flames",
+          "target": "Night:n3359",
+          "targetNodeId": 3359,
+          "offset": 225591
+        },
+        {
+          "fieldId": "n1387/p8",
+          "fieldName": "events",
+          "target": "Night:n62",
+          "targetNodeId": 62,
+          "offset": 225595
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1418",
+      "level": "Night",
+      "nodeId": 1418,
+      "name": "BstNode_34603264",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 229252,
+      "sourceLength": 42,
+      "sourceSha256": "df5f5bd705240fc226ecf23f006b9167ac3475a80e9279b857997b8a3796c881",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1418/p7",
+          "fieldName": "flames",
+          "target": "Night:n2102",
+          "targetNodeId": 2102,
+          "offset": 229286
+        },
+        {
+          "fieldId": "n1418/p8",
+          "fieldName": "events",
+          "target": "Night:n3367",
+          "targetNodeId": 3367,
+          "offset": 229290
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1556",
+      "level": "Night",
+      "nodeId": 1556,
+      "name": "BstNode_832",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 244934,
+      "sourceLength": 37,
+      "sourceSha256": "459f5dfabf9ffac90996016c5b3b3b9148434e7f40d7965d2e04fb5cd24ef183",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1556/p7",
+          "fieldName": "flames",
+          "target": "Night:n3392",
+          "targetNodeId": 3392,
+          "offset": 244963
+        },
+        {
+          "fieldId": "n1556/p8",
+          "fieldName": "events",
+          "target": "Night:n2445",
+          "targetNodeId": 2445,
+          "offset": 244967
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1562",
+      "level": "Night",
+      "nodeId": 1562,
+      "name": "BstNode_790",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 245846,
+      "sourceLength": 37,
+      "sourceSha256": "4db6bfcf3ec435cc602c9f825215e1106fa942172dd28d8ad723f33bf9191df1",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1562/p7",
+          "fieldName": "flames",
+          "target": "Night:n2052",
+          "targetNodeId": 2052,
+          "offset": 245875
+        },
+        {
+          "fieldId": "n1562/p8",
+          "fieldName": "events",
+          "target": "Night:n2766",
+          "targetNodeId": 2766,
+          "offset": 245879
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1585",
+      "level": "Night",
+      "nodeId": 1585,
+      "name": "BstNode_871",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 248529,
+      "sourceLength": 37,
+      "sourceSha256": "f325cc8d90988f5f4cc1422aec40017de9be9a9d9a1084d75c324e75c77eccf4",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1585/p7",
+          "fieldName": "flames",
+          "target": "Night:n3400",
+          "targetNodeId": 3400,
+          "offset": 248558
+        },
+        {
+          "fieldId": "n1585/p8",
+          "fieldName": "events",
+          "target": "Night:n169",
+          "targetNodeId": 169,
+          "offset": 248562
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1705",
+      "level": "Night",
+      "nodeId": 1705,
+      "name": "BstNode_583",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 267002,
+      "sourceLength": 37,
+      "sourceSha256": "b39a889df010ebafff2700182231646f9c4d97fa10b8c94906ceeeea0a0e2e10",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1705/p7",
+          "fieldName": "flames",
+          "target": "Night:n3414",
+          "targetNodeId": 3414,
+          "offset": 267031
+        },
+        {
+          "fieldId": "n1705/p8",
+          "fieldName": "events",
+          "target": "Night:n885",
+          "targetNodeId": 885,
+          "offset": 267035
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1714",
+      "level": "Night",
+      "nodeId": 1714,
+      "name": "BstNode_1116",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 267733,
+      "sourceLength": 38,
+      "sourceSha256": "d08b2a26ed46b7878238364ac0178180f70668f89feb70460515c4d3724723b5",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1714/p7",
+          "fieldName": "flames",
+          "target": "Night:n3416",
+          "targetNodeId": 3416,
+          "offset": 267763
+        },
+        {
+          "fieldId": "n1714/p8",
+          "fieldName": "events",
+          "target": "Night:n12",
+          "targetNodeId": 12,
+          "offset": 267767
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1719",
+      "level": "Night",
+      "nodeId": 1719,
+      "name": "BstNode_842",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 268413,
+      "sourceLength": 37,
+      "sourceSha256": "2cfc58a566b60fe0803fb453bf9b0cc8b030829e0d85c94bd7371fdab9af6142",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1719/p7",
+          "fieldName": "flames",
+          "target": "Night:n3418",
+          "targetNodeId": 3418,
+          "offset": 268442
+        },
+        {
+          "fieldId": "n1719/p8",
+          "fieldName": "events",
+          "target": "Night:n38",
+          "targetNodeId": 38,
+          "offset": 268446
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1782",
+      "level": "Night",
+      "nodeId": 1782,
+      "name": "BstNode_811",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 278854,
+      "sourceLength": 37,
+      "sourceSha256": "8391d896af4f8edc9c840a6c186e14931afef3da27cf7d20415b216d3a9830eb",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1782/p7",
+          "fieldName": "flames",
+          "target": "Night:n3441",
+          "targetNodeId": 3441,
+          "offset": 278883
+        },
+        {
+          "fieldId": "n1782/p8",
+          "fieldName": "events",
+          "target": "Night:n734",
+          "targetNodeId": 734,
+          "offset": 278887
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1812",
+      "level": "Night",
+      "nodeId": 1812,
+      "name": "BstNode_807",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 282491,
+      "sourceLength": 37,
+      "sourceSha256": "f21c08a502af5a249b4b365d70ea985d627e3cc84e5eb4b217a97bb282228852",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1812/p7",
+          "fieldName": "flames",
+          "target": "Night:n3449",
+          "targetNodeId": 3449,
+          "offset": 282520
+        },
+        {
+          "fieldId": "n1812/p8",
+          "fieldName": "events",
+          "target": "Night:n1602",
+          "targetNodeId": 1602,
+          "offset": 282524
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1835",
+      "level": "Night",
+      "nodeId": 1835,
+      "name": "BstNode_34604572",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 285971,
+      "sourceLength": 42,
+      "sourceSha256": "5f8d3e9f079ff975215d2e5a3b132afa998167bc97ccbcfdfeb8842210555955",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1835/p7",
+          "fieldName": "flames",
+          "target": "Night:n2585",
+          "targetNodeId": 2585,
+          "offset": 286005
+        },
+        {
+          "fieldId": "n1835/p8",
+          "fieldName": "events",
+          "target": "Night:n3453",
+          "targetNodeId": 3453,
+          "offset": 286009
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1888",
+      "level": "Night",
+      "nodeId": 1888,
+      "name": "BstNode_352",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 292123,
+      "sourceLength": 37,
+      "sourceSha256": "70d1412d212e49b4fc66f7433fa7915954c6789088748a746e172fcfe3df1f0b",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1888/p7",
+          "fieldName": "flames",
+          "target": "Night:n3467",
+          "targetNodeId": 3467,
+          "offset": 292152
+        },
+        {
+          "fieldId": "n1888/p8",
+          "fieldName": "events",
+          "target": "Night:n1159",
+          "targetNodeId": 1159,
+          "offset": 292156
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2072",
+      "level": "Night",
+      "nodeId": 2072,
+      "name": "BstNode_34604555",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 329103,
+      "sourceLength": 42,
+      "sourceSha256": "58807d94d481c8ffba6132537991d78fac987fa0ab806c605d74869b8786e7ce",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2072/p7",
+          "fieldName": "flames",
+          "target": "Night:n3497",
+          "targetNodeId": 3497,
+          "offset": 329137
+        },
+        {
+          "fieldId": "n2072/p8",
+          "fieldName": "events",
+          "target": "Night:n2283",
+          "targetNodeId": 2283,
+          "offset": 329141
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2087",
+      "level": "Night",
+      "nodeId": 2087,
+      "name": "BstNode_393",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 331730,
+      "sourceLength": 37,
+      "sourceSha256": "666bb47a841f99441a4c9c9b383f48cc4f54468885d13cec59902c3c13da5e97",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2087/p7",
+          "fieldName": "flames",
+          "target": "Night:n3502",
+          "targetNodeId": 3502,
+          "offset": 331759
+        },
+        {
+          "fieldId": "n2087/p8",
+          "fieldName": "events",
+          "target": "Night:n851",
+          "targetNodeId": 851,
+          "offset": 331763
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2096",
+      "level": "Night",
+      "nodeId": 2096,
+      "name": "BstNode_565",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 333050,
+      "sourceLength": 37,
+      "sourceSha256": "476d5e112f57242ea885311f5c8140357d0bc8720709abbcc7c6d1ffde4e73f9",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2096/p7",
+          "fieldName": "flames",
+          "target": "Night:n3504",
+          "targetNodeId": 3504,
+          "offset": 333079
+        },
+        {
+          "fieldId": "n2096/p8",
+          "fieldName": "events",
+          "target": "Night:n1788",
+          "targetNodeId": 1788,
+          "offset": 333083
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2130",
+      "level": "Night",
+      "nodeId": 2130,
+      "name": "BstNode_375",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 338421,
+      "sourceLength": 37,
+      "sourceSha256": "a4348fb125c38709cbcf611a0ff071b870debeab49b101e3e17d40c0a48d16a5",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2130/p7",
+          "fieldName": "flames",
+          "target": "Night:n3508",
+          "targetNodeId": 3508,
+          "offset": 338450
+        },
+        {
+          "fieldId": "n2130/p8",
+          "fieldName": "events",
+          "target": "Night:n296",
+          "targetNodeId": 296,
+          "offset": 338454
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2150",
+      "level": "Night",
+      "nodeId": 2150,
+      "name": "BstNode_2444",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 341152,
+      "sourceLength": 38,
+      "sourceSha256": "b50e3dc74947a66a31707e627d6eeb29382c7d7200f787e57790771674928216",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2150/p7",
+          "fieldName": "flames",
+          "target": "Night:n2126",
+          "targetNodeId": 2126,
+          "offset": 341182
+        },
+        {
+          "fieldId": "n2150/p8",
+          "fieldName": "events",
+          "target": "Night:n3512",
+          "targetNodeId": 3512,
+          "offset": 341186
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2163",
+      "level": "Night",
+      "nodeId": 2163,
+      "name": "BstNode_1124",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 344008,
+      "sourceLength": 38,
+      "sourceSha256": "821354dc6843d7a9cb0b86f59db993a567887a073bd5f1fd578582581ac159b2",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2163/p7",
+          "fieldName": "flames",
+          "target": "Night:n3514",
+          "targetNodeId": 3514,
+          "offset": 344038
+        },
+        {
+          "fieldId": "n2163/p8",
+          "fieldName": "events",
+          "target": "Night:n1068",
+          "targetNodeId": 1068,
+          "offset": 344042
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2169",
+      "level": "Night",
+      "nodeId": 2169,
+      "name": "BstNode_1182",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 344535,
+      "sourceLength": 38,
+      "sourceSha256": "0f14d08ee97dbd37c9bf839075467b3b643739f9f7484d0be411cd8765a6ce37",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2169/p7",
+          "fieldName": "flames",
+          "target": "Night:n3515",
+          "targetNodeId": 3515,
+          "offset": 344565
+        },
+        {
+          "fieldId": "n2169/p8",
+          "fieldName": "events",
+          "target": "Night:n1451",
+          "targetNodeId": 1451,
+          "offset": 344569
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2280",
+      "level": "Night",
+      "nodeId": 2280,
+      "name": "BstNode_620",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 359858,
+      "sourceLength": 37,
+      "sourceSha256": "8f9af1346b151788ae936c77c52982f5354a76d2de98c303a0cfc9599175086d",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2280/p7",
+          "fieldName": "flames",
+          "target": "Night:n3536",
+          "targetNodeId": 3536,
+          "offset": 359887
+        },
+        {
+          "fieldId": "n2280/p8",
+          "fieldName": "events",
+          "target": "Night:n613",
+          "targetNodeId": 613,
+          "offset": 359891
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2305",
+      "level": "Night",
+      "nodeId": 2305,
+      "name": "BstNode_1387",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 362941,
+      "sourceLength": 38,
+      "sourceSha256": "f4674aa4dbe52e1dac9bf1bc85fe04377ba9bb2522c14ac0d983696ad3cf7565",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2305/p7",
+          "fieldName": "flames",
+          "target": "Night:n3542",
+          "targetNodeId": 3542,
+          "offset": 362971
+        },
+        {
+          "fieldId": "n2305/p8",
+          "fieldName": "events",
+          "target": "Night:n109",
+          "targetNodeId": 109,
+          "offset": 362975
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2357",
+      "level": "Night",
+      "nodeId": 2357,
+      "name": "BstNode_1365",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 369565,
+      "sourceLength": 38,
+      "sourceSha256": "4eefe4764d43c7b3397e4d43cf92b41d96e96dbe0318e23cf8dca654ee79f4c8",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2357/p7",
+          "fieldName": "flames",
+          "target": "Night:n3552",
+          "targetNodeId": 3552,
+          "offset": 369595
+        },
+        {
+          "fieldId": "n2357/p8",
+          "fieldName": "events",
+          "target": "Night:n747",
+          "targetNodeId": 747,
+          "offset": 369599
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2451",
+      "level": "Night",
+      "nodeId": 2451,
+      "name": "BstNode_2446917757",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 384640,
+      "sourceLength": 44,
+      "sourceSha256": "2eb3a8a9247fbf8aa22e46549d7d61d29b42372be2bde2fb1ed54d1995c3adf2",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2451/p7",
+          "fieldName": "flames",
+          "target": "Night:n3569",
+          "targetNodeId": 3569,
+          "offset": 384676
+        },
+        {
+          "fieldId": "n2451/p8",
+          "fieldName": "events",
+          "target": "Night:n3570",
+          "targetNodeId": 3570,
+          "offset": 384680
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2500",
+      "level": "Night",
+      "nodeId": 2500,
+      "name": "BstNode_820",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 391919,
+      "sourceLength": 37,
+      "sourceSha256": "1ba000695eee19b258b96c095fe6da23d8202fa9b2e13f57c58c30820a977a7e",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2500/p7",
+          "fieldName": "flames",
+          "target": "Night:n3580",
+          "targetNodeId": 3580,
+          "offset": 391948
+        },
+        {
+          "fieldId": "n2500/p8",
+          "fieldName": "events",
+          "target": "Night:n1461",
+          "targetNodeId": 1461,
+          "offset": 391952
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2503",
+      "level": "Night",
+      "nodeId": 2503,
+      "name": "BstNode_34604576",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 392163,
+      "sourceLength": 42,
+      "sourceSha256": "6b2ff157a0c66f94e42e43dbf84e3c2b495a8645c4974db6fb654770b5c040c0",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2503/p7",
+          "fieldName": "flames",
+          "target": "Night:n1355",
+          "targetNodeId": 1355,
+          "offset": 392197
+        },
+        {
+          "fieldId": "n2503/p8",
+          "fieldName": "events",
+          "target": "Night:n3581",
+          "targetNodeId": 3581,
+          "offset": 392201
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2543",
+      "level": "Night",
+      "nodeId": 2543,
+      "name": "BstNode_34604459",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 398459,
+      "sourceLength": 42,
+      "sourceSha256": "22a9e767abffc0b86a10a62e4b63accf3bba166b931310aaffcad9516587d931",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2543/p7",
+          "fieldName": "flames",
+          "target": "Night:n3589",
+          "targetNodeId": 3589,
+          "offset": 398493
+        },
+        {
+          "fieldId": "n2543/p8",
+          "fieldName": "events",
+          "target": "Night:n3590",
+          "targetNodeId": 3590,
+          "offset": 398497
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2546",
+      "level": "Night",
+      "nodeId": 2546,
+      "name": "BstNode_34604541",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 398695,
+      "sourceLength": 42,
+      "sourceSha256": "b93b8da0d375983e1e37fe91dcb4ae48ac5c0df0f264243a3d9130ffd5273961",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2546/p7",
+          "fieldName": "flames",
+          "target": "Night:n2592",
+          "targetNodeId": 2592,
+          "offset": 398729
+        },
+        {
+          "fieldId": "n2546/p8",
+          "fieldName": "events",
+          "target": "Night:n3592",
+          "targetNodeId": 3592,
+          "offset": 398733
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2607",
+      "level": "Night",
+      "nodeId": 2607,
+      "name": "BstNode_1193",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 407009,
+      "sourceLength": 38,
+      "sourceSha256": "e557535d4ec4d1cc80f83b9d0c2bca2cbc8ffe9690bd884d655237ed29ee6ec4",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2607/p7",
+          "fieldName": "flames",
+          "target": "Night:n3611",
+          "targetNodeId": 3611,
+          "offset": 407039
+        },
+        {
+          "fieldId": "n2607/p8",
+          "fieldName": "events",
+          "target": "Night:n1225",
+          "targetNodeId": 1225,
+          "offset": 407043
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2663",
+      "level": "Night",
+      "nodeId": 2663,
+      "name": "BstNode_777",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 414969,
+      "sourceLength": 37,
+      "sourceSha256": "399979a3c33d502e5314f07070ad33939dcce357abfd4363647a3ebf2d2b9000",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2663/p7",
+          "fieldName": "flames",
+          "target": "Night:n3621",
+          "targetNodeId": 3621,
+          "offset": 414998
+        },
+        {
+          "fieldId": "n2663/p8",
+          "fieldName": "events",
+          "target": "Night:n2656",
+          "targetNodeId": 2656,
+          "offset": 415002
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2801",
+      "level": "Night",
+      "nodeId": 2801,
+      "name": "BstNode_523",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 435233,
+      "sourceLength": 37,
+      "sourceSha256": "71b9739d827221353313819bd8775f3fe649ba0269be6202c1daeda8eb6d4925",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2801/p7",
+          "fieldName": "flames",
+          "target": "Night:n3649",
+          "targetNodeId": 3649,
+          "offset": 435262
+        },
+        {
+          "fieldId": "n2801/p8",
+          "fieldName": "events",
+          "target": "Night:n2027",
+          "targetNodeId": 2027,
+          "offset": 435266
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2802",
+      "level": "Night",
+      "nodeId": 2802,
+      "name": "BstNode_818",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 435270,
+      "sourceLength": 37,
+      "sourceSha256": "bc45739af18034c055a0850de1fe8de58f9ec5d694e630037117b17b34104502",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2802/p7",
+          "fieldName": "flames",
+          "target": "Night:n3650",
+          "targetNodeId": 3650,
+          "offset": 435299
+        },
+        {
+          "fieldId": "n2802/p8",
+          "fieldName": "events",
+          "target": "Night:n671",
+          "targetNodeId": 671,
+          "offset": 435303
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2812",
+      "level": "Night",
+      "nodeId": 2812,
+      "name": "BstNode_816",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 436586,
+      "sourceLength": 37,
+      "sourceSha256": "c8efe7ee67777e501cb3bd43495c262f00b8da80040a0b792717aa51b6e1b903",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2812/p7",
+          "fieldName": "flames",
+          "target": "Night:n3653",
+          "targetNodeId": 3653,
+          "offset": 436615
+        },
+        {
+          "fieldId": "n2812/p8",
+          "fieldName": "events",
+          "target": "Night:n1698",
+          "targetNodeId": 1698,
+          "offset": 436619
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2871",
+      "level": "Night",
+      "nodeId": 2871,
+      "name": "BstNode_1081",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 446199,
+      "sourceLength": 38,
+      "sourceSha256": "066424ad528f3f4f0bae0bdeef092fef1449ccb8dbcf040a85230491f93b9bd3",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2871/p7",
+          "fieldName": "flames",
+          "target": "Night:n3665",
+          "targetNodeId": 3665,
+          "offset": 446229
+        },
+        {
+          "fieldId": "n2871/p8",
+          "fieldName": "events",
+          "target": "Night:n420",
+          "targetNodeId": 420,
+          "offset": 446233
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2878",
+      "level": "Night",
+      "nodeId": 2878,
+      "name": "BstNode_34604444",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 447566,
+      "sourceLength": 42,
+      "sourceSha256": "a768e4c1c9c6ddb3f84dc813488269bda05a4e84ed530464c09b89e4a68de047",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2878/p7",
+          "fieldName": "flames",
+          "target": "Night:n3666",
+          "targetNodeId": 3666,
+          "offset": 447600
+        },
+        {
+          "fieldId": "n2878/p8",
+          "fieldName": "events",
+          "target": "Night:n3667",
+          "targetNodeId": 3667,
+          "offset": 447604
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2889",
+      "level": "Night",
+      "nodeId": 2889,
+      "name": "BstNode_646",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 449310,
+      "sourceLength": 37,
+      "sourceSha256": "12aedbb224175ff66f88ee952b88d97eab158faee79b6b0d4da4296b3def3887",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2889/p7",
+          "fieldName": "flames",
+          "target": "Night:n3672",
+          "targetNodeId": 3672,
+          "offset": 449339
+        },
+        {
+          "fieldId": "n2889/p8",
+          "fieldName": "events",
+          "target": "Night:n1060",
+          "targetNodeId": 1060,
+          "offset": 449343
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2984",
+      "level": "Night",
+      "nodeId": 2984,
+      "name": "BstNode_692",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 462923,
+      "sourceLength": 37,
+      "sourceSha256": "3dae02e2b28ef02da2f239fff956d6e0266a20dadf883e2b59822c133b03ba46",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2984/p7",
+          "fieldName": "flames",
+          "target": "Night:n422",
+          "targetNodeId": 422,
+          "offset": 462952
+        },
+        {
+          "fieldId": "n2984/p8",
+          "fieldName": "events",
+          "target": "Night:n1593",
+          "targetNodeId": 1593,
+          "offset": 462956
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n3017",
+      "level": "Night",
+      "nodeId": 3017,
+      "name": "BstNode_347",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 469490,
+      "sourceLength": 37,
+      "sourceSha256": "28aed0a38c6363ebf8e6dccdb9b714274c8a122e3420da568f38011f7974fb7d",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n3017/p7",
+          "fieldName": "flames",
+          "target": "Night:n3697",
+          "targetNodeId": 3697,
+          "offset": 469519
+        },
+        {
+          "fieldId": "n3017/p8",
+          "fieldName": "events",
+          "target": "Night:n1980",
+          "targetNodeId": 1980,
+          "offset": 469523
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n3029",
+      "level": "Night",
+      "nodeId": 3029,
+      "name": "BstNode_878",
+      "className": "OnFlame",
+      "classIndex": 5,
+      "sourceOffset": 471306,
+      "sourceLength": 37,
+      "sourceSha256": "53134258c18a5d1ca8adc5ca374d2bf58eafb0b5259dddd30069ba978f14d284",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n3029/p7",
+          "fieldName": "flames",
+          "target": "Night:n640",
+          "targetNodeId": 640,
+          "offset": 471335
+        },
+        {
+          "fieldId": "n3029/p8",
+          "fieldName": "events",
+          "target": "Night:n3699",
+          "targetNodeId": 3699,
+          "offset": 471339
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n105",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 105,
+      "name": "BstNode_1071",
+      "className": "OnFlame",
+      "classIndex": 22,
+      "sourceOffset": 46703,
+      "sourceLength": 38,
+      "sourceSha256": "857688949ea58d94cfbe91c198c4f9fd093396549e62dc38f30720895369513d",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n105/p7",
+          "fieldName": "flames",
+          "target": "Prairie_ButterflyFields:n1378",
+          "targetNodeId": 1378,
+          "offset": 46733
+        },
+        {
+          "fieldId": "n105/p8",
+          "fieldName": "events",
+          "target": "Prairie_ButterflyFields:n1379",
+          "targetNodeId": 1379,
+          "offset": 46737
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n147",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 147,
+      "name": "BstNode_965",
+      "className": "OnFlame",
+      "classIndex": 22,
+      "sourceOffset": 54292,
+      "sourceLength": 37,
+      "sourceSha256": "245aef8c386fd36ec59ba598c02243568c080c1d7633b170fba2bc64eb534ea0",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n147/p7",
+          "fieldName": "flames",
+          "target": "Prairie_ButterflyFields:n1390",
+          "targetNodeId": 1390,
+          "offset": 54321
+        },
+        {
+          "fieldId": "n147/p8",
+          "fieldName": "events",
+          "target": "Prairie_ButterflyFields:n1391",
+          "targetNodeId": 1391,
+          "offset": 54325
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n228",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 228,
+      "name": "BstNode_1023",
+      "className": "OnFlame",
+      "classIndex": 22,
+      "sourceOffset": 72855,
+      "sourceLength": 38,
+      "sourceSha256": "4c105fbd9418239c59a4d15a84cb5cb3a9f3d3691b10d5d0476ca7676154ded1",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n228/p7",
+          "fieldName": "flames",
+          "target": "Prairie_ButterflyFields:n1399",
+          "targetNodeId": 1399,
+          "offset": 72885
+        },
+        {
+          "fieldId": "n228/p8",
+          "fieldName": "events",
+          "target": "Prairie_ButterflyFields:n1400",
+          "targetNodeId": 1400,
+          "offset": 72889
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n232",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 232,
+      "name": "BstNode_1251",
+      "className": "OnFlame",
+      "classIndex": 22,
+      "sourceOffset": 73747,
+      "sourceLength": 38,
+      "sourceSha256": "ced62263fc1f85b57441bf5641d7a50fbec29e666673021eea04f1577f664fec",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n232/p7",
+          "fieldName": "flames",
+          "target": "Prairie_ButterflyFields:n1401",
+          "targetNodeId": 1401,
+          "offset": 73777
+        },
+        {
+          "fieldId": "n232/p8",
+          "fieldName": "events",
+          "target": "Prairie_ButterflyFields:n1402",
+          "targetNodeId": 1402,
+          "offset": 73781
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n279",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 279,
+      "name": "BstNode_681",
+      "className": "OnFlame",
+      "classIndex": 22,
+      "sourceOffset": 85706,
+      "sourceLength": 37,
+      "sourceSha256": "a7ad09648e5a0871c946786cdb852879201d3d11d35e1919b80ad398bb183513",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n279/p7",
+          "fieldName": "flames",
+          "target": "Prairie_ButterflyFields:n1405",
+          "targetNodeId": 1405,
+          "offset": 85735
+        },
+        {
+          "fieldId": "n279/p8",
+          "fieldName": "events",
+          "target": "Prairie_ButterflyFields:n1406",
+          "targetNodeId": 1406,
+          "offset": 85739
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n415",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 415,
+      "name": "BstNode_1269",
+      "className": "OnFlame",
+      "classIndex": 22,
+      "sourceOffset": 113242,
+      "sourceLength": 38,
+      "sourceSha256": "d1d8a0c04140376d5d91c83060b5e5248c311c6302a7456807a1ea65a9ec6200",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n415/p7",
+          "fieldName": "flames",
+          "target": "Prairie_ButterflyFields:n1414",
+          "targetNodeId": 1414,
+          "offset": 113272
+        },
+        {
+          "fieldId": "n415/p8",
+          "fieldName": "events",
+          "target": "Prairie_ButterflyFields:n1415",
+          "targetNodeId": 1415,
+          "offset": 113276
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n590",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 590,
+      "name": "BstNode_2060386321",
+      "className": "OnFlame",
+      "classIndex": 22,
+      "sourceOffset": 147278,
+      "sourceLength": 44,
+      "sourceSha256": "b46025079d91c951816af6d6001d5d1557afbfbb17ddfdd3503fb3c60741f400",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n590/p7",
+          "fieldName": "flames",
+          "target": "Prairie_ButterflyFields:n793",
+          "targetNodeId": 793,
+          "offset": 147314
+        },
+        {
+          "fieldId": "n590/p8",
+          "fieldName": "events",
+          "target": "Prairie_ButterflyFields:n1428",
+          "targetNodeId": 1428,
+          "offset": 147318
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n826",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 826,
+      "name": "BstNode_1267",
+      "className": "OnFlame",
+      "classIndex": 22,
+      "sourceOffset": 185506,
+      "sourceLength": 38,
+      "sourceSha256": "a5d9992bc91f03f69ecd5b7f285a3b25ee993cde2fe8dd1e163ad027a0d25e3f",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n826/p7",
+          "fieldName": "flames",
+          "target": "Prairie_ButterflyFields:n1443",
+          "targetNodeId": 1443,
+          "offset": 185536
+        },
+        {
+          "fieldId": "n826/p8",
+          "fieldName": "events",
+          "target": "Prairie_ButterflyFields:n1444",
+          "targetNodeId": 1444,
+          "offset": 185540
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n849",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 849,
+      "name": "BstNode_1230",
+      "className": "OnFlame",
+      "classIndex": 22,
+      "sourceOffset": 187653,
+      "sourceLength": 38,
+      "sourceSha256": "945a9bb6653539d50e57975f9fac5961a6261793669df0393f4d7b1cc2e4b964",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n849/p7",
+          "fieldName": "flames",
+          "target": "Prairie_ButterflyFields:n1448",
+          "targetNodeId": 1448,
+          "offset": 187683
+        },
+        {
+          "fieldId": "n849/p8",
+          "fieldName": "events",
+          "target": "Prairie_ButterflyFields:n1449",
+          "targetNodeId": 1449,
+          "offset": 187687
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n879",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 879,
+      "name": "BstNode_1288",
+      "className": "OnFlame",
+      "classIndex": 22,
+      "sourceOffset": 192190,
+      "sourceLength": 38,
+      "sourceSha256": "e8e85c6660958a86e0e4adbe9fd86e59b1ddfa0284a8d38b2a74c2719bb2a754",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n879/p7",
+          "fieldName": "flames",
+          "target": "Prairie_ButterflyFields:n1452",
+          "targetNodeId": 1452,
+          "offset": 192220
+        },
+        {
+          "fieldId": "n879/p8",
+          "fieldName": "events",
+          "target": "Prairie_ButterflyFields:n1453",
+          "targetNodeId": 1453,
+          "offset": 192224
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n957",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 957,
+      "name": "BstNode_1316",
+      "className": "OnFlame",
+      "classIndex": 22,
+      "sourceOffset": 205161,
+      "sourceLength": 38,
+      "sourceSha256": "7efb97d6ce2567778e76f83f6e0cd64d1c57af330ffcbd9dc9e7725ba2749705",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n957/p7",
+          "fieldName": "flames",
+          "target": "Prairie_ButterflyFields:n1454",
+          "targetNodeId": 1454,
+          "offset": 205191
+        },
+        {
+          "fieldId": "n957/p8",
+          "fieldName": "events",
+          "target": "Prairie_ButterflyFields:n1455",
+          "targetNodeId": 1455,
+          "offset": 205195
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n1043",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 1043,
+      "name": "BstNode_995",
+      "className": "OnFlame",
+      "classIndex": 22,
+      "sourceOffset": 226866,
+      "sourceLength": 37,
+      "sourceSha256": "61a5670eb3ceaff2140f7d0a7757e192bbbc08fdce3347a951dbafc16dbac741",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1043/p7",
+          "fieldName": "flames",
+          "target": "Prairie_ButterflyFields:n1462",
+          "targetNodeId": 1462,
+          "offset": 226895
+        },
+        {
+          "fieldId": "n1043/p8",
+          "fieldName": "events",
+          "target": "Prairie_ButterflyFields:n1463",
+          "targetNodeId": 1463,
+          "offset": 226899
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n1060",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 1060,
+      "name": "BstNode_1348",
+      "className": "OnFlame",
+      "classIndex": 22,
+      "sourceOffset": 230496,
+      "sourceLength": 38,
+      "sourceSha256": "420c083ed075ed5be59da6924ab853e9c2828ab6732e28f56523b67c44b1b0db",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1060/p7",
+          "fieldName": "flames",
+          "target": "Prairie_ButterflyFields:n1466",
+          "targetNodeId": 1466,
+          "offset": 230526
+        },
+        {
+          "fieldId": "n1060/p8",
+          "fieldName": "events",
+          "target": "Prairie_ButterflyFields:n1467",
+          "targetNodeId": 1467,
+          "offset": 230530
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n1212",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 1212,
+      "name": "BstNode_1053",
+      "className": "OnFlame",
+      "classIndex": 22,
+      "sourceOffset": 262860,
+      "sourceLength": 38,
+      "sourceSha256": "13bda1987844324386b57ec5dffe544b29ef3b12e2e604a05e3de6a78a4c3754",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1212/p7",
+          "fieldName": "flames",
+          "target": "Prairie_ButterflyFields:n1486",
+          "targetNodeId": 1486,
+          "offset": 262890
+        },
+        {
+          "fieldId": "n1212/p8",
+          "fieldName": "events",
+          "target": "Prairie_ButterflyFields:n1487",
+          "targetNodeId": 1487,
+          "offset": 262894
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n1289",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 1289,
+      "name": "BstNode_1114",
+      "className": "OnFlame",
+      "classIndex": 22,
+      "sourceOffset": 279511,
+      "sourceLength": 38,
+      "sourceSha256": "988e18f4b4f0036dde15d027c5f183343c91bbada3d141fd3da0fc0ec3857971",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1289/p7",
+          "fieldName": "flames",
+          "target": "Prairie_ButterflyFields:n1494",
+          "targetNodeId": 1494,
+          "offset": 279541
+        },
+        {
+          "fieldId": "n1289/p8",
+          "fieldName": "events",
+          "target": "Prairie_ButterflyFields:n1495",
+          "targetNodeId": 1495,
+          "offset": 279545
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n1300",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 1300,
+      "name": "BstNode_878",
+      "className": "OnFlame",
+      "classIndex": 22,
+      "sourceOffset": 281638,
+      "sourceLength": 37,
+      "sourceSha256": "e3b5d3d774b2606d3ee354d07c7cdbf985495d3373397543259fc23d3e964d27",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1300/p7",
+          "fieldName": "flames",
+          "target": "Prairie_ButterflyFields:n1497",
+          "targetNodeId": 1497,
+          "offset": 281667
+        },
+        {
+          "fieldId": "n1300/p8",
+          "fieldName": "events",
+          "target": "Prairie_ButterflyFields:n1498",
+          "targetNodeId": 1498,
+          "offset": 281671
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n1353",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 1353,
+      "name": "BstNode_934",
+      "className": "OnFlame",
+      "classIndex": 22,
+      "sourceOffset": 290748,
+      "sourceLength": 37,
+      "sourceSha256": "f9bffcb00ca615a2da6370fe6e8646bddcaf62df2d9efeee32113f7b99214ac0",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1353/p7",
+          "fieldName": "flames",
+          "target": "Prairie_ButterflyFields:n1505",
+          "targetNodeId": 1505,
+          "offset": 290777
+        },
+        {
+          "fieldId": "n1353/p8",
+          "fieldName": "events",
+          "target": "Prairie_ButterflyFields:n1506",
+          "targetNodeId": 1506,
+          "offset": 290781
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n1363",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 1363,
+      "name": "BstNode_1157",
+      "className": "OnFlame",
+      "classIndex": 22,
+      "sourceOffset": 292811,
+      "sourceLength": 38,
+      "sourceSha256": "632c7ad87043ba63a12399bd695e747ca6ac884720ffaad55d1eb825aa070cb7",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1363/p7",
+          "fieldName": "flames",
+          "target": "Prairie_ButterflyFields:n1510",
+          "targetNodeId": 1510,
+          "offset": 292841
+        },
+        {
+          "fieldId": "n1363/p8",
+          "fieldName": "events",
+          "target": "Prairie_ButterflyFields:n1511",
+          "targetNodeId": 1511,
+          "offset": 292845
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n96",
+      "level": "Prairie_Village",
+      "nodeId": 96,
+      "name": "BstNode_2409",
+      "className": "OnFlame",
+      "classIndex": 28,
+      "sourceOffset": 46137,
+      "sourceLength": 38,
+      "sourceSha256": "cb1d91b49238e08f0194e197320574f3b30efd312c971900d4dc1fb22b46cc9e",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n96/p7",
+          "fieldName": "flames",
+          "target": "Prairie_Village:n552",
+          "targetNodeId": 552,
+          "offset": 46167
+        },
+        {
+          "fieldId": "n96/p8",
+          "fieldName": "events",
+          "target": "Prairie_Village:n3166",
+          "targetNodeId": 3166,
+          "offset": 46171
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n127",
+      "level": "Prairie_Village",
+      "nodeId": 127,
+      "name": "BstNode_1482555544",
+      "className": "OnFlame",
+      "classIndex": 28,
+      "sourceOffset": 52329,
+      "sourceLength": 44,
+      "sourceSha256": "e9c03feef419eafdadfac9a6a2cdcdb36ae3b243e6b9b6c1867e9284185e145e",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n127/p7",
+          "fieldName": "flames",
+          "target": "Prairie_Village:n3170",
+          "targetNodeId": 3170,
+          "offset": 52365
+        },
+        {
+          "fieldId": "n127/p8",
+          "fieldName": "events",
+          "target": "Prairie_Village:n3171",
+          "targetNodeId": 3171,
+          "offset": 52369
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n647",
+      "level": "Prairie_Village",
+      "nodeId": 647,
+      "name": "BstNode_1167524009",
+      "className": "OnFlame",
+      "classIndex": 28,
+      "sourceOffset": 133820,
+      "sourceLength": 44,
+      "sourceSha256": "2dacf34e98858796c4488679c3f6bdf50ab633706fa45bb60b609e7e943e2a05",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n647/p7",
+          "fieldName": "flames",
+          "target": "Prairie_Village:n3260",
+          "targetNodeId": 3260,
+          "offset": 133856
+        },
+        {
+          "fieldId": "n647/p8",
+          "fieldName": "events",
+          "target": "Prairie_Village:n3261",
+          "targetNodeId": 3261,
+          "offset": 133860
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n804",
+      "level": "Prairie_Village",
+      "nodeId": 804,
+      "name": "BstNode_2406",
+      "className": "OnFlame",
+      "classIndex": 28,
+      "sourceOffset": 161077,
+      "sourceLength": 38,
+      "sourceSha256": "8e0d2a28fb8719b7f80e41c3be41719d18a1ff42bba7c8f9f2fcfd1da96f8b3c",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n804/p7",
+          "fieldName": "flames",
+          "target": "Prairie_Village:n3288",
+          "targetNodeId": 3288,
+          "offset": 161107
+        },
+        {
+          "fieldId": "n804/p8",
+          "fieldName": "events",
+          "target": "Prairie_Village:n3289",
+          "targetNodeId": 3289,
+          "offset": 161111
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1797",
+      "level": "Prairie_Village",
+      "nodeId": 1797,
+      "name": "BstNode_553",
+      "className": "OnFlame",
+      "classIndex": 28,
+      "sourceOffset": 320494,
+      "sourceLength": 37,
+      "sourceSha256": "e12363c0266a56371c0c683a861920ce291231295b60078afdbb3395e77015bc",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1797/p7",
+          "fieldName": "flames",
+          "target": "Prairie_Village:n3488",
+          "targetNodeId": 3488,
+          "offset": 320523
+        },
+        {
+          "fieldId": "n1797/p8",
+          "fieldName": "events",
+          "target": "Prairie_Village:n3489",
+          "targetNodeId": 3489,
+          "offset": 320527
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1983",
+      "level": "Prairie_Village",
+      "nodeId": 1983,
+      "name": "BstNode_2345992496",
+      "className": "OnFlame",
+      "classIndex": 28,
+      "sourceOffset": 353559,
+      "sourceLength": 44,
+      "sourceSha256": "c0ada7b59ebf646736de58b99a4d5fc5022db92d102dc7888dd89bbf58167c39",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1983/p7",
+          "fieldName": "flames",
+          "target": "Prairie_Village:n3525",
+          "targetNodeId": 3525,
+          "offset": 353595
+        },
+        {
+          "fieldId": "n1983/p8",
+          "fieldName": "events",
+          "target": "Prairie_Village:n3526",
+          "targetNodeId": 3526,
+          "offset": 353599
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2432",
+      "level": "Prairie_Village",
+      "nodeId": 2432,
+      "name": "BstNode_515",
+      "className": "OnFlame",
+      "classIndex": 28,
+      "sourceOffset": 418773,
+      "sourceLength": 37,
+      "sourceSha256": "e03455977b92ecb0ef3d672c9a38c8e12fa983e6f86ace1692380546fa82eda9",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2432/p7",
+          "fieldName": "flames",
+          "target": "Prairie_Village:n3601",
+          "targetNodeId": 3601,
+          "offset": 418802
+        },
+        {
+          "fieldId": "n2432/p8",
+          "fieldName": "events",
+          "target": "Prairie_Village:n3602",
+          "targetNodeId": 3602,
+          "offset": 418806
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2439",
+      "level": "Prairie_Village",
+      "nodeId": 2439,
+      "name": "BstNode_2393",
+      "className": "OnFlame",
+      "classIndex": 28,
+      "sourceOffset": 419643,
+      "sourceLength": 38,
+      "sourceSha256": "434a63a77aa93dc25239ac040e8619089200fa5ccc3325200046c143cbdd93cd",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2439/p7",
+          "fieldName": "flames",
+          "target": "Prairie_Village:n3604",
+          "targetNodeId": 3604,
+          "offset": 419673
+        },
+        {
+          "fieldId": "n2439/p8",
+          "fieldName": "events",
+          "target": "Prairie_Village:n3605",
+          "targetNodeId": 3605,
+          "offset": 419677
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2516",
+      "level": "Prairie_Village",
+      "nodeId": 2516,
+      "name": "BstNode_2753888377",
+      "className": "OnFlame",
+      "classIndex": 28,
+      "sourceOffset": 428847,
+      "sourceLength": 44,
+      "sourceSha256": "1e14f8b2f5cfe3a4c94df4aa15e7576951184af6eaad91e7312e8c731d5d1eb7",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2516/p7",
+          "fieldName": "flames",
+          "target": "Prairie_Village:n3624",
+          "targetNodeId": 3624,
+          "offset": 428883
+        },
+        {
+          "fieldId": "n2516/p8",
+          "fieldName": "events",
+          "target": "Prairie_Village:n3625",
+          "targetNodeId": 3625,
+          "offset": 428887
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2519",
+      "level": "Prairie_Village",
+      "nodeId": 2519,
+      "name": "BstNode_1167523926",
+      "className": "OnFlame",
+      "classIndex": 28,
+      "sourceOffset": 429306,
+      "sourceLength": 44,
+      "sourceSha256": "16214c214945a85fc0b2dfbfd807fc2f84e5e95254ae67c596c748e563fbe2bf",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2519/p7",
+          "fieldName": "flames",
+          "target": "Prairie_Village:n428",
+          "targetNodeId": 428,
+          "offset": 429342
+        },
+        {
+          "fieldId": "n2519/p8",
+          "fieldName": "events",
+          "target": "Prairie_Village:n3627",
+          "targetNodeId": 3627,
+          "offset": 429346
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2554",
+      "level": "Prairie_Village",
+      "nodeId": 2554,
+      "name": "BstNode_935",
+      "className": "OnFlame",
+      "classIndex": 28,
+      "sourceOffset": 434253,
+      "sourceLength": 37,
+      "sourceSha256": "10027001807efd650fac668d5b2b08cd3009004ff10b7f91a568027d2e564a68",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2554/p7",
+          "fieldName": "flames",
+          "target": "Prairie_Village:n3633",
+          "targetNodeId": 3633,
+          "offset": 434282
+        },
+        {
+          "fieldId": "n2554/p8",
+          "fieldName": "events",
+          "target": "Prairie_Village:n3634",
+          "targetNodeId": 3634,
+          "offset": 434286
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2626",
+      "level": "Prairie_Village",
+      "nodeId": 2626,
+      "name": "BstNode_2753888382",
+      "className": "OnFlame",
+      "classIndex": 28,
+      "sourceOffset": 445631,
+      "sourceLength": 44,
+      "sourceSha256": "e31aef8c4ca3675b5735b452a90812988a3137c45b385aaaced56265438fa51c",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2626/p7",
+          "fieldName": "flames",
+          "target": "Prairie_Village:n3646",
+          "targetNodeId": 3646,
+          "offset": 445667
+        },
+        {
+          "fieldId": "n2626/p8",
+          "fieldName": "events",
+          "target": "Prairie_Village:n3647",
+          "targetNodeId": 3647,
+          "offset": 445671
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2940",
+      "level": "Prairie_Village",
+      "nodeId": 2940,
+      "name": "BstNode_34604444",
+      "className": "OnFlame",
+      "classIndex": 28,
+      "sourceOffset": 499331,
+      "sourceLength": 42,
+      "sourceSha256": "4ff6abd6bc5246e113eb5db097294ff823b23ec1e9e782e3521dcef600e521a5",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2940/p7",
+          "fieldName": "flames",
+          "target": "Prairie_Village:n3689",
+          "targetNodeId": 3689,
+          "offset": 499365
+        },
+        {
+          "fieldId": "n2940/p8",
+          "fieldName": "events",
+          "target": "Prairie_Village:n3690",
+          "targetNodeId": 3690,
+          "offset": 499369
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2966",
+      "level": "Prairie_Village",
+      "nodeId": 2966,
+      "name": "BstNode_1167523981",
+      "className": "OnFlame",
+      "classIndex": 28,
+      "sourceOffset": 504028,
+      "sourceLength": 44,
+      "sourceSha256": "93aa5ea8e6e80861f9d602521265f50389ff22db4a8321fcb5edb535d9f09d91",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2966/p7",
+          "fieldName": "flames",
+          "target": "Prairie_Village:n495",
+          "targetNodeId": 495,
+          "offset": 504064
+        },
+        {
+          "fieldId": "n2966/p8",
+          "fieldName": "events",
+          "target": "Prairie_Village:n3693",
+          "targetNodeId": 3693,
+          "offset": 504068
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n3028",
+      "level": "Prairie_Village",
+      "nodeId": 3028,
+      "name": "BstNode_2753888380",
+      "className": "OnFlame",
+      "classIndex": 28,
+      "sourceOffset": 514632,
+      "sourceLength": 44,
+      "sourceSha256": "eb209ce023116d23160f643791fc5cd1a20014aa2d2f5eddbe4627dd68364ef8",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n3028/p7",
+          "fieldName": "flames",
+          "target": "Prairie_Village:n3703",
+          "targetNodeId": 3703,
+          "offset": 514668
+        },
+        {
+          "fieldId": "n3028/p8",
+          "fieldName": "events",
+          "target": "Prairie_Village:n3704",
+          "targetNodeId": 3704,
+          "offset": 514672
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n3082",
+      "level": "Prairie_Village",
+      "nodeId": 3082,
+      "name": "BstNode_1167523908",
+      "className": "OnFlame",
+      "classIndex": 28,
+      "sourceOffset": 523301,
+      "sourceLength": 44,
+      "sourceSha256": "876ccc557629b1f490e04bafb1cda750cee315d152b78f2fe84ae67c87dcbef3",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n3082/p7",
+          "fieldName": "flames",
+          "target": "Prairie_Village:n2143",
+          "targetNodeId": 2143,
+          "offset": 523337
+        },
+        {
+          "fieldId": "n3082/p8",
+          "fieldName": "events",
+          "target": "Prairie_Village:n3711",
+          "targetNodeId": 3711,
+          "offset": 523341
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n3084",
+      "level": "Prairie_Village",
+      "nodeId": 3084,
+      "name": "BstNode_1167523995",
+      "className": "OnFlame",
+      "classIndex": 28,
+      "sourceOffset": 523410,
+      "sourceLength": 44,
+      "sourceSha256": "d303185d40088addce6796590ff83b879fbee81d9e8f400998c9ad44885473b9",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n3084/p7",
+          "fieldName": "flames",
+          "target": "Prairie_Village:n3712",
+          "targetNodeId": 3712,
+          "offset": 523446
+        },
+        {
+          "fieldId": "n3084/p8",
+          "fieldName": "events",
+          "target": "Prairie_Village:n3713",
+          "targetNodeId": 3713,
+          "offset": 523450
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n3114",
+      "level": "Prairie_Village",
+      "nodeId": 3114,
+      "name": "BstNode_1482555535",
+      "className": "OnFlame",
+      "classIndex": 28,
+      "sourceOffset": 528808,
+      "sourceLength": 44,
+      "sourceSha256": "4e8737b784d9eecf1e62f062f7435299893783748134b3c7aa401f64619b2523",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n3114/p7",
+          "fieldName": "flames",
+          "target": "Prairie_Village:n3716",
+          "targetNodeId": 3716,
+          "offset": 528844
+        },
+        {
+          "fieldId": "n3114/p8",
+          "fieldName": "events",
+          "target": "Prairie_Village:n3717",
+          "targetNodeId": 3717,
+          "offset": 528848
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n828",
+      "level": "Rain",
+      "nodeId": 828,
+      "name": "BstNode_840696281",
+      "className": "OnFlame",
+      "classIndex": 64,
+      "sourceOffset": 215743,
+      "sourceLength": 43,
+      "sourceSha256": "e4ea36435c942ee003fce9c261844848a0a8bb3c4ec03c1bdcfb524a82685e6f",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n828/p7",
+          "fieldName": "flames",
+          "target": "Rain:n901",
+          "targetNodeId": 901,
+          "offset": 215778
+        },
+        {
+          "fieldId": "n828/p8",
+          "fieldName": "events",
+          "target": "Rain:n1958",
+          "targetNodeId": 1958,
+          "offset": 215782
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n898",
+      "level": "Rain",
+      "nodeId": 898,
+      "name": "BstNode_2345992318",
+      "className": "OnFlame",
+      "classIndex": 64,
+      "sourceOffset": 232547,
+      "sourceLength": 44,
+      "sourceSha256": "175f692344236ab6cd98d42208600242268c8383a3f32bef40fe8529783dfecc",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n898/p7",
+          "fieldName": "flames",
+          "target": "Rain:n1126",
+          "targetNodeId": 1126,
+          "offset": 232583
+        },
+        {
+          "fieldId": "n898/p8",
+          "fieldName": "events",
+          "target": "Rain:n1974",
+          "targetNodeId": 1974,
+          "offset": 232587
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n1717",
+      "level": "Rain",
+      "nodeId": 1717,
+      "name": "BstNode_2345992320",
+      "className": "OnFlame",
+      "classIndex": 64,
+      "sourceOffset": 412997,
+      "sourceLength": 44,
+      "sourceSha256": "6e48d68765be88d7a1e9d13bc15ebc247f206c9631f0ae11ddb093941ad01d0d",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1717/p7",
+          "fieldName": "flames",
+          "target": "Rain:n1322",
+          "targetNodeId": 1322,
+          "offset": 413033
+        },
+        {
+          "fieldId": "n1717/p8",
+          "fieldName": "events",
+          "target": "Rain:n2060",
+          "targetNodeId": 2060,
+          "offset": 413037
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n554",
+      "level": "RainEnd",
+      "nodeId": 554,
+      "name": "BstNode_2446917636",
+      "className": "OnFlame",
+      "classIndex": 53,
+      "sourceOffset": 163528,
+      "sourceLength": 44,
+      "sourceSha256": "aa254a759a9a14d8f641c67cd2bd67dc26864a27bd84fc462303bef80ee74a29",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n554/p7",
+          "fieldName": "flames",
+          "target": "RainEnd:n836",
+          "targetNodeId": 836,
+          "offset": 163564
+        },
+        {
+          "fieldId": "n554/p8",
+          "fieldName": "events",
+          "target": "RainEnd:n1764",
+          "targetNodeId": 1764,
+          "offset": 163568
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n759",
+      "level": "RainForest",
+      "nodeId": 759,
+      "name": "BstNode_2446917757",
+      "className": "OnFlame",
+      "classIndex": 57,
+      "sourceOffset": 175121,
+      "sourceLength": 44,
+      "sourceSha256": "0c2c225c092cdda6f1503fd2abf6935df8c3d57bd32bb0638f55a674cb2f9741",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n759/p7",
+          "fieldName": "flames",
+          "target": "RainForest:n1271",
+          "targetNodeId": 1271,
+          "offset": 175157
+        },
+        {
+          "fieldId": "n759/p8",
+          "fieldName": "events",
+          "target": "RainForest:n1272",
+          "targetNodeId": 1272,
+          "offset": 175161
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n1968",
+      "level": "RainMid",
+      "nodeId": 1968,
+      "name": "BstNode_34603111",
+      "className": "OnFlame",
+      "classIndex": 80,
+      "sourceOffset": 381346,
+      "sourceLength": 42,
+      "sourceSha256": "3f78ef3c479adc0d935e3a517dfcf886260bfc358cb9b17574e01f1d38524947",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1968/p7",
+          "fieldName": "flames",
+          "target": "RainMid:n2435",
+          "targetNodeId": 2435,
+          "offset": 381380
+        },
+        {
+          "fieldId": "n1968/p8",
+          "fieldName": "events",
+          "target": "RainMid:n2436",
+          "targetNodeId": 2436,
+          "offset": 381384
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n723",
+      "level": "SkyHub2",
+      "nodeId": 723,
+      "name": "BstNode_2060386382",
+      "className": "OnFlame",
+      "classIndex": 71,
+      "sourceOffset": 165953,
+      "sourceLength": 44,
+      "sourceSha256": "b7c565a2d569dc05a5c149971fda879ff23ffe272e95c7b7b5e8b375902c5982",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n723/p7",
+          "fieldName": "flames",
+          "target": "SkyHub2:n924",
+          "targetNodeId": 924,
+          "offset": 165989
+        },
+        {
+          "fieldId": "n723/p8",
+          "fieldName": "events",
+          "target": "SkyHub2:n2567",
+          "targetNodeId": 2567,
+          "offset": 165993
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1084",
+      "level": "SkyHub2",
+      "nodeId": 1084,
+      "name": "BstNode_3156082713",
+      "className": "OnFlame",
+      "classIndex": 71,
+      "sourceOffset": 229759,
+      "sourceLength": 44,
+      "sourceSha256": "d20d09ec8bb62a075fe7a5d3d194e73134f03850476097e8b54b72e475e2b7e6",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1084/p7",
+          "fieldName": "flames",
+          "target": "SkyHub2:n2629",
+          "targetNodeId": 2629,
+          "offset": 229795
+        },
+        {
+          "fieldId": "n1084/p8",
+          "fieldName": "events",
+          "target": "SkyHub2:n2630",
+          "targetNodeId": 2630,
+          "offset": 229799
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1894",
+      "level": "SkyHub2",
+      "nodeId": 1894,
+      "name": "BstNode_2060386358",
+      "className": "OnFlame",
+      "classIndex": 71,
+      "sourceOffset": 357666,
+      "sourceLength": 44,
+      "sourceSha256": "7473e7eaefc251dc4600b34cd137e29774dc979995b0a1d3ebfbcd2414adf8ec",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1894/p7",
+          "fieldName": "flames",
+          "target": "SkyHub2:n47",
+          "targetNodeId": 47,
+          "offset": 357702
+        },
+        {
+          "fieldId": "n1894/p8",
+          "fieldName": "events",
+          "target": "SkyHub2:n2799",
+          "targetNodeId": 2799,
+          "offset": 357706
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n1556",
+      "level": "Storm",
+      "nodeId": 1556,
+      "name": "BstNode_1047",
+      "className": "OnFlame",
+      "classIndex": 70,
+      "sourceOffset": 297403,
+      "sourceLength": 38,
+      "sourceSha256": "4eadd24e5ab8f0e54ca507c7bd8bd9b871b19cdbb3191b89aa9d4bee3675790f",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1556/p7",
+          "fieldName": "flames",
+          "target": "Storm:n709",
+          "targetNodeId": 709,
+          "offset": 297433
+        },
+        {
+          "fieldId": "n1556/p8",
+          "fieldName": "events",
+          "target": "Storm:n1933",
+          "targetNodeId": 1933,
+          "offset": 297437
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n486",
+      "level": "Sunset",
+      "nodeId": 486,
+      "name": "BstNode_2446917764",
+      "className": "OnFlame",
+      "classIndex": 44,
+      "sourceOffset": 116568,
+      "sourceLength": 44,
+      "sourceSha256": "9b6370883a7eb851239b8d5f8ac090ebd6ed86b9f0ede4e5b98c4852be0521b5",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n486/p7",
+          "fieldName": "flames",
+          "target": "Sunset:n676",
+          "targetNodeId": 676,
+          "offset": 116604
+        },
+        {
+          "fieldId": "n486/p8",
+          "fieldName": "events",
+          "target": "Sunset:n1789",
+          "targetNodeId": 1789,
+          "offset": 116608
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n896",
+      "level": "Sunset",
+      "nodeId": 896,
+      "name": "BstNode_34603066",
+      "className": "OnFlame",
+      "classIndex": 44,
+      "sourceOffset": 183084,
+      "sourceLength": 42,
+      "sourceSha256": "b890c3119c5283f4f5caa9e71a277c35c8c3d32bf95bc73eaa039d67ef50a5f7",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n896/p7",
+          "fieldName": "flames",
+          "target": "Sunset:n1823",
+          "targetNodeId": 1823,
+          "offset": 183118
+        },
+        {
+          "fieldId": "n896/p8",
+          "fieldName": "events",
+          "target": "Sunset:n1824",
+          "targetNodeId": 1824,
+          "offset": 183122
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n1137",
+      "level": "Sunset",
+      "nodeId": 1137,
+      "name": "BstNode_2446917757",
+      "className": "OnFlame",
+      "classIndex": 44,
+      "sourceOffset": 219509,
+      "sourceLength": 44,
+      "sourceSha256": "02d5d2e48382ac060629018be7d3bed8995db5718c35f2f7079c7fcb045f7f7a",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1137/p7",
+          "fieldName": "flames",
+          "target": "Sunset:n1850",
+          "targetNodeId": 1850,
+          "offset": 219545
+        },
+        {
+          "fieldId": "n1137/p8",
+          "fieldName": "events",
+          "target": "Sunset:n1851",
+          "targetNodeId": 1851,
+          "offset": 219549
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n1229",
+      "level": "Sunset",
+      "nodeId": 1229,
+      "name": "BstNode_34603073",
+      "className": "OnFlame",
+      "classIndex": 44,
+      "sourceOffset": 235140,
+      "sourceLength": 42,
+      "sourceSha256": "93ac7a95d589bcb65f8b55f434cad5c5988e6ecd94863d5488ce1956113512c6",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1229/p7",
+          "fieldName": "flames",
+          "target": "Sunset:n1862",
+          "targetNodeId": 1862,
+          "offset": 235174
+        },
+        {
+          "fieldId": "n1229/p8",
+          "fieldName": "events",
+          "target": "Sunset:n1333",
+          "targetNodeId": 1333,
+          "offset": 235178
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n1343",
+      "level": "Sunset",
+      "nodeId": 1343,
+      "name": "BstNode_34603033",
+      "className": "OnFlame",
+      "classIndex": 44,
+      "sourceOffset": 253858,
+      "sourceLength": 42,
+      "sourceSha256": "6743eac86f786310852d0132be8dcf41183e594d8176e7db16dbb648b4b59295",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1343/p7",
+          "fieldName": "flames",
+          "target": "Sunset:n1879",
+          "targetNodeId": 1879,
+          "offset": 253892
+        },
+        {
+          "fieldId": "n1343/p8",
+          "fieldName": "events",
+          "target": "Sunset:n1880",
+          "targetNodeId": 1880,
+          "offset": 253896
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n299",
+      "level": "SunsetEnd",
+      "nodeId": 299,
+      "name": "BstNode_1785",
+      "className": "OnFlame",
+      "classIndex": 38,
+      "sourceOffset": 81749,
+      "sourceLength": 38,
+      "sourceSha256": "c3b368b29bccaf8c7608c5a04d9dad3f5a27e932a143dbae6bae52035f7081ac",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n299/p7",
+          "fieldName": "flames",
+          "target": "SunsetEnd:n1861",
+          "targetNodeId": 1861,
+          "offset": 81779
+        },
+        {
+          "fieldId": "n299/p8",
+          "fieldName": "events",
+          "target": "SunsetEnd:n1862",
+          "targetNodeId": 1862,
+          "offset": 81783
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n334",
+      "level": "SunsetEnd",
+      "nodeId": 334,
+      "name": "BstNode_1167524225",
+      "className": "OnFlame",
+      "classIndex": 38,
+      "sourceOffset": 85708,
+      "sourceLength": 44,
+      "sourceSha256": "dfe083af7b13ca4cb58cb1dcf5c7fba8a1ddeaf3954e91c3f0034ea4e343f83f",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n334/p7",
+          "fieldName": "flames",
+          "target": "SunsetEnd:n1865",
+          "targetNodeId": 1865,
+          "offset": 85744
+        },
+        {
+          "fieldId": "n334/p8",
+          "fieldName": "events",
+          "target": "SunsetEnd:n1866",
+          "targetNodeId": 1866,
+          "offset": 85748
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n1560",
+      "level": "SunsetEnd",
+      "nodeId": 1560,
+      "name": "BstNode_1167524231",
+      "className": "OnFlame",
+      "classIndex": 38,
+      "sourceOffset": 292273,
+      "sourceLength": 44,
+      "sourceSha256": "ccff45ec668c63f70c29edff656b372769af091df4378ff4948febd07801d0c0",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1560/p7",
+          "fieldName": "flames",
+          "target": "SunsetEnd:n1976",
+          "targetNodeId": 1976,
+          "offset": 292309
+        },
+        {
+          "fieldId": "n1560/p8",
+          "fieldName": "events",
+          "target": "SunsetEnd:n1977",
+          "targetNodeId": 1977,
+          "offset": 292313
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n1701",
+      "level": "SunsetEnd",
+      "nodeId": 1701,
+      "name": "BstNode_1778",
+      "className": "OnFlame",
+      "classIndex": 38,
+      "sourceOffset": 317532,
+      "sourceLength": 38,
+      "sourceSha256": "bac8414f03d7d376337ef5089e9355fda09985450e3c13d9ee2f6f19776c9430",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1701/p7",
+          "fieldName": "flames",
+          "target": "SunsetEnd:n1986",
+          "targetNodeId": 1986,
+          "offset": 317562
+        },
+        {
+          "fieldId": "n1701/p8",
+          "fieldName": "events",
+          "target": "SunsetEnd:n1987",
+          "targetNodeId": 1987,
+          "offset": 317566
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd2:n432",
+      "level": "SunsetEnd2",
+      "nodeId": 432,
+      "name": "BstNode_1167523864",
+      "className": "OnFlame",
+      "classIndex": 45,
+      "sourceOffset": 110465,
+      "sourceLength": 44,
+      "sourceSha256": "30aa55c547b4929c7caf5ee9f9a9a0c8b436f6aee7fa5df236739ff1e1443e5e",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n432/p7",
+          "fieldName": "flames",
+          "target": "SunsetEnd2:n509",
+          "targetNodeId": 509,
+          "offset": 110501
+        },
+        {
+          "fieldId": "n432/p8",
+          "fieldName": "events",
+          "target": "SunsetEnd2:n911",
+          "targetNodeId": 911,
+          "offset": 110505
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetRace:n615",
+      "level": "SunsetRace",
+      "nodeId": 615,
+      "name": "BstNode_1167523970",
+      "className": "OnFlame",
+      "classIndex": 45,
+      "sourceOffset": 146401,
+      "sourceLength": 44,
+      "sourceSha256": "2ee8a304d34e2925a037fca26a5d4796d5789f9d09d2e12d98d43d68b5dad8cc",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n615/p7",
+          "fieldName": "flames",
+          "target": "SunsetRace:n1528",
+          "targetNodeId": 1528,
+          "offset": 146437
+        },
+        {
+          "fieldId": "n615/p8",
+          "fieldName": "events",
+          "target": "SunsetRace:n1661",
+          "targetNodeId": 1661,
+          "offset": 146441
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "CandleSpace",
+      "path": "Levels/CandleSpace/Objects.level.bin",
+      "sha256": "db7140d2dd5ee9cd2fcdcbb61a898b9facf1683ff21fec83fcbef81b885f56db",
+      "bytes": 92607,
+      "nodes": 564,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/CandleSpace.json",
+      "markdown": "Objects对象清单/CandleSpace.md"
+    },
+    {
+      "level": "Dawn",
+      "path": "Levels/Dawn/Objects.level.bin",
+      "sha256": "16e26aafc7f9d120a548bf5d8bec04fbc18146bc8db531ef75144889b1ff197a",
+      "bytes": 504637,
+      "nodes": 3798,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dawn.json",
+      "markdown": "Objects对象清单/Dawn.md"
+    },
+    {
+      "level": "DayEnd",
+      "path": "Levels/DayEnd/Objects.level.bin",
+      "sha256": "9b5c568cefa987e504a10236c5b61e5de4b748d965d09e42db3602e4e52cc904",
+      "bytes": 268140,
+      "nodes": 1459,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DayEnd.json",
+      "markdown": "Objects对象清单/DayEnd.md"
+    },
+    {
+      "level": "DayHubCave",
+      "path": "Levels/DayHubCave/Objects.level.bin",
+      "sha256": "e4da920cc9f0b1569f14ad1a6d1990db7155dc07ebfc3214c4e385a367872457",
+      "bytes": 202745,
+      "nodes": 1128,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DayHubCave.json",
+      "markdown": "Objects对象清单/DayHubCave.md"
+    },
+    {
+      "level": "Dusk",
+      "path": "Levels/Dusk/Objects.level.bin",
+      "sha256": "9222b248f17fb4122cd4ad9650543ab86aab8b077b6965248c70ac2341bf2d5d",
+      "bytes": 242331,
+      "nodes": 1288,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dusk.json",
+      "markdown": "Objects对象清单/Dusk.md"
+    },
+    {
+      "level": "DuskGraveyard",
+      "path": "Levels/DuskGraveyard/Objects.level.bin",
+      "sha256": "128b30dcbe40b68e68fc25d195b68dc39f897259453c02612049ccd37a90ffb4",
+      "bytes": 424333,
+      "nodes": 1791,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DuskGraveyard.json",
+      "markdown": "Objects对象清单/DuskGraveyard.md"
+    },
+    {
+      "level": "HubReveal",
+      "path": "Levels/HubReveal/Objects.level.bin",
+      "sha256": "4b32f12bbe4b246cde9ca1e4ba0982000ff108359865bb4340aba640e609861b",
+      "bytes": 289438,
+      "nodes": 1829,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/HubReveal.json",
+      "markdown": "Objects对象清单/HubReveal.md"
+    },
+    {
+      "level": "Night",
+      "path": "Levels/Night/Objects.level.bin",
+      "sha256": "6ce612c9efb82834d648de81251033b341a44f4d9374d8338d868575aab6a723",
+      "bytes": 499756,
+      "nodes": 3719,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Night.json",
+      "markdown": "Objects对象清单/Night.md"
+    },
+    {
+      "level": "Prairie_ButterflyFields",
+      "path": "Levels/Prairie_ButterflyFields/Objects.level.bin",
+      "sha256": "29d8d61a082f3e3414ecfbb501b5f65499deb37ad4a1078ce2e9b88ac0d1e441",
+      "bytes": 297606,
+      "nodes": 1513,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_ButterflyFields.json",
+      "markdown": "Objects对象清单/Prairie_ButterflyFields.md"
+    },
+    {
+      "level": "Prairie_Village",
+      "path": "Levels/Prairie_Village/Objects.level.bin",
+      "sha256": "4656296b54402016b59b894b4653fbdc71e106a21e0900294f73f2c7b7112385",
+      "bytes": 549989,
+      "nodes": 3724,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Village.json",
+      "markdown": "Objects对象清单/Prairie_Village.md"
+    },
+    {
+      "level": "Rain",
+      "path": "Levels/Rain/Objects.level.bin",
+      "sha256": "20093bccf3bb1ea0936cb993e66cef0187b40a5a411df3573eb28e4def4f75c6",
+      "bytes": 457732,
+      "nodes": 2079,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Rain.json",
+      "markdown": "Objects对象清单/Rain.md"
+    },
+    {
+      "level": "RainEnd",
+      "path": "Levels/RainEnd/Objects.level.bin",
+      "sha256": "247912ec955153e3df80c16a861eb872573502a285a17943518bdce448a8d5e3",
+      "bytes": 427926,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainEnd.json",
+      "markdown": "Objects对象清单/RainEnd.md"
+    },
+    {
+      "level": "RainForest",
+      "path": "Levels/RainForest/Objects.level.bin",
+      "sha256": "2e69b3314c70c61bd99435f4bb4418fba540f227c83670e1af3b5358c64c3b73",
+      "bytes": 271409,
+      "nodes": 1306,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainForest.json",
+      "markdown": "Objects对象清单/RainForest.md"
+    },
+    {
+      "level": "RainMid",
+      "path": "Levels/RainMid/Objects.level.bin",
+      "sha256": "139b219d9b71a2ab24418b1ec41f2ee8a2ebfdf4c5ea992c35348a758682ed23",
+      "bytes": 430825,
+      "nodes": 2457,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainMid.json",
+      "markdown": "Objects对象清单/RainMid.md"
+    },
+    {
+      "level": "SkyHub2",
+      "path": "Levels/SkyHub2/Objects.level.bin",
+      "sha256": "8b467f9b349d9d4ce0d038528c96e44dff30063149bf5bbf90232a56bb9dd36f",
+      "bytes": 475656,
+      "nodes": 2886,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SkyHub2.json",
+      "markdown": "Objects对象清单/SkyHub2.md"
+    },
+    {
+      "level": "Storm",
+      "path": "Levels/Storm/Objects.level.bin",
+      "sha256": "4be187f31f1ef86611831abeb45ed9c1deff5e925f3bae80a6be49af85fa52bd",
+      "bytes": 324849,
+      "nodes": 1954,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Storm.json",
+      "markdown": "Objects对象清单/Storm.md"
+    },
+    {
+      "level": "Sunset",
+      "path": "Levels/Sunset/Objects.level.bin",
+      "sha256": "8126f2db693502576075505797624e0b5e53dc064fe6af82e90f2261ca427f8a",
+      "bytes": 325410,
+      "nodes": 1899,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Sunset.json",
+      "markdown": "Objects对象清单/Sunset.md"
+    },
+    {
+      "level": "SunsetEnd",
+      "path": "Levels/SunsetEnd/Objects.level.bin",
+      "sha256": "9995ebfef7aa72982f6b95073a98a4ef01376bd8ac56c3b79b09729f97f43d6e",
+      "bytes": 352573,
+      "nodes": 1998,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SunsetEnd.json",
+      "markdown": "Objects对象清单/SunsetEnd.md"
+    },
+    {
+      "level": "SunsetEnd2",
+      "path": "Levels/SunsetEnd2/Objects.level.bin",
+      "sha256": "f76249413f9412f3db6d726aacf7425d5da546f8a9b88b9614c8a33fdb87e711",
+      "bytes": 209340,
+      "nodes": 975,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SunsetEnd2.json",
+      "markdown": "Objects对象清单/SunsetEnd2.md"
+    },
+    {
+      "level": "SunsetRace",
+      "path": "Levels/SunsetRace/Objects.level.bin",
+      "sha256": "2ebfc21451d30f976bcafafa0c42f409e322efeeb0f8403a4136899438e0b5dc",
+      "bytes": 333403,
+      "nodes": 1722,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SunsetRace.json",
+      "markdown": "Objects对象清单/SunsetRace.md"
+    }
+  ]
+}

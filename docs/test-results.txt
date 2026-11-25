@@ -1,0 +1,464 @@
+
+> sky-map-editor@0.2.0 test
+> tsx --test tests/*.test.ts
+
+TAP version 13
+# Subtest: Original Cube remapping permutes lighting samples; it is not the opaque meshes byte block
+ok 1 - Original Cube remapping permutes lighting samples; it is not the opaque meshes byte block
+  ---
+  duration_ms: 17.747239
+  type: 'test'
+  ...
+# Subtest: A real Dawn bake sample patch changes exactly 12 LOD bytes and leaves its opaque block intact
+ok 2 - A real Dawn bake sample patch changes exactly 12 LOD bytes and leaves its opaque block intact
+  ---
+  duration_ms: 871.379322
+  type: 'test'
+  ...
+# Subtest: Missing or incompatible LOD mappings fail without inventing default lighting
+ok 3 - Missing or incompatible LOD mappings fail without inventing default lighting
+  ---
+  duration_ms: 14.521667
+  type: 'test'
+  ...
+# Subtest: Packed lighting decoder follows the original shader expressions, including non-finite zero divisors
+ok 4 - Packed lighting decoder follows the original shader expressions, including non-finite zero divisors
+  ---
+  duration_ms: 0.782968
+  type: 'test'
+  ...
+# Subtest: CloudCard full inverse and four-lane local camera direction match original instructions bit for bit
+ok 5 - CloudCard full inverse and four-lane local camera direction match original instructions bit for bit
+  ---
+  duration_ms: 263.655469
+  type: 'test'
+  ...
+# Subtest: CloudCard rendering rejects unusable inverse matrices, duplicate visible cards and non-finite eyes
+ok 6 - CloudCard rendering rejects unusable inverse matrices, duplicate visible cards and non-finite eyes
+  ---
+  duration_ms: 0.704688
+  type: 'test'
+  ...
+# Subtest: CloudCard world spheres and transitive overlap groups match original load instructions byte for byte
+ok 7 - CloudCard world spheres and transitive overlap groups match original load instructions byte for byte
+  ---
+  duration_ms: 49.068437
+  type: 'test'
+  ...
+# Subtest: CloudCard layout rejects invalid world spheres and the original 512-card capacity overflow
+ok 8 - CloudCard layout rejects invalid world spheres and the original 512-card capacity overflow
+  ---
+  duration_ms: 1.551146
+  type: 'test'
+  ...
+# Subtest: CloudCard group and distance ordering preserve the exact original equal-key permutations
+ok 9 - CloudCard group and distance ordering preserve the exact original equal-key permutations
+  ---
+  duration_ms: 36.13375
+  type: 'test'
+  ...
+# Subtest: CloudCard group sort, cumulative offsets and complete shared indices match original load output
+ok 10 - CloudCard group sort, cumulative offsets and complete shared indices match original load output
+  ---
+  duration_ms: 14.751406
+  type: 'test'
+  ...
+# Subtest: CloudCard distance math, optional ordering and GPU draw ranges match original queue instructions
+ok 11 - CloudCard distance math, optional ordering and GPU draw ranges match original queue instructions
+  ---
+  duration_ms: 12.475469
+  type: 'test'
+  ...
+# Subtest: CloudCard plans reject missing/duplicate visible cards, invalid indices and non-finite sort keys
+ok 12 - CloudCard plans reject missing/duplicate visible cards, invalid indices and non-finite sort keys
+  ---
+  duration_ms: 0.916927
+  type: 'test'
+  ...
+# Subtest: CloudCard six planes, sphere candidates and all compacted fields match original instructions bit for bit
+ok 13 - CloudCard six planes, sphere candidates and all compacted fields match original instructions bit for bit
+  ---
+  duration_ms: 97.795313
+  type: 'test'
+  ...
+# Subtest: CloudCard original visibility and optional distance draw queue compose without losing source/range identity
+ok 14 - CloudCard original visibility and optional distance draw queue compose without losing source/range identity
+  ---
+  duration_ms: 13.068438
+  type: 'test'
+  ...
+# Subtest: CloudCard visibility requires explicit classification, complete unique source order and finite float32 inputs
+ok 15 - CloudCard visibility requires explicit classification, complete unique source order and finite float32 inputs
+  ---
+  duration_ms: 0.930833
+  type: 'test'
+  ...
+# Subtest: Cloud target dimensions, half storage and sampler states match the original allocation loop
+ok 16 - Cloud target dimensions, half storage and sampler states match the original allocation loop
+  ---
+  duration_ms: 3.637813
+  type: 'test'
+  ...
+# Subtest: Sampled half targets reconstruct every finite half encoding without another rounding step
+ok 17 - Sampled half targets reconstruct every finite half encoding without another rounding step
+  ---
+  duration_ms: 103.162396
+  type: 'test'
+  ...
+# Subtest: Original Cloud pass binds the preceding coarse level and queues Cloud after fine fullscreen
+ok 18 - Original Cloud pass binds the preceding coarse level and queues Cloud after fine fullscreen
+  ---
+  duration_ms: 0.645313
+  type: 'test'
+  ...
+# Subtest: Depth chain outputs and quad bindings match all three original Compositor descriptors
+ok 19 - Depth chain outputs and quad bindings match all three original Compositor descriptors
+  ---
+  duration_ms: 0.646667
+  type: 'test'
+  ...
+# Subtest: Cloud list preserves original disabled depth/cull and separate RGB/alpha additive factors
+ok 20 - Cloud list preserves original disabled depth/cull and separate RGB/alpha additive factors
+  ---
+  duration_ms: 1.484062
+  type: 'test'
+  ...
+# Subtest: Sparse atlas faces, edges, corners and inactive fallback match original machine code
+ok 21 - Sparse atlas faces, edges, corners and inactive fallback match original machine code
+  ---
+  duration_ms: 12.803907
+  type: 'test'
+  ...
+# Subtest: All 27 real cloud fields decode to the five original texture uploads
+ok 22 - All 27 real cloud fields decode to the five original texture uploads
+  ---
+  duration_ms: 9210.868955
+  type: 'test'
+  ...
+# Subtest: Cloud decoder refuses invalid sizes, duplicate/outside coordinates and truncated decompression
+ok 23 - Cloud decoder refuses invalid sizes, duplicate/outside coordinates and truncated decompression
+  ---
+  duration_ms: 1.903021
+  type: 'test'
+  ...
+# Subtest: Cloud material scalar edit preserves spatial fields and rejects incomplete origin edits atomically
+ok 24 - Cloud material scalar edit preserves spatial fields and rejects incomplete origin edits atomically
+  ---
+  duration_ms: 358.141041
+  type: 'test'
+  ...
+# Subtest: Cloud proxy movement cannot leave a modified proxy detached from its field or disturb pending scalar edits
+ok 25 - Cloud proxy movement cannot leave a modified proxy detached from its field or disturb pending scalar edits
+  ---
+  duration_ms: 360.56125
+  type: 'test'
+  ...
+# Subtest: All native cloud proxy descriptors expose the original SNORM4 normal bytes
+ok 26 - All native cloud proxy descriptors expose the original SNORM4 normal bytes
+  ---
+  duration_ms: 2548.62151
+  type: 'test'
+  ...
+# Subtest: Production 3D textures preserve original bytes, channel formats and nearest/linear clamp sampling
+ok 27 - Production 3D textures preserve original bytes, channel formats and nearest/linear clamp sampling
+  ---
+  duration_ms: 1.905365
+  type: 'test'
+  ...
+# Subtest: Boot shader declarations resolve original cloud super coarse, coarse and final programs
+ok 28 - Boot shader declarations resolve original cloud super coarse, coarse and final programs
+  ---
+  duration_ms: 169.735469
+  type: 'test'
+  ...
+# Subtest: All 33 levels parse completely and preserve every original byte without edits
+ok 29 - All 33 levels parse completely and preserve every original byte without edits
+  ---
+  duration_ms: 8599.280934
+  type: 'test'
+  ...
+# Subtest: WorldEmpty string resizing changes only the field and header file size
+ok 30 - WorldEmpty string resizing changes only the field and header file size
+  ---
+  duration_ms: 7.165104
+  type: 'test'
+  ...
+# Subtest: Integer and float bit interpretations are explicit; unchanged NaN-like bits are preserved
+ok 31 - Integer and float bit interpretations are explicit; unchanged NaN-like bits are preserved
+  ---
+  duration_ms: 3.35401
+  type: 'test'
+  ...
+# Subtest: Dawn nested string and Marker vectors roundtrip without changing object references
+ok 32 - Dawn nested string and Marker vectors roundtrip without changing object references
+  ---
+  duration_ms: 520.388853
+  type: 'test'
+  ...
+# Subtest: Terrain material patches preserve every collision, edge table and bake byte
+ok 33 - Terrain material patches preserve every collision, edge table and bake byte
+  ---
+  duration_ms: 835.963645
+  type: 'test'
+  ...
+# Subtest: WorldEmpty new skirt uses original 40-byte layout and retains the empty occluder
+ok 34 - WorldEmpty new skirt uses original 40-byte layout and retains the empty occluder
+  ---
+  duration_ms: 15.546198
+  type: 'test'
+  ...
+# Subtest: LZ4 overlaps, literal-only encoding and malformed buffers
+ok 35 - LZ4 overlaps, literal-only encoding and malformed buffers
+  ---
+  duration_ms: 1.279323
+  type: 'test'
+  ...
+# Subtest: Truncated and invalid headers reject without emitting an editable partial document
+ok 36 - Truncated and invalid headers reject without emitting an editable partial document
+  ---
+  duration_ms: 14.957083
+  type: 'test'
+  ...
+# Subtest: Meshes rejects ambiguous directories before allowing edits
+ok 37 - Meshes rejects ambiguous directories before allowing edits
+  ---
+  duration_ms: 3.988021
+  type: 'test'
+  ...
+# Subtest: Meshes resizing preserves opaque sections and relocates an empty end marker with an unsorted directory
+ok 38 - Meshes resizing preserves opaque sections and relocates an empty end marker with an unsorted directory
+  ---
+  duration_ms: 3.905417
+  type: 'test'
+  ...
+# Subtest: Atomic replacement makes a recoverable backup and refuses an external overwrite
+ok 39 - Atomic replacement makes a recoverable backup and refuses an external overwrite
+  ---
+  duration_ms: 76.172969
+  type: 'test'
+  ...
+# Subtest: Original module sort/dispatch and full EnvNode load chain match 33 maps, 40 fields and 396 frames
+ok 40 - Original module sort/dispatch and full EnvNode load chain match 33 maps, 40 fields and 396 frames
+  ---
+  duration_ms: 615.845989
+  type: 'test'
+  ...
+# Subtest: Real TGCL adapter preserves file queue order and requires explicit initialized outputs
+ok 41 - Real TGCL adapter preserves file queue order and requires explicit initialized outputs
+  ---
+  duration_ms: 4600.870259
+  type: 'test'
+  ...
+# Subtest: EnvNode queue diagnostics reject incomplete regions and original pool overflow
+ok 42 - EnvNode queue diagnostics reject incomplete regions and original pool overflow
+  ---
+  duration_ms: 15.976823
+  type: 'test'
+  ...
+# Subtest: All 12 interpolation branches reproduce the original x64 machine code byte for byte
+ok 43 - All 12 interpolation branches reproduce the original x64 machine code byte for byte
+  ---
+  duration_ms: 7.410209
+  type: 'test'
+  ...
+# Subtest: Environment layers preserve native threshold, type rules and sequential override
+ok 44 - Environment layers preserve native threshold, type rules and sequential override
+  ---
+  duration_ms: 2.304218
+  type: 'test'
+  ...
+# Subtest: EnvNode spatial falloff matches original x64 code including rotated bounds, tolerance and fade
+ok 45 - EnvNode spatial falloff matches original x64 code including rotated bounds, tolerance and fade
+  ---
+  duration_ms: 42.509479
+  type: 'test'
+  ...
+# Subtest: EnvNode activation timer, auto-disable and fade match original x64 state changes
+ok 46 - EnvNode activation timer, auto-disable and fade match original x64 state changes
+  ---
+  duration_ms: 29.158906
+  type: 'test'
+  ...
+# Subtest: EnvNode, SetEnvDefault and SetEnvHull conversion preserves bytes and native derived fog fields
+ok 47 - EnvNode, SetEnvDefault and SetEnvHull conversion preserves bytes and native derived fog fields
+  ---
+  duration_ms: 2.874584
+  type: 'test'
+  ...
+# Subtest: Original registration and complete frame update/mix agree across 12 tags and shared-node state changes
+ok 48 - Original registration and complete frame update/mix agree across 12 tags and shared-node state changes
+  ---
+  duration_ms: 158.858021
+  type: 'test'
+  ...
+# Subtest: TGCL default tags fill absent fields, preserve saved bytes and keep three-component Color alpha zero
+ok 49 - TGCL default tags fill absent fields, preserve saved bytes and keep three-component Color alpha zero
+  ---
+  duration_ms: 13.54526
+  type: 'test'
+  ...
+# Subtest: Clump Marker union matches original checked-cast x64 spatial branch byte for byte
+ok 50 - Clump Marker union matches original checked-cast x64 spatial branch byte for byte
+  ---
+  duration_ms: 19.519323
+  type: 'test'
+  ...
+# Subtest: Clump fade and expiry follow first Marker, including disabled secondary markers
+ok 51 - Clump fade and expiry follow first Marker, including disabled secondary markers
+  ---
+  duration_ms: 3.60823
+  type: 'test'
+  ...
+# Subtest: Clump registration and full multi-variable update/mix match the original native pipeline
+ok 52 - Clump registration and full multi-variable update/mix match the original native pipeline
+  ---
+  duration_ms: 208.15625
+  type: 'test'
+  ...
+# Subtest: Clump entries sharing the first Marker share expiry and reject empty registration
+ok 53 - Clump entries sharing the first Marker share expiry and reject empty registration
+  ---
+  duration_ms: 0.838594
+  type: 'test'
+  ...
+# Subtest: Real Storm hull references resolve to original Marker transforms and first-marker state without writes
+ok 54 - Real Storm hull references resolve to original Marker transforms and first-marker state without writes
+  ---
+  duration_ms: 442.35099
+  type: 'test'
+  ...
+# Subtest: Lua reader ignores executable expressions, comments, nested tables and declaration-like string contents
+ok 55 - Lua reader ignores executable expressions, comments, nested tables and declaration-like string contents
+  ---
+  duration_ms: 2.396458
+  type: 'test'
+  ...
+# Subtest: Original define hash selects known archive filenames and preserves whitespace/order
+ok 56 - Original define hash selects known archive filenames and preserves whitespace/order
+  ---
+  duration_ms: 9964.633902
+  type: 'test'
+  ...
+# Subtest: Real LevelMesh custom parameters are independent from terrain material IDs
+ok 57 - Real LevelMesh custom parameters are independent from terrain material IDs
+  ---
+  duration_ms: 876.160208
+  type: 'test'
+  ...
+# Subtest: Uniform diagnostics retain missing pipeline data and reject duplicate/incompatible parameters
+ok 58 - Uniform diagnostics retain missing pipeline data and reject duplicate/incompatible parameters
+  ---
+  duration_ms: 84.748802
+  type: 'test'
+  ...
+# Subtest: Baked passes use captured native descriptors and keep Scene capacity separate
+ok 59 - Baked passes use captured native descriptors and keep Scene capacity separate
+  ---
+  duration_ms: 2.356718
+  type: 'test'
+  ...
+# Subtest: Native group material requires known state and valid uniforms before shader activation
+ok 60 - Native group material requires known state and valid uniforms before shader activation
+  ---
+  duration_ms: 1.436146
+  type: 'test'
+  ...
+# Subtest: Native mode 3 shader keys use signed handles and original readiness/null sentinels
+ok 61 - Native mode 3 shader keys use signed handles and original readiness/null sentinels
+  ---
+  duration_ms: 0.452344
+  type: 'test'
+  ...
+# Subtest: Original machine code fixtures retain all 59 surfaces and stable triangle index order
+ok 62 - Original machine code fixtures retain all 59 surfaces and stable triangle index order
+  ---
+  duration_ms: 5.770104
+  type: 'test'
+  ...
+# Subtest: Skirt presence includes zero-weight materials and slots after a zero ID
+ok 63 - Skirt presence includes zero-weight materials and slots after a zero ID
+  ---
+  duration_ms: 0.955833
+  type: 'test'
+  ...
+# Subtest: Real skirt GPU attributes preserve all original packed bytes and painting updates batch IDs
+ok 64 - Real skirt GPU attributes preserve all original packed bytes and painting updates batch IDs
+  ---
+  duration_ms: 211.279219
+  type: 'test'
+  ...
+# Subtest: Occluder position edit preserves its unresolved four-byte vertex payload
+ok 65 - Occluder position edit preserves its unresolved four-byte vertex payload
+  ---
+  duration_ms: 59.853281
+  type: 'test'
+  ...
+# Subtest: Original shader upload requires explicit globals and never inserts placeholder textures
+ok 66 - Original shader upload requires explicit globals and never inserts placeholder textures
+  ---
+  duration_ms: 280.552031
+  type: 'test'
+  ...
+# Subtest: VOLU signed float samples and cloud normalization/axis order match unchanged original machine code
+ok 67 - VOLU signed float samples and cloud normalization/axis order match unchanged original machine code
+  ---
+  duration_ms: 288.685834
+  type: 'test'
+  ...
+# Subtest: VOLU rejects truncated and unsupported files while ignoring opaque exporter header bytes
+ok 68 - VOLU rejects truncated and unsupported files while ignoring opaque exporter header bytes
+  ---
+  duration_ms: 96.685052
+  type: 'test'
+  ...
+# Subtest: Vulkan reserves the vertex-only UBO binding across stages, validates binaries and preserves cache integrity
+ok 69 - Vulkan reserves the vertex-only UBO binding across stages, validates binaries and preserves cache integrity
+  ---
+  duration_ms: 1706.572186
+  type: 'test'
+  ...
+# Subtest: SPIR-V malformed instruction streams are rejected before reflection
+ok 70 - SPIR-V malformed instruction streams are rejected before reflection
+  ---
+  duration_ms: 0.393125
+  type: 'test'
+  ...
+# Subtest: Runtime cloud and depth materials resolve embedded AIR only for the exact original shader pair
+ok 71 - Runtime cloud and depth materials resolve embedded AIR only for the exact original shader pair
+  ---
+  duration_ms: 866.112343
+  type: 'test'
+  ...
+# Subtest: Recovered AIR stages link with float32 external interfaces and explicit half capability without relaxed conversion
+ok 72 - Recovered AIR stages link with float32 external interfaces and explicit half capability without relaxed conversion
+  ---
+  duration_ms: 7386.996976
+  type: 'test'
+  ...
+# Subtest: Vulkan rail strips preserve every adjacent edge for odd and even point counts
+ok 73 - Vulkan rail strips preserve every adjacent edge for odd and even point counts
+  ---
+  duration_ms: 15.198802
+  type: 'test'
+  ...
+# Subtest: Vulkan line loops close within the selected draw range
+ok 74 - Vulkan line loops close within the selected draw range
+  ---
+  duration_ms: 1.915365
+  type: 'test'
+  ...
+# Subtest: Vulkan independent segments stay disconnected and ignore incomplete primitives
+ok 75 - Vulkan independent segments stay disconnected and ignore incomplete primitives
+  ---
+  duration_ms: 1.559896
+  type: 'test'
+  ...
+1..75
+# tests 75
+# suites 0
+# pass 75
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 15349.050358

@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "cases": 248,
+  "preparedCases": 248,
+  "actualMapCases": 0,
+  "snapshots": 798,
+  "comparedBytes": 26291400,
+  "serviceCalls": 87,
+  "entries": [
+    "0x1007b97b0",
+    "0x1007b9820",
+    "0x1007b9990",
+    "0x1007f65d0",
+    "0x1007f6540",
+    "0x1007f6770",
+    "0x1007ba080",
+    "0x1007b9fc0"
+  ],
+  "composition": [
+    "Whole original VertexRender Initialize 0x1007f5e90 → real register/context lookup → whole format initializer 0x1007f5fb0, graphics services explicit.",
+    "Whole original Model submit 0x10046b780 → whole VertexRender queue → primitive count and real RenderList append; debug disabled.",
+    "Whole original Renderable reset 0x1007f6b80 → real unregister → whole RenderPipeline free 0x1007c0cc0 with prepared zero-UBO reflection; graphics/free services explicit."
+  ],
+  "scope": "Fixed registration holes/duplicates/capacity failure, stable unregister and unchanged tail/queued flag, exact queue gates, indexed/non-indexed chunks, uint32 overflow, optional/aliased context outputs and format refresh with live registration/capacity callbacks. All cases are prepared ABI inputs. GPU program/parameters/copy/format refresh/assertions are explicit services.",
+  "actualViewportUsesOriginalQueue": false,
+  "completeSceneRestored": false,
+  "completeModelRestored": false,
+  "remaining": [
+    "Original Scene/Barn allocation and queue-count frame ownership",
+    "Original sort modes and distance functions beyond prior mode 3 evidence",
+    "Full Model constructor, automatic LOD/Visibility/animation/loader",
+    "GPU format/program lifecycle and actual Windows hardware performance"
+  ]
+}

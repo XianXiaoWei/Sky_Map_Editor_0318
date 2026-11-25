@@ -1,0 +1,1372 @@
+{
+  "className": "CandleGate",
+  "functionGroup": "收集物、蜡烛与解锁",
+  "functionRole": "蜡烛放置与门控事件",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "CandleGate 的原默认值、继承初始化及 7 个序列化字段变体；原注册字段 6 项。"
+    },
+    {
+      "name": "蜡烛放置与门控事件",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Clump（42 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "CandleGate",
+    "category": "收集物、蜡烛与解锁",
+    "functionGroupId": "collectibles",
+    "functionRole": "蜡烛放置与门控事件",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "CandleGate 的原默认值、继承初始化及 7 个序列化字段变体；原注册字段 6 项。"
+      },
+      {
+        "name": "蜡烛放置与门控事件",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Clump（42 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Clump",
+        "references": 42
+      }
+    ],
+    "rttiWorkingGroup": "交互、事件与任务",
+    "role": "对象实例类型",
+    "instances": 23,
+    "nestedInstances": 0,
+    "referenceFields": 42,
+    "declaredLevels": 12,
+    "levels": [
+      {
+        "level": "CandleSpace",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Dawn",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DayEnd",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Dusk",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DuskGraveyard",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "HubReveal",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Night",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Village",
+        "nodes": 7,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainForest",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainMid",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SkyHub2",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Sunset",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "activate",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "activateOnce",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "analyticsOnDeposit",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "flames",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "networked",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "onFinalCandleBeingPlacedEffects",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100c91570",
+    "nativeRegisteredFields": [
+      {
+        "name": "activate",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x1001f4140",
+        "propertyAddress": "0x100c91140"
+      },
+      {
+        "name": "activateOnce",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 64,
+        "registrationFunction": "0x1001f4140",
+        "propertyAddress": "0x100c91190"
+      },
+      {
+        "name": "onFinalCandleBeingPlacedEffects",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 80,
+        "registrationFunction": "0x1001f4140",
+        "propertyAddress": "0x100c911e0"
+      },
+      {
+        "name": "flames",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 72,
+        "registrationFunction": "0x1001f4140",
+        "propertyAddress": "0x100c91230"
+      },
+      {
+        "name": "networked",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 88,
+        "registrationFunction": "0x1001f4140",
+        "propertyAddress": "0x100c91280"
+      },
+      {
+        "name": "analyticsOnDeposit",
+        "typeGetter": "__Z17GetMetaTypeByTypeI24CandleGateAnalyticsEventERK8MetaTypev",
+        "nativeOffset": 92,
+        "registrationFunction": "0x1001f4140",
+        "propertyAddress": "0x100c912d0"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 6 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "CandleSpace:n382",
+      "level": "CandleSpace",
+      "nodeId": 382,
+      "name": "BstNode_2529558726",
+      "className": "CandleGate",
+      "classIndex": 68,
+      "sourceOffset": 80154,
+      "sourceLength": 45,
+      "sourceSha256": "81c9d7c33ef58ddf23ca0e8ea34ae1060208bc5489523ee26d21c59304c11d4a",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n382/p5",
+          "fieldName": "flames",
+          "target": "CandleSpace:n539",
+          "targetNodeId": 539,
+          "offset": 80191
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1965",
+      "level": "Dawn",
+      "nodeId": 1965,
+      "name": "BstNode_3122856752",
+      "className": "CandleGate",
+      "classIndex": 110,
+      "sourceOffset": 322025,
+      "sourceLength": 45,
+      "sourceSha256": "a757ba6c58a856b9ab90677c3621009fe55880944fb255dbf118d8758e5ea831",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1965/p5",
+          "fieldName": "flames",
+          "target": "Dawn:n3543",
+          "targetNodeId": 3543,
+          "offset": 322062
+        },
+        {
+          "fieldId": "n1965/p6",
+          "fieldName": "activateOnce",
+          "target": "Dawn:n1364",
+          "targetNodeId": 1364,
+          "offset": 322066
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n1051",
+      "level": "DayEnd",
+      "nodeId": 1051,
+      "name": "BstNode_2446917698",
+      "className": "CandleGate",
+      "classIndex": 72,
+      "sourceOffset": 220887,
+      "sourceLength": 45,
+      "sourceSha256": "badf61ef5eb1b9dfb9f9819547296c99820851e6f1a53f9e3db4ac1dd86b66c2",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1051/p5",
+          "fieldName": "flames",
+          "target": "DayEnd:n1422",
+          "targetNodeId": 1422,
+          "offset": 220924
+        },
+        {
+          "fieldId": "n1051/p6",
+          "fieldName": "activateOnce",
+          "target": "DayEnd:n398",
+          "targetNodeId": 398,
+          "offset": 220928
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n1173",
+      "level": "DayEnd",
+      "nodeId": 1173,
+      "name": "BstNode_2446917712",
+      "className": "CandleGate",
+      "classIndex": 72,
+      "sourceOffset": 242586,
+      "sourceLength": 45,
+      "sourceSha256": "4eb87240e962fc67432306deffa57aa46432afd7662e671af641068d73f4c90d",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1173/p5",
+          "fieldName": "flames",
+          "target": "DayEnd:n183",
+          "targetNodeId": 183,
+          "offset": 242623
+        },
+        {
+          "fieldId": "n1173/p6",
+          "fieldName": "activateOnce",
+          "target": "DayEnd:n699",
+          "targetNodeId": 699,
+          "offset": 242627
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n761",
+      "level": "Dusk",
+      "nodeId": 761,
+      "name": "BstNode_34603729",
+      "className": "CandleGate",
+      "classIndex": 64,
+      "sourceOffset": 161000,
+      "sourceLength": 43,
+      "sourceSha256": "d12d1df6ad78d53ed8113d2ca008008572d77acccb3810032dd5e4f3685c7d45",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n761/p5",
+          "fieldName": "flames",
+          "target": "Dusk:n1254",
+          "targetNodeId": 1254,
+          "offset": 161035
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n1142",
+      "level": "Dusk",
+      "nodeId": 1142,
+      "name": "BstNode_2446917746",
+      "className": "CandleGate",
+      "classIndex": 64,
+      "sourceOffset": 233605,
+      "sourceLength": 45,
+      "sourceSha256": "7ba0369bd4f72c305f8080cb5e6fd6018e369b1b1a9d188952fb3027f15bc65e",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1142/p5",
+          "fieldName": "flames",
+          "target": "Dusk:n1286",
+          "targetNodeId": 1286,
+          "offset": 233642
+        },
+        {
+          "fieldId": "n1142/p6",
+          "fieldName": "activateOnce",
+          "target": "Dusk:n295",
+          "targetNodeId": 295,
+          "offset": 233646
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n538",
+      "level": "DuskGraveyard",
+      "nodeId": 538,
+      "name": "BstNode_34603864",
+      "className": "CandleGate",
+      "classIndex": 45,
+      "sourceOffset": 150102,
+      "sourceLength": 43,
+      "sourceSha256": "bfe593b4005ef49205605eeea8e2196fcc8503f2d7b85168858da02b4200ecfe",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n538/p5",
+          "fieldName": "flames",
+          "target": "DuskGraveyard:n1735",
+          "targetNodeId": 1735,
+          "offset": 150137
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n1488",
+      "level": "HubReveal",
+      "nodeId": 1488,
+      "name": "BstNode_2446917746",
+      "className": "CandleGate",
+      "classIndex": 101,
+      "sourceOffset": 278610,
+      "sourceLength": 45,
+      "sourceSha256": "da1a9e52b20e877b598ac15a7a75166224ee65ef4110d12fce381c5f965595e1",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1488/p5",
+          "fieldName": "flames",
+          "target": "HubReveal:n1823",
+          "targetNodeId": 1823,
+          "offset": 278647
+        },
+        {
+          "fieldId": "n1488/p6",
+          "fieldName": "activateOnce",
+          "target": "HubReveal:n1263",
+          "targetNodeId": 1263,
+          "offset": 278651
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n400",
+      "level": "Night",
+      "nodeId": 400,
+      "name": "BstNode_34604461",
+      "className": "CandleGate",
+      "classIndex": 41,
+      "sourceOffset": 82590,
+      "sourceLength": 43,
+      "sourceSha256": "8b9645ec0549acbecbd6fe2bac1f8a37888990f30ea27e5a505bed30abf2c5bb",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n400/p5",
+          "fieldName": "flames",
+          "target": "Night:n3188",
+          "targetNodeId": 3188,
+          "offset": 82625
+        },
+        {
+          "fieldId": "n400/p6",
+          "fieldName": "activateOnce",
+          "target": "Night:n1541",
+          "targetNodeId": 1541,
+          "offset": 82629
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1204",
+      "level": "Night",
+      "nodeId": 1204,
+      "name": "BstNode_2446917746",
+      "className": "CandleGate",
+      "classIndex": 41,
+      "sourceOffset": 200138,
+      "sourceLength": 45,
+      "sourceSha256": "6983e37006d3db5e25b524c0b3a5acdf843e136cbf8d69e6bd3a2deddf88a136",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1204/p5",
+          "fieldName": "flames",
+          "target": "Night:n3323",
+          "targetNodeId": 3323,
+          "offset": 200175
+        },
+        {
+          "fieldId": "n1204/p6",
+          "fieldName": "activateOnce",
+          "target": "Night:n1899",
+          "targetNodeId": 1899,
+          "offset": 200179
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n281",
+      "level": "Prairie_Village",
+      "nodeId": 281,
+      "name": "BstNode_1167524004",
+      "className": "CandleGate",
+      "classIndex": 45,
+      "sourceOffset": 75404,
+      "sourceLength": 45,
+      "sourceSha256": "cc3b29afbbced69b4fb092a3e56bc42fddac1c64781004cecc2a63ba88a9501c",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n281/p1",
+          "fieldName": "activate",
+          "target": "Prairie_Village:n609",
+          "targetNodeId": 609,
+          "offset": 75428
+        },
+        {
+          "fieldId": "n281/p5",
+          "fieldName": "flames",
+          "target": "Prairie_Village:n3200",
+          "targetNodeId": 3200,
+          "offset": 75441
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n508",
+      "level": "Prairie_Village",
+      "nodeId": 508,
+      "name": "BstNode_1482555546",
+      "className": "CandleGate",
+      "classIndex": 45,
+      "sourceOffset": 114275,
+      "sourceLength": 45,
+      "sourceSha256": "cb498bfaf2196ea122bd94e536d77279b3eb0d03d398333fb8bbbcde7d495c81",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n508/p5",
+          "fieldName": "flames",
+          "target": "Prairie_Village:n3232",
+          "targetNodeId": 3232,
+          "offset": 114312
+        },
+        {
+          "fieldId": "n508/p6",
+          "fieldName": "activateOnce",
+          "target": "Prairie_Village:n940",
+          "targetNodeId": 940,
+          "offset": 114316
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n827",
+      "level": "Prairie_Village",
+      "nodeId": 827,
+      "name": "BstNode_1167523927",
+      "className": "CandleGate",
+      "classIndex": 45,
+      "sourceOffset": 165744,
+      "sourceLength": 45,
+      "sourceSha256": "b7aef8781cf9c0f6d0a2d47ce0b57b9c3201de99c34080f411555661b470b967",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n827/p1",
+          "fieldName": "activate",
+          "target": "Prairie_Village:n487",
+          "targetNodeId": 487,
+          "offset": 165768
+        },
+        {
+          "fieldId": "n827/p5",
+          "fieldName": "flames",
+          "target": "Prairie_Village:n428",
+          "targetNodeId": 428,
+          "offset": 165781
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1776",
+      "level": "Prairie_Village",
+      "nodeId": 1776,
+      "name": "BstNode_1482555532",
+      "className": "CandleGate",
+      "classIndex": 45,
+      "sourceOffset": 317016,
+      "sourceLength": 45,
+      "sourceSha256": "abb67c49f093f0f3a5c79337f008ea07fcae63ae0ea705761aaf79182b5e47d6",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1776/p5",
+          "fieldName": "flames",
+          "target": "Prairie_Village:n3484",
+          "targetNodeId": 3484,
+          "offset": 317053
+        },
+        {
+          "fieldId": "n1776/p6",
+          "fieldName": "activateOnce",
+          "target": "Prairie_Village:n2259",
+          "targetNodeId": 2259,
+          "offset": 317057
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2537",
+      "level": "Prairie_Village",
+      "nodeId": 2537,
+      "name": "BstNode_1167523990",
+      "className": "CandleGate",
+      "classIndex": 45,
+      "sourceOffset": 431790,
+      "sourceLength": 45,
+      "sourceSha256": "ce81a7721553aa5987372a3efd9060c420d5403d350d6e24fbe13f65f41ec377",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2537/p1",
+          "fieldName": "activate",
+          "target": "Prairie_Village:n2284",
+          "targetNodeId": 2284,
+          "offset": 431814
+        },
+        {
+          "fieldId": "n2537/p5",
+          "fieldName": "flames",
+          "target": "Prairie_Village:n3631",
+          "targetNodeId": 3631,
+          "offset": 431827
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2841",
+      "level": "Prairie_Village",
+      "nodeId": 2841,
+      "name": "BstNode_2345992498",
+      "className": "CandleGate",
+      "classIndex": 45,
+      "sourceOffset": 482450,
+      "sourceLength": 45,
+      "sourceSha256": "792ee2b8a61f8cd5b310ea58bb14c60fde385d3c20b495c2cc83df0209dbab7b",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2841/p5",
+          "fieldName": "flames",
+          "target": "Prairie_Village:n3677",
+          "targetNodeId": 3677,
+          "offset": 482487
+        },
+        {
+          "fieldId": "n2841/p6",
+          "fieldName": "activateOnce",
+          "target": "Prairie_Village:n135",
+          "targetNodeId": 135,
+          "offset": 482491
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2986",
+      "level": "Prairie_Village",
+      "nodeId": 2986,
+      "name": "BstNode_1167523947",
+      "className": "CandleGate",
+      "classIndex": 45,
+      "sourceOffset": 507787,
+      "sourceLength": 45,
+      "sourceSha256": "356a010b9feb0f2a2ff9128ad322f29c08f416e7cafdded1b498b2e51d65502d",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2986/p1",
+          "fieldName": "activate",
+          "target": "Prairie_Village:n2588",
+          "targetNodeId": 2588,
+          "offset": 507811
+        },
+        {
+          "fieldId": "n2986/p5",
+          "fieldName": "flames",
+          "target": "Prairie_Village:n495",
+          "targetNodeId": 495,
+          "offset": 507824
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n1036",
+      "level": "RainForest",
+      "nodeId": 1036,
+      "name": "BstNode_2446917746",
+      "className": "CandleGate",
+      "classIndex": 62,
+      "sourceOffset": 236222,
+      "sourceLength": 45,
+      "sourceSha256": "8dbcce66a993b12b78151fe59355ff33c20d42ba90b1f8709480ed8c858bb0af",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1036/p5",
+          "fieldName": "flames",
+          "target": "RainForest:n1285",
+          "targetNodeId": 1285,
+          "offset": 236259
+        },
+        {
+          "fieldId": "n1036/p6",
+          "fieldName": "activateOnce",
+          "target": "RainForest:n1203",
+          "targetNodeId": 1203,
+          "offset": 236263
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n1935",
+      "level": "RainMid",
+      "nodeId": 1935,
+      "name": "BstNode_34603113",
+      "className": "CandleGate",
+      "classIndex": 78,
+      "sourceOffset": 376002,
+      "sourceLength": 43,
+      "sourceSha256": "9b6058f42320d38db0b8aedfd299a2fe612c3667c751777bf96675745bd8d5ab",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1935/p5",
+          "fieldName": "flames",
+          "target": "RainMid:n2426",
+          "targetNodeId": 2426,
+          "offset": 376037
+        },
+        {
+          "fieldId": "n1935/p6",
+          "fieldName": "activateOnce",
+          "target": "RainMid:n1264",
+          "targetNodeId": 1264,
+          "offset": 376041
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1133",
+      "level": "SkyHub2",
+      "nodeId": 1133,
+      "name": "BstNode_3156082704",
+      "className": "CandleGate",
+      "classIndex": 91,
+      "sourceOffset": 239756,
+      "sourceLength": 45,
+      "sourceSha256": "522085926850e277ef322e8830c7e979bc5f6892686e3a31881e3f2d89a35f5c",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1133/p5",
+          "fieldName": "flames",
+          "target": "SkyHub2:n2640",
+          "targetNodeId": 2640,
+          "offset": 239793
+        },
+        {
+          "fieldId": "n1133/p6",
+          "fieldName": "activateOnce",
+          "target": "SkyHub2:n1537",
+          "targetNodeId": 1537,
+          "offset": 239797
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n831",
+      "level": "Sunset",
+      "nodeId": 831,
+      "name": "BstNode_2446917746",
+      "className": "CandleGate",
+      "classIndex": 56,
+      "sourceOffset": 173799,
+      "sourceLength": 45,
+      "sourceSha256": "e26b3713fc0bc66d926ee850792398e20d7009c9bcb35b35d69bb959f110c2e4",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n831/p5",
+          "fieldName": "flames",
+          "target": "Sunset:n1816",
+          "targetNodeId": 1816,
+          "offset": 173836
+        },
+        {
+          "fieldId": "n831/p6",
+          "fieldName": "activateOnce",
+          "target": "Sunset:n523",
+          "targetNodeId": 523,
+          "offset": 173840
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n923",
+      "level": "Sunset",
+      "nodeId": 923,
+      "name": "BstNode_2446917755",
+      "className": "CandleGate",
+      "classIndex": 56,
+      "sourceOffset": 187326,
+      "sourceLength": 45,
+      "sourceSha256": "f172b835cabc9fd3927c75f10e8ef9e5b0db7f7e96c460b8b4f8c6c050507662",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n923/p5",
+          "fieldName": "flames",
+          "target": "Sunset:n676",
+          "targetNodeId": 676,
+          "offset": 187363
+        },
+        {
+          "fieldId": "n923/p6",
+          "fieldName": "activateOnce",
+          "target": "Sunset:n832",
+          "targetNodeId": 832,
+          "offset": 187367
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n1360",
+      "level": "Sunset",
+      "nodeId": 1360,
+      "name": "BstNode_34603026",
+      "className": "CandleGate",
+      "classIndex": 56,
+      "sourceOffset": 255717,
+      "sourceLength": 43,
+      "sourceSha256": "f7e0a17a258ae96129c7e745144e7d7735920a506c2f879a49d5358522beff8a",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1360/p5",
+          "fieldName": "flames",
+          "target": "Sunset:n1884",
+          "targetNodeId": 1884,
+          "offset": 255752
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "CandleSpace",
+      "path": "Levels/CandleSpace/Objects.level.bin",
+      "sha256": "db7140d2dd5ee9cd2fcdcbb61a898b9facf1683ff21fec83fcbef81b885f56db",
+      "bytes": 92607,
+      "nodes": 564,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/CandleSpace.json",
+      "markdown": "Objects对象清单/CandleSpace.md"
+    },
+    {
+      "level": "Dawn",
+      "path": "Levels/Dawn/Objects.level.bin",
+      "sha256": "16e26aafc7f9d120a548bf5d8bec04fbc18146bc8db531ef75144889b1ff197a",
+      "bytes": 504637,
+      "nodes": 3798,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dawn.json",
+      "markdown": "Objects对象清单/Dawn.md"
+    },
+    {
+      "level": "DayEnd",
+      "path": "Levels/DayEnd/Objects.level.bin",
+      "sha256": "9b5c568cefa987e504a10236c5b61e5de4b748d965d09e42db3602e4e52cc904",
+      "bytes": 268140,
+      "nodes": 1459,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DayEnd.json",
+      "markdown": "Objects对象清单/DayEnd.md"
+    },
+    {
+      "level": "Dusk",
+      "path": "Levels/Dusk/Objects.level.bin",
+      "sha256": "9222b248f17fb4122cd4ad9650543ab86aab8b077b6965248c70ac2341bf2d5d",
+      "bytes": 242331,
+      "nodes": 1288,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dusk.json",
+      "markdown": "Objects对象清单/Dusk.md"
+    },
+    {
+      "level": "DuskGraveyard",
+      "path": "Levels/DuskGraveyard/Objects.level.bin",
+      "sha256": "128b30dcbe40b68e68fc25d195b68dc39f897259453c02612049ccd37a90ffb4",
+      "bytes": 424333,
+      "nodes": 1791,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DuskGraveyard.json",
+      "markdown": "Objects对象清单/DuskGraveyard.md"
+    },
+    {
+      "level": "HubReveal",
+      "path": "Levels/HubReveal/Objects.level.bin",
+      "sha256": "4b32f12bbe4b246cde9ca1e4ba0982000ff108359865bb4340aba640e609861b",
+      "bytes": 289438,
+      "nodes": 1829,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/HubReveal.json",
+      "markdown": "Objects对象清单/HubReveal.md"
+    },
+    {
+      "level": "Night",
+      "path": "Levels/Night/Objects.level.bin",
+      "sha256": "6ce612c9efb82834d648de81251033b341a44f4d9374d8338d868575aab6a723",
+      "bytes": 499756,
+      "nodes": 3719,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Night.json",
+      "markdown": "Objects对象清单/Night.md"
+    },
+    {
+      "level": "Prairie_Village",
+      "path": "Levels/Prairie_Village/Objects.level.bin",
+      "sha256": "4656296b54402016b59b894b4653fbdc71e106a21e0900294f73f2c7b7112385",
+      "bytes": 549989,
+      "nodes": 3724,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Village.json",
+      "markdown": "Objects对象清单/Prairie_Village.md"
+    },
+    {
+      "level": "RainForest",
+      "path": "Levels/RainForest/Objects.level.bin",
+      "sha256": "2e69b3314c70c61bd99435f4bb4418fba540f227c83670e1af3b5358c64c3b73",
+      "bytes": 271409,
+      "nodes": 1306,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainForest.json",
+      "markdown": "Objects对象清单/RainForest.md"
+    },
+    {
+      "level": "RainMid",
+      "path": "Levels/RainMid/Objects.level.bin",
+      "sha256": "139b219d9b71a2ab24418b1ec41f2ee8a2ebfdf4c5ea992c35348a758682ed23",
+      "bytes": 430825,
+      "nodes": 2457,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainMid.json",
+      "markdown": "Objects对象清单/RainMid.md"
+    },
+    {
+      "level": "SkyHub2",
+      "path": "Levels/SkyHub2/Objects.level.bin",
+      "sha256": "8b467f9b349d9d4ce0d038528c96e44dff30063149bf5bbf90232a56bb9dd36f",
+      "bytes": 475656,
+      "nodes": 2886,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SkyHub2.json",
+      "markdown": "Objects对象清单/SkyHub2.md"
+    },
+    {
+      "level": "Sunset",
+      "path": "Levels/Sunset/Objects.level.bin",
+      "sha256": "8126f2db693502576075505797624e0b5e53dc064fe6af82e90f2261ca427f8a",
+      "bytes": 325410,
+      "nodes": 1899,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Sunset.json",
+      "markdown": "Objects对象清单/Sunset.md"
+    }
+  ]
+}

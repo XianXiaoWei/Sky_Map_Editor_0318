@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "functions": {
+    "FishV2.Update": {
+      "start": "0x100337540",
+      "end": "0x1003384a0",
+      "wholeFunction": true,
+      "codeSha256": "d1a35e94ec3df68fcab6da6fdd61cd5325cd9af316d0bc5b1202a6c6fa3e40dd",
+      "assembly": "evidence/fishv2-update.asm",
+      "instructions": 769
+    },
+    "Creature.MotionTransform": {
+      "start": "0x1001a6610",
+      "end": "0x1001a6660",
+      "wholeFunction": true,
+      "codeSha256": "1c57a9e8dc42fdbd5a838106bbb83f953001bbf83628aeefe241e9c6e88418f9",
+      "assembly": "evidence/creature-motiontransform.asm",
+      "instructions": 16
+    },
+    "Creature.TurnDirection": {
+      "start": "0x100168830",
+      "end": "0x100168a70",
+      "wholeFunction": true,
+      "codeSha256": "52ad89388ff9fa596964920c31255bfe31763f533bd191b881573641bfbd32a1",
+      "assembly": "evidence/creature-turndirection.asm",
+      "instructions": 127
+    },
+    "Creature.Bank": {
+      "start": "0x100192550",
+      "end": "0x100192760",
+      "wholeFunction": true,
+      "codeSha256": "39c3e88f3a8a9dbad2850090b60142e19617f6a63ede5d2144e6f342bd4a52c9",
+      "assembly": "evidence/creature-bank.asm",
+      "instructions": 115
+    },
+    "FishV2.AI": {
+      "start": "0x100335a40",
+      "end": "0x1003370c0",
+      "codeEnd": "0x1003370a4",
+      "wholeFunction": false,
+      "implemented": false,
+      "codeSha256": "447dda66d947f2aa5070ef87b5d629e5bc155fc957e7ebbd904956d7ddcd3969",
+      "assembly": "evidence/fishv2-ai.asm",
+      "instructions": 1085,
+      "switchTable": {
+        "start": "0x1003370a4",
+        "entries": 5,
+        "targets": [
+          "0x1003360ae",
+          "0x1003365c3",
+          "0x100336118",
+          "0x100336789",
+          "0x1003364e3"
+        ],
+        "hex": "0af0ffff1ff5ffff74f0ffffe5f6ffff3ff4ffff"
+      },
+      "trailingPaddingHex": "0f1f840000000000"
+    }
+  },
+  "cases": 493,
+  "comparedCases": 493,
+  "comparedBytes": 67319568,
+  "serviceCalls": 14027,
+  "nativeArithmeticProbes": 16,
+  "scope": "Whole original FishV2.Update, MotionTransform, TurnDirection and Bank. AI boundary and embedded switch table are inspected; AI implementation and real world/collision/animation/light/interaction/resource owners remain pending. Packed sincos upper lanes are explicit input context; original libm results are recorded/replayed. Complete caller arena and ordered calls compare original movement helpers, callbacks, disabled/deferred Models, velocity/collision thresholds, full transform NaN assertion, animation weights, surface material flags/ripple requests and player alert/interaction/follow-up timers. Whole AI remains a recorded external service in this comparison.",
+  "failures": []
+}

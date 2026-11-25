@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "scope": "Original TerrainBarn numeric spans 0x1006a3118..0x1006a3217 (constant LOD from AABB statuses, including 32-item SIMD and scalar tail) and 0x1006a3274..0x1006a331f (distance-squared minus sphere-radius-squared, three squared thresholds, CVTTSS2SI minimum and signed-16 clamp). Only entry/return trampolines delimit those instruction spans; no imports/callbacks. RTE and RTZ/FTZ/DAZ ambient controls, guard words, tangent thresholds, exceptional floats and uint32 statuses checked; zero-count harness preserves output without entering a numeric span. 77 terrain bounds in 31 maps provide explicit derived sphere snapshots, not original loaded bins. AABB query itself is separately verified; full TerrainBarn camera/OBB gathering, bin production, LOD transitions, allocation/resource jobs, collision and viewport scheduling remain incomplete.",
+  "cases": 1732,
+  "compared": 74328,
+  "failed": 0,
+  "failures": [],
+  "corpusMaps": 31,
+  "corpusRecords": 77
+}

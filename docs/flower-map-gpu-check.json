@@ -1,0 +1,708 @@
+{
+  "passed": true,
+  "scope": "Actual map terrain, original water/flower/cloud shaders and shared environment; camera near saved FlowerPatch, disable/re-enable and resize checks. Linux software Vulkan; not complete game/class or device visual acceptance.",
+  "maps": [
+    {
+      "level": "SkyHub2",
+      "rows": [
+        {
+          "frame": 0,
+          "width": 160,
+          "height": 120,
+          "sha256": "7e6f10ad243b2cd726597d59880e25cefcbf05abc67baf0077b9dda7cbfa5e94",
+          "water": {
+            "objects": 2,
+            "frames": 1,
+            "shader": "OceanMesh",
+            "normal": "OceanNormal",
+            "caustics": "Caustics",
+            "grid": [
+              256,
+              256
+            ],
+            "terms": [
+              500,
+              -36.25,
+              0,
+              0.0625
+            ],
+            "waterNodeIds": [
+              692,
+              1917
+            ],
+            "scope": "Original Plane10x10 saved transform consumer and OceanMesh variants, original WaterSim/Reset two-target GLSL with GPU history and restored material wind scroll. Editor camera grid focus; zero Avatar contact impulses until its original query is connected. Preview sky probe and empty point-light grid; full world ocean geometry, scene reflections, Ocean lifecycle and Metal image parity remain pending",
+            "renderPath": "gpu-resident",
+            "enabled": true
+          },
+          "flowers": {
+            "objects": 68,
+            "frames": 1,
+            "visiblePoints": 1053,
+            "candidateTriangles": 1747,
+            "seeds": 1479,
+            "connectedSeeds": 1479,
+            "initialPoints": 23478,
+            "patchOverflow": 74,
+            "dynamicPoolCapacity": 32768,
+            "dynamicPoints": 0,
+            "initialDrawnPoints": 1053,
+            "drawnPoints": 1053,
+            "generatedThisFrame": 0,
+            "pending": [],
+            "scope": "Original Flower point GLSL; native-verified RG texture, seed setup, 32-byte generation and whole Update including 300-per-frame growth budget, general pool, LOD/fade/free and mapped vertices. Editor BVH ground tracing/OBB overlap, camera/frustum-only Visibility and GPU map/allocator services use actual terrain/material/first-vertex lighting. FlowerShadow, native collision/spatial jobs/occlusion, complete GPU owner/resource lifecycle and game image acceptance remain pending.",
+            "renderPath": "gpu-resident"
+          },
+          "passes": [
+            "CloudCore",
+            "OpaqueRGBDepth",
+            "WaterSimReset",
+            "OceanMesh",
+            "Flower",
+            "DepthDownsample",
+            "DepthDownsampleGather",
+            "DepthDownsampleQuarter",
+            "CloudFluffySuperCoarse",
+            "CloudFluffyCoarse",
+            "CloudFluffy",
+            "CloudCard",
+            "AlphaColorLogDepth",
+            "PreviewLuminance",
+            "FogUpsample",
+            "MotionGen",
+            "MotionDilate",
+            "TemporalAa",
+            "Tonemap"
+          ]
+        },
+        {
+          "frame": 1,
+          "width": 160,
+          "height": 120,
+          "sha256": "3932f9d8dacb415a1c16a1fc491caa8b9c1317b45499afb3d5de76da811e91f0",
+          "water": {
+            "objects": 2,
+            "frames": 2,
+            "shader": "OceanMesh",
+            "normal": "OceanNormal",
+            "caustics": "Caustics",
+            "grid": [
+              256,
+              256
+            ],
+            "terms": [
+              500,
+              -36.25,
+              0,
+              0.0625
+            ],
+            "waterNodeIds": [
+              692,
+              1917
+            ],
+            "scope": "Original Plane10x10 saved transform consumer and OceanMesh variants, original WaterSim/Reset two-target GLSL with GPU history and restored material wind scroll. Editor camera grid focus; zero Avatar contact impulses until its original query is connected. Preview sky probe and empty point-light grid; full world ocean geometry, scene reflections, Ocean lifecycle and Metal image parity remain pending",
+            "renderPath": "gpu-resident",
+            "enabled": true
+          },
+          "flowers": {
+            "objects": 68,
+            "frames": 2,
+            "visiblePoints": 1053,
+            "candidateTriangles": 1747,
+            "seeds": 1479,
+            "connectedSeeds": 1479,
+            "initialPoints": 23478,
+            "patchOverflow": 74,
+            "dynamicPoolCapacity": 32768,
+            "dynamicPoints": 0,
+            "initialDrawnPoints": 1053,
+            "drawnPoints": 1053,
+            "generatedThisFrame": 0,
+            "pending": [],
+            "scope": "Original Flower point GLSL; native-verified RG texture, seed setup, 32-byte generation and whole Update including 300-per-frame growth budget, general pool, LOD/fade/free and mapped vertices. Editor BVH ground tracing/OBB overlap, camera/frustum-only Visibility and GPU map/allocator services use actual terrain/material/first-vertex lighting. FlowerShadow, native collision/spatial jobs/occlusion, complete GPU owner/resource lifecycle and game image acceptance remain pending.",
+            "renderPath": "gpu-resident"
+          },
+          "passes": [
+            "CloudCore",
+            "OpaqueRGBDepth",
+            "WaterSim",
+            "OceanMesh",
+            "Flower",
+            "DepthDownsample",
+            "DepthDownsampleGather",
+            "DepthDownsampleQuarter",
+            "CloudFluffySuperCoarse",
+            "CloudFluffyCoarse",
+            "CloudFluffy",
+            "CloudCard",
+            "AlphaColorLogDepth",
+            "PreviewLuminance",
+            "FogUpsample",
+            "MotionGen",
+            "MotionDilate",
+            "TemporalAa",
+            "Tonemap"
+          ]
+        },
+        {
+          "frame": 2,
+          "width": 160,
+          "height": 120,
+          "sha256": "60b12d92d8dc1ff8af1d330b37a4eda2ffbc1fab5bf96d577ec04fbf51bd50fe",
+          "water": {
+            "objects": 2,
+            "frames": 3,
+            "shader": "OceanMesh",
+            "normal": "OceanNormal",
+            "caustics": "Caustics",
+            "grid": [
+              256,
+              256
+            ],
+            "terms": [
+              500,
+              -36.25,
+              0,
+              0.0625
+            ],
+            "waterNodeIds": [
+              692,
+              1917
+            ],
+            "scope": "Original Plane10x10 saved transform consumer and OceanMesh variants, original WaterSim/Reset two-target GLSL with GPU history and restored material wind scroll. Editor camera grid focus; zero Avatar contact impulses until its original query is connected. Preview sky probe and empty point-light grid; full world ocean geometry, scene reflections, Ocean lifecycle and Metal image parity remain pending",
+            "renderPath": "gpu-resident",
+            "enabled": true
+          },
+          "flowers": {
+            "objects": 68,
+            "frames": 2,
+            "visiblePoints": 0,
+            "candidateTriangles": 0,
+            "seeds": 0,
+            "connectedSeeds": 0,
+            "initialPoints": 0,
+            "patchOverflow": 0,
+            "dynamicPoolCapacity": 32768,
+            "pending": [],
+            "scope": "Original Flower point GLSL; native-verified RG texture, seed setup, 32-byte generation and whole Update including 300-per-frame growth budget, general pool, LOD/fade/free and mapped vertices. Editor BVH ground tracing/OBB overlap, camera/frustum-only Visibility and GPU map/allocator services use actual terrain/material/first-vertex lighting. FlowerShadow, native collision/spatial jobs/occlusion, complete GPU owner/resource lifecycle and game image acceptance remain pending.",
+            "renderPath": "gpu-resident"
+          },
+          "passes": [
+            "CloudCore",
+            "OpaqueRGBDepth",
+            "WaterSim",
+            "OceanMesh",
+            "DepthDownsample",
+            "DepthDownsampleGather",
+            "DepthDownsampleQuarter",
+            "CloudFluffySuperCoarse",
+            "CloudFluffyCoarse",
+            "CloudFluffy",
+            "CloudCard",
+            "AlphaColorLogDepth",
+            "PreviewLuminance",
+            "FogUpsample",
+            "MotionGen",
+            "MotionDilate",
+            "TemporalAa",
+            "Tonemap"
+          ]
+        },
+        {
+          "frame": 3,
+          "width": 160,
+          "height": 120,
+          "sha256": "cea97efc36d64181cf440f1d6a8abe4dc729596e3023e9879ec3a2d1d30e9f19",
+          "water": {
+            "objects": 2,
+            "frames": 4,
+            "shader": "OceanMesh",
+            "normal": "OceanNormal",
+            "caustics": "Caustics",
+            "grid": [
+              256,
+              256
+            ],
+            "terms": [
+              500,
+              -36.25,
+              0,
+              0.0625
+            ],
+            "waterNodeIds": [
+              692,
+              1917
+            ],
+            "scope": "Original Plane10x10 saved transform consumer and OceanMesh variants, original WaterSim/Reset two-target GLSL with GPU history and restored material wind scroll. Editor camera grid focus; zero Avatar contact impulses until its original query is connected. Preview sky probe and empty point-light grid; full world ocean geometry, scene reflections, Ocean lifecycle and Metal image parity remain pending",
+            "renderPath": "gpu-resident",
+            "enabled": true
+          },
+          "flowers": {
+            "objects": 68,
+            "frames": 3,
+            "visiblePoints": 1053,
+            "candidateTriangles": 1747,
+            "seeds": 1479,
+            "connectedSeeds": 1479,
+            "initialPoints": 23478,
+            "patchOverflow": 74,
+            "dynamicPoolCapacity": 32768,
+            "dynamicPoints": 0,
+            "initialDrawnPoints": 1053,
+            "drawnPoints": 1053,
+            "generatedThisFrame": 0,
+            "pending": [],
+            "scope": "Original Flower point GLSL; native-verified RG texture, seed setup, 32-byte generation and whole Update including 300-per-frame growth budget, general pool, LOD/fade/free and mapped vertices. Editor BVH ground tracing/OBB overlap, camera/frustum-only Visibility and GPU map/allocator services use actual terrain/material/first-vertex lighting. FlowerShadow, native collision/spatial jobs/occlusion, complete GPU owner/resource lifecycle and game image acceptance remain pending.",
+            "renderPath": "gpu-resident"
+          },
+          "passes": [
+            "CloudCore",
+            "OpaqueRGBDepth",
+            "WaterSim",
+            "OceanMesh",
+            "Flower",
+            "DepthDownsample",
+            "DepthDownsampleGather",
+            "DepthDownsampleQuarter",
+            "CloudFluffySuperCoarse",
+            "CloudFluffyCoarse",
+            "CloudFluffy",
+            "CloudCard",
+            "AlphaColorLogDepth",
+            "PreviewLuminance",
+            "FogUpsample",
+            "MotionGen",
+            "MotionDilate",
+            "TemporalAa",
+            "Tonemap"
+          ]
+        },
+        {
+          "frame": 4,
+          "width": 192,
+          "height": 144,
+          "sha256": "2a038c4099f8e3e06ba381f7e773d8e9dc0877fb0cc75acd3aa0c3b0b8cf2e2e",
+          "water": {
+            "objects": 2,
+            "frames": 5,
+            "shader": "OceanMesh",
+            "normal": "OceanNormal",
+            "caustics": "Caustics",
+            "grid": [
+              256,
+              256
+            ],
+            "terms": [
+              500,
+              -36.25,
+              0,
+              0.0625
+            ],
+            "waterNodeIds": [
+              692,
+              1917
+            ],
+            "scope": "Original Plane10x10 saved transform consumer and OceanMesh variants, original WaterSim/Reset two-target GLSL with GPU history and restored material wind scroll. Editor camera grid focus; zero Avatar contact impulses until its original query is connected. Preview sky probe and empty point-light grid; full world ocean geometry, scene reflections, Ocean lifecycle and Metal image parity remain pending",
+            "renderPath": "gpu-resident",
+            "enabled": true
+          },
+          "flowers": {
+            "objects": 68,
+            "frames": 4,
+            "visiblePoints": 1053,
+            "candidateTriangles": 1747,
+            "seeds": 1479,
+            "connectedSeeds": 1479,
+            "initialPoints": 23478,
+            "patchOverflow": 74,
+            "dynamicPoolCapacity": 32768,
+            "dynamicPoints": 0,
+            "initialDrawnPoints": 1053,
+            "drawnPoints": 1053,
+            "generatedThisFrame": 0,
+            "pending": [],
+            "scope": "Original Flower point GLSL; native-verified RG texture, seed setup, 32-byte generation and whole Update including 300-per-frame growth budget, general pool, LOD/fade/free and mapped vertices. Editor BVH ground tracing/OBB overlap, camera/frustum-only Visibility and GPU map/allocator services use actual terrain/material/first-vertex lighting. FlowerShadow, native collision/spatial jobs/occlusion, complete GPU owner/resource lifecycle and game image acceptance remain pending.",
+            "renderPath": "gpu-resident"
+          },
+          "passes": [
+            "CloudCore",
+            "OpaqueRGBDepth",
+            "WaterSimReset",
+            "OceanMesh",
+            "Flower",
+            "DepthDownsample",
+            "DepthDownsampleGather",
+            "DepthDownsampleQuarter",
+            "CloudFluffySuperCoarse",
+            "CloudFluffyCoarse",
+            "CloudFluffy",
+            "CloudCard",
+            "AlphaColorLogDepth",
+            "PreviewLuminance",
+            "FogUpsample",
+            "MotionGen",
+            "MotionDilate",
+            "TemporalAa",
+            "Tonemap"
+          ]
+        }
+      ],
+      "screenshot": "docs/flower-map-SkyHub2.png",
+      "sourcesUnchanged": true
+    },
+    {
+      "level": "Dawn",
+      "rows": [
+        {
+          "frame": 0,
+          "width": 160,
+          "height": 120,
+          "sha256": "78b79ce7c3276bba7f2868b8e9ddc91228f3b20790552308195d26d8b60b0e51",
+          "water": {
+            "objects": 1,
+            "frames": 1,
+            "shader": "OceanMesh",
+            "normal": "OceanNormal",
+            "caustics": "Caustics",
+            "grid": [
+              256,
+              256
+            ],
+            "terms": [
+              14.6875,
+              19.3125,
+              0,
+              0.0625
+            ],
+            "waterNodeIds": [
+              365
+            ],
+            "scope": "Original Plane10x10 saved transform consumer and OceanMesh variants, original WaterSim/Reset two-target GLSL with GPU history and restored material wind scroll. Editor camera grid focus; zero Avatar contact impulses until its original query is connected. Preview sky probe and empty point-light grid; full world ocean geometry, scene reflections, Ocean lifecycle and Metal image parity remain pending",
+            "renderPath": "gpu-resident",
+            "enabled": true
+          },
+          "flowers": {
+            "objects": 54,
+            "frames": 1,
+            "visiblePoints": 287,
+            "candidateTriangles": 903,
+            "seeds": 850,
+            "connectedSeeds": 850,
+            "initialPoints": 13789,
+            "patchOverflow": 0,
+            "dynamicPoolCapacity": 32768,
+            "dynamicPoints": 0,
+            "initialDrawnPoints": 287,
+            "drawnPoints": 287,
+            "generatedThisFrame": 0,
+            "pending": [],
+            "scope": "Original Flower point GLSL; native-verified RG texture, seed setup, 32-byte generation and whole Update including 300-per-frame growth budget, general pool, LOD/fade/free and mapped vertices. Editor BVH ground tracing/OBB overlap, camera/frustum-only Visibility and GPU map/allocator services use actual terrain/material/first-vertex lighting. FlowerShadow, native collision/spatial jobs/occlusion, complete GPU owner/resource lifecycle and game image acceptance remain pending.",
+            "renderPath": "gpu-resident"
+          },
+          "passes": [
+            "CloudCore",
+            "OpaqueRGBDepth",
+            "WaterSimReset",
+            "OceanMesh",
+            "Flower",
+            "DepthDownsample",
+            "DepthDownsampleGather",
+            "DepthDownsampleQuarter",
+            "CloudFluffySuperCoarse",
+            "CloudFluffyCoarse",
+            "CloudFluffy",
+            "CloudCard",
+            "AlphaColorLogDepth",
+            "PreviewLuminance",
+            "FogUpsample",
+            "MotionGen",
+            "MotionDilate",
+            "TemporalAa",
+            "Tonemap"
+          ]
+        },
+        {
+          "frame": 1,
+          "width": 160,
+          "height": 120,
+          "sha256": "bcdf293367d54fda5946c8848fd89d96ef760ab1fe26d2e4f0d096719439b9d4",
+          "water": {
+            "objects": 1,
+            "frames": 2,
+            "shader": "OceanMesh",
+            "normal": "OceanNormal",
+            "caustics": "Caustics",
+            "grid": [
+              256,
+              256
+            ],
+            "terms": [
+              14.6875,
+              19.3125,
+              0,
+              0.0625
+            ],
+            "waterNodeIds": [
+              365
+            ],
+            "scope": "Original Plane10x10 saved transform consumer and OceanMesh variants, original WaterSim/Reset two-target GLSL with GPU history and restored material wind scroll. Editor camera grid focus; zero Avatar contact impulses until its original query is connected. Preview sky probe and empty point-light grid; full world ocean geometry, scene reflections, Ocean lifecycle and Metal image parity remain pending",
+            "renderPath": "gpu-resident",
+            "enabled": true
+          },
+          "flowers": {
+            "objects": 54,
+            "frames": 2,
+            "visiblePoints": 287,
+            "candidateTriangles": 903,
+            "seeds": 850,
+            "connectedSeeds": 850,
+            "initialPoints": 13789,
+            "patchOverflow": 0,
+            "dynamicPoolCapacity": 32768,
+            "dynamicPoints": 0,
+            "initialDrawnPoints": 287,
+            "drawnPoints": 287,
+            "generatedThisFrame": 0,
+            "pending": [],
+            "scope": "Original Flower point GLSL; native-verified RG texture, seed setup, 32-byte generation and whole Update including 300-per-frame growth budget, general pool, LOD/fade/free and mapped vertices. Editor BVH ground tracing/OBB overlap, camera/frustum-only Visibility and GPU map/allocator services use actual terrain/material/first-vertex lighting. FlowerShadow, native collision/spatial jobs/occlusion, complete GPU owner/resource lifecycle and game image acceptance remain pending.",
+            "renderPath": "gpu-resident"
+          },
+          "passes": [
+            "CloudCore",
+            "OpaqueRGBDepth",
+            "WaterSim",
+            "OceanMesh",
+            "Flower",
+            "DepthDownsample",
+            "DepthDownsampleGather",
+            "DepthDownsampleQuarter",
+            "CloudFluffySuperCoarse",
+            "CloudFluffyCoarse",
+            "CloudFluffy",
+            "CloudCard",
+            "AlphaColorLogDepth",
+            "PreviewLuminance",
+            "FogUpsample",
+            "MotionGen",
+            "MotionDilate",
+            "TemporalAa",
+            "Tonemap"
+          ]
+        },
+        {
+          "frame": 2,
+          "width": 160,
+          "height": 120,
+          "sha256": "6b560977c8b9ec9fb23cdd2610966f65e7aeb887dff387c1eca0b390d783d7a7",
+          "water": {
+            "objects": 1,
+            "frames": 3,
+            "shader": "OceanMesh",
+            "normal": "OceanNormal",
+            "caustics": "Caustics",
+            "grid": [
+              256,
+              256
+            ],
+            "terms": [
+              14.6875,
+              19.3125,
+              0,
+              0.0625
+            ],
+            "waterNodeIds": [
+              365
+            ],
+            "scope": "Original Plane10x10 saved transform consumer and OceanMesh variants, original WaterSim/Reset two-target GLSL with GPU history and restored material wind scroll. Editor camera grid focus; zero Avatar contact impulses until its original query is connected. Preview sky probe and empty point-light grid; full world ocean geometry, scene reflections, Ocean lifecycle and Metal image parity remain pending",
+            "renderPath": "gpu-resident",
+            "enabled": true
+          },
+          "flowers": {
+            "objects": 54,
+            "frames": 2,
+            "visiblePoints": 0,
+            "candidateTriangles": 0,
+            "seeds": 0,
+            "connectedSeeds": 0,
+            "initialPoints": 0,
+            "patchOverflow": 0,
+            "dynamicPoolCapacity": 32768,
+            "pending": [],
+            "scope": "Original Flower point GLSL; native-verified RG texture, seed setup, 32-byte generation and whole Update including 300-per-frame growth budget, general pool, LOD/fade/free and mapped vertices. Editor BVH ground tracing/OBB overlap, camera/frustum-only Visibility and GPU map/allocator services use actual terrain/material/first-vertex lighting. FlowerShadow, native collision/spatial jobs/occlusion, complete GPU owner/resource lifecycle and game image acceptance remain pending.",
+            "renderPath": "gpu-resident"
+          },
+          "passes": [
+            "CloudCore",
+            "OpaqueRGBDepth",
+            "WaterSim",
+            "OceanMesh",
+            "DepthDownsample",
+            "DepthDownsampleGather",
+            "DepthDownsampleQuarter",
+            "CloudFluffySuperCoarse",
+            "CloudFluffyCoarse",
+            "CloudFluffy",
+            "CloudCard",
+            "AlphaColorLogDepth",
+            "PreviewLuminance",
+            "FogUpsample",
+            "MotionGen",
+            "MotionDilate",
+            "TemporalAa",
+            "Tonemap"
+          ]
+        },
+        {
+          "frame": 3,
+          "width": 160,
+          "height": 120,
+          "sha256": "ae9c885ae010412b2d2a1abcf4a3e45fa414f4e8bdb955d2fcff5e3e4d613d51",
+          "water": {
+            "objects": 1,
+            "frames": 4,
+            "shader": "OceanMesh",
+            "normal": "OceanNormal",
+            "caustics": "Caustics",
+            "grid": [
+              256,
+              256
+            ],
+            "terms": [
+              14.6875,
+              19.3125,
+              0,
+              0.0625
+            ],
+            "waterNodeIds": [
+              365
+            ],
+            "scope": "Original Plane10x10 saved transform consumer and OceanMesh variants, original WaterSim/Reset two-target GLSL with GPU history and restored material wind scroll. Editor camera grid focus; zero Avatar contact impulses until its original query is connected. Preview sky probe and empty point-light grid; full world ocean geometry, scene reflections, Ocean lifecycle and Metal image parity remain pending",
+            "renderPath": "gpu-resident",
+            "enabled": true
+          },
+          "flowers": {
+            "objects": 54,
+            "frames": 3,
+            "visiblePoints": 287,
+            "candidateTriangles": 903,
+            "seeds": 850,
+            "connectedSeeds": 850,
+            "initialPoints": 13789,
+            "patchOverflow": 0,
+            "dynamicPoolCapacity": 32768,
+            "dynamicPoints": 0,
+            "initialDrawnPoints": 287,
+            "drawnPoints": 287,
+            "generatedThisFrame": 0,
+            "pending": [],
+            "scope": "Original Flower point GLSL; native-verified RG texture, seed setup, 32-byte generation and whole Update including 300-per-frame growth budget, general pool, LOD/fade/free and mapped vertices. Editor BVH ground tracing/OBB overlap, camera/frustum-only Visibility and GPU map/allocator services use actual terrain/material/first-vertex lighting. FlowerShadow, native collision/spatial jobs/occlusion, complete GPU owner/resource lifecycle and game image acceptance remain pending.",
+            "renderPath": "gpu-resident"
+          },
+          "passes": [
+            "CloudCore",
+            "OpaqueRGBDepth",
+            "WaterSim",
+            "OceanMesh",
+            "Flower",
+            "DepthDownsample",
+            "DepthDownsampleGather",
+            "DepthDownsampleQuarter",
+            "CloudFluffySuperCoarse",
+            "CloudFluffyCoarse",
+            "CloudFluffy",
+            "CloudCard",
+            "AlphaColorLogDepth",
+            "PreviewLuminance",
+            "FogUpsample",
+            "MotionGen",
+            "MotionDilate",
+            "TemporalAa",
+            "Tonemap"
+          ]
+        },
+        {
+          "frame": 4,
+          "width": 192,
+          "height": 144,
+          "sha256": "8f93e95f101fd858c6a863d8094372d781f945273b153c126a7925683d92f7bb",
+          "water": {
+            "objects": 1,
+            "frames": 5,
+            "shader": "OceanMesh",
+            "normal": "OceanNormal",
+            "caustics": "Caustics",
+            "grid": [
+              256,
+              256
+            ],
+            "terms": [
+              14.6875,
+              19.3125,
+              0,
+              0.0625
+            ],
+            "waterNodeIds": [
+              365
+            ],
+            "scope": "Original Plane10x10 saved transform consumer and OceanMesh variants, original WaterSim/Reset two-target GLSL with GPU history and restored material wind scroll. Editor camera grid focus; zero Avatar contact impulses until its original query is connected. Preview sky probe and empty point-light grid; full world ocean geometry, scene reflections, Ocean lifecycle and Metal image parity remain pending",
+            "renderPath": "gpu-resident",
+            "enabled": true
+          },
+          "flowers": {
+            "objects": 54,
+            "frames": 4,
+            "visiblePoints": 287,
+            "candidateTriangles": 903,
+            "seeds": 850,
+            "connectedSeeds": 850,
+            "initialPoints": 13789,
+            "patchOverflow": 0,
+            "dynamicPoolCapacity": 32768,
+            "dynamicPoints": 0,
+            "initialDrawnPoints": 287,
+            "drawnPoints": 287,
+            "generatedThisFrame": 0,
+            "pending": [],
+            "scope": "Original Flower point GLSL; native-verified RG texture, seed setup, 32-byte generation and whole Update including 300-per-frame growth budget, general pool, LOD/fade/free and mapped vertices. Editor BVH ground tracing/OBB overlap, camera/frustum-only Visibility and GPU map/allocator services use actual terrain/material/first-vertex lighting. FlowerShadow, native collision/spatial jobs/occlusion, complete GPU owner/resource lifecycle and game image acceptance remain pending.",
+            "renderPath": "gpu-resident"
+          },
+          "passes": [
+            "CloudCore",
+            "OpaqueRGBDepth",
+            "WaterSimReset",
+            "OceanMesh",
+            "Flower",
+            "DepthDownsample",
+            "DepthDownsampleGather",
+            "DepthDownsampleQuarter",
+            "CloudFluffySuperCoarse",
+            "CloudFluffyCoarse",
+            "CloudFluffy",
+            "CloudCard",
+            "AlphaColorLogDepth",
+            "PreviewLuminance",
+            "FogUpsample",
+            "MotionGen",
+            "MotionDilate",
+            "TemporalAa",
+            "Tonemap"
+          ]
+        }
+      ],
+      "screenshot": "docs/flower-map-Dawn.png",
+      "sourcesUnchanged": true
+    }
+  ],
+  "device": {
+    "engine": "Sky Native Vulkan",
+    "backend": "Vulkan",
+    "device": "llvmpipe (LLVM 19.1.7, 128 bits)",
+    "apiVersion": 4210993,
+    "deviceType": 4,
+    "nativeSurface": false,
+    "shaderFloat16": true,
+    "gpuCanvasPacking": false,
+    "gpuExposureGather": false,
+    "samplerAnisotropyPolicy": "llvmpipe-trilinear",
+    "maxSamplerAnisotropy": 16
+  }
+}

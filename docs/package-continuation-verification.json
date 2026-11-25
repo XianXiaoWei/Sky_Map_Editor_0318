@@ -1,0 +1,126 @@
+{
+  "passed": true,
+  "verifiedAtUTC": "2026-11-21T18:42:40.730728+00:00",
+  "scope": "Shared parent construction and transform continuation, existing environment/material preview and on-demand FPS HUD. Full original classes/instances and Windows runtime remain unverified.",
+  "originalExecutableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "sharedClasses": 25,
+  "sharedObjects": 2482,
+  "spawnMotesTransforms": 76,
+  "nativeComparisons": {
+    "construction": {
+      "passed": true,
+      "classes": 25,
+      "cases": 225,
+      "comparedBytes": 14783796,
+      "serviceCalls": 2106,
+      "scope": "Normal parent placement bodies only; live native metadata/global storage and Event/Vertex child constructors are explicit services. Untouched allocation bytes, class IDs, vptrs, vector initialization and Default/Hull intrusive global list order retained. No TGCL defaults, allocator, unwind, class Update or game lifecycle claim."
+    },
+    "environmentHelpers": {
+      "passed": true,
+      "cases": 774,
+      "comparedBytes": 50842776,
+      "serviceCalls": 4268,
+      "scope": "Whole normal PointLightBarn Initialize/Create/Release/ReleaseAll/Gather, SetEmitterFlowRail OnEnabled/Update, Rail placement construction/AllocateDataPoints, ordinary Ambience point-color/intensity prefix and full PointLight directional attenuation, complete normal DropOcclusion Load/Unload/Update and OnEnabled for non-oversize inputs, whole ObjectBarn cloud-drop routing and CloudBarn 512-slot sphere registration; verbatim SpawnMotes SetTransform/GetTransform including all 76 saved map transforms. Includes all 64 actual DropOcclusion field/count/Float configurations with explicit prepared spatial services. Drop logf/expf return bits are captured independent math services; verbose oversize logging is excluded. Original Event.Start executes unmodified. All 65536 live arena bytes, returns, assertions and ordered metadata/cast/allocator services compared. Capacity exhaustion, duplicate release, active ordering, live callback mutation, rejected casts and original two-event corpus inputs included. Metadata/global Color/allocator/cast internals are explicit services; full TGCL factories, particle update, point-light renderer and Rail lifecycle are separate."
+    }
+  },
+  "checks": {
+    "projectTests": {
+      "passed": 440,
+      "failed": 0,
+      "skipped": 0
+    },
+    "typecheckPassed": true,
+    "buildPassed": true,
+    "electronVulkan": {
+      "passed": true,
+      "checks": [
+        "FPS/frame-time HUD sits inside the viewport bottom right and does not intercept navigation",
+        "Original Hull event finishes through Barn and repeated events append eight distinct parameter handles",
+        "A shared native Marker enables/disables all current hull registrations",
+        "Reset replaces shared environment state and the next real Vulkan frame uses the current owner",
+        "Map switching clears runtime objects and leaves original Objects.level.bin unchanged",
+        "Idle FPS sampling adds no Vulkan frames; rendering remains on demand",
+        "Camera navigation presents a real new frame and updates measured frame time"
+      ],
+      "performance": {
+        "text": "FPS 1 · 250.0 ms · 581×640",
+        "fps": "1",
+        "frameMs": "250.000"
+      }
+    },
+    "diagnosticScopeNote": "Removed stale hardcoded 24-class text from runtime info after verification; construction and saved-state corpus checks cover 25 classes.",
+    "modelShadersWithoutSDK": {
+      "passed": true,
+      "levels": 33,
+      "requests": 307,
+      "modelPrograms": [
+        "AncestorEngine",
+        "Cham",
+        "ChamAlpha",
+        "ChamAlphaDepth",
+        "ChamAlphaSdf",
+        "ChamShAlpha",
+        "Constellation",
+        "DarkStone",
+        "GrassShMesh",
+        "GrassShMeshAlpha",
+        "Mesh",
+        "MeshAlpha",
+        "MeshChamSh",
+        "MeshHeightChamSh",
+        "MeshMagicGlow",
+        "MeshSh",
+        "MeshShAlpha",
+        "MeshShAlphaSdf",
+        "MeshShSdf",
+        "MeshShSl",
+        "MeshSl",
+        "RockFaceShMesh",
+        "Unlit",
+        "UnlitAlpha",
+        "UnlitAlphaColor",
+        "UnlitAlphaDual",
+        "UnlitAlphaFading",
+        "UnlitAlphaTest",
+        "UnlitColor"
+      ],
+      "modelShaderCacheEntries": 29,
+      "compilerExecutablesAvailable": false,
+      "scope": "Every accepted static LevelMesh/Beamo/BeamoDecal material program across 33 maps loads verified bundled SPIR-V with an empty PATH and an empty writable cache. Resource/bake/Model lifecycle and Windows runtime remain separate."
+    },
+    "viewportShaderCacheEntries": 58,
+    "beamoArithmeticBundled": "Original SHA-gated RSQRTSS capability table is installed at app.asar/docs/beamo-rsqrt-capability.bin and verified during packaging; see final archive verification."
+  },
+  "sourceSha256": {
+    "src/core/environment-construction-runtime.ts": "c86b53c1bea51c0ef02c88c036a6435d4401face180fe4d42ace8ecdb447c9d5",
+    "src/core/environment-object-state.ts": "713640299ea9ed25801722b22a60d7e030b36dcf2953fb94a313039a4d424efd",
+    "src/core/environment-event-owner.ts": "f2e05acc66fc83ff028b30ecb1d778c92c0d8a1f2825cf7e6614e8256c20ed22",
+    "src/core/spawn-motes-runtime.ts": "5ea8b312142fafeacd627cba6d45b85f4365b1843793a802434b7d5298cf7e1a",
+    "src/renderer/vulkan-viewport.ts": "f7a4cce3f314b768106ec0ec740d951b7d2789a3c3e12da907f85f2c5f40eeb8",
+    "src/renderer/app.ts": "a588d255631a22ec0693dce97ed34b42f2415145f5ff5835b19c407fe73729bf",
+    "src/renderer/style.css": "691893c2db15397a3f19aa2794ad5b22c66e2f335da8116b9df7a34f45f52d0e",
+    "tools/package-preview-windows.mjs": "293ce521be0aa7f8df66c32ca701463a35597f41e90e43615f6d4baa3aeff157",
+    "tools/verify-preview-windows.mjs": "0102e2bd20c4e7a6cb4c10d847ad3c4505568838546d6363a6e0d6f2fd31ae53",
+    "tests/environment-shared-owner.test.ts": "c3538428741fbb3763b6ae36cab1a07e2ca196640fb19617423e4348637ee82b",
+    "tests/fixtures/environment-construction-native.json.gz": "528f183a4fa42041bd74865c5ca9ac964141a2dbae0da519c9eb1fbe855a1e63",
+    "tests/fixtures/environment-leaf-native.json.gz": "3b460b83c55e72e4ac717395ef605e5ca9db592ec6daad06a34236c0b4fb9e5e",
+    "dist/main.cjs": "1988bb9012d89803149aecd78bd42f4234ff1c949018fa6c7577a7441328b689",
+    "dist/app.js": "b8449a2dd32fb393b154a87b2b4afaf53da3bd6d433abd619c3622304fb69710",
+    "dist/style.css": "691893c2db15397a3f19aa2794ad5b22c66e2f335da8116b9df7a34f45f52d0e",
+    "src/main/viewport-environment.ts": "31e944312ca05ba01506b5cb4bade2ec3470a44f318fb0849454df9c0d48d133",
+    "src/main/viewport-model-shaders.ts": "e78251a820111f2a2920907fe17e037770c8284e93e10d55892d66b38501c00c",
+    "tools/precompile-viewport-shaders.ts": "41682dc839a57231d38b61cc16743f05e29b8f40896da5457688e96b44e396d1",
+    "tools/verify-model-shader-bundle.ts": "87148b01edb7d8c6216b8f87e21cfe4e6e49704bff49dd127edd4aeb20d25090",
+    "docs/beamo-rsqrt-capability.bin": "a14ab2e4678aca2260ac5c6d1a1fc045ab89e505da211613525c8cca7ec6d1e8"
+  },
+  "fullyRestoredClasses": 0,
+  "fullyRestoredObjects": 0,
+  "remaining": [
+    "One SpawnMotes-dependent DropOcclusion root: original Event enabled/Emitter/Mote lifecycle",
+    "cloud drop world sampling/GPU",
+    "rain/water/fog/particles and local point-light/shadow rendering",
+    "complete Model/Visibility/resource/GPU ownership/unload",
+    "Avatar lifecycle, remaining postprocessing and Windows/game image verification"
+  ],
+  "referenceChanged": false
+}

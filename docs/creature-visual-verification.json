@@ -1,0 +1,136 @@
+{
+  "passed": true,
+  "updatedUtc": "2026-11-25T07:52:15.298242+00:00",
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "nativeReports": [
+    "docs/dark-creature-spotlight-oracle.json",
+    "docs/move-object-along-rail-control-oracle.json",
+    "docs/vector-safe-slerp-oracle.json"
+  ],
+  "newNativeCases": 1762,
+  "newNativeComparedBytes": 179267136,
+  "newNativeServiceCalls": 17857,
+  "nativeScope": [
+    "Consecutive eye look/smoothing and spotlight projection/radius/color/marker/expiration phases of original DarkCreature.Update 0x10026e7da..0x10026f41e. Includes velocity/target eye direction, alert sweep and cached quaternion, shortest-path quaternion interpolation with native NaN fallback, actual eye-model transform, rotating projected direction, native ray query, current target and radius. The same preceding body motion matrix, packed delta, absolute time and original palette scratch are caller inputs; subsequent interaction/audio, real resource/world owners and full viewport remain pending. Original instruction slices execute unchanged with an explicit native stack frame. Full caller arena and ordered head/ray/avatar/bird/color/eye/Marker services compare across consecutive frames, patrol/chase/alert eye basis/quaternion smoothing, missing targets, fixed 64-bird cap, radius and expiration thresholds, query padding, callback mutations, signed zero/NaN and scalar acos/sin/sincos/exp inputs. Linux native libc results and explicitly supplied sincos upper lanes are replayed; no macOS/JS math or complete rendered creature equivalence claim.",
+    "Original MoveObjectAlongRail.Update control flow executes until its first object-loop boundary, including original out-of-line clock/assertion paths and complete empty/disabled return paths. Entire arena and ordered metadata/rail/session/objective/avatar/network/finish services are compared for live rereads, double-clock selection, tracking bounds, native quintic easing, progress smoothing/loop clamps and counter/finish gating. expf is a traced native libc service with verified input/order. Positive-object cases stop before movement/turn/sway/Model transforms and must not be counted as complete Update or creature playback. Resource/world ownership and full scene behavior remain pending.",
+    "Entire original TGCMath.SafeSlerp including opposing-vector axis selection and perturbation, finite-factor fallback, scalar math input/order, original XYZ normalization and distinct W lanes, output aliases and assertion paths. acosf/sinf results replay native Linux libc values; sinf caller-clobbered XMM0 W is explicitly supplied and compared. This verifies a shared vector helper, not complete MoveObjectAlongRail.Update or creature behavior."
+  ],
+  "nativeCodeHashesBoundariesAndAssemblyVerified": true,
+  "wholeDarkCreatureEyeProjectionPhaseVerified": true,
+  "wholeDarkCreatureOuterUpdateVerified": false,
+  "fishGroupRailControlPrefixVerified": true,
+  "fishGroupWholeMotionUpdateVerified": false,
+  "wholeSafeSlerpVerified": true,
+  "baselineRegression": {
+    "passed": true,
+    "tests": 701,
+    "command": "./node_modules/.bin/tsx --test tests/*.test.ts",
+    "log": "/root/sky-research/animation-update-project-tests.log"
+  },
+  "focusedRegression": {
+    "passed": true,
+    "tests": 13,
+    "command": "./node_modules/.bin/tsx --test tests/dark-creature-spotlight-runtime.test.ts tests/vector-safe-slerp-runtime.test.ts tests/move-object-along-rail-control.test.ts tests/dark-creature-motion-runtime.test.ts tests/dark-creature-combat-runtime.test.ts tests/move-object-along-rail-runtime.test.ts",
+    "log": "/root/sky-research/creature-visual-focused-tests.log"
+  },
+  "projectRegression": {
+    "passed": true,
+    "tests": 704,
+    "command": "./node_modules/.bin/tsx --test tests/*.test.ts",
+    "log": "/root/sky-research/creature-visual-project-tests.log"
+  },
+  "typecheck": {
+    "passed": true,
+    "command": "./node_modules/.bin/tsc --noEmit",
+    "log": "/root/sky-research/creature-visual-final-types.log"
+  },
+  "windowsBuild": {
+    "passed": true,
+    "command": "node tools/build.mjs --windows",
+    "log": "/root/sky-research/creature-visual-windows-build.log",
+    "machine": "AMD64",
+    "binarySha256": "11a572bd5a264477034b2143c7844a5b08d76710f370922fc8c8cf68b6d771d9",
+    "windowsMachineRuntimeTested": false
+  },
+  "inventory": {
+    "passed": true,
+    "maps": 33,
+    "declaredClasses": 283,
+    "objects": 49824,
+    "references": 60016,
+    "brokenReferences": 0,
+    "completeRuntimeClasses": 0,
+    "allMapsRoundTripUnchanged": true,
+    "coreSubchainVerifiedClasses": 55,
+    "log": "/root/sky-research/creature-visual-class-progress.log"
+  },
+  "categoryCensus": {
+    "passed": true,
+    "command": "python3 tools/objects-category-census.py",
+    "log": "/root/sky-research/creature-visual-category-census.log",
+    "nativeCreatureFamilies": 52,
+    "mapDeclaredCreatureFamilies": 18,
+    "completeCreatureClasses": 0
+  },
+  "windowsSourcePlan": {
+    "passed": true,
+    "command": "python3 tools/package-windows-source.py --plan",
+    "report": "docs/windows-source-plan.json",
+    "log": "/root/sky-research/creature-visual-windows-source-plan.log",
+    "includesNewRuntimeAndNativeFixtures": true,
+    "androidHostIncluded": false,
+    "buildOutputsIncluded": false,
+    "nodeModulesIncluded": false,
+    "cacheIncluded": false
+  },
+  "completeCreatureClasses": 0,
+  "autonomousViewportCreatureAcceptancePassed": false,
+  "newWindowsArchiveCreated": false,
+  "newSourceArchiveCreated": false,
+  "androidWorkPerformed": false,
+  "remaining": [
+    "DarkCreature 0x10026f41e..0x10026ffc0 interaction/audio remainder and full Update composition; eye/look/projection/radius/color/marker phase is now verified, real world/Model/rendering owners remain pending",
+    "CharFishGroupAnim MoveObjectAlongRail.Update object loop from 0x100484fc0, dynamic Rail/cache ownership, real Model lifecycle and autonomous viewport; control prefix and whole SafeSlerp are now verified",
+    "Crab whole outer Update 0x10025bc10..0x10025e590 and ground/world/interaction/Model/resource owners",
+    "BirdFlock whole child Update 0x10019bdc0..0x10019dbf0, Buddy, CritterV2/SimpleBird/WhaleFairy and remaining constructors/managers/messages/authority paths",
+    "FishV2 and BirdV2 real world/collision/Avatar/OBB/rail/resource/Model/animation/audio/particle and Barn ownership",
+    "All 52 reviewed biological family types, repeated load/unload, stopping, level switching, full scene behavior and Windows acceptance"
+  ],
+  "packagingReadiness": "704 tests/typecheck/Windows AMD64 build pass. Eye and spotlight calculations are verified; real scene/resource/renderer ownership and remaining creature updates/families are incomplete. User requires all creatures completed before packaging; no completion archive created.",
+  "artifactSha256": {
+    "src/core/dark-creature-look-runtime.ts": "17ca11e0631789ee95d06af6535b10023f55b77764a069383f2c564365a5a3a3",
+    "src/core/dark-creature-spotlight-runtime.ts": "3dba3b53a008268b0453afb4cbeddf7cb5ef2397f42a930bf41395ee5475907b",
+    "src/core/dark-creature-visual-runtime.ts": "d4fe1b5c1de97ed9ebb3a362f6944a6d8650f445e5f52491e035fb01cb3b9f38",
+    "src/core/move-object-along-rail-update-runtime.ts": "872e1e13dc7f0744ab2ccafe51ab14d5cb54d1e43c884d2e75942130459f7212",
+    "src/core/vector-safe-slerp-runtime.ts": "6862c86fe2fc09a76daea6bbf2a9be62bdce9438f81672338c12c9a08924bd83",
+    "tools/dark-creature-spotlight-cases.ts": "951f98016952ce119eb0f8a31beb41333dc5659981a545fd632ae70e453437d6",
+    "tools/dark-creature-spotlight-oracle.ts": "7e0f549eab6803422bbfd7df0c6bd5d80f117f8a3f0a42f3acfe6cbaf8900998",
+    "tools/native-dark-creature-spotlight-oracle.c": "f2385bc1b9e023278e100ddd78adec8b2cbec5436cc5b4bcec3af0968ec23684",
+    "tools/reverse-dark-creature-spotlight.py": "0f3e855baf9fe5f644321825a2cb3a9316346ca89f9fcc4b19b3e93eab59177b",
+    "tools/verify-creature-visual.py": "2afe3aae10c24eb5cc87afdfcc225398a21f495acccd4946471f944afd3e726c",
+    "tools/move-object-along-rail-control-cases.ts": "1ba89925fe613bc394433e7e973e376e393baf250035760c9798dc85463cdd23",
+    "tools/move-object-along-rail-control-oracle.ts": "35bc7e999f5eafa592d3116fecc0a647e26ad414b5e31534cbee97acf51a30a1",
+    "tools/native-move-object-along-rail-control-oracle.c": "fe89ecba0db740c19846232c1af425d9ebcbeeb9f5dcf6a60397258ad83c0a86",
+    "tools/native-move-object-along-rail-oracle.c": "146460fce0f6b670228679c326d3c4bdb4cfcf8ba8e1e4381906c4a5fd54af39",
+    "tools/vector-safe-slerp-cases.ts": "8b73ac6e90540194dbcaf401be3de0e036db8394380639e7495918556b0a8bdc",
+    "tools/vector-safe-slerp-oracle.ts": "56883828555062f025bca469fc8652b56882d389a3b6ab336de9e48ccec6c9c8",
+    "tools/native-vector-safe-slerp-oracle.c": "b796d90bcf68c7593109f7fc81f09c3fc0b980e021caecbeec57fd5ea739f4cb",
+    "tests/dark-creature-spotlight-runtime.test.ts": "8a6eb931d9e89848e4db16ceb4cc87afe72ea96799c91150f42f8606c8b69b7b",
+    "tests/move-object-along-rail-control.test.ts": "874530d7507614b3aa9918a7beb4a9e457561d2655ebdbf9b840d601fee6a044",
+    "tests/vector-safe-slerp-runtime.test.ts": "84935e0c0807a1a1d43a7441e6147eaa36d49bd521729508290a7de36d750829",
+    "tests/fixtures/dark-creature-spotlight-native.json.gz": "f4a9f7acd6832312b1dd89c503aee0979ddfa6847d2a144e1fb0358fe31c2909",
+    "tests/fixtures/move-object-along-rail-control-native.json.gz": "4f40333abd9dd72d886a30fcf7540cfffa79becc90fdd7b6cff398de38b3b40a",
+    "tests/fixtures/vector-safe-slerp-native.json.gz": "4db95a76878c8e330adcc6c07c53717519e5e1bcd485ad3e7d433e533e46841f",
+    "docs/dark-creature-spotlight-native.json": "f0a385df1b4f9e46df1d0ff9bcceb2f3464c3ac9b4c51e963b2a82ab9a903123",
+    "docs/dark-creature-spotlight-oracle.json": "034787d8c83e97c3f5f4096288e1541446c2126ee12eefbeae7257fc0812b7f4",
+    "docs/move-object-along-rail-control-oracle.json": "0f384e85345ae946775497b9231e0e314d2244d2cb215445b731add418e061c5",
+    "docs/vector-safe-slerp-oracle.json": "f4f58ee0c1973f8a30f5ee739c6bc0d5c94bb25079b53d0ac970df9a10334ad1",
+    "docs/冥龙探照光圈与鱼群轨道控制续接.md": "e3266eb36dace11d9464f28477e8bf53a1bb23e4d780f05bc53513837b1e548a",
+    "tools/objects-class-progress-spec.json": "858deffb926875948ab60b2a430a4fc6492817e1bc1744211afff9785ec9100c",
+    "tools/objects-category-census.py": "997641afae26d96082aba85e247493f6f21c5a466922a078caa9bc3817940130",
+    "docs/交付状态.json": "a4a1c6a64b0bb3d647477113fda9cb6eaa847df04dccba6fc61885934b7224bf",
+    "evidence/dark-creature-update-reference.asm": "4b765f8627c2f1ec784ef47a30d9b0e38165fbbe1b637d4a54206367393ec34a",
+    "evidence/vector-safe-slerp.asm": "ec27bac4f6945d1c9f98f17188de8154bcb4b4b3a7b1d6e318927eeeaf98ff91",
+    "evidence/move-object-along-rail-update-reference.asm": "085ed2c71ad44e5c40907d27bdd90335e714c58034b358107e63825e09bfd5aa"
+  }
+}

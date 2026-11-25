@@ -1,0 +1,947 @@
+{
+  "className": "MakeMagnetize",
+  "functionGroup": "碰撞、受力与移动限制",
+  "functionRole": "标记区域吸附与反重力",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "MakeMagnetize 的原默认值、继承初始化及 3 个序列化字段变体；原注册字段 2 项。"
+    },
+    {
+      "name": "标记区域吸附与反重力",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Clump（21 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "MakeMagnetize",
+    "category": "碰撞、受力与移动限制",
+    "functionGroupId": "physics",
+    "functionRole": "标记区域吸附与反重力",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "MakeMagnetize 的原默认值、继承初始化及 3 个序列化字段变体；原注册字段 2 项。"
+      },
+      {
+        "name": "标记区域吸附与反重力",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Clump（21 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Clump",
+        "references": 21
+      }
+    ],
+    "rttiWorkingGroup": "网络、账号与平台",
+    "role": "对象实例类型",
+    "instances": 21,
+    "nestedInstances": 0,
+    "referenceFields": 21,
+    "declaredLevels": 1,
+    "levels": [
+      {
+        "level": "Night",
+        "nodes": 21,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "antiGravity",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "markers",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100cc48a0",
+    "nativeRegisteredFields": [
+      {
+        "name": "markers",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x10041dfc0",
+        "propertyAddress": "0x100cc4700"
+      },
+      {
+        "name": "antiGravity",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 64,
+        "registrationFunction": "0x10041dfc0",
+        "propertyAddress": "0x100cc4750"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 2 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "Night:n437",
+      "level": "Night",
+      "nodeId": 437,
+      "name": "BstNode_34603095",
+      "className": "MakeMagnetize",
+      "classIndex": 42,
+      "sourceOffset": 88924,
+      "sourceLength": 27,
+      "sourceSha256": "a8754065ba688f966d5f73b8ff821fb93a9e0fb544652b5ebf72fb322014a4d3",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n437/p1",
+          "fieldName": "markers",
+          "target": "Night:n1930",
+          "targetNodeId": 1930,
+          "offset": 88946
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n447",
+      "level": "Night",
+      "nodeId": 447,
+      "name": "BstNode_492",
+      "className": "MakeMagnetize",
+      "classIndex": 42,
+      "sourceOffset": 90941,
+      "sourceLength": 22,
+      "sourceSha256": "b48fb5ea1209bd1267be1fd3b7fb90a3a66ea073660476956a2e3b4f086bc3bb",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n447/p1",
+          "fieldName": "markers",
+          "target": "Night:n2055",
+          "targetNodeId": 2055,
+          "offset": 90958
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n566",
+      "level": "Night",
+      "nodeId": 566,
+      "name": "BstNode_555",
+      "className": "MakeMagnetize",
+      "classIndex": 42,
+      "sourceOffset": 106182,
+      "sourceLength": 22,
+      "sourceSha256": "008f93e8ed2609150ed73bd500f8a85c07ec5402c48bc59f6304c8b65028e6e9",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n566/p1",
+          "fieldName": "markers",
+          "target": "Night:n3214",
+          "targetNodeId": 3214,
+          "offset": 106199
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n619",
+      "level": "Night",
+      "nodeId": 619,
+      "name": "BstNode_938",
+      "className": "MakeMagnetize",
+      "classIndex": 42,
+      "sourceOffset": 115018,
+      "sourceLength": 22,
+      "sourceSha256": "97b2a46d9a7866dc7ba0ae1fffee5a9157239436cb17993c244b4196e3f4f9fa",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n619/p1",
+          "fieldName": "markers",
+          "target": "Night:n2712",
+          "targetNodeId": 2712,
+          "offset": 115035
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n637",
+      "level": "Night",
+      "nodeId": 637,
+      "name": "BstNode_1312",
+      "className": "MakeMagnetize",
+      "classIndex": 42,
+      "sourceOffset": 118506,
+      "sourceLength": 23,
+      "sourceSha256": "897e396f8cc8e05a94cf041ee843a9c5118f2430584c54b0a6efa36233a54908",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n637/p1",
+          "fieldName": "markers",
+          "target": "Night:n3227",
+          "targetNodeId": 3227,
+          "offset": 118524
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n679",
+      "level": "Night",
+      "nodeId": 679,
+      "name": "BstNode_34603394",
+      "className": "MakeMagnetize",
+      "classIndex": 42,
+      "sourceOffset": 124393,
+      "sourceLength": 27,
+      "sourceSha256": "e6a3a41289cad2f18412c484241b644e1a39095760bf30d71c810baad1b3e4a4",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n679/p1",
+          "fieldName": "markers",
+          "target": "Night:n1573",
+          "targetNodeId": 1573,
+          "offset": 124415
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n816",
+      "level": "Night",
+      "nodeId": 816,
+      "name": "BstNode_1324",
+      "className": "MakeMagnetize",
+      "classIndex": 42,
+      "sourceOffset": 144426,
+      "sourceLength": 23,
+      "sourceSha256": "a8b6dfed6b22a83555ea97b0134f1fb542efd1205a7536ea24c4e7fbfa3266b4",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n816/p1",
+          "fieldName": "markers",
+          "target": "Night:n2758",
+          "targetNodeId": 2758,
+          "offset": 144444
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n889",
+      "level": "Night",
+      "nodeId": 889,
+      "name": "BstNode_34603081",
+      "className": "MakeMagnetize",
+      "classIndex": 42,
+      "sourceOffset": 156107,
+      "sourceLength": 27,
+      "sourceSha256": "b1ffc1e6cc1db2bb0dca24c345b96c98b750f263e9a0aa66aa3b450814a6d393",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n889/p1",
+          "fieldName": "markers",
+          "target": "Night:n57",
+          "targetNodeId": 57,
+          "offset": 156129
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1078",
+      "level": "Night",
+      "nodeId": 1078,
+      "name": "BstNode_839",
+      "className": "MakeMagnetize",
+      "classIndex": 42,
+      "sourceOffset": 182050,
+      "sourceLength": 22,
+      "sourceSha256": "ccc048dd3a7d57b3badf8f3b53a18d443d536422ec137a90378d4be0f064543f",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1078/p1",
+          "fieldName": "markers",
+          "target": "Night:n3302",
+          "targetNodeId": 3302,
+          "offset": 182067
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1100",
+      "level": "Night",
+      "nodeId": 1100,
+      "name": "BstNode_34603085",
+      "className": "MakeMagnetize",
+      "classIndex": 42,
+      "sourceOffset": 183914,
+      "sourceLength": 27,
+      "sourceSha256": "f1b9cf3b3417addade5556b6b77420acdbe4fba83f4f5284359c82aa8eede62f",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1100/p1",
+          "fieldName": "markers",
+          "target": "Night:n797",
+          "targetNodeId": 797,
+          "offset": 183936
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1161",
+      "level": "Night",
+      "nodeId": 1161,
+      "name": "BstNode_804",
+      "className": "MakeMagnetize",
+      "classIndex": 42,
+      "sourceOffset": 194879,
+      "sourceLength": 22,
+      "sourceSha256": "969c771f851e4ed84e81a4e080ea7f75d1b12e3997230d76765067f2a7386b2c",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1161/p1",
+          "fieldName": "markers",
+          "target": "Night:n3318",
+          "targetNodeId": 3318,
+          "offset": 194896
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1344",
+      "level": "Night",
+      "nodeId": 1344,
+      "name": "BstNode_530",
+      "className": "MakeMagnetize",
+      "classIndex": 42,
+      "sourceOffset": 220567,
+      "sourceLength": 22,
+      "sourceSha256": "473fa288b476b9f6da2b381fb7fcbcb4d31c2ea0641a20ec9e3895b96bc97846",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1344/p1",
+          "fieldName": "markers",
+          "target": "Night:n3349",
+          "targetNodeId": 3349,
+          "offset": 220584
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1479",
+      "level": "Night",
+      "nodeId": 1479,
+      "name": "BstNode_858",
+      "className": "MakeMagnetize",
+      "classIndex": 42,
+      "sourceOffset": 235955,
+      "sourceLength": 22,
+      "sourceSha256": "0eed06db1bce2716a6396666765524304d0300aa23a506c501bae9e8a25b96bf",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1479/p1",
+          "fieldName": "markers",
+          "target": "Night:n3378",
+          "targetNodeId": 3378,
+          "offset": 235972
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1701",
+      "level": "Night",
+      "nodeId": 1701,
+      "name": "BstNode_695",
+      "className": "MakeMagnetize",
+      "classIndex": 42,
+      "sourceOffset": 266171,
+      "sourceLength": 22,
+      "sourceSha256": "ab76ae66e20716b78a75c61a8e025070cbc3f0c3c4688014218b5b2efcf1d82a",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1701/p1",
+          "fieldName": "markers",
+          "target": "Night:n1754",
+          "targetNodeId": 1754,
+          "offset": 266188
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1751",
+      "level": "Night",
+      "nodeId": 1751,
+      "name": "BstNode_848",
+      "className": "MakeMagnetize",
+      "classIndex": 42,
+      "sourceOffset": 273343,
+      "sourceLength": 22,
+      "sourceSha256": "6006937cfb38b3247d570aebe3f0151513d3f31d0f268d426af57f6fb25bcf85",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1751/p1",
+          "fieldName": "markers",
+          "target": "Night:n3429",
+          "targetNodeId": 3429,
+          "offset": 273360
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1995",
+      "level": "Night",
+      "nodeId": 1995,
+      "name": "BstNode_34603096",
+      "className": "MakeMagnetize",
+      "classIndex": 42,
+      "sourceOffset": 313841,
+      "sourceLength": 27,
+      "sourceSha256": "93964b5dd6fe3c90515a3a16e1d83a713263760e804dd29640950134d20a30f7",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1995/p1",
+          "fieldName": "markers",
+          "target": "Night:n2562",
+          "targetNodeId": 2562,
+          "offset": 313863
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2176",
+      "level": "Night",
+      "nodeId": 2176,
+      "name": "BstNode_34604396",
+      "className": "MakeMagnetize",
+      "classIndex": 42,
+      "sourceOffset": 345179,
+      "sourceLength": 27,
+      "sourceSha256": "0464160744bb16d4ab93d2edfeae3d4d9b0dd492470a9da868911a1702f0bf52",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2176/p1",
+          "fieldName": "markers",
+          "target": "Night:n3516",
+          "targetNodeId": 3516,
+          "offset": 345201
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2219",
+      "level": "Night",
+      "nodeId": 2219,
+      "name": "BstNode_493",
+      "className": "MakeMagnetize",
+      "classIndex": 42,
+      "sourceOffset": 350351,
+      "sourceLength": 22,
+      "sourceSha256": "bda565721096b8674adb63d083196838b2792fc8a159f1a1d761aa689c0a7dfc",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2219/p1",
+          "fieldName": "markers",
+          "target": "Night:n3524",
+          "targetNodeId": 3524,
+          "offset": 350368
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2285",
+      "level": "Night",
+      "nodeId": 2285,
+      "name": "BstNode_780",
+      "className": "MakeMagnetize",
+      "classIndex": 42,
+      "sourceOffset": 360285,
+      "sourceLength": 22,
+      "sourceSha256": "407e15eb0739af9006cd77b5e8348a1fb7606e03dcce608db6e45d0001db8dd9",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2285/p1",
+          "fieldName": "markers",
+          "target": "Night:n40",
+          "targetNodeId": 40,
+          "offset": 360302
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2313",
+      "level": "Night",
+      "nodeId": 2313,
+      "name": "BstNode_34603088",
+      "className": "MakeMagnetize",
+      "classIndex": 42,
+      "sourceOffset": 363709,
+      "sourceLength": 27,
+      "sourceSha256": "d2e1daa91541c792d3a2a13947c26032a940991af8acf56ddeac80d751075322",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2313/p1",
+          "fieldName": "markers",
+          "target": "Night:n2455",
+          "targetNodeId": 2455,
+          "offset": 363731
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2325",
+      "level": "Night",
+      "nodeId": 2325,
+      "name": "BstNode_588",
+      "className": "MakeMagnetize",
+      "classIndex": 42,
+      "sourceOffset": 365086,
+      "sourceLength": 22,
+      "sourceSha256": "05e5305f67ee02556e8f712cf8a4e17f9bde4ce23365dd7142e4fc46499063d6",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2325/p1",
+          "fieldName": "markers",
+          "target": "Night:n3545",
+          "targetNodeId": 3545,
+          "offset": 365103
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "Night",
+      "path": "Levels/Night/Objects.level.bin",
+      "sha256": "6ce612c9efb82834d648de81251033b341a44f4d9374d8338d868575aab6a723",
+      "bytes": 499756,
+      "nodes": 3719,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Night.json",
+      "markdown": "Objects对象清单/Night.md"
+    }
+  ]
+}

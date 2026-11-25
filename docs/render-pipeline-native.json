@@ -1,0 +1,75 @@
+{
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "updatedAtUTC": "2026-11-21T13:11:59.471344+00:00",
+  "scope": "Unchanged original normal RenderPipeline initialize/bind/free, GpuBuffer getReadId/reset, VertexData reset and Renderable reset, composed with original Beamo material loop, VertexRender initializers and ResourceRef bodies. Compare full 3MiB memory plus ordered service calls/assertion line and severity. Graphics reflection, GPU creation/binding/destruction, heap allocation/free, default matrix and RenderList unregister are explicit prepared services. Synthetic reflection names/counts, ID/layout gates, 14 buffers, live callback mutations and repeated-free assertion are exercised. The 33 original material/grouping cases retain original serialized input; sorted reflection tables and UBO sizes are prepared, not recovered real shader reflection. Service hook targets occupy an unused Beamo upload helper region; that helper is not executed in this oracle. Full class/game/native GPU/reflection/ResourceManager IO acceptance remains false.",
+  "functions": [
+    {
+      "name": "RenderPipeline.Initialize",
+      "address": "0x1007bfd80",
+      "end": "0x1007c0080",
+      "instructions": 178,
+      "sha256": "6ec21084e2de1272f26956581218d486f1d0b49b17ca3f70d67d1a3d16a211be",
+      "evidence": "evidence/vertex-parameters-0x1007bfd80.asm",
+      "normalKernelRestored": true
+    },
+    {
+      "name": "RenderPipeline.SetVertexData",
+      "address": "0x1007bdfd0",
+      "end": "0x1007be0b0",
+      "instructions": 64,
+      "sha256": "edae03952d94580abc05b3c57833615d8a82367159f7ecb0133485750f20668b",
+      "evidence": "evidence/vertex-parameters-0x1007bdfd0.asm",
+      "normalKernelRestored": true
+    },
+    {
+      "name": "RenderPipeline.Free",
+      "address": "0x1007c0cc0",
+      "end": "0x1007c0db0",
+      "instructions": 57,
+      "sha256": "9a9eb4bf0aa3885e4e53115944f1fec4f310e52050941bd862a1ab2b87e14a5a",
+      "evidence": "evidence/objects-pipeline-0x1007c0cc0.asm",
+      "normalKernelRestored": true
+    },
+    {
+      "name": "GpuBuffer.GetReadId",
+      "address": "0x1007950a0",
+      "end": "0x1007950d0",
+      "instructions": 13,
+      "sha256": "136a07753724917cf58500fe97654d2417e9bf44fee6db0289b030db671e1174",
+      "evidence": "evidence/objects-pipeline-0x1007950a0.asm",
+      "normalKernelRestored": true
+    },
+    {
+      "name": "GpuBuffer.Reset",
+      "address": "0x100794f80",
+      "end": "0x100795000",
+      "instructions": 35,
+      "sha256": "18731bd260c9cc763c51095e725baa336392bbf360ed0dedaffde8f6d86282b9",
+      "evidence": "evidence/objects-pipeline-0x100794f80.asm",
+      "normalKernelRestored": true
+    },
+    {
+      "name": "VertexData.Reset",
+      "address": "0x1007f5250",
+      "end": "0x1007f5370",
+      "instructions": 52,
+      "sha256": "6cc01302ca63d7bd237f1786932075a03d7ec4947fbb6737196ecd11d4a324b1",
+      "evidence": "evidence/beamo-VertexData.Reset.asm",
+      "normalKernelRestored": true
+    },
+    {
+      "name": "Renderable.Reset",
+      "address": "0x1007f6b80",
+      "end": "0x1007f6ca0",
+      "instructions": 54,
+      "sha256": "2ba4a8fdfdced45ca454f7b5af96def82e8f82d1d19bb697d08653ac05dd9089",
+      "evidence": "evidence/beamo-Renderable.Reset.asm",
+      "normalKernelRestored": true
+    }
+  ],
+  "oracle": "docs/render-pipeline-oracle.json",
+  "fixture": "tests/fixtures/render-pipeline-native.json.gz",
+  "completeClassRuntime": false,
+  "gpuServicesRestored": false,
+  "actualShaderReflectionRestored": false
+}

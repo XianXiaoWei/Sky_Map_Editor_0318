@@ -1,0 +1,2 @@
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import {originalAvatarCameraPose} from '../src/core/avatar-camera';
+test('Avatar camera entry XYZ pivot/eye replay original Whisker initialization and reset',()=>{const fixture=JSON.parse(fs.readFileSync(new URL('./fixtures/avatar-camera-native.json',import.meta.url),'utf8'));for(const row of fixture.cases){const pose=originalAvatarCameraPose(row.position,row.offset,row.forward);assert.deepEqual(pose.target,row.target,row.name);assert.deepEqual(pose.eye,row.eye,row.name);}});

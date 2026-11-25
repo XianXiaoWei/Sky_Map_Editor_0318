@@ -1,0 +1,36 @@
+{
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "functions": {
+    "SteeringBehaviors.Begin": {
+      "address": "0x10062e690",
+      "end": "0x10062e700",
+      "codeSha256": "d780a575241f344b0285da80419ac207c42eea041d0a57a52d455813fbc1650a",
+      "instructions": 24,
+      "evidence": "evidence/creature-steering-SteeringBehaviors.Begin.asm"
+    },
+    "SteeringBehaviors.Seek": {
+      "address": "0x10062f710",
+      "end": "0x10062f800",
+      "codeSha256": "accf74170516c4d6cef35aaeee6a74df69f47ad5caf17a8236428a9e62565461",
+      "instructions": 48,
+      "evidence": "evidence/creature-steering-SteeringBehaviors.Seek.asm"
+    },
+    "SteeringBehaviors.End": {
+      "address": "0x10062e700",
+      "end": "0x10062e800",
+      "codeSha256": "8483fb0f5f84ec4b608b367d006d307d6878c168e50a8b8acec0d65978293a58",
+      "instructions": 61,
+      "evidence": "evidence/creature-steering-SteeringBehaviors.End.asm"
+    }
+  },
+  "caller": {
+    "address": "0x10025a880",
+    "functionEnd": "0x10025b4f0",
+    "codeEnd": "0x10025b498",
+    "codeSha256": "e361dd3b19e4d06f81989c926dd673a86c48b7d24198f0d4c7049ea4ec1dd23e",
+    "evidence": "evidence/creature-steering-CrabAi.Update-body.asm",
+    "investigationOnly": true,
+    "scope": "Executable body only; jump table/trailing data from 0x10025b498 to function end is not disassembled as instructions."
+  },
+  "scope": "Three complete steering bodies used by CrabAi.Update. Collision/world and remaining AI/motion integration are separate; no complete creature or automatic viewport behavior claim."
+}

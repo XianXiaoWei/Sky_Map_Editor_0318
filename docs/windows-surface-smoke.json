@@ -1,0 +1,194 @@
+{
+  "passed": true,
+  "scope": "Production Electron desktop UI and XCB Vulkan presentation on Linux. Tests native replies, navigation, incremental editing, DPI, resizing and map cleanup. Does not validate Win32 HWND/transparent-window composition or Windows hardware FPS.",
+  "windowsTested": false,
+  "maps": [
+    {
+      "level": "Dawn",
+      "loadMs": 20532.517805,
+      "frames": 12,
+      "navigationStatusFps": 4.654437228781164,
+      "cameraMoved": true,
+      "resolution": [
+        695,
+        828
+      ],
+      "draws": 172,
+      "triangles": 238473,
+      "geometrySha256": "eaae68ecdde6a16d313d5ab913272482c10fdfc09d529cae1ed2145554ebc6e5",
+      "frameTiming": {
+        "environmentState": 7.780052000001888,
+        "background": 9.68765699999858,
+        "materials": 16.701614000001427,
+        "compositionSetup": 0.22312500000043656,
+        "rasterAndPresent": 167.66656299999886
+      },
+      "visibleDraws": 172,
+      "sceneReuploads": 0,
+      "materialReuploads": 0
+    },
+    {
+      "level": "SkyHub2",
+      "loadMs": 15558.231973999995,
+      "frames": 17,
+      "navigationStatusFps": 6.8515323756446715,
+      "cameraMoved": true,
+      "resolution": [
+        695,
+        828
+      ],
+      "draws": 197,
+      "triangles": 336284,
+      "geometrySha256": "34408faf583128afdc76eed176fd76225d127456b26824512c046cbb59ca3e87",
+      "frameTiming": {
+        "environmentState": 5.122344000003068,
+        "background": 1.753593000001274,
+        "materials": 2.487552999999025,
+        "compositionSetup": 0.08775999999488704,
+        "rasterAndPresent": 134.04182299999957
+      },
+      "visibleDraws": 139,
+      "sceneReuploads": 0,
+      "materialReuploads": 0
+    },
+    {
+      "level": "Dawn",
+      "loadMs": 10528.116870999998,
+      "frames": 13,
+      "navigationStatusFps": 4.875457170400002,
+      "cameraMoved": true,
+      "resolution": [
+        695,
+        828
+      ],
+      "draws": 172,
+      "triangles": 238473,
+      "geometrySha256": "eaae68ecdde6a16d313d5ab913272482c10fdfc09d529cae1ed2145554ebc6e5",
+      "frameTiming": {
+        "environmentState": 0.8692190000001574,
+        "background": 1.843853999998828,
+        "materials": 2.9105209999979706,
+        "compositionSetup": 0.24078100000042468,
+        "rasterAndPresent": 289.5273440000019
+      },
+      "visibleDraws": 172,
+      "sceneReuploads": 0,
+      "materialReuploads": 0
+    }
+  ],
+  "errors": [],
+  "device": {
+    "engine": "Sky Native Vulkan",
+    "backend": "Vulkan",
+    "device": "llvmpipe (LLVM 19.1.7, 128 bits)",
+    "apiVersion": 4210993,
+    "deviceType": 4,
+    "nativeSurface": true,
+    "shaderFloat16": true,
+    "samplerAnisotropyPolicy": "llvmpipe-trilinear",
+    "maxSamplerAnisotropy": 16
+  },
+  "interaction": {
+    "nodeId": 7,
+    "translation": 3,
+    "responseMs": 1273.4323949999962,
+    "poseRequests": 1,
+    "sceneReuploads": 0,
+    "materialReuploads": 0,
+    "geometryUnchanged": true
+  },
+  "resizeAndDpi": {
+    "ratio": 1.5,
+    "physicalWidth": 1125,
+    "renderWidth": 1125,
+    "renderHeight": 1062
+  },
+  "empty": {
+    "scope": "Original terrain/skirt GLSL, real packed geometry/material textures with declared gamma/mip handling and supported anisotropy (16x preview request), recovered float32 shader time and three-layer scroll accumulation. Shared original Wind spatial/timer/order sampling, additional Marker OBBs and cached Rail equations feed original texture drift. Ambient/boundary/interaction force services and native Rail lifecycle remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/MotionGen/MotionDilate/TemporalAa/Tonemap chain. PNG area-filtered mip generation and anisotropy strength remain preview adapters, not original exporter/Metal parity. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending. Resource models and prepared Beamo LOD0 draws use original GLSL, packed float3/color/SNORM normals/half4 UV pairs and baked lighting. Transparent descriptor states use original blend/depth/cull evidence; back-to-front bounds ordering is an editor adapter, not the original Scene sort. Beamo normals use observed RSQRTSS capability; external weight volumes, automatic LOD/Visibility, Barn/GPU ownership and complete original classes remain open.",
+    "geometrySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "draws": 0,
+    "terrainDraws": 0,
+    "modelDraws": 0,
+    "beamoDraws": 0,
+    "beamoInstances": 0,
+    "levelMeshDraws": 0,
+    "modelBoundaries": [],
+    "modelParameterBindings": [],
+    "modelBindings": [],
+    "shaders": [],
+    "triangles": 0,
+    "textures": [],
+    "samplerPolicy": "llvmpipe-trilinear",
+    "textureSampling": [],
+    "dynamics": {
+      "time": 0,
+      "scrolls": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "materialUploads": 1,
+    "orderUpdates": 1,
+    "probeUpdates": 0,
+    "visibleDraws": 0,
+    "materialQuality": "original",
+    "quality": "fast",
+    "fast": {
+      "frames": 5,
+      "setups": 1,
+      "textureUpdates": 0,
+      "path": "gpu-resident-fog-tonemap",
+      "hdrReadbacks": 0,
+      "clouds": false,
+      "temporalAA": false,
+      "metering": "fixed preview luminance 1"
+    },
+    "frameTiming": {
+      "environmentState": 0.0211459999991348,
+      "background": 1.648853999999119,
+      "materials": 0.04635499999858439,
+      "compositionSetup": 0.23010400000202935,
+      "rasterAndPresent": 111.99765599999228
+    },
+    "sceneUploads": 6,
+    "overlayUpdates": 9
+  },
+  "transport": {
+    "calls": {
+      "vulkanSurfaceBounds": 3,
+      "setData": 1,
+      "openLevel": 5,
+      "vulkanScene": 6,
+      "vulkanOverlay": 9,
+      "vulkanFrame": 85,
+      "vulkanInfo": 1,
+      "resourceMesh": 249,
+      "modelPreviewBatch": 57,
+      "shaderProgram": 91,
+      "imageInfo": 137,
+      "vulkanViewportInfo": 9,
+      "editObjects": 1,
+      "vulkanModelTransforms": 1,
+      "undo": 1
+    },
+    "surfaceFrames": 84,
+    "pixelBytes": 0
+  },
+  "sourceHashesUnchanged": true
+}

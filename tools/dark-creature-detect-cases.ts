@@ -1,0 +1,45 @@
+import {detectOriginalDarkCreature,originalDarkCreatureDetectStateServices,type DarkCreatureDetectServices} from '../src/core/dark-creature-detect-runtime';
+import {alertOriginalDarkCreature} from '../src/core/dark-creature-state-runtime';
+import {numericFloatBits as bits,numericFloatValue as value} from '../src/core/object-numeric-runtime';
+export interface DarkDetectCase {label:string;mode:0|1;players?:number;birds?:number;playerPositions?:number[][];birdPositions?:number[][];enabledMask?:number;nullPlayerMask?:number;nullBirdMask?:number;energyBits?:number;birdRadius?:number;radius?:number;radiusBits?:number;target?:number[];blockedMask?:number;previousKind?:number;previousPlayer?:number;previousBird?:number;alert?:number;state?:number;cooldown?:number;awake?:number;visible?:number;delta?:number;steps?:number;mutation?:number;seed?:number;}
+export interface DarkDetectMath {kind:number;y:number;x:number;result:number;}
+const base=0x440000000n,p=base+0x1000n,world=[base+0x8000n,base+0x8200n,base+0x9000n,base+0xa000n];
+export function darkDetectCases(){const cases:DarkDetectCase[]=[],add=(mode:0|1,label:string,c:Partial<DarkDetectCase>={})=>cases.push({label:'DarkCreature Detect '+mode+' '+label,mode,...c});
+ for(const players of [0,1,3,16])for(const birds of [0,1,3])for(const blockedMask of [0,0xffff])add(0,'player/bird candidates '+[players,birds,blockedMask],{players,birds,blockedMask});
+ for(const previousKind of [0,1,2])for(const previousPlayer of [10,11])for(const previousBird of [0,1])add(0,'blocked current target '+[previousKind,previousPlayer,previousBird],{previousKind,previousPlayer,previousBird,blockedMask:0xffff,players:2,birds:2});
+ for(const position of [[0,0,0,1],[0,0,3.9999,1],[0,0,4,1],[0,0,4.0001,1],[0,0,5,1],[0,0,10,1],[0,0,20,1],[1,0,5,1],[3,0,5,1],[0,15,0,1],[30,0,0,1],[-30,0,0,1],[0,0,30,1],[0,15,30,1]])for(const radius of [0,1,3])add(0,'anchors/cone/radius '+[position,radius],{players:1,playerPositions:[position],radius});
+ for(const position of [[0,0,0,1],[0,0,4,1],[0,0,4.1,1],[0,0,5,1],[0,0,10,1],[1,0,5,1],[0,15,30,1]])for(const birdRadius of [0,.5,2])add(0,'bird sphere/cone '+[position,birdRadius],{birds:1,players:0,birdPositions:[position],birdRadius});
+ for(const energyBits of [bits(-1),bits(-.99),bits(-.9899),bits(0),0x7fc00000])for(const enabledMask of [0,1,3])add(0,'energy/enabled '+[energyBits,enabledMask],{energyBits,enabledMask,players:2});
+ for(const nullPlayerMask of [0,1,2,3])for(const nullBirdMask of [0,1,2,3])add(0,'null candidates '+[nullPlayerMask,nullBirdMask],{players:2,birds:2,nullPlayerMask,nullBirdMask});
+ for(const playerPositions of [[[0,0,6,1],[0,0,5,1]],[[0,0,5,1],[0,0,6,1]],[[0,0,1,1],[0,0,2,1]]])for(const blockedMask of [0,1,2])add(0,'selection order '+[playerPositions,blockedMask],{players:2,playerPositions,blockedMask});
+ for(const birds of [63,64,65,70])add(0,'bird 64-slot cap '+birds,{birds,players:1});
+ for(const mutation of [1,2,3,4,5,6,7])for(const steps of [1,3])add(0,'callback rereads '+[mutation,steps],{players:3,birds:3,mutation,steps,blockedMask:mutation===5?0xffff:0});
+ for(const state of [0,2,3,4])for(const cooldown of [0,1])for(const alert of [0,1])add(1,'alert caller '+[state,cooldown,alert],{state,cooldown,alert,players:1,birds:1,previousKind:1,blockedMask:0xffff,steps:3});
+ for(const previousKind of [1,2])for(const blockedMask of [0,0xffff])add(1,'alert transition '+[previousKind,blockedMask],{players:1,birds:1,previousKind,blockedMask});
+ add(1,'sleep gate',{awake:0,players:1});add(1,'visibility gate',{visible:0,players:1});
+ return cases;}
+export function prepareDarkDetect(c:DarkDetectCase){const b=Buffer.alloc(0x30000);let seed=c.seed??31;for(let i=0;i<b.length;i++){seed=(Math.imul(seed,1664525)+1013904223)>>>0;b[i]=seed>>>24;}
+ const m={bytes:(p:bigint,n:number)=>b.subarray(Number(p-base),Number(p-base)+n),read32:(p:bigint)=>b.readUInt32LE(Number(p-base)),read64:(p:bigint)=>b.readBigUInt64LE(Number(p-base)),write32:(p:bigint,n:number)=>b.writeUInt32LE(n>>>0,Number(p-base)),write64:(p:bigint,n:bigint)=>b.writeBigUInt64LE(n,Number(p-base)),write8:(p:bigint,n:number)=>{b[Number(p-base)]=n;},string:()=>{throw new Error('Detector does not read strings');}};
+ const ptr=(at:number,to:number)=>b.writeBigUInt64LE(to?base+BigInt(to):0n,at),floats=(at:number,v:number[])=>v.forEach((n,i)=>b.writeFloatLE(n,at+i*4));
+ for(const [offset,to] of [[0x50,0x4000],[0x228,0x5000],[0x210,0x5200],[0x218,0x5400],[0x220,0x5600],[0x208,0x5800]])ptr(0x1000+offset,to);
+ for(const [at,position] of [[0x50b0,[0,0,0,1]],[0x52b0,[30,0,0,1]],[0x54b0,[-30,0,0,1]],[0x56b0,[0,0,30,1]],[0x58b0,[1,2,3,1]]] as [number,number[]][])floats(at,position);
+ floats(0x11b0,c.target??[0,0,10,1]);b.writeUInt32LE(c.radiusBits??bits(c.radius??1),0x11d0);floats(0x10a0,[1,2,3,0]);floats(0x117c,[0]);floats(0x4008,[1]);
+ b[0x12c3]=c.awake??1;b[0x12c4]=1;b[0x12c5]=c.cooldown??0;b[0x11d4]=c.visible??1;b[0x12c7]=c.previousKind??0;b[0x12d0]=c.alert??0;b.writeUInt32LE(c.previousPlayer??10,0x12c8);b.writeUInt32LE(c.previousBird??0,0x12cc);b.writeUInt32LE(c.state??0,0x12e0);
+ for(let i=0;i<16;i++){const at=0xb000+i*0x400;ptr(0x8100+i*8,((c.nullPlayerMask??0)>>>i)&1?0:at);ptr(at,0x2e000);ptr(at+24,at+0x100);ptr(at+48,at+0x200);b[at+0xe4]=((c.enabledMask??0xffff)>>>i)&1;b.writeUInt32LE(10+i,at+0xe0);b.writeUInt32LE(c.energyBits??bits(0),at+0x208);floats(at+0x110,c.playerPositions?.[i]??[0,0,1+i,1]);}
+ b.writeUInt32LE(c.birds??0,0x9210);for(let i=0;i<64;i++){const at=0x11000+i*0x400;ptr(0x9010+i*8,((c.nullBirdMask??0)>>>i)&1?0:at);ptr(at,0x2e000);ptr(at+120,at+0x200);b[at+0xd0]=1;floats(at+16,c.birdPositions?.[i]??[0,0,2+i,1]);floats(at+0x218,[c.birdRadius??.5]);}
+ b.fill(0,0x2d000,0x2d040);b.writeUInt32LE(c.players??1,0x2d000);b.writeUInt32LE(c.blockedMask??0,0x2d004);b.writeUInt32LE(c.mutation??0,0x2d008);b.writeUInt32LE(c.steps??1,0x2d00c);floats(0x2d010,[c.delta??.016]);b.fill(0,0x2d100,0x2d180);b.fill(0,0x2e000,0x2e100);return {b,m};}
+export function evaluateDarkDetect(c:DarkDetectCase,math:readonly DarkDetectMath[],probes:readonly number[][]){const {b,m}=prepareDarkDetect(c),rows:Buffer[]=[],map=new Map(probes.map(r=>[`${r[0]}:${r[1]}:${r[2]}`,r[3]]));let mathAt=0,rays=0;let activeSlots:bigint[]=[];
+ const record=(kind:number,x:bigint|number=0,y:bigint|number=0)=>{const r=Buffer.alloc(192);[kind,x,y].forEach((n,i)=>r.writeBigUInt64LE(BigInt(n),i*8));rows.push(r);return r;};
+ const arithmetic={resolveDualNaN:(op:'add'|'sub'|'mul'|'div',x:number,y:number)=>{const n=map.get(`${['add','sub','mul','div'].indexOf(op)}:${x>>>0}:${y>>>0}`);if(n===undefined)throw new Error('Detector native arithmetic probe missing');return n;}};
+ const libm=(kind:number,y:number,x:number)=>{const row=math[mathAt++];if(!row||row.kind!==kind||row.y!==y||row.x!==x)throw new Error('Detector native math input/order differs: '+JSON.stringify({kind,y,x,row}));record(kind,y,x).writeUInt32LE(row.result,24);return row.result;};
+ const s:DarkCreatureDetectServices={arithmetic,
+  queryAvatars:(owner,mode)=>{const r=record(1,owner,mode),count=c.players??1;r.writeUInt32LE(count,24);const slots=Array.from({length:count},(_,i)=>m.read64(base+0x8100n+BigInt(i*8)));slots.forEach((p,i)=>r.writeBigUInt64LE(p,32+i*8));activeSlots=slots;if(c.mutation===1)m.write64(p+0x228n,base+0x5200n);return slots;},
+  worldPosition:transform=>{const position=m.bytes(transform+176n,16).slice();record(2,transform).set(position,32);if(c.mutation===2)m.write64(p+0x220n,base+0x5200n);return position;},
+  enabled:avatar=>{record(3,avatar,m.bytes(avatar+0xe4n,1)[0]);if(c.mutation===3)m.write32(m.read64(avatar+48n)+8n,bits(-1));if(c.mutation===7)activeSlots[1]=0n;return m.bytes(avatar+0xe4n,1)[0];},
+  birdPosition:bird=>{const position=m.bytes(bird+16n,16).slice();record(4,bird).set(position,32);if(c.mutation===4)m.write32(world[2]+0x210n,1);return position;},
+  atan2:(y,x)=>libm(5,y,x),cos:y=>libm(6,y,0),
+  raycast:(scene,origin,direction,maximum,options)=>{const blocked=!!(((c.blockedMask??0)>>>rays++)&1),r=record(7,scene,Number(blocked));r.writeUInt32LE(maximum,24);r.set(origin,32);r.set(direction,48);r.writeUInt32LE(options.layer,64);r.writeUInt32LE(options.mask,68);r[72]=options.enabled;r.set(options.reserved,80);if(c.mutation===5){m.write32(p+0x2c8n,999);m.write32(p+0x2ccn,99);}if(c.mutation===6)m.write8(p+0x2c7n,1);return blocked;}
+ };
+ const state=originalDarkCreatureDetectStateServices(m,{arithmetic,worldPosition:s.worldPosition,switchRail:(creature,cooldown)=>{record(8,creature,cooldown);m.write8(creature+0x2c5n,cooldown);},seek:()=>{throw new Error('Alert does not seek');}},s);
+ for(let step=0;step<(c.steps??1);step++){if(c.mode===0)b.writeUInt32LE(detectOriginalDarkCreature(m,p,p+0x2c7n,p+0x1b0n,m.read32(p+0x1d0n),world,s),0x2d100+step*4);else alertOriginalDarkCreature(m,p,m.read32(base+0x2d010n),world,state);}
+ if(mathAt!==math.length)throw new Error('Detector math trace not consumed');const header=Buffer.alloc(4);header.writeUInt32LE(rows.length);return Buffer.concat([header,b,...rows]);}

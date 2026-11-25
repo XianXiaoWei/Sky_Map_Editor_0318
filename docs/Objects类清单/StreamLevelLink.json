@@ -1,0 +1,571 @@
+{
+  "className": "StreamLevelLink",
+  "functionGroup": "地图加载、出生与检查点",
+  "functionRole": "带轨道、门槛和场景引导的地图连接",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "StreamLevelLink 的原默认值、继承初始化及 18 个序列化字段变体；原注册字段 18 项。"
+    },
+    {
+      "name": "带轨道、门槛和场景引导的地图连接",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "BirdFlock（1 条引用）、Rail（2 条引用）、MeditationArea（1 条引用）、Marker（1 条引用）、Clump（1 条引用）、LevelLink（1 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "StreamLevelLink",
+    "category": "地图加载、出生与检查点",
+    "functionGroupId": "levels",
+    "functionRole": "带轨道、门槛和场景引导的地图连接",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "StreamLevelLink 的原默认值、继承初始化及 18 个序列化字段变体；原注册字段 18 项。"
+      },
+      {
+        "name": "带轨道、门槛和场景引导的地图连接",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "BirdFlock（1 条引用）、Rail（2 条引用）、MeditationArea（1 条引用）、Marker（1 条引用）、Clump（1 条引用）、LevelLink（1 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Rail",
+        "references": 2
+      },
+      {
+        "className": "BirdFlock",
+        "references": 1
+      },
+      {
+        "className": "Clump",
+        "references": 1
+      },
+      {
+        "className": "LevelLink",
+        "references": 1
+      },
+      {
+        "className": "Marker",
+        "references": 1
+      },
+      {
+        "className": "MeditationArea",
+        "references": 1
+      }
+    ],
+    "rttiWorkingGroup": "场景与路径基础",
+    "role": "对象实例类型",
+    "instances": 1,
+    "nestedInstances": 0,
+    "referenceFields": 7,
+    "declaredLevels": 1,
+    "levels": [
+      {
+        "level": "Prairie_ButterflyFields",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "arrivalRail",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "badgeRequirement",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "badgeRequirementMeshes",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "badgeRequirementMeshes_doubleSided",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "bellMeshes",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "departureRail",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "flock",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "levelLink",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "meditationArea",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "onSummonStream",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "overriddenArrivalSpeed",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "overriddenDepartureSpeed",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "overriddenStreamLifeLength",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "summonDelay",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "transitionOutPoint",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "useOverideStreamLifeLength",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "useOverriddenArrivalSpeed",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "useOverriddenDepartureSpeed",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100cfef60",
+    "nativeRegisteredFields": [
+      {
+        "name": "departureRail",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP4RailERK8MetaTypev",
+        "nativeOffset": 8,
+        "registrationFunction": "0x10068f380",
+        "propertyAddress": "0x100cfe5e0"
+      },
+      {
+        "name": "summonDelay",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 72,
+        "registrationFunction": "0x10068f380",
+        "propertyAddress": "0x100cfe630"
+      },
+      {
+        "name": "useOverideStreamLifeLength",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 112,
+        "registrationFunction": "0x10068f380",
+        "propertyAddress": "0x100cfe680"
+      },
+      {
+        "name": "overriddenStreamLifeLength",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 116,
+        "registrationFunction": "0x10068f380",
+        "propertyAddress": "0x100cfe6d0"
+      },
+      {
+        "name": "onSummonStream",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 96,
+        "registrationFunction": "0x10068f380",
+        "propertyAddress": "0x100cfe720"
+      },
+      {
+        "name": "transitionOutPoint",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP6MarkerERK8MetaTypev",
+        "nativeOffset": 64,
+        "registrationFunction": "0x10068f380",
+        "propertyAddress": "0x100cfe770"
+      },
+      {
+        "name": "overriddenDepartureSpeed",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 16,
+        "registrationFunction": "0x10068f380",
+        "propertyAddress": "0x100cfe7c0"
+      },
+      {
+        "name": "useOverriddenDepartureSpeed",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 20,
+        "registrationFunction": "0x10068f380",
+        "propertyAddress": "0x100cfe810"
+      },
+      {
+        "name": "arrivalRail",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP4RailERK8MetaTypev",
+        "nativeOffset": 24,
+        "registrationFunction": "0x10068f380",
+        "propertyAddress": "0x100cfe860"
+      },
+      {
+        "name": "overriddenArrivalSpeed",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 32,
+        "registrationFunction": "0x10068f380",
+        "propertyAddress": "0x100cfe8b0"
+      },
+      {
+        "name": "useOverriddenArrivalSpeed",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 36,
+        "registrationFunction": "0x10068f380",
+        "propertyAddress": "0x100cfe900"
+      },
+      {
+        "name": "flock",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP9BirdFlockERK8MetaTypev",
+        "nativeOffset": 40,
+        "registrationFunction": "0x10068f380",
+        "propertyAddress": "0x100cfe950"
+      },
+      {
+        "name": "levelLink",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP9LevelLinkERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x10068f380",
+        "propertyAddress": "0x100cfe9a0"
+      },
+      {
+        "name": "meditationArea",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP14MeditationAreaERK8MetaTypev",
+        "nativeOffset": 104,
+        "registrationFunction": "0x10068f380",
+        "propertyAddress": "0x100cfe9f0"
+      },
+      {
+        "name": "bellMeshes",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 48,
+        "registrationFunction": "0x10068f380",
+        "propertyAddress": "0x100cfea40"
+      },
+      {
+        "name": "badgeRequirementMeshes",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 88,
+        "registrationFunction": "0x10068f380",
+        "propertyAddress": "0x100cfea90"
+      },
+      {
+        "name": "badgeRequirementMeshes_doubleSided",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 80,
+        "registrationFunction": "0x10068f380",
+        "propertyAddress": "0x100cfeae0"
+      },
+      {
+        "name": "badgeRequirement",
+        "typeGetter": "__Z17GetMetaTypeByTypeIiERK8MetaTypev",
+        "nativeOffset": 76,
+        "registrationFunction": "0x10068f380",
+        "propertyAddress": "0x100cfeb30"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 18 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "Prairie_ButterflyFields:n42",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 42,
+      "name": "BstNode_2529558635",
+      "className": "StreamLevelLink",
+      "classIndex": 13,
+      "sourceOffset": 33130,
+      "sourceLength": 86,
+      "sourceSha256": "062f4283a1e3ce69af7b3f44496cf36054a2558198b832eceaa440383e25b5b8",
+      "declaredFieldCount": 18,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n42/p0",
+          "fieldName": "flock",
+          "target": "Prairie_ButterflyFields:n270",
+          "targetNodeId": 270,
+          "offset": 33153
+        },
+        {
+          "fieldId": "n42/p2",
+          "fieldName": "arrivalRail",
+          "target": "Prairie_ButterflyFields:n342",
+          "targetNodeId": 342,
+          "offset": 33161
+        },
+        {
+          "fieldId": "n42/p8",
+          "fieldName": "departureRail",
+          "target": "Prairie_ButterflyFields:n432",
+          "targetNodeId": 432,
+          "offset": 33179
+        },
+        {
+          "fieldId": "n42/p9",
+          "fieldName": "meditationArea",
+          "target": "Prairie_ButterflyFields:n595",
+          "targetNodeId": 595,
+          "offset": 33183
+        },
+        {
+          "fieldId": "n42/p10",
+          "fieldName": "transitionOutPoint",
+          "target": "Prairie_ButterflyFields:n1338",
+          "targetNodeId": 1338,
+          "offset": 33187
+        },
+        {
+          "fieldId": "n42/p11",
+          "fieldName": "bellMeshes",
+          "target": "Prairie_ButterflyFields:n180",
+          "targetNodeId": 180,
+          "offset": 33191
+        },
+        {
+          "fieldId": "n42/p16",
+          "fieldName": "levelLink",
+          "target": "Prairie_ButterflyFields:n1120",
+          "targetNodeId": 1120,
+          "offset": 33208
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "Prairie_ButterflyFields",
+      "path": "Levels/Prairie_ButterflyFields/Objects.level.bin",
+      "sha256": "29d8d61a082f3e3414ecfbb501b5f65499deb37ad4a1078ce2e9b88ac0d1e441",
+      "bytes": 297606,
+      "nodes": 1513,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_ButterflyFields.json",
+      "markdown": "Objects对象清单/Prairie_ButterflyFields.md"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+0x1001aa480: push rbp
+0x1001aa481: mov rbp, rsp
+0x1001aa484: push r15
+0x1001aa486: push r14
+0x1001aa488: push r13
+0x1001aa48a: push r12
+0x1001aa48c: push rbx
+0x1001aa48d: push rax
+0x1001aa48e: mov r14, rdi
+0x1001aa491: mov r13, qword ptr [r14 + 0x38]
+0x1001aa495: test r13, r13
+0x1001aa498: je 0x1001aa55b
+0x1001aa49e: cmp byte ptr [r13 + 0x440], 0
+0x1001aa4a6: je 0x1001aa545
+0x1001aa4ac: mov r15, qword ptr [rsi + 0x280]
+0x1001aa4b3: xor ebx, ebx
+0x1001aa4b5: nop word ptr cs:[rax + rax]
+0x1001aa4c0: mov rdi, r15
+0x1001aa4c3: mov esi, ebx
+0x1001aa4c5: call 0x1001031d0 ; 0x1001031d0
+0x1001aa4ca: mov r12, rax
+0x1001aa4cd: mov rdi, r12
+0x1001aa4d0: call 0x1000fe050 ; 0x1000fe050
+0x1001aa4d5: test al, al
+0x1001aa4d7: je 0x1001aa520
+0x1001aa4d9: mov rax, qword ptr [r12]
+0x1001aa4dd: mov rdi, r12
+0x1001aa4e0: call qword ptr [rax + 0x10]
+0x1001aa4e3: test al, al
+0x1001aa4e5: je 0x1001aa520
+0x1001aa4e7: mov r12, qword ptr [r12 + 0x88]
+0x1001aa4ef: mov rdi, r12
+0x1001aa4f2: call 0x100133f30 ; 0x100133f30
+0x1001aa4f7: cmp rax, qword ptr [r13 + 0x420]
+0x1001aa4fe: je 0x1001aa530
+0x1001aa500: cmp rax, qword ptr [r13 + 0x428]
+0x1001aa507: je 0x1001aa530
+0x1001aa509: cmp rax, qword ptr [r13 + 0x430]
+0x1001aa510: je 0x1001aa530
+0x1001aa512: cmp rax, qword ptr [r13 + 0x438]
+0x1001aa519: je 0x1001aa530
+0x1001aa51b: nop dword ptr [rax + rax]
+0x1001aa520: inc ebx
+0x1001aa522: cmp ebx, 0x10
+0x1001aa525: jne 0x1001aa4c0
+0x1001aa527: jmp 0x1001aa545 ; 0x1001aa545
+0x1001aa529: nop dword ptr [rax]
+0x1001aa530: xor esi, esi
+0x1001aa532: mov rdi, r12
+0x1001aa535: call 0x100133b50 ; 0x100133b50
+0x1001aa53a: inc ebx
+0x1001aa53c: cmp ebx, 0x10
+0x1001aa53f: jne 0x1001aa4c0
+0x1001aa545: mov rdi, r14
+0x1001aa548: add rsp, 8
+0x1001aa54c: pop rbx
+0x1001aa54d: pop r12
+0x1001aa54f: pop r13
+0x1001aa551: pop r14
+0x1001aa553: pop r15
+0x1001aa555: pop rbp
+0x1001aa556: jmp 0x10032ef60 ; 0x10032ef60
+0x1001aa55b: lea rdi, [rip + 0x9cd866] ; 0x100b77dc8 bird
+0x1001aa562: lea rsi, [rip + 0x9cd71a] ; 0x100b77c83 BirdV2.cpp
+0x1001aa569: mov edx, 0x844
+0x1001aa56e: mov ecx, 3
+0x1001aa573: call 0x1007e5f70 ; 0x1007e5f70
+0x1001aa578: ud2 
+0x1001aa57a: nop word ptr [rax + rax]

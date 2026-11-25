@@ -1,0 +1,637 @@
+{
+  "className": "Npc_SetScale",
+  "functionGroup": "NPC 行为与社交",
+  "functionRole": "NPC 身高、缩放与时间过渡",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "Npc_SetScale 的原默认值、继承初始化及 5 个序列化字段变体；原注册字段 4 项。"
+    },
+    {
+      "name": "NPC 身高、缩放与时间过渡",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Npc（9 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "Npc_SetScale",
+    "category": "NPC 行为与社交",
+    "functionGroupId": "npc",
+    "functionRole": "NPC 身高、缩放与时间过渡",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "Npc_SetScale 的原默认值、继承初始化及 5 个序列化字段变体；原注册字段 4 项。"
+      },
+      {
+        "name": "NPC 身高、缩放与时间过渡",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Npc（9 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Npc",
+        "references": 9
+      }
+    ],
+    "rttiWorkingGroup": "交互、事件与任务",
+    "role": "对象实例类型",
+    "instances": 9,
+    "nestedInstances": 0,
+    "referenceFields": 9,
+    "declaredLevels": 4,
+    "levels": [
+      {
+        "level": "HubReveal",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Cave",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_NestAndKeeper",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Village",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "height",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "npc",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "scale",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "time",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100cd07d0",
+    "nativeRegisteredFields": [
+      {
+        "name": "npc",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP3NpcERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x1004c99f0",
+        "propertyAddress": "0x100ccee60"
+      },
+      {
+        "name": "height",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 64,
+        "registrationFunction": "0x1004c99f0",
+        "propertyAddress": "0x100cceeb0"
+      },
+      {
+        "name": "scale",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 68,
+        "registrationFunction": "0x1004c99f0",
+        "propertyAddress": "0x100ccef00"
+      },
+      {
+        "name": "time",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 72,
+        "registrationFunction": "0x1004c99f0",
+        "propertyAddress": "0x100ccef50"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 4 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "HubReveal:n862",
+      "level": "HubReveal",
+      "nodeId": 862,
+      "name": "BstNode_2529558598",
+      "className": "Npc_SetScale",
+      "classIndex": 84,
+      "sourceOffset": 174702,
+      "sourceLength": 40,
+      "sourceSha256": "afff77514a120dffa4f6eaf8ad0300670c991a5d1a6b87278fde4ad8b4885dc4",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n862/p3",
+          "fieldName": "npc",
+          "target": "HubReveal:n626",
+          "targetNodeId": 626,
+          "offset": 174734
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n257",
+      "level": "Prairie_Cave",
+      "nodeId": 257,
+      "name": "BstNode_2504654880",
+      "className": "Npc_SetScale",
+      "classIndex": 37,
+      "sourceOffset": 83697,
+      "sourceLength": 40,
+      "sourceSha256": "e66813faa23cbdc5ecf6846e9f9b1ddf90c07c53900bc0d5b679f3c44552a4f0",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n257/p3",
+          "fieldName": "npc",
+          "target": "Prairie_Cave:n228",
+          "targetNodeId": 228,
+          "offset": 83729
+        }
+      ],
+      "incomingReferenceCount": 4,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n1132",
+      "level": "Prairie_Cave",
+      "nodeId": 1132,
+      "name": "BstNode_2504654947",
+      "className": "Npc_SetScale",
+      "classIndex": 37,
+      "sourceOffset": 286073,
+      "sourceLength": 40,
+      "sourceSha256": "8b30b137a55da869f4969249a73279488078fc8ea4ca4443d918b9504935d0c6",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1132/p3",
+          "fieldName": "npc",
+          "target": "Prairie_Cave:n228",
+          "targetNodeId": 228,
+          "offset": 286105
+        }
+      ],
+      "incomingReferenceCount": 4,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n325",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 325,
+      "name": "BstNode_2504654999",
+      "className": "Npc_SetScale",
+      "classIndex": 40,
+      "sourceOffset": 96419,
+      "sourceLength": 40,
+      "sourceSha256": "987a5bcd57ed3a3fe605ca027494a270ea681ba75d6a4ef9d55f732c4a4c869f",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n325/p3",
+          "fieldName": "npc",
+          "target": "Prairie_NestAndKeeper:n820",
+          "targetNodeId": 820,
+          "offset": 96451
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n895",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 895,
+      "name": "BstNode_2504655001",
+      "className": "Npc_SetScale",
+      "classIndex": 40,
+      "sourceOffset": 221066,
+      "sourceLength": 40,
+      "sourceSha256": "31523ee6d54da54a6ce8671aab7a51ddfd1bdba08ed3ba00fbb2af9e8b75e365",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n895/p3",
+          "fieldName": "npc",
+          "target": "Prairie_NestAndKeeper:n347",
+          "targetNodeId": 347,
+          "offset": 221098
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1126",
+      "level": "Prairie_Village",
+      "nodeId": 1126,
+      "name": "BstNode_2504654861",
+      "className": "Npc_SetScale",
+      "classIndex": 85,
+      "sourceOffset": 214775,
+      "sourceLength": 40,
+      "sourceSha256": "3b922cd295dd49dfbac731b7b1a9c80174224ddc3217b31ce3385d12741c75c9",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1126/p3",
+          "fieldName": "npc",
+          "target": "Prairie_Village:n2427",
+          "targetNodeId": 2427,
+          "offset": 214807
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1162",
+      "level": "Prairie_Village",
+      "nodeId": 1162,
+      "name": "BstNode_2504655087",
+      "className": "Npc_SetScale",
+      "classIndex": 85,
+      "sourceOffset": 219779,
+      "sourceLength": 40,
+      "sourceSha256": "49b874972b19ef4bf266cdb36853fde34819f321727b52f570ef90ecbdf620f4",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1162/p3",
+          "fieldName": "npc",
+          "target": "Prairie_Village:n351",
+          "targetNodeId": 351,
+          "offset": 219811
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1541",
+      "level": "Prairie_Village",
+      "nodeId": 1541,
+      "name": "BstNode_2504654990",
+      "className": "Npc_SetScale",
+      "classIndex": 85,
+      "sourceOffset": 276628,
+      "sourceLength": 40,
+      "sourceSha256": "272be538a37ad4580731b8409f45b758a711d941595e1f88e85d785732b220e4",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1541/p3",
+          "fieldName": "npc",
+          "target": "Prairie_Village:n2427",
+          "targetNodeId": 2427,
+          "offset": 276660
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2870",
+      "level": "Prairie_Village",
+      "nodeId": 2870,
+      "name": "BstNode_2504655079",
+      "className": "Npc_SetScale",
+      "classIndex": 85,
+      "sourceOffset": 488630,
+      "sourceLength": 40,
+      "sourceSha256": "aa4bda5748d6b3b3d79212ae31c1e49052a16ff1ec27a2768f87a2628a298a34",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2870/p3",
+          "fieldName": "npc",
+          "target": "Prairie_Village:n351",
+          "targetNodeId": 351,
+          "offset": 488662
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "HubReveal",
+      "path": "Levels/HubReveal/Objects.level.bin",
+      "sha256": "4b32f12bbe4b246cde9ca1e4ba0982000ff108359865bb4340aba640e609861b",
+      "bytes": 289438,
+      "nodes": 1829,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/HubReveal.json",
+      "markdown": "Objects对象清单/HubReveal.md"
+    },
+    {
+      "level": "Prairie_Cave",
+      "path": "Levels/Prairie_Cave/Objects.level.bin",
+      "sha256": "675a2256e24f8c4b16540cee6a5cd2b7647ff2fb495724a8bf596717ca39d944",
+      "bytes": 466340,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Cave.json",
+      "markdown": "Objects对象清单/Prairie_Cave.md"
+    },
+    {
+      "level": "Prairie_NestAndKeeper",
+      "path": "Levels/Prairie_NestAndKeeper/Objects.level.bin",
+      "sha256": "5eabe877e07c84e5f9270035aaab73fa20144c87f6e9136e5285dbaff3f85b7a",
+      "bytes": 239403,
+      "nodes": 1077,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_NestAndKeeper.json",
+      "markdown": "Objects对象清单/Prairie_NestAndKeeper.md"
+    },
+    {
+      "level": "Prairie_Village",
+      "path": "Levels/Prairie_Village/Objects.level.bin",
+      "sha256": "4656296b54402016b59b894b4653fbdc71e106a21e0900294f73f2c7b7112385",
+      "bytes": 549989,
+      "nodes": 3724,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Village.json",
+      "markdown": "Objects对象清单/Prairie_Village.md"
+    }
+  ]
+}

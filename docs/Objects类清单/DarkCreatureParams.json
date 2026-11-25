@@ -1,0 +1,901 @@
+{
+  "className": "DarkCreatureParams",
+  "functionGroup": "生物、群体与 AI",
+  "functionRole": "暗生物巡逻轨道与计时参数",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "partial",
+      "description": "DarkCreatureParams 的原默认值、继承初始化及 7 个序列化字段变体；原注册字段 7 项。"
+    },
+    {
+      "name": "暗生物巡逻轨道与计时参数",
+      "status": "pending",
+      "description": "原普通构造、共享保存字段和已定位的池式创建／启用子链已有实现与核验；实际资源装载、AI、骨骼动画、碰撞／效果和动态绘制及完整生命周期继续待接。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Rail（26 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "DarkCreatureParams",
+    "category": "生物、群体与 AI",
+    "functionGroupId": "creatures",
+    "functionRole": "暗生物巡逻轨道与计时参数",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "partial",
+        "description": "DarkCreatureParams 的原默认值、继承初始化及 7 个序列化字段变体；原注册字段 7 项。"
+      },
+      {
+        "name": "暗生物巡逻轨道与计时参数",
+        "status": "pending",
+        "description": "原普通构造、共享保存字段和已定位的池式创建／启用子链已有实现与核验；实际资源装载、AI、骨骼动画、碰撞／效果和动态绘制及完整生命周期继续待接。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Rail（26 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Rail",
+        "references": 26
+      }
+    ],
+    "rttiWorkingGroup": "玩家、角色与动画",
+    "role": "对象实例类型",
+    "instances": 13,
+    "nestedInstances": 0,
+    "referenceFields": 26,
+    "declaredLevels": 3,
+    "levels": [
+      {
+        "level": "DuskGraveyard",
+        "nodes": 6,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DuskMid",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Storm",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "canMoveBackwardsAlongRail",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "cooldownRail",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "cooldownTime",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "networked",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "patrolRail",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "startInRest",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "waitBeforeEyeOpenTime",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100c9df70",
+    "nativeRegisteredFields": [
+      {
+        "name": "startInRest",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 4,
+        "registrationFunction": "0x100274760",
+        "propertyAddress": "0x100c9d7f0"
+      },
+      {
+        "name": "canMoveBackwardsAlongRail",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 5,
+        "registrationFunction": "0x100274760",
+        "propertyAddress": "0x100c9d840"
+      },
+      {
+        "name": "networked",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 6,
+        "registrationFunction": "0x100274760",
+        "propertyAddress": "0x100c9d890"
+      },
+      {
+        "name": "cooldownTime",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 8,
+        "registrationFunction": "0x100274760",
+        "propertyAddress": "0x100c9d8e0"
+      },
+      {
+        "name": "waitBeforeEyeOpenTime",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 12,
+        "registrationFunction": "0x100274760",
+        "propertyAddress": "0x100c9d930"
+      },
+      {
+        "name": "patrolRail",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP4RailERK8MetaTypev",
+        "nativeOffset": 16,
+        "registrationFunction": "0x100274760",
+        "propertyAddress": "0x100c9d980"
+      },
+      {
+        "name": "cooldownRail",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP4RailERK8MetaTypev",
+        "nativeOffset": 24,
+        "registrationFunction": "0x100274760",
+        "propertyAddress": "0x100c9d9d0"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 3,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [
+      "src/core/environment-object-state.ts",
+      "src/core/creature-construction-runtime.ts",
+      "src/core/creature-runtime.ts"
+    ],
+    "evidence": [
+      "docs/生物骨骼动画续接.md",
+      "docs/creature-construction.json",
+      "docs/creature-construction-oracle.json",
+      "docs/creature-kernel-oracle.json",
+      "docs/objects-nature-audit.json"
+    ],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 7 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "partial",
+        "note": "原普通构造、共享保存字段和已定位的池式创建／启用子链已有实现与核验；实际资源装载、AI、骨骼动画、碰撞／效果和动态绘制及完整生命周期继续待接。",
+        "evidence": [
+          "docs/生物骨骼动画续接.md",
+          "docs/creature-construction.json",
+          "docs/creature-construction-oracle.json",
+          "docs/creature-kernel-oracle.json",
+          "docs/objects-nature-audit.json"
+        ]
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "partial",
+        "note": "原普通构造、共享保存字段和已定位的池式创建／启用子链已有实现与核验；实际资源装载、AI、骨骼动画、碰撞／效果和动态绘制及完整生命周期继续待接。",
+        "evidence": [
+          "docs/生物骨骼动画续接.md",
+          "docs/creature-construction.json",
+          "docs/creature-construction-oracle.json",
+          "docs/creature-kernel-oracle.json",
+          "docs/objects-nature-audit.json"
+        ]
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "partial",
+        "note": "原普通构造、共享保存字段和已定位的池式创建／启用子链已有实现与核验；实际资源装载、AI、骨骼动画、碰撞／效果和动态绘制及完整生命周期继续待接。",
+        "evidence": [
+          "docs/生物骨骼动画续接.md",
+          "docs/creature-construction.json",
+          "docs/creature-construction-oracle.json",
+          "docs/creature-kernel-oracle.json",
+          "docs/objects-nature-audit.json"
+        ]
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "原普通构造、共享保存字段和已定位的池式创建／启用子链已有实现与核验；实际资源装载、AI、骨骼动画、碰撞／效果和动态绘制及完整生命周期继续待接。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "DuskGraveyard:n215",
+      "level": "DuskGraveyard",
+      "nodeId": 215,
+      "name": "BstNode_1475018756",
+      "className": "DarkCreatureParams",
+      "classIndex": 27,
+      "sourceOffset": 74601,
+      "sourceLength": 42,
+      "sourceSha256": "bdabbdc92b7231257e7a50b8c28d6c7b27b03982d7383c05cea6eff96ca2b8a4",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n215/p2",
+          "fieldName": "cooldownRail",
+          "target": "DuskGraveyard:n1245",
+          "targetNodeId": 1245,
+          "offset": 74629
+        },
+        {
+          "fieldId": "n215/p5",
+          "fieldName": "patrolRail",
+          "target": "DuskGraveyard:n805",
+          "targetNodeId": 805,
+          "offset": 74638
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n373",
+      "level": "DuskGraveyard",
+      "nodeId": 373,
+      "name": "BstNode_480",
+      "className": "DarkCreatureParams",
+      "classIndex": 27,
+      "sourceOffset": 113290,
+      "sourceLength": 35,
+      "sourceSha256": "ae1cef008e5f28ae57b2fb17db0b9fef74a7bebe2b2d37f9f7e4f78cf6842829",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n373/p2",
+          "fieldName": "cooldownRail",
+          "target": "DuskGraveyard:n415",
+          "targetNodeId": 415,
+          "offset": 113311
+        },
+        {
+          "fieldId": "n373/p5",
+          "fieldName": "patrolRail",
+          "target": "DuskGraveyard:n553",
+          "targetNodeId": 553,
+          "offset": 113320
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n1053",
+      "level": "DuskGraveyard",
+      "nodeId": 1053,
+      "name": "BstNode_2345993242",
+      "className": "DarkCreatureParams",
+      "classIndex": 27,
+      "sourceOffset": 274970,
+      "sourceLength": 42,
+      "sourceSha256": "19aefb5869d5d41a838f26635477ad06234faa22ad903bb3a2ff49ac109515ae",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1053/p2",
+          "fieldName": "cooldownRail",
+          "target": "DuskGraveyard:n1226",
+          "targetNodeId": 1226,
+          "offset": 274998
+        },
+        {
+          "fieldId": "n1053/p5",
+          "fieldName": "patrolRail",
+          "target": "DuskGraveyard:n1316",
+          "targetNodeId": 1316,
+          "offset": 275007
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n1055",
+      "level": "DuskGraveyard",
+      "nodeId": 1055,
+      "name": "BstNode_1475018760",
+      "className": "DarkCreatureParams",
+      "classIndex": 27,
+      "sourceOffset": 275151,
+      "sourceLength": 42,
+      "sourceSha256": "a5bceb3e801b655b08fcd6fa16a31e1a1c999b21bb3416975effdb238bff6f17",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1055/p2",
+          "fieldName": "cooldownRail",
+          "target": "DuskGraveyard:n1043",
+          "targetNodeId": 1043,
+          "offset": 275179
+        },
+        {
+          "fieldId": "n1055/p5",
+          "fieldName": "patrolRail",
+          "target": "DuskGraveyard:n640",
+          "targetNodeId": 640,
+          "offset": 275188
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n1063",
+      "level": "DuskGraveyard",
+      "nodeId": 1063,
+      "name": "BstNode_1475018759",
+      "className": "DarkCreatureParams",
+      "classIndex": 27,
+      "sourceOffset": 276581,
+      "sourceLength": 42,
+      "sourceSha256": "e6f19e84d009da19ffd583e5486fb03682022f1ad8f6539e4765dd402abfb80b",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1063/p2",
+          "fieldName": "cooldownRail",
+          "target": "DuskGraveyard:n594",
+          "targetNodeId": 594,
+          "offset": 276609
+        },
+        {
+          "fieldId": "n1063/p5",
+          "fieldName": "patrolRail",
+          "target": "DuskGraveyard:n870",
+          "targetNodeId": 870,
+          "offset": 276618
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n1079",
+      "level": "DuskGraveyard",
+      "nodeId": 1079,
+      "name": "BstNode_1475018758",
+      "className": "DarkCreatureParams",
+      "classIndex": 27,
+      "sourceOffset": 280461,
+      "sourceLength": 42,
+      "sourceSha256": "c5b76aabe287917cdfee7865e3835f12fdf25ed346458488026bd72eea5e14f0",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1079/p2",
+          "fieldName": "cooldownRail",
+          "target": "DuskGraveyard:n1280",
+          "targetNodeId": 1280,
+          "offset": 280489
+        },
+        {
+          "fieldId": "n1079/p5",
+          "fieldName": "patrolRail",
+          "target": "DuskGraveyard:n275",
+          "targetNodeId": 275,
+          "offset": 280498
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n290",
+      "level": "DuskMid",
+      "nodeId": 290,
+      "name": "BstNode_2345992647",
+      "className": "DarkCreatureParams",
+      "classIndex": 37,
+      "sourceOffset": 72315,
+      "sourceLength": 34,
+      "sourceSha256": "8a4b2e4d1ccb29b2489578bbee87b83b94735855734a77b748c8daecc9eb73e9",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n290/p1",
+          "fieldName": "cooldownRail",
+          "target": "DuskMid:n2",
+          "targetNodeId": 2,
+          "offset": 72339
+        },
+        {
+          "fieldId": "n290/p3",
+          "fieldName": "patrolRail",
+          "target": "DuskMid:n855",
+          "targetNodeId": 855,
+          "offset": 72344
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n586",
+      "level": "DuskMid",
+      "nodeId": 586,
+      "name": "BstNode_2345992698",
+      "className": "DarkCreatureParams",
+      "classIndex": 37,
+      "sourceOffset": 126599,
+      "sourceLength": 34,
+      "sourceSha256": "47dfa2b263ca718bf8c43a7a0833a802cb30b35bf7912038277ad7fa16c68d91",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n586/p1",
+          "fieldName": "cooldownRail",
+          "target": "DuskMid:n992",
+          "targetNodeId": 992,
+          "offset": 126623
+        },
+        {
+          "fieldId": "n586/p3",
+          "fieldName": "patrolRail",
+          "target": "DuskMid:n466",
+          "targetNodeId": 466,
+          "offset": 126628
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n712",
+      "level": "DuskMid",
+      "nodeId": 712,
+      "name": "BstNode_2345992675",
+      "className": "DarkCreatureParams",
+      "classIndex": 37,
+      "sourceOffset": 152382,
+      "sourceLength": 34,
+      "sourceSha256": "fabdbb59e36592fd50828a0250c13ab6449ccd56380dfd88f902f2803349e0bd",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n712/p1",
+          "fieldName": "cooldownRail",
+          "target": "DuskMid:n21",
+          "targetNodeId": 21,
+          "offset": 152406
+        },
+        {
+          "fieldId": "n712/p3",
+          "fieldName": "patrolRail",
+          "target": "DuskMid:n218",
+          "targetNodeId": 218,
+          "offset": 152411
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n28",
+      "level": "Storm",
+      "nodeId": 28,
+      "name": "BstNode_2529559046",
+      "className": "DarkCreatureParams",
+      "classIndex": 12,
+      "sourceOffset": 28471,
+      "sourceLength": 34,
+      "sourceSha256": "157d1b332e2077f258357a9d57cbe265b7edd6bc9a26e6d2dde4dbe107254bb2",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n28/p1",
+          "fieldName": "cooldownRail",
+          "target": "Storm:n1417",
+          "targetNodeId": 1417,
+          "offset": 28495
+        },
+        {
+          "fieldId": "n28/p3",
+          "fieldName": "patrolRail",
+          "target": "Storm:n1417",
+          "targetNodeId": 1417,
+          "offset": 28500
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n612",
+      "level": "Storm",
+      "nodeId": 612,
+      "name": "BstNode_2529559051",
+      "className": "DarkCreatureParams",
+      "classIndex": 12,
+      "sourceOffset": 132740,
+      "sourceLength": 34,
+      "sourceSha256": "844adae44eee5dc8f822bf6a4d8c1beb3f0c0699615961a0b2b99a8ab9c2caa0",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n612/p1",
+          "fieldName": "cooldownRail",
+          "target": "Storm:n140",
+          "targetNodeId": 140,
+          "offset": 132764
+        },
+        {
+          "fieldId": "n612/p3",
+          "fieldName": "patrolRail",
+          "target": "Storm:n140",
+          "targetNodeId": 140,
+          "offset": 132769
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n720",
+      "level": "Storm",
+      "nodeId": 720,
+      "name": "BstNode_2529559610",
+      "className": "DarkCreatureParams",
+      "classIndex": 12,
+      "sourceOffset": 151758,
+      "sourceLength": 34,
+      "sourceSha256": "7591887e9fffcdce05fdfe79f0f0af76477daa44dbe4d4e9c3cb6c1ab11193c4",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n720/p1",
+          "fieldName": "cooldownRail",
+          "target": "Storm:n1334",
+          "targetNodeId": 1334,
+          "offset": 151782
+        },
+        {
+          "fieldId": "n720/p3",
+          "fieldName": "patrolRail",
+          "target": "Storm:n1334",
+          "targetNodeId": 1334,
+          "offset": 151787
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n1526",
+      "level": "Storm",
+      "nodeId": 1526,
+      "name": "BstNode_2529559883",
+      "className": "DarkCreatureParams",
+      "classIndex": 12,
+      "sourceOffset": 291573,
+      "sourceLength": 34,
+      "sourceSha256": "765a28b26bd21ddfd728813d9978a1582378303dac58142fcb9f7a0ae11ce5a6",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1526/p1",
+          "fieldName": "cooldownRail",
+          "target": "Storm:n137",
+          "targetNodeId": 137,
+          "offset": 291597
+        },
+        {
+          "fieldId": "n1526/p3",
+          "fieldName": "patrolRail",
+          "target": "Storm:n137",
+          "targetNodeId": 137,
+          "offset": 291602
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "DuskGraveyard",
+      "path": "Levels/DuskGraveyard/Objects.level.bin",
+      "sha256": "128b30dcbe40b68e68fc25d195b68dc39f897259453c02612049ccd37a90ffb4",
+      "bytes": 424333,
+      "nodes": 1791,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DuskGraveyard.json",
+      "markdown": "Objects对象清单/DuskGraveyard.md"
+    },
+    {
+      "level": "DuskMid",
+      "path": "Levels/DuskMid/Objects.level.bin",
+      "sha256": "899ca33226dabd04afecfe7888750938ff4e460cb586603364e150591e9cbda5",
+      "bytes": 234288,
+      "nodes": 1268,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DuskMid.json",
+      "markdown": "Objects对象清单/DuskMid.md"
+    },
+    {
+      "level": "Storm",
+      "path": "Levels/Storm/Objects.level.bin",
+      "sha256": "4be187f31f1ef86611831abeb45ed9c1deff5e925f3bae80a6be49af85fa52bd",
+      "bytes": 324849,
+      "nodes": 1954,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Storm.json",
+      "markdown": "Objects对象清单/Storm.md"
+    }
+  ]
+}

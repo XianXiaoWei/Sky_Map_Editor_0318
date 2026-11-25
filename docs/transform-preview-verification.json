@@ -1,0 +1,190 @@
+{
+  "dateUTC": "2026-11-19",
+  "passed": true,
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "projectTests": {
+    "tests": 344,
+    "passed": 344,
+    "failed": 0,
+    "log": "/root/sky-research/transform-preview-tests.log"
+  },
+  "typecheck": {
+    "passed": true,
+    "log": "/root/sky-research/transform-preview-typecheck.log"
+  },
+  "build": {
+    "passed": true,
+    "log": "/root/sky-research/transform-preview-build.log"
+  },
+  "classProgress": {
+    "levels": 33,
+    "totalNodes": 49824,
+    "nodeClasses": 280,
+    "declaredClasses": 283,
+    "nestedOnlyClasses": 0,
+    "declarationOnlyClasses": 3,
+    "references": 60016,
+    "brokenReferences": 0,
+    "coreSubchainVerifiedClasses": 26,
+    "completeRuntimeClasses": 0,
+    "completedCheckpoints": 856,
+    "totalCheckpoints": 2830,
+    "meanClassCheckpointPercent": 30.25,
+    "histogram": {
+      "20": 19,
+      "30": 238,
+      "40": 26
+    }
+  },
+  "completeOriginalGameRuntime": false,
+  "referenceChanged": false,
+  "releaseRepackaged": false,
+  "availability": {
+    "levels": 33,
+    "total": 317,
+    "available": 241,
+    "blocked": {
+      "完成事件链尚未接入地图运行": 15,
+      "Timeline 调度尚未接入": 3,
+      "拖动音效尚未接入地图运行": 52,
+      "LensFlair 变换接口尚未接入": 3,
+      "CandleObject 变换接口尚未接入": 2,
+      "Star 变换接口尚未接入": 1
+    }
+  },
+  "focusedTests": {
+    "tests": 3,
+    "passed": 3,
+    "failed": 0,
+    "log": "/root/sky-research/transform-preview-focused.log"
+  },
+  "previewMatrixRegression": {
+    "passed": true,
+    "realRoots": 11,
+    "cases": [
+      {
+        "level": "CandleSpace",
+        "id": 80,
+        "frames": 8
+      },
+      {
+        "level": "CandleSpace",
+        "id": 327,
+        "frames": 8
+      },
+      {
+        "level": "CandleSpaceEnd",
+        "id": 28,
+        "frames": 8
+      },
+      {
+        "level": "CandleSpaceEnd",
+        "id": 184,
+        "frames": 8
+      },
+      {
+        "level": "CandleSpaceEnd",
+        "id": 252,
+        "frames": 8
+      },
+      {
+        "level": "CandleSpaceEnd",
+        "id": 370,
+        "frames": 8
+      },
+      {
+        "level": "CandleSpaceEnd",
+        "id": 422,
+        "frames": 8
+      },
+      {
+        "level": "CandleSpaceEnd",
+        "id": 463,
+        "frames": 8
+      },
+      {
+        "level": "CandleSpaceEnd",
+        "id": 464,
+        "frames": 8
+      },
+      {
+        "level": "CandleSpaceEnd",
+        "id": 578,
+        "frames": 8
+      },
+      {
+        "level": "Dawn",
+        "id": 156,
+        "frames": 8
+      }
+    ],
+    "fixture": "tests/fixtures/transform-preview-real.json.gz",
+    "expectedSource": "Whole native TransformObject/LevelMesh fixture hashes checked before extracting matrices. This is a coordinator regression, not additional independent machine-code coverage.",
+    "matrixTolerance": "2e-4 + abs(expected)*1e-6",
+    "browserMathBitEquivalentToNative": false
+  },
+  "editorUi": {
+    "passed": true,
+    "checks": [
+      "Real CandleSpace #327 runs recovered TransformObject dispatch/update and updates its referenced scene matrix",
+      "Pause freezes original elapsed/progress and object transforms",
+      "Stop restores original pose and playback leaves Objects and meshes clean",
+      "Unsupported real drag-sound chain is visibly blocked before any playback",
+      "Mode/map changes clear playback state and targets without renderer errors or file edits"
+    ],
+    "scope": "Real CandleSpace and Dawn Objects TransformObject selected in Electron/Vulkan editor. Recovered finite update and single-event dispatch render editor matrices. Explicit selection/isolated allocation/browser math/pre-binding null Model; full original scene/model/GPU/collision/audio not established.",
+    "windowsTested": false,
+    "moving": {
+      "id": 327,
+      "running": true,
+      "paused": false,
+      "progress": 0.9665317535400391,
+      "elapsed": 0.468500018119812,
+      "objects": [
+        {
+          "id": 89,
+          "matrix": [
+            0.9993059635162354,
+            0,
+            -0.03728608787059784,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.03728608787059784,
+            0,
+            0.9993059635162354,
+            0,
+            -5.138798236846924,
+            -4.9982709884643555,
+            0.9583942294120789,
+            1
+          ]
+        }
+      ],
+      "error": null
+    },
+    "report": "docs/transform-object-preview-smoke.json",
+    "screenshot": "docs/transform-object-map-preview.png",
+    "log": "/root/sky-research/transform-preview-smoke.log"
+  },
+  "originalKernelReports": [
+    "docs/transform-object-oracle.json",
+    "docs/transform-object-level-mesh-oracle.json",
+    "docs/level-mesh-oracle.json"
+  ],
+  "sourceSha256": {
+    "docs/transform-object-preview-smoke.json": "d77f174238e451326c4dc6b2646bb67a19c94251cb0d33a06add7cb9453db4bd",
+    "docs/transform-preview-availability.json": "b0c2df2240e853de4dd0fe83066e1ea3f247171fe125193ea9fa58373b24932a",
+    "src/core/transform-object-preview.ts": "978b67e2eedc5d88843f66ac43058cb938eccb251df0b2e19c6242e833658a2b",
+    "src/renderer/app.ts": "8be740f9e2fc2f2f2fa999c8d3225bdb27ca5f91b3be1446711a6fd2d3410634",
+    "tests/fixtures/transform-preview-real.json.gz": "78dad04a2b8f966be69edf0b955b637cb5784127d5aa63fffbf582217e01cecf",
+    "tests/transform-object-preview.test.ts": "e74efef032aa0e195ea0e170a28771ccaa15e412a4cfeaa823cfbef21e9bbe5b",
+    "tools/transform-object-preview-smoke.mjs": "320335b08ebeaedfa337753172afb42da27d8b6f6676a555d4cd1412aa1bcee2",
+    "tools/transform-preview-fixture.ts": "8e26dc3626edc0a72d2e1d8576bf1e969808897eb194996d66b7373ce172049a"
+  },
+  "fullOriginalSceneAcceptance": 0,
+  "scope": "Explicit finite TransformObject editor playback using recovered update, single Event dispatch and Marker/LevelMesh matrix kernels. Prepared null original Model pointers render existing editor meshes; serialized fields, isolated allocation, category lookup and browser math are preview inputs. Pause, restore, edits, mode/map cleanup and clean serialized files verified in Electron/Vulkan. Candidate availability is not full class/scene acceptance.",
+  "next": "Complete Model creation/LevelMesh binding; finish-event dispatch, Timeline, audio and collision scene integration."
+}

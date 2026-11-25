@@ -1,0 +1,66 @@
+{
+  "passed": true,
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "functions": {
+    "FishV2.AI": {
+      "start": "0x100335a40",
+      "end": "0x1003370c0",
+      "wholeFunction": true,
+      "codeSha256": "447dda66d947f2aa5070ef87b5d629e5bc155fc957e7ebbd904956d7ddcd3969",
+      "assembly": "evidence/fishv2-ai.asm",
+      "instructions": 1085,
+      "codeEnd": "0x1003370a4",
+      "switchTableHex": "0af0ffff1ff5ffff74f0ffffe5f6ffff3ff4ffff",
+      "trailingPaddingHex": "0f1f840000000000"
+    },
+    "Steering.Pursuit": {
+      "start": "0x10062f660",
+      "end": "0x10062f710",
+      "wholeFunction": true,
+      "codeSha256": "772a4d0bed3f6f04a9b22a1136a7b37fb5321ba18008914e7637ea0b3921343c",
+      "assembly": "evidence/steering-pursuit.asm",
+      "instructions": 37
+    },
+    "Steering.Avoidance": {
+      "start": "0x10062e860",
+      "end": "0x10062e8f0",
+      "wholeFunction": true,
+      "codeSha256": "c688344670d8e13078e5cfd99d81a1078e515035ade88742a6b7c143e81c4500",
+      "assembly": "evidence/steering-avoidance.asm",
+      "instructions": 35
+    },
+    "FishV2.NeighborFilter": {
+      "start": "0x100338570",
+      "end": "0x1003385f0",
+      "wholeFunction": true,
+      "codeSha256": "c5730a3e01e78343422e8bec9e2a09765e5d825b55bc6a61dfd30984a0d8f28c",
+      "assembly": "evidence/fishv2-neighborfilter.asm",
+      "instructions": 37
+    },
+    "FishV2.FlockFilter": {
+      "start": "0x1003385f0",
+      "end": "0x100338640",
+      "wholeFunction": true,
+      "codeSha256": "6aeeeba0f1d29999d0efc5634ae49bf94e46a5086451de71675b004e5932a82a",
+      "assembly": "evidence/fishv2-flockfilter.asm",
+      "instructions": 24
+    }
+  },
+  "cases": 1460,
+  "comparedCases": 1460,
+  "caseBreakdown": {
+    "0": 859,
+    "1": 58,
+    "2": 63,
+    "3": 8,
+    "4": 8,
+    "5": 140,
+    "6": 294,
+    "7": 30
+  },
+  "comparedBytes": 223247120,
+  "serviceCalls": 49770,
+  "nativeArithmeticProbes": 16,
+  "scope": "Whole original FishV2.AI with all five switch branches and explicit caller/private Marker velocity W. Full caller arena and ordered world, metadata, rail, Mote, particle/audio, animation and player/resource boundaries compared. Original asinf/sincos and movement libm results are recorded/replayed. Whole Pursuit, accumulating Avoidance and both Fish predicates are separately compared. Production Update with actual AI/TurnDirection/Bank/MotionTransform, production AI with actual Begin/Avoidance/Flee/Seek/Pursuit/Wander/Flocking/End, and combined Update/AI/movement/steering are compared with unmodified native bodies. Flock integration covers empty and Actor neighborhoods with the original eight-call cache. Raw world avoidance/collision, metadata, Avatar/OBB/rail geometry and resource owners remain explicit services; real scene and complete creature acceptance remain pending.",
+  "failures": []
+}

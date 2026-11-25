@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "runtime": "linux arm64",
+  "windowsTested": false,
+  "checks": [
+    "Map grid lines, helper frames and floor grid off; selection outline defaults to actual mesh",
+    "Real Dawn mesh lines alter Vulkan packed-light pixels; hiding restores the fixed inspection scene exactly",
+    "Helper wireframes independently show and hide in Vulkan",
+    "Unchanged selected bounds do not trigger idle geometry uploads or frames",
+    "Terrain selection supports mesh, bounding box, hidden outline and focus while hidden",
+    "No game-resource edits or renderer page errors"
+  ],
+  "limitation": "Overlay UI and Vulkan presentation in fixed packed-light inspection; original animated material/temporal pixel parity is checked separately and game rendering remains incomplete."
+}

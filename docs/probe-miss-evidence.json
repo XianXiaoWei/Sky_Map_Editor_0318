@@ -1,0 +1,19 @@
+{
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "missSuffix": {
+    "start": "0x1000624fd",
+    "atmosphereCall": "0x100062598",
+    "sha256": "a9c285cb71523daebe7830aa7163c3e68932315f79372c4147fd1d7d59b1b39e",
+    "direction": "Y=max(0,Y), unordered Y becomes zero, equal negative zero retained. Normalize XYZ using original RSQRTSS and one float32 Newton step.",
+    "sceneBoundary": "Normal atmosphere path after the scene query misses; cheap-fog and surface-hit paths remain separate."
+  },
+  "display": {
+    "setter": "0x100a4738f",
+    "normalMetalPixelFormat": 81,
+    "normalFormat": "BGRA8Unorm_sRGB",
+    "extendedMetalPixelFormat": 115,
+    "extendedFormat": "RGBA16Float",
+    "normalTransfer": "Hardware linear-to-sRGB write. The viewport display transfer must remain enabled."
+  },
+  "scope": "Original supplied executable and complete disassembly evidence. Prepared miss suffix execution is independently checked in docs/probe-miss-native-check.json. No original scene/GPU/OS image parity claim."
+}

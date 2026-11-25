@@ -1,0 +1,48 @@
+0x1007bed50: push rbp
+0x1007bed51: mov rbp, rsp
+0x1007bed54: xor eax, eax
+0x1007bed56: dec edi
+0x1007bed58: cmp edi, 0x63
+0x1007bed5b: ja 0x1007bed72
+0x1007bed5d: lea rcx, [rip + 0x60]
+0x1007bed64: movsxd rdx, dword ptr [rcx + rdi*4]
+0x1007bed68: add rdx, rcx
+0x1007bed6b: jmp rdx
+0x1007bed6d: mov eax, 0x10
+0x1007bed72: pop rbp
+0x1007bed73: ret 
+0x1007bed74: mov eax, 4
+0x1007bed79: pop rbp
+0x1007bed7a: ret 
+0x1007bed7b: mov eax, 8
+0x1007bed80: pop rbp
+0x1007bed81: ret 
+0x1007bed82: mov eax, 0xc
+0x1007bed87: pop rbp
+0x1007bed88: ret 
+0x1007bed89: mov eax, 2
+0x1007bed8e: pop rbp
+0x1007bed8f: ret 
+0x1007bed90: mov eax, 4
+0x1007bed95: pop rbp
+0x1007bed96: ret 
+0x1007bed97: mov eax, 6
+0x1007bed9c: pop rbp
+0x1007bed9d: ret 
+0x1007bed9e: mov eax, 8
+0x1007beda3: pop rbp
+0x1007beda4: ret 
+0x1007beda5: mov eax, 0x24
+0x1007bedaa: pop rbp
+0x1007bedab: ret 
+0x1007bedac: mov eax, 0x12
+0x1007bedb1: pop rbp
+0x1007bedb2: ret 
+0x1007bedb3: mov eax, 0x40
+0x1007bedb8: pop rbp
+0x1007bedb9: ret 
+0x1007bedba: mov eax, 0x20
+0x1007bedbf: pop rbp
+0x1007bedc0: ret 
+0x1007bedc1: nop dword ptr [rax]
+0x1007bedc4: mov al, 0xff

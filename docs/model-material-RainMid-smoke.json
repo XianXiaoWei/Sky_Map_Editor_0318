@@ -1,0 +1,1928 @@
+{
+  "passed": true,
+  "level": "RainMid",
+  "scope": "Actual Electron Vulkan original GLSL/material-texture map viewport. Model and terrain probes/light grids/filtering are declared adapters. Not complete original Model, interaction or Metal/game image parity.",
+  "errors": [],
+  "images": [
+    "docs/model-material-RainMid.png",
+    "docs/model-material-RainMid-viewport.png",
+    "docs/model-material-RainMid-render.png"
+  ],
+  "nodeId": 227,
+  "label": "Darkshroom_A_01\nBstNode_2345992565",
+  "state": {
+    "dataset": {
+      "cameraMode": "editor",
+      "backend": "Vulkan",
+      "level": "RainMid",
+      "frameSequence": "5",
+      "cameraPosition": "[430.4247549179479,372.84128340595646,800.7006763919028]",
+      "cameraForward": "[-0.6281087071082564,-0.26171196129510677,-0.7327934916262993]",
+      "cameraProjection": "[2.0775685542046363,0,0,0,0,2.1445069205095586,0,0,0,0,-1.0000015625012209,-1,0,0,-0.10000007812506104,0]",
+      "cameraMatrix": "[0.7592566023652967,-2.7755575615628914e-17,-0.6507913734559684,0,-0.1703198867410978,0.9651460248662213,-0.19870653453128082,0,0.6281087071082564,0.26171196129510677,0.7327934916262993,0,430.4247549179479,372.84128340595646,800.7006763919028,1]",
+      "viewProjection": "[1.5774076416463938,-0.36525217581668834,-0.628109688528878,-0.6281087071082564,-2.883205555143981e-17,2.0697623296279017,-0.2617123702203658,-0.26171196129510677,-1.352063692839766,-0.42612753845280327,-0.7327946366170246,-0.7327934916262993,403.6430158203871,-273.27865679624784,954.5802958602922,954.67880425162]"
+    },
+    "status": "已打开 RainMid"
+  },
+  "viewport": {
+    "scope": "Original terrain/skirt GLSL, real packed geometry/material textures with declared gamma/mip handling and supported anisotropy (16x preview request), recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/MotionGen/MotionDilate/TemporalAa/Tonemap chain. PNG area-filtered mip generation and anisotropy strength remain preview adapters, not original exporter/Metal parity. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending. Resource models use original GLSL, packed float3/color/SNORM normals/half4 UV pairs and remapped baked lighting. Original Model construction, visibility, RenderList sorting, animations and full scene services remain open.",
+    "draws": 90,
+    "terrainDraws": 26,
+    "modelDraws": 64,
+    "modelBoundaries": [
+      {
+        "nodeId": 6,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 9,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 12,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 18,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 24,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 33,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 44,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 58,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 59,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 82,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 84,
+        "reason": "Uniform u_puddleSimNorm: 0 parameters"
+      },
+      {
+        "nodeId": 86,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 88,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 102,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 110,
+        "reason": "Uniform u_puddleSimNorm: 0 parameters"
+      },
+      {
+        "nodeId": 125,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 129,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 153,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 160,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 161,
+        "reason": "Uniform u_puddleSimNorm: 0 parameters"
+      },
+      {
+        "nodeId": 163,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 164,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 183,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 184,
+        "reason": "Uniform u_puddleSimNorm: 0 parameters"
+      },
+      {
+        "nodeId": 189,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 192,
+        "reason": "Uniform u_puddleSimNorm: 0 parameters"
+      },
+      {
+        "nodeId": 198,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 203,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 209,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 211,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 224,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 252,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 258,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 271,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 283,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 291,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 308,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 315,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 317,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 322,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 338,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 350,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 351,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 354,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 379,
+        "reason": "Uniform u_puddleSimNorm: 0 parameters"
+      },
+      {
+        "nodeId": 386,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 403,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 406,
+        "reason": "Uniform u_puddleSimNorm: 0 parameters"
+      },
+      {
+        "nodeId": 408,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 415,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 421,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 428,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 433,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 437,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 443,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 457,
+        "reason": "Uniform u_puddleSimNorm: 0 parameters"
+      },
+      {
+        "nodeId": 467,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 471,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 477,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 483,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 499,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 504,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 512,
+        "reason": "Uniform u_puddleSimNorm: 0 parameters"
+      },
+      {
+        "nodeId": 548,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 558,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 585,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 586,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 588,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 591,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 594,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 599,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 603,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 610,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 615,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 629,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 647,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 655,
+        "reason": "Uniform u_puddleSimNorm: 0 parameters"
+      },
+      {
+        "nodeId": 661,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 663,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 666,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 688,
+        "reason": "Uniform u_puddleSimNorm: 0 parameters"
+      },
+      {
+        "nodeId": 701,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 706,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 711,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 730,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 738,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 739,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 752,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 758,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 760,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 782,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 786,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 787,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 790,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 791,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 806,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 807,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 819,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 849,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 852,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 861,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 967,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 968,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 995,
+        "reason": "Uniform u_puddleSimNorm: 0 parameters"
+      },
+      {
+        "nodeId": 998,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1000,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1019,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1037,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1041,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1056,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1059,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1079,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1080,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1093,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1126,
+        "reason": "Uniform u_puddleSimNorm: 0 parameters"
+      },
+      {
+        "nodeId": 1127,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1131,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1132,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1149,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1159,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1178,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1195,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1201,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1207,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1208,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1217,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1222,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1260,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1269,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1276,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1310,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1342,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1368,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1398,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1400,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1406,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1412,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1429,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1454,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1457,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1472,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1479,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1489,
+        "reason": "Uniform u_puddleSimNorm: 0 parameters"
+      },
+      {
+        "nodeId": 1491,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1501,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1503,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1514,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1545,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1558,
+        "reason": "Uniform u_puddleSimNorm: 0 parameters"
+      },
+      {
+        "nodeId": 1571,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1573,
+        "reason": "Uniform u_puddleSimNorm: 0 parameters"
+      },
+      {
+        "nodeId": 1583,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1587,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1588,
+        "reason": "Uniform u_puddleSimNorm: 0 parameters"
+      },
+      {
+        "nodeId": 1599,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1600,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1605,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1607,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1615,
+        "reason": "Uniform u_puddleSimNorm: 0 parameters"
+      },
+      {
+        "nodeId": 1617,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1632,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1634,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1646,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1651,
+        "reason": "Uniform u_puddleSimNorm: 0 parameters"
+      },
+      {
+        "nodeId": 1659,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1671,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1695,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1701,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1709,
+        "reason": "Uniform u_puddleSimNorm: 0 parameters"
+      },
+      {
+        "nodeId": 1710,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1729,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1730,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1741,
+        "reason": "Uniform u_puddleSimNorm: 0 parameters"
+      },
+      {
+        "nodeId": 1753,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1771,
+        "reason": "Uniform u_puddleSimNorm: 0 parameters"
+      },
+      {
+        "nodeId": 1775,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1777,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1780,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1782,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1796,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1805,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1816,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1843,
+        "reason": "Uniform u_puddleSimNorm: 0 parameters"
+      },
+      {
+        "nodeId": 1864,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1911,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1917,
+        "reason": "Uniform u_puddleSimNorm: 0 parameters"
+      },
+      {
+        "nodeId": 1944,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1959,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 1991,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 2005,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 2023,
+        "reason": "Uniform u_puddleSimNorm: 0 parameters"
+      },
+      {
+        "nodeId": 2035,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 2058,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 2060,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 2061,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 2066,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 2069,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 2071,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 2075,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 2080,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 2084,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 2088,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 2090,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 2095,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 2100,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 2101,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 2104,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 2107,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 2109,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 2113,
+        "reason": "Uniform u_puddleSimNorm: 0 parameters"
+      },
+      {
+        "nodeId": 2114,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 2115,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 2117,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 2121,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 2122,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 2144,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 2146,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 2158,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 2160,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 2171,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 2173,
+        "reason": "Uniform u_puddleSimNorm: 0 parameters"
+      },
+      {
+        "nodeId": 2178,
+        "reason": "Uniform u_caustics: 0 parameters"
+      },
+      {
+        "nodeId": 2193,
+        "reason": "Uniform u_caustics: 0 parameters"
+      }
+    ],
+    "modelParameterBindings": [],
+    "modelBindings": [
+      {
+        "nodeId": 14,
+        "shader": "RockFaceShMesh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 1310
+      },
+      {
+        "nodeId": 61,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 198
+      },
+      {
+        "nodeId": 104,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 916
+      },
+      {
+        "nodeId": 115,
+        "shader": "RockFaceShMesh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 490
+      },
+      {
+        "nodeId": 154,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 152
+      },
+      {
+        "nodeId": 227,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 168
+      },
+      {
+        "nodeId": 245,
+        "shader": "RockFaceShMesh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 490
+      },
+      {
+        "nodeId": 248,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 606
+      },
+      {
+        "nodeId": 261,
+        "shader": "MeshShSdf",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 28
+      },
+      {
+        "nodeId": 288,
+        "shader": "RockFaceShMesh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 1310
+      },
+      {
+        "nodeId": 373,
+        "shader": "RockFaceShMesh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 490
+      },
+      {
+        "nodeId": 413,
+        "shader": "MeshShSl",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 12
+      },
+      {
+        "nodeId": 489,
+        "shader": "RockFaceShMesh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 1310
+      },
+      {
+        "nodeId": 525,
+        "shader": "MeshShSl",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 100
+      },
+      {
+        "nodeId": 589,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 168
+      },
+      {
+        "nodeId": 631,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 168
+      },
+      {
+        "nodeId": 636,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 168
+      },
+      {
+        "nodeId": 640,
+        "shader": "RockFaceShMesh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 490
+      },
+      {
+        "nodeId": 643,
+        "shader": "RockFaceShMesh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 1310
+      },
+      {
+        "nodeId": 693,
+        "shader": "RockFaceShMesh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 1310
+      },
+      {
+        "nodeId": 727,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 278
+      },
+      {
+        "nodeId": 763,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 1405
+      },
+      {
+        "nodeId": 772,
+        "shader": "RockFaceShMesh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 490
+      },
+      {
+        "nodeId": 777,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 168
+      },
+      {
+        "nodeId": 788,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 278
+      },
+      {
+        "nodeId": 887,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 1427
+      },
+      {
+        "nodeId": 892,
+        "shader": "MeshShSl",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 12
+      },
+      {
+        "nodeId": 904,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 168
+      },
+      {
+        "nodeId": 970,
+        "shader": "RockFaceShMesh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 1310
+      },
+      {
+        "nodeId": 984,
+        "shader": "MeshShSl",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 100
+      },
+      {
+        "nodeId": 987,
+        "shader": "MeshShSdf",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 68
+      },
+      {
+        "nodeId": 1015,
+        "shader": "MeshShSdf",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 28
+      },
+      {
+        "nodeId": 1043,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 118
+      },
+      {
+        "nodeId": 1069,
+        "shader": "RockFaceShMesh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 1310
+      },
+      {
+        "nodeId": 1070,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 168
+      },
+      {
+        "nodeId": 1088,
+        "shader": "MeshShSdf",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 28
+      },
+      {
+        "nodeId": 1266,
+        "shader": "MeshShSdf",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 110
+      },
+      {
+        "nodeId": 1298,
+        "shader": "MeshShSdf",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 28
+      },
+      {
+        "nodeId": 1348,
+        "shader": "RockFaceShMesh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 1310
+      },
+      {
+        "nodeId": 1419,
+        "shader": "MeshShSdf",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 36
+      },
+      {
+        "nodeId": 1443,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 168
+      },
+      {
+        "nodeId": 1480,
+        "shader": "RockFaceShMesh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 490
+      },
+      {
+        "nodeId": 1482,
+        "shader": "MeshShSl",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 100
+      },
+      {
+        "nodeId": 1803,
+        "shader": "MeshShSl",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 12
+      },
+      {
+        "nodeId": 1810,
+        "shader": "RockFaceShMesh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 490
+      },
+      {
+        "nodeId": 1840,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 168
+      },
+      {
+        "nodeId": 1872,
+        "shader": "MeshSl",
+        "group": "Opaque",
+        "baked": false,
+        "triangles": 12
+      },
+      {
+        "nodeId": 1894,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 250
+      },
+      {
+        "nodeId": 1941,
+        "shader": "RockFaceShMesh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 490
+      },
+      {
+        "nodeId": 1950,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 168
+      },
+      {
+        "nodeId": 2065,
+        "shader": "MeshShSl",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 100
+      },
+      {
+        "nodeId": 2092,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 152
+      },
+      {
+        "nodeId": 2128,
+        "shader": "MeshShSl",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 100
+      },
+      {
+        "nodeId": 2151,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 198
+      },
+      {
+        "nodeId": 174,
+        "shader": "ChamAlpha",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 376
+      },
+      {
+        "nodeId": 176,
+        "shader": "ChamAlpha",
+        "group": "Decal",
+        "baked": false,
+        "triangles": 180
+      },
+      {
+        "nodeId": 292,
+        "shader": "ChamAlpha",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 376
+      },
+      {
+        "nodeId": 423,
+        "shader": "AncestorEngine",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 100
+      },
+      {
+        "nodeId": 527,
+        "shader": "ChamAlpha",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 376
+      },
+      {
+        "nodeId": 679,
+        "shader": "AncestorEngine",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 100
+      },
+      {
+        "nodeId": 1003,
+        "shader": "AncestorEngine",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 100
+      },
+      {
+        "nodeId": 1721,
+        "shader": "ChamAlpha",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 376
+      },
+      {
+        "nodeId": 1749,
+        "shader": "ChamAlpha",
+        "group": "Decal",
+        "baked": false,
+        "triangles": 180
+      },
+      {
+        "nodeId": 2154,
+        "shader": "ChamAlpha",
+        "group": "Decal",
+        "baked": false,
+        "triangles": 180
+      }
+    ],
+    "shaders": [
+      "RockFaceSh",
+      "SandSh",
+      "SandRainSh",
+      "RockFaceShAlpha",
+      "SandShAlpha",
+      "SandRainShAlpha",
+      "RockFaceShAlphaSkirt",
+      "SandShAlphaSkirt",
+      "SandRainShAlphaSkirt",
+      "RockFaceShMesh",
+      "MeshSh",
+      "DarkStone",
+      "MeshShSdf",
+      "MeshShSl",
+      "MeshSl",
+      "ChamAlpha",
+      "AncestorEngine"
+    ],
+    "triangles": 190470,
+    "textures": [
+      "CliffSh",
+      "TileFloorSh",
+      "WallSh",
+      "WallBrickSh",
+      "CliffWetSh",
+      "WoodSh",
+      "Noise3Ch",
+      "UpNormal",
+      "StoneBase",
+      "StoneGrunge",
+      "White",
+      "StoneBaseSh",
+      "StoneRamp",
+      "Black",
+      "StoneGrunge2",
+      "Grates",
+      "GrayD1",
+      "Gray",
+      "StupaBell",
+      "StupaBellSh",
+      "Clear",
+      "BlueL1",
+      "GreenL2",
+      "OrangeL1",
+      "GrayL2",
+      "GrayL1"
+    ],
+    "samplerPolicy": "llvmpipe-trilinear",
+    "textureSampling": [
+      {
+        "name": "CliffSh",
+        "mipLevels": 10,
+        "anisotropy": 16,
+        "effectiveAnisotropy": 1,
+        "gamma": false
+      },
+      {
+        "name": "TileFloorSh",
+        "mipLevels": 10,
+        "anisotropy": 16,
+        "effectiveAnisotropy": 1,
+        "gamma": false
+      },
+      {
+        "name": "WallSh",
+        "mipLevels": 10,
+        "anisotropy": 16,
+        "effectiveAnisotropy": 1,
+        "gamma": false
+      },
+      {
+        "name": "WallBrickSh",
+        "mipLevels": 10,
+        "anisotropy": 16,
+        "effectiveAnisotropy": 1,
+        "gamma": false
+      },
+      {
+        "name": "CliffWetSh",
+        "mipLevels": 10,
+        "anisotropy": 16,
+        "effectiveAnisotropy": 1,
+        "gamma": false
+      },
+      {
+        "name": "WoodSh",
+        "mipLevels": 10,
+        "anisotropy": 16,
+        "effectiveAnisotropy": 1,
+        "gamma": false
+      },
+      {
+        "name": "Noise3Ch",
+        "mipLevels": 10,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": false
+      },
+      {
+        "name": "UpNormal",
+        "mipLevels": 1,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": false
+      },
+      {
+        "name": "StoneBase",
+        "mipLevels": 10,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": true
+      },
+      {
+        "name": "StoneGrunge",
+        "mipLevels": 11,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": true
+      },
+      {
+        "name": "White",
+        "mipLevels": 6,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": true
+      },
+      {
+        "name": "StoneBaseSh",
+        "mipLevels": 10,
+        "anisotropy": 16,
+        "effectiveAnisotropy": 1,
+        "gamma": false
+      },
+      {
+        "name": "StoneRamp",
+        "mipLevels": 1,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": true
+      },
+      {
+        "name": "Black",
+        "mipLevels": 6,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": true
+      },
+      {
+        "name": "StoneGrunge2",
+        "mipLevels": 10,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": true
+      },
+      {
+        "name": "Grates",
+        "mipLevels": 10,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": true
+      },
+      {
+        "name": "GrayD1",
+        "mipLevels": 1,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": true
+      },
+      {
+        "name": "Gray",
+        "mipLevels": 1,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": true
+      },
+      {
+        "name": "StupaBell",
+        "mipLevels": 10,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": true
+      },
+      {
+        "name": "StupaBellSh",
+        "mipLevels": 10,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": false
+      },
+      {
+        "name": "Clear",
+        "mipLevels": 1,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": true
+      },
+      {
+        "name": "BlueL1",
+        "mipLevels": 1,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": true
+      },
+      {
+        "name": "GreenL2",
+        "mipLevels": 1,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": true
+      },
+      {
+        "name": "OrangeL1",
+        "mipLevels": 1,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": true
+      },
+      {
+        "name": "GrayL2",
+        "mipLevels": 1,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": true
+      },
+      {
+        "name": "GrayL1",
+        "mipLevels": 1,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": true
+      }
+    ],
+    "dynamics": {
+      "time": 0,
+      "scrolls": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "sceneUploads": 5,
+    "overlayUpdates": 5,
+    "cloud": {
+      "scope": "Original sparse cloud fields and CloudFluffy.vol; CloudCore history/signed depth, three depth passes, 1/8 and 1/4 R16F coarse passes, half-resolution dual RGBA16F CloudFluffy plus dynamic CloudCard, original FogUpsample, MotionGen/MotionDilate/TemporalAa and Tonemap GLSL. Native eight-phase scene and 32-phase half jitter, Gaussian taps and current-jitter correction of previous projection; editor frame clock. Stage-sized viewport uniforms; native top-row depth for AIR FragCoord and explicit lower-left storage for projected Coarse/Fog UV. Preview: zero sampled EnvironmentForces wind, static map-start environments, camera used for local avatar, neutral unbaked card lighting, no Visibility occlusion, water/fog-volume/transparent-list/bloom/motion-blur inputs zero, static opaque motion with original temporal resolve; deterministic editor rand31 stream with native conversion, explicit preview composed-HDR geometric-mean exposure and sRGB display transfer. Native opaque RGBA32F converted once to half RTE; original per-draw Metal half rounding/game image parity remain unverified.",
+      "enabled": true,
+      "frames": 2,
+      "volumeBlocks": 31735,
+      "proxyTriangles": 7531,
+      "visibleCards": 0,
+      "passes": [
+        "CloudCore",
+        "OpaqueRGBDepth",
+        "DepthDownsample",
+        "DepthDownsampleGather",
+        "DepthDownsampleQuarter",
+        "CloudFluffySuperCoarse",
+        "CloudFluffyCoarse",
+        "CloudFluffy",
+        "PreviewLuminance",
+        "FogUpsample",
+        "MotionGen",
+        "MotionDilate",
+        "TemporalAa",
+        "Tonemap"
+      ],
+      "noise": "Tex3D/CloudFluffy.vol",
+      "screenNoiseImages": [
+        "NoiseBlue3Ch",
+        "HeatTex"
+      ],
+      "randomOffset": [
+        0.40886253118515015,
+        0.20190106332302094,
+        0.5250416398048401
+      ],
+      "sampling": {
+        "frame": 1,
+        "phase": 1,
+        "halfPhase": 1,
+        "pixelOffset": [
+          -0.1875,
+          0.1875
+        ],
+        "jitter": [
+          0.0002929687616415322,
+          -0.00030241935746744275
+        ],
+        "jitterHalf": [
+          0.0007812500116415322,
+          -0.000806451600510627
+        ],
+        "clockScope": "Editor completed-frame counter; native sampling sequence, not original process frame timing"
+      },
+      "randomStreamScope": "Deterministic editor 31-bit sequence with original Compositor conversion; process-wide Darwin rand stream not reproduced",
+      "wind": {
+        "move": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "scroll": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "time": 0
+      },
+      "undulationScale": 1,
+      "cloudMat": [
+        0.4562634229660034,
+        0.4562634229660034,
+        0.4562634229660034,
+        0.05000000074505806
+      ],
+      "cloudNoiseTweaks": [
+        2.5,
+        0.5,
+        0.5,
+        0.15000000596046448
+      ],
+      "lastMilliseconds": 7433.114581000002,
+      "averageLum": 0.028002997815859614,
+      "exposureScope": "Editor composed-HDR geometric mean and sRGB display transfer; original luminance feedback pending",
+      "statistics": {
+        "Opaque": {
+          "min": [
+            0,
+            0,
+            0,
+            -88.8125
+          ],
+          "max": [
+            0.037568897008895874,
+            0.04140437766909599,
+            0.04522872716188431,
+            65.70152282714844
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CloudFluffySuperCoarse": {
+          "min": [
+            2.5,
+            0,
+            0,
+            1
+          ],
+          "max": [
+            823,
+            0,
+            0,
+            1
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CloudFluffyCoarse": {
+          "min": [
+            2.5,
+            0,
+            0,
+            1
+          ],
+          "max": [
+            858.5,
+            0,
+            0,
+            1
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CloudA": {
+          "min": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "max": [
+            0.2763671875,
+            0.336181640625,
+            0.4072265625,
+            1
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CloudB": {
+          "min": [
+            0,
+            -0.0009279251098632812,
+            -0.0006556510925292969,
+            0
+          ],
+          "max": [
+            2476,
+            0.0009946823120117188,
+            0.0010223388671875,
+            1
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "FogUpsample": {
+          "min": [
+            0.28271484375,
+            0.258056640625,
+            0.22802734375,
+            0
+          ],
+          "max": [
+            0.97509765625,
+            0.9697265625,
+            0.96435546875,
+            0
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "MotionGen": {
+          "min": [
+            -0.0009279251098632812,
+            -0.0006556510925292969,
+            89.25,
+            0.00019991397857666016
+          ],
+          "max": [
+            0.0009946823120117188,
+            0.0010223388671875,
+            65504,
+            0.00019991397857666016
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "MotionDilate": {
+          "min": [
+            -0.0009279251098632812,
+            -0.0006556510925292969,
+            -0.0004444122314453125,
+            -0.0007119178771972656
+          ],
+          "max": [
+            0.0009946823120117188,
+            0.0010223388671875,
+            -0.00009995698928833008,
+            -0.00009995698928833008
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "TemporalAa": {
+          "min": [
+            0.28271484375,
+            0.258056640625,
+            0.22802734375,
+            0
+          ],
+          "max": [
+            0.97509765625,
+            0.9697265625,
+            0.96435546875,
+            0
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "temporal": {
+          "cameraCut": true,
+          "frames": 2,
+          "scope": "Original GLES motion and temporal fragments, supplied native camera Gaussian taps, previous composed color. Static opaque motion; moving model Motion list and original Metal quantization pending."
+        },
+        "Tonemap": {
+          "min": [
+            0.000512589409481734,
+            0.0007527405978180468,
+            0.0010540193179622293,
+            0
+          ],
+          "max": [
+            0.49119049310684204,
+            0.5276490449905396,
+            0.5753384828567505,
+            0
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "active": true
+    }
+  }
+}

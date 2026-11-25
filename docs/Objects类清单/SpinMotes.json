@@ -1,0 +1,486 @@
+{
+  "className": "SpinMotes",
+  "functionGroup": "光点、碎片与灵魂",
+  "functionRole": "区域光点旋转、捕获与死亡",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "SpinMotes 的原默认值、继承初始化及 6 个序列化字段变体；原注册字段 5 项。"
+    },
+    {
+      "name": "区域光点旋转、捕获与死亡",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Marker（8 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "SpinMotes",
+    "category": "光点、碎片与灵魂",
+    "functionGroupId": "fragments",
+    "functionRole": "区域光点旋转、捕获与死亡",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "SpinMotes 的原默认值、继承初始化及 6 个序列化字段变体；原注册字段 5 项。"
+      },
+      {
+        "name": "区域光点旋转、捕获与死亡",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Marker（8 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Marker",
+        "references": 8
+      }
+    ],
+    "rttiWorkingGroup": "系统和其余类型",
+    "role": "对象实例类型",
+    "instances": 4,
+    "nestedInstances": 0,
+    "referenceFields": 8,
+    "declaredLevels": 2,
+    "levels": [
+      {
+        "level": "Prairie_Village",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainEnd",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "captureRegion",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "death",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "duration",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "speed",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "spinRegion",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100ccb950",
+    "nativeRegisteredFields": [
+      {
+        "name": "captureRegion",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP6MarkerERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x100481c40",
+        "propertyAddress": "0x100ccaaf0"
+      },
+      {
+        "name": "spinRegion",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP6MarkerERK8MetaTypev",
+        "nativeOffset": 64,
+        "registrationFunction": "0x100481c40",
+        "propertyAddress": "0x100ccab40"
+      },
+      {
+        "name": "duration",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 72,
+        "registrationFunction": "0x100481c40",
+        "propertyAddress": "0x100ccab90"
+      },
+      {
+        "name": "speed",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 76,
+        "registrationFunction": "0x100481c40",
+        "propertyAddress": "0x100ccabe0"
+      },
+      {
+        "name": "death",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 80,
+        "registrationFunction": "0x100481c40",
+        "propertyAddress": "0x100ccac30"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 5 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "Prairie_Village:n513",
+      "level": "Prairie_Village",
+      "nodeId": 513,
+      "name": "BstNode_977",
+      "className": "SpinMotes",
+      "classIndex": 61,
+      "sourceOffset": 114649,
+      "sourceLength": 34,
+      "sourceSha256": "660a223554f4bba01e65a930f2d88d1e8bf034cadacf061ad6fb7dbf37bf307c",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n513/p1",
+          "fieldName": "spinRegion",
+          "target": "Prairie_Village:n2763",
+          "targetNodeId": 2763,
+          "offset": 114666
+        },
+        {
+          "fieldId": "n513/p4",
+          "fieldName": "captureRegion",
+          "target": "Prairie_Village:n1550",
+          "targetNodeId": 1550,
+          "offset": 114675
+        }
+      ],
+      "incomingReferenceCount": 4,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n517",
+      "level": "Prairie_Village",
+      "nodeId": 517,
+      "name": "BstNode_514",
+      "className": "SpinMotes",
+      "classIndex": 61,
+      "sourceOffset": 114826,
+      "sourceLength": 34,
+      "sourceSha256": "3cf7589e598f612769e2b0cf7f4a09fa01261c77b2dc431400d5a07095cd8a4b",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n517/p1",
+          "fieldName": "spinRegion",
+          "target": "Prairie_Village:n2412",
+          "targetNodeId": 2412,
+          "offset": 114843
+        },
+        {
+          "fieldId": "n517/p4",
+          "fieldName": "captureRegion",
+          "target": "Prairie_Village:n2339",
+          "targetNodeId": 2339,
+          "offset": 114852
+        }
+      ],
+      "incomingReferenceCount": 4,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2499",
+      "level": "Prairie_Village",
+      "nodeId": 2499,
+      "name": "BstNode_679",
+      "className": "SpinMotes",
+      "classIndex": 61,
+      "sourceOffset": 426621,
+      "sourceLength": 34,
+      "sourceSha256": "9541517bbc0d0b5804d9cfb268e43d60b0d6d7fa53b56b32bfafccdd068612ae",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2499/p1",
+          "fieldName": "spinRegion",
+          "target": "Prairie_Village:n2377",
+          "targetNodeId": 2377,
+          "offset": 426638
+        },
+        {
+          "fieldId": "n2499/p4",
+          "fieldName": "captureRegion",
+          "target": "Prairie_Village:n1217",
+          "targetNodeId": 1217,
+          "offset": 426647
+        }
+      ],
+      "incomingReferenceCount": 5,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n694",
+      "level": "RainEnd",
+      "nodeId": 694,
+      "name": "BstNode_763",
+      "className": "SpinMotes",
+      "classIndex": 61,
+      "sourceOffset": 196934,
+      "sourceLength": 34,
+      "sourceSha256": "0d8b8d1dad4627f2e0d3a3fbdd584951b6897cb1d2b9e5eec8d3a7d8c9138490",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n694/p1",
+          "fieldName": "spinRegion",
+          "target": "RainEnd:n706",
+          "targetNodeId": 706,
+          "offset": 196951
+        },
+        {
+          "fieldId": "n694/p4",
+          "fieldName": "captureRegion",
+          "target": "RainEnd:n706",
+          "targetNodeId": 706,
+          "offset": 196960
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "Prairie_Village",
+      "path": "Levels/Prairie_Village/Objects.level.bin",
+      "sha256": "4656296b54402016b59b894b4653fbdc71e106a21e0900294f73f2c7b7112385",
+      "bytes": 549989,
+      "nodes": 3724,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Village.json",
+      "markdown": "Objects对象清单/Prairie_Village.md"
+    },
+    {
+      "level": "RainEnd",
+      "path": "Levels/RainEnd/Objects.level.bin",
+      "sha256": "247912ec955153e3df80c16a861eb872573502a285a17943518bdce448a8d5e3",
+      "bytes": 427926,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainEnd.json",
+      "markdown": "Objects对象清单/RainEnd.md"
+    }
+  ]
+}

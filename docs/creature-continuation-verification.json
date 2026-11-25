@@ -1,0 +1,908 @@
+{
+  "updatedUtc": "2026-11-25T07:52:15.298242+00:00",
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "nativeReportsVerified": true,
+  "nativeCodeHashesBoundariesAndAssemblyVerified": true,
+  "nativeReports": [
+    "docs/creature-construction-oracle.json",
+    "docs/buddy-oracle.json",
+    "docs/bird-target-oracle.json",
+    "docs/bird-update-oracle.json",
+    "docs/dark-creature-load-oracle.json",
+    "docs/nature-event-oracle.json",
+    "docs/bird-flight-oracle.json",
+    "docs/bird-acceleration-oracle.json",
+    "docs/bird-motion-oracle.json",
+    "docs/bird-motion-flight-oracle.json",
+    "docs/bird-steering-motion-oracle.json",
+    "docs/creature-lifecycle-oracle.json",
+    "docs/bird-force-oracle.json",
+    "docs/creature-force-oracle.json",
+    "docs/bird-rail-oracle.json",
+    "docs/bird-rail-chain-oracle.json",
+    "docs/bird-follow-oracle.json",
+    "docs/bird-follow-chain-oracle.json",
+    "docs/crab-network-oracle.json",
+    "docs/dark-creature-detect-oracle.json",
+    "docs/crab-codec-oracle.json",
+    "docs/dark-creature-motion-oracle.json",
+    "docs/dark-creature-combat-oracle.json",
+    "docs/fish-update-oracle.json",
+    "docs/fish-ai-oracle.json",
+    "docs/on-region-oracle.json",
+    "docs/resource-animation-sequence-oracle.json",
+    "docs/move-object-along-rail-oracle.json",
+    "docs/resource-animation-update-oracle.json",
+    "docs/fish-group-animation-update-oracle.json",
+    "docs/dark-creature-spotlight-oracle.json",
+    "docs/move-object-along-rail-control-oracle.json",
+    "docs/vector-safe-slerp-oracle.json"
+  ],
+  "newNativeReports": [
+    "docs/dark-creature-spotlight-oracle.json",
+    "docs/move-object-along-rail-control-oracle.json",
+    "docs/vector-safe-slerp-oracle.json"
+  ],
+  "newNativeCases": 1762,
+  "newNativeComparedBytes": 179267136,
+  "newNativeServiceCalls": 17857,
+  "nativeScope": [
+    "Consecutive eye look/smoothing and spotlight projection/radius/color/marker/expiration phases of original DarkCreature.Update 0x10026e7da..0x10026f41e. Includes velocity/target eye direction, alert sweep and cached quaternion, shortest-path quaternion interpolation with native NaN fallback, actual eye-model transform, rotating projected direction, native ray query, current target and radius. The same preceding body motion matrix, packed delta, absolute time and original palette scratch are caller inputs; subsequent interaction/audio, real resource/world owners and full viewport remain pending. Original instruction slices execute unchanged with an explicit native stack frame. Full caller arena and ordered head/ray/avatar/bird/color/eye/Marker services compare across consecutive frames, patrol/chase/alert eye basis/quaternion smoothing, missing targets, fixed 64-bird cap, radius and expiration thresholds, query padding, callback mutations, signed zero/NaN and scalar acos/sin/sincos/exp inputs. Linux native libc results and explicitly supplied sincos upper lanes are replayed; no macOS/JS math or complete rendered creature equivalence claim.",
+    "Original MoveObjectAlongRail.Update control flow executes until its first object-loop boundary, including original out-of-line clock/assertion paths and complete empty/disabled return paths. Entire arena and ordered metadata/rail/session/objective/avatar/network/finish services are compared for live rereads, double-clock selection, tracking bounds, native quintic easing, progress smoothing/loop clamps and counter/finish gating. expf is a traced native libc service with verified input/order. Positive-object cases stop before movement/turn/sway/Model transforms and must not be counted as complete Update or creature playback. Resource/world ownership and full scene behavior remain pending.",
+    "Entire original TGCMath.SafeSlerp including opposing-vector axis selection and perturbation, finite-factor fallback, scalar math input/order, original XYZ normalization and distinct W lanes, output aliases and assertion paths. acosf/sinf results replay native Linux libc values; sinf caller-clobbered XMM0 W is explicitly supplied and compared. This verifies a shared vector helper, not complete MoveObjectAlongRail.Update or creature behavior."
+  ],
+  "baselineRegression": {
+    "passed": true,
+    "tests": 701,
+    "command": "./node_modules/.bin/tsx --test tests/*.test.ts",
+    "log": "/root/sky-research/animation-update-project-tests.log"
+  },
+  "focusedRegression": {
+    "passed": true,
+    "tests": 13,
+    "command": "./node_modules/.bin/tsx --test tests/dark-creature-spotlight-runtime.test.ts tests/vector-safe-slerp-runtime.test.ts tests/move-object-along-rail-control.test.ts tests/dark-creature-motion-runtime.test.ts tests/dark-creature-combat-runtime.test.ts tests/move-object-along-rail-runtime.test.ts",
+    "log": "/root/sky-research/creature-visual-focused-tests.log"
+  },
+  "projectRegression": {
+    "passed": true,
+    "tests": 704,
+    "command": "./node_modules/.bin/tsx --test tests/*.test.ts",
+    "log": "/root/sky-research/creature-visual-project-tests.log"
+  },
+  "typecheck": {
+    "passed": true,
+    "command": "./node_modules/.bin/tsc --noEmit",
+    "log": "/root/sky-research/creature-visual-final-types.log"
+  },
+  "windowsBuild": {
+    "passed": true,
+    "command": "node tools/build.mjs --windows",
+    "log": "/root/sky-research/creature-visual-windows-build.log",
+    "machine": "AMD64",
+    "binarySha256": "11a572bd5a264477034b2143c7844a5b08d76710f370922fc8c8cf68b6d771d9",
+    "windowsMachineRuntimeTested": false
+  },
+  "inventory": {
+    "passed": true,
+    "maps": 33,
+    "declaredClasses": 283,
+    "objects": 49824,
+    "references": 60016,
+    "brokenReferences": 0,
+    "completeRuntimeClasses": 0,
+    "allMapsRoundTripUnchanged": true,
+    "coreSubchainVerifiedClasses": 55,
+    "log": "/root/sky-research/creature-visual-class-progress.log"
+  },
+  "categoryCensus": {
+    "passed": true,
+    "command": "python3 tools/objects-category-census.py",
+    "log": "/root/sky-research/creature-visual-category-census.log",
+    "nativeCreatureFamilies": 52,
+    "mapDeclaredCreatureFamilies": 18,
+    "completeCreatureClasses": 0
+  },
+  "windowsSourcePlan": {
+    "passed": true,
+    "command": "python3 tools/package-windows-source.py --plan",
+    "report": "docs/windows-source-plan.json",
+    "log": "/root/sky-research/creature-visual-windows-source-plan.log",
+    "includesNewRuntimeAndNativeFixtures": true,
+    "androidHostIncluded": false,
+    "buildOutputsIncluded": false,
+    "nodeModulesIncluded": false,
+    "cacheIncluded": false
+  },
+  "authorIntroduction": "Already implemented and verified in docs/author-profile-smoke.json; unchanged this continuation.",
+  "newWindowsArchiveCreated": false,
+  "newSourceArchiveCreated": false,
+  "androidWorkPerformed": false,
+  "completeCreatureClasses": 0,
+  "remaining": [
+    "DarkCreature 0x10026f41e..0x10026ffc0 interaction/audio remainder and full Update composition; eye/look/projection/radius/color/marker phase is now verified, real world/Model/rendering owners remain pending",
+    "CharFishGroupAnim MoveObjectAlongRail.Update object loop from 0x100484fc0, dynamic Rail/cache ownership, real Model lifecycle and autonomous viewport; control prefix and whole SafeSlerp are now verified",
+    "Crab whole outer Update 0x10025bc10..0x10025e590 and ground/world/interaction/Model/resource owners",
+    "BirdFlock whole child Update 0x10019bdc0..0x10019dbf0, Buddy, CritterV2/SimpleBird/WhaleFairy and remaining constructors/managers/messages/authority paths",
+    "FishV2 and BirdV2 real world/collision/Avatar/OBB/rail/resource/Model/animation/audio/particle and Barn ownership",
+    "All 52 reviewed biological family types, repeated load/unload, stopping, level switching, full scene behavior and Windows acceptance"
+  ],
+  "artifactSha256": {
+    "src/core/crab-network-runtime.ts": "9ac5f9143c4d6f511770464b2231bacb3125b2aeafb36047ab49d8634a11936f",
+    "src/core/dark-creature-detect-runtime.ts": "c7f5a2d7ba9115974f4c25f49d69ebabe61fd25033e39c4fd90407f733e3f31c",
+    "tools/crab-network-cases.ts": "4668b7981a25e27097f14e37b92e9e6c3d18bd1209c3d510b9de91a3e1716829",
+    "tools/dark-creature-detect-cases.ts": "d563dedd72f329971d6bde998d8486ff96c612947a7890ab106f54144adc1eeb",
+    "tests/crab-network-runtime.test.ts": "ce39f76180621bd8e4970fcf6575d378197912aec241251a8fdbbed2c562fd69",
+    "tests/dark-creature-detect-runtime.test.ts": "eb40eedf40b84b2d5b5d39f1c0fd3f80153ffcb0ff9c3d362863b53e6955baf8",
+    "tests/fixtures/crab-network-native.json.gz": "1e16bab21e20ebaf8aff657342720a07be18ae3cdc79986fa5a4e33eba9bd6aa",
+    "tests/fixtures/dark-creature-detect-native.json.gz": "46598726e3907e78a640323019f6b03b2ac07944477ab0846f9970ea00222014",
+    "docs/冥龙与螃蟹续接.md": "313ec643162d6811738fcda4668ef722aea5bcc3a59b1aac84fb34a2021a2a7a",
+    "tools/crab-network-oracle.ts": "f1893cc49e56f2bb82ab46e08ca32ad4227e72c500ece44bc7ef6c1b19c17293",
+    "tools/dark-creature-detect-oracle.ts": "9ccf938f2aebd8bcb93374454efa00132e265448564746ea515dbb3f7746ceae",
+    "tools/native-crab-network-oracle.c": "bb5315a428635308fe12e2c64494b216465e691ebbe111a999a29fe1409cd5e8",
+    "tools/native-dark-creature-detect-oracle.c": "b46ec6992e4bda02a3ab25c11b67a5d42ad5410b3be730ebbbebe2aea56b0680",
+    "tools/objects-class-progress-spec.json": "858deffb926875948ab60b2a430a4fc6492817e1bc1744211afff9785ec9100c",
+    "docs/crab-network-native.json": "ea61d059e70d4795f6c0a0bc62153fff968ae36207963d586ff5e783f422cc4d",
+    "docs/dark-creature-detect-native.json": "982f5aec2071905fdf8b64fd70f595e8888a5ebd3a6cb105fad344b327283067",
+    "docs/crab-network-oracle.json": "a60acfc92a310844d006c5f0f6b4a371477761ac1cb8526b4ba6bc60038a359e",
+    "docs/dark-creature-detect-oracle.json": "d18eb98227220b8db9d397a4b10a5029a879fba9e1989e14af018b499dacecd8",
+    "src/core/binary-stream-runtime.ts": "f342eae31ef034cd69e6f743967a0a9603c2ba34da8c9284b0f1e69e2fc6e77c",
+    "src/core/crab-codec-runtime.ts": "73ebf825e3ef94a36102197d78436b36b5d8839f65ff3e5cb9135dfd8393aaf5",
+    "tools/crab-codec-cases.ts": "0b37d46f36cf5f69800d8f2e2bb3eb675b8a00023701a57cf96783c466a2295d",
+    "tools/crab-codec-oracle.ts": "0e85f65ee5dd5bb678f5619c44f70fc5bf5ce65b71c5bb7450623420caa8189b",
+    "tools/native-crab-codec-oracle.c": "d706a43cabce772c85be15b3f39832a5ad7c953ed07624cb1cf332e411db0d3d",
+    "tools/reverse-crab-codec.py": "93c1f55a315b1464594e16f088c7746e1d5af9e3567e32dba5de7f2dd186c444",
+    "tests/crab-codec-runtime.test.ts": "8a8b7925031a74f22aea1cd622bdafdbf8f6bae8b785078730d07979b6ec6f8e",
+    "tests/fixtures/crab-codec-native.json.gz": "87bcf3e7727d6dcc1bcdf523d840fbfbfd21475cf8009abe3ed65be9b2a3ab88",
+    "docs/螃蟹真实包编解码与打包门槛.md": "438602b8b7f8d82e9e380522680ee47376b41ad30fe5779f8ebbd0da0876ae07",
+    "docs/crab-codec-native.json": "96a51a1598659c0628fe1b055c8bbaa026323816dfe85999bcc03b106d5375c7",
+    "docs/crab-codec-oracle.json": "62ec35879129af29dccef82902a18e7f63718fb6ff2d70d4ab5eef9fafc43789",
+    "docs/crab-codec-verification.json": "dbb456676472ec5946328b38be2a2549fa42fda203e2a97310342de11163a267",
+    "src/core/dark-creature-motion-runtime.ts": "07202844edd40d367d8f22e7f17f5b1c7894513c61a772e5b2b3b7a2a4d9301b",
+    "src/core/dark-creature-appear-runtime.ts": "4f5033b34093a170d2f0f248a9da0a7bfac1b7dea4f5c3a7c5c6bb6f1d625d13",
+    "src/core/creature-motion-rail-runtime.ts": "1737e2306392c7b0e8219a5bc8abe3c0e69eef2592e7ffa715046e03c8c84fe2",
+    "tools/dark-creature-motion-cases.ts": "916193339c4ef2d6e65aa36d61a37491d754bf170fd0370581a5fedff6633cf0",
+    "tools/dark-creature-motion-oracle.ts": "68daa0e9d10f7d80fab8e8d7c329ff2c77ab2fd1def2aed91da7595fcb92cbda",
+    "tools/native-dark-creature-motion-oracle.c": "48014da015a116aab8eb81ee4a0ad7e647c5a414839e79b01d93192c51aca15b",
+    "tools/reverse-dark-creature-motion.py": "5232f79b786dfd19474b59dc9f41a89c6dec6c2a95318e11cc773f738485f79f",
+    "tests/dark-creature-motion-runtime.test.ts": "f36cbb59732abb43694c37f54945f5a29c95a2d62740dcd542f2f3e76efaf85b",
+    "tests/fixtures/dark-creature-motion-native.json.gz": "67f08f91b84ed8721990a2b9022e04f282454e028f842b39348e0c70b5ab8aff",
+    "docs/冥龙移动前半段与打包门槛.md": "730aaae574e2ee06f5d2a8376d751a0b4806a0b76f7b01800ddcc63c4baf7ddb",
+    "docs/dark-creature-motion-native.json": "1c40ed8f743cf263167ab905523e4d7f917c512751358c83e5b0df3138bd7277",
+    "docs/dark-creature-motion-oracle.json": "3887ae344389e575eba49bf8f8d15e32ac2e3498dbb7b69d6fa5ce861bd5de7f",
+    "evidence/darkcreature-update-motionphase.asm": "8f1d4bda406a8a651eba494d3b4c067194e084acc8d9229e0570111743cc2cbe",
+    "evidence/darkcreature-appear.asm": "52bd0e42b91ff19ea731dea4d7647399fe47d8a842bf830066030ddeba577e85",
+    "evidence/motion-followrail.asm": "6cbbaf273c11da378f9f44255f96ad4be95730fa4f2c22f1cba53a4862d5d79f",
+    "docs/dark-creature-motion-verification.json": "48b73969becbe976e3aff8b8ca01c6a3d42ee348d63de7c389f060d1c42c8765",
+    "src/core/dark-creature-combat-runtime.ts": "c23ae1e8d816fb618e491edc6a4a90ee3c65d78f7f04caf8d4c13f3f4bd9be8e",
+    "tools/dark-creature-combat-cases.ts": "57a0e246e5e0d2601967883717efe5e417ddd9ef65523f3ab389322b56ff1e05",
+    "tools/dark-creature-combat-oracle.ts": "6f3baa39d30b5db97a33c81bddc81a6e1a10a75dd13db3f40456a9caf74e8e3d",
+    "tools/native-dark-creature-combat-oracle.c": "4c163629d259dd255189768cf5d3797276fe252ae4db3a05ebc57a0269a6142a",
+    "tools/reverse-dark-creature-combat.py": "efba5672e0f413df40d27babada3b941dab618ec1617cbcd50bf40dd8c350fed",
+    "tests/dark-creature-combat-runtime.test.ts": "c1b2ab078460cd94c62e5145818ff4208672725a5c80a477f184bbf4c17ec393",
+    "tests/fixtures/dark-creature-combat-native.json.gz": "d85f15ab380e619664d2f4b06f1c9cff3e4be6a2472bfdc72887fdbc24fb5561",
+    "docs/冥龙追击攻击命中与打包门槛.md": "09436b08d174a08ef2802bddf3d0df13af5431c9ee9bea75d1e2c742e1fd3f51",
+    "docs/dark-creature-combat-native.json": "452b8f8e6d7d93d73b875b86885ab43f63c11f6a138df8f75f1850e5e286db4f",
+    "docs/dark-creature-combat-oracle.json": "f1208d3b719b384b0a228f1a7033c8113baec08e943b2220053306d35e197559",
+    "evidence/darkcreature-chase.asm": "4391ea459192eac0e6ed82e903e0abb967fbfeb0221b67be934e324e6b8f4a14",
+    "evidence/darkcreature-attack.asm": "344ebe7d7e552bff5c9ab0c34f131bc25ca1918e1f2613479fc5c521427dfdec",
+    "evidence/darkcreature-hit.asm": "fe8263c6b5ea72e0251ae13c1b2d21932baf509a95c9c6920154566ceb6a3340",
+    "evidence/avatarbarn-index.asm": "243e58792e510ff2cac95d2401652350f10f372c17c887fc14434c123b22a4c8",
+    "evidence/avatar-active.asm": "47b039f2b6274067ffe76b46d43f83308ccb8468569ab66577dc20f3fc44326d",
+    "docs/dark-creature-combat-verification.json": "1d8bde37d0a7105d9fe566e788305a8d076a57ce6126b7aa633b3c93d151bc2d",
+    "src/core/fish-update-runtime.ts": "49d61b2d842dc1c3e70a1743ea3955d1157b02b775e5faf92db16aafe6968a34",
+    "tools/fish-update-cases.ts": "0b01753221c511ae8ace02edf0e477e6e19f2b2a5307baaad8f9c8b5a7b52539",
+    "tools/fish-update-oracle.ts": "77cb5bd6ac79417504271f497f05d31db3c78ac2d749b089ac9e2b8976480b15",
+    "tools/native-fish-update-oracle.c": "f07e4a049675173ccad34456ac289f8e1df57598385a504fc61d640b4871d753",
+    "tools/reverse-fish-update.py": "f1cd58a391d000204de08c76a9a40932a7137d4423e02c721d6ba43755f7d8c6",
+    "tools/verify-fish-update.py": "aa7e8befc3325156ac62527b9df85e9983b2fccef23a523ae3a44bf7fd0c1e07",
+    "tools/fish-group-map-audit.ts": "846512236a4876dae08117a2636dd1f920814131d8a27d0895e9e9db7046b78a",
+    "tests/fish-update-runtime.test.ts": "c83568d44f267d20c81d464ba60ce5c310e0d1c908a8fbb51315f4dae908b955",
+    "tests/fixtures/fish-update-native.json.gz": "98ba3cfb8b6e80441d132c0dd4ab1f40313cc3457416b45c1b1653a4ad1e44ad",
+    "docs/fish-update-native.json": "224e195df8fa6b5f1e7b2147b63e690f45d07883191e298317e2bfc0bb28dfa3",
+    "docs/fish-update-oracle.json": "5f5162ba9270166c70818d6f970b34551c3c861883cf9d62715ea40d2efcabda",
+    "docs/fish-group-map-audit.json": "12d57fae6d245822ea9600e339c9b8d7fa5553b80ba04230901cfd092ec7f95e",
+    "docs/鱼群触发链与FishV2更新续接.md": "dbd9058a30ffe0b4d526aba67e6de83837e32dc36cee6a98cbb4be53036be2cd",
+    "evidence/fishv2-update.asm": "17ead8e26b6a2627d0472f1107770be5fdf781c650056d0b517968757b8d86da",
+    "evidence/creature-motiontransform.asm": "81f33b8e58ebc881d55711008bb9572db3a5443b4917fb296a5738b54e84f522",
+    "evidence/creature-turndirection.asm": "826732901394b4172788cddd91e0f22d61680b32d504bded8542bc322e2200d8",
+    "evidence/creature-bank.asm": "3f4d4aba8865dfa857fd15798098aa805260cdc2bce1f7e2ddf0537951c7c4e3",
+    "evidence/fishv2-ai.asm": "48279dfd3cc095c6219b018bbe7e5e91f9095bedd0f6fdbe63a62be2ea080d72",
+    "docs/fish-update-verification.json": "bb7bfafcdd1ac6cd2459db74c2f21b9fefd641888f26162755a79e6e2b2a2c68",
+    "src/core/fish-ai-runtime.ts": "26a7f0b8a6b4b8b9457e2c947b4a4767fc6dcce65b3eee8b0f95810461cdbf49",
+    "src/core/creature-force-runtime.ts": "33924d7ae7553ae83a8124e6be165585f3eda001b62b473470d4d71c10e618b0",
+    "tools/fish-ai-cases.ts": "e792e4127ddf8f492ea9e0183164bee2777b7b4baf991b4374b07e1714f907f4",
+    "tools/fish-ai-oracle.ts": "949113b6c4dca5ed8b95361b03a4348151284e4a76c964f5ba3e07a4c5510b20",
+    "tools/native-fish-ai-oracle.c": "ad96cb638e29c5b25836a5f47068ed4177b0ffccbe11ddc46a4d6ba2bc281382",
+    "tools/reverse-fish-ai.py": "a2ce4b022cddf90dc1e30855e7129bfffff7911ff346f77f3ff810f4bbac3b65",
+    "tools/verify-fish-ai.py": "20dc0214650d4ea8fccbcd3b209e141710de7a26a8daba0df73615fe6b0fd23f",
+    "tests/fish-ai-runtime.test.ts": "b1f952b1aa8bcc496a1ad99289171fc10109fe2115be04e47f54703c9695358a",
+    "tests/fixtures/fish-ai-native.json.gz": "065ca280e0ab35613000c267d67e24e5d8422e58668c6d36193990fea3bb1399",
+    "docs/fish-ai-native.json": "025a03c1e6250aa79149b7bbae013fe2579d18dc4c7decb1fc0b55e1adce50d2",
+    "docs/fish-ai-oracle.json": "3b5d7daf64407ae79a89c037682b12c2f577e325b630850ff27b5004081584b8",
+    "docs/FishV2-AI与转向力组合验证.md": "1a21588f4776c7fd1dbba228943662103e56c7526fb19eb14940bcc9a2701330",
+    "evidence/steering-pursuit.asm": "851387ee1a67c27b406fc009d0b7dbf200366be866fb246e405ba1675a5137d5",
+    "evidence/steering-avoidance.asm": "e127b743dd9d6493693998c5841a00b967097966e8e12db3f179f562dae57fd0",
+    "evidence/fishv2-neighborfilter.asm": "75822ceaebf7bbc513b10bbaf42b9b320323bd1f122e8ae74a41e34050e50d74",
+    "evidence/fishv2-flockfilter.asm": "c265da4e0863d30680c047636491c1ebe3b35f273941cac873c73b7dee8d4516",
+    "docs/fish-ai-verification.json": "25a8f270c8d26d5a6c2c008d7dd396a7380db0a7e1882fb38c9f97b929c019b9",
+    "src/core/on-region-runtime.ts": "7983e0f99b006d05c982292c6f2b7918c9ffa993181be5ba7a9eb99b962fe2ec",
+    "src/core/animation-sequence-registry.ts": "18df5eaa732f93269f8614a39e92de7198a7604a229fc238bdec0d4212870fa0",
+    "src/core/original-animation-sequence-registry.json": "7abdea8380f5fcb097b80d563482c9488faabd4157dfd250fa327fb1165fc0d3",
+    "src/core/scene-event-construction.ts": "841c0186c3092f18bbcd6b533f82d638aba913ebe8dfe1205edc56d95e814629",
+    "src/core/environment-object-state.ts": "eec19d90a73c2ed6d31f3ce409aa08ae8bf22a90febd791679b5bf5d3ced85df",
+    "src/core/environment-event-owner.ts": "07364b8132971d4912ef7848f4246e2b42e11b31d44e1d56a2647ecc8fa3a3dd",
+    "src/core/environment-event-types.ts": "88557967c01c1186ea699b81f98545be6f2e91336cdec2d2459979e11545cb00",
+    "src/core/play-animation-runtime.ts": "31b540975c6d2ba781bd82c7b190b651b407cd2d72829fc8f7b0bd2e09e70275",
+    "tools/native-animation-sequence-registry.c": "de5674ee223c05cfa6a2a568ae68f4cd4cf355809af0c448529a021c27492e47",
+    "tools/extract-animation-sequence-registry.py": "2f97f27aae7b889710a7e704b277743e8c9a66ec5466f3e1639728ace1c38203",
+    "tools/native-on-region-oracle.c": "8028df38816598dfa0dfc59ad8dc6ce7d0202129e6bc73171da8071210780784",
+    "tools/on-region-cases.ts": "ab86039d147f581a22548d5326c27ccc969ccd4b950bb6cb33b7a832970403cd",
+    "tools/on-region-oracle.ts": "5762ce56dba8eeab7ac6d9d7b4e0a2c7cfcd4e2d38e9b630e8d2e94e4a3d45dc",
+    "tools/reverse-on-region.py": "61d2aaf466f827954baa86e96a9ded3f8613a637aae51436d3faa47a332d0b91",
+    "tools/fish-group-scene-cases.ts": "c233ad68fe7d9cb7327af001326702de306c8af23e8a5a1305ee9210638b95df",
+    "tools/verify-fish-group-scene-events.ts": "a8e30c7475d42cf68b5bd955da6726e2d4198688603053bb197c33bef0b1f7c9",
+    "tools/verify-fish-group-events.py": "1108b1c64670addb423d1f45ee14fec52c1a771fa8eeb91e7e7ff31957092bd7",
+    "tools/reverse-environment-defaults.py": "b420edee1263bd7c5b08d1d2ebeb17b312d668dafdb7c71e80d9706cf1b1eb42",
+    "tools/resource-animation-sequence-cases.ts": "719cd9af75ff5abdc603b8c3f8dacc56790a9ac45d552901c37d21f187721c03",
+    "tools/resource-animation-sequence-oracle.ts": "d2ae83e842c4a0eb8f3127df05807687eb4f38ca68b3e04486223bed8fe02493",
+    "tools/native-resource-animation-sequence-oracle.c": "3d21a4cb12ad5bdd5a544afcfd0ac448a2d4d501521a9dd8ca73e5d4bae24aab",
+    "tests/on-region-runtime.test.ts": "ac9940e4c4660528d4a6c089f6962ea9eb9cf186e7156ad10123a23e9c8fd839",
+    "tests/animation-sequence-registry.test.ts": "d2a1c74b673c0f9dba78ec54be867f994c173cf899a514281d6e8a258b784299",
+    "tests/fish-group-scene-events.test.ts": "4aac44e5d73c9c56a8519d1ef8783345cb6f55c0ba18d1d911a8d1d0da48a212",
+    "tests/fixtures/on-region-native.json.gz": "a06d12baa691e82c444aa3be806e9f38e62e72b244240d2e135300a71e999ff9",
+    "tests/fixtures/resource-animation-sequence-native.json.gz": "d253bf3aea251ac1b815dea785a9ce0dda0637d2c1b35ae7b1db3536bd4c29db",
+    "docs/on-region-native.json": "127e9cf9930a419cfb7c05cd2304a2ba6797b6f665098ec22b4de890572980a9",
+    "docs/on-region-oracle.json": "3961f5f19636985d2c3581335eadf1d3566d042f3a00139d4af484614f45bd8a",
+    "docs/scene-event-defaults.json": "26f7b729df80ef56add85bb68e50e8f025756a922e2f036666bf7dfd7387d335",
+    "docs/resource-animation-sequence-oracle.json": "dec5c25359a6ccddd7c263a1bc93661a2243bba117b7ca744b615981d3b152f4",
+    "docs/fish-group-scene-events.json": "2b21d866cb7f146a99deddbd1a2cb4378e65a23026c3e8b4435390083ff8424d",
+    "docs/鱼群区域事件与原序列表续接.md": "b737050c952a9ef120e4a41ed026166b7bfe8b389831ff9a6c1068194aa8ebcd",
+    "evidence/onregion-placement.asm": "495489d8c9acc2b4825546ca1057884bd6ed61523ece1342a89209b4ea8dca84",
+    "evidence/onregion-enable.asm": "601f2b746618f971b4e658b08f77342b594f906d2abab423163c3da2f566381f",
+    "evidence/onregion-update.asm": "aa044dcd49654766c1db58c33d64a0797df93e6b5cd4939dd3fc98881b38ff06",
+    "evidence/regionpointinobb.asm": "22abf36b15b6a3f2005c0a9ebd3b399a0a189906010c8b37239186a82f93442f",
+    "evidence/closestregionpoint-reference.asm": "afdf3771ae3cac7c9f5fe2cd45959b7bb4232b8f447937f1a1b1724e19edfd03",
+    "evidence/playanimation-placement.asm": "b677aae8bc6d79c121c498de506b64b62833624018b99b1218b23fce2258e581",
+    "docs/fish-group-events-verification.json": "23fcfe38aad4533d68e65f3fcf7d2f7ce54e6f9872d1ed0f8d0ec2f7740f6280",
+    "src/core/move-object-along-rail-runtime.ts": "a9e91cf32023a8c2ab16de859e409a9d8b8fcfc03dd4a5e9769f64944c5e8dfe",
+    "tools/native-move-object-along-rail-oracle.c": "146460fce0f6b670228679c326d3c4bdb4cfcf8ba8e1e4381906c4a5fd54af39",
+    "tools/move-object-along-rail-cases.ts": "03a633f1bcf764d53d8324420533dd67a3c76755358de391ab39635e18d8a5fc",
+    "tools/move-object-along-rail-oracle.ts": "8c78948426033909f972e978a0a0ff97bf985ee30bbeb383f1215a7f5abbf750",
+    "tools/reverse-move-object-along-rail.py": "d5b5841bf7e8a3556285a7c8e206dc7b121fb82ad0f5b5e89392a36c57479dfb",
+    "tools/capture-fish-group-rail-lifecycle.ts": "fae11657680747297acdb182b43b28bacadfb78d9f4c71e91a65942587aedc81",
+    "tools/verify-move-object-along-rail.py": "3ae6ff3805c1228de045979ff5ddd6f3a665baac4ea7757b0ef08e282db9489d",
+    "tests/move-object-along-rail-runtime.test.ts": "6886b5877f4ab79af38327d5348233ccc5713df3f478fca487ff3cbaed2b1700",
+    "tests/fixtures/move-object-along-rail-native.json.gz": "49d10e05168087987967ae979b3f3d717275af48c2f13d9d3897b32a0a91638b",
+    "tests/fixtures/fish-group-rail-lifecycle-inputs.json": "d102328e9e4614d5147b85d7870db3ef9305c14cdbfbf064c990767625065262",
+    "docs/move-object-along-rail-native.json": "3bfba7fc80579a92df51dc6607f0ddfcc82b93442fb11d13437406d3e2cdbd63",
+    "docs/move-object-along-rail-oracle.json": "41e8d3cdf38f3c05d63cde518e8d71cb8e37cb10d737af348762760b7c540b16",
+    "docs/move-object-along-rail-defaults.json": "2bca9fe3f8df0c1e6d92a427c3f7f0fabdee5b8434762b0e58350cbc4b538234",
+    "docs/鱼群轨道生命周期续接.md": "39c17df253153ffa9deabcefd1ff0c8600e91d9f1791f804a41e634577e8d108",
+    "evidence/move-object-along-rail-placement.asm": "b169843394c2664d6614571793dcb69ff3c68846a7c8d45f9eed61d7c69dcbab",
+    "evidence/move-object-along-rail-load.asm": "0a4dc33f2251a3af9970852747d1800ca3aae544bd72fcf8b4b1cd9147b0da29",
+    "evidence/move-object-along-rail-enable.asm": "9d4046a510f2d6f6fe16a4b468f8243f8395dcd743acac212c9aeec642a2b734",
+    "evidence/move-object-along-rail-finish.asm": "7894a9b249087574f7d62567a587693702f60bf9d38ac4ce5b777910bea95cb9",
+    "evidence/move-object-along-rail-unload.asm": "718abf88af7e4fcde86d606f5ec00564075e891734a5c61934b1cd9fd5efd99c",
+    "evidence/move-object-along-rail-size-reference.asm": "c52e4b046beb0949b4fc9698082a706796135b7b242d2532f40d489c31f40bdf",
+    "evidence/move-object-along-rail-update-reference.asm": "085ed2c71ad44e5c40907d27bdd90335e714c58034b358107e63825e09bfd5aa",
+    "docs/move-object-along-rail-verification.json": "b75017773d716dbff2f99aa130906703cd6ad8d6ed3dc9d90122a5260753c502",
+    "src/core/resource-animation-update.ts": "f404690fd9b98912dd0d011e0b3ea12afebfe32c80f6fad7f40847d02f87e12f",
+    "src/core/resource-animation-secondary.ts": "a05ba6598977cac7701c553f409efcdf66d43970428ed8634e1ae0097abde93c",
+    "src/core/resource-animation-clock.ts": "132004742e80858956f1e7d7fe25adf001e20925568c307f65e38364011f0951",
+    "src/core/resource-animation-matrices.ts": "8220b79d589417a06c7d2197ae8e12a42acdab3389fcf56115118e6b474cd15a",
+    "src/core/transform-node-runtime.ts": "c6a33e0ee869ea4b8fb67b8e1d643ac12d265a0bf947e2ded182854e386e0edb",
+    "tools/resource-animation-update-cases.ts": "9bf67b88b57db2bf1be29b768f03db0995318fc63df45c80a8ffa5c972e2b5d6",
+    "tools/resource-animation-update-oracle.ts": "5ef34ff5ad61bf473c6f51a43c1259ce058f35b04ba704dfd644fe698707be4b",
+    "tools/native-resource-animation-update-oracle.c": "db1ede2985904eb5a2df3e8c40ff5bde17ea52b19339f2ecb4617ac9f2a8fd66",
+    "tools/reverse-resource-animation-update.py": "f69ecf9269c463c8dfc9384bfa1c8c595ceb76d6426806cdea277ad05c223043",
+    "tools/verify-resource-animation-update.py": "1c64066cbb3532df4a5e82828791f9c12d6467e71770540435010fbef0f2ab7e",
+    "tools/capture-fish-group-animation-update.ts": "d3117215436a689ce3c660bf707e438144f41345769711ff6d1ef50887cf9c13",
+    "tools/reverse-resource-animation.py": "d3aba27c1ca3f9b3d86cc8e395ae3a95f1091fea8acb0c7c8c45d86995fbab96",
+    "tools/objects-category-census.py": "997641afae26d96082aba85e247493f6f21c5a466922a078caa9bc3817940130",
+    "tests/resource-animation-update.test.ts": "44e908b7882b0079b812493781e437a20567edbe672e462dbb0ecd772bfbdd73",
+    "tests/fixtures/resource-animation-update-native.json.gz": "b7018c83a673c5f8e160ee2f8570bcabae8e064bc0c904a2a019e5b60dc499dd",
+    "tests/fixtures/fish-group-animation-update-native.json.gz": "fe2db51e37bdb13c81314c63ef079c4eb084ab431b2f65a8bd27a5bb4e6503b8",
+    "tests/fixtures/fish-group-animation-update-inputs.json": "40c36fbe5beaffba8aee659d0a9bf3334573018ff4d350c1cab2fbe95c4e18bf",
+    "docs/resource-animation-update-native.json": "5438400f1404468e7e13bc462df92d3d8bc20a68325690cb93aab5493c887052",
+    "docs/resource-animation-update-oracle.json": "f6784575bb13ee15a23884a84d0b33d022323fd4b73592e41361f3dd533d4cb7",
+    "docs/fish-group-animation-update-oracle.json": "cb5dd4fce36e88e448c26fc673e731742e50455c2be59e8a65dd8ea4bcaaffe4",
+    "docs/resource-animation-native.json": "214e4d0baed77e72023f690d66362ddc1ff47f964412259c52776b466798aecd",
+    "docs/生物共用动画整链续接.md": "a6703c99fdd2e32ec4fa1b2dd145d4412d07859e4a3dd3d9f4c61f4ed04ecd7a",
+    "docs/生物骨骼动画续接.md": "300a460718f1c3bdfef7ffd128f5e0e0c29c98070ac8ce57609949a764a9f3ee",
+    "evidence/resource-animation-update-Animation.Update.asm": "fe61d7731415d26da61a132bcb863e07afcebad3fb90cd7bc7b53ebee2281737",
+    "evidence/resource-animation-update-Animation.UpdatePrimary.asm": "68c6de06475fc07a27bc452d24df2a3144bc4cf3c12f6db76c6c6dd0b0baae05",
+    "evidence/resource-animation-update-Animation.UpdateSecondary.asm": "2c0d522a5d0613bad979ec186f6d869030fd3226e023b44538d9f28f5ba2f48b",
+    "evidence/resource-animation-update-Animation.UpdateAdditive.asm": "2c5758ab89a991fb1e8acb626b4bfd27db76b5754ca37d53d9c278e5c76bb23c",
+    "evidence/resource-animation-update-Animation.FlushMatricesAndEvents.asm": "5ea5e052fa56994de0f1b14542172438a82f01e38b9b795ddea2abcce1d147e2",
+    "evidence/resource-animation-update-AnimationRequest.UpdateClock.asm": "8cde738f4052e0fbb04e874c91c00a43362435d4488314f4d26ad447267a8d72",
+    "evidence/resource-animation-update-Transform.UpdateWorldMatrices.asm": "d2e9a6a7758ae56446cfa9f19a5cc292d19eac3475e94c5780cb90f4a7b0c2c7",
+    "evidence/resource-animation-update-Transform.GetWorldMatrix.asm": "b8b8d6c8eff752ce4267243463efa540fe38bce68296c3567d22c428d2fc2fb6",
+    "evidence/resource-animation-update-Transform.MarkDirty.asm": "f045da1b54fbfb195164912f5defddb4b7a2b144ba39495bf2212a7cef7519c4",
+    "docs/resource-animation-update-verification.json": "6f6bab47829f3bad95e2c73ee2960893244a1d6985b8c758e187f7a1619672b4",
+    "docs/交付状态.json": "a4a1c6a64b0bb3d647477113fda9cb6eaa847df04dccba6fc61885934b7224bf",
+    "src/core/dark-creature-look-runtime.ts": "17ca11e0631789ee95d06af6535b10023f55b77764a069383f2c564365a5a3a3",
+    "src/core/dark-creature-spotlight-runtime.ts": "3dba3b53a008268b0453afb4cbeddf7cb5ef2397f42a930bf41395ee5475907b",
+    "src/core/dark-creature-visual-runtime.ts": "d4fe1b5c1de97ed9ebb3a362f6944a6d8650f445e5f52491e035fb01cb3b9f38",
+    "src/core/move-object-along-rail-update-runtime.ts": "872e1e13dc7f0744ab2ccafe51ab14d5cb54d1e43c884d2e75942130459f7212",
+    "src/core/vector-safe-slerp-runtime.ts": "6862c86fe2fc09a76daea6bbf2a9be62bdce9438f81672338c12c9a08924bd83",
+    "tools/dark-creature-spotlight-cases.ts": "951f98016952ce119eb0f8a31beb41333dc5659981a545fd632ae70e453437d6",
+    "tools/dark-creature-spotlight-oracle.ts": "7e0f549eab6803422bbfd7df0c6bd5d80f117f8a3f0a42f3acfe6cbaf8900998",
+    "tools/native-dark-creature-spotlight-oracle.c": "f2385bc1b9e023278e100ddd78adec8b2cbec5436cc5b4bcec3af0968ec23684",
+    "tools/reverse-dark-creature-spotlight.py": "0f3e855baf9fe5f644321825a2cb3a9316346ca89f9fcc4b19b3e93eab59177b",
+    "tools/verify-creature-visual.py": "2afe3aae10c24eb5cc87afdfcc225398a21f495acccd4946471f944afd3e726c",
+    "tools/move-object-along-rail-control-cases.ts": "1ba89925fe613bc394433e7e973e376e393baf250035760c9798dc85463cdd23",
+    "tools/move-object-along-rail-control-oracle.ts": "35bc7e999f5eafa592d3116fecc0a647e26ad414b5e31534cbee97acf51a30a1",
+    "tools/native-move-object-along-rail-control-oracle.c": "fe89ecba0db740c19846232c1af425d9ebcbeeb9f5dcf6a60397258ad83c0a86",
+    "tools/vector-safe-slerp-cases.ts": "8b73ac6e90540194dbcaf401be3de0e036db8394380639e7495918556b0a8bdc",
+    "tools/vector-safe-slerp-oracle.ts": "56883828555062f025bca469fc8652b56882d389a3b6ab336de9e48ccec6c9c8",
+    "tools/native-vector-safe-slerp-oracle.c": "b796d90bcf68c7593109f7fc81f09c3fc0b980e021caecbeec57fd5ea739f4cb",
+    "tests/dark-creature-spotlight-runtime.test.ts": "8a6eb931d9e89848e4db16ceb4cc87afe72ea96799c91150f42f8606c8b69b7b",
+    "tests/move-object-along-rail-control.test.ts": "874530d7507614b3aa9918a7beb4a9e457561d2655ebdbf9b840d601fee6a044",
+    "tests/vector-safe-slerp-runtime.test.ts": "84935e0c0807a1a1d43a7441e6147eaa36d49bd521729508290a7de36d750829",
+    "tests/fixtures/dark-creature-spotlight-native.json.gz": "f4a9f7acd6832312b1dd89c503aee0979ddfa6847d2a144e1fb0358fe31c2909",
+    "tests/fixtures/move-object-along-rail-control-native.json.gz": "4f40333abd9dd72d886a30fcf7540cfffa79becc90fdd7b6cff398de38b3b40a",
+    "tests/fixtures/vector-safe-slerp-native.json.gz": "4db95a76878c8e330adcc6c07c53717519e5e1bcd485ad3e7d433e533e46841f",
+    "docs/dark-creature-spotlight-native.json": "f0a385df1b4f9e46df1d0ff9bcceb2f3464c3ac9b4c51e963b2a82ab9a903123",
+    "docs/dark-creature-spotlight-oracle.json": "034787d8c83e97c3f5f4096288e1541446c2126ee12eefbeae7257fc0812b7f4",
+    "docs/move-object-along-rail-control-oracle.json": "0f384e85345ae946775497b9231e0e314d2244d2cb215445b731add418e061c5",
+    "docs/vector-safe-slerp-oracle.json": "f4f58ee0c1973f8a30f5ee739c6bc0d5c94bb25079b53d0ac970df9a10334ad1",
+    "docs/冥龙探照光圈与鱼群轨道控制续接.md": "e3266eb36dace11d9464f28477e8bf53a1bb23e4d780f05bc53513837b1e548a",
+    "evidence/dark-creature-update-reference.asm": "4b765f8627c2f1ec784ef47a30d9b0e38165fbbe1b637d4a54206367393ec34a",
+    "evidence/vector-safe-slerp.asm": "ec27bac4f6945d1c9f98f17188de8154bcb4b4b3a7b1d6e318927eeeaf98ff91",
+    "docs/creature-visual-verification.json": "de6ca5e01578eae6a0d20865916b94aedec9667315f9fa7253b00892fa26fb0c"
+  },
+  "priorBirdFollowPhase": {
+    "updatedUtc": "2026-11-25T02:26:24.821943+00:00",
+    "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+    "nativeReportsVerified": true,
+    "nativeReports": [
+      "docs/creature-construction-oracle.json",
+      "docs/buddy-oracle.json",
+      "docs/bird-target-oracle.json",
+      "docs/bird-update-oracle.json",
+      "docs/dark-creature-load-oracle.json",
+      "docs/nature-event-oracle.json",
+      "docs/bird-flight-oracle.json",
+      "docs/bird-acceleration-oracle.json",
+      "docs/bird-motion-oracle.json",
+      "docs/bird-motion-flight-oracle.json",
+      "docs/bird-steering-motion-oracle.json",
+      "docs/creature-lifecycle-oracle.json",
+      "docs/bird-force-oracle.json",
+      "docs/creature-force-oracle.json",
+      "docs/bird-rail-oracle.json",
+      "docs/bird-rail-chain-oracle.json",
+      "docs/bird-follow-oracle.json",
+      "docs/bird-follow-chain-oracle.json"
+    ],
+    "newNativeCases": 350,
+    "newNativeComparedBytes": 47064624,
+    "newNativeServiceCalls": 13555,
+    "nativeScope": "Whole original BirdV2Ai.FollowObject and direct Seek overload, Orbit and Brake have independent full-arena and ordered-service comparisons. Actual object follow and target/guide/flock/rail forces execute inside acceleration, steering Begin/End, flight, motion and Model.SetTransform in original BirdV2.Update, including up to 10 frames. Actual Avatar/world position, target virtual transform/OBB, sphere projection, Critter effects, world geometry, direction/bank and Model/animation/GPU owners retain explicit boundaries; cases across reports can overlap.",
+    "baselineRegression": {
+      "passed": true,
+      "tests": 650,
+      "command": "./node_modules/.bin/tsx --test tests/*.test.ts",
+      "log": "/root/sky-research/bird-rail-resumed-tests.log"
+    },
+    "focusedRegression": {
+      "passed": true,
+      "tests": 20,
+      "command": "./node_modules/.bin/tsx --test tests/bird-follow-runtime.test.ts tests/bird-follow-chain-runtime.test.ts tests/bird-rail-runtime.test.ts tests/bird-rail-chain-runtime.test.ts tests/bird-force-runtime.test.ts tests/creature-force-runtime.test.ts tests/bird-steering-motion-runtime.test.ts tests/bird-acceleration-runtime.test.ts tests/bird-flight-runtime.test.ts tests/bird-motion-runtime.test.ts tests/creature-flocking-runtime.test.ts tests/creature-steering-runtime.test.ts",
+      "log": "/root/sky-research/bird-follow-final-focused.log"
+    },
+    "projectRegression": {
+      "passed": true,
+      "tests": 655,
+      "command": "./node_modules/.bin/tsx --test tests/*.test.ts",
+      "log": "/root/sky-research/bird-follow-final-tests.log"
+    },
+    "typecheck": {
+      "passed": true,
+      "command": "./node_modules/.bin/tsc --noEmit",
+      "log": "/root/sky-research/bird-follow-final-types.log"
+    },
+    "windowsBuild": {
+      "passed": true,
+      "command": "node tools/build.mjs --windows",
+      "log": "/root/sky-research/bird-follow-final-windows-build.log",
+      "windowsMachineRuntimeTested": false
+    },
+    "inventory": {
+      "passed": true,
+      "maps": 33,
+      "declaredClasses": 283,
+      "objects": 49824,
+      "references": 60016,
+      "brokenReferences": 0,
+      "completeRuntimeClasses": 0,
+      "allMapsRoundTripUnchanged": true,
+      "log": "/root/sky-research/bird-follow-class-progress.log",
+      "coreSubchainVerifiedClasses": 53
+    },
+    "authorIntroduction": "Already implemented and verified in docs/author-profile-smoke.json; unchanged this continuation.",
+    "newWindowsArchiveCreated": false,
+    "newSourceArchiveCreated": false,
+    "androidWorkPerformed": false,
+    "completeCreatureClasses": 0,
+    "remaining": [
+      "Actual BirdV2Ai Avatar/world position/sphere-OBB projection and Critter effect owners; rail metadata/geometry, direction interpolation and bank filtering",
+      "Actual world collision/neighborhood and Model/animation/GPU ownership and autonomous viewport AI",
+      "Crab outer Update, real Model binding and Barn Receive/Send/network owners",
+      "DarkCreature whole outer Update, target detection, other states/attacks/animation/collision",
+      "FishV2 acceleration/AI and whole Update, actual resources and world owners",
+      "Buddy.Update/authority, single BirdFlock movement/lifecycle, Critter generation/touch/region, SimpleBird/WhaleFairy and messages/network",
+      "Windows hardware and complete creature lifecycle acceptance"
+    ],
+    "passed": true,
+    "windowsSourcePlan": {
+      "passed": true,
+      "command": "python3 tools/package-windows-source.py --plan",
+      "report": "docs/windows-source-plan.json",
+      "log": "/root/sky-research/bird-follow-windows-source-plan.log",
+      "includesNewRuntimeAndNativeFixtures": true,
+      "androidHostIncluded": false,
+      "buildOutputsIncluded": false,
+      "nodeModulesIncluded": false,
+      "cacheIncluded": false
+    },
+    "finalNativeFixtureRegression": {
+      "passed": true,
+      "tests": 5,
+      "log": "/root/sky-research/bird-follow-final-focused.log",
+      "scope": "Four independent native-fixture tests and one complete object-follow/AI/flight/motion/Update fixture test; 350 native cases."
+    },
+    "newNativeReports": [
+      "docs/bird-follow-oracle.json",
+      "docs/bird-follow-chain-oracle.json"
+    ],
+    "categoryCensus": {
+      "passed": true,
+      "command": "python3 tools/objects-category-census.py",
+      "log": "/root/sky-research/bird-follow-category-census.log",
+      "nativeCreatureFamilies": 52,
+      "mapDeclaredCreatureFamilies": 18,
+      "completeCreatureClasses": 0
+    },
+    "priorVerifiedPhase": {
+      "updatedUtc": "2026-11-25T01:35:52.577422+00:00",
+      "newNativeCases": 566,
+      "newNativeComparedBytes": 152939296,
+      "newNativeServiceCalls": 7375,
+      "newNativeReports": [
+        "docs/bird-motion-oracle.json",
+        "docs/bird-motion-flight-oracle.json",
+        "docs/bird-steering-motion-oracle.json",
+        "docs/creature-lifecycle-oracle.json"
+      ],
+      "projectRegression": {
+        "passed": true,
+        "tests": 642,
+        "command": "npm test",
+        "log": "/root/sky-research/creature-motion-final-tests.log"
+      },
+      "focusedRegression": {
+        "passed": true,
+        "tests": 10,
+        "command": "npx tsx --test tests/bird-motion-runtime.test.ts tests/bird-steering-motion-runtime.test.ts tests/creature-lifecycle-runtime.test.ts",
+        "log": "/root/sky-research/creature-motion-lifecycle-focused.log"
+      },
+      "typecheck": {
+        "passed": true,
+        "command": "npx tsc --noEmit",
+        "log": "/root/sky-research/creature-motion-final-types.log"
+      },
+      "windowsBuild": {
+        "passed": true,
+        "command": "npm run build:windows",
+        "log": "/root/sky-research/creature-motion-final-windows-build.log",
+        "windowsMachineRuntimeTested": false
+      },
+      "inventory": {
+        "passed": true,
+        "maps": 33,
+        "declaredClasses": 283,
+        "objects": 49824,
+        "references": 60016,
+        "brokenReferences": 0,
+        "completeRuntimeClasses": 0,
+        "allMapsRoundTripUnchanged": true,
+        "log": "/root/sky-research/bird-follow-class-progress.log",
+        "coreSubchainVerifiedClasses": 53
+      }
+    },
+    "interruptedForceAndRailRecovery": {
+      "forceReports": [
+        "docs/bird-force-oracle.json",
+        "docs/creature-force-oracle.json"
+      ],
+      "forceCases": 240,
+      "forceComparedBytes": 51643480,
+      "forceServiceCalls": 10381,
+      "railReports": [
+        "docs/bird-rail-oracle.json",
+        "docs/bird-rail-chain-oracle.json"
+      ],
+      "railCases": 291,
+      "railComparedBytes": 50593916,
+      "railServiceCalls": 6642,
+      "projectRegression": {
+        "passed": true,
+        "tests": 650,
+        "command": "./node_modules/.bin/tsx --test tests/*.test.ts",
+        "log": "/root/sky-research/bird-rail-resumed-tests.log"
+      },
+      "focusedRegression": {
+        "passed": true,
+        "tests": 15,
+        "log": "/root/sky-research/bird-rail-resumed-focused.log"
+      },
+      "typecheck": {
+        "passed": true,
+        "command": "./node_modules/.bin/tsc --noEmit",
+        "log": "/root/sky-research/bird-rail-resumed-types.log"
+      },
+      "windowsBuild": {
+        "passed": true,
+        "command": "node tools/build.mjs --windows",
+        "log": "/root/sky-research/bird-rail-resumed-windows-build.log",
+        "windowsMachineRuntimeTested": false
+      }
+    }
+  },
+  "passed": true,
+  "priorCrabNetworkAndDarkDetectPhase": {
+    "updatedUtc": "2026-11-25T02:49:23.357552+00:00",
+    "newNativeReports": [
+      "docs/crab-network-oracle.json",
+      "docs/dark-creature-detect-oracle.json"
+    ],
+    "newNativeCases": 355,
+    "newNativeComparedBytes": 82044748,
+    "newNativeServiceCalls": 3707,
+    "focusedRegression": {
+      "passed": true,
+      "tests": 21,
+      "command": "./node_modules/.bin/tsx --test tests/crab-network-runtime.test.ts tests/dark-creature-detect-runtime.test.ts tests/crab-ai-update-runtime.test.ts tests/crab-state-runtime.test.ts tests/crab-behavior-runtime.test.ts tests/creature-lifecycle-runtime.test.ts tests/dark-creature-rail-runtime.test.ts tests/dark-creature-load-runtime.test.ts",
+      "log": "/root/sky-research/crab-dark-final-focused.log"
+    },
+    "projectRegression": {
+      "passed": true,
+      "tests": 663,
+      "command": "./node_modules/.bin/tsx --test tests/*.test.ts",
+      "log": "/root/sky-research/crab-dark-final-tests.log"
+    },
+    "typecheck": {
+      "passed": true,
+      "command": "./node_modules/.bin/tsc --noEmit",
+      "log": "/root/sky-research/crab-dark-final-types.log"
+    },
+    "windowsBuild": {
+      "passed": true,
+      "command": "node tools/build.mjs --windows",
+      "log": "/root/sky-research/crab-dark-final-windows-build.log",
+      "windowsMachineRuntimeTested": false,
+      "machine": "AMD64",
+      "binarySha256": "8c445f6ce3af117028243883fbc2180a806c0dca385302b2d65970baeb9bc161"
+    }
+  },
+  "packagingReadiness": "704 tests/typecheck/Windows AMD64 build pass. Eye and spotlight calculations are verified; real scene/resource/renderer ownership and remaining creature updates/families are incomplete. User requires all creatures completed before packaging; no completion archive created.",
+  "latestPhaseReport": "docs/creature-visual-verification.json",
+  "priorCrabCodecPhase": {
+    "updatedUtc": "2026-11-25T03:07:35.386538+00:00",
+    "newNativeReports": [
+      "docs/crab-codec-oracle.json"
+    ],
+    "newNativeCases": 432,
+    "newNativeComparedBytes": 113345280,
+    "newNativeServiceCalls": 489,
+    "focusedRegression": {
+      "passed": true,
+      "tests": 20,
+      "command": "./node_modules/.bin/tsx --test tests/crab-codec-runtime.test.ts tests/crab-network-runtime.test.ts tests/crab-ai-update-runtime.test.ts tests/crab-state-runtime.test.ts tests/dark-creature-detect-runtime.test.ts",
+      "log": "/root/sky-research/crab-codec-focused.log"
+    },
+    "projectRegression": {
+      "passed": true,
+      "tests": 673,
+      "command": "./node_modules/.bin/tsx --test tests/*.test.ts",
+      "log": "/root/sky-research/crab-codec-final-tests.log"
+    },
+    "typecheck": {
+      "passed": true,
+      "command": "./node_modules/.bin/tsc --noEmit",
+      "log": "/root/sky-research/crab-codec-final-types.log"
+    },
+    "windowsBuild": {
+      "passed": true,
+      "command": "node tools/build.mjs --windows",
+      "log": "/root/sky-research/crab-codec-windows-build.log",
+      "windowsMachineRuntimeTested": false,
+      "machine": "AMD64",
+      "binarySha256": "91d8612a3e3847e574447b11fbce4ffc6697ab84dac4f832c8e79fbabd3f8b00"
+    }
+  },
+  "wholeDarkCreatureOuterUpdateVerified": false,
+  "latestPartialOuterUpdate": {
+    "start": "0x10026ddb0",
+    "stop": "0x10026e7da",
+    "wholeFunctionEnd": "0x10026ffc0",
+    "instructions": 439,
+    "stopAfter": "Model.SetTransform and model callback-owner writes"
+  },
+  "priorDarkCreatureMotionPhase": {
+    "updatedUtc": "2026-11-25T03:53:55.736250+00:00",
+    "newNativeReports": [
+      "docs/dark-creature-motion-oracle.json"
+    ],
+    "newNativeCases": 587,
+    "newNativeComparedBytes": 80561452,
+    "newNativeServiceCalls": 5656,
+    "focusedRegression": {
+      "passed": true,
+      "tests": 8,
+      "command": "./node_modules/.bin/tsx --test tests/dark-creature-motion-runtime.test.ts tests/dark-creature-detect-runtime.test.ts tests/dark-creature-state-runtime.test.ts tests/dark-creature-rail-runtime.test.ts",
+      "log": "/root/sky-research/dark-creature-motion-focused.log"
+    },
+    "projectRegression": {
+      "passed": true,
+      "tests": 677,
+      "command": "./node_modules/.bin/tsx --test tests/*.test.ts",
+      "log": "/root/sky-research/dark-creature-motion-final-tests.log"
+    },
+    "typecheck": {
+      "passed": true,
+      "command": "./node_modules/.bin/tsc --noEmit",
+      "log": "/root/sky-research/dark-creature-motion-final-types.log"
+    },
+    "windowsBuild": {
+      "passed": true,
+      "command": "node tools/build.mjs --windows",
+      "log": "/root/sky-research/dark-creature-motion-windows-build.log",
+      "windowsMachineRuntimeTested": false,
+      "machine": "AMD64",
+      "binarySha256": "7caa4210316a810913eff4d2e74807301c39422586ebfb17e72d15afcd5d686f"
+    }
+  },
+  "wholeDarkCreatureChaseAttackHitVerified": true,
+  "priorDarkCreatureCombatPhase": {
+    "updatedUtc": "2026-11-25T04:16:55.662686+00:00",
+    "newNativeReports": [
+      "docs/dark-creature-combat-oracle.json"
+    ],
+    "newNativeCases": 585,
+    "newNativeComparedBytes": 315046180,
+    "newNativeServiceCalls": 13024,
+    "focusedRegression": {
+      "passed": true,
+      "tests": 11,
+      "command": "./node_modules/.bin/tsx --test tests/dark-creature-combat-runtime.test.ts tests/dark-creature-motion-runtime.test.ts tests/dark-creature-detect-runtime.test.ts tests/dark-creature-state-runtime.test.ts",
+      "log": "/root/sky-research/dark-creature-combat-focused.log"
+    },
+    "projectRegression": {
+      "passed": true,
+      "tests": 682,
+      "command": "./node_modules/.bin/tsx --test tests/*.test.ts",
+      "log": "/root/sky-research/dark-creature-combat-final-tests.log"
+    },
+    "typecheck": {
+      "passed": true,
+      "command": "./node_modules/.bin/tsc --noEmit",
+      "log": "/root/sky-research/dark-creature-combat-final-types.log"
+    },
+    "windowsBuild": {
+      "passed": true,
+      "command": "node tools/build.mjs --windows",
+      "log": "/root/sky-research/dark-creature-combat-windows-build.log",
+      "windowsMachineRuntimeTested": false,
+      "machine": "AMD64",
+      "binarySha256": "d024518d753c3131ae0e949d6cc9efd1ba7e67ec7338469375a24fcdb00b99f4"
+    }
+  },
+  "wholeFishV2UpdateVerified": true,
+  "wholeFishV2AiVerified": true,
+  "fishGroupMapAudit": {
+    "passed": true,
+    "report": "docs/fish-group-map-audit.json",
+    "summary": {
+      "maps": 33,
+      "fishGroups": 5,
+      "regionTriggers": 5,
+      "playAnimationEvents": 10,
+      "movementEvents": 5,
+      "restartDelays": 5,
+      "fishV2Instances": 0,
+      "completeCreatureClasses": 0
+    },
+    "scope": "Read-only audit of actual ObjectsDocument fields and exact saved references, including fish LevelMesh targets, OnRegion local-avatar entry, PlayAnimation sequence names, four-second Delay re-enables, looping Rail point references and mesh action ranges. Passing validates the saved graph and source round trips only; sequence registry binding, trigger/rail/EventBarn composition and autonomous viewport behavior remain pending.",
+    "sequenceRegistryBindingVerified": false,
+    "autonomousViewportBehaviorVerified": false
+  },
+  "priorFishUpdatePhase": {
+    "updatedUtc": "2026-11-25T05:01:33.164331+00:00",
+    "newNativeReports": [
+      "docs/fish-update-oracle.json"
+    ],
+    "newNativeCases": 493,
+    "newNativeComparedBytes": 67319568,
+    "newNativeServiceCalls": 14027,
+    "focusedRegression": {
+      "passed": true,
+      "tests": 13,
+      "command": "./node_modules/.bin/tsx --test tests/fish-update-runtime.test.ts tests/creature-lifecycle-runtime.test.ts tests/play-animation-runtime.test.ts",
+      "log": "/root/sky-research/fish-update-focused.log"
+    },
+    "projectRegression": {
+      "passed": true,
+      "tests": 687,
+      "command": "./node_modules/.bin/tsx --test tests/*.test.ts",
+      "log": "/root/sky-research/fish-update-final-tests.log"
+    },
+    "typecheck": {
+      "passed": true,
+      "command": "./node_modules/.bin/tsc --noEmit",
+      "log": "/root/sky-research/fish-update-final-types.log"
+    },
+    "windowsBuild": {
+      "passed": true,
+      "command": "node tools/build.mjs --windows",
+      "log": "/root/sky-research/fish-update-windows-build.log",
+      "windowsMachineRuntimeTested": false,
+      "machine": "AMD64",
+      "binarySha256": "715d5b5e7fa94b80af6ef3e1a27a93d4a1c42ee6f0c30c5c5ab8fb6e8cbe1315"
+    }
+  },
+  "productionUpdateWithActualAIAndSteeringVerified": true,
+  "priorFishAiPhase": {
+    "updatedUtc": "2026-11-25T05:26:36.272550+00:00",
+    "newNativeReports": [
+      "docs/fish-ai-oracle.json"
+    ],
+    "newNativeCases": 1460,
+    "newNativeComparedBytes": 223247120,
+    "newNativeServiceCalls": 49770,
+    "focusedRegression": {
+      "passed": true,
+      "tests": 16,
+      "command": "./node_modules/.bin/tsx --test tests/fish-ai-runtime.test.ts tests/fish-update-runtime.test.ts tests/creature-force-runtime.test.ts",
+      "log": "/root/sky-research/fish-ai-focused.log"
+    },
+    "projectRegression": {
+      "passed": true,
+      "tests": 695,
+      "command": "./node_modules/.bin/tsx --test tests/*.test.ts",
+      "log": "/root/sky-research/fish-ai-final-tests.log"
+    },
+    "typecheck": {
+      "passed": true,
+      "command": "./node_modules/.bin/tsc --noEmit",
+      "log": "/root/sky-research/fish-ai-final-types.log"
+    },
+    "windowsBuild": {
+      "passed": true,
+      "command": "node tools/build.mjs --windows",
+      "log": "/root/sky-research/fish-ai-windows-build.log",
+      "windowsMachineRuntimeTested": false,
+      "machine": "AMD64",
+      "binarySha256": "0dc479835a11df27ec8781f471974b13b5d14a7008d831bb0540777e16f6adab"
+    }
+  },
+  "nativeCasesExecutedThisPhaseIncludingSequenceRegression": 1762,
+  "originalSequenceRegistryLoaded": true,
+  "fishGroupSceneEventGraphsVerified": true,
+  "fishGroupCompleteSceneBehaviorVerified": false,
+  "priorFishGroupEventsPhase": {
+    "updatedUtc": "2026-11-25T06:09:49.128574+00:00",
+    "newNativeReports": [
+      "docs/on-region-oracle.json",
+      "docs/resource-animation-sequence-oracle.json"
+    ],
+    "newNativeCases": 405,
+    "newNativeComparedBytes": 129707408,
+    "newNativeServiceCalls": 30273,
+    "focusedRegression": {
+      "passed": true,
+      "tests": 4,
+      "command": "./node_modules/.bin/tsx --test tests/on-region-runtime.test.ts tests/animation-sequence-registry.test.ts tests/fish-group-scene-events.test.ts tests/resource-animation-sequence.test.ts",
+      "log": "/root/sky-research/fish-group-focused-tests.log"
+    },
+    "projectRegression": {
+      "passed": true,
+      "tests": 698,
+      "command": "./node_modules/.bin/tsx --test tests/*.test.ts",
+      "log": "/root/sky-research/fish-group-project-tests.log"
+    },
+    "typecheck": {
+      "passed": true,
+      "command": "./node_modules/.bin/tsc --noEmit",
+      "log": "/root/sky-research/fish-group-final-types.log"
+    },
+    "windowsBuild": {
+      "passed": true,
+      "command": "node tools/build.mjs --windows",
+      "log": "/root/sky-research/fish-group-windows-build.log",
+      "machine": "AMD64",
+      "binarySha256": "a694991213ac008d0ada26dc420e2e2740339ee48a70f53a35c8da940c72fa4f",
+      "windowsMachineRuntimeTested": false
+    }
+  },
+  "fishGroupRailLifecycleAndQueriesVerified": true,
+  "fishGroupWholeMotionUpdateVerified": false,
+  "priorMoveObjectAlongRailPhase": {
+    "updatedUtc": "2026-11-25T06:33:42.482059+00:00",
+    "newNativeReports": [
+      "docs/move-object-along-rail-oracle.json"
+    ],
+    "newNativeCases": 193,
+    "newNativeComparedBytes": 63873040,
+    "newNativeServiceCalls": 4904,
+    "focusedRegression": {
+      "passed": true,
+      "tests": 3,
+      "command": "./node_modules/.bin/tsx --test tests/move-object-along-rail-runtime.test.ts tests/fish-group-scene-events.test.ts tests/on-region-runtime.test.ts",
+      "log": "/root/sky-research/move-rail-focused-tests.log"
+    },
+    "projectRegression": {
+      "passed": true,
+      "tests": 699,
+      "command": "./node_modules/.bin/tsx --test tests/*.test.ts",
+      "log": "/root/sky-research/move-rail-project-tests.log"
+    },
+    "typecheck": {
+      "passed": true,
+      "command": "./node_modules/.bin/tsc --noEmit",
+      "log": "/root/sky-research/move-rail-final-types.log"
+    },
+    "windowsBuild": {
+      "passed": true,
+      "command": "node tools/build.mjs --windows",
+      "log": "/root/sky-research/move-rail-windows-build.log",
+      "machine": "AMD64",
+      "binarySha256": "8c135da0f22531a636e05fb4c2e5fc092f894888ea6a76208f57e285e0cba59d",
+      "windowsMachineRuntimeTested": false
+    }
+  },
+  "newNativeFrames": 0,
+  "wholeSharedAnimationUpdateVerified": true,
+  "wholeTransformWorldCacheVerified": true,
+  "fishGroupAnimationRequestPoseTransitionsVerified": true,
+  "priorSharedAnimationUpdatePhase": {
+    "updatedUtc": "2026-11-25T07:08:09.690320+00:00",
+    "newNativeReports": [
+      "docs/resource-animation-update-oracle.json",
+      "docs/fish-group-animation-update-oracle.json"
+    ],
+    "newNativeCases": 3569,
+    "newNativeFrames": 16932,
+    "newNativeComparedBytes": 664428384,
+    "newNativeServiceCalls": 67172,
+    "focusedRegression": {
+      "passed": true,
+      "tests": 8,
+      "command": "./node_modules/.bin/tsx --test tests/resource-animation-update.test.ts tests/resource-animation-matrices.test.ts tests/resource-animation-secondary.test.ts tests/resource-animation-clock.test.ts tests/fish-group-scene-events.test.ts",
+      "log": "/root/sky-research/animation-update-focused-tests.log"
+    },
+    "projectRegression": {
+      "passed": true,
+      "tests": 701,
+      "command": "./node_modules/.bin/tsx --test tests/*.test.ts",
+      "log": "/root/sky-research/animation-update-project-tests.log"
+    },
+    "typecheck": {
+      "passed": true,
+      "command": "./node_modules/.bin/tsc --noEmit",
+      "log": "/root/sky-research/animation-update-final-types.log"
+    },
+    "windowsBuild": {
+      "passed": true,
+      "command": "node tools/build.mjs --windows",
+      "log": "/root/sky-research/animation-update-windows-build.log",
+      "machine": "AMD64",
+      "binarySha256": "ff4f32f8dc8bca127c1d9a1fbfbc688eb4d26652749ddabb70ef3a64365ddca9",
+      "windowsMachineRuntimeTested": false
+    }
+  },
+  "wholeDarkCreatureEyeProjectionPhaseVerified": true,
+  "fishGroupRailControlPrefixVerified": true,
+  "wholeSafeSlerpVerified": true
+}

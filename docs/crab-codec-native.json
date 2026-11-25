@@ -1,0 +1,100 @@
+{
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "functions": {
+    "Crab.SerializeState": {
+      "start": "0x1002582b0",
+      "end": "0x100258580",
+      "codeSha256": "f7ff52b7e85edc8498d2373bb75f01791905d0ef2aeec115fc62ea80e8663bb4",
+      "assembly": "evidence/crab-serializestate.asm"
+    },
+    "BinaryStream.Bytes": {
+      "start": "0x10076a0a0",
+      "end": "0x10076a230",
+      "codeSha256": "7cde8644f43a5511d97e9ea4a1334095f0e52d3de8eb7b057f7b29a923c379d5",
+      "assembly": "evidence/binarystream-bytes.asm"
+    },
+    "BinaryStream.WriteBits": {
+      "start": "0x1007692c0",
+      "end": "0x1007693f0",
+      "codeSha256": "a9e9c9e8c1f450809cc5cc0e8f708edf63aae2c449957ea24e83c0c2e89b645b",
+      "assembly": "evidence/binarystream-writebits.asm"
+    },
+    "BinaryStream.ReadBits": {
+      "start": "0x1007693f0",
+      "end": "0x100769520",
+      "codeSha256": "68457870fe8f0d80e48c35a4471df52f20a0bf9c4c631a034168ae0ed6c9cfba",
+      "assembly": "evidence/binarystream-readbits.asm"
+    },
+    "BinaryStream.UInt": {
+      "start": "0x10076ad40",
+      "end": "0x10076ae50",
+      "codeSha256": "cb2f56ec2a7f68dbce53d46af9dba49be22b0028eb53039112d4037c6db1334e",
+      "assembly": "evidence/binarystream-uint.asm"
+    },
+    "BinaryStream.Byte": {
+      "start": "0x10076ae50",
+      "end": "0x10076ae80",
+      "codeSha256": "b6e2fcbd75cdc8bc7748cf6bdb49bceb4f56237b54dff61960cf9680277b3270",
+      "assembly": "evidence/binarystream-byte.asm"
+    },
+    "BinaryStream.Float": {
+      "start": "0x10076af70",
+      "end": "0x10076b230",
+      "codeSha256": "acf724dd8ddab61652c614f0fde2eca3d1a48a88df16b1a648110925e263dd2e",
+      "assembly": "evidence/binarystream-float.asm"
+    },
+    "BinaryStream.QuantizedVector": {
+      "start": "0x10076b4e0",
+      "end": "0x10076b580",
+      "codeSha256": "ad2bb66ec5184451e591466b05579b9b3b2ed3d2041a8afe490a717b6f5c790f",
+      "assembly": "evidence/binarystream-quantizedvector.asm"
+    },
+    "BinaryStream.Vector": {
+      "start": "0x10076a360",
+      "end": "0x10076a410",
+      "codeSha256": "154e8c4b7667af00c92143aa49412051b0f646ce8c2d86e051efa68cc82d2ec9",
+      "assembly": "evidence/binarystream-vector.asm"
+    },
+    "BinaryStream.Bool": {
+      "start": "0x10076aae0",
+      "end": "0x10076ac00",
+      "codeSha256": "197dc6991d5c4319add40734876eac33d20c785eec18dcd12aeac920e9b9a5c3",
+      "assembly": "evidence/binarystream-bool.asm"
+    },
+    "NetGameTypes.PlayerId": {
+      "start": "0x10049d9b0",
+      "end": "0x10049dab0",
+      "codeSha256": "da3ae9a5712f6475afc721747cc8b99f2aa3205a93bf079e6e3849f488d0ee87",
+      "assembly": "evidence/netgametypes-playerid.asm"
+    },
+    "NetPlayerBarn.ShortId": {
+      "start": "0x1004aa260",
+      "end": "0x1004aa2b0",
+      "codeSha256": "c629bcbb08faeb4070d7af560392878f7e2d47e3cdb395cb1619aa0af5d64370",
+      "assembly": "evidence/netplayerbarn-shortid.asm"
+    },
+    "NetPlayerBarn.PlayerId": {
+      "start": "0x1004aa2b0",
+      "end": "0x1004aa300",
+      "codeSha256": "932c03c3a232c1f6b8bd5303d8dd4f3290d228ceca31d32de97fd92b50e4301c",
+      "assembly": "evidence/netplayerbarn-playerid.asm"
+    }
+  },
+  "constants": {
+    "one": 1065353216,
+    "half": 1056964608
+  },
+  "vectors": {
+    "targetMinimum": [
+      3267887104,
+      3267887104,
+      3267887104
+    ],
+    "targetMaximum": [
+      1120403456,
+      1120403456,
+      1120403456
+    ]
+  },
+  "scope": "Whole original Crab field codec composed with actual BinaryStream bit/byte/range/quantization/bool/vector operations and player-ID contexts and NetPlayerBarn mappings. Actual caller-owned packet buffers, stream cursors/status and memory are compared. Real network transport, world collision, outer Crab/DarkCreature Update and Model/animation/GPU owners remain pending."
+}

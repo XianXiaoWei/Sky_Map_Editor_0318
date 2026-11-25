@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Objects.level.bin · 逐类进度</title>
+<style>
+:root{color-scheme:light;--ink:#172b3b;--muted:#526977;--line:#d9e3e7;--accent:#176d68;--soft:#e5f2ef;--paper:#fff;--bg:#f3f6f6}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 system-ui,"Noto Sans CJK SC",sans-serif}main{max-width:1440px;margin:auto;padding:36px 28px 50px}h1{font-size:32px;line-height:1.3;margin:4px 0 12px;letter-spacing:-.5px}h2{margin:0;font-size:23px}.eyebrow{font-size:13px;color:var(--accent);font-weight:700}.intro{max-width:920px;color:var(--muted);margin:0 0 20px}.goal{background:var(--soft);border-left:4px solid var(--accent);padding:12px 16px;border-radius:4px;margin:16px 0 24px}.metrics{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.metric{padding:18px;background:var(--paper);border:1px solid var(--line);border-radius:10px}.metric strong{font-size:27px;display:block;font-variant-numeric:tabular-nums}.metric span{font-size:13px;color:var(--muted)}.filters{display:flex;flex-wrap:wrap;gap:10px;margin:25px 0 12px;align-items:end}.control{display:flex;flex-direction:column;gap:5px;font-size:12px;color:var(--muted)}.search{flex:1;min-width:230px}input,select{font:inherit;color:var(--ink);background:#fff;border:1px solid #bbccd2;border-radius:7px;padding:10px 12px;min-height:44px}input:focus,select:focus,button:focus-visible{outline:3px solid #8bcbc1;outline-offset:2px}.results{display:flex;justify-content:space-between;gap:15px;color:var(--muted);font-size:13px;margin:12px 0}.table-wrap{overflow:auto;background:#fff;border:1px solid var(--line);border-radius:10px}table{border-collapse:collapse;width:100%;text-align:left}th{font-size:12px;color:var(--muted);background:#edf3f4;white-space:nowrap}td,th{padding:13px 16px;border-bottom:1px solid #e6edef;vertical-align:top}tbody tr:last-child td{border-bottom:0}tbody tr:hover{background:#f4faf9}td.num{font-variant-numeric:tabular-nums;text-align:right}td.name{min-width:200px;max-width:310px}td.progress{min-width:170px}td.note{min-width:290px;max-width:520px;font-size:13px;color:var(--muted)}button{font:inherit;cursor:pointer}.class-button{color:var(--accent);background:none;border:none;font-weight:650;text-align:left;padding:0;overflow-wrap:anywhere}.class-button:hover{text-decoration:underline}.sub{display:block;font-size:11px;color:var(--muted);margin-top:4px}.bar{height:6px;background:#e4ebec;border-radius:9px;overflow:hidden;margin-top:7px}.bar span{display:block;height:100%;background:var(--accent);border-radius:9px}.tag{display:inline-block;border-radius:4px;background:var(--soft);color:var(--accent);padding:2px 6px;font-size:12px;white-space:nowrap}.empty{text-align:center;padding:40px;color:var(--muted)}footer{color:var(--muted);font-size:12px;margin:22px 0}a{color:var(--accent)}dialog{border:1px solid var(--line);border-radius:12px;padding:0;width:min(980px,95vw);max-height:90vh;box-shadow:0 24px 100px #16342e40;color:var(--ink)}dialog::backdrop{background:#172b3b88}.dialog-head{display:flex;justify-content:space-between;gap:14px;align-items:center;background:#fff;padding:20px 24px;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:1}.dialog-body{padding:22px 24px;overflow-wrap:anywhere}.close{background:#edf3f4;border:0;border-radius:6px;padding:6px 13px;color:var(--ink)}.checklist{padding:0;list-style:none}.checkpoint{padding:12px 0;border-bottom:1px solid var(--line)}.checkpoint strong{font-size:14px}.status{display:inline-block;min-width:62px;margin-right:10px;color:var(--muted);font-size:12px}.status.verified{color:var(--accent)}.status.partial{color:#975d12}.check-note{font-size:12px;color:var(--muted);margin:5px 0 0 72px}.links{margin:16px 0;font-size:13px}.field-table{font-size:12px}.field-table td,.field-table th{padding:8px}.section-title{font-weight:650;margin:22px 0 10px}details{margin:16px 0}summary{cursor:pointer;font-size:14px;font-weight:650}.small{font-size:12px;color:var(--muted)}@media(max-width:850px){main{padding:24px 14px}.metrics{grid-template-columns:repeat(3,1fr)}h1{font-size:25px}.metric strong{font-size:22px}td,th{padding:11px}.dialog-body,.dialog-head{padding:16px}.results{flex-direction:column;gap:4px}}@media(max-width:480px){.metrics{grid-template-columns:repeat(2,1fr)}.control{flex:1;min-width:140px}}
+</style>
+</head>
+<body>
+<main>
+<div class="eyebrow">Sky 0.3.18 · 实际地图数据</div>
+<h1>Objects.level.bin 按类功能的实现清单</h1>
+<p class="intro">按功能分组集中列出单独类，每类都有自己的职责、实施项、进度与原函数证据。点击类名可查看完整清单及该类全部实例；地图只保留为来源信息。音效、音乐与混音独立分组。</p>
+<div class="goal">最终目标：100% 还原原游戏逻辑。当前阶段 BstBaked.meshes 的 Mesh、Terrain、Cloud、Skirt、Occluder 五段同等优先推进至各 9/10（90%），第 10 项保留真机验收；Objects 的共享依赖一起恢复。</div>
+<div id="metrics" class="metrics"></div>
+<div class="filters">
+<label class="control search">搜索类名、字段或缺口<input id="search" type="search" placeholder="例如 Rail、OnRegion、CloudCard" autocomplete="off"></label>
+<label class="control">功能分类<select id="category"><option value="">全部功能</option></select></label>
+<label class="control">范围<select id="scope"><option value="all">全部声明类型</option><option value="nodes">顶层地图对象</option><option value="nested">嵌套 / 仅声明类型</option><option value="core">原核心子链已核验</option><option value="partial">有部分实现</option><option value="complete">完整类已验收</option></select></label>
+<label class="control">排序<select id="sort"><option value="function">功能分组 → 类</option><option value="name">类名 A–Z</option><option value="progress">清单进度由高到低</option><option value="instances">对象数量由多到少</option></select></label>
+</div>
+<div class="results"><span id="result-count" role="status" aria-live="polite"></span><span id="overall"></span></div>
+<div class="table-wrap"><table><thead><tr><th>单独类 / 功能</th><th>对象数</th><th>嵌套数</th><th>来源数</th><th>已验证清单</th><th>核心子链</th><th>当前范围及缺口</th></tr></thead><tbody id="rows"></tbody></table></div>
+<footer>完整原逻辑比例尚未确定。功能分组逐类维护；嵌套或仅声明类型的运行身份待确认。<a href="Objects.level.bin全部实现清单.md">全部实现清单</a> · <a href="Objects.level.bin对象实现清单.html">全部对象清单</a> · <a href="Objects.level.bin类进度清单.md">Markdown 清单</a> · <a href="Objects.level.bin类进度.json">JSON 数据</a> · <a href="BstBaked数据段清单.md">BstBaked 五段清单</a> · <span id="updated"></span></footer>
+</main>
+<dialog id="detail"><div class="dialog-head"><h2 id="detail-name"></h2><button id="close" class="close" type="button" aria-label="关闭类详情">关闭</button></div><div id="detail-body" class="dialog-body"></div></dialog>
+<script>
+'use strict';
+const REPORT=__OBJECTS_CLASS_PROGRESS__;
+const byId=id=>document.getElementById(id),number=n=>n.toLocaleString('zh-CN'),node=(tag,text,className)=>{const el=document.createElement(tag);if(text!==undefined)el.textContent=text;if(className)el.className=className;return el;};
+const summary=REPORT.summary;
+for(const [value,label] of [[summary.nodeClasses,'顶层对象类'],[summary.declaredClasses,'全部声明类型'],[summary.totalNodes,'实际地图对象'],[summary.coreSubchainVerifiedClasses,'核心子链已核验的类'],[summary.completeRuntimeClasses,'完整类运行已验收']]){const card=node('div',undefined,'metric');card.append(node('strong',number(value)),node('span',label));byId('metrics').append(card);}
+for(const g of REPORT.groups){const option=node('option',g.name+'（'+g.classCount+' 类）');option.value=g.name;byId('category').append(option);}
+byId('overall').textContent='全部类的平均检查项进度 '+summary.meanClassCheckpointPercent+'% · '+summary.levels+' 张地图';
+byId('updated').textContent='更新 '+new Date(REPORT.updatedAtUTC).toISOString().slice(0,16).replace('T',' ')+' UTC';
+const link=file=>{const a=node('a',file.split('/').pop());a.href=file.startsWith('docs/')?file.slice(5):'../'+file;return a;};
+function openDetail(c){
+  const body=byId('detail-body');body.replaceChildren();byId('detail-name').textContent=c.name;
+  body.append(node('p',c.category+' · '+c.functionRole),node('p',c.checkpointProgressPercent+'%（'+c.completedCheckpoints+'/10） · 部分项 '+c.partialCheckpoints+' · '+c.instances+' 个实例','small'),node('p',c.note));
+  const instances=node('a','查看此类全部实例');instances.href='Objects.level.bin对象实现清单.html#class='+encodeURIComponent(c.name);body.append(instances);
+  body.append(node('p','此类功能实施项（部分子链不等于完整功能）','section-title'));
+  const tasks=node('ul');for(const p of c.functionalTasks)tasks.append(node('li',(p.status==='verified'?'已验证':p.status==='partial'?'部分完成':'待恢复')+' · '+p.name+'：'+p.description));body.append(tasks);
+  const list=node('ol',undefined,'checklist');
+  for(const [index,p] of c.checkpoints.entries()){
+    const item=node('li',undefined,'checkpoint'),status=node('span',p.status==='verified'?'已验证':p.status==='partial'?'部分完成':'待完成','status '+p.status);
+    item.append(status,node('strong',(index+1)+'. '+p.name));if(p.note)item.append(node('p',p.note,'check-note'));list.append(item);
+  }
+  body.append(list);
+  for(const [label,files] of [['实现',c.implementation],['证据',c.evidence]])if(files.length){const p=node('p',label+'：','links');for(const [i,file] of files.entries()){if(i)p.append(document.createTextNode(' · '));p.append(link(file));}body.append(p);}
+  const distribution=node('details');distribution.append(node('summary','地图分布（'+c.declaredLevels+'）'));
+  for(const l of c.levels)distribution.append(node('div',l.level+' · 对象 '+l.nodes+' / 嵌套 '+l.nested,'small'));body.append(distribution);
+  const fields=node('details');fields.append(node('summary','原注册字段（'+c.nativeRegisteredFields.length+'）及文件声明（'+c.serializedFields.length+'）'));
+  if(c.rttiAddress)fields.append(node('p','RTTI '+c.rttiAddress,'small'));
+  const table=node('table',undefined,'field-table'),head=node('tr');for(const title of ['字段','原偏移','类型 getter','注册函数'])head.append(node('th',title));table.append(head);
+  for(const f of c.nativeRegisteredFields){const row=node('tr');for(const value of [f.name,'+0x'+f.nativeOffset.toString(16),f.typeGetter,f.registrationFunction])row.append(node('td',value));table.append(row);}fields.append(table);
+  fields.append(node('p','文件中的字段变体：','small'));for(const f of c.serializedFields)fields.append(node('div',f.name+' · type '+f.type+' · '+f.size+' bytes'+(f.nestedClass?' · '+f.nestedClass:''),'small'));body.append(fields);
+  const dialog=byId('detail');if(!dialog.open)dialog.showModal();
+}
+function render(){
+  const search=byId('search').value.trim().toLowerCase(),category=byId('category').value,scope=byId('scope').value,sort=byId('sort').value;
+  const matches=REPORT.classes.filter(c=>(!category||c.category===category)&&(!search||[c.name,c.functionRole,c.note,...c.serializedFields.map(f=>f.name)].join(' ').toLowerCase().includes(search))&&(scope==='all'||scope==='nodes'&&c.instances>0||scope==='nested'&&c.instances===0||scope==='core'&&c.coreSubchainVerified||scope==='partial'&&c.partialCheckpoints>0||scope==='complete'&&c.completeClassRuntimeVerified));
+  const order=new Map(REPORT.groups.map((g,i)=>[g.id,i]));matches.sort((a,b)=>sort==='progress'?b.checkpointProgressPercent-a.checkpointProgressPercent||a.name.localeCompare(b.name):sort==='instances'?b.instances-a.instances||a.name.localeCompare(b.name):sort==='function'?order.get(a.functionGroupId)-order.get(b.functionGroupId)||a.name.localeCompare(b.name):a.name.localeCompare(b.name));
+  const fragment=document.createDocumentFragment();
+  let previousGroup='';
+  for(const c of matches){if(sort==='function'&&previousGroup!==c.category){const group=node('tr'),cell=node('th',c.category);cell.colSpan=7;group.dataset.group=c.functionGroupId;group.append(cell);fragment.append(group);previousGroup=c.category;}
+    const row=node('tr');row.dataset.class=c.name;const name=node('td',undefined,'name'),button=node('button',c.name,'class-button');button.type='button';button.addEventListener('click',()=>openDetail(c));name.append(button,node('span',c.functionRole,'sub'));row.append(name);
+    for(const n of [c.instances,c.nestedInstances,c.declaredLevels])row.append(node('td',number(n),'num'));
+    const progress=node('td',undefined,'progress');progress.append(node('span',c.checkpointProgressPercent+'% · '+c.completedCheckpoints+'/10'));const bar=node('div',undefined,'bar'),fill=node('span');fill.style.width=c.checkpointProgressPercent+'%';bar.append(fill);progress.append(bar,node('span','部分完成 '+c.partialCheckpoints+' 项（未计分）','sub'));row.append(progress);
+    const core=node('td');core.append(node('span',c.coreSubchainVerified?'已核验子链':'待完整恢复',c.coreSubchainVerified?'tag':'small'));row.append(core,node('td',c.note,'note'));fragment.append(row);
+  }
+  if(!matches.length){const row=node('tr'),cell=node('td','没有匹配的类。可调整搜索词或筛选范围。','empty');cell.colSpan=7;row.append(cell);fragment.append(row);}
+  byId('rows').replaceChildren(fragment);byId('result-count').textContent='显示 '+matches.length+' / '+REPORT.classes.length+' 个实际声明类型';
+}
+for(const id of ['search','category','scope','sort'])byId(id).addEventListener(id==='search'?'input':'change',render);
+byId('close').addEventListener('click',()=>byId('detail').close());
+byId('detail').addEventListener('click',event=>{if(event.target===byId('detail')){const r=event.target.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)event.target.close();}});
+render();if(location.hash){const selected=REPORT.classes.find(c=>c.name===decodeURIComponent(location.hash.slice(1)));if(selected)openDetail(selected);}
+</script>
+</body>
+</html>

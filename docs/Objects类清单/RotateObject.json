@@ -1,0 +1,792 @@
+{
+  "className": "RotateObject",
+  "functionGroup": "场景基础与对象变换",
+  "functionRole": "对象旋转范围与速度控制",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "RotateObject 的原默认值、继承初始化及 18 个序列化字段变体；原注册字段 17 项。"
+    },
+    {
+      "name": "对象旋转范围与速度控制",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Clump（8 条引用）、Float（2 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "RotateObject",
+    "category": "场景基础与对象变换",
+    "functionGroupId": "scene",
+    "functionRole": "对象旋转范围与速度控制",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "RotateObject 的原默认值、继承初始化及 18 个序列化字段变体；原注册字段 17 项。"
+      },
+      {
+        "name": "对象旋转范围与速度控制",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Clump（8 条引用）、Float（2 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Clump",
+        "references": 8
+      },
+      {
+        "className": "Float",
+        "references": 2
+      }
+    ],
+    "rttiWorkingGroup": "系统和其余类型",
+    "role": "对象实例类型",
+    "instances": 8,
+    "nestedInstances": 0,
+    "referenceFields": 10,
+    "declaredLevels": 4,
+    "levels": [
+      {
+        "level": "Dawn",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Dusk",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Night",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Sunset",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "axis",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "networked",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "objects",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "rateMult",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "rateMultFloat",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "rotRangeX",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "rotRangeY",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "rotRangeZ",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "shake",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "sound",
+        "type": 1,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "soundMaxDist",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "soundMinDist",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "useRotRange",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "windPushMult",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "x",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "y",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "z",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100d071c0",
+    "nativeRegisteredFields": [
+      {
+        "name": "objects",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 64,
+        "registrationFunction": "0x1006dc260",
+        "propertyAddress": "0x100d06470"
+      },
+      {
+        "name": "axis",
+        "typeGetter": "__Z17GetMetaTypeByTypeI4AxisERK8MetaTypev",
+        "nativeOffset": 72,
+        "registrationFunction": "0x1006dc260",
+        "propertyAddress": "0x100d064c0"
+      },
+      {
+        "name": "x",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 76,
+        "registrationFunction": "0x1006dc260",
+        "propertyAddress": "0x100d06510"
+      },
+      {
+        "name": "y",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 80,
+        "registrationFunction": "0x1006dc260",
+        "propertyAddress": "0x100d06560"
+      },
+      {
+        "name": "z",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 84,
+        "registrationFunction": "0x1006dc260",
+        "propertyAddress": "0x100d065b0"
+      },
+      {
+        "name": "shake",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 136,
+        "registrationFunction": "0x1006dc260",
+        "propertyAddress": "0x100d06600"
+      },
+      {
+        "name": "rateMult",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 88,
+        "registrationFunction": "0x1006dc260",
+        "propertyAddress": "0x100d06650"
+      },
+      {
+        "name": "sound",
+        "typeGetter": "__Z17GetMetaTypeByTypeINSt3__112basic_stringIcNS0_11char_traitsIcEE16StlPoolAllocatorIcEEEERK8MetaTypev",
+        "nativeOffset": 112,
+        "registrationFunction": "0x1006dc260",
+        "propertyAddress": "0x100d066a0"
+      },
+      {
+        "name": "soundMinDist",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 96,
+        "registrationFunction": "0x1006dc260",
+        "propertyAddress": "0x100d066f0"
+      },
+      {
+        "name": "soundMaxDist",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 100,
+        "registrationFunction": "0x1006dc260",
+        "propertyAddress": "0x100d06740"
+      },
+      {
+        "name": "windPushMult",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 92,
+        "registrationFunction": "0x1006dc260",
+        "propertyAddress": "0x100d06790"
+      },
+      {
+        "name": "networked",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 137,
+        "registrationFunction": "0x1006dc260",
+        "propertyAddress": "0x100d067e0"
+      },
+      {
+        "name": "rateMultFloat",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5FloatERK8MetaTypev",
+        "nativeOffset": 104,
+        "registrationFunction": "0x1006dc260",
+        "propertyAddress": "0x100d06830"
+      },
+      {
+        "name": "useRotRange",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 138,
+        "registrationFunction": "0x1006dc260",
+        "propertyAddress": "0x100d06880"
+      },
+      {
+        "name": "rotRangeX",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 140,
+        "registrationFunction": "0x1006dc260",
+        "propertyAddress": "0x100d068d0"
+      },
+      {
+        "name": "rotRangeY",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 144,
+        "registrationFunction": "0x1006dc260",
+        "propertyAddress": "0x100d06920"
+      },
+      {
+        "name": "rotRangeZ",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 148,
+        "registrationFunction": "0x1006dc260",
+        "propertyAddress": "0x100d06970"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 17 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "Dawn:n609",
+      "level": "Dawn",
+      "nodeId": 609,
+      "name": "BstNode_1528233985",
+      "className": "RotateObject",
+      "classIndex": 68,
+      "sourceOffset": 126611,
+      "sourceLength": 80,
+      "sourceSha256": "ed8cde7407f147036405ccca0ebc2a64367fc5ba4a6287f5d387a8c3abfd4e7b",
+      "declaredFieldCount": 18,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n609/p10",
+          "fieldName": "objects",
+          "target": "Dawn:n3137",
+          "targetNodeId": 3137,
+          "offset": 126662
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2681",
+      "level": "Dawn",
+      "nodeId": 2681,
+      "name": "BstNode_34603034",
+      "className": "RotateObject",
+      "classIndex": 68,
+      "sourceOffset": 444789,
+      "sourceLength": 78,
+      "sourceSha256": "1c551adef81cd1271fc05054eb782d14250b55fc29d712d3faa864cb2ea08a2a",
+      "declaredFieldCount": 18,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2681/p10",
+          "fieldName": "objects",
+          "target": "Dawn:n3720",
+          "targetNodeId": 3720,
+          "offset": 444838
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n789",
+      "level": "Dusk",
+      "nodeId": 789,
+      "name": "BstNode_34603714",
+      "className": "RotateObject",
+      "classIndex": 65,
+      "sourceOffset": 166200,
+      "sourceLength": 91,
+      "sourceSha256": "dab46a16266f9e4a839174757c098ab3590cf1ef1847798c4f98515bffd98e09",
+      "declaredFieldCount": 18,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n789/p6",
+          "fieldName": "rateMultFloat",
+          "target": "Dusk:n793",
+          "targetNodeId": 793,
+          "offset": 166249
+        },
+        {
+          "fieldId": "n789/p10",
+          "fieldName": "objects",
+          "target": "Dusk:n1255",
+          "targetNodeId": 1255,
+          "offset": 166262
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1806",
+      "level": "Night",
+      "nodeId": 1806,
+      "name": "BstNode_474",
+      "className": "RotateObject",
+      "classIndex": 65,
+      "sourceOffset": 281977,
+      "sourceLength": 73,
+      "sourceSha256": "b5e25d984703ee2dc949db883aa4e9e4cdfc67ca6ea1f7ecd6d56f26ca47b4bf",
+      "declaredFieldCount": 18,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1806/p10",
+          "fieldName": "objects",
+          "target": "Night:n3447",
+          "targetNodeId": 3447,
+          "offset": 282021
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2493",
+      "level": "Night",
+      "nodeId": 2493,
+      "name": "BstNode_870",
+      "className": "RotateObject",
+      "classIndex": 65,
+      "sourceOffset": 391430,
+      "sourceLength": 73,
+      "sourceSha256": "a8ec468bceb77ec8a62ad4c157699eef6f1df93cf56e4ca3d0d92cbd791f39df",
+      "declaredFieldCount": 18,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2493/p10",
+          "fieldName": "objects",
+          "target": "Night:n3577",
+          "targetNodeId": 3577,
+          "offset": 391474
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2711",
+      "level": "Night",
+      "nodeId": 2711,
+      "name": "BstNode_478",
+      "className": "RotateObject",
+      "classIndex": 65,
+      "sourceOffset": 422612,
+      "sourceLength": 73,
+      "sourceSha256": "6a8ef128df81e12f7dc446886331426157791c05ab370438ed23616f406051e3",
+      "declaredFieldCount": 18,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2711/p10",
+          "fieldName": "objects",
+          "target": "Night:n3627",
+          "targetNodeId": 3627,
+          "offset": 422656
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n3010",
+      "level": "Night",
+      "nodeId": 3010,
+      "name": "BstNode_2443",
+      "className": "RotateObject",
+      "classIndex": 65,
+      "sourceOffset": 468440,
+      "sourceLength": 74,
+      "sourceSha256": "7219695da9d9ecc0538a2a301bd9e7d2010351a6037efb338afae8c595d55290",
+      "declaredFieldCount": 18,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n3010/p10",
+          "fieldName": "objects",
+          "target": "Night:n3695",
+          "targetNodeId": 3695,
+          "offset": 468485
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n1308",
+      "level": "Sunset",
+      "nodeId": 1308,
+      "name": "BstNode_34603056",
+      "className": "RotateObject",
+      "classIndex": 75,
+      "sourceOffset": 247863,
+      "sourceLength": 91,
+      "sourceSha256": "aa12f56d49ea43cefd05ad02aaa2fdf6158e6ea06d8d5698022269a8b7a55e85",
+      "declaredFieldCount": 18,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1308/p6",
+          "fieldName": "rateMultFloat",
+          "target": "Sunset:n1357",
+          "targetNodeId": 1357,
+          "offset": 247912
+        },
+        {
+          "fieldId": "n1308/p10",
+          "fieldName": "objects",
+          "target": "Sunset:n1875",
+          "targetNodeId": 1875,
+          "offset": 247925
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "Dawn",
+      "path": "Levels/Dawn/Objects.level.bin",
+      "sha256": "16e26aafc7f9d120a548bf5d8bec04fbc18146bc8db531ef75144889b1ff197a",
+      "bytes": 504637,
+      "nodes": 3798,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dawn.json",
+      "markdown": "Objects对象清单/Dawn.md"
+    },
+    {
+      "level": "Dusk",
+      "path": "Levels/Dusk/Objects.level.bin",
+      "sha256": "9222b248f17fb4122cd4ad9650543ab86aab8b077b6965248c70ac2341bf2d5d",
+      "bytes": 242331,
+      "nodes": 1288,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dusk.json",
+      "markdown": "Objects对象清单/Dusk.md"
+    },
+    {
+      "level": "Night",
+      "path": "Levels/Night/Objects.level.bin",
+      "sha256": "6ce612c9efb82834d648de81251033b341a44f4d9374d8338d868575aab6a723",
+      "bytes": 499756,
+      "nodes": 3719,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Night.json",
+      "markdown": "Objects对象清单/Night.md"
+    },
+    {
+      "level": "Sunset",
+      "path": "Levels/Sunset/Objects.level.bin",
+      "sha256": "8126f2db693502576075505797624e0b5e53dc064fe6af82e90f2261ca427f8a",
+      "bytes": 325410,
+      "nodes": 1899,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Sunset.json",
+      "markdown": "Objects对象清单/Sunset.md"
+    }
+  ]
+}

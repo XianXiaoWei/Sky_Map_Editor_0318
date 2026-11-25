@@ -1,0 +1,18 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+import { gunzipSync } from 'node:zlib';
+import { animationLoadCases, animationLoadInput, animationLoadExpected } from '../tools/resource-animation-load-cases';
+const data = process.env.SKY_DATA ?? '/root/sky-research/original-runtime-corpus', sha = (b: Uint8Array) => crypto.createHash('sha256').update(b).digest('hex');
+test('Original animation group loading, resource observation, registration and finalization match native owner snapshots', () => {
+  const fixture = JSON.parse(gunzipSync(fs.readFileSync('tests/fixtures/resource-animation-load-native.json.gz')).toString());
+  assert.equal(fixture.executableSha256, '3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20');
+  let at = 0;
+  for (const c of animationLoadCases(data)) for (const request of c.requests) {
+    const row = fixture.cases[at++]; assert.equal(request.id, row.id); assert.equal(sha(c.source.bytes), row.sourceSha256);
+    assert.equal(sha(animationLoadInput(c.pack, request, c.realList)), row.requestSha256);
+    assert.equal(sha(animationLoadExpected(c.pack, request, c.realList)), row.nativeSha256, request.id);
+  }
+  assert.equal(at, fixture.cases.length);
+});

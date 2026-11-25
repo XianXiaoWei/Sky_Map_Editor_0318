@@ -1,0 +1,934 @@
+{
+  "目标": "100% 还原原游戏原逻辑：五类 BstBaked 与全部 Objects 类/实例和共享调用依赖闭合，最后达到 Avatar 完整原游戏游玩体验；尚未完成",
+  "发布包版本": "0.2.0",
+  "本轮重打包": false,
+  "源码进展": [
+    "Mesh 所有 LOD 烘焙映射与单采样编辑",
+    "EnvNode 空间衰减、计时与淡入淡出",
+    "12 类环境插值和四层合成核心",
+    "29 个全局 uniform 来源",
+    "三类公开字段到 EnvVars 的原转换与实时换算检查",
+    "Marker Clump 最大空间权重、首 Marker 计时与共享到期关闭",
+    "134 个直接范围与 4 个 Clump 范围的真实地图引用解析",
+    "相机空间权重查询和控制 Marker 跳转",
+    "模式切换期间禁用导航，修复快速选地图被忽略的问题",
+    "ModuleBarn 按 Game 字段地址初始化，体积雾先于云的八组全局顺序",
+    "EnvNode 16 个预构造槽、TGCL 文件顺序创建和 OnLevelLoad 重置/注册",
+    "真实地图队列运行适配器，明确要求原始初始化全局输出",
+    "界面显示 EnvNode 队列位置及全局参数注册顺序",
+    "MaterialDefBarn 30 项原定义及五地图原生覆盖值",
+    "TerrainBarn 59 批次及稳定索引 scatter 对照原机器码",
+    "SkirtBarn 材质存在性、完整索引范围、a_userData1 拆流",
+    "完整材质/照明顶点流、材质分层和原属性检查视图",
+    "涂抹后重新分批、原 shader 依赖检查和显式有效 uniform/状态接口",
+    "遮挡 packed 字节 12～14 已确认原有符号法线，字节 15 语义仍保留",
+    "原生 Vulkan 主视口、相机/选择数学与 RGBA 显示",
+    "原 GLSL SPIR-V 缓存、反射、显式 UBO/二维与三维纹理/MRT 资源路径",
+    "27 张真实云地图五图集、CPU 距离及代理属性对照原机器码",
+    "Tex3D VOLU v4 全采样与 CloudFluffy 原噪声归一化/首尾轴交换",
+    "CPU 云噪声的 world×6、周期环绕和三线性插值",
+    "八个原云 Metal AIR 阶段的精度、接口与投影转换证据",
+    "云外 fine GPU 对照失败报告完整保存，避免保留早期通过报告",
+    "LVL0 目录重复/重叠/空段校验与压缩段变长后的正确重定位",
+    "拒绝云代理独立移动，失败时保留全部既有补丁和原文件",
+    "全部 27 云地图 /201960 代理顶点的 SNORM4 法线读取",
+    "八个原 AIR 阶段 /1814 条指令生成显式舍入 Vulkan，独立原 AIR 指令体执行参照",
+    "253956 个 IEEE half 舍入样本零失败，修正当前软件驱动的直接转换精度问题",
+    "BstBaked.meshes 全量结构与至少八类剩余逻辑审计",
+    "CloudCard 原六平面/球测试/候选初始化/末尾覆盖压缩及桌面距离队列；Visibility 分类为明确输入，真实遮挡查询仍待恢复",
+    "原函数地址索引 54121 项；渲染根/依赖/间接调用和 20 个阶段的可追踪清单",
+    "CloudCard 原求逆 140 个 float32 运算、局部方向长度阈值/Y 翻转与 scratch W 保留；桌面准备入口已接入",
+    "Vulkan 原整数纹理、立方体六面及完整 mip 上传；原 wire 编码兼容，独立 R8 staging 对齐",
+    "原天空七 tap、cheap fog 与球形大气/雾射线采样，包含负 NaN；已逐 bit 核对",
+    "原 Ambience.Initialize 六组 33 个字段与画质分支；原 Color 全局仍为明确输入",
+    "原 GLES 到 Vulkan 投影 Y/Z 和 fragment 屏幕坐标适配；原 AIR 来源保持现有转换",
+    "地图网格线与辅助线框分别开关；选择沿网格/包围盒/隐藏，隐藏轮廓仍可聚焦",
+    "右上角远控相机平移/旋转/缩放与拖动控制器",
+    "地图静态默认/空间环境、球形大气和原 Sun shader 已绘制；完整事件链待恢复",
+    "真实地形/裙边原 GLSL、PNG 原 RGBA、原 packed 顶点流与批次自动接入视口",
+    "共享 RGBA32F HDR/深度、线性材质混合、仅更新相机 uniform；显示仍为明确预览适配",
+    "LevelMesh 预览遵守文件 render/enabled 静态状态；完整启动/Clump 状态待恢复",
+    "CloudCard quarter-acos 旋转、原 float32 位置/法线/alpha 与 28 字节 halfUV/SNORM/照明流；真实 TGCL alphaMult 与桌面动态 draw IPC",
+    "Vulkan half2 顶点格式，原 float4 UV 缺省 z/w=0/1 并保留原 half payload",
+    "GameTime 累计 u_time、帧时间缩放/clamp/12小时回绕与 EnvironmentForces 三层纹理滚动",
+    "CloudBarn 完整非 debug Update 的时间复制和未环绕世界风偏移；sampled wind 为明确输入",
+    "主视口固定相机材质动画、暂停/恢复不追赶暂停时间、属性模式停止与切图归零；当前明确零 sampled wind",
+    "原 Rock→Sand→Grass shader 动态 RGB/alpha 与渐变混合校验，保留独立理想采样失败",
+    "CloudParticleBarn 原寿命环、32 字节实例与 uint16 有符号深度不稳定排序；完整插入/模型辅助/物理球队列、最近三个交互源筛选与尾积分现已恢复",
+    "原云粒子 0xc830 Barn snapshot、31-bit RNG 调用顺序、tuple 初始 size/opacity/phase 与 32 球队列完整字节核对",
+    "原最多 48 交互源的范围压缩、最近三个堆选择与相同距离顺序；完整候选字段与原机器码核对",
+    "原 exp 权重、forceVector+forceVelocity 平滑、径向约束、位置/剩余 velocity/size 积分；前序交互力为明确输入",
+    "显式交互回调运行链：消费队列、寿命、积分、实例与原排序；原 source 准备和交互力仍待恢复",
+    "CloudCore 原代理/上一帧 CloudA 及真实 opaque signed-depth 接入",
+    "主视口三段深度、1/8/1/4 粗云、1/2 双 RGBA16F 细云与动态 CloudCard",
+    "原 CloudEnv 构造默认/噪声 tweak/material80 及 NoiseBlue3Ch/HeatTex 绑定",
+    "原 FogUpsample/Tonemap 片元与明确的 HDR 计量预览曝光",
+    "跨块材质批次按阶段/ordinal 合并，修复 Sand/Grass 倒序并避免重复纹理上传",
+    "Avatar CloudBarn r8=0 完整查询256组原机器码对照通过，完整Avatar运动仍未恢复",
+    "原 CameraSystem 八相位场景/32 项半尺寸采样、高斯核及上一帧投影修正，512 组原机器码和 32 帧 GPU 检查通过",
+    "Objects / Avatar 全量资源与引用清单：33 地图 49,824 对象、59 AvatarSetPos、115 衣装及 48 动画包，原默认入口尚未闭合",
+    "Wind 原单体/优先级采样与计时 1,422 组 /4,664 分量对照",
+    "全局阵风原指令子段 256 组 /2,304 分量对照；JS Math 对 Linux libc 1 个失败保留",
+    "Marker 原 getter、402 条 Rail 缓存、原位置/尺度/最近点/变换与26个 Rail Wind连续调用核验；对象辅助线接入原样条",
+    "选中包围盒仅在世界边界变化时更新，避免相同几何版本变化导致静止画面不断上传/补绘",
+    "Visibility Initialize／Resize／Update／Terminate 完整原方法及资源名／类型／引用链，227 组／2,724 步快照核验",
+    "地形原 OBB 完整函数 3,044 组通过，enabled 候选／球分类／非稳定压缩适配",
+    "地形原常量／距离 bin LOD 子段 1,732 组通过，AABB→LOD 适配；真实 bin 生产／转场／Job 仍待恢复"
+  ],
+  "测试": 167,
+  "待完成": [
+    "场景探针、点光源/阴影、模型原材质与云雾/原 Tonemap 合成；原地形/裙边 GLSL 和真实贴图已接入",
+    "Color 全局、FogVolume/Cloud 初始字段与 SetEnvDefault/SetEnvHull、OnLevelStart/Timeline 事件链",
+    "原初始化相机/角色位置；不能任选 CameraGuide 或仅凭 Timeline 的 transform 作为出生位置",
+    "原场景探针含碰撞/材质颜色，阴影、屏幕光照网格和原图像加载/mip/aniso/wrap 默认值",
+    "真实 Visibility 与地形/云可见性调度、粒子 Avatar/模型自动发射状态、原 source 准备/逐 sphere 交互力与完整 EnvironmentForces 风场；云卡动态顶点已恢复",
+    "原 Compositor 合成、深度、水/蓝噪声、时间历史与当前数值失败项",
+    "Windows GPU 和原游戏地图画面对照"
+  ],
+  "更新UTC": "2026-11-16T09:22:21.073934+00:00",
+  "本轮优先任务": "Mesh.bin、Terrain.bin、Cloud.bin、Skirt.bin、Occluder.bin 五段同等优先推进至各 9/10（90%）；第 10 项保留 Windows 真机和原游戏校验；共享对象、资源、生成及 Visibility 依赖一起恢复。",
+  "BstBaked剩余主要类别": [
+    {
+      "area": "Original material and lighting runtime",
+      "remaining": "Original terrain/skirt GLSL, actual textures and packed attributes draw in the viewport, with recovered shader time and texture drift. Full EnvironmentForces wind field, scene-hit probes, point lights/shadows, model shaders, startup/camera and original compositor/Tonemap remain.",
+      "evidence": [
+        "meshes-oracle.json",
+        "vulkan-gpu.json",
+        "viewport-terrain-maps-check.json",
+        "material-dynamics-oracle.json",
+        "material-gradient-check.json",
+        "material-gradient-ideal-sampler-failure.json",
+        "material-animation-smoke.json"
+      ]
+    },
+    {
+      "area": "Cloud composition and temporal history",
+      "remaining": "Avatar/model automatic emission state and game RNG, full source preparation/interaction forces, original registration order, real Visibility occlusion classification/buffers and full wind field, opaque scene depth production, actual water/blue noise and history/reprojection, viewport integration, original Metal boundary interpolation/intrinsic/contraction and half overflow acceptance. CloudCard quarter-acos/28-byte dynamic streams using actual TGCL alphaMult and CloudBarn world move/scroll are recovered, including native byte and real-card GPU checks. Complete insertion/reset/model emission helpers and physics-sphere append pass 424 native cases, nearest-three selection passes 593 cases and integration passes 400 cases. Particle lifetime ring, 32-byte post-physics packing and original signed-depth uint16 permutations are also recovered; model state/random stream and preceding force inputs remain explicit. A snapshot runtime chains queue consumption, lifetime, integration, packing and sorting without default forces. Native target descriptors/sizes/formats and earlier opaque CloudCore read are recovered; nine cloud/depth AIR runtime programs and three-pass native depth IPC are implemented, with same-pass fine + explicit ordered CloudCard/particle batch IPC and original CloudCard world sphere/overlap components, exact original group/distance permutations, shared index offsets, six normalized frustum planes, sphere tests and original unstable status compaction connected to distance draw queue IPC. Visibility classification statuses and stored CPU frustum matrix are explicit inputs; the external classifier is excluded from the passing oracle. True half pass RTE reference remains failed; current llvmpipe RTZ reproduction is exact but original Metal conversion is unverified. Two-level cloud and connected depth/cloud fixtures pass; quarter sampling is exact with captured Vulkan UV while independent CPU raster has boundary differences.",
+      "evidence": [
+        "cloud-particle-emission-oracle.json",
+        "cloud-particle-selection-oracle.json",
+        "cloud-particle-physics-oracle.json",
+        "cloud-card-dynamic-oracle.json",
+        "cloud-card-dynamic-gpu-check.json",
+        "cloud-wind-oracle.json",
+        "cloud-particle-life-oracle.json",
+        "cloud-particle-pack-oracle.json",
+        "cloud-particle-sort-oracle.json",
+        "cloud-card-visibility-evidence.json",
+        "cloud-card-visibility-oracle.json",
+        "cloud-card-visibility-ipc-check.json",
+        "cloud-card-sort-oracle.json",
+        "cloud-card-index-oracle.json",
+        "cloud-card-draw-oracle.json",
+        "cloud-card-plan-ipc-check.json",
+        "cloud-card-layout-oracle.json",
+        "cloud-pass-ipc-check.json",
+        "cloud-card-air-check.json",
+        "cloud-card-carry-air-check.json",
+        "cloud-blend-check.json",
+        "cloud-pass-check.json",
+        "vulkan-blend-rounding-check.json",
+        "cloud-air-vulkan-check.json",
+        "cloud-air-graph-check.json",
+        "cloud-air-graph-carry-check.json",
+        "cloud-depth-graph-check.json",
+        "cloud-depth-air-check.json",
+        "cloud-depth-sampling-check.json",
+        "cloud-depth-ipc-check.json",
+        "cloud-render-graph.json",
+        "cloud-sampler-check.json",
+        "vulkan-target-formats.json",
+        "vulkan-half-fma-check.json",
+        "vulkan-half-check.json",
+        "cloud-vulkan-gpu.json"
+      ]
+    },
+    {
+      "area": "Terrain visibility and LOD",
+      "remaining": "Patch flags, visibility Jobs, LOD budgets, tessellation and native shader handles/sort scheduling",
+      "evidence": [
+        "meshes-render-state.json"
+      ]
+    },
+    {
+      "area": "Terrain topology and collision rebuilding",
+      "remaining": "Tree decoding/query/rebuild, changed bounds/grids, edge topology generation and game interaction",
+      "developmentStatus": "Editor features deferred; original generation/runtime reverse engineering included in the current ordered model/bake/skirt/occluder work."
+    },
+    {
+      "area": "New skirt geometry game integration",
+      "remaining": "Native lighting, boundary updates, collision and original-game loading acceptance",
+      "developmentStatus": "Editor features deferred; original generation/runtime reverse engineering included in the current ordered model/bake/skirt/occluder work."
+    },
+    {
+      "area": "Native baking and cloud editing",
+      "remaining": "Bake generation, changed cloud sparse fields/proxy/lighting/collision rebuilt together",
+      "developmentStatus": "Editor features deferred; original generation/runtime reverse engineering included in the current ordered model/bake/skirt/occluder work."
+    },
+    {
+      "area": "Occluder runtime",
+      "remaining": "Four-byte vertex payload semantics, culling/occlusion submission and runtime behavior"
+    },
+    {
+      "area": "Target acceptance",
+      "remaining": "Windows GPU and full original game image/loading/edit-save comparisons"
+    }
+  ],
+  "原函数清单完整": false,
+  "完成百分比": null,
+  "当前优先级": "Mesh.bin、Terrain.bin、Cloud.bin、Skirt.bin、Occluder.bin 五段同等优先推进至各 9/10（90%）；第 10 项保留 Windows 真机和原游戏校验；共享对象、资源、生成及 Visibility 依赖一起恢复。",
+  "原函数地址索引完整": true,
+  "渲染函数清单已建立": true,
+  "渲染可达性完整": false,
+  "渲染清单": {
+    "markdown": "BstBaked.meshes渲染清单.md",
+    "functions": "meshes-render-functions.json",
+    "index": "native-function-index.json",
+    "nativeFunctionsIndexed": 54121,
+    "renderRoots": 305,
+    "directDependencyFunctions": 399,
+    "unexpandedDependencyBodies": 342,
+    "unresolvedIndirectSites": 356,
+    "incompleteDisassemblies": 7,
+    "renderStages": 20,
+    "stagesWithImplementation": 18
+  },
+  "主视口达到原游戏画面": false,
+  "BstBaked编辑开发": "新增编辑功能后置；原模型类和烘焙/裙边/遮挡的运行及生成逻辑按当前顺序联合逆向",
+  "无限期停止的编辑开发": [
+    "地形拓扑/碰撞树编辑功能",
+    "新增裙边照明/边界编辑功能",
+    "云距离场/代理/碰撞同步编辑功能",
+    "一键新烘焙编辑功能"
+  ],
+  "后续视口工作": [
+    "右上角导航方块"
+  ],
+  "视口材质接入": {
+    "terrainMapsReport": "viewport-terrain-maps-check.json",
+    "mapsPassed": 33,
+    "mapFrameSize": [
+      64,
+      64
+    ],
+    "mapFramesPerLevel": 2,
+    "hdrReport": "viewport-material-check.json",
+    "desktopReport": "viewport-environment-smoke.json",
+    "documentation": "视口材质接入进展.md",
+    "windowsCrossBuild": true,
+    "windowsGpuTested": false,
+    "gameImageParity": false,
+    "savedLevelMeshFlags": "render/enabled static flags respected; parent Clump and startup events pending",
+    "desktopPassed": true,
+    "animationReport": "material-animation-smoke.json",
+    "animationPassed": true,
+    "gradientReport": "material-gradient-check.json",
+    "idealSamplerParity": false,
+    "windField": "explicit zero sampled wind; original texture drift runs; full field pending"
+  },
+  "云动态与材质逆向": {
+    "documentation": "云卡动态与材质渐变逆向进展.md",
+    "cloudCardStreamBytes": 28,
+    "cloudParticleInstanceBytes": 32,
+    "cloudParticleCapacity": 1024,
+    "cloudCardGpuPassed": true,
+    "cloudParticleEmissionComplete": false,
+    "cloudParticleFullPhysicsComplete": false,
+    "fullWindFieldComplete": false,
+    "viewportCloudCompositionComplete": false,
+    "originalGameImageParity": false,
+    "particleDocumentation": "云粒子发射与物理逆向进展.md",
+    "cloudParticleCoreInsertionComplete": true,
+    "cloudParticleModelEmissionHelpersComplete": true,
+    "cloudParticlePhysicsSphereAppendComplete": true,
+    "cloudParticleNearestThreeComplete": true,
+    "cloudParticleIntegrationSegmentComplete": true,
+    "cloudParticleExplicitSnapshotRuntime": true,
+    "cloudParticleAutomaticSourceStateComplete": false,
+    "cloudParticleInteractionForceComplete": false,
+    "cloudParticleTemporarySourcePreparationComplete": false
+  },
+  "本轮优先级": "Mesh.bin、Terrain.bin、Cloud.bin、Skirt.bin、Occluder.bin 五段同等优先推进至各 9/10（90%）；第 10 项保留 Windows 真机和原游戏校验；共享对象、资源、生成及 Visibility 依赖一起恢复。",
+  "本轮渲染预览": {
+    "documentation": "地形与实体云渲染预览.md",
+    "sourcePipelineConnected": true,
+    "originalGameImageParity": false,
+    "originalMetalGPUParity": false,
+    "physicsBallDeferred": true,
+    "windFieldComplete": false,
+    "originalAutoExposureComplete": false,
+    "tests": 123,
+    "mapsTerrainChecked": 33,
+    "cloudMapsChecked": [
+      "Dawn",
+      "Prairie_ButterflyFields",
+      "Sunset"
+    ],
+    "packageRequested": true,
+    "packageVersion": "0.2.0-preview.20261116.t044142",
+    "viewportShaderEntries": 29,
+    "compilerToolsRequiredToView": false,
+    "deliveredArchive": "/storage/emulated/0/Download/地图编辑器/sky-map-editor/release/SkyMapEditor-Windows-x64-preview-20261116-044142.zip",
+    "shippedAsarSmokePassed": true,
+    "shaderCompilerToolsAbsentInSmoke": true,
+    "temporalAA": "Original MotionGen/MotionDilate/TemporalAa with native eight-phase scene/32-phase half jitter, Gaussian kernel and original previous-projection correction; editor frame clock, moving-model list and Metal parity pending",
+    "compositorRandom": "Original float32 conversion verified on 128 native cases; deterministic preview RNG stream",
+    "cloudOnlyMapsConnected": true,
+    "allCloudMapsChecked": 27,
+    "allCloudMapsReport": "viewport-cloud-all-maps-check.json",
+    "temporalCheckReport": "temporal-aa-check.json",
+    "compositorNoiseOracleReport": "compositor-noise-oracle.json",
+    "packageBuildPending": false,
+    "shippedCloudOnlyMapChecked": "CandleSpace",
+    "shippedPausedCloudNavigation": {
+      "before": 6,
+      "after": 8,
+      "time": 0.7979999780654907
+    },
+    "cameraSamplingOracleReport": "camera-jitter-oracle.json",
+    "cameraSamplingGpuReport": "camera-temporal-check.json",
+    "realMapSamplingReport": "viewport-camera-sampling-check.json",
+    "cameraSamplingNativeCases": 512,
+    "cameraSamplingNativeComponents": 42496,
+    "flyCameraControls": {
+      "keys": "WASD, Q down, E up",
+      "look": "right-button drag",
+      "speed": "Shift boost",
+      "documentation": "视口飞行相机.md",
+      "desktopCheck": "fly-camera-smoke.json",
+      "desktopPassed": true
+    },
+    "cloudOnlyAnimationConnected": true,
+    "cloudOnlyPausedHistoryRefreshConnected": true,
+    "frameCache": "Native float32 matrices; ignore sub-float32 OrbitControls camera roundoff",
+    "shippedFlyCameraPassed": true
+  },
+  "后续处理顺序": [
+    "Mesh.bin、Terrain.bin、Cloud.bin、Skirt.bin、Occluder.bin 五段同等优先推进至各 9/10（90%）；第 10 项保留 Windows 真机和原游戏校验；共享对象、资源、生成及 Visibility 依赖一起恢复。",
+    "Object/Marker/Clump/Rail 基础类的原构造、加载、启用和事件链",
+    "LevelMesh/LevelMaterial/Beamo/BeamoDecal/CloudCard 与实际调用依赖，联合 Mesh.bin 烘焙、Skirt.bin 裙边、Occluder.bin 遮挡恢复；不分开做孤立格式实现",
+    "共同解决资源/GUID/LOD、烘焙属性、几何来源、Visibility 与加载/更新/销毁关系",
+    "原烘焙/生成/重建和 Windows/原游戏验收；物理球继续后置"
+  ],
+  "数据段清单": "BstBaked数据段清单.md",
+  "数据段进度口径": "已验证检查项比例；不是全部原函数或完整原游戏还原百分比",
+  "Objects与Avatar": {
+    "inventory": "docs/Objects与Avatar进度.json",
+    "checklist": "docs/Objects与Avatar清单.md",
+    "summary": {
+      "levels": 33,
+      "totalNodes": 49824,
+      "avatarSetPos": 59,
+      "explicitlySetsLevelStart": 43,
+      "missingStartFlag": 0,
+      "explicitCameraRegions": 18,
+      "brokenReferences": 0,
+      "outfitDefinitions": 115,
+      "outfitSlots": {
+        "body": 25,
+        "neck": 7,
+        "mask": 15,
+        "horn": 6,
+        "hair": 28,
+        "prop": 21,
+        "wing": 13
+      },
+      "animationPacks": 48,
+      "playerNamedAnimationPacks": 12
+    },
+    "fullRuntimeImplemented": false,
+    "order": [
+      "云／地形／材质验证优先",
+      "基础对象运行链",
+      "模型与 BstBaked 烘焙／裙边／遮挡共同恢复",
+      "Objects 区域／UI 与 Avatar 同阶段实现",
+      "原入口／状态／衣柜／动作和完整试玩验收"
+    ]
+  },
+  "风场采样": {
+    "report": "docs/environment-wind-oracle.json",
+    "cases": 1422,
+    "components": 4664,
+    "viewportIntegrated": false,
+    "fullRuntimeImplemented": false,
+    "defaultTags": {
+      "report": "docs/wind-defaults.json",
+      "tags": 10,
+      "scalarEncodings": 8,
+      "unresolvedReferenceDefaults": 2,
+      "privateStateInitializationResolved": false
+    }
+  },
+  "全局阵风": {
+    "report": "docs/environment-gust-oracle.json",
+    "nativeTracePassed": true,
+    "cases": 256,
+    "components": 2304,
+    "previewMathPassed": false,
+    "previewMathFailures": 1,
+    "viewportIntegrated": false,
+    "fullUpdateImplemented": false
+  },
+  "Rail轨道": {
+    "cache": {
+      "report": "docs/rail-cache-oracle.json",
+      "passed": true,
+      "cases": 658,
+      "components": 126730,
+      "corpus": {
+        "totalRails": 402,
+        "testedRails": 402,
+        "excluded": []
+      },
+      "jsMath": {
+        "passed": true,
+        "failureCases": 0
+      }
+    },
+    "evaluation": {
+      "report": "docs/rail-oracle.json",
+      "passed": true,
+      "cases": 1586,
+      "components": 44408,
+      "corpus": {
+        "testedRails": 402,
+        "cases": 1202,
+        "excluded": [
+          {
+            "level": "Prairie_ButterflyFields",
+            "nodeId": 378,
+            "parameter": 1,
+            "eye": [
+              275.37408447265625,
+              182.8191375732422,
+              208.13330078125
+            ],
+            "reason": "Error: Rail 原最近点选中了退化线段"
+          },
+          {
+            "level": "Prairie_Cave",
+            "nodeId": 641,
+            "parameter": 1,
+            "eye": [
+              326.60992431640625,
+              192.61854553222656,
+              215.7352752685547
+            ],
+            "reason": "Error: Rail 原最近点选中了退化线段"
+          },
+          {
+            "level": "Prairie_Village",
+            "nodeId": 2911,
+            "parameter": 1,
+            "eye": [
+              275.37408447265625,
+              182.8191375732422,
+              208.13330078125
+            ],
+            "reason": "Error: Rail 原最近点选中了退化线段"
+          },
+          {
+            "level": "Storm",
+            "nodeId": 985,
+            "parameter": 1,
+            "eye": [
+              31.229053497314453,
+              136.77999877929688,
+              43.39448165893555
+            ],
+            "reason": "Error: Rail 原最近点选中了退化线段"
+          }
+        ]
+      },
+      "jsMath": {
+        "passed": false,
+        "failureCases": 12
+      }
+    },
+    "windChain": {
+      "report": "docs/wind-rail-oracle.json",
+      "passed": true,
+      "cases": 1638,
+      "components": 6552,
+      "corpus": {
+        "railWinds": 26,
+        "testedRailWinds": 26,
+        "excluded": []
+      },
+      "jsMath": {
+        "passed": false,
+        "failureCases": 4
+      }
+    },
+    "inspectionReport": "docs/rail-inspection-corpus.json",
+    "inspectionIntegrated": true,
+    "fullLifecycleRestored": false,
+    "windViewportIntegrated": false,
+    "macOSLibmVerified": false,
+    "checks": {
+      "tests": 135,
+      "typecheck": true,
+      "build": true
+    },
+    "overlayUI": {
+      "report": "docs/viewport-overlay-smoke.json",
+      "passed": true,
+      "scope": "Fixed packed-light Dawn overlays, selection/focus and unchanged bounds idle frame verification; Linux ARM Vulkan only"
+    },
+    "boundsIdleFix": {
+      "implemented": true,
+      "typecheck": true,
+      "build": true,
+      "passed": true,
+      "report": "docs/viewport-overlay-smoke.json",
+      "standaloneRepeatedUpdates": 400
+    },
+    "arc": {
+      "report": "docs/rail-arc-oracle.json",
+      "passed": true,
+      "cases": 594,
+      "components": 249514,
+      "corpusRails": 402,
+      "excludedQueries": [
+        {
+          "level": "CandleSpaceEnd",
+          "nodeId": 116,
+          "distance": 97.32725524902344,
+          "oldLength": 48.66362762451172,
+          "stage": "dirty distance",
+          "reason": "Original distance normalized against old total exceeds rebuilt final entry; original unbounded scan and macOS diagnostic/assert path excluded. JS rejects after preserving original rebuild."
+        },
+        {
+          "level": "Dawn",
+          "nodeId": 340,
+          "distance": 137.5889892578125,
+          "oldLength": 68.79449462890625,
+          "stage": "dirty distance",
+          "reason": "Original distance normalized against old total exceeds rebuilt final entry; original unbounded scan and macOS diagnostic/assert path excluded. JS rejects after preserving original rebuild."
+        },
+        {
+          "level": "Dawn",
+          "nodeId": 548,
+          "distance": 33.852294921875,
+          "oldLength": 33.852294921875,
+          "stage": "dirty distance",
+          "reason": "Original distance normalized against old total exceeds rebuilt final entry; original unbounded scan and macOS diagnostic/assert path excluded. JS rejects after preserving original rebuild."
+        },
+        {
+          "level": "Dawn",
+          "nodeId": 2764,
+          "distance": 565.55126953125,
+          "oldLength": 565.55126953125,
+          "stage": "dirty distance",
+          "reason": "Original distance normalized against old total exceeds rebuilt final entry; original unbounded scan and macOS diagnostic/assert path excluded. JS rejects after preserving original rebuild."
+        },
+        {
+          "level": "Dusk",
+          "nodeId": 248,
+          "distance": 1829.35498046875,
+          "oldLength": 914.677490234375,
+          "stage": "dirty distance",
+          "reason": "Original distance normalized against old total exceeds rebuilt final entry; original unbounded scan and macOS diagnostic/assert path excluded. JS rejects after preserving original rebuild."
+        },
+        {
+          "level": "HubReveal",
+          "nodeId": 310,
+          "distance": 23.078031539916992,
+          "oldLength": 23.078031539916992,
+          "stage": "dirty distance",
+          "reason": "Original distance normalized against old total exceeds rebuilt final entry; original unbounded scan and macOS diagnostic/assert path excluded. JS rejects after preserving original rebuild."
+        },
+        {
+          "level": "HubReveal",
+          "nodeId": 877,
+          "distance": 1700.1300048828125,
+          "oldLength": 850.0650024414062,
+          "stage": "dirty distance",
+          "reason": "Original distance normalized against old total exceeds rebuilt final entry; original unbounded scan and macOS diagnostic/assert path excluded. JS rejects after preserving original rebuild."
+        },
+        {
+          "level": "Prairie_ButterflyFields",
+          "nodeId": 583,
+          "distance": 7.988037109375,
+          "oldLength": 3.9940185546875,
+          "stage": "dirty distance",
+          "reason": "Original distance normalized against old total exceeds rebuilt final entry; original unbounded scan and macOS diagnostic/assert path excluded. JS rejects after preserving original rebuild."
+        },
+        {
+          "level": "Prairie_ButterflyFields",
+          "nodeId": 752,
+          "distance": 5.904468536376953,
+          "oldLength": 5.904468536376953,
+          "stage": "dirty distance",
+          "reason": "Original distance normalized against old total exceeds rebuilt final entry; original unbounded scan and macOS diagnostic/assert path excluded. JS rejects after preserving original rebuild."
+        },
+        {
+          "level": "Prairie_ButterflyFields",
+          "nodeId": 1095,
+          "distance": 9.63991641998291,
+          "oldLength": 4.819958209991455,
+          "stage": "dirty distance",
+          "reason": "Original distance normalized against old total exceeds rebuilt final entry; original unbounded scan and macOS diagnostic/assert path excluded. JS rejects after preserving original rebuild."
+        },
+        {
+          "level": "Rain",
+          "nodeId": 1016,
+          "distance": 101.53821563720703,
+          "oldLength": 50.769107818603516,
+          "stage": "dirty distance",
+          "reason": "Original distance normalized against old total exceeds rebuilt final entry; original unbounded scan and macOS diagnostic/assert path excluded. JS rejects after preserving original rebuild."
+        },
+        {
+          "level": "RainMid",
+          "nodeId": 1748,
+          "distance": 139.443359375,
+          "oldLength": 69.7216796875,
+          "stage": "dirty distance",
+          "reason": "Original distance normalized against old total exceeds rebuilt final entry; original unbounded scan and macOS diagnostic/assert path excluded. JS rejects after preserving original rebuild."
+        },
+        {
+          "level": "SkyHub2",
+          "nodeId": 105,
+          "distance": 110.98310089111328,
+          "oldLength": 110.98310089111328,
+          "stage": "dirty distance",
+          "reason": "Original distance normalized against old total exceeds rebuilt final entry; original unbounded scan and macOS diagnostic/assert path excluded. JS rejects after preserving original rebuild."
+        },
+        {
+          "level": "SkyHub2",
+          "nodeId": 2393,
+          "distance": 35.57773971557617,
+          "oldLength": 35.57773971557617,
+          "stage": "dirty distance",
+          "reason": "Original distance normalized against old total exceeds rebuilt final entry; original unbounded scan and macOS diagnostic/assert path excluded. JS rejects after preserving original rebuild."
+        },
+        {
+          "level": "StormEnd",
+          "nodeId": 554,
+          "distance": 232.31874084472656,
+          "oldLength": 232.31874084472656,
+          "stage": "dirty distance",
+          "reason": "Original distance normalized against old total exceeds rebuilt final entry; original unbounded scan and macOS diagnostic/assert path excluded. JS rejects after preserving original rebuild."
+        },
+        {
+          "level": "StormEnd",
+          "nodeId": 1132,
+          "distance": 503.1016540527344,
+          "oldLength": 251.5508270263672,
+          "stage": "dirty distance",
+          "reason": "Original distance normalized against old total exceeds rebuilt final entry; original unbounded scan and macOS diagnostic/assert path excluded. JS rejects after preserving original rebuild."
+        },
+        {
+          "level": "Sunset",
+          "nodeId": 192,
+          "distance": 428.2131652832031,
+          "oldLength": 428.2131652832031,
+          "stage": "dirty distance",
+          "reason": "Original distance normalized against old total exceeds rebuilt final entry; original unbounded scan and macOS diagnostic/assert path excluded. JS rejects after preserving original rebuild."
+        },
+        {
+          "level": "Sunset",
+          "nodeId": 1194,
+          "distance": 593.79736328125,
+          "oldLength": 296.898681640625,
+          "stage": "dirty distance",
+          "reason": "Original distance normalized against old total exceeds rebuilt final entry; original unbounded scan and macOS diagnostic/assert path excluded. JS rejects after preserving original rebuild."
+        },
+        {
+          "level": "SunsetEnd",
+          "nodeId": 483,
+          "distance": 420.50958251953125,
+          "oldLength": 210.25479125976562,
+          "stage": "dirty distance",
+          "reason": "Original distance normalized against old total exceeds rebuilt final entry; original unbounded scan and macOS diagnostic/assert path excluded. JS rejects after preserving original rebuild."
+        },
+        {
+          "level": "SunsetRace",
+          "nodeId": 1068,
+          "distance": 583.5345458984375,
+          "oldLength": 583.5345458984375,
+          "stage": "dirty distance",
+          "reason": "Original distance normalized against old total exceeds rebuilt final entry; original unbounded scan and macOS diagnostic/assert path excluded. JS rejects after preserving original rebuild."
+        }
+      ],
+      "automaticInvalidationRestored": false,
+      "completeLifecycleRestored": false
+    }
+  },
+  "模型烘焙绑定": {
+    "report": "docs/baked-lookup-oracle.json",
+    "nativeBindings": "docs/baked-bindings-native.json",
+    "passed": true,
+    "queries": 11710,
+    "corpusMaps": 33,
+    "corpusRecords": 10653,
+    "scope": "Unmodified original 0x1003f68d0 body plus original Beamo/CloudCard/model acceptance instruction slices with return trampolines at their continuations. Explicit table snapshots include all 10,653 serialized GUIDs; expanded counts use existing bake audit, unsuccessful expansions explicitly represented by zero. Native lookup does not consult names. Null handles/resources, signed load index, duplicates/first-match, unchanged output on failure and distinct count acceptance rules tested. This does not prove actual loaded state, invalid-GUID rewriting, arbitrary Object GUID dispatch, allocation, class lifecycle or game runtime.",
+    "loadedStateRestored": false,
+    "objectGuidDispatchRestored": false,
+    "viewportIntegrated": false,
+    "completeModelLifecycleRestored": false,
+    "unassociatedSerializedRecords": 61,
+    "checks": {
+      "tests": 135,
+      "typecheck": true,
+      "build": true
+    },
+    "details": "模型烘焙绑定逆向.md"
+  },
+  "最近核验时间UTC": "2026-11-17T03:43:42.432514+00:00",
+  "遮挡法线与原提交链": {
+    "report": "docs/occluder-native.json",
+    "details": "遮挡数据逆向.md",
+    "packedNormalsExposed": true,
+    "signedNormalBytes": 3,
+    "entryFunctions": 14,
+    "fourthByteSemanticsRestored": false,
+    "fullSoftwareOcclusionRestored": false,
+    "realViewportCullingIntegrated": false,
+    "checks": {
+      "tests": 135,
+      "typecheck": true,
+      "build": true
+    }
+  },
+  "Visibility球与包围盒查询": {
+    "sphereReport": "docs/visibility-spheres-oracle.json",
+    "aabbReport": "docs/visibility-aabbs-oracle.json",
+    "numericSphereQueriesVerified": true,
+    "numericAabbQueriesVerified": true,
+    "sphereCases": 1398,
+    "aabbCases": 1530,
+    "compared": 177670,
+    "corpusMaps": 33,
+    "cloudCardWorldSpheres": 356,
+    "geometryVertexBounds": 2669,
+    "cloudCardCandidateOrderAdapter": "src/core/cloud-card-visibility.ts:cloudCardOcclusionPlan",
+    "nativeCameraPreparationVerified": false,
+    "realResourceLifecycleVerified": false,
+    "objectDropOcclusionDependenciesRestored": false,
+    "viewportIntegrated": false,
+    "originalHardwareVerified": false,
+    "originalGameVerified": false
+  },
+  "续接点": {
+    "当前任务": "Mesh.bin、Terrain.bin、Cloud.bin、Skirt.bin、Occluder.bin 五段同等优先推进至各 9/10（90%）；第 10 项保留 Windows 真机和原游戏校验；共享对象、资源、生成及 Visibility 依赖一起恢复。",
+    "工作状态": "用户继续后恢复执行",
+    "本轮已完成": "原地形创建 170 组／96,309 bins 和初始绘制 1,028 次已核验；新增 bin 显隐/登记清理/任务入口 345 组／1,558 步／56,684,094 字节比较通过；167 项测试、类型检查、构建通过。Objects 全量 280 对象类／283 实际声明类型逐类清单、离线 HTML 和交互检查完成。",
+    "下一步": "五段联合闭合原对象/资源/GUID/LOD 加载与依赖，恢复 Visibility/动态回收/任务队列及细分，追踪 Skirt/Occluder 生成来源；五段各前九项完成后保留最后真机验收；Objects 逐类更新。",
+    "入口": {
+      "Initialize": "0x10071d660",
+      "Resize": "0x10071d9f0",
+      "Update": "0x10071e020",
+      "Terminate": "0x10071d9b0",
+      "sphereQuery": "0x100720dd0",
+      "aabbQuery": "0x100721ce0",
+      "terrainObb": "0x10015e420",
+      "terrainCandidates": "0x1006a2c90..0x1006a2d71",
+      "terrainBinLod": "0x1006a3118..0x1006a331f"
+    },
+    "Camera分支更正": "0x1002bcda0 只绘制调试视锥，默认 Update 不修改储存 Camera；0x100d0d4c0 为真才复制输入 Camera；复制跳过八字节 padding，Resize 四分之一整数尺寸不变则提前返回",
+    "边界": "主机服务／虚方法和初始化 Camera／资源为明确快照；真实 loader／Camera 生产／模块调度／bin 转场／Job 和主视口未闭合。现有 QEMU 不等于原 Mac／Intel 硬件或原游戏画面，清单分数不变",
+    "后续纯函数入口": "原 0x1006a8100 bin 动态登记清理和 0x1006ad3f0 任务分发已核验；0x1006a81d0/0x1006a88c0 worker、距离排序和真实任务队列仍待闭合。"
+  },
+  "Visibility生命周期": {
+    "report": "docs/visibility-lifecycle-oracle.json",
+    "details": "docs/Visibility生命周期与地形候选.md",
+    "passed": true,
+    "cases": 227,
+    "steps": 2724,
+    "compared": 2411020,
+    "corpusMaps": 33,
+    "originalMethodsVerifiedWithExplicitResources": true,
+    "originalNameTypeLookupAndIntrusiveReferencesVerified": true,
+    "debugFrustumEntry": "0x1002bcda0",
+    "debugFrustumUpdatesStoredCamera": false,
+    "cameraCopyFlag": "0x100d0d4c0",
+    "realLoaderAndResourceVirtualMethodsRestored": false,
+    "cameraProducerAndClassDefaultsRestored": false,
+    "globalModuleSchedulingRestored": false,
+    "viewportIntegrated": false,
+    "originalHardwareVerified": false,
+    "originalGameVerified": false,
+    "checks": {
+      "tests": 157,
+      "typecheck": true,
+      "build": true,
+      "originalHardware": false,
+      "originalGame": false,
+      "windowsRuntime": false
+    }
+  },
+  "地形OBB与binLOD": {
+    "frustumReport": "docs/terrain-frustum-oracle.json",
+    "lodReport": "docs/terrain-lod-oracle.json",
+    "frustumCases": 3044,
+    "lodCases": 1732,
+    "compared": 80416,
+    "corpusMaps": 31,
+    "corpusRecords": 77,
+    "numericObbVerified": true,
+    "numericLodSpansVerified": true,
+    "candidateAdapter": "src/core/terrain-visibility.ts:terrainOcclusionCandidates",
+    "binQueryAdapter": "src/core/terrain-visibility.ts:queryTerrainBinLods",
+    "realObjectAndBinProductionRestored": false,
+    "lodTransitionsAndJobsRestored": false,
+    "viewportIntegrated": false,
+    "checks": {
+      "tests": 157,
+      "typecheck": true,
+      "build": true,
+      "originalHardware": false,
+      "originalGame": false,
+      "windowsRuntime": false
+    }
+  },
+  "地形bin创建与绘制准备": {
+    "geometryReport": "docs/terrain-bin-geometry-oracle.json",
+    "drawReport": "docs/terrain-bin-draw-oracle.json",
+    "details": "docs/地形bin创建与绘制准备.md",
+    "geometryCases": 170,
+    "corpusMaps": 31,
+    "corpusRecords": 77,
+    "corpusBins": 96309,
+    "geometryCompared": 76061296,
+    "drawCases": 170,
+    "drawSteps": 1028,
+    "binGeometryAndPacketsVerified": true,
+    "initialDrawPreparationVerified": true,
+    "actualLoaderRestored": false,
+    "collisionRegistrationRestored": false,
+    "lodTransitionsAndJobsRestored": false,
+    "viewportIntegrated": false,
+    "checks": {
+      "tests": 162,
+      "typecheck": true,
+      "build": true,
+      "originalHardware": false,
+      "originalGame": false,
+      "windowsRuntime": false
+    }
+  },
+  "地形bin显隐与LOD任务入口": {
+    "passed": true,
+    "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+    "cases": 345,
+    "steps": 1558,
+    "exclusiveSections": 9058,
+    "jobDispatches": 100,
+    "compared": 56684094,
+    "failed": 0,
+    "corpusMaps": 31,
+    "corpusRecords": 77,
+    "corpusBins": 96309,
+    "selectedBins": 5339,
+    "visibilityTransitionsVerified": true,
+    "heapReferenceRemovalVerified": true,
+    "postLockLodRereadVerified": true,
+    "jobDispatchVerified": true,
+    "allocationReclamationRestored": false,
+    "lodTransitionsAndJobsRestored": false,
+    "actualLoaderRestored": false,
+    "viewportIntegrated": false,
+    "report": "docs/terrain-bin-lifecycle-oracle.json",
+    "details": "docs/地形bin显隐与LOD任务入口.md",
+    "checks": {
+      "tests": 167,
+      "typecheck": true,
+      "build": true,
+      "originalHardware": false,
+      "originalGame": false,
+      "windowsRuntime": false
+    }
+  },
+  "Objects逐类清单": {
+    "report": "docs/Objects.level.bin类进度.json",
+    "markdown": "docs/Objects.level.bin类进度清单.md",
+    "html": "docs/Objects.level.bin类进度.html",
+    "uiCheck": "docs/objects-class-progress-ui-check.json",
+    "summary": {
+      "levels": 33,
+      "totalNodes": 49824,
+      "nodeClasses": 280,
+      "declaredClasses": 283,
+      "nestedOnlyClasses": 0,
+      "declarationOnlyClasses": 3,
+      "references": 60016,
+      "brokenReferences": 0,
+      "coreSubchainVerifiedClasses": 6,
+      "completeRuntimeClasses": 0,
+      "completedCheckpoints": 836,
+      "totalCheckpoints": 2830,
+      "meanClassCheckpointPercent": 29.54,
+      "histogram": {
+        "20": 19,
+        "30": 258,
+        "40": 6
+      }
+    },
+    "fullRuntimePercent": null
+  },
+  "updatedAtUTC": "2026-11-17T04:13:54.920844+00:00",
+  "fullOriginalGameLogicTargetPercent": 100,
+  "fullOriginalGameLogicVerified": false,
+  "fullOriginalGameLogicPercent": null,
+  "originalLogicAcceptance": {
+    "fullOriginalGameLogicPercent": 100,
+    "bstBakedPreHardwareStagePercent": 90,
+    "hardwareValidationRequired": true,
+    "acceptance": "全部原构造/默认值、继承/虚表、加载注册、启用传播、启动顺序、事件/依赖、更新状态、实际场景/UI/物理/渲染、销毁切图与真机原游戏行为闭合。预览、近似实现、格式解析和局部函数对照不等于完整类或实例验收。"
+  },
+  "裙边加载与绘制调度": {
+    "passed": true,
+    "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+    "cases": 83,
+    "compared": 45939862,
+    "failed": 0,
+    "corpusMaps": 33,
+    "corpusRecords": 2533,
+    "corpusVertices": 363788,
+    "corpusIndices": 1339572,
+    "drawChunks": 4415,
+    "loadedGeometryAndDescriptorsVerified": true,
+    "normalTerminationDispatchVerified": true,
+    "drawDriverAndChunkAppendVerified": true,
+    "actualResourceLifecycleRestored": false,
+    "cameraAndVisibilityQueriesRestored": false,
+    "generationRestored": false,
+    "viewportIntegrated": false,
+    "originalHardwareVerified": false,
+    "originalGameVerified": false,
+    "report": "docs/skirt-barn-oracle.json",
+    "details": "docs/裙边加载与绘制调度逆向.md",
+    "checks": {
+      "tests": 171,
+      "typecheck": true,
+      "build": true,
+      "originalHardware": false,
+      "originalGame": false,
+      "windowsRuntime": false
+    }
+  },
+  "Objects全部类与对象实现清单": {
+    "report": "docs/Objects.level.bin对象实现清单.json",
+    "markdown": "docs/Objects.level.bin全部实现清单.md",
+    "html": "docs/Objects.level.bin对象实现清单.html",
+    "perLevelFolder": "docs/Objects对象清单",
+    "uiCheck": "docs/objects-instance-progress-ui-check.json",
+    "summary": {
+      "levels": 33,
+      "declaredClasses": 283,
+      "nodeClasses": 280,
+      "totalObjects": 49824,
+      "listedObjects": 49824,
+      "references": 60016,
+      "brokenReferences": 0,
+      "nestedInstances": 0,
+      "individuallyRuntimeVerifiedObjects": 0,
+      "completedInstanceCheckpoints": 99648,
+      "totalInstanceCheckpoints": 498240,
+      "instanceFormatChecklistPercent": 20,
+      "fullNativeLogicPercent": null
+    },
+    "fullRuntimePercent": null
+  }
+}

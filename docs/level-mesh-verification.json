@@ -1,0 +1,120 @@
+{
+  "dateUTC": "2026-11-19",
+  "passed": true,
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "nativeReports": [
+    "docs/level-mesh-oracle.json",
+    "docs/transform-object-level-mesh-oracle.json"
+  ],
+  "levelMesh": {
+    "cases": 16699,
+    "comparedOutputBytes": 138058444,
+    "realMeshes": 4133,
+    "assertions": 24,
+    "dependencyBoundaries": 2
+  },
+  "connectedTransform": {
+    "cases": 887,
+    "snapshots": 8322,
+    "comparedOutputBytes": 636011224,
+    "realRoots": 317,
+    "completedFiniteSequences": 813,
+    "realCompletedFiniteSequences": 250,
+    "unknownClassBoundaries": 12,
+    "unavailableDependencies": 57,
+    "assertions": 5
+  },
+  "combinedCases": 17586,
+  "combinedComparedOutputBytes": 774069668,
+  "dependencyDetail": {
+    "realRoots": 317,
+    "realFiniteSequencesCompleted": 250,
+    "realUnavailableClasses": 12,
+    "realAudioPreflight": 52,
+    "realTimelinePreflight": 3,
+    "syntheticAudioPreflight": 1,
+    "syntheticSteppedPreflight": 1,
+    "standaloneNullModelObbPreflight": 2,
+    "realLevelMeshLocalEndpoints": 422,
+    "realModelPointersArePreparedPreBindingNull": true,
+    "syntheticModelConnectionSequences": 192
+  },
+  "previousReport": "docs/transform-object-verification.json",
+  "focusedTests": {
+    "tests": 18,
+    "passed": 18,
+    "failed": 0,
+    "log": "/root/sky-research/level-mesh-focused-tests.log"
+  },
+  "connectedTests": {
+    "tests": 3,
+    "passed": 3,
+    "failed": 0,
+    "log": "/root/sky-research/level-mesh-connected-tests.log"
+  },
+  "projectTests": {
+    "tests": 308,
+    "passed": 308,
+    "failed": 0,
+    "log": "/root/sky-research/level-mesh-project-tests.log"
+  },
+  "typecheck": {
+    "passed": true,
+    "log": "/root/sky-research/level-mesh-typecheck.log"
+  },
+  "build": {
+    "passed": true,
+    "log": "/root/sky-research/level-mesh-build.log"
+  },
+  "classUi": {
+    "passed": true,
+    "log": "/root/sky-research/level-mesh-class-ui.log"
+  },
+  "instanceUi": {
+    "passed": true,
+    "log": "/root/sky-research/level-mesh-instance-ui.log"
+  },
+  "classSummary": {
+    "levels": 33,
+    "totalNodes": 49824,
+    "nodeClasses": 280,
+    "declaredClasses": 283,
+    "nestedOnlyClasses": 0,
+    "declarationOnlyClasses": 3,
+    "references": 60016,
+    "brokenReferences": 0,
+    "coreSubchainVerifiedClasses": 26,
+    "completeRuntimeClasses": 0,
+    "completedCheckpoints": 856,
+    "totalCheckpoints": 2830,
+    "meanClassCheckpointPercent": 30.25,
+    "histogram": {
+      "20": 19,
+      "30": 238,
+      "40": 26
+    }
+  },
+  "integration": "Original TransformObject virtual callbacks dispatch LevelMesh/Model state methods through original ObjectFactory/Matrix4/bool wrappers. Real endpoints use saved bytes plus prepared pre-binding null Model, while synthetic models exercise both original state branches. Full resource/Model/BstBaked binding, animation/deferred commit/rendering/physics and whole scene/Avatar/Windows lifecycle remain open.",
+  "scope": [
+    "Unmodified original LevelMesh normal placement constructor, Get/SetTransform, Get/SetEnabled, local/world OBB, GUID and Matrix4/bool reflection, plus both original Model transform branches and enabled propagation. Registry IDs/bootstrap, metadata/receiver/scalar/Matrix4 casts and prepared saved inputs remain services. Null Model OBB stops before native dereference. Full resource/BstBaked bind, Model lifecycle/animation/rendering, metadata defaults/unwind, scene and Avatar remain open.",
+    "LevelMesh-enabled connection: original LevelMesh Get/SetTransform and enabled reflection execute unchanged, including Model ordinary/deferred branches in 192 prepared synthetic sequences. Real LevelMesh endpoints use saved transform bytes and prepared pre-binding null Model pointers; this does not establish actual resource/Model loading. Original TransformObject placement, load/start/enable/resume/stop and finite normal/continuous update, through unmodified single Event dispatch and ObjectFactory Matrix4/enable wrappers. Heap, prepared registry/saved field inputs, pointer/scalar/Matrix4 conversions and Linux libm output trace replay are explicit services. Audio, stepped carry, unprepared Timeline and unknown classes stop before their dependent action; prefix comparisons are not full class or scene acceptance. Original metadata defaults, TGCL load, complete EventBarn/game/Avatar/BstBaked and Mac libm equivalence remain open."
+  ],
+  "sourceSha256": {
+    "src/core/level-mesh-runtime.ts": "22bbd163cbd6f92352afc8d696d65a632ab022e5f7cd26f7b9a2e91604f30472",
+    "tools/native-level-mesh-oracle.c": "f6a266226e232a6d5076bbb275b90c40c6e6edb590061cdb70f538ba3fe81bb2",
+    "tools/native-level-mesh-services.h": "91f2627fa4c658777990a6c231dbb74a467439e32ada54889e66fd96b9dd4c8f",
+    "tools/native-transform-object-oracle.c": "18779a6fc9c92924597f3fd1e03b90aa818a0de23ec5ed3ba011d9aab507759f",
+    "tools/level-mesh-cases.ts": "c80d591c538e4baa608c40fa99d66eecacacab54f342f5ef2a7ffc50c04fb173",
+    "tools/level-mesh-evaluate.ts": "dbf77c159a33622be6867f7cb42213456ad0523149f8ef009ba8a6991fd4df33",
+    "tools/level-mesh-oracle.ts": "6a7333d953574567a63f01492261cd9945428d2101c520677481e38154effac8",
+    "tools/transform-object-cases.ts": "f6468e26e0def5ba6597baf25337f707750ef2bc52eb2c012da5434fcc02b650",
+    "tools/transform-object-evaluate.ts": "d2e21dd103d98d77bba0526de6714f8a45a98a9cdb245c33c1221d0eaf2b1a35",
+    "tools/transform-object-oracle.ts": "3d26cb87e0731ebb8b32aa3d047e0092a239c5737a34726fcc7cf07e79447c8a",
+    "tools/reverse-level-mesh.py": "c082e03b278c15e3fbe196b76ab6069f12c0a1a56a8eb6e7c4b7d8beeca43272",
+    "tests/level-mesh-runtime.test.ts": "af2106cde6101054143ccb0b8cbc9c45ec316384c195149018d374b2764ac3fb",
+    "tests/transform-object-level-mesh.test.ts": "b9e6c3d2ab4cbfc5f8f02e4ae12fc2b92b5564566b475b83033e9e85198ea4b9",
+    "tests/fixtures/level-mesh-native.json.gz": "6a0f789c6f183e87b7c63747489c2f08ed2a0657fced9163a98dd02e1fba7360",
+    "tests/fixtures/transform-object-level-mesh-native.json.gz": "410b13505e2e5d6aa120d1af97541076632cc93d5e5a21f6cbe24c2c9f205753"
+  },
+  "completeOriginalGameRuntime": false
+}

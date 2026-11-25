@@ -1,0 +1,51 @@
+0x1007c4450: push rbp
+0x1007c4451: mov rbp, rsp
+0x1007c4454: push r14
+0x1007c4456: push rbx
+0x1007c4457: mov r14, rdi
+0x1007c445a: lea rdi, [r14 + 0x660]
+0x1007c4461: call 0x1007e9d20 ; 0x1007e9d20
+0x1007c4466: lea rdi, [r14 + 0x740]
+0x1007c446d: call 0x1007e8eb0 ; 0x1007e8eb0
+0x1007c4472: test rax, rax
+0x1007c4475: je 0x1007c447b
+0x1007c4477: xor eax, eax
+0x1007c4479: jmp 0x1007c44c0 ; 0x1007c44c0
+0x1007c447b: xor ebx, ebx
+0x1007c447d: nop dword ptr [rax]
+0x1007c4480: mov r9, qword ptr [r14 + rbx*8 + 0x4e0]
+0x1007c4488: test r9, r9
+0x1007c448b: je 0x1007c44a6
+0x1007c448d: mov byte ptr [r9 + 0x3a], 1
+0x1007c4492: cmp qword ptr [r9 + 0x30], 0
+0x1007c4497: je 0x1007c44c5
+0x1007c4499: mov rax, qword ptr [r9]
+0x1007c449c: mov rsi, qword ptr [r14 + 0x10]
+0x1007c44a0: mov rdi, r9
+0x1007c44a3: call qword ptr [rax + 0x10]
+0x1007c44a6: inc rbx
+0x1007c44a9: cmp rbx, 0x20
+0x1007c44ad: jb 0x1007c4480
+0x1007c44af: add r14, 0x5e0
+0x1007c44b6: mov rdi, r14
+0x1007c44b9: call 0x1007ea170 ; 0x1007ea170
+0x1007c44be: mov al, 1
+0x1007c44c0: pop rbx
+0x1007c44c1: pop r14
+0x1007c44c3: pop rbp
+0x1007c44c4: ret 
+0x1007c44c5: test byte ptr [r9 + 0x10], 1
+0x1007c44ca: jne 0x1007c44d5
+0x1007c44cc: add r9, 0x10
+0x1007c44d0: inc r9
+0x1007c44d3: jmp 0x1007c44d9 ; 0x1007c44d9
+0x1007c44d5: mov r9, qword ptr [r9 + 0x20]
+0x1007c44d9: lea rdi, [rip + 0x3e00dd] ; 0x100ba45bd res->heap
+0x1007c44e0: lea rsi, [rip + 0x3e00a7] ; 0x100ba458e Resource.cpp
+0x1007c44e7: lea r8, [rip + 0x3e04ae] ; 0x100ba499c Missing heap for async resource "%s"!
+0x1007c44ee: mov edx, 0x1e6
+0x1007c44f3: mov ecx, 4
+0x1007c44f8: xor eax, eax
+0x1007c44fa: call 0x1007e6030 ; 0x1007e6030
+0x1007c44ff: ud2 
+0x1007c4501: nop word ptr cs:[rax + rax]

@@ -1,0 +1,3 @@
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import crypto from 'node:crypto';import {gunzipSync} from 'node:zlib';
+import {evaluateConstruction} from '../tools/environment-construction-cases';
+test('All 25 normal environment parent constructors preserve original snapshots, metadata order and global list ownership',()=>{const fixture=JSON.parse(gunzipSync(fs.readFileSync('tests/fixtures/environment-construction-native.json.gz')).toString());assert.equal(new Set(fixture.cases.map((row:any)=>row.input.className)).size,25);for(const row of fixture.cases)assert.equal(crypto.createHash('sha256').update(evaluateConstruction(row.input)).digest('hex'),row.nativeSha256,JSON.stringify(row.input));});

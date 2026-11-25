@@ -1,0 +1,14 @@
+0x100407a70: push rbp
+0x100407a71: mov rbp, rsp
+0x100407a74: push rbx
+0x100407a75: push rax
+0x100407a76: mov rbx, qword ptr [rdi + 0xe8]
+0x100407a7d: lea rdi, [rbx + 0x2030]
+0x100407a84: mov esi, dword ptr [rbx + 0x8f30]
+0x100407a8a: call 0x100408360 ; 0x100408360
+0x100407a8f: mov rdi, qword ptr [rbx + 0x18]
+0x100407a93: add rsp, 8
+0x100407a97: pop rbx
+0x100407a98: pop rbp
+0x100407a99: jmp 0x100194dd0 ; 0x100194dd0
+0x100407a9e: nop 

@@ -1,0 +1,63 @@
+{
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "functions": {
+    "Darkstone.ApplyState": {
+      "address": "0x10027e530",
+      "end": "0x10027ea20",
+      "codeSha256": "1ac532450a2adb217ccb12994d690e4382c82ecbf92a74de768c7aab3a04d3b9",
+      "assembly": "evidence/darkstone-state-Darkstone.ApplyState.asm"
+    },
+    "Darkstone.SetHealth": {
+      "address": "0x10027e3d0",
+      "end": "0x10027e400",
+      "codeSha256": "ad07e9836ada3efba1c193deb0a5329a722075be514a753b5b616f91899d7aee",
+      "assembly": "evidence/darkstone-state-Darkstone.SetHealth.asm"
+    },
+    "Darkstone.IsKillable": {
+      "address": "0x10027e410",
+      "end": "0x10027e480",
+      "codeSha256": "54317f48249e82b0ba6153b354744cc58574e76c20be5e64e6d2fbc9de7bdc94",
+      "assembly": "evidence/darkstone-state-Darkstone.IsKillable.asm"
+    },
+    "Darkstone.SetNetworkHealth": {
+      "address": "0x10027b6e0",
+      "end": "0x10027b720",
+      "codeSha256": "5f33a24eabdcb95d0c680c03e7564a5779244f412c1b70461ba8e6a463824d53",
+      "assembly": "evidence/darkstone-state-Darkstone.SetNetworkHealth.asm"
+    },
+    "SoulTrap.Update": {
+      "address": "0x10027b120",
+      "end": "0x10027b310",
+      "codeSha256": "52ecf7fcf363120f380fe001e7293b2860b0a18e8878aae24d883f1fb10af188",
+      "assembly": "evidence/darkstone-state-SoulTrap.Update.asm"
+    },
+    "SoulTrap.IsBurnt": {
+      "address": "0x10027b310",
+      "end": "0x10027b4a0",
+      "codeSha256": "b4732d1c9c0a13638bad2a632c7b8314cf9f239b9dcaa0d3489a03a2ceb9a9ec",
+      "assembly": "evidence/darkstone-state-SoulTrap.IsBurnt.asm"
+    },
+    "consume": {
+      "address": "0x10027c8b5",
+      "end": "0x10027c9bb",
+      "codeSha256": "e549b361ecaf949495106cab38c9b58dbc51e5a8c09fd9895547eaf08c5422d5",
+      "assembly": "evidence/darkstone-state-consume.asm"
+    },
+    "shape": {
+      "address": "0x10027d909",
+      "end": "0x10027d9af",
+      "codeSha256": "b42f0375c5cdab695964573a790b4b115007c3f797706bada0f44aff4d179173",
+      "assembly": "evidence/darkstone-state-shape.asm"
+    }
+  },
+  "constants": {
+    "minimum": 0.007500000298023224,
+    "burntThreshold": 0.012500000186264515,
+    "displaySmoothing": -7.971096038818359,
+    "recoveryDelay": 3.0,
+    "shapeMinimum": 0.5,
+    "loadShapeMinimum": 0.01,
+    "childBurntThreshold": 0.012500000186264515
+  },
+  "scope": "Whole ordinary state application, health setters, killability and SoulTrap completion bodies; two unchanged burning-consumption/shape subregions. Full burning Update, Avatar/fire eligibility, regeneration, reward/network dispatch and actual Model/resource owners remain separate dependencies."
+}

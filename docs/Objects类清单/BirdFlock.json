@@ -1,0 +1,2935 @@
+{
+  "className": "BirdFlock",
+  "functionGroup": "生物、群体与 AI",
+  "functionRole": "鸟群发射、轨道、距离与预填充",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "partial",
+      "description": "BirdFlock 的原默认值、继承初始化及 12 个序列化字段变体；原注册字段 12 项。"
+    },
+    {
+      "name": "鸟群发射、轨道、距离与预填充",
+      "status": "partial",
+      "description": "原普通构造、共享保存字段、池式创建／启用，以及 BirdFlock.Unload、BirdFlocks.Update／Unload 管理链已独立核验。管理更新保留六个原float32视锥平面、-1边界、10,240候选／总实例上限和20-byte实例打包；卸载保留真实Heap.Free／Reset与ModelInstances计数子函数、版本引用重读和失败前写入。108组、227,378,448字节原对照零差异。单群BirdFlock.Update、实际模型装载／GPU owner、轨道缓存、运动和引导交互继续待接，管理器尚不作为地图自主鸟群运行，不计完整类。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Rail（57 条引用）、Float（2 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "BirdFlock",
+    "category": "生物、群体与 AI",
+    "functionGroupId": "creatures",
+    "functionRole": "鸟群发射、轨道、距离与预填充",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "partial",
+        "description": "BirdFlock 的原默认值、继承初始化及 12 个序列化字段变体；原注册字段 12 项。"
+      },
+      {
+        "name": "鸟群发射、轨道、距离与预填充",
+        "status": "partial",
+        "description": "原普通构造、共享保存字段、池式创建／启用，以及 BirdFlock.Unload、BirdFlocks.Update／Unload 管理链已独立核验。管理更新保留六个原float32视锥平面、-1边界、10,240候选／总实例上限和20-byte实例打包；卸载保留真实Heap.Free／Reset与ModelInstances计数子函数、版本引用重读和失败前写入。108组、227,378,448字节原对照零差异。单群BirdFlock.Update、实际模型装载／GPU owner、轨道缓存、运动和引导交互继续待接，管理器尚不作为地图自主鸟群运行，不计完整类。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Rail（57 条引用）、Float（2 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Rail",
+        "references": 57
+      },
+      {
+        "className": "Float",
+        "references": 2
+      }
+    ],
+    "rttiWorkingGroup": "玩家、角色与动画",
+    "role": "对象实例类型",
+    "instances": 58,
+    "nestedInstances": 0,
+    "referenceFields": 59,
+    "declaredLevels": 15,
+    "levels": [
+      {
+        "level": "Dawn",
+        "nodes": 10,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DayEnd",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Dusk",
+        "nodes": 5,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "HubReveal",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_ButterflyFields",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_NestAndKeeper",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Village",
+        "nodes": 8,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Rain",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainEnd",
+        "nodes": 7,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainForest",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainMid",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Storm",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "StormEnd",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Sunset",
+        "nodes": 5,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SunsetEnd2",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "enabled",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "hitSound",
+        "type": 1,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "intensity",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "maxDist",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "maxInstances",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "minDist",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "prepopulate",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "rail",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "spawnRate",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "spinScalar",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "streamSound",
+        "type": 1,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "travelSpeed",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100c889e0",
+    "nativeRegisteredFields": [
+      {
+        "name": "enabled",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 12,
+        "registrationFunction": "0x10019f240",
+        "propertyAddress": "0x100c88520"
+      },
+      {
+        "name": "prepopulate",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 13,
+        "registrationFunction": "0x10019f240",
+        "propertyAddress": "0x100c88570"
+      },
+      {
+        "name": "maxInstances",
+        "typeGetter": "__Z17GetMetaTypeByTypeIjERK8MetaTypev",
+        "nativeOffset": 24,
+        "registrationFunction": "0x10019f240",
+        "propertyAddress": "0x100c885c0"
+      },
+      {
+        "name": "spawnRate",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 28,
+        "registrationFunction": "0x10019f240",
+        "propertyAddress": "0x100c88610"
+      },
+      {
+        "name": "travelSpeed",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 32,
+        "registrationFunction": "0x10019f240",
+        "propertyAddress": "0x100c88660"
+      },
+      {
+        "name": "spinScalar",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 36,
+        "registrationFunction": "0x10019f240",
+        "propertyAddress": "0x100c886b0"
+      },
+      {
+        "name": "rail",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP4RailERK8MetaTypev",
+        "nativeOffset": 16,
+        "registrationFunction": "0x10019f240",
+        "propertyAddress": "0x100c88700"
+      },
+      {
+        "name": "streamSound",
+        "typeGetter": "__Z17GetMetaTypeByTypeINSt3__112basic_stringIcNS0_11char_traitsIcEE16StlPoolAllocatorIcEEEERK8MetaTypev",
+        "nativeOffset": 40,
+        "registrationFunction": "0x10019f240",
+        "propertyAddress": "0x100c88750"
+      },
+      {
+        "name": "hitSound",
+        "typeGetter": "__Z17GetMetaTypeByTypeINSt3__112basic_stringIcNS0_11char_traitsIcEE16StlPoolAllocatorIcEEEERK8MetaTypev",
+        "nativeOffset": 64,
+        "registrationFunction": "0x10019f240",
+        "propertyAddress": "0x100c887a0"
+      },
+      {
+        "name": "intensity",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5FloatERK8MetaTypev",
+        "nativeOffset": 88,
+        "registrationFunction": "0x10019f240",
+        "propertyAddress": "0x100c887f0"
+      },
+      {
+        "name": "minDist",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 96,
+        "registrationFunction": "0x10019f240",
+        "propertyAddress": "0x100c88840"
+      },
+      {
+        "name": "maxDist",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 100,
+        "registrationFunction": "0x10019f240",
+        "propertyAddress": "0x100c88890"
+      }
+    ],
+    "completedCheckpoints": 4,
+    "partialCheckpoints": 2,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 40,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": true,
+    "implementation": [
+      "src/core/environment-object-state.ts",
+      "src/core/creature-construction-runtime.ts",
+      "src/core/creature-runtime.ts",
+      "src/core/bird-flock-runtime.ts"
+    ],
+    "evidence": [
+      "docs/生物骨骼动画续接.md",
+      "docs/creature-construction.json",
+      "docs/creature-construction-oracle.json",
+      "docs/creature-kernel-oracle.json",
+      "docs/objects-nature-audit.json",
+      "docs/bird-flock-native.json",
+      "docs/bird-flock-oracle.json",
+      "docs/自然动画与鸟群引导续接.md"
+    ],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 12 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "partial",
+        "note": "原普通构造、共享保存字段、池式创建／启用，以及 BirdFlock.Unload、BirdFlocks.Update／Unload 管理链已独立核验。管理更新保留六个原float32视锥平面、-1边界、10,240候选／总实例上限和20-byte实例打包；卸载保留真实Heap.Free／Reset与ModelInstances计数子函数、版本引用重读和失败前写入。108组、227,378,448字节原对照零差异。单群BirdFlock.Update、实际模型装载／GPU owner、轨道缓存、运动和引导交互继续待接，管理器尚不作为地图自主鸟群运行，不计完整类。",
+        "evidence": [
+          "docs/生物骨骼动画续接.md",
+          "docs/creature-construction.json",
+          "docs/creature-construction-oracle.json",
+          "docs/creature-kernel-oracle.json",
+          "docs/objects-nature-audit.json",
+          "docs/bird-flock-native.json",
+          "docs/bird-flock-oracle.json",
+          "docs/自然动画与鸟群引导续接.md"
+        ]
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "partial",
+        "note": "原普通构造、共享保存字段、池式创建／启用，以及 BirdFlock.Unload、BirdFlocks.Update／Unload 管理链已独立核验。管理更新保留六个原float32视锥平面、-1边界、10,240候选／总实例上限和20-byte实例打包；卸载保留真实Heap.Free／Reset与ModelInstances计数子函数、版本引用重读和失败前写入。108组、227,378,448字节原对照零差异。单群BirdFlock.Update、实际模型装载／GPU owner、轨道缓存、运动和引导交互继续待接，管理器尚不作为地图自主鸟群运行，不计完整类。",
+        "evidence": [
+          "docs/生物骨骼动画续接.md",
+          "docs/creature-construction.json",
+          "docs/creature-construction-oracle.json",
+          "docs/creature-kernel-oracle.json",
+          "docs/objects-nature-audit.json",
+          "docs/bird-flock-native.json",
+          "docs/bird-flock-oracle.json",
+          "docs/自然动画与鸟群引导续接.md"
+        ]
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "verified",
+        "note": "原普通构造、共享保存字段、池式创建／启用，以及 BirdFlock.Unload、BirdFlocks.Update／Unload 管理链已独立核验。管理更新保留六个原float32视锥平面、-1边界、10,240候选／总实例上限和20-byte实例打包；卸载保留真实Heap.Free／Reset与ModelInstances计数子函数、版本引用重读和失败前写入。108组、227,378,448字节原对照零差异。单群BirdFlock.Update、实际模型装载／GPU owner、轨道缓存、运动和引导交互继续待接，管理器尚不作为地图自主鸟群运行，不计完整类。",
+        "evidence": [
+          "docs/生物骨骼动画续接.md",
+          "docs/creature-construction.json",
+          "docs/creature-construction-oracle.json",
+          "docs/creature-kernel-oracle.json",
+          "docs/objects-nature-audit.json",
+          "docs/bird-flock-native.json",
+          "docs/bird-flock-oracle.json",
+          "docs/自然动画与鸟群引导续接.md"
+        ]
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "原普通构造、共享保存字段、池式创建／启用，以及 BirdFlock.Unload、BirdFlocks.Update／Unload 管理链已独立核验。管理更新保留六个原float32视锥平面、-1边界、10,240候选／总实例上限和20-byte实例打包；卸载保留真实Heap.Free／Reset与ModelInstances计数子函数、版本引用重读和失败前写入。108组、227,378,448字节原对照零差异。单群BirdFlock.Update、实际模型装载／GPU owner、轨道缓存、运动和引导交互继续待接，管理器尚不作为地图自主鸟群运行，不计完整类。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "Dawn:n19",
+      "level": "Dawn",
+      "nodeId": 19,
+      "name": "BstNode_3156082711",
+      "className": "BirdFlock",
+      "classIndex": 11,
+      "sourceOffset": 36588,
+      "sourceLength": 71,
+      "sourceSha256": "d124c66fc627be49e72e7e0628438b916219b9670ebfe4aabb80376b26b4b262",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n19/p3",
+          "fieldName": "rail",
+          "target": "Dawn:n1382",
+          "targetNodeId": 1382,
+          "offset": 36620
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n184",
+      "level": "Dawn",
+      "nodeId": 184,
+      "name": "BstNode_3122856953",
+      "className": "BirdFlock",
+      "classIndex": 11,
+      "sourceOffset": 61621,
+      "sourceLength": 71,
+      "sourceSha256": "fe35aca4f005307c4852734221a2c427508fa58b5b5d19ef49ecfde05bba53d8",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n184/p3",
+          "fieldName": "rail",
+          "target": "Dawn:n1588",
+          "targetNodeId": 1588,
+          "offset": 61653
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n192",
+      "level": "Dawn",
+      "nodeId": 192,
+      "name": "BstNode_2504654864",
+      "className": "BirdFlock",
+      "classIndex": 11,
+      "sourceOffset": 62705,
+      "sourceLength": 71,
+      "sourceSha256": "f2375158b0949876e376fe1fafec9be64edf98dccf16967f4553375842b086ef",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n192/p3",
+          "fieldName": "rail",
+          "target": "Dawn:n1836",
+          "targetNodeId": 1836,
+          "offset": 62737
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n778",
+      "level": "Dawn",
+      "nodeId": 778,
+      "name": "BstNode_2504654857",
+      "className": "BirdFlock",
+      "classIndex": 11,
+      "sourceOffset": 156584,
+      "sourceLength": 71,
+      "sourceSha256": "12eb7f0f56428450288e650fd1efe8f29d60e129d3f3ee7884661ce4ed78f151",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n778/p3",
+          "fieldName": "rail",
+          "target": "Dawn:n845",
+          "targetNodeId": 845,
+          "offset": 156616
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1205",
+      "level": "Dawn",
+      "nodeId": 1205,
+      "name": "BstNode_2504654932",
+      "className": "BirdFlock",
+      "classIndex": 11,
+      "sourceOffset": 214853,
+      "sourceLength": 71,
+      "sourceSha256": "006841f72356a2f33e86df6e5915ac250478d579b6276cfb280ccf33b4e9fb20",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1205/p3",
+          "fieldName": "rail",
+          "target": "Dawn:n2155",
+          "targetNodeId": 2155,
+          "offset": 214885
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2047",
+      "level": "Dawn",
+      "nodeId": 2047,
+      "name": "BstNode_34603046",
+      "className": "BirdFlock",
+      "classIndex": 11,
+      "sourceOffset": 335637,
+      "sourceLength": 69,
+      "sourceSha256": "68e31e4bc8420b9910ad3c1499915047545f7421f24064cbe77cf69659465e19",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n2047/p3",
+          "fieldName": "rail",
+          "target": "Dawn:n1318",
+          "targetNodeId": 1318,
+          "offset": 335667
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2312",
+      "level": "Dawn",
+      "nodeId": 2312,
+      "name": "BstNode_2504654891",
+      "className": "BirdFlock",
+      "classIndex": 11,
+      "sourceOffset": 383313,
+      "sourceLength": 71,
+      "sourceSha256": "e9283ab1335d3d8159b21f8a276cb327b225541a30209d3a08514a6f3a39b65e",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n2312/p3",
+          "fieldName": "rail",
+          "target": "Dawn:n1431",
+          "targetNodeId": 1431,
+          "offset": 383345
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2580",
+      "level": "Dawn",
+      "nodeId": 2580,
+      "name": "BstNode_2504654854",
+      "className": "BirdFlock",
+      "classIndex": 11,
+      "sourceOffset": 430279,
+      "sourceLength": 71,
+      "sourceSha256": "d3a5060a51e4d4a03a5a5adfc11e5fee39270c9df5fe5cb3725723ee0380d97c",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n2580/p3",
+          "fieldName": "rail",
+          "target": "Dawn:n340",
+          "targetNodeId": 340,
+          "offset": 430311
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2846",
+      "level": "Dawn",
+      "nodeId": 2846,
+      "name": "BstNode_2446917885",
+      "className": "BirdFlock",
+      "classIndex": 11,
+      "sourceOffset": 466431,
+      "sourceLength": 71,
+      "sourceSha256": "5a7e17383d2a64abb47c7fa25fafdc67050e6910fdba037b5d8977b92440c2f3",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n2846/p2",
+          "fieldName": "intensity",
+          "target": "Dawn:n2951",
+          "targetNodeId": 2951,
+          "offset": 466459
+        },
+        {
+          "fieldId": "n2846/p3",
+          "fieldName": "rail",
+          "target": "Dawn:n2494",
+          "targetNodeId": 2494,
+          "offset": 466463
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2898",
+      "level": "Dawn",
+      "nodeId": 2898,
+      "name": "BstNode_2446917884",
+      "className": "BirdFlock",
+      "classIndex": 11,
+      "sourceOffset": 475504,
+      "sourceLength": 71,
+      "sourceSha256": "6a90be61aac9ae11523e74dd15f9e3e58b3beb21bc010dc546835158c3f16ca9",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n2898/p2",
+          "fieldName": "intensity",
+          "target": "Dawn:n501",
+          "targetNodeId": 501,
+          "offset": 475532
+        },
+        {
+          "fieldId": "n2898/p3",
+          "fieldName": "rail",
+          "target": "Dawn:n2764",
+          "targetNodeId": 2764,
+          "offset": 475536
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n505",
+      "level": "DayEnd",
+      "nodeId": 505,
+      "name": "BstNode_2446917695",
+      "className": "BirdFlock",
+      "classIndex": 58,
+      "sourceOffset": 121205,
+      "sourceLength": 71,
+      "sourceSha256": "60a6ff806dc57fc6648afac7d178bca5e1db3f1c5cee22b1461538651b8dd4ff",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n505/p3",
+          "fieldName": "rail",
+          "target": "DayEnd:n512",
+          "targetNodeId": 512,
+          "offset": 121237
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n588",
+      "level": "Dusk",
+      "nodeId": 588,
+      "name": "BstNode_2446917668",
+      "className": "BirdFlock",
+      "classIndex": 56,
+      "sourceOffset": 132695,
+      "sourceLength": 71,
+      "sourceSha256": "db55e4d09a43ed10b02a5c987de01c66e958113121e6970ef38c4529085fff79",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n588/p3",
+          "fieldName": "rail",
+          "target": "Dusk:n248",
+          "targetNodeId": 248,
+          "offset": 132727
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n606",
+      "level": "Dusk",
+      "nodeId": 606,
+      "name": "BstNode_2446917698",
+      "className": "BirdFlock",
+      "classIndex": 56,
+      "sourceOffset": 134715,
+      "sourceLength": 71,
+      "sourceSha256": "be632ac015a20639837ba8ff53e4f9401b16360fa8d24ee2ffeae441fd9f22bf",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n606/p3",
+          "fieldName": "rail",
+          "target": "Dusk:n590",
+          "targetNodeId": 590,
+          "offset": 134747
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n652",
+      "level": "Dusk",
+      "nodeId": 652,
+      "name": "BstNode_2446917682",
+      "className": "BirdFlock",
+      "classIndex": 56,
+      "sourceOffset": 141477,
+      "sourceLength": 71,
+      "sourceSha256": "22527f87dbbf99313bcd3b261a9a25d1aa666d54b3898785d88a819bc329799b",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n652/p3",
+          "fieldName": "rail",
+          "target": "Dusk:n423",
+          "targetNodeId": 423,
+          "offset": 141509
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n816",
+      "level": "Dusk",
+      "nodeId": 816,
+      "name": "BstNode_2446917666",
+      "className": "BirdFlock",
+      "classIndex": 56,
+      "sourceOffset": 171752,
+      "sourceLength": 71,
+      "sourceSha256": "d285f3d83610acb3c36c02b5056da8df8421b02ee432ef21e660bbcaf97ddb8f",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n816/p3",
+          "fieldName": "rail",
+          "target": "Dusk:n452",
+          "targetNodeId": 452,
+          "offset": 171784
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n911",
+      "level": "Dusk",
+      "nodeId": 911,
+      "name": "BstNode_2446917690",
+      "className": "BirdFlock",
+      "classIndex": 56,
+      "sourceOffset": 187973,
+      "sourceLength": 71,
+      "sourceSha256": "a433b84af6afd82b7c44540d54bf845798fbeb14f1e31ca250b421b0be225084",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n911/p3",
+          "fieldName": "rail",
+          "target": "Dusk:n541",
+          "targetNodeId": 541,
+          "offset": 188005
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n357",
+      "level": "HubReveal",
+      "nodeId": 357,
+      "name": "BstNode_2504654883",
+      "className": "BirdFlock",
+      "classIndex": 64,
+      "sourceOffset": 90712,
+      "sourceLength": 71,
+      "sourceSha256": "a034bb5716c3e930c638d47cb80674219f48907e69a7d8d6d2fd172fcca1df2a",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n357/p3",
+          "fieldName": "rail",
+          "target": "HubReveal:n1369",
+          "targetNodeId": 1369,
+          "offset": 90744
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n437",
+      "level": "HubReveal",
+      "nodeId": 437,
+      "name": "BstNode_2446917878",
+      "className": "BirdFlock",
+      "classIndex": 64,
+      "sourceOffset": 105001,
+      "sourceLength": 71,
+      "sourceSha256": "e74dad4971f0abfa7799b45baac5084a835827a16b3d1187439813beb8549597",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n437/p3",
+          "fieldName": "rail",
+          "target": "HubReveal:n877",
+          "targetNodeId": 877,
+          "offset": 105033
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n1005",
+      "level": "HubReveal",
+      "nodeId": 1005,
+      "name": "BstNode_2446917808",
+      "className": "BirdFlock",
+      "classIndex": 64,
+      "sourceOffset": 197893,
+      "sourceLength": 71,
+      "sourceSha256": "74e678a2bbd5c5132416640fabfa525a1e10dc83205d4683141a7c753a66cb6b",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1005/p3",
+          "fieldName": "rail",
+          "target": "HubReveal:n595",
+          "targetNodeId": 595,
+          "offset": 197925
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n270",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 270,
+      "name": "BstNode_2529558652",
+      "className": "BirdFlock",
+      "classIndex": 37,
+      "sourceOffset": 83106,
+      "sourceLength": 71,
+      "sourceSha256": "dc4254726ee348f41023dbf580ad2876b6aa035f6cf6c7f6f6e224366bd6dac2",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n575",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 575,
+      "name": "BstNode_1167523904",
+      "className": "BirdFlock",
+      "classIndex": 37,
+      "sourceOffset": 145598,
+      "sourceLength": 71,
+      "sourceSha256": "b76115aeaac7666693c3ac989a5b85d86c388228f6f0037edf741bea66df3caa",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n575/p3",
+          "fieldName": "rail",
+          "target": "Prairie_ButterflyFields:n342",
+          "targetNodeId": 342,
+          "offset": 145630
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n85",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 85,
+      "name": "BstNode_34603426",
+      "className": "BirdFlock",
+      "classIndex": 21,
+      "sourceOffset": 41042,
+      "sourceLength": 69,
+      "sourceSha256": "5edc444742e05fb98e3380f1857f2a9bc537dd37604160405b25b046a6194c08",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n85/p3",
+          "fieldName": "rail",
+          "target": "Prairie_NestAndKeeper:n575",
+          "targetNodeId": 575,
+          "offset": 41072
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n301",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 301,
+      "name": "BstNode_34603411",
+      "className": "BirdFlock",
+      "classIndex": 21,
+      "sourceOffset": 91873,
+      "sourceLength": 69,
+      "sourceSha256": "569251d9ace515dc6e98c8604cf2f9d67c1b4b7de287943e87bf2e5341e16832",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n301/p3",
+          "fieldName": "rail",
+          "target": "Prairie_NestAndKeeper:n551",
+          "targetNodeId": 551,
+          "offset": 91903
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n896",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 896,
+      "name": "BstNode_34603405",
+      "className": "BirdFlock",
+      "classIndex": 21,
+      "sourceOffset": 221106,
+      "sourceLength": 69,
+      "sourceSha256": "fc453e4bb021ca3a7492fcb855a4fe568f6dac2f89d7c823532c53707aaf3242",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n896/p3",
+          "fieldName": "rail",
+          "target": "Prairie_NestAndKeeper:n310",
+          "targetNodeId": 310,
+          "offset": 221136
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n348",
+      "level": "Prairie_Village",
+      "nodeId": 348,
+      "name": "BstNode_2446917840",
+      "className": "BirdFlock",
+      "classIndex": 50,
+      "sourceOffset": 85982,
+      "sourceLength": 71,
+      "sourceSha256": "2d48934fb800719cbcf4332515459a0e40c0bd5c2a69820724282c7dcb843da6",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n348/p3",
+          "fieldName": "rail",
+          "target": "Prairie_Village:n236",
+          "targetNodeId": 236,
+          "offset": 86014
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n474",
+      "level": "Prairie_Village",
+      "nodeId": 474,
+      "name": "BstNode_2446917817",
+      "className": "BirdFlock",
+      "classIndex": 50,
+      "sourceOffset": 109215,
+      "sourceLength": 71,
+      "sourceSha256": "fd887cf3c6bf2873ae823b463267a8c5e6d4358edd97cb2ee10c5f00b538266e",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n474/p3",
+          "fieldName": "rail",
+          "target": "Prairie_Village:n1286",
+          "targetNodeId": 1286,
+          "offset": 109247
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n745",
+      "level": "Prairie_Village",
+      "nodeId": 745,
+      "name": "BstNode_2446917818",
+      "className": "BirdFlock",
+      "classIndex": 50,
+      "sourceOffset": 152325,
+      "sourceLength": 71,
+      "sourceSha256": "62476f4de57d09f25afbbedc89ac4c834fabf91ef965222b0c4948a89a94771d",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n745/p3",
+          "fieldName": "rail",
+          "target": "Prairie_Village:n2801",
+          "targetNodeId": 2801,
+          "offset": 152357
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n792",
+      "level": "Prairie_Village",
+      "nodeId": 792,
+      "name": "BstNode_2446917824",
+      "className": "BirdFlock",
+      "classIndex": 50,
+      "sourceOffset": 159130,
+      "sourceLength": 71,
+      "sourceSha256": "eb38da25202f110a161fe466c12270046b55fb74e7bc7d0c6690d88c9e8f7610",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n792/p3",
+          "fieldName": "rail",
+          "target": "Prairie_Village:n744",
+          "targetNodeId": 744,
+          "offset": 159162
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1534",
+      "level": "Prairie_Village",
+      "nodeId": 1534,
+      "name": "BstNode_1842806837",
+      "className": "BirdFlock",
+      "classIndex": 50,
+      "sourceOffset": 275278,
+      "sourceLength": 71,
+      "sourceSha256": "2e1f429f217d2bc7b81fe779bf193a8765a212ee1c321446b51d3bf4d8eaaa33",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1534/p3",
+          "fieldName": "rail",
+          "target": "Prairie_Village:n3104",
+          "targetNodeId": 3104,
+          "offset": 275310
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2097",
+      "level": "Prairie_Village",
+      "nodeId": 2097,
+      "name": "BstNode_2446917839",
+      "className": "BirdFlock",
+      "classIndex": 50,
+      "sourceOffset": 369489,
+      "sourceLength": 71,
+      "sourceSha256": "31e968308bfa9320561cf4b4a8d158b7746fd7bbb92789fbef2ad45734448717",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n2097/p3",
+          "fieldName": "rail",
+          "target": "Prairie_Village:n877",
+          "targetNodeId": 877,
+          "offset": 369521
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2200",
+      "level": "Prairie_Village",
+      "nodeId": 2200,
+      "name": "BstNode_2446917825",
+      "className": "BirdFlock",
+      "classIndex": 50,
+      "sourceOffset": 383650,
+      "sourceLength": 71,
+      "sourceSha256": "12898d6cd099daafe05b1490896e8f87ede91a27d49853e930b945805f957ea5",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n2200/p3",
+          "fieldName": "rail",
+          "target": "Prairie_Village:n342",
+          "targetNodeId": 342,
+          "offset": 383682
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2685",
+      "level": "Prairie_Village",
+      "nodeId": 2685,
+      "name": "BstNode_2446917841",
+      "className": "BirdFlock",
+      "classIndex": 50,
+      "sourceOffset": 454790,
+      "sourceLength": 71,
+      "sourceSha256": "60d857286702d8895712434626b1079ea9bbfb6dfdcc409591cde6c92e2f5e13",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n2685/p3",
+          "fieldName": "rail",
+          "target": "Prairie_Village:n2063",
+          "targetNodeId": 2063,
+          "offset": 454822
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n1007",
+      "level": "Rain",
+      "nodeId": 1007,
+      "name": "BstNode_2446917702",
+      "className": "BirdFlock",
+      "classIndex": 72,
+      "sourceOffset": 255230,
+      "sourceLength": 71,
+      "sourceSha256": "161f9af1428341413e65764efbaa8e65d9cef276aa0d0fc170f83121154fcdba",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1007/p3",
+          "fieldName": "rail",
+          "target": "Rain:n1297",
+          "targetNodeId": 1297,
+          "offset": 255262
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n250",
+      "level": "RainEnd",
+      "nodeId": 250,
+      "name": "BstNode_2446917713",
+      "className": "BirdFlock",
+      "classIndex": 41,
+      "sourceOffset": 87646,
+      "sourceLength": 71,
+      "sourceSha256": "0f39125f8927d6314da97d49725b02ab8955e30d0aa91f5ef3430577362b6cf3",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n250/p3",
+          "fieldName": "rail",
+          "target": "RainEnd:n1161",
+          "targetNodeId": 1161,
+          "offset": 87678
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n739",
+      "level": "RainEnd",
+      "nodeId": 739,
+      "name": "BstNode_2446917712",
+      "className": "BirdFlock",
+      "classIndex": 41,
+      "sourceOffset": 207912,
+      "sourceLength": 71,
+      "sourceSha256": "408de5eba4fa2f52dfb7fece76aabf1706a445285290360354ddb77a8b4070db",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n739/p3",
+          "fieldName": "rail",
+          "target": "RainEnd:n813",
+          "targetNodeId": 813,
+          "offset": 207944
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n849",
+      "level": "RainEnd",
+      "nodeId": 849,
+      "name": "BstNode_2446917687",
+      "className": "BirdFlock",
+      "classIndex": 41,
+      "sourceOffset": 231818,
+      "sourceLength": 71,
+      "sourceSha256": "a6dff641db0550b3709e7aff32a2563fafac54ffc4d18417b3cd774fb7a3284a",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n849/p3",
+          "fieldName": "rail",
+          "target": "RainEnd:n469",
+          "targetNodeId": 469,
+          "offset": 231850
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n1088",
+      "level": "RainEnd",
+      "nodeId": 1088,
+      "name": "BstNode_2446917711",
+      "className": "BirdFlock",
+      "classIndex": 41,
+      "sourceOffset": 289202,
+      "sourceLength": 71,
+      "sourceSha256": "85a1b3dcd5ae6d3c8b2ddfd02043370df48451ef70b04d9222dd95194018aa0b",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1088/p3",
+          "fieldName": "rail",
+          "target": "RainEnd:n1451",
+          "targetNodeId": 1451,
+          "offset": 289234
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n1562",
+      "level": "RainEnd",
+      "nodeId": 1562,
+      "name": "BstNode_2446917685",
+      "className": "BirdFlock",
+      "classIndex": 41,
+      "sourceOffset": 397597,
+      "sourceLength": 71,
+      "sourceSha256": "5ab6a5b1e3c31b9ac3a6813830eeb3151c870f7480ba9d2a2a4bc5aa6d1c749d",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1562/p3",
+          "fieldName": "rail",
+          "target": "RainEnd:n1547",
+          "targetNodeId": 1547,
+          "offset": 397629
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n1586",
+      "level": "RainEnd",
+      "nodeId": 1586,
+      "name": "BstNode_2446917686",
+      "className": "BirdFlock",
+      "classIndex": 41,
+      "sourceOffset": 401437,
+      "sourceLength": 71,
+      "sourceSha256": "3eada7d317f815f0207ba42847b0dce1e69528ecb2eb82b5ae160add57fe281c",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1586/p3",
+          "fieldName": "rail",
+          "target": "RainEnd:n820",
+          "targetNodeId": 820,
+          "offset": 401469
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n1589",
+      "level": "RainEnd",
+      "nodeId": 1589,
+      "name": "BstNode_2446917656",
+      "className": "BirdFlock",
+      "classIndex": 41,
+      "sourceOffset": 401651,
+      "sourceLength": 71,
+      "sourceSha256": "2bb9bc680b9bcd5b3fdbbd9762e879964f9f7a421ccebebd25582d449c860c8e",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1589/p3",
+          "fieldName": "rail",
+          "target": "RainEnd:n352",
+          "targetNodeId": 352,
+          "offset": 401683
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n278",
+      "level": "RainForest",
+      "nodeId": 278,
+      "name": "BstNode_2345992294",
+      "className": "BirdFlock",
+      "classIndex": 35,
+      "sourceOffset": 75440,
+      "sourceLength": 71,
+      "sourceSha256": "03a9a318cb0ab7866bd4f12e9b3f9ed26367ef42385059908ffde3d73ee994af",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n278/p3",
+          "fieldName": "rail",
+          "target": "RainForest:n90",
+          "targetNodeId": 90,
+          "offset": 75472
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n361",
+      "level": "RainForest",
+      "nodeId": 361,
+      "name": "BstNode_2345992292",
+      "className": "BirdFlock",
+      "classIndex": 35,
+      "sourceOffset": 88586,
+      "sourceLength": 71,
+      "sourceSha256": "a7475f9fa8e3e7cdc99d462eff93d7d134405c3dcba99ae5477fa475aff8c25c",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n361/p3",
+          "fieldName": "rail",
+          "target": "RainForest:n588",
+          "targetNodeId": 588,
+          "offset": 88618
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n60",
+      "level": "RainMid",
+      "nodeId": 60,
+      "name": "BstNode_1049165922",
+      "className": "BirdFlock",
+      "classIndex": 20,
+      "sourceOffset": 38131,
+      "sourceLength": 71,
+      "sourceSha256": "753242813dc20a24b4400ae6a1d0ba8e365a5c098a7a8ea9f74896863bde9981",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n60/p3",
+          "fieldName": "rail",
+          "target": "RainMid:n229",
+          "targetNodeId": 229,
+          "offset": 38163
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n613",
+      "level": "RainMid",
+      "nodeId": 613,
+      "name": "BstNode_1049165923",
+      "className": "BirdFlock",
+      "classIndex": 20,
+      "sourceOffset": 141883,
+      "sourceLength": 71,
+      "sourceSha256": "9052c5f3e4b37577fcbe9c63d1c8e8249c6b5fe75b793487bd196903fa693fac",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n613/p3",
+          "fieldName": "rail",
+          "target": "RainMid:n1449",
+          "targetNodeId": 1449,
+          "offset": 141915
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n1390",
+      "level": "RainMid",
+      "nodeId": 1390,
+      "name": "BstNode_1049165926",
+      "className": "BirdFlock",
+      "classIndex": 20,
+      "sourceOffset": 279924,
+      "sourceLength": 71,
+      "sourceSha256": "f62de7d987dc007a70b3c6557368ddadcec707859df98132f8a0efb9699e444f",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1390/p3",
+          "fieldName": "rail",
+          "target": "RainMid:n737",
+          "targetNodeId": 737,
+          "offset": 279956
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n2028",
+      "level": "RainMid",
+      "nodeId": 2028,
+      "name": "BstNode_1049165927",
+      "className": "BirdFlock",
+      "classIndex": 20,
+      "sourceOffset": 390511,
+      "sourceLength": 71,
+      "sourceSha256": "87b7bf6cec8f95b3f8cc4455d91f8fcabc3c2235d4e56307577640a5e25c545f",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n2028/p3",
+          "fieldName": "rail",
+          "target": "RainMid:n43",
+          "targetNodeId": 43,
+          "offset": 390543
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n1224",
+      "level": "Storm",
+      "nodeId": 1224,
+      "name": "BstNode_2529559571",
+      "className": "BirdFlock",
+      "classIndex": 58,
+      "sourceOffset": 242385,
+      "sourceLength": 71,
+      "sourceSha256": "439aa50b79f3530d56f65ed40d9dd7412013a48f715e3985bd5e97685270d604",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1224/p3",
+          "fieldName": "rail",
+          "target": "Storm:n287",
+          "targetNodeId": 287,
+          "offset": 242417
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n506",
+      "level": "StormEnd",
+      "nodeId": 506,
+      "name": "BstNode_2446917662",
+      "className": "BirdFlock",
+      "classIndex": 46,
+      "sourceOffset": 113668,
+      "sourceLength": 71,
+      "sourceSha256": "4aa63f24ddbf850b99d9dea816589e606c046635f18bd940adc790b8664dc81d",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n506/p3",
+          "fieldName": "rail",
+          "target": "StormEnd:n1132",
+          "targetNodeId": 1132,
+          "offset": 113700
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n559",
+      "level": "StormEnd",
+      "nodeId": 559,
+      "name": "BstNode_2446917647",
+      "className": "BirdFlock",
+      "classIndex": 46,
+      "sourceOffset": 121914,
+      "sourceLength": 71,
+      "sourceSha256": "40a3d639cde59b3176e78d08499fe5c47f51c99d75e7a0e640d94ce6f6a58776",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n559/p3",
+          "fieldName": "rail",
+          "target": "StormEnd:n554",
+          "targetNodeId": 554,
+          "offset": 121946
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n921",
+      "level": "Sunset",
+      "nodeId": 921,
+      "name": "BstNode_3156082702",
+      "className": "BirdFlock",
+      "classIndex": 61,
+      "sourceOffset": 187206,
+      "sourceLength": 71,
+      "sourceSha256": "5dbfc4937e4234d8edffec7c4b6d8873854c22d8188ed036b0da49eef31948fa",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n921/p3",
+          "fieldName": "rail",
+          "target": "Sunset:n1086",
+          "targetNodeId": 1086,
+          "offset": 187238
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n963",
+      "level": "Sunset",
+      "nodeId": 963,
+      "name": "BstNode_3156082698",
+      "className": "BirdFlock",
+      "classIndex": 61,
+      "sourceOffset": 193498,
+      "sourceLength": 71,
+      "sourceSha256": "3ba46b25b0dd34a9d2a10db67c6922ad98d25a91d143531d0a8b83f7b3f429fd",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n963/p3",
+          "fieldName": "rail",
+          "target": "Sunset:n876",
+          "targetNodeId": 876,
+          "offset": 193530
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n1116",
+      "level": "Sunset",
+      "nodeId": 1116,
+      "name": "BstNode_3156082696",
+      "className": "BirdFlock",
+      "classIndex": 61,
+      "sourceOffset": 216349,
+      "sourceLength": 71,
+      "sourceSha256": "ba18de86dbe969dc3cfc5df7f21d2d876be8a783a726b4611009ed811a940dbc",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1116/p3",
+          "fieldName": "rail",
+          "target": "Sunset:n930",
+          "targetNodeId": 930,
+          "offset": 216381
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n1119",
+      "level": "Sunset",
+      "nodeId": 1119,
+      "name": "BstNode_3156082697",
+      "className": "BirdFlock",
+      "classIndex": 61,
+      "sourceOffset": 216617,
+      "sourceLength": 71,
+      "sourceSha256": "e9117d93ff1671ee28143fcd46c93f5e9901d33be8782bd38a6f5685cb3a45e5",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1119/p3",
+          "fieldName": "rail",
+          "target": "Sunset:n1560",
+          "targetNodeId": 1560,
+          "offset": 216649
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n1397",
+      "level": "Sunset",
+      "nodeId": 1397,
+      "name": "BstNode_3156082701",
+      "className": "BirdFlock",
+      "classIndex": 61,
+      "sourceOffset": 261324,
+      "sourceLength": 71,
+      "sourceSha256": "e00f848b191391590940bc354ada1b21653a5330dbf5f21ed702c11572d14282",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1397/p3",
+          "fieldName": "rail",
+          "target": "Sunset:n192",
+          "targetNodeId": 192,
+          "offset": 261356
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd2:n67",
+      "level": "SunsetEnd2",
+      "nodeId": 67,
+      "name": "BstNode_656801859",
+      "className": "BirdFlock",
+      "classIndex": 19,
+      "sourceOffset": 35325,
+      "sourceLength": 70,
+      "sourceSha256": "501ec28a66fd6640247e15371e9db52176c5fd658f14e14012f0141d8f4e678a",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n67/p3",
+          "fieldName": "rail",
+          "target": "SunsetEnd2:n0",
+          "targetNodeId": 0,
+          "offset": 35356
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd2:n255",
+      "level": "SunsetEnd2",
+      "nodeId": 255,
+      "name": "BstNode_656801868",
+      "className": "BirdFlock",
+      "classIndex": 19,
+      "sourceOffset": 74703,
+      "sourceLength": 70,
+      "sourceSha256": "fa39180175781f4d1b86e5c5282108c6246360176813ceb2c189df6dbaebe18d",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n255/p3",
+          "fieldName": "rail",
+          "target": "SunsetEnd2:n822",
+          "targetNodeId": 822,
+          "offset": 74734
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd2:n790",
+      "level": "SunsetEnd2",
+      "nodeId": 790,
+      "name": "BstNode_2446917641",
+      "className": "BirdFlock",
+      "classIndex": 19,
+      "sourceOffset": 191290,
+      "sourceLength": 71,
+      "sourceSha256": "14dd734182f8d6eca7be15c7db1e2dff1f265fd1116418422085d4c82dd83faf",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n790/p3",
+          "fieldName": "rail",
+          "target": "SunsetEnd2:n848",
+          "targetNodeId": 848,
+          "offset": 191322
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd2:n839",
+      "level": "SunsetEnd2",
+      "nodeId": 839,
+      "name": "BstNode_2446917651",
+      "className": "BirdFlock",
+      "classIndex": 19,
+      "sourceOffset": 200751,
+      "sourceLength": 71,
+      "sourceSha256": "e9df936bfec5ebb4a20b3e9f6dae0da845a8fa65c940952205fe7e505cc57833",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n839/p3",
+          "fieldName": "rail",
+          "target": "SunsetEnd2:n818",
+          "targetNodeId": 818,
+          "offset": 200783
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "Dawn",
+      "path": "Levels/Dawn/Objects.level.bin",
+      "sha256": "16e26aafc7f9d120a548bf5d8bec04fbc18146bc8db531ef75144889b1ff197a",
+      "bytes": 504637,
+      "nodes": 3798,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dawn.json",
+      "markdown": "Objects对象清单/Dawn.md"
+    },
+    {
+      "level": "DayEnd",
+      "path": "Levels/DayEnd/Objects.level.bin",
+      "sha256": "9b5c568cefa987e504a10236c5b61e5de4b748d965d09e42db3602e4e52cc904",
+      "bytes": 268140,
+      "nodes": 1459,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DayEnd.json",
+      "markdown": "Objects对象清单/DayEnd.md"
+    },
+    {
+      "level": "Dusk",
+      "path": "Levels/Dusk/Objects.level.bin",
+      "sha256": "9222b248f17fb4122cd4ad9650543ab86aab8b077b6965248c70ac2341bf2d5d",
+      "bytes": 242331,
+      "nodes": 1288,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dusk.json",
+      "markdown": "Objects对象清单/Dusk.md"
+    },
+    {
+      "level": "HubReveal",
+      "path": "Levels/HubReveal/Objects.level.bin",
+      "sha256": "4b32f12bbe4b246cde9ca1e4ba0982000ff108359865bb4340aba640e609861b",
+      "bytes": 289438,
+      "nodes": 1829,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/HubReveal.json",
+      "markdown": "Objects对象清单/HubReveal.md"
+    },
+    {
+      "level": "Prairie_ButterflyFields",
+      "path": "Levels/Prairie_ButterflyFields/Objects.level.bin",
+      "sha256": "29d8d61a082f3e3414ecfbb501b5f65499deb37ad4a1078ce2e9b88ac0d1e441",
+      "bytes": 297606,
+      "nodes": 1513,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_ButterflyFields.json",
+      "markdown": "Objects对象清单/Prairie_ButterflyFields.md"
+    },
+    {
+      "level": "Prairie_NestAndKeeper",
+      "path": "Levels/Prairie_NestAndKeeper/Objects.level.bin",
+      "sha256": "5eabe877e07c84e5f9270035aaab73fa20144c87f6e9136e5285dbaff3f85b7a",
+      "bytes": 239403,
+      "nodes": 1077,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_NestAndKeeper.json",
+      "markdown": "Objects对象清单/Prairie_NestAndKeeper.md"
+    },
+    {
+      "level": "Prairie_Village",
+      "path": "Levels/Prairie_Village/Objects.level.bin",
+      "sha256": "4656296b54402016b59b894b4653fbdc71e106a21e0900294f73f2c7b7112385",
+      "bytes": 549989,
+      "nodes": 3724,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Village.json",
+      "markdown": "Objects对象清单/Prairie_Village.md"
+    },
+    {
+      "level": "Rain",
+      "path": "Levels/Rain/Objects.level.bin",
+      "sha256": "20093bccf3bb1ea0936cb993e66cef0187b40a5a411df3573eb28e4def4f75c6",
+      "bytes": 457732,
+      "nodes": 2079,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Rain.json",
+      "markdown": "Objects对象清单/Rain.md"
+    },
+    {
+      "level": "RainEnd",
+      "path": "Levels/RainEnd/Objects.level.bin",
+      "sha256": "247912ec955153e3df80c16a861eb872573502a285a17943518bdce448a8d5e3",
+      "bytes": 427926,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainEnd.json",
+      "markdown": "Objects对象清单/RainEnd.md"
+    },
+    {
+      "level": "RainForest",
+      "path": "Levels/RainForest/Objects.level.bin",
+      "sha256": "2e69b3314c70c61bd99435f4bb4418fba540f227c83670e1af3b5358c64c3b73",
+      "bytes": 271409,
+      "nodes": 1306,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainForest.json",
+      "markdown": "Objects对象清单/RainForest.md"
+    },
+    {
+      "level": "RainMid",
+      "path": "Levels/RainMid/Objects.level.bin",
+      "sha256": "139b219d9b71a2ab24418b1ec41f2ee8a2ebfdf4c5ea992c35348a758682ed23",
+      "bytes": 430825,
+      "nodes": 2457,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainMid.json",
+      "markdown": "Objects对象清单/RainMid.md"
+    },
+    {
+      "level": "Storm",
+      "path": "Levels/Storm/Objects.level.bin",
+      "sha256": "4be187f31f1ef86611831abeb45ed9c1deff5e925f3bae80a6be49af85fa52bd",
+      "bytes": 324849,
+      "nodes": 1954,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Storm.json",
+      "markdown": "Objects对象清单/Storm.md"
+    },
+    {
+      "level": "StormEnd",
+      "path": "Levels/StormEnd/Objects.level.bin",
+      "sha256": "a9c13b592198ee01ab2922a0c7901f4516ae172d56a22d9b7f806ff7464c9162",
+      "bytes": 224465,
+      "nodes": 1243,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/StormEnd.json",
+      "markdown": "Objects对象清单/StormEnd.md"
+    },
+    {
+      "level": "Sunset",
+      "path": "Levels/Sunset/Objects.level.bin",
+      "sha256": "8126f2db693502576075505797624e0b5e53dc064fe6af82e90f2261ca427f8a",
+      "bytes": 325410,
+      "nodes": 1899,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Sunset.json",
+      "markdown": "Objects对象清单/Sunset.md"
+    },
+    {
+      "level": "SunsetEnd2",
+      "path": "Levels/SunsetEnd2/Objects.level.bin",
+      "sha256": "f76249413f9412f3db6d726aacf7425d5da546f8a9b88b9614c8a33fdb87e711",
+      "bytes": 209340,
+      "nodes": 975,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SunsetEnd2.json",
+      "markdown": "Objects对象清单/SunsetEnd2.md"
+    }
+  ]
+}

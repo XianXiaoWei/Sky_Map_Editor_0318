@@ -1,0 +1,643 @@
+{
+  "className": "HasReachedLevel",
+  "functionGroup": "地图加载、出生与检查点",
+  "functionRole": "已到达地图条件事件",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "HasReachedLevel 的原默认值、继承初始化及 3 个序列化字段变体；原注册字段 2 项。"
+    },
+    {
+      "name": "已到达地图条件事件",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Clump（11 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "HasReachedLevel",
+    "category": "地图加载、出生与检查点",
+    "functionGroupId": "levels",
+    "functionRole": "已到达地图条件事件",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "HasReachedLevel 的原默认值、继承初始化及 3 个序列化字段变体；原注册字段 2 项。"
+      },
+      {
+        "name": "已到达地图条件事件",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Clump（11 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Clump",
+        "references": 11
+      }
+    ],
+    "rttiWorkingGroup": "场景与路径基础",
+    "role": "对象实例类型",
+    "instances": 11,
+    "nestedInstances": 0,
+    "referenceFields": 11,
+    "declaredLevels": 2,
+    "levels": [
+      {
+        "level": "CandleSpace",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SkyHub2",
+        "nodes": 9,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "events",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "levelName",
+        "type": 1,
+        "size": 0,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100c92bb0",
+    "nativeRegisteredFields": [
+      {
+        "name": "levelName",
+        "typeGetter": "__Z17GetMetaTypeByTypeINSt3__112basic_stringIcNS0_11char_traitsIcEE16StlPoolAllocatorIcEEEERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x1001f7a60",
+        "propertyAddress": "0x100c921d0"
+      },
+      {
+        "name": "events",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 80,
+        "registrationFunction": "0x1001f7a60",
+        "propertyAddress": "0x100c92220"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 2 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "CandleSpace:n70",
+      "level": "CandleSpace",
+      "nodeId": 70,
+      "name": "BstNode_3156082713",
+      "className": "HasReachedLevel",
+      "classIndex": 23,
+      "sourceOffset": 32071,
+      "sourceLength": 36,
+      "sourceSha256": "36fc23d6beb6ba4e5b25d2d570e6763fc69b8833f5b6415d8c1543c2d20762d6",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n70/p1",
+          "fieldName": "events",
+          "target": "CandleSpace:n475",
+          "targetNodeId": 475,
+          "offset": 32095
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CandleSpace:n316",
+      "level": "CandleSpace",
+      "nodeId": 316,
+      "name": "BstNode_1293287438",
+      "className": "HasReachedLevel",
+      "classIndex": 23,
+      "sourceOffset": 69758,
+      "sourceLength": 33,
+      "sourceSha256": "e2585dde15efb184a50dd86765dc48517f4968fb578833c8826bd3933e87a602",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n316/p1",
+          "fieldName": "events",
+          "target": "CandleSpace:n516",
+          "targetNodeId": 516,
+          "offset": 69782
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n102",
+      "level": "SkyHub2",
+      "nodeId": 102,
+      "name": "BstNode_2529558755",
+      "className": "HasReachedLevel",
+      "classIndex": 27,
+      "sourceOffset": 52590,
+      "sourceLength": 35,
+      "sourceSha256": "6b2bf216eb52bf38746344f07bcc730da20a0929cd440ff68f5a1d588feab175",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n102/p1",
+          "fieldName": "events",
+          "target": "SkyHub2:n2468",
+          "targetNodeId": 2468,
+          "offset": 52614
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n298",
+      "level": "SkyHub2",
+      "nodeId": 298,
+      "name": "BstNode_2446917882",
+      "className": "HasReachedLevel",
+      "classIndex": 27,
+      "sourceOffset": 89767,
+      "sourceLength": 34,
+      "sourceSha256": "d3fc7ab4457f0237bf5b9a4d7ca6bda6a7d16aeb5f71e1d45deb97ac85b236c7",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n298/p1",
+          "fieldName": "events",
+          "target": "SkyHub2:n2498",
+          "targetNodeId": 2498,
+          "offset": 89791
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n479",
+      "level": "SkyHub2",
+      "nodeId": 479,
+      "name": "BstNode_2529558804",
+      "className": "HasReachedLevel",
+      "classIndex": 27,
+      "sourceOffset": 124556,
+      "sourceLength": 34,
+      "sourceSha256": "b89092d23432e301c962e94159b47a4bc1e8014ee0593d8b4b57c2b2763f7478",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n479/p1",
+          "fieldName": "events",
+          "target": "SkyHub2:n2537",
+          "targetNodeId": 2537,
+          "offset": 124580
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n708",
+      "level": "SkyHub2",
+      "nodeId": 708,
+      "name": "BstNode_2446917741",
+      "className": "HasReachedLevel",
+      "classIndex": 27,
+      "sourceOffset": 163711,
+      "sourceLength": 43,
+      "sourceSha256": "30cce9bc34c8b27b88f55f05e143bfe46f11c48f7dd2463db923b037804af132",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n708/p1",
+          "fieldName": "events",
+          "target": "SkyHub2:n2559",
+          "targetNodeId": 2559,
+          "offset": 163735
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1125",
+      "level": "SkyHub2",
+      "nodeId": 1125,
+      "name": "BstNode_2529558803",
+      "className": "HasReachedLevel",
+      "classIndex": 27,
+      "sourceOffset": 238126,
+      "sourceLength": 33,
+      "sourceSha256": "864a32e71e799d0e4566ad87a946e11ebe919871b6604251f6ad6f8e1b4293f0",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1125/p1",
+          "fieldName": "events",
+          "target": "SkyHub2:n2638",
+          "targetNodeId": 2638,
+          "offset": 238150
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1565",
+      "level": "SkyHub2",
+      "nodeId": 1565,
+      "name": "BstNode_2529558744",
+      "className": "HasReachedLevel",
+      "classIndex": 27,
+      "sourceOffset": 302006,
+      "sourceLength": 33,
+      "sourceSha256": "ffa9c1f1e34486a4315919b6ed428e0a52e8d42374feaefbae265d324490e73f",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1565/p1",
+          "fieldName": "events",
+          "target": "SkyHub2:n2732",
+          "targetNodeId": 2732,
+          "offset": 302030
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1755",
+      "level": "SkyHub2",
+      "nodeId": 1755,
+      "name": "BstNode_2529558754",
+      "className": "HasReachedLevel",
+      "classIndex": 27,
+      "sourceOffset": 332310,
+      "sourceLength": 38,
+      "sourceSha256": "1351bbefd5698b6c418474df14ee927bf2f1db5247d9fbef6774b06886533fdf",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1755/p1",
+          "fieldName": "events",
+          "target": "SkyHub2:n1200",
+          "targetNodeId": 1200,
+          "offset": 332334
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1774",
+      "level": "SkyHub2",
+      "nodeId": 1774,
+      "name": "BstNode_2529558805",
+      "className": "HasReachedLevel",
+      "classIndex": 27,
+      "sourceOffset": 334948,
+      "sourceLength": 37,
+      "sourceSha256": "4d1d2bd957c8eff2222b51fc86c770abe9c3661160d4ad1304a4e49918dbb17e",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1774/p1",
+          "fieldName": "events",
+          "target": "SkyHub2:n2773",
+          "targetNodeId": 2773,
+          "offset": 334972
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1920",
+      "level": "SkyHub2",
+      "nodeId": 1920,
+      "name": "BstNode_2529558756",
+      "className": "HasReachedLevel",
+      "classIndex": 27,
+      "sourceOffset": 364632,
+      "sourceLength": 33,
+      "sourceSha256": "e9953b291dd6ae1308f9dbc850921e3f1b6a6821e734918f65f3eacf7a5ca113",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1920/p1",
+          "fieldName": "events",
+          "target": "SkyHub2:n2801",
+          "targetNodeId": 2801,
+          "offset": 364656
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "CandleSpace",
+      "path": "Levels/CandleSpace/Objects.level.bin",
+      "sha256": "db7140d2dd5ee9cd2fcdcbb61a898b9facf1683ff21fec83fcbef81b885f56db",
+      "bytes": 92607,
+      "nodes": 564,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/CandleSpace.json",
+      "markdown": "Objects对象清单/CandleSpace.md"
+    },
+    {
+      "level": "SkyHub2",
+      "path": "Levels/SkyHub2/Objects.level.bin",
+      "sha256": "8b467f9b349d9d4ce0d038528c96e44dff30063149bf5bbf90232a56bb9dd36f",
+      "bytes": 475656,
+      "nodes": 2886,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SkyHub2.json",
+      "markdown": "Objects对象清单/SkyHub2.md"
+    }
+  ]
+}

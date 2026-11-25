@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "routineCount": 6,
+  "cases": 123,
+  "publicMethodSequenceCases": 24,
+  "comparedBytes": 4030464,
+  "scope": "Six unmodified whole routines: AddToLoadList 0x1007c2230, AddToUnloadList 0x1007c2250, Inc/Dec/GetLoadCount 0x1007c1b40/50/60, LoadNext 0x1007c3d20. Includes prepend -> FIFO tail removal -> register -> status reset -> virtual load -> count decrement -> unregister -> separate +0x68 unload linkage, uint32 wrapping, async and synchronous branches, callback queue/status/heap/context mutations and assertion snapshots. Registration/unregistration internals and actual virtual loaders/async completion/game phases remain boundary dependencies.",
+  "completeOriginalGameRuntime": false,
+  "failures": []
+}

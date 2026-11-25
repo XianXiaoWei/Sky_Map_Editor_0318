@@ -1,0 +1,160 @@
+{
+  "level": "WorldEmpty",
+  "path": "Levels/WorldEmpty/Objects.level.bin",
+  "fileSha256": "408b45191fd71fc376d2de75a4c475d77cf08c3f1d8c13db3e9c1b7db088e94c",
+  "bytes": 429,
+  "nodes": 1,
+  "checkpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "scope": "此文件逐一列出全部顶层对象。实例进度只计实例自身的格式和引用验证；共享类实现另列，未当作该实例已运行。引用仅证明序列化依赖，不证明原事件或启用顺序。",
+  "classes": [
+    {
+      "id": 0,
+      "name": "LevelParameters",
+      "properties": [
+        {
+          "id": 0,
+          "name": "blurPasses",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 1,
+          "name": "worldName",
+          "type": 1,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 2,
+          "name": "gridSize",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 3,
+          "name": "isWorld",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 4,
+          "name": "previewGridResolution",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 5,
+          "name": "defaultCloudDensity",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 6,
+          "name": "bounceCount",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 7,
+          "name": "tapCount",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 8,
+          "name": "defaultLandDensity",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Clump",
+      "properties": [
+        {
+          "id": 9,
+          "name": "data",
+          "type": 3,
+          "size": 0,
+          "classIndex": 4294967295
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "key": "WorldEmpty:n0",
+      "level": "WorldEmpty",
+      "nodeId": 0,
+      "name": "BstNode_7",
+      "className": "LevelParameters",
+      "classIndex": 0,
+      "sourceOffset": 375,
+      "sourceLength": 54,
+      "sourceSha256": "9912d7afefd14ec968386ab051390d96c6aa28675df290d35c39f174b83237fa",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ]
+}

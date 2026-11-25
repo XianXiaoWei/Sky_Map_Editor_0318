@@ -1,0 +1,376 @@
+{
+  "passed": false,
+  "complete": true,
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "cases": 3350,
+  "multCases": 3034,
+  "splitCases": 268,
+  "eventStartCases": 48,
+  "splitMemberCalls": 1265679,
+  "comparedBytes": 1085552,
+  "failedBytes": 48,
+  "scope": "Initial comparison retained: unbound two-input NaN propagation is not target-hardware verified; 48 differing bytes under QEMU. The runtime now requires an explicit service for two NaN inputs.",
+  "corpus": {
+    "maps": 33,
+    "actualNodes": [
+      {
+        "level": "CandleSpace",
+        "node": 128,
+        "className": "FloatMult",
+        "references": [
+          88,
+          290,
+          110
+        ],
+        "inputBits": [
+          0,
+          1075922862,
+          0
+        ]
+      },
+      {
+        "level": "Dawn",
+        "node": 1221,
+        "className": "FloatMult",
+        "references": [
+          739,
+          813,
+          168
+        ],
+        "inputBits": [
+          0,
+          1075922862,
+          0
+        ]
+      },
+      {
+        "level": "DayHubCave",
+        "node": 720,
+        "className": "FloatSplit",
+        "references": [
+          312,
+          631
+        ],
+        "inputBits": [
+          0,
+          0
+        ]
+      },
+      {
+        "level": "DayHubCave",
+        "node": 834,
+        "className": "FloatMult",
+        "references": [
+          312,
+          943,
+          890
+        ],
+        "inputBits": [
+          0,
+          1065353216,
+          0
+        ]
+      },
+      {
+        "level": "DayHubCave",
+        "node": 905,
+        "className": "FloatMult",
+        "references": [
+          312,
+          13,
+          817
+        ],
+        "inputBits": [
+          0,
+          1090519040,
+          0
+        ]
+      },
+      {
+        "level": "Dusk",
+        "node": 1173,
+        "className": "FloatMult",
+        "references": [
+          569,
+          1148,
+          713
+        ],
+        "inputBits": [
+          0,
+          3212836864,
+          0
+        ]
+      },
+      {
+        "level": "Night",
+        "node": 2046,
+        "className": "FloatMult",
+        "references": [
+          711,
+          2166,
+          2081
+        ],
+        "inputBits": [
+          0,
+          1058306785,
+          0
+        ]
+      },
+      {
+        "level": "Night",
+        "node": 2085,
+        "className": "FloatSplit",
+        "references": [
+          711,
+          320
+        ],
+        "inputBits": [
+          0,
+          0
+        ]
+      },
+      {
+        "level": "Night",
+        "node": 3048,
+        "className": "FloatMult",
+        "references": [
+          711,
+          2141,
+          685
+        ],
+        "inputBits": [
+          0,
+          1090519040,
+          0
+        ]
+      },
+      {
+        "level": "NightEnd",
+        "node": 19,
+        "className": "FloatMult",
+        "references": [
+          304,
+          297,
+          188
+        ],
+        "inputBits": [
+          0,
+          1076057080,
+          0
+        ]
+      },
+      {
+        "level": "Prairie_Village",
+        "node": 442,
+        "className": "FloatMult",
+        "references": [
+          2441,
+          1851,
+          1148
+        ],
+        "inputBits": [
+          0,
+          3197737370,
+          0
+        ]
+      },
+      {
+        "level": "Prairie_Village",
+        "node": 1866,
+        "className": "FloatMult",
+        "references": [
+          446,
+          757,
+          787
+        ],
+        "inputBits": [
+          0,
+          1092616192,
+          0
+        ]
+      },
+      {
+        "level": "Prairie_Village",
+        "node": 1914,
+        "className": "FloatMult",
+        "references": [
+          1924,
+          1851,
+          1906
+        ],
+        "inputBits": [
+          0,
+          3197737370,
+          0
+        ]
+      },
+      {
+        "level": "Prairie_Village",
+        "node": 2621,
+        "className": "FloatMult",
+        "references": [
+          765,
+          168,
+          2780
+        ],
+        "inputBits": [
+          0,
+          1092616192,
+          0
+        ]
+      },
+      {
+        "level": "Sunset",
+        "node": 95,
+        "className": "FloatMult",
+        "references": [
+          1338,
+          1548,
+          370
+        ],
+        "inputBits": [
+          0,
+          3212836864,
+          0
+        ]
+      },
+      {
+        "level": "SunsetEnd2",
+        "node": 116,
+        "className": "FloatMult",
+        "references": [
+          71,
+          353,
+          251
+        ],
+        "inputBits": [
+          0,
+          1075922862,
+          0
+        ]
+      }
+    ]
+  },
+  "failures": [
+    {
+      "name": "mult-7fc12345-ffc23456-0",
+      "offset": 152,
+      "native": 86,
+      "actual": 69
+    },
+    {
+      "name": "mult-7fc12345-ffc23456-0",
+      "offset": 153,
+      "native": 52,
+      "actual": 35
+    },
+    {
+      "name": "mult-7fc12345-ffc23456-0",
+      "offset": 154,
+      "native": 194,
+      "actual": 193
+    },
+    {
+      "name": "mult-7fc12345-ffc23456-0",
+      "offset": 155,
+      "native": 255,
+      "actual": 127
+    },
+    {
+      "name": "mult-7fc12345-ffc23456-1",
+      "offset": 184,
+      "native": 86,
+      "actual": 69
+    },
+    {
+      "name": "mult-7fc12345-ffc23456-1",
+      "offset": 185,
+      "native": 52,
+      "actual": 35
+    },
+    {
+      "name": "mult-7fc12345-ffc23456-1",
+      "offset": 186,
+      "native": 194,
+      "actual": 193
+    },
+    {
+      "name": "mult-7fc12345-ffc23456-1",
+      "offset": 187,
+      "native": 255,
+      "actual": 127
+    },
+    {
+      "name": "mult-7fc12345-ffc23456-2",
+      "offset": 216,
+      "native": 86,
+      "actual": 69
+    },
+    {
+      "name": "mult-7fc12345-ffc23456-2",
+      "offset": 217,
+      "native": 52,
+      "actual": 35
+    },
+    {
+      "name": "mult-7fc12345-ffc23456-2",
+      "offset": 218,
+      "native": 194,
+      "actual": 193
+    },
+    {
+      "name": "mult-7fc12345-ffc23456-2",
+      "offset": 219,
+      "native": 255,
+      "actual": 127
+    },
+    {
+      "name": "mult-7f812345-ffc23456-0",
+      "offset": 152,
+      "native": 86,
+      "actual": 69
+    },
+    {
+      "name": "mult-7f812345-ffc23456-0",
+      "offset": 153,
+      "native": 52,
+      "actual": 35
+    },
+    {
+      "name": "mult-7f812345-ffc23456-0",
+      "offset": 154,
+      "native": 194,
+      "actual": 193
+    },
+    {
+      "name": "mult-7f812345-ffc23456-0",
+      "offset": 155,
+      "native": 255,
+      "actual": 127
+    },
+    {
+      "name": "mult-7f812345-ffc23456-1",
+      "offset": 184,
+      "native": 86,
+      "actual": 69
+    },
+    {
+      "name": "mult-7f812345-ffc23456-1",
+      "offset": 185,
+      "native": 52,
+      "actual": 35
+    },
+    {
+      "name": "mult-7f812345-ffc23456-1",
+      "offset": 186,
+      "native": 194,
+      "actual": 193
+    },
+    {
+      "name": "mult-7f812345-ffc23456-1",
+      "offset": 187,
+      "native": 255,
+      "actual": 127
+    }
+  ]
+}

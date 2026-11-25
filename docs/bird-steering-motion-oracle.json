@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "start": "0x1001a2260",
+  "end": "0x1001a2770",
+  "motion": {
+    "start": "0x1001a34c0",
+    "end": "0x1001a3980",
+    "codeSha256": "abccec0298363690869504c72f877a3bf82609586f7bab8869a73dbf9d556d7d"
+  },
+  "flightIntegration": {
+    "start": "0x1001a2f30",
+    "end": "0x1001a34c0",
+    "codeSha256": "c75c5c2b8e22d34b0c5d90296e683d9f736402f61e2a9117952cf29a6cac880f"
+  },
+  "acceleration": {
+    "start": "0x1001a0060",
+    "end": "0x1001a0450",
+    "codeSha256": "ad5a07968b6f49f1265c8b7448408be122157c8e8b3eae432c4c0754d008b42b"
+  },
+  "scratchScope": "The 112-byte private TypeScript motion/output scratch models original stack storage and is cleared before exporting caller arena bytes. Every captured motion byte supplied to downstream services is recorded and compared; original object memory, steering state and service trace bytes are not excluded.",
+  "cases": 180,
+  "comparedCases": 180,
+  "comparedBytes": 71476560,
+  "serviceCalls": 4356,
+  "scope": "Whole ordinary BirdV2Ai acceleration dispatcher, original Steering.Begin/End, flight integration, displacement/orientation caller, matrix multiplication and Model.SetTransform execute together inside BirdV2.Update. Concrete target/rail/guide/flocking force implementations, world collision/neighborhood, direction interpolation/bank filtering, math, action weights and Actor transform remain explicit services. Autonomous AI and real Model/animation/GPU ownership remain pending. Complete caller arena and ordered services compared, including consecutive frames and live callback changes. Original acosf/sincosf/powf inputs and outputs are recorded and replayed as explicit math services; no JavaScript/libm equivalence claim.",
+  "failures": []
+}

@@ -1,0 +1,4577 @@
+{
+  "updatedAtUTC": "2026-11-25T07:50:59.163081+00:00",
+  "scope": "33 张地图的 283 个声明类按现有逐类职责分组；实体、参数、事件分别计类。原 RTTI 生物补充范围使用显式审核名单，包含 AI、管理器和网络消息，不把模型数量或资源准备状态计为完成类。",
+  "sources": [
+    "docs/classes.json",
+    "docs/Objects.level.bin类进度.json",
+    "docs/Objects.level.bin逻辑实现列表.json",
+    "tools/objects-function-spec.json",
+    "docs/creature-construction.json",
+    "docs/object-item-construction.json",
+    "docs/objects-nature-audit.json",
+    "docs/bird-motion-oracle.json",
+    "docs/bird-motion-flight-oracle.json",
+    "docs/bird-steering-motion-oracle.json",
+    "docs/creature-lifecycle-oracle.json",
+    "docs/bird-force-oracle.json",
+    "docs/creature-force-oracle.json",
+    "docs/bird-rail-oracle.json",
+    "docs/bird-rail-chain-oracle.json",
+    "docs/bird-follow-oracle.json",
+    "docs/bird-follow-chain-oracle.json",
+    "docs/resource-animation-update-oracle.json",
+    "docs/fish-group-animation-update-oracle.json",
+    "docs/dark-creature-spotlight-oracle.json",
+    "docs/move-object-along-rail-control-oracle.json",
+    "docs/vector-safe-slerp-oracle.json"
+  ],
+  "summary": {
+    "rttiTypes": 1063,
+    "declaredClasses": 283,
+    "classesWithObjects": 280,
+    "objects": 49824,
+    "behaviorAccepted": 0,
+    "statusCounts": {
+      "待实现": 201,
+      "部分实现": 75,
+      "实现中": 4,
+      "仅声明待核实": 3
+    },
+    "nativeCreatureFamilyTypes": 52,
+    "mapDeclaredCreatureFamilyTypes": 18,
+    "undeclaredCreatureFamilyTypes": 34,
+    "recoveredCreatureParentConstructors": 31
+  },
+  "groups": [
+    {
+      "id": "scene",
+      "name": "场景基础与对象变换",
+      "classCount": 9,
+      "objectCount": 16792,
+      "statusCounts": {
+        "部分实现": 4,
+        "待实现": 5
+      },
+      "classes": [
+        {
+          "name": "Clump",
+          "role": "对象引用容器",
+          "instances": 9627,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/environment-regions.ts",
+            "src/core/tgcl-field-runtime.ts",
+            "src/core/native-string-runtime.ts",
+            "src/core/clump-runtime.ts",
+            "src/core/object-enabled-runtime.ts",
+            "src/core/logic-event-runtime.ts",
+            "src/core/object-resume-runtime.ts",
+            "src/core/object-playback-plan.ts",
+            "src/core/transform-object-preview.ts"
+          ]
+        },
+        {
+          "name": "MakeFloaty",
+          "role": "对象浮动、旋转与错峰动画",
+          "instances": 10,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "Marker",
+          "role": "位置、旋转、缩放与启用的空间标记",
+          "instances": 6538,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/environment-regions.ts",
+            "src/core/tgcl-field-runtime.ts",
+            "src/core/native-string-runtime.ts",
+            "src/core/marker-runtime.ts",
+            "src/core/object-enabled-runtime.ts",
+            "src/core/marker-transform-runtime.ts",
+            "src/core/object-transform-runtime.ts",
+            "src/core/object-playback-plan.ts",
+            "src/core/transform-object-preview.ts"
+          ]
+        },
+        {
+          "name": "Parent",
+          "role": "对象父子跟随与关节挂接",
+          "instances": 270,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/scene-foundation-runtime.ts",
+            "src/core/parent-barn-runtime.ts"
+          ]
+        },
+        {
+          "name": "RiseWhenStoodOn",
+          "role": "站立交互引发网格升起",
+          "instances": 4,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "RotateObject",
+          "role": "对象旋转范围与速度控制",
+          "instances": 8,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "StrobeObject",
+          "role": "对象闪烁、时长与结束状态",
+          "instances": 12,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "TransformObject",
+          "role": "对象变换目标、过渡与完成事件",
+          "instances": 317,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/transform-object-runtime.ts",
+            "src/core/object-transform-runtime.ts",
+            "src/core/event-barn-runtime.ts",
+            "src/core/event-start-runtime.ts",
+            "src/core/transform-object-preview.ts",
+            "src/core/object-playback-plan.ts"
+          ]
+        },
+        {
+          "name": "Tweener",
+          "role": "属性与变换补间控制",
+          "instances": 6,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        }
+      ]
+    },
+    {
+      "id": "paths",
+      "name": "轨道、导航与引导",
+      "classCount": 8,
+      "objectCount": 719,
+      "statusCounts": {
+        "待实现": 6,
+        "部分实现": 2
+      },
+      "classes": [
+        {
+          "name": "AddPoi",
+          "role": "标记定义的关注点与权重",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "AttachBeacon",
+          "role": "空间信标、颜色与强度过渡",
+          "instances": 14,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "AttachGuideRail",
+          "role": "附加轨道引导与运动限制",
+          "instances": 20,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "Boundary",
+          "role": "轨道定义的场景边界",
+          "instances": 34,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "MoveObjectAlongRail",
+          "role": "对象沿轨道运动",
+          "instances": 232,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/move-object-along-rail-runtime.ts",
+            "src/core/scene-event-construction.ts",
+            "src/core/environment-object-state.ts",
+            "src/core/environment-event-owner.ts",
+            "src/core/move-object-along-rail-update-runtime.ts",
+            "src/core/vector-safe-slerp-runtime.ts"
+          ]
+        },
+        {
+          "name": "Rail",
+          "role": "轨道曲线、循环与更新",
+          "instances": 402,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/rail.ts",
+            "src/core/rail-arc.ts",
+            "src/core/rail-level.ts",
+            "src/core/marker-transform-runtime.ts"
+          ]
+        },
+        {
+          "name": "TrackAvatarOnRail",
+          "role": "按玩家位置跟踪轨道对象",
+          "instances": 7,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "Waypoint",
+          "role": "导航点与范围",
+          "instances": 9,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        }
+      ]
+    },
+    {
+      "id": "levels",
+      "name": "地图加载、出生与检查点",
+      "classCount": 14,
+      "objectCount": 403,
+      "statusCounts": {
+        "部分实现": 2,
+        "待实现": 12
+      },
+      "classes": [
+        {
+          "name": "AvatarSetPos",
+          "role": "玩家定位、相对标记与出生入口",
+          "instances": 59,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/avatar-set-pos.ts",
+            "src/core/avatar-preview.ts",
+            "src/core/avatar-camera.ts",
+            "src/renderer/avatar-camera-controller.ts",
+            "src/main/avatar-preview.ts",
+            "src/renderer/avatar-preview-controller.ts",
+            "src/core/avatar-physical-state.ts",
+            "src/core/marker-transform-runtime.ts"
+          ]
+        },
+        {
+          "name": "ChangeLevelWithFade",
+          "role": "带淡入淡出的地图切换",
+          "instances": 28,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "Checkpoint",
+          "role": "检查点记录与恢复区域",
+          "instances": 126,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "CheckpointRestore",
+          "role": "恢复检查点与重载控制",
+          "instances": 24,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "CheckpointState",
+          "role": "恢复时启用的对象集合",
+          "instances": 17,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "HasReachedLevel",
+          "role": "已到达地图条件事件",
+          "instances": 11,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "IsLatestCheckpoint",
+          "role": "检查最新检查点与事件",
+          "instances": 8,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "LevelLink",
+          "role": "地图连接、锚点与加载事件",
+          "instances": 64,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "LevelParameters",
+          "role": "地图与烘焙生成全局参数",
+          "instances": 33,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "OnLevelStart",
+          "role": "地图启动事件",
+          "instances": 21,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "OnLevelUp",
+          "role": "等级变化事件",
+          "instances": 5,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "ResumeEnable",
+          "role": "恢复时启用对象",
+          "instances": 5,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/logic-event-runtime.ts",
+            "src/core/object-resume-runtime.ts",
+            "src/core/object-enabled-runtime.ts",
+            "src/core/marker-runtime.ts",
+            "src/core/event-barn-runtime.ts"
+          ]
+        },
+        {
+          "name": "ResumeGate",
+          "role": "恢复流程门控",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "StreamLevelLink",
+          "role": "带轨道、门槛和场景引导的地图连接",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        }
+      ]
+    },
+    {
+      "id": "camera",
+      "name": "摄像机与镜头",
+      "classCount": 6,
+      "objectCount": 2140,
+      "statusCounts": {
+        "待实现": 3,
+        "部分实现": 3
+      },
+      "classes": [
+        {
+          "name": "CameraGuide",
+          "role": "空间摄像机引导与画面构图",
+          "instances": 395,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "CameraKeyFrame",
+          "role": "镜头关键帧、视场角与运动参数",
+          "instances": 987,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/scene-foundation-runtime.ts"
+          ]
+        },
+        {
+          "name": "PauseCameraConfig",
+          "role": "摄像机配置保持、淡入和暂停",
+          "instances": 6,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "SetCameraKeyFrameShake",
+          "role": "关键帧震动参数与过渡",
+          "instances": 10,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/camera-events.ts",
+            "src/core/camera-event-preview.ts",
+            "src/renderer/avatar-camera-controller.ts"
+          ]
+        },
+        {
+          "name": "SetCameraShake",
+          "role": "摄像机震动强度与时长",
+          "instances": 10,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/camera-events.ts",
+            "src/core/camera-event-preview.ts",
+            "src/renderer/avatar-camera-controller.ts",
+            "src/core/avatar-camera-shake.ts"
+          ]
+        },
+        {
+          "name": "SnapToCam",
+          "role": "摄像机切换、注视与过渡",
+          "instances": 732,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        }
+      ]
+    },
+    {
+      "id": "render",
+      "name": "模型、材质与绘制",
+      "classCount": 10,
+      "objectCount": 12038,
+      "statusCounts": {
+        "部分实现": 5,
+        "仅声明待核实": 2,
+        "待实现": 3
+      },
+      "classes": [
+        {
+          "name": "Beamo",
+          "role": "密度模型、LOD、材质与烘焙参数",
+          "instances": 6598,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/baked-lookup.ts",
+            "src/core/baking.ts",
+            "src/core/beamo-runtime.ts",
+            "src/core/beamo-baked-runtime.ts",
+            "src/core/beamo-bake-adapter.ts",
+            "src/core/model-material-index.ts",
+            "src/core/beamo-geometry-runtime.ts",
+            "src/core/beamo-geometry-adapter.ts",
+            "src/core/beamo-upload-barn-runtime.ts",
+            "src/core/beamo-spatial-runtime.ts",
+            "src/core/beamo-material-groups-runtime.ts",
+            "src/core/collision-geo-runtime.ts",
+            "src/core/beamo-render-runtime.ts",
+            "src/core/vertex-render-runtime.ts",
+            "src/core/render-pipeline-runtime.ts",
+            "src/core/model-render-state.ts",
+            "src/core/beamo-draw.ts",
+            "src/main/vulkan-baked.ts",
+            "src/renderer/vulkan-viewport.ts",
+            "src/core/render-list-runtime.ts",
+            "src/core/model-submit-runtime.ts"
+          ]
+        },
+        {
+          "name": "BeamoDecal",
+          "role": "模型贴花、距离与材质绑定",
+          "instances": 552,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/baking.ts",
+            "src/core/beamo-runtime.ts",
+            "src/core/beamo-baked-runtime.ts",
+            "src/core/beamo-bake-adapter.ts",
+            "src/core/model-material-index.ts",
+            "src/core/beamo-geometry-runtime.ts",
+            "src/core/beamo-geometry-adapter.ts",
+            "src/core/beamo-upload-barn-runtime.ts",
+            "src/core/beamo-spatial-runtime.ts",
+            "src/core/beamo-material-groups-runtime.ts",
+            "src/core/collision-geo-runtime.ts",
+            "src/core/beamo-render-runtime.ts",
+            "src/core/vertex-render-runtime.ts",
+            "src/core/render-pipeline-runtime.ts",
+            "src/core/model-render-state.ts",
+            "src/core/beamo-draw.ts",
+            "src/main/vulkan-baked.ts",
+            "src/renderer/vulkan-viewport.ts",
+            "src/core/render-list-runtime.ts",
+            "src/core/model-submit-runtime.ts"
+          ]
+        },
+        {
+          "name": "DropOcclusion",
+          "role": "遮挡对象、强度和淡入淡出",
+          "instances": 64,
+          "status": "部分实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "LevelMaterial",
+          "role": "原材质、shader、参数与物理材质绑定",
+          "instances": 309,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/level-material-runtime.ts",
+            "src/core/model-material-index.ts",
+            "src/core/materials.ts",
+            "src/core/tgcl-field-runtime.ts",
+            "src/core/native-string-runtime.ts",
+            "src/core/model-render-state.ts",
+            "src/core/beamo-draw.ts",
+            "src/main/vulkan-baked.ts",
+            "src/renderer/vulkan-viewport.ts"
+          ]
+        },
+        {
+          "name": "LevelMesh",
+          "role": "场景模型、资源、烘焙及几何生成参数",
+          "instances": 4133,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/resources.ts",
+            "src/core/baking.ts",
+            "src/core/baked-lookup.ts",
+            "src/core/tgcl-field-runtime.ts",
+            "src/core/native-string-runtime.ts",
+            "src/core/level-mesh-runtime.ts",
+            "src/core/object-transform-runtime.ts",
+            "src/core/transform-object-runtime.ts",
+            "src/core/model-baked-runtime.ts",
+            "src/core/resource-ref-runtime.ts",
+            "src/core/resource-manager-runtime.ts",
+            "src/core/model-barn-runtime.ts",
+            "src/core/transform-object-preview.ts",
+            "src/core/vertex-data-runtime.ts",
+            "src/core/object-playback-plan.ts",
+            "native/vulkan-renderer.cpp",
+            "native/shaders/diagnostic.frag",
+            "src/core/render-pipeline-runtime.ts",
+            "src/core/model-render-state.ts",
+            "src/core/beamo-draw.ts",
+            "src/main/vulkan-baked.ts",
+            "src/renderer/vulkan-viewport.ts",
+            "src/core/render-list-runtime.ts",
+            "src/core/vertex-render-runtime.ts",
+            "src/core/model-submit-runtime.ts",
+            "src/core/resource-model-animation-preview.ts",
+            "src/renderer/model-animation-preview.ts",
+            "src/core/on-region-runtime.ts",
+            "src/core/animation-sequence-registry.ts",
+            "src/core/environment-object-state.ts",
+            "src/core/environment-event-owner.ts"
+          ]
+        },
+        {
+          "name": "LevelMeshShaderParam",
+          "role": "模型 shader 参数声明",
+          "instances": 0,
+          "status": "仅声明待核实",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "LevelShaderParam",
+          "role": "shader 参数声明",
+          "instances": 0,
+          "status": "仅声明待核实",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/level-material-runtime.ts"
+          ]
+        },
+        {
+          "name": "SetAvatarRender",
+          "role": "本地与远端玩家绘制开关",
+          "instances": 13,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "SetMeshShaderParam",
+          "role": "模型 uniform 值与过渡",
+          "instances": 359,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "SetRender",
+          "role": "模型绘制开关",
+          "instances": 10,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        }
+      ]
+    },
+    {
+      "id": "terrain",
+      "name": "地形生成",
+      "classCount": 3,
+      "objectCount": 7599,
+      "statusCounts": {
+        "部分实现": 1,
+        "待实现": 2
+      },
+      "classes": [
+        {
+          "name": "TerrainBlob",
+          "role": "地形密度形状、噪声与侵蚀参数",
+          "instances": 7174,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/scene-foundation-runtime.ts"
+          ]
+        },
+        {
+          "name": "TerrainBlobGroup",
+          "role": "地形对象集合、网格生成与细分配置",
+          "instances": 109,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "TerrainBlobPrefab",
+          "role": "地形预制资源、变换与生成顺序",
+          "instances": 316,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        }
+      ]
+    },
+    {
+      "id": "environment",
+      "name": "云、风场与环境",
+      "classCount": 7,
+      "objectCount": 649,
+      "statusCounts": {
+        "部分实现": 7
+      },
+      "classes": [
+        {
+          "name": "CloudBob",
+          "role": "云对象运动及缓冲偏移",
+          "instances": 2,
+          "status": "部分实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "CloudCard",
+          "role": "云卡模型、烘焙与透明度",
+          "instances": 356,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/cloud-card-level.ts",
+            "src/core/cloud-card-dynamic.ts",
+            "src/core/cloud-card-visibility.ts"
+          ]
+        },
+        {
+          "name": "EnvNode",
+          "role": "空间环境参数与混合",
+          "instances": 134,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/environment-storage.ts",
+            "src/core/environment-runtime.ts",
+            "src/core/environment-level.ts",
+            "src/core/env-node-runtime.ts",
+            "src/core/ambience-sun-runtime.ts",
+            "src/main/viewport-environment.ts"
+          ]
+        },
+        {
+          "name": "SetEnvDefault",
+          "role": "设置默认环境参数",
+          "instances": 29,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/environment-storage.ts",
+            "src/core/environment-runtime.ts"
+          ]
+        },
+        {
+          "name": "SetEnvHull",
+          "role": "设置区域环境参数",
+          "instances": 4,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/environment-storage.ts",
+            "src/core/environment-regions.ts"
+          ]
+        },
+        {
+          "name": "SetWind",
+          "role": "全局或区域风场设置",
+          "instances": 4,
+          "status": "部分实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "Wind",
+          "role": "区域、轨道与附加标记的风场",
+          "instances": 120,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/environment-wind.ts",
+            "src/core/rail-level.ts"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "weather",
+      "name": "水、雾与天气",
+      "classCount": 6,
+      "objectCount": 161,
+      "statusCounts": {
+        "部分实现": 6
+      },
+      "classes": [
+        {
+          "name": "DarkstoneRainRegion",
+          "role": "区域降落物、收集物与能量消耗",
+          "instances": 11,
+          "status": "部分实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "FogVolumeSphere",
+          "role": "球形体积雾与可见性参数",
+          "instances": 78,
+          "status": "部分实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "RainCurtainParams",
+          "role": "雨幕标记、雨滴密度和尺寸",
+          "instances": 6,
+          "status": "部分实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "SetOceanRender",
+          "role": "海洋绘制开关",
+          "instances": 15,
+          "status": "部分实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "SetRainParams",
+          "role": "降雨强度、速度与过渡",
+          "instances": 13,
+          "status": "部分实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "Water",
+          "role": "水面空间与阴影配置",
+          "instances": 38,
+          "status": "部分实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        }
+      ]
+    },
+    {
+      "id": "floats",
+      "name": "数值变量与运算",
+      "classCount": 9,
+      "objectCount": 354,
+      "statusCounts": {
+        "待实现": 3,
+        "部分实现": 6
+      },
+      "classes": [
+        {
+          "name": "AddFloatToStatUsingName",
+          "role": "命名统计值增加浮点输入",
+          "instances": 21,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "Float",
+          "role": "浮点值对象",
+          "instances": 184,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/object-foundation-runtime.ts",
+            "src/core/value-barn-runtime.ts",
+            "src/core/object-numeric-runtime.ts",
+            "src/core/tgcl-field-runtime.ts",
+            "src/core/native-string-runtime.ts",
+            "src/core/object-field-load-runtime.ts",
+            "src/core/native-event-barn-runtime.ts",
+            "src/core/native-tree-runtime.ts",
+            "src/core/native-event-barn-view.ts",
+            "src/core/float-mult-event-runtime.ts",
+            "src/core/event-foundation-runtime.ts",
+            "src/core/event-barn-runtime.ts",
+            "src/core/numeric-event-runtime.ts",
+            "src/core/object-playback-plan.ts",
+            "src/core/transform-object-preview.ts"
+          ]
+        },
+        {
+          "name": "FloatAdd",
+          "role": "增量、限制范围及逐帧输出",
+          "instances": 31,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/object-numeric-runtime.ts",
+            "src/core/event-barn-runtime.ts",
+            "src/core/event-derived-drivers.ts",
+            "src/core/event-foundation-runtime.ts",
+            "src/core/native-event-barn-runtime.ts",
+            "src/core/native-event-barn-view.ts",
+            "src/core/object-field-load-runtime.ts",
+            "src/core/tgcl-field-runtime.ts",
+            "src/core/numeric-event-runtime.ts",
+            "src/core/object-playback-plan.ts",
+            "src/core/transform-object-preview.ts"
+          ]
+        },
+        {
+          "name": "FloatDistanceFade",
+          "role": "按位置或摄像机距离映射浮点值",
+          "instances": 2,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "FloatMult",
+          "role": "两项浮点输入相乘",
+          "instances": 14,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/object-numeric-runtime.ts",
+            "src/core/event-foundation-runtime.ts",
+            "src/core/native-event-barn-runtime.ts",
+            "src/core/object-field-load-runtime.ts",
+            "src/core/tgcl-field-runtime.ts",
+            "src/core/native-tree-runtime.ts",
+            "src/core/native-event-barn-view.ts",
+            "src/core/float-mult-event-runtime.ts",
+            "src/core/object-playback-plan.ts",
+            "src/core/transform-object-preview.ts"
+          ]
+        },
+        {
+          "name": "FloatSplit",
+          "role": "按连续区间映射输入到多个浮点输出",
+          "instances": 2,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/object-numeric-runtime.ts",
+            "src/core/float-condition-event-runtime.ts",
+            "src/core/tgcl-field-runtime.ts",
+            "src/core/event-barn-runtime.ts",
+            "src/core/object-playback-plan.ts",
+            "src/core/transform-object-preview.ts"
+          ]
+        },
+        {
+          "name": "OnFloat",
+          "role": "浮点条件组合与事件",
+          "instances": 94,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/float-condition-event-runtime.ts",
+            "src/core/clump-runtime.ts",
+            "src/core/object-enabled-runtime.ts",
+            "src/core/tgcl-field-runtime.ts",
+            "src/core/event-barn-runtime.ts",
+            "src/core/native-string-runtime.ts",
+            "src/core/object-playback-plan.ts",
+            "src/core/transform-object-preview.ts"
+          ]
+        },
+        {
+          "name": "SetDroppableCountFloat",
+          "role": "可掉落数量到浮点输出",
+          "instances": 2,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "SetFloat",
+          "role": "浮点目标值与时间过渡",
+          "instances": 4,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/set-float-runtime.ts",
+            "src/core/event-foundation-runtime.ts",
+            "src/core/native-event-barn-runtime.ts",
+            "src/core/native-event-barn-view.ts",
+            "src/core/object-field-load-runtime.ts",
+            "src/core/tgcl-field-runtime.ts",
+            "src/core/event-barn-runtime.ts",
+            "src/core/numeric-event-runtime.ts",
+            "src/core/object-playback-plan.ts",
+            "src/core/transform-object-preview.ts"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "flow",
+      "name": "事件调度与逻辑条件",
+      "classCount": 14,
+      "objectCount": 1962,
+      "statusCounts": {
+        "待实现": 9,
+        "部分实现": 4,
+        "仅声明待核实": 1
+      },
+      "classes": [
+        {
+          "name": "Branch",
+          "role": "事件分支与触发规则",
+          "instances": 3,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "DebugLogline",
+          "role": "日志文本事件",
+          "instances": 2,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "Delay",
+          "role": "时间、帧或节拍延迟事件",
+          "instances": 284,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/delay-event-runtime.ts",
+            "src/core/logic-event-runtime.ts",
+            "src/core/clump-runtime.ts",
+            "src/core/object-enabled-runtime.ts",
+            "src/core/tgcl-field-runtime.ts",
+            "src/core/event-barn-runtime.ts",
+            "src/core/object-playback-plan.ts",
+            "src/core/transform-object-preview.ts",
+            "src/core/on-region-runtime.ts",
+            "src/core/animation-sequence-registry.ts",
+            "src/core/environment-object-state.ts",
+            "src/core/environment-event-owner.ts"
+          ]
+        },
+        {
+          "name": "Enable",
+          "role": "对象集合启用、禁用及事件终止",
+          "instances": 1287,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/clump-runtime.ts",
+            "src/core/object-enabled-runtime.ts",
+            "src/core/logic-event-runtime.ts",
+            "src/core/object-resume-runtime.ts",
+            "src/core/object-playback-plan.ts",
+            "src/core/transform-object-preview.ts",
+            "src/core/on-region-runtime.ts",
+            "src/core/animation-sequence-registry.ts",
+            "src/core/environment-object-state.ts",
+            "src/core/environment-event-owner.ts"
+          ]
+        },
+        {
+          "name": "EventSeries",
+          "role": "事件序列状态与重置计时",
+          "instances": 11,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "FireTriggerAtRandom",
+          "role": "随机间隔及事件选择",
+          "instances": 9,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "IfEnabled",
+          "role": "对象集合启用状态条件",
+          "instances": 36,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/object-flow-runtime.ts",
+            "src/core/clump-runtime.ts",
+            "src/core/object-enabled-runtime.ts",
+            "src/core/logic-event-runtime.ts",
+            "src/core/object-playback-plan.ts",
+            "src/core/transform-object-preview.ts"
+          ]
+        },
+        {
+          "name": "IfTweakVar",
+          "role": "原调试变量条件分支",
+          "instances": 2,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "OnChangeAnd",
+          "role": "集合状态与 AND 条件变化",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "OnEventSeries",
+          "role": "序列数量与触发规则",
+          "instances": 4,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "ScheduledEvent",
+          "role": "命名计划事件与对象集合",
+          "instances": 28,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "SetGlobalEventParameter",
+          "role": "全局事件参数设置",
+          "instances": 2,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "Timeline",
+          "role": "时间轴对象和时间节点调度",
+          "instances": 293,
+          "status": "部分实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/tgcl-field-runtime.ts",
+            "src/core/native-string-runtime.ts"
+          ]
+        },
+        {
+          "name": "TimelineNode",
+          "role": "时间轴时间与目标对象声明",
+          "instances": 0,
+          "status": "仅声明待核实",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        }
+      ]
+    },
+    {
+      "id": "regions",
+      "name": "区域、喊叫与空间触发",
+      "classCount": 10,
+      "objectCount": 459,
+      "statusCounts": {
+        "部分实现": 2,
+        "待实现": 8
+      },
+      "classes": [
+        {
+          "name": "Critter_OnRegion",
+          "role": "生物集合进入区域条件",
+          "instances": 4,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/environment-object-state.ts",
+            "src/core/creature-construction-runtime.ts"
+          ]
+        },
+        {
+          "name": "IfInRegion",
+          "role": "区域内或区域外条件触发",
+          "instances": 30,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "IsOutfitInRegion",
+          "role": "区域内装扮与玩家条件",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "NotOnRegion",
+          "role": "区域外事件触发",
+          "instances": 16,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "OnAvatarEnergy",
+          "role": "玩家能量与区域条件事件",
+          "instances": 10,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "OnAvatarOnGround",
+          "role": "玩家落地、速度与区域条件事件",
+          "instances": 9,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "OnMoteCarry",
+          "role": "光点携带开始或结束事件",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "OnRegion",
+          "role": "进入离开、逐帧和人数条件区域触发",
+          "instances": 381,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/on-region-runtime.ts",
+            "src/core/animation-sequence-registry.ts",
+            "src/core/environment-object-state.ts",
+            "src/core/environment-event-owner.ts"
+          ]
+        },
+        {
+          "name": "OnShout",
+          "role": "指定标记区域内喊叫事件",
+          "instances": 6,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "OnTapCount",
+          "role": "区域内点击次数事件",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        }
+      ]
+    },
+    {
+      "id": "physics",
+      "name": "碰撞、受力与移动限制",
+      "classCount": 8,
+      "objectCount": 199,
+      "statusCounts": {
+        "待实现": 8
+      },
+      "classes": [
+        {
+          "name": "BoomCone",
+          "role": "锥形冲量、时长与继承速度",
+          "instances": 2,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "EnableCollision",
+          "role": "碰撞几何开关",
+          "instances": 4,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "ForwardAcceleration",
+          "role": "区域方向与地面空中加速度",
+          "instances": 3,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "KillBox",
+          "role": "空间死亡区域",
+          "instances": 146,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "MakeMagnetize",
+          "role": "标记区域吸附与反重力",
+          "instances": 21,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "PlatformingRegion",
+          "role": "平台运动区域",
+          "instances": 7,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "SetAvatarMinYSpeed",
+          "role": "玩家最小竖直速度与起飞",
+          "instances": 13,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "SetForce",
+          "role": "标记区域内受力与速度限制",
+          "instances": 3,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        }
+      ]
+    },
+    {
+      "id": "avatar",
+      "name": "玩家状态与输入",
+      "classCount": 23,
+      "objectCount": 238,
+      "statusCounts": {
+        "待实现": 23
+      },
+      "classes": [
+        {
+          "name": "AvatarAirtimeEffectFloat",
+          "role": "玩家滞空效果的浮点输出",
+          "instances": 3,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "AvatarBreakHandHold",
+          "role": "玩家牵手关系解除",
+          "instances": 2,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "AvatarChargeEnergy",
+          "role": "按速率与时长补充玩家能量",
+          "instances": 22,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "AvatarForceEnableFlightMode",
+          "role": "强制启用飞行模式",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "AvatarGrindToPos",
+          "role": "玩家轨道式定位与停止",
+          "instances": 46,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "AvatarHijack",
+          "role": "玩家控制接管与恢复",
+          "instances": 8,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "AvatarSetCandleState",
+          "role": "玩家蜡烛状态",
+          "instances": 4,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "AvatarSetEnergy",
+          "role": "玩家能量设定或增量",
+          "instances": 7,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "AvatarSetEnergyCapacity",
+          "role": "玩家能量容量与时间过渡",
+          "instances": 8,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "AvatarSetInnerGlow",
+          "role": "玩家内发光强度与过渡",
+          "instances": 6,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "AvatarSetStance",
+          "role": "站立、坐下、睡眠与朝向姿态",
+          "instances": 11,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "AvatarSetZeroG",
+          "role": "玩家零重力与能量状态",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "DisableCliffJump",
+          "role": "悬崖跳跃限制",
+          "instances": 2,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "DisableDpad",
+          "role": "方向输入限制",
+          "instances": 2,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "DisableJump",
+          "role": "跳跃限制",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "DisableRise",
+          "role": "上升动作限制",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "DisableStep",
+          "role": "步行动作限制",
+          "instances": 2,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "DoShout",
+          "role": "在指定位置发起喊叫效果",
+          "instances": 59,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "SetBlockUpdraftWind",
+          "role": "上升风场作用限制",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "SetFlightParams",
+          "role": "飞行巡航角与升力配置",
+          "instances": 4,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "SetGlide",
+          "role": "滑翔与飞行能力开关",
+          "instances": 7,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "SetInputState",
+          "role": "玩家与摄像机输入开关",
+          "instances": 38,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "StopGrinding",
+          "role": "停止轨道运动并关联动画",
+          "instances": 2,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        }
+      ]
+    },
+    {
+      "id": "animation",
+      "name": "动画、回放与装扮",
+      "classCount": 10,
+      "objectCount": 282,
+      "statusCounts": {
+        "待实现": 9,
+        "部分实现": 1
+      },
+      "classes": [
+        {
+          "name": "CloseOutfitShop",
+          "role": "关闭装扮商店",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "OnOutfitShopPurchase",
+          "role": "装扮购买事件",
+          "instances": 2,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "OnTapPlayAnim",
+          "role": "点击动作动画、延迟与进度事件",
+          "instances": 26,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "OnUnlockOutfit",
+          "role": "装扮解锁后启用对象",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "OutfitSelect",
+          "role": "衣柜、区域、商店与购买事件",
+          "instances": 12,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "PlayAnimation",
+          "role": "对象动画序列、速度与状态",
+          "instances": 187,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/play-animation-runtime.ts",
+            "src/core/resource-animation-control.ts",
+            "src/core/resource-animation-primary.ts",
+            "src/core/resource-animation-secondary.ts",
+            "src/core/resource-animation-additive.ts",
+            "src/core/resource-animation-lifecycle.ts",
+            "src/core/on-region-runtime.ts",
+            "src/core/animation-sequence-registry.ts",
+            "src/core/environment-object-state.ts",
+            "src/core/environment-event-owner.ts",
+            "src/core/resource-animation-update.ts",
+            "src/core/transform-node-runtime.ts",
+            "src/core/resource-animation-clock.ts"
+          ]
+        },
+        {
+          "name": "PlayAvatarAnimSeq",
+          "role": "本地或远端玩家动画序列",
+          "instances": 42,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "Replay",
+          "role": "玩家回放及 NPC 显示控制",
+          "instances": 6,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "Replay_HandHold",
+          "role": "回放玩家与 NPC 牵手",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "Replay_PlayAnim",
+          "role": "回放玩家动画",
+          "instances": 4,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        }
+      ]
+    },
+    {
+      "id": "npc",
+      "name": "NPC 行为与社交",
+      "classCount": 21,
+      "objectCount": 177,
+      "statusCounts": {
+        "待实现": 21
+      },
+      "classes": [
+        {
+          "name": "Npc",
+          "role": "NPC 模型、动画、装扮与玩家状态",
+          "instances": 67,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "Npc_BreakHandHold",
+          "role": "NPC 解除牵手",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "Npc_Chat",
+          "role": "NPC 聊天消息",
+          "instances": 2,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "Npc_DisableGiftGiving",
+          "role": "NPC 赠礼功能限制",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "Npc_DisableRelationshipMenu",
+          "role": "NPC 关系菜单限制",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "Npc_GetAttention",
+          "role": "NPC 请求关注",
+          "instances": 2,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "Npc_GiveCandle",
+          "role": "NPC 赠送蜡烛与接受事件",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "Npc_HandHold",
+          "role": "NPC 发起牵手",
+          "instances": 6,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "Npc_Hug",
+          "role": "NPC 发起拥抱",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "Npc_OnHandHold",
+          "role": "NPC 牵手事件",
+          "instances": 3,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "Npc_OnHug",
+          "role": "NPC 拥抱事件",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "Npc_OnNicknamed",
+          "role": "NPC 命名事件",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "Npc_OnRecieveGift",
+          "role": "NPC 收礼事件",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "Npc_PlayAnim",
+          "role": "NPC 动画播放与速度",
+          "instances": 54,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "Npc_Prompt",
+          "role": "NPC 交互图标与激活事件",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "Npc_Reflect",
+          "role": "NPC 状态向本地玩家的映射",
+          "instances": 2,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "Npc_SetScale",
+          "role": "NPC 身高、缩放与时间过渡",
+          "instances": 9,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "Npc_TakeOutFlame",
+          "role": "NPC 取出或收起火焰",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "Npc_Teleport",
+          "role": "NPC 定位",
+          "instances": 13,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "Npc_Turn",
+          "role": "NPC 朝向过渡与完成事件",
+          "instances": 7,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "Npc_WalkTo",
+          "role": "NPC 移动目标与完成事件",
+          "instances": 2,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        }
+      ]
+    },
+    {
+      "id": "creatures",
+      "name": "生物、群体与 AI",
+      "classCount": 17,
+      "objectCount": 549,
+      "statusCounts": {
+        "部分实现": 17
+      },
+      "classes": [
+        {
+          "name": "AwakenDarkCreatures",
+          "role": "唤醒暗生物集合",
+          "instances": 9,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/environment-object-state.ts",
+            "src/core/creature-construction-runtime.ts",
+            "src/core/creature-runtime.ts",
+            "src/core/nature-event-runtime.ts"
+          ]
+        },
+        {
+          "name": "BirdFlock",
+          "role": "鸟群发射、轨道、距离与预填充",
+          "instances": 58,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/environment-object-state.ts",
+            "src/core/creature-construction-runtime.ts",
+            "src/core/creature-runtime.ts",
+            "src/core/bird-flock-runtime.ts"
+          ]
+        },
+        {
+          "name": "BirdV2",
+          "role": "鸟类实例与 AI 参数",
+          "instances": 184,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/environment-object-state.ts",
+            "src/core/creature-construction-runtime.ts",
+            "src/core/creature-runtime.ts",
+            "src/core/bird-load-runtime.ts",
+            "src/core/creature-ai-initialize-runtime.ts",
+            "src/core/resource-model-animation-preview.ts",
+            "src/renderer/model-animation-preview.ts",
+            "src/core/bird-natural-animation-runtime.ts",
+            "src/core/bird-update-runtime.ts",
+            "src/core/bird-target-runtime.ts",
+            "src/core/bird-flight-runtime.ts",
+            "src/core/bird-acceleration-runtime.ts",
+            "src/core/bird-motion-runtime.ts",
+            "src/core/bird-force-runtime.ts",
+            "src/core/creature-force-runtime.ts",
+            "src/core/creature-flocking-runtime.ts",
+            "src/core/bird-rail-runtime.ts",
+            "src/core/creature-rail-runtime.ts",
+            "src/core/bird-follow-runtime.ts",
+            "src/core/creature-follow-runtime.ts"
+          ]
+        },
+        {
+          "name": "BirdV2AiParams",
+          "role": "鸟类追踪、群体、目标与到达参数",
+          "instances": 33,
+          "status": "部分实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/environment-object-state.ts",
+            "src/core/creature-construction-runtime.ts",
+            "src/core/creature-runtime.ts"
+          ]
+        },
+        {
+          "name": "BirdV2Params",
+          "role": "鸟类运动、引导与效果参数",
+          "instances": 46,
+          "status": "部分实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/environment-object-state.ts",
+            "src/core/creature-construction-runtime.ts",
+            "src/core/creature-runtime.ts"
+          ]
+        },
+        {
+          "name": "BirdV2ParamSwap",
+          "role": "替换鸟类实例参数",
+          "instances": 15,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/environment-object-state.ts",
+            "src/core/creature-construction-runtime.ts",
+            "src/core/creature-runtime.ts",
+            "src/core/nature-event-runtime.ts"
+          ]
+        },
+        {
+          "name": "Buddy",
+          "role": "伙伴实例",
+          "instances": 1,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/environment-object-state.ts",
+            "src/core/creature-construction-runtime.ts",
+            "src/core/buddy-runtime.ts"
+          ]
+        },
+        {
+          "name": "BuddyParams",
+          "role": "伙伴发现、休息与动画状态参数",
+          "instances": 1,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/environment-object-state.ts",
+            "src/core/creature-construction-runtime.ts",
+            "src/core/buddy-runtime.ts"
+          ]
+        },
+        {
+          "name": "Crab",
+          "role": "螃蟹实例",
+          "instances": 140,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/environment-object-state.ts",
+            "src/core/creature-construction-runtime.ts",
+            "src/core/creature-runtime.ts",
+            "src/core/crab-load-runtime.ts",
+            "src/core/creature-ai-initialize-runtime.ts",
+            "src/core/resource-model-animation-preview.ts",
+            "src/renderer/model-animation-preview.ts",
+            "src/core/creature-steering-runtime.ts",
+            "src/core/crab-behavior-runtime.ts",
+            "src/core/creature-motion-state-runtime.ts",
+            "src/core/creature-flocking-runtime.ts",
+            "src/core/crab-state-runtime.ts",
+            "src/core/crab-ai-update-runtime.ts",
+            "src/core/crab-barn-runtime.ts",
+            "src/core/crab-network-runtime.ts",
+            "src/core/binary-stream-runtime.ts",
+            "src/core/crab-codec-runtime.ts"
+          ]
+        },
+        {
+          "name": "CrabParams",
+          "role": "螃蟹追逐、逃跑与状态参数",
+          "instances": 7,
+          "status": "部分实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/environment-object-state.ts",
+            "src/core/creature-construction-runtime.ts",
+            "src/core/creature-runtime.ts"
+          ]
+        },
+        {
+          "name": "Critter_Shout",
+          "role": "生物集合喊叫音效与视觉",
+          "instances": 15,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/environment-object-state.ts",
+            "src/core/creature-construction-runtime.ts",
+            "src/core/nature-event-runtime.ts",
+            "src/core/environment-event-owner.ts"
+          ]
+        },
+        {
+          "name": "DarkCreature",
+          "role": "暗生物实例",
+          "instances": 13,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/environment-object-state.ts",
+            "src/core/creature-construction-runtime.ts",
+            "src/core/creature-runtime.ts",
+            "src/core/dark-creature-rail-runtime.ts",
+            "src/core/dark-creature-load-runtime.ts",
+            "src/core/dark-creature-state-runtime.ts",
+            "src/core/creature-motion-runtime.ts",
+            "src/core/dark-creature-detect-runtime.ts",
+            "src/core/dark-creature-motion-runtime.ts",
+            "src/core/dark-creature-appear-runtime.ts",
+            "src/core/creature-motion-rail-runtime.ts",
+            "src/core/dark-creature-combat-runtime.ts",
+            "src/core/dark-creature-look-runtime.ts",
+            "src/core/dark-creature-spotlight-runtime.ts",
+            "src/core/dark-creature-visual-runtime.ts"
+          ]
+        },
+        {
+          "name": "DarkCreatureParams",
+          "role": "暗生物巡逻轨道与计时参数",
+          "instances": 13,
+          "status": "部分实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/environment-object-state.ts",
+            "src/core/creature-construction-runtime.ts",
+            "src/core/creature-runtime.ts"
+          ]
+        },
+        {
+          "name": "DetachFromBirdGuides",
+          "role": "解除鸟类引导",
+          "instances": 4,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/environment-object-state.ts",
+            "src/core/creature-construction-runtime.ts",
+            "src/core/creature-runtime.ts",
+            "src/core/bird-guide-runtime.ts",
+            "src/core/environment-event-owner.ts"
+          ]
+        },
+        {
+          "name": "ReleaseBirds",
+          "role": "释放鸟类集合",
+          "instances": 3,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/environment-object-state.ts",
+            "src/core/creature-construction-runtime.ts",
+            "src/core/creature-runtime.ts",
+            "src/core/bird-guide-runtime.ts",
+            "src/core/environment-event-owner.ts"
+          ]
+        },
+        {
+          "name": "SetBirdGuidesEnabled",
+          "role": "鸟类引导开关",
+          "instances": 4,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/environment-object-state.ts",
+            "src/core/creature-construction-runtime.ts",
+            "src/core/creature-runtime.ts",
+            "src/core/nature-event-runtime.ts"
+          ]
+        },
+        {
+          "name": "SetDarkCreaturesNetworked",
+          "role": "暗生物网络同步配置",
+          "instances": 3,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/environment-object-state.ts",
+            "src/core/creature-construction-runtime.ts",
+            "src/core/creature-runtime.ts",
+            "src/core/nature-event-runtime.ts"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "collectibles",
+      "name": "收集物、蜡烛与解锁",
+      "classCount": 20,
+      "objectCount": 1747,
+      "statusCounts": {
+        "待实现": 16,
+        "部分实现": 4
+      },
+      "classes": [
+        {
+          "name": "AccountAddCurrency",
+          "role": "账户货币增加与反馈",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "CandleGate",
+          "role": "蜡烛放置与门控事件",
+          "instances": 23,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "CandleObject",
+          "role": "蜡烛实例、寿命、点燃与蜡量",
+          "instances": 1077,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/environment-object-state.ts",
+            "src/core/object-item-construction-runtime.ts",
+            "src/core/object-effects-runtime.ts",
+            "src/core/candle-runtime.ts",
+            "src/core/candle-render-runtime.ts",
+            "src/core/flame-motion-light-runtime.ts",
+            "src/core/flame-sprite-runtime.ts",
+            "src/main/viewport-candle-effects.ts",
+            "src/main/vulkan-viewport-cloud.ts"
+          ]
+        },
+        {
+          "name": "CollectCollectible",
+          "role": "触发收集指定收集物",
+          "instances": 6,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "Collectible",
+          "role": "收集物类型、名称与空间",
+          "instances": 53,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "CollectibleDisplay",
+          "role": "按地图收集状态显示对象",
+          "instances": 9,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "DropUnlock",
+          "role": "命名掉落解锁",
+          "instances": 6,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "Flame",
+          "role": "火焰实例、点燃、按钮与熄灭",
+          "instances": 290,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/environment-object-state.ts",
+            "src/core/object-item-construction-runtime.ts",
+            "src/core/flame-runtime.ts",
+            "src/core/candle-runtime.ts",
+            "src/core/candle-render-runtime.ts",
+            "src/core/flame-motion-light-runtime.ts",
+            "src/core/flame-sprite-runtime.ts",
+            "src/main/viewport-candle-effects.ts",
+            "src/main/vulkan-viewport-cloud.ts"
+          ]
+        },
+        {
+          "name": "LockAllCollectible",
+          "role": "锁定收集物状态",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "OnCollected",
+          "role": "收集与使用状态条件事件",
+          "instances": 7,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "OnFlame",
+          "role": "火焰集合、消耗、点燃与熄灭事件",
+          "instances": 154,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/environment-object-state.ts",
+            "src/core/object-item-construction-runtime.ts",
+            "src/core/nature-event-runtime.ts"
+          ]
+        },
+        {
+          "name": "OnUnlocked",
+          "role": "解锁、未确认与未解锁事件",
+          "instances": 37,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "Pickup",
+          "role": "拾取物、货币与拾取反馈",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "RedeemReward",
+          "role": "奖励兑换结果事件",
+          "instances": 4,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "ReserveCurrency",
+          "role": "预留指定货币数量",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "ResetAllStormKeyProgress",
+          "role": "风暴钥匙进度重置",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "SetFlame",
+          "role": "火焰集合点燃状态与计时",
+          "instances": 43,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/environment-object-state.ts",
+            "src/core/object-item-construction-runtime.ts",
+            "src/core/nature-event-runtime.ts"
+          ]
+        },
+        {
+          "name": "Star",
+          "role": "星体收集、解锁与能量容量",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "StormKeyUnlock",
+          "role": "风暴钥匙解锁结果",
+          "instances": 5,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "Unlock",
+          "role": "命名解锁与确认事件",
+          "instances": 27,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        }
+      ]
+    },
+    {
+      "id": "fragments",
+      "name": "光点、碎片与灵魂",
+      "classCount": 10,
+      "objectCount": 431,
+      "statusCounts": {
+        "实现中": 3,
+        "待实现": 6,
+        "部分实现": 1
+      },
+      "classes": [
+        {
+          "name": "Mote",
+          "role": "光点实例与初始状态",
+          "instances": 50,
+          "status": "实现中",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "MoteParams",
+          "role": "光点运动、携带、死亡与轨道参数",
+          "instances": 117,
+          "status": "实现中",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "SoulDeposit",
+          "role": "灵魂提交类型、摄像机与事件",
+          "instances": 9,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "SoulTrap",
+          "role": "灵魂捕获物、几何与销毁事件",
+          "instances": 49,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/darkstone-runtime.ts",
+            "src/core/darkstone-initialize-runtime.ts",
+            "src/core/darkstone-hierarchy-runtime.ts",
+            "src/core/darkstone-material.ts",
+            "src/core/viewport-ignition.ts",
+            "src/renderer/ignition-controller.ts"
+          ]
+        },
+        {
+          "name": "SpawnMotes",
+          "role": "发射光点数量、速度与时长",
+          "instances": 76,
+          "status": "实现中",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "SpinMotes",
+          "role": "区域光点旋转、捕获与死亡",
+          "instances": 4,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "StarFragment",
+          "role": "星体碎片实例与收集事件",
+          "instances": 86,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "StarFragmentParams",
+          "role": "碎片飞行、跟随、携带与人数条件",
+          "instances": 17,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "StarFragmentsConverge",
+          "role": "碎片汇聚、传送与完成事件",
+          "instances": 9,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "SwapMoteParams",
+          "role": "光点参数在区域与阶段间切换",
+          "instances": 14,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        }
+      ]
+    },
+    {
+      "id": "quests",
+      "name": "任务、先祖与场景机制",
+      "classCount": 16,
+      "objectCount": 213,
+      "statusCounts": {
+        "待实现": 16
+      },
+      "classes": [
+        {
+          "name": "AchievementShrine",
+          "role": "成就机关、奖励与相机反馈",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "AncestorEngine",
+          "role": "充能机关、区域与激活计时",
+          "instances": 51,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "AncientSpirit",
+          "role": "先祖交互、动画、收集与剧情",
+          "instances": 42,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "CarryAncestorQuestPrefab",
+          "role": "先祖携带任务预制体",
+          "instances": 10,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "CarryCreatureQuestPrefab",
+          "role": "生物携带任务预制体",
+          "instances": 3,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "ClockBell",
+          "role": "钟与网格控制",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "ClockTower",
+          "role": "钟塔与钟组控制",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "DailyQuestsGiver",
+          "role": "每日任务 NPC 与区域",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "DeathMarch",
+          "role": "剧情区域、时间轴与场景对象调度",
+          "instances": 2,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "FragmentCollectActivity",
+          "role": "碎片数量与收集活动",
+          "instances": 15,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "MeditationArea",
+          "role": "冥想区域、目标、相机与确认",
+          "instances": 45,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "SpiritSoulsDisplayLord",
+          "role": "灵魂进度、标记与显示事件",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "Turret",
+          "role": "机关眼部、光束与转动参数",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "WorldQuest",
+          "role": "世界任务、活动、加入与奖励状态",
+          "instances": 15,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "WorldQuestTable",
+          "role": "任务桌、菜单与地图连接",
+          "instances": 23,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "WorldQuestWorldAreaGateEffect",
+          "role": "世界任务区域门效果",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        }
+      ]
+    },
+    {
+      "id": "races",
+      "name": "竞赛与计分",
+      "classCount": 6,
+      "objectCount": 7,
+      "statusCounts": {
+        "待实现": 6
+      },
+      "classes": [
+        {
+          "name": "AncestorRace",
+          "role": "先祖竞赛、队伍区域与目标",
+          "instances": 2,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "AncestorRaceGoal",
+          "role": "竞赛终点、队伍得分与完成事件",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "DistributeRaceCollectibles",
+          "role": "队伍竞赛收集物分配",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "DistributeSpiritCollectibles",
+          "role": "灵魂收集物分配与完成事件",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "ExitRace",
+          "role": "退出竞赛",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "ScoreRaceCollectibles",
+          "role": "竞赛收集物计分",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        }
+      ]
+    },
+    {
+      "id": "effects",
+      "name": "粒子、灯光与场景效果",
+      "classCount": 10,
+      "objectCount": 1532,
+      "statusCounts": {
+        "部分实现": 9,
+        "实现中": 1
+      },
+      "classes": [
+        {
+          "name": "Blaze",
+          "role": "燃烧对象、网格和灰烬参数",
+          "instances": 17,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/blaze-runtime.ts",
+            "src/core/blaze-load-runtime.ts",
+            "src/core/environment-object-state.ts"
+          ]
+        },
+        {
+          "name": "Emitter",
+          "role": "粒子发射、附着、吸引与受力",
+          "instances": 351,
+          "status": "实现中",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "FireWorkShow",
+          "role": "烟花源标记与演出",
+          "instances": 6,
+          "status": "部分实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "FlowerPatch",
+          "role": "花草密度、尺寸、噪声与材质",
+          "instances": 582,
+          "status": "部分实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "LensFlair",
+          "role": "镜头光效颜色、强度与样式",
+          "instances": 44,
+          "status": "部分实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "OnBlaze",
+          "role": "燃烧状态与激活事件",
+          "instances": 5,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/blaze-runtime.ts",
+            "src/core/environment-event-runtime.ts"
+          ]
+        },
+        {
+          "name": "OnBoomDestroy",
+          "role": "冲量破坏阈值、动画与网格反馈",
+          "instances": 1,
+          "status": "部分实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "PointLight",
+          "role": "点光源空间实例",
+          "instances": 521,
+          "status": "部分实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "SetEmitterFlowRail",
+          "role": "发射器沿轨道流向设置",
+          "instances": 2,
+          "status": "部分实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "StarFallShower",
+          "role": "流星发射、颜色、轨道与范围",
+          "instances": 3,
+          "status": "部分实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        }
+      ]
+    },
+    {
+      "id": "sound",
+      "name": "声音、音乐与混音",
+      "classCount": 11,
+      "objectCount": 752,
+      "statusCounts": {
+        "待实现": 10,
+        "部分实现": 1
+      },
+      "classes": [
+        {
+          "name": "FadeSound",
+          "role": "声音集合音量过渡与停止",
+          "instances": 10,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "OnMusicOutro",
+          "role": "音乐尾段事件",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "PlayMusic",
+          "role": "音乐切换、音量与淡入淡出",
+          "instances": 92,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "PlaySound2D",
+          "role": "二维声音播放",
+          "instances": 109,
+          "status": "部分实现",
+          "coreSubchainVerified": true,
+          "runtimeComplete": false,
+          "implementation": [
+            "src/core/sound-event-runtime.ts",
+            "src/core/event-barn-runtime.ts",
+            "src/core/event-derived-drivers.ts"
+          ]
+        },
+        {
+          "name": "PlaySound3D",
+          "role": "空间声音播放",
+          "instances": 27,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "ReverbRegion",
+          "role": "区域混响与参数过渡",
+          "instances": 33,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "SetMixChannelLowpassFreq",
+          "role": "混音通道低通频率过渡",
+          "instances": 23,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "SetMixChannelVolume",
+          "role": "混音通道音量过渡",
+          "instances": 23,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "SetMusicVolume",
+          "role": "音乐音量过渡",
+          "instances": 52,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "SetSoundParameter",
+          "role": "全局、音乐或发射器声音参数",
+          "instances": 11,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "SoundEmitter",
+          "role": "声音实例、距离、方向与自动播放",
+          "instances": 371,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        }
+      ]
+    },
+    {
+      "id": "ui",
+      "name": "按钮、文字与菜单",
+      "classCount": 12,
+      "objectCount": 228,
+      "statusCounts": {
+        "待实现": 12
+      },
+      "classes": [
+        {
+          "name": "DialogHint",
+          "role": "区域提示、文本、优先级与串联",
+          "instances": 102,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "DisplayText",
+          "role": "文字、颜色、位置与淡入淡出",
+          "instances": 30,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "DisplayTitleCard",
+          "role": "标题卡主副标题与显示规则",
+          "instances": 10,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "FriendDisplayLord",
+          "role": "好友位置、蜡烛与场景显示",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "InviteDisplayLord",
+          "role": "邀请状态及场景显示控制",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "InviteDisplayRig",
+          "role": "邀请空位、待确认与已确认视图",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "OnBubbleButton",
+          "role": "世界气泡按钮距离、图标与点击事件",
+          "instances": 4,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "OnButtonClick",
+          "role": "按钮点击事件",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "OnConfirmMenu",
+          "role": "确认菜单、图标与确认取消事件",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "OpenConstellationTable",
+          "role": "星座桌菜单与关闭事件",
+          "instances": 2,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "ShowHUDTimed",
+          "role": "HUD 纹理、图层、时长与过渡",
+          "instances": 73,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "UIInterestMask",
+          "role": "界面关注区域标记",
+          "instances": 2,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        }
+      ]
+    },
+    {
+      "id": "network",
+      "name": "网络、账户与社交流程",
+      "classCount": 11,
+      "objectCount": 86,
+      "statusCounts": {
+        "待实现": 11
+      },
+      "classes": [
+        {
+          "name": "BenchChat",
+          "role": "长椅座位与聊天频道",
+          "instances": 18,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "MatchHint",
+          "role": "匹配人数、距离与拆分规则",
+          "instances": 20,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "NetDisconnect",
+          "role": "网络断开事件",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "NetFlag",
+          "role": "网络标志声明，实际行为待恢复",
+          "instances": 34,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "NetSetMatchmakingDisabled",
+          "role": "网络匹配开关",
+          "instances": 6,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "OnAccountReady",
+          "role": "账户就绪、超时与回调",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "OnForgeGift",
+          "role": "赠礼条件后启用对象",
+          "instances": 2,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "OnGameReady",
+          "role": "游戏就绪事件",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "OnJoinPreviousGame",
+          "role": "重返上一游戏与失败事件",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "OnOfferGift",
+          "role": "赠礼发起事件",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "RefreshGiftMessages",
+          "role": "刷新赠礼消息",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        }
+      ]
+    },
+    {
+      "id": "tutorial",
+      "name": "教程、平台门控与统计",
+      "classCount": 12,
+      "objectCount": 107,
+      "statusCounts": {
+        "待实现": 12
+      },
+      "classes": [
+        {
+          "name": "AgeGate",
+          "role": "年龄验证与完成事件",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "FeatureFlag",
+          "role": "命名功能旗标与存在性分支",
+          "instances": 3,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "OnBetaMode",
+          "role": "测试版模式条件事件",
+          "instances": 2,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "OnDemoMode",
+          "role": "演示模式条件事件",
+          "instances": 10,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "OnLatestVersion",
+          "role": "最新版本条件事件",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "SendAnalyticsEvent",
+          "role": "命名统计事件",
+          "instances": 3,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "SetShopTableTutorial",
+          "role": "任务桌商店教程配置",
+          "instances": 2,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "SetTutorialMode",
+          "role": "教程状态设置",
+          "instances": 24,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "ShowMOTD",
+          "role": "公告显示与关闭事件",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "Survey",
+          "role": "问卷入口",
+          "instances": 34,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "TitleGate",
+          "role": "标题流程门控",
+          "instances": 1,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        },
+        {
+          "name": "TutorialNode",
+          "role": "教程步骤、目标、拖动与行走事件",
+          "instances": 25,
+          "status": "待实现",
+          "coreSubchainVerified": false,
+          "runtimeComplete": false,
+          "implementation": []
+        }
+      ]
+    }
+  ],
+  "overlappingPlantSubsets": [
+    {
+      "name": "燃烧对象与事件（用于进一步核对黑暗植物）",
+      "classes": [
+        "Blaze",
+        "OnBlaze"
+      ],
+      "note": "已计入 effects；黑暗植物还有 LevelMesh 资源与共享事件控制，不据模型名称推断独立 Plant 类。"
+    },
+    {
+      "name": "花草区域",
+      "classes": [
+        "FlowerPatch"
+      ],
+      "note": "已计入 effects；原 owner FlowerBarn 不在当前地图声明中。"
+    }
+  ],
+  "nativeCreatureFamilies": [
+    {
+      "name": "AwakenDarkCreatures",
+      "rttiAddress": "0x100c9e1b0",
+      "declaredInScannedMaps": true,
+      "mapStatus": "部分实现",
+      "hasRecoveredConstruction": true,
+      "constructionEvidence": [
+        "src/core/creature-construction-runtime.ts",
+        "docs/creature-construction-oracle.json"
+      ],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "BirdFlock",
+      "rttiAddress": "0x100c889e0",
+      "declaredInScannedMaps": true,
+      "mapStatus": "部分实现",
+      "hasRecoveredConstruction": true,
+      "constructionEvidence": [
+        "src/core/creature-construction-runtime.ts",
+        "docs/creature-construction-oracle.json"
+      ],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "BirdFlocks",
+      "rttiAddress": "0x100c88ba0",
+      "declaredInScannedMaps": false,
+      "mapStatus": null,
+      "hasRecoveredConstruction": false,
+      "constructionEvidence": [],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "BirdV2",
+      "rttiAddress": "0x100c8a680",
+      "declaredInScannedMaps": true,
+      "mapStatus": "部分实现",
+      "hasRecoveredConstruction": true,
+      "constructionEvidence": [
+        "src/core/creature-construction-runtime.ts",
+        "docs/creature-construction-oracle.json"
+      ],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [
+        {
+          "name": "BirdV2.Update",
+          "start": "0x1001a2260",
+          "end": "0x1001a2770"
+        },
+        {
+          "name": "BirdV2.FlightIntegration",
+          "start": "0x1001a2f30",
+          "end": "0x1001a34c0",
+          "codeSha256": "c75c5c2b8e22d34b0c5d90296e683d9f736402f61e2a9117952cf29a6cac880f"
+        },
+        {
+          "name": "BirdV2.Motion",
+          "start": "0x1001a34c0",
+          "end": "0x1001a3980",
+          "codeSha256": "abccec0298363690869504c72f877a3bf82609586f7bab8869a73dbf9d556d7d"
+        }
+      ],
+      "continuationImplementation": [
+        "src/core/environment-object-state.ts",
+        "src/core/creature-construction-runtime.ts",
+        "src/core/creature-runtime.ts",
+        "src/core/bird-load-runtime.ts",
+        "src/core/creature-ai-initialize-runtime.ts",
+        "src/core/resource-model-animation-preview.ts",
+        "src/renderer/model-animation-preview.ts",
+        "src/core/bird-natural-animation-runtime.ts",
+        "src/core/bird-update-runtime.ts",
+        "src/core/bird-target-runtime.ts",
+        "src/core/bird-flight-runtime.ts",
+        "src/core/bird-acceleration-runtime.ts",
+        "src/core/bird-motion-runtime.ts",
+        "src/core/bird-force-runtime.ts",
+        "src/core/creature-force-runtime.ts",
+        "src/core/creature-flocking-runtime.ts",
+        "src/core/bird-rail-runtime.ts",
+        "src/core/creature-rail-runtime.ts",
+        "src/core/bird-follow-runtime.ts",
+        "src/core/creature-follow-runtime.ts"
+      ],
+      "continuationEvidence": [
+        "docs/bird-steering-motion-oracle.json",
+        "docs/bird-force-oracle.json",
+        "docs/creature-force-oracle.json",
+        "docs/bird-rail-oracle.json",
+        "docs/bird-rail-chain-oracle.json",
+        "docs/bird-follow-oracle.json",
+        "docs/bird-follow-chain-oracle.json"
+      ],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "BirdV2Ai",
+      "rttiAddress": "0x100c8a3e0",
+      "declaredInScannedMaps": false,
+      "mapStatus": null,
+      "hasRecoveredConstruction": false,
+      "constructionEvidence": [],
+      "restoredAccelerationDispatcher": true,
+      "accelerationEvidence": [
+        "src/core/bird-acceleration-runtime.ts",
+        "docs/bird-acceleration-native.json",
+        "docs/bird-acceleration-oracle.json"
+      ],
+      "restoredContinuationBodies": [
+        {
+          "name": "BirdV2Ai.Acceleration",
+          "start": "0x1001a0060",
+          "end": "0x1001a0450",
+          "codeSha256": "ad5a07968b6f49f1265c8b7448408be122157c8e8b3eae432c4c0754d008b42b"
+        },
+        {
+          "name": "BirdV2Ai.TargetDistance",
+          "start": "0x1001a0450",
+          "end": "0x1001a06a0",
+          "codeSha256": "bac59f4890b334456843bdc584da36d3410be26f2b72da465f80a831bff57a0e",
+          "assembly": "evidence/birdv2ai-targetdistance.asm"
+        },
+        {
+          "name": "BirdV2Ai.SteerTarget",
+          "start": "0x1001a0d20",
+          "end": "0x1001a0e70",
+          "codeSha256": "60f6e64dc5152ca9eb8f187b2d10419c9b621c101712050d2906bf17706bf218",
+          "assembly": "evidence/birdv2ai-steertarget.asm"
+        },
+        {
+          "name": "BirdV2Ai.SteerGuide",
+          "start": "0x1001a0e70",
+          "end": "0x1001a10d0",
+          "codeSha256": "1285f947ea3ceddc19a3fc372245dabdd0d2d186c913f40206e3dd8065d9c729",
+          "assembly": "evidence/birdv2ai-steerguide.asm"
+        },
+        {
+          "name": "BirdV2Ai.SelectRail",
+          "start": "0x1001a06a0",
+          "end": "0x1001a08e0",
+          "codeSha256": "3d41a177466754cd9404eb70073db6f9871fe42cd5c00dfb6d309ece59b381e0",
+          "assembly": "evidence/birdv2ai-selectrail.asm"
+        },
+        {
+          "name": "BirdV2Ai.FollowObject",
+          "start": "0x1001a08e0",
+          "end": "0x1001a0d20",
+          "codeSha256": "964d317aa90e6db0663212346564b6c8c4e183ac37a0b561edcd942b9c88e37c",
+          "assembly": "evidence/birdv2ai-followobject.asm"
+        }
+      ],
+      "continuationImplementation": [
+        "src/core/bird-acceleration-runtime.ts",
+        "src/core/creature-steering-runtime.ts",
+        "src/core/bird-flight-runtime.ts",
+        "src/core/bird-motion-runtime.ts",
+        "src/core/bird-force-runtime.ts",
+        "src/core/creature-force-runtime.ts",
+        "src/core/creature-flocking-runtime.ts",
+        "src/core/bird-rail-runtime.ts",
+        "src/core/creature-rail-runtime.ts",
+        "src/core/bird-follow-runtime.ts",
+        "src/core/creature-follow-runtime.ts"
+      ],
+      "continuationEvidence": [
+        "docs/bird-steering-motion-oracle.json",
+        "docs/bird-force-oracle.json",
+        "docs/creature-force-oracle.json",
+        "docs/bird-rail-oracle.json",
+        "docs/bird-rail-chain-oracle.json",
+        "docs/bird-follow-oracle.json",
+        "docs/bird-follow-chain-oracle.json"
+      ],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "BirdV2AiParams",
+      "rttiAddress": "0x100c8a2d0",
+      "declaredInScannedMaps": true,
+      "mapStatus": "部分实现",
+      "hasRecoveredConstruction": true,
+      "constructionEvidence": [
+        "src/core/creature-construction-runtime.ts",
+        "docs/creature-construction-oracle.json"
+      ],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "BirdV2AiSwap",
+      "rttiAddress": "0x100c8ab90",
+      "declaredInScannedMaps": false,
+      "mapStatus": null,
+      "hasRecoveredConstruction": true,
+      "constructionEvidence": [
+        "src/core/creature-construction-runtime.ts",
+        "docs/creature-construction-oracle.json"
+      ],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "BirdV2Barn",
+      "rttiAddress": "0x100c8a890",
+      "declaredInScannedMaps": false,
+      "mapStatus": null,
+      "hasRecoveredConstruction": false,
+      "constructionEvidence": [],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "BirdV2ParamSwap",
+      "rttiAddress": "0x100c8ad70",
+      "declaredInScannedMaps": true,
+      "mapStatus": "部分实现",
+      "hasRecoveredConstruction": true,
+      "constructionEvidence": [
+        "src/core/creature-construction-runtime.ts",
+        "docs/creature-construction-oracle.json"
+      ],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "BirdV2Params",
+      "rttiAddress": "0x100c8a1b0",
+      "declaredInScannedMaps": true,
+      "mapStatus": "部分实现",
+      "hasRecoveredConstruction": true,
+      "constructionEvidence": [
+        "src/core/creature-construction-runtime.ts",
+        "docs/creature-construction-oracle.json"
+      ],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "Buddy",
+      "rttiAddress": "0x100c8e2d0",
+      "declaredInScannedMaps": true,
+      "mapStatus": "部分实现",
+      "hasRecoveredConstruction": true,
+      "constructionEvidence": [
+        "src/core/creature-construction-runtime.ts",
+        "docs/creature-construction-oracle.json"
+      ],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "BuddyBarn",
+      "rttiAddress": "0x100c8e610",
+      "declaredInScannedMaps": false,
+      "mapStatus": null,
+      "hasRecoveredConstruction": false,
+      "constructionEvidence": [],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "BuddyChangeAuthorityRpc",
+      "rttiAddress": "0x100c8e500",
+      "declaredInScannedMaps": false,
+      "mapStatus": null,
+      "hasRecoveredConstruction": false,
+      "constructionEvidence": [],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "BuddyParams",
+      "rttiAddress": "0x100c8e1c0",
+      "declaredInScannedMaps": true,
+      "mapStatus": "部分实现",
+      "hasRecoveredConstruction": true,
+      "constructionEvidence": [
+        "src/core/creature-construction-runtime.ts",
+        "docs/creature-construction-oracle.json"
+      ],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "Crab",
+      "rttiAddress": "0x100c9b260",
+      "declaredInScannedMaps": true,
+      "mapStatus": "部分实现",
+      "hasRecoveredConstruction": true,
+      "constructionEvidence": [
+        "src/core/creature-construction-runtime.ts",
+        "docs/creature-construction-oracle.json"
+      ],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "CrabAi",
+      "rttiAddress": "0x100c9b020",
+      "declaredInScannedMaps": false,
+      "mapStatus": null,
+      "hasRecoveredConstruction": false,
+      "constructionEvidence": [],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "CrabBarn",
+      "rttiAddress": "0x100c9b7c0",
+      "declaredInScannedMaps": false,
+      "mapStatus": null,
+      "hasRecoveredConstruction": false,
+      "constructionEvidence": [],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [
+        {
+          "name": "CrabBarn.AssignAuthority",
+          "start": "0x10025f030",
+          "end": "0x10025f090",
+          "codeSha256": "4c70838158ef26313ecdf9f2ee2ec06bcbf4235fe90efef7b4c4af1aa00b5d6a",
+          "assembly": "evidence/crabbarn-assignauthority.asm"
+        },
+        {
+          "name": "CrabBarn.Update",
+          "start": "0x10025ed80",
+          "end": "0x10025ee60",
+          "codeSha256": "991c5881cd467c8dbc8c115de682ab9c71ee309ef44a95b53eccba85b748938e",
+          "assembly": "evidence/crabbarn-update.asm"
+        }
+      ],
+      "continuationImplementation": [
+        "src/core/crab-barn-runtime.ts",
+        "src/core/crab-network-runtime.ts",
+        "src/core/binary-stream-runtime.ts",
+        "src/core/crab-codec-runtime.ts"
+      ],
+      "continuationEvidence": [
+        "docs/creature-lifecycle-oracle.json"
+      ],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "CrabChangeAuthorityRpc",
+      "rttiAddress": "0x100c9b5a0",
+      "declaredInScannedMaps": false,
+      "mapStatus": null,
+      "hasRecoveredConstruction": false,
+      "constructionEvidence": [],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "CrabEatMoteRpc",
+      "rttiAddress": "0x100c9b6b0",
+      "declaredInScannedMaps": false,
+      "mapStatus": null,
+      "hasRecoveredConstruction": false,
+      "constructionEvidence": [],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "CrabImpulseRpc",
+      "rttiAddress": "0x100c9b490",
+      "declaredInScannedMaps": false,
+      "mapStatus": null,
+      "hasRecoveredConstruction": false,
+      "constructionEvidence": [],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "CrabParams",
+      "rttiAddress": "0x100c9b140",
+      "declaredInScannedMaps": true,
+      "mapStatus": "部分实现",
+      "hasRecoveredConstruction": true,
+      "constructionEvidence": [
+        "src/core/creature-construction-runtime.ts",
+        "docs/creature-construction-oracle.json"
+      ],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "CreateCritterV2",
+      "rttiAddress": "0x100c9cd10",
+      "declaredInScannedMaps": false,
+      "mapStatus": null,
+      "hasRecoveredConstruction": true,
+      "constructionEvidence": [
+        "src/core/creature-construction-runtime.ts",
+        "docs/creature-construction-oracle.json"
+      ],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "CritterMsg_Go",
+      "rttiAddress": "0x100c9d100",
+      "declaredInScannedMaps": false,
+      "mapStatus": null,
+      "hasRecoveredConstruction": true,
+      "constructionEvidence": [
+        "src/core/creature-construction-runtime.ts",
+        "docs/creature-construction-oracle.json"
+      ],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "CritterMsg_HearPlayerShout",
+      "rttiAddress": "0x100c9d330",
+      "declaredInScannedMaps": false,
+      "mapStatus": null,
+      "hasRecoveredConstruction": false,
+      "constructionEvidence": [],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "CritterMsg_Stop",
+      "rttiAddress": "0x100c9d220",
+      "declaredInScannedMaps": false,
+      "mapStatus": null,
+      "hasRecoveredConstruction": false,
+      "constructionEvidence": [],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "CritterV2",
+      "rttiAddress": "0x100c9bbe0",
+      "declaredInScannedMaps": false,
+      "mapStatus": null,
+      "hasRecoveredConstruction": false,
+      "constructionEvidence": [],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "CritterV2Barn",
+      "rttiAddress": "0x100c9bda0",
+      "declaredInScannedMaps": false,
+      "mapStatus": null,
+      "hasRecoveredConstruction": false,
+      "constructionEvidence": [],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "CritterV2Event",
+      "rttiAddress": "0x100c9c8d0",
+      "declaredInScannedMaps": false,
+      "mapStatus": null,
+      "hasRecoveredConstruction": true,
+      "constructionEvidence": [
+        "src/core/creature-construction-runtime.ts",
+        "docs/creature-construction-oracle.json"
+      ],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "CritterV2Message",
+      "rttiAddress": "0x100c9cfe0",
+      "declaredInScannedMaps": false,
+      "mapStatus": null,
+      "hasRecoveredConstruction": false,
+      "constructionEvidence": [],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "Critter_OnRegion",
+      "rttiAddress": "0x100c9caf0",
+      "declaredInScannedMaps": true,
+      "mapStatus": "部分实现",
+      "hasRecoveredConstruction": true,
+      "constructionEvidence": [
+        "src/core/creature-construction-runtime.ts",
+        "docs/creature-construction-oracle.json"
+      ],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "Critter_OnTouch",
+      "rttiAddress": "0x100c9cc00",
+      "declaredInScannedMaps": false,
+      "mapStatus": null,
+      "hasRecoveredConstruction": true,
+      "constructionEvidence": [
+        "src/core/creature-construction-runtime.ts",
+        "docs/creature-construction-oracle.json"
+      ],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "Critter_SendMsg",
+      "rttiAddress": "0x100c9c9e0",
+      "declaredInScannedMaps": false,
+      "mapStatus": null,
+      "hasRecoveredConstruction": true,
+      "constructionEvidence": [
+        "src/core/creature-construction-runtime.ts",
+        "docs/creature-construction-oracle.json"
+      ],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "Critter_Shout",
+      "rttiAddress": "0x100c9ce20",
+      "declaredInScannedMaps": true,
+      "mapStatus": "部分实现",
+      "hasRecoveredConstruction": true,
+      "constructionEvidence": [
+        "src/core/creature-construction-runtime.ts",
+        "docs/creature-construction-oracle.json"
+      ],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "DarkCreature",
+      "rttiAddress": "0x100c9e090",
+      "declaredInScannedMaps": true,
+      "mapStatus": "部分实现",
+      "hasRecoveredConstruction": true,
+      "constructionEvidence": [
+        "src/core/creature-construction-runtime.ts",
+        "docs/creature-construction-oracle.json"
+      ],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [
+        {
+          "name": "DarkCreature.Alert",
+          "start": "0x10026d2a0",
+          "end": "0x10026d410",
+          "codeSha256": "0d8e47a794100e4994ddabc13beb5393cf7ab2156f7a55da16edca4d28aad55b",
+          "assembly": "evidence/darkcreature-alert.asm"
+        },
+        {
+          "name": "DarkCreature.Return",
+          "start": "0x100270f10",
+          "end": "0x100270fd0",
+          "codeSha256": "8c48263503eef5868bb0205aacc9037eef9efae2d0157ba1a1de28088487bed1",
+          "assembly": "evidence/darkcreature-return.asm"
+        },
+        {
+          "name": "DarkCreature.SwitchRail",
+          "start": "0x10026d0f0",
+          "end": "0x10026d2a0",
+          "codeSha256": "baaecbb2fa19fc17529de6fd64ffee05e3160ddbf855c19a5f97cf64ed1770ad",
+          "assembly": "evidence/darkcreature-switchrail.asm"
+        }
+      ],
+      "continuationImplementation": [
+        "src/core/environment-object-state.ts",
+        "src/core/creature-construction-runtime.ts",
+        "src/core/creature-runtime.ts",
+        "src/core/dark-creature-rail-runtime.ts",
+        "src/core/dark-creature-load-runtime.ts",
+        "src/core/dark-creature-state-runtime.ts",
+        "src/core/creature-motion-runtime.ts",
+        "src/core/dark-creature-detect-runtime.ts",
+        "src/core/dark-creature-motion-runtime.ts",
+        "src/core/dark-creature-appear-runtime.ts",
+        "src/core/creature-motion-rail-runtime.ts",
+        "src/core/dark-creature-combat-runtime.ts",
+        "src/core/dark-creature-look-runtime.ts",
+        "src/core/dark-creature-spotlight-runtime.ts",
+        "src/core/dark-creature-visual-runtime.ts"
+      ],
+      "continuationEvidence": [
+        "docs/creature-lifecycle-oracle.json"
+      ],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "DarkCreatureBarn",
+      "rttiAddress": "0x100c9dd50",
+      "declaredInScannedMaps": false,
+      "mapStatus": null,
+      "hasRecoveredConstruction": false,
+      "constructionEvidence": [],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "DarkCreatureParams",
+      "rttiAddress": "0x100c9df70",
+      "declaredInScannedMaps": true,
+      "mapStatus": "部分实现",
+      "hasRecoveredConstruction": true,
+      "constructionEvidence": [
+        "src/core/creature-construction-runtime.ts",
+        "docs/creature-construction-oracle.json"
+      ],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "DetachFromBirdGuides",
+      "rttiAddress": "0x100c8af50",
+      "declaredInScannedMaps": true,
+      "mapStatus": "部分实现",
+      "hasRecoveredConstruction": true,
+      "constructionEvidence": [
+        "src/core/creature-construction-runtime.ts",
+        "docs/creature-construction-oracle.json"
+      ],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "FishV2",
+      "rttiAddress": "0x100cae850",
+      "declaredInScannedMaps": false,
+      "mapStatus": null,
+      "hasRecoveredConstruction": true,
+      "constructionEvidence": [
+        "src/core/creature-construction-runtime.ts",
+        "docs/creature-construction-oracle.json"
+      ],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [
+        {
+          "name": "FishV2.Load",
+          "start": "0x1003370c0",
+          "end": "0x100337500",
+          "codeSha256": "f0c767d9328b2e3cb75a28154be6674127c88238f38c07173509a96fedc3f37e",
+          "assembly": "evidence/fishv2-load.asm"
+        },
+        {
+          "name": "FishV2.Unload",
+          "start": "0x100337500",
+          "end": "0x100337540",
+          "codeSha256": "b5e563c67d9dd45dc0f52e44b970d2ec58a5f00f1b0ea6ead279b15e244237ce",
+          "assembly": "evidence/fishv2-unload.asm"
+        },
+        {
+          "name": "FishV2.Transform",
+          "start": "0x1003384a0",
+          "end": "0x100338550",
+          "codeSha256": "51d3c505fa141202977db061033cac312b35f9574332f42ef8ecf0535a030ca6",
+          "assembly": "evidence/fishv2-transform.asm"
+        }
+      ],
+      "continuationImplementation": [
+        "src/core/creature-construction-runtime.ts",
+        "src/core/fish-load-runtime.ts",
+        "src/core/fish-update-runtime.ts",
+        "src/core/fish-ai-runtime.ts",
+        "src/core/creature-force-runtime.ts"
+      ],
+      "continuationEvidence": [
+        "docs/creature-lifecycle-oracle.json"
+      ],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "FishV2Params",
+      "rttiAddress": "0x100cae740",
+      "declaredInScannedMaps": false,
+      "mapStatus": null,
+      "hasRecoveredConstruction": true,
+      "constructionEvidence": [
+        "src/core/creature-construction-runtime.ts",
+        "docs/creature-construction-oracle.json"
+      ],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "ReleaseBirds",
+      "rttiAddress": "0x100c8b130",
+      "declaredInScannedMaps": true,
+      "mapStatus": "部分实现",
+      "hasRecoveredConstruction": true,
+      "constructionEvidence": [
+        "src/core/creature-construction-runtime.ts",
+        "docs/creature-construction-oracle.json"
+      ],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "SetBirdGuidesEnabled",
+      "rttiAddress": "0x100c8a9b0",
+      "declaredInScannedMaps": true,
+      "mapStatus": "部分实现",
+      "hasRecoveredConstruction": true,
+      "constructionEvidence": [
+        "src/core/creature-construction-runtime.ts",
+        "docs/creature-construction-oracle.json"
+      ],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "SetDarkCreaturesMusicFloat",
+      "rttiAddress": "0x100c9e570",
+      "declaredInScannedMaps": false,
+      "mapStatus": null,
+      "hasRecoveredConstruction": true,
+      "constructionEvidence": [
+        "src/core/creature-construction-runtime.ts",
+        "docs/creature-construction-oracle.json"
+      ],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "SetDarkCreaturesNetworked",
+      "rttiAddress": "0x100c9e390",
+      "declaredInScannedMaps": true,
+      "mapStatus": "部分实现",
+      "hasRecoveredConstruction": true,
+      "constructionEvidence": [
+        "src/core/creature-construction-runtime.ts",
+        "docs/creature-construction-oracle.json"
+      ],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "SimpleBird",
+      "rttiAddress": "0x100cf3ca0",
+      "declaredInScannedMaps": false,
+      "mapStatus": null,
+      "hasRecoveredConstruction": false,
+      "constructionEvidence": [],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "SimpleBirdBrain",
+      "rttiAddress": "0x100cf3ed0",
+      "declaredInScannedMaps": false,
+      "mapStatus": null,
+      "hasRecoveredConstruction": false,
+      "constructionEvidence": [],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "SimpleBirdBrainParams",
+      "rttiAddress": "0x100cf3db0",
+      "declaredInScannedMaps": false,
+      "mapStatus": null,
+      "hasRecoveredConstruction": true,
+      "constructionEvidence": [
+        "src/core/creature-construction-runtime.ts",
+        "docs/creature-construction-oracle.json"
+      ],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "SimpleCritterBarn",
+      "rttiAddress": "0x100cf4200",
+      "declaredInScannedMaps": false,
+      "mapStatus": null,
+      "hasRecoveredConstruction": false,
+      "constructionEvidence": [],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "SimpleCritterBrain",
+      "rttiAddress": "0x100cf4040",
+      "declaredInScannedMaps": false,
+      "mapStatus": null,
+      "hasRecoveredConstruction": false,
+      "constructionEvidence": [],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "SmallDarkCreature",
+      "rttiAddress": "0x100cf4950",
+      "declaredInScannedMaps": false,
+      "mapStatus": null,
+      "hasRecoveredConstruction": true,
+      "constructionEvidence": [
+        "src/core/creature-construction-runtime.ts",
+        "docs/creature-construction-oracle.json"
+      ],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "SmallDarkCreatureZone",
+      "rttiAddress": "0x100cf4a80",
+      "declaredInScannedMaps": false,
+      "mapStatus": null,
+      "hasRecoveredConstruction": true,
+      "constructionEvidence": [
+        "src/core/creature-construction-runtime.ts",
+        "docs/creature-construction-oracle.json"
+      ],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "WhaleFairy",
+      "rttiAddress": "0x100d0f5d0",
+      "declaredInScannedMaps": false,
+      "mapStatus": null,
+      "hasRecoveredConstruction": true,
+      "constructionEvidence": [
+        "src/core/creature-construction-runtime.ts",
+        "docs/creature-construction-oracle.json"
+      ],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    },
+    {
+      "name": "WhaleFairyBarn",
+      "rttiAddress": "0x100d0f830",
+      "declaredInScannedMaps": false,
+      "mapStatus": null,
+      "hasRecoveredConstruction": false,
+      "constructionEvidence": [],
+      "restoredAccelerationDispatcher": false,
+      "accelerationEvidence": [],
+      "restoredContinuationBodies": [],
+      "continuationImplementation": [],
+      "continuationEvidence": [],
+      "runtimeComplete": false,
+      "remaining": "完整自主更新、模型/动画资源 owner、碰撞/联网与生命周期仍需逐项接通。"
+    }
+  ],
+  "continuationVerification": {
+    "cases": 1447,
+    "comparedBytes": 302241316,
+    "serviceCalls": 37953,
+    "completeCreatures": 0,
+    "scope": "各恢复调用体与组合链均为部分运行实现；不同报告的场景与子函数可重叠。"
+  },
+  "sharedAnimationDependencyVerification": {
+    "reports": [
+      "docs/resource-animation-update-oracle.json",
+      "docs/fish-group-animation-update-oracle.json"
+    ],
+    "cases": 3569,
+    "frames": 16932,
+    "comparedBytes": 664428384,
+    "serviceCalls": 67172,
+    "actualFishConfigurations": 5,
+    "completeCreatureClasses": 0,
+    "scope": "共用 Animation.Update、动态骨骼权重与 Transform 世界缓存已逐帧对照；五处实际鱼群请求另核验动作结束和恢复游动。未完成各类 Model/世界/场景 owner，不能把共用依赖计作完整生物类。"
+  },
+  "constructionTypesAbsentFromMapDeclarations": {
+    "creatureConstruction": [
+      "BirdV2AiSwap",
+      "CreateCritterV2",
+      "CritterMsg_Go",
+      "CritterV2Event",
+      "Critter_OnTouch",
+      "Critter_SendMsg",
+      "FishV2",
+      "FishV2Params",
+      "SetDarkCreaturesMusicFloat",
+      "SimpleBirdBrainParams",
+      "SmallDarkCreature",
+      "SmallDarkCreatureZone",
+      "WhaleFairy"
+    ],
+    "itemConstruction": [
+      "SetFlameOccIntensity"
+    ]
+  },
+  "eyeProjectionAndRailControlVerification": {
+    "reports": [
+      "docs/dark-creature-spotlight-oracle.json",
+      "docs/move-object-along-rail-control-oracle.json",
+      "docs/vector-safe-slerp-oracle.json"
+    ],
+    "cases": 1762,
+    "comparedBytes": 179267136,
+    "serviceAndMathCalls": 17857,
+    "wholeEyeAndProjectionPhaseVerified": true,
+    "wholeMoveObjectAlongRailUpdateVerified": false,
+    "completeCreatureClasses": 0,
+    "scope": "冥龙眼部／探照计算链、鱼群轨道Update控制前段和完整SafeSlerp已原对照；后续交互／声音、对象移动循环、真实资源／世界／渲染owner及完整视口／生命周期仍待接。"
+  },
+  "modelBindings": [
+    {
+      "className": "BirdV2",
+      "resourceName": "CharBirdAnim",
+      "instances": 83,
+      "resourceExists": true,
+      "example": {
+        "level": "Dawn",
+        "creatureNodeId": 162,
+        "parameterNodeId": 2952,
+        "levelMeshNodeId": 2512
+      }
+    },
+    {
+      "className": "BirdV2",
+      "resourceName": "CharBirdLowAnim",
+      "instances": 60,
+      "resourceExists": true,
+      "example": {
+        "level": "HubReveal",
+        "creatureNodeId": 63,
+        "parameterNodeId": 264,
+        "levelMeshNodeId": 579
+      }
+    },
+    {
+      "className": "BirdV2",
+      "resourceName": "CharSkyRayCAnim",
+      "instances": 39,
+      "resourceExists": true,
+      "example": {
+        "level": "DuskGraveyard",
+        "creatureNodeId": 1096,
+        "parameterNodeId": 221,
+        "levelMeshNodeId": 1267
+      }
+    },
+    {
+      "className": "BirdV2",
+      "resourceName": "CharSkyRayMotherAnim",
+      "instances": 1,
+      "resourceExists": true,
+      "example": {
+        "level": "Prairie_Village",
+        "creatureNodeId": 1699,
+        "parameterNodeId": 1964,
+        "levelMeshNodeId": 2383
+      }
+    },
+    {
+      "className": "BirdV2",
+      "resourceName": "CharSkyRayYoungAnim",
+      "instances": 1,
+      "resourceExists": false,
+      "example": {
+        "level": "RainForest",
+        "creatureNodeId": 141,
+        "parameterNodeId": 1018,
+        "levelMeshNodeId": 1120
+      }
+    },
+    {
+      "className": "Crab",
+      "resourceName": "CharCrabAAnim",
+      "instances": 140,
+      "resourceExists": true,
+      "example": {
+        "level": "Dusk",
+        "creatureNodeId": 0,
+        "parameterNodeId": 1145,
+        "levelMeshNodeId": 956
+      }
+    }
+  ]
+}

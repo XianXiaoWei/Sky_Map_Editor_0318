@@ -1,0 +1,381 @@
+{
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "function": "0x100059a50",
+  "scope": "Ambience initialized environment fields before resource creation; six groups only, not complete game initialization",
+  "codeRange": [
+    "0x100059a50",
+    "0x100059c4c"
+  ],
+  "writes": [
+    {
+      "offset": 48,
+      "hex": "00000000000034420000803f0000803f",
+      "constantAddress": "0x100aa7e30"
+    },
+    {
+      "offset": 96,
+      "hex": "4ae0903de140803e0000803f0000803f",
+      "constantAddress": "0x100aa7e40"
+    },
+    {
+      "offset": 112,
+      "hex": "4ae0903de3a9273f0000803f0000803f",
+      "constantAddress": "0x100aa7e50"
+    },
+    {
+      "offset": 128,
+      "hex": "0000803f0000803f4ae0903d0000803f",
+      "constantAddress": "0x100aa7e60"
+    },
+    {
+      "offset": 144,
+      "hex": "0000803f8676c63e4ae0903d0000803f",
+      "constantAddress": "0x100aa7e70"
+    },
+    {
+      "offset": 160,
+      "hex": "0000803f4ae0903d4ae0903d0000803f",
+      "constantAddress": "0x100aa7e80"
+    },
+    {
+      "offset": 192,
+      "hex": "4ae0903de140803e0000803f0000803f",
+      "constantAddress": "0x100aa7e40"
+    },
+    {
+      "offset": 208,
+      "hex": "4ae0903de3a9273f0000803f0000803f",
+      "constantAddress": "0x100aa7e50"
+    },
+    {
+      "offset": 224,
+      "hex": "0000803f0000803f4ae0903d0000803f",
+      "constantAddress": "0x100aa7e60"
+    },
+    {
+      "offset": 240,
+      "hex": "0000803f8676c63e4ae0903d0000803f",
+      "constantAddress": "0x100aa7e70"
+    },
+    {
+      "offset": 256,
+      "hex": "0000803f4ae0903d4ae0903d0000803f",
+      "constantAddress": "0x100aa7e80"
+    },
+    {
+      "offset": 500,
+      "hex": "0000803fcdcccc3d00606a460000f041",
+      "constantAddress": "0x100aa7e90"
+    },
+    {
+      "offset": 560,
+      "hex": "cdcc8c3f0000803f6666663f00000000",
+      "constantAddress": "0x100aa7ea0"
+    },
+    {
+      "offset": 576,
+      "hex": "cdcc4c3e000000000000803ecdcccc3e",
+      "constantAddress": "0x100aa7eb0"
+    },
+    {
+      "offset": 624,
+      "hex": "0000803f8fc2f53ed7a3903e00000000",
+      "constantAddress": "0x100aa7ec0"
+    },
+    {
+      "offset": 64,
+      "hex": "000000000000003f",
+      "immediate": true
+    },
+    {
+      "offset": 176,
+      "hex": "0000803f",
+      "immediate": true
+    },
+    {
+      "offset": 272,
+      "hex": "00",
+      "immediate": true
+    },
+    {
+      "offset": 516,
+      "hex": "00803b45cdcc4c3f",
+      "immediate": true
+    },
+    {
+      "offset": 524,
+      "hex": "2787b0390000003f",
+      "immediate": true
+    },
+    {
+      "offset": 532,
+      "hex": "00000000",
+      "immediate": true
+    },
+    {
+      "offset": 596,
+      "hex": "0000803f",
+      "immediate": true
+    },
+    {
+      "offset": 640,
+      "hex": "0000c842",
+      "immediate": true
+    }
+  ],
+  "sunColor": {
+    "offset": 32,
+    "globalAddress": "0x10203f6b0",
+    "requiredInput": true
+  },
+  "qualityBranch": {
+    "address": "0x100059c37",
+    "settingsOffset": 528,
+    "zeroWrites": {
+      "offset": 576,
+      "hex": "aaaa2a3e"
+    }
+  },
+  "groups": [
+    {
+      "className": "AmbienceSun",
+      "offset": 16,
+      "fields": [
+        {
+          "name": "moonPhase",
+          "nativeOffset": 52,
+          "tag": 6,
+          "bytes": 4
+        },
+        {
+          "name": "sunAngleXZ",
+          "nativeOffset": 32,
+          "tag": 6,
+          "bytes": 4
+        },
+        {
+          "name": "sunAngleY",
+          "nativeOffset": 36,
+          "tag": 6,
+          "bytes": 4
+        },
+        {
+          "name": "sunColor",
+          "nativeOffset": 16,
+          "tag": 10,
+          "bytes": 16
+        },
+        {
+          "name": "sunInt",
+          "nativeOffset": 44,
+          "tag": 6,
+          "bytes": 4
+        },
+        {
+          "name": "sunSize",
+          "nativeOffset": 40,
+          "tag": 6,
+          "bytes": 4
+        },
+        {
+          "name": "sunToMoon",
+          "nativeOffset": 48,
+          "tag": 6,
+          "bytes": 4
+        }
+      ]
+    },
+    {
+      "className": "AmbienceSky",
+      "offset": 80,
+      "fields": [
+        {
+          "name": "atmosphereDensity",
+          "nativeOffset": 96,
+          "tag": 6,
+          "bytes": 4
+        },
+        {
+          "name": "cheapFogEnabled",
+          "nativeOffset": 192,
+          "tag": 11,
+          "bytes": 1
+        },
+        {
+          "name": "cheapFogTintBot",
+          "nativeOffset": 176,
+          "tag": 10,
+          "bytes": 16
+        },
+        {
+          "name": "cheapFogTintMidBot",
+          "nativeOffset": 160,
+          "tag": 10,
+          "bytes": 16
+        },
+        {
+          "name": "cheapFogTintMidMid",
+          "nativeOffset": 144,
+          "tag": 10,
+          "bytes": 16
+        },
+        {
+          "name": "cheapFogTintMidTop",
+          "nativeOffset": 128,
+          "tag": 10,
+          "bytes": 16
+        },
+        {
+          "name": "cheapFogTintTop",
+          "nativeOffset": 112,
+          "tag": 10,
+          "bytes": 16
+        },
+        {
+          "name": "tintBot",
+          "nativeOffset": 80,
+          "tag": 10,
+          "bytes": 16
+        },
+        {
+          "name": "tintMidBot",
+          "nativeOffset": 64,
+          "tag": 10,
+          "bytes": 16
+        },
+        {
+          "name": "tintMidMid",
+          "nativeOffset": 48,
+          "tag": 10,
+          "bytes": 16
+        },
+        {
+          "name": "tintMidTop",
+          "nativeOffset": 32,
+          "tag": 10,
+          "bytes": 16
+        },
+        {
+          "name": "tintTop",
+          "nativeOffset": 16,
+          "tag": 10,
+          "bytes": 16
+        }
+      ]
+    },
+    {
+      "className": "AmbienceFog",
+      "offset": 496,
+      "fields": [
+        {
+          "name": "cheapFogFar",
+          "nativeOffset": 20,
+          "tag": 6,
+          "bytes": 4
+        },
+        {
+          "name": "cheapFogHeight",
+          "nativeOffset": 32,
+          "tag": 6,
+          "bytes": 4
+        },
+        {
+          "name": "cheapFogHeightDensity",
+          "nativeOffset": 36,
+          "tag": 6,
+          "bytes": 4
+        },
+        {
+          "name": "cheapFogLumReduction",
+          "nativeOffset": 24,
+          "tag": 6,
+          "bytes": 4
+        },
+        {
+          "name": "cheapFogNear",
+          "nativeOffset": 16,
+          "tag": 6,
+          "bytes": 4
+        },
+        {
+          "name": "drawDistance",
+          "nativeOffset": 12,
+          "tag": 6,
+          "bytes": 4
+        },
+        {
+          "name": "fogDensity",
+          "nativeOffset": 4,
+          "tag": 6,
+          "bytes": 4
+        },
+        {
+          "name": "fogHeight",
+          "nativeOffset": 8,
+          "tag": 6,
+          "bytes": 4
+        }
+      ]
+    },
+    {
+      "className": "AmbienceBloom",
+      "offset": 544,
+      "fields": [
+        {
+          "name": "intensity",
+          "nativeOffset": 32,
+          "tag": 6,
+          "bytes": 4
+        },
+        {
+          "name": "overbright",
+          "nativeOffset": 36,
+          "tag": 6,
+          "bytes": 4
+        },
+        {
+          "name": "tint",
+          "nativeOffset": 16,
+          "tag": 8,
+          "bytes": 16
+        }
+      ]
+    },
+    {
+      "className": "AmbienceToneMap",
+      "offset": 592,
+      "fields": [
+        {
+          "name": "exposure",
+          "nativeOffset": 4,
+          "tag": 6,
+          "bytes": 4
+        }
+      ]
+    },
+    {
+      "className": "AmbiencePointLight",
+      "offset": 608,
+      "fields": [
+        {
+          "name": "color",
+          "nativeOffset": 16,
+          "tag": 8,
+          "bytes": 16
+        },
+        {
+          "name": "intensity",
+          "nativeOffset": 32,
+          "tag": 6,
+          "bytes": 4
+        }
+      ]
+    }
+  ],
+  "unresolved": [
+    "original global Color initialization",
+    "FogVolumeParams and CloudEnvParams initialization",
+    "SetEnvDefault/SetEnvHull and startup event dispatch",
+    "derived sunlight, sky/probe, camera and compositor"
+  ]
+}

@@ -1,0 +1,75 @@
+0x10049d9b0: push rbp
+0x10049d9b1: mov rbp, rsp
+0x10049d9b4: push r15
+0x10049d9b6: push r14
+0x10049d9b8: push rbx
+0x10049d9b9: sub rsp, 0x18
+0x10049d9bd: mov rbx, rsi
+0x10049d9c0: mov r14, rdi
+0x10049d9c3: mov eax, dword ptr [rbx + 0x38]
+0x10049d9c6: cmp eax, 3
+0x10049d9c9: je 0x10049da26
+0x10049d9cb: cmp eax, 2
+0x10049d9ce: je 0x10049d9f1
+0x10049d9d0: cmp eax, 1
+0x10049d9d3: jne 0x10049da68
+0x10049d9d9: mov al, byte ptr [r14]
+0x10049d9dc: mov byte ptr [rbp - 0x19], al
+0x10049d9df: lea rsi, [rbp - 0x19]
+0x10049d9e3: mov rdi, rbx
+0x10049d9e6: call 0x10076a260 ; 0x10076a260
+0x10049d9eb: movzx eax, byte ptr [rbp - 0x19]
+0x10049d9ef: jmp 0x10049da5a ; 0x10049da5a
+0x10049d9f1: mov r15, qword ptr [rbx + 0x40]
+0x10049d9f5: test r15, r15
+0x10049d9f8: je 0x10049da90
+0x10049d9fe: cmp dword ptr [rbx], 1
+0x10049da01: jne 0x10049da3b
+0x10049da03: mov eax, dword ptr [r14]
+0x10049da06: mov dword ptr [rbp - 0x28], eax
+0x10049da09: lea rsi, [rbp - 0x28]
+0x10049da0d: mov rdi, r15
+0x10049da10: call 0x1004aa260 ; 0x1004aa260
+0x10049da15: mov byte ptr [rbp - 0x1b], al
+0x10049da18: lea rsi, [rbp - 0x1b]
+0x10049da1c: mov rdi, rbx
+0x10049da1f: call 0x10076a260 ; 0x10076a260
+0x10049da24: jmp 0x10049da5d ; 0x10049da5d
+0x10049da26: mov rdi, rbx
+0x10049da29: mov rsi, r14
+0x10049da2c: add rsp, 0x18
+0x10049da30: pop rbx
+0x10049da31: pop r14
+0x10049da33: pop r15
+0x10049da35: pop rbp
+0x10049da36: jmp 0x10076a280 ; 0x10076a280
+0x10049da3b: lea rsi, [rbp - 0x1a]
+0x10049da3f: mov rdi, rbx
+0x10049da42: call 0x10076a260 ; 0x10076a260
+0x10049da47: movzx edx, byte ptr [rbp - 0x1a]
+0x10049da4b: lea rdi, [rbp - 0x20]
+0x10049da4f: mov rsi, r15
+0x10049da52: call 0x1004aa2b0 ; 0x1004aa2b0
+0x10049da57: mov eax, dword ptr [rbp - 0x20]
+0x10049da5a: mov dword ptr [r14], eax
+0x10049da5d: add rsp, 0x18
+0x10049da61: pop rbx
+0x10049da62: pop r14
+0x10049da64: pop r15
+0x10049da66: pop rbp
+0x10049da67: ret 
+0x10049da68: lea rdi, [rip + 0x7055bd] ; 0x100ba302c false
+0x10049da6f: lea rsi, [rip + 0x6edd54] ; 0x100b8b7ca NetGameTypes.cpp
+0x10049da76: lea r8, [rip + 0x6edd6c] ; 0x100b8b7e9 Not a valid context for serializing PlayerId!
+0x10049da7d: mov edx, 0x3d
+0x10049da82: mov ecx, 4
+0x10049da87: xor eax, eax
+0x10049da89: call 0x1007e6030 ; 0x1007e6030
+0x10049da8e: ud2 
+0x10049da90: lea rdi, [rip + 0x6edd44] ; 0x100b8b7db netPlayerBarn
+0x10049da97: lea rsi, [rip + 0x6edd2c] ; 0x100b8b7ca NetGameTypes.cpp
+0x10049da9e: mov edx, 0x29
+0x10049daa3: mov ecx, 3
+0x10049daa8: call 0x1007e5f70 ; 0x1007e5f70
+0x10049daad: ud2 
+0x10049daaf: nop 

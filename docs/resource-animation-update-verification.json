@@ -1,0 +1,137 @@
+{
+  "passed": true,
+  "updatedUtc": "2026-11-25T07:08:09.690320+00:00",
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "nativeReports": [
+    "docs/resource-animation-update-oracle.json",
+    "docs/fish-group-animation-update-oracle.json"
+  ],
+  "newNativeCases": 3569,
+  "newNativeFrames": 16932,
+  "newNativeComparedBytes": 664428384,
+  "newNativeServiceCalls": 67172,
+  "nativeScope": [
+    "Whole original Animation.Update calls unmodified primary, secondary, additive and flush bodies on the same controller across consecutive frames. Original pack reader, request clock, sample, weighted pose blend, Transform lazy world-cache traversal, dirty propagation and palette multiplication execute unmodified. Every controller, mask, Transform cache/padding and palette byte and ordered effect/scene call is compared each frame. Cases cover empty/default poses, priority, transitions/compaction, changing root transform, human/nonhuman dynamic masks including unclamped blend, SIMD groups/tails and zero/large deltas. Global weight arrays are explicit live owner input, not inferred from mesh names. Sound/emitter/debug consumers remain traced services. powf results are native libc traces with verified arguments/order; RSQRTPS inputs independently execute on the QEMU reference CPU, without an Intel/AMD approximation parity claim. This closes the shared animation update composition; Model/resource loading, creature owners, scene rendering and complete creature classes remain pending.",
+    "Five actual saved fish EventBarn graphs supply original Disturb and any auto-start SwimAround request records, range/sign masks and sequence counters. All 300 frames execute unmodified original Animation.Update, primary/default pose, secondary clock/sample/blend, empty additive phase, Transform dirty/lazy world caches and palette/effect flush on shared storage. Entire controller, masks, Transform nodes/cache/padding, palettes and ordered effect/scene calls match each frame, including the exact-zero negative fade weight and retirement of Disturb into live Swim plus retained delayed no-pack fallback. Pack bytes and map sources are SHA-bound and request capture is reproducible. The root transform change is prepared input; Model/Avatar allocation, effects and scene callbacks remain explicit services. RSQRTPS inputs additionally execute on QEMU reference CPU. Fish rail motion, actual Model/resource lifecycle, visible scene ownership and Windows acceptance remain pending; this does not count as a complete creature."
+  ],
+  "nativeCodeHashesBoundariesAndAssemblyVerified": true,
+  "wholeSharedAnimationUpdateVerified": true,
+  "wholeTransformWorldCacheVerified": true,
+  "actualFishAnimationConfigurations": 5,
+  "actualFishRequestPoseTransitionsVerified": true,
+  "zeroDelayNegativeZeroFadeCorrectionVerified": true,
+  "actualInputsCaptureReproduced": true,
+  "baselineRegression": {
+    "passed": true,
+    "tests": 699,
+    "command": "./node_modules/.bin/tsx --test tests/*.test.ts",
+    "log": "/root/sky-research/move-rail-project-tests.log"
+  },
+  "focusedRegression": {
+    "passed": true,
+    "tests": 8,
+    "command": "./node_modules/.bin/tsx --test tests/resource-animation-update.test.ts tests/resource-animation-matrices.test.ts tests/resource-animation-secondary.test.ts tests/resource-animation-clock.test.ts tests/fish-group-scene-events.test.ts",
+    "log": "/root/sky-research/animation-update-focused-tests.log"
+  },
+  "projectRegression": {
+    "passed": true,
+    "tests": 701,
+    "command": "./node_modules/.bin/tsx --test tests/*.test.ts",
+    "log": "/root/sky-research/animation-update-project-tests.log"
+  },
+  "typecheck": {
+    "passed": true,
+    "command": "./node_modules/.bin/tsc --noEmit",
+    "log": "/root/sky-research/animation-update-final-types.log"
+  },
+  "windowsBuild": {
+    "passed": true,
+    "command": "node tools/build.mjs --windows",
+    "log": "/root/sky-research/animation-update-windows-build.log",
+    "machine": "AMD64",
+    "binarySha256": "ff4f32f8dc8bca127c1d9a1fbfbc688eb4d26652749ddabb70ef3a64365ddca9",
+    "windowsMachineRuntimeTested": false
+  },
+  "inventory": {
+    "passed": true,
+    "maps": 33,
+    "declaredClasses": 283,
+    "objects": 49824,
+    "references": 60016,
+    "brokenReferences": 0,
+    "completeRuntimeClasses": 0,
+    "allMapsRoundTripUnchanged": true,
+    "coreSubchainVerifiedClasses": 55,
+    "log": "/root/sky-research/animation-update-class-progress.log"
+  },
+  "categoryCensus": {
+    "passed": true,
+    "command": "python3 tools/objects-category-census.py",
+    "log": "/root/sky-research/animation-update-category-census.log",
+    "nativeCreatureFamilies": 52,
+    "mapDeclaredCreatureFamilies": 18,
+    "completeCreatureClasses": 0
+  },
+  "windowsSourcePlan": {
+    "passed": true,
+    "command": "python3 tools/package-windows-source.py --plan",
+    "report": "docs/windows-source-plan.json",
+    "log": "/root/sky-research/animation-update-windows-source-plan.log",
+    "includesNewRuntimeAndNativeFixtures": true,
+    "androidHostIncluded": false,
+    "buildOutputsIncluded": false,
+    "nodeModulesIncluded": false,
+    "cacheIncluded": false
+  },
+  "completeCreatureClasses": 0,
+  "autonomousViewportCreatureAcceptancePassed": false,
+  "newWindowsArchiveCreated": false,
+  "newSourceArchiveCreated": false,
+  "androidWorkPerformed": false,
+  "packagingReadiness": "Shared Animation.Update and actual fish request/pose transitions pass; Windows AMD64 build passes. All-creature completion condition remains unmet: motion/interaction/resource/scene owners and remaining families are unfinished. No completion archive created.",
+  "remaining": [
+    "CharFishGroupAnim whole MoveObjectAlongRail.Update 0x100484a90..0x100486690, dynamic Rail/cache ownership, real Model resource lifecycle and shared EventBarn motion/viewport; shared Animation.Update and captured actual request/pose transitions are now verified",
+    "DarkCreature outer Update remainder 0x10026e7da..0x10026ffc0 and real eye/light/audio/world/resource owners",
+    "Crab whole outer Update 0x10025bc10..0x10025e590 and ground/world/interaction/Model/resource owners",
+    "BirdFlock whole child Update 0x10019bdc0..0x10019dbf0, Buddy, CritterV2/SimpleBird/WhaleFairy and remaining constructors/managers/messages/authority paths",
+    "FishV2 and BirdV2 real world/collision/Avatar/OBB/rail/resource/Model/animation/audio/particle and Barn ownership",
+    "All 52 reviewed biological family types, repeated load/unload, stopping, level switching, full scene behavior and Windows acceptance"
+  ],
+  "artifactSha256": {
+    "src/core/resource-animation-update.ts": "f404690fd9b98912dd0d011e0b3ea12afebfe32c80f6fad7f40847d02f87e12f",
+    "src/core/resource-animation-secondary.ts": "a05ba6598977cac7701c553f409efcdf66d43970428ed8634e1ae0097abde93c",
+    "src/core/resource-animation-clock.ts": "132004742e80858956f1e7d7fe25adf001e20925568c307f65e38364011f0951",
+    "src/core/resource-animation-matrices.ts": "8220b79d589417a06c7d2197ae8e12a42acdab3389fcf56115118e6b474cd15a",
+    "src/core/transform-node-runtime.ts": "c6a33e0ee869ea4b8fb67b8e1d643ac12d265a0bf947e2ded182854e386e0edb",
+    "tools/resource-animation-update-cases.ts": "9bf67b88b57db2bf1be29b768f03db0995318fc63df45c80a8ffa5c972e2b5d6",
+    "tools/resource-animation-update-oracle.ts": "5ef34ff5ad61bf473c6f51a43c1259ce058f35b04ba704dfd644fe698707be4b",
+    "tools/native-resource-animation-update-oracle.c": "db1ede2985904eb5a2df3e8c40ff5bde17ea52b19339f2ecb4617ac9f2a8fd66",
+    "tools/reverse-resource-animation-update.py": "f69ecf9269c463c8dfc9384bfa1c8c595ceb76d6426806cdea277ad05c223043",
+    "tools/verify-resource-animation-update.py": "1c64066cbb3532df4a5e82828791f9c12d6467e71770540435010fbef0f2ab7e",
+    "tools/fish-group-scene-cases.ts": "c233ad68fe7d9cb7327af001326702de306c8af23e8a5a1305ee9210638b95df",
+    "tools/capture-fish-group-animation-update.ts": "d3117215436a689ce3c660bf707e438144f41345769711ff6d1ef50887cf9c13",
+    "tools/reverse-resource-animation.py": "d3aba27c1ca3f9b3d86cc8e395ae3a95f1091fea8acb0c7c8c45d86995fbab96",
+    "tools/objects-category-census.py": "f65ab608afb36ee453ea5c07307b4d52eab44bd990054f8525cf7521642c9ec7",
+    "tools/objects-class-progress-spec.json": "28b4cdaa31f64fe22beced6f68495f4f797aa917af6a8870d6063070e22f67fb",
+    "tests/resource-animation-update.test.ts": "44e908b7882b0079b812493781e437a20567edbe672e462dbb0ecd772bfbdd73",
+    "tests/fixtures/resource-animation-update-native.json.gz": "b7018c83a673c5f8e160ee2f8570bcabae8e064bc0c904a2a019e5b60dc499dd",
+    "tests/fixtures/fish-group-animation-update-native.json.gz": "fe2db51e37bdb13c81314c63ef079c4eb084ab431b2f65a8bd27a5bb4e6503b8",
+    "tests/fixtures/fish-group-animation-update-inputs.json": "40c36fbe5beaffba8aee659d0a9bf3334573018ff4d350c1cab2fbe95c4e18bf",
+    "docs/resource-animation-update-native.json": "5438400f1404468e7e13bc462df92d3d8bc20a68325690cb93aab5493c887052",
+    "docs/resource-animation-update-oracle.json": "f6784575bb13ee15a23884a84d0b33d022323fd4b73592e41361f3dd533d4cb7",
+    "docs/fish-group-animation-update-oracle.json": "cb5dd4fce36e88e448c26fc673e731742e50455c2be59e8a65dd8ea4bcaaffe4",
+    "docs/resource-animation-native.json": "214e4d0baed77e72023f690d66362ddc1ff47f964412259c52776b466798aecd",
+    "docs/生物共用动画整链续接.md": "a6703c99fdd2e32ec4fa1b2dd145d4412d07859e4a3dd3d9f4c61f4ed04ecd7a",
+    "docs/生物骨骼动画续接.md": "300a460718f1c3bdfef7ffd128f5e0e0c29c98070ac8ce57609949a764a9f3ee",
+    "docs/交付状态.json": "207c4de062ce0f5d13ad1aab642b8854359127e03a2cdb14a7ac3d2a7e8fc6f5",
+    "evidence/resource-animation-update-Animation.Update.asm": "fe61d7731415d26da61a132bcb863e07afcebad3fb90cd7bc7b53ebee2281737",
+    "evidence/resource-animation-update-Animation.UpdatePrimary.asm": "68c6de06475fc07a27bc452d24df2a3144bc4cf3c12f6db76c6c6dd0b0baae05",
+    "evidence/resource-animation-update-Animation.UpdateSecondary.asm": "2c0d522a5d0613bad979ec186f6d869030fd3226e023b44538d9f28f5ba2f48b",
+    "evidence/resource-animation-update-Animation.UpdateAdditive.asm": "2c5758ab89a991fb1e8acb626b4bfd27db76b5754ca37d53d9c278e5c76bb23c",
+    "evidence/resource-animation-update-Animation.FlushMatricesAndEvents.asm": "5ea5e052fa56994de0f1b14542172438a82f01e38b9b795ddea2abcce1d147e2",
+    "evidence/resource-animation-update-AnimationRequest.UpdateClock.asm": "8cde738f4052e0fbb04e874c91c00a43362435d4488314f4d26ad447267a8d72",
+    "evidence/resource-animation-update-Transform.UpdateWorldMatrices.asm": "d2e9a6a7758ae56446cfa9f19a5cc292d19eac3475e94c5780cb90f4a7b0c2c7",
+    "evidence/resource-animation-update-Transform.GetWorldMatrix.asm": "b8b8d6c8eff752ce4267243463efa540fe38bce68296c3567d22c428d2fc2fb6",
+    "evidence/resource-animation-update-Transform.MarkDirty.asm": "f045da1b54fbfb195164912f5defddb4b7a2b144ba39495bf2212a7cef7519c4"
+  }
+}

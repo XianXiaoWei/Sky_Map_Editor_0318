@@ -1,0 +1,333 @@
+{
+  "passed": true,
+  "scope": "Production Electron desktop UI and XCB Vulkan presentation on Linux. Tests native replies, navigation, incremental editing, DPI, resizing and map cleanup. Does not validate Win32 HWND/transparent-window composition or Windows hardware FPS.",
+  "windowsTested": false,
+  "maps": [
+    {
+      "level": "Dawn",
+      "loadMs": 26456.315198,
+      "frames": 4,
+      "navigationStatusFps": 1.508870242078475,
+      "cameraMoved": true,
+      "resolution": [
+        309,
+        368
+      ],
+      "draws": 172,
+      "triangles": 238473,
+      "geometrySha256": "eaae68ecdde6a16d313d5ab913272482c10fdfc09d529cae1ed2145554ebc6e5",
+      "frameTiming": {
+        "environmentState": 1.5025000000023283,
+        "cloudPrepare": 2.7428129999971134,
+        "background": 0.41052000000490807,
+        "materials": 8.371093999994628,
+        "fullEffectsAndPresent": 694.8751040000061
+      },
+      "fullTransport": {
+        "gpuResident": true,
+        "intermediateFrameReadbacks": 0,
+        "nativeExposureSamples": 2055,
+        "cache": {
+          "stages": 13,
+          "setups": 13,
+          "patches": 110,
+          "intermediateFrameReadbacks": 0
+        }
+      },
+      "visibleDraws": 172,
+      "sceneReuploads": 0,
+      "materialReuploads": 0
+    },
+    {
+      "level": "SkyHub2",
+      "loadMs": 19474.301607,
+      "frames": 7,
+      "navigationStatusFps": 2.5505972358244944,
+      "cameraMoved": true,
+      "resolution": [
+        269,
+        320
+      ],
+      "draws": 197,
+      "triangles": 336284,
+      "geometrySha256": "34408faf583128afdc76eed176fd76225d127456b26824512c046cbb59ca3e87",
+      "frameTiming": {
+        "environmentState": 2.749895999993896,
+        "cloudPrepare": 5.581770999997389,
+        "background": 1.1692190000030678,
+        "materials": 13.981927000000724,
+        "fullEffectsAndPresent": 491.9043740000052
+      },
+      "fullTransport": {
+        "gpuResident": true,
+        "intermediateFrameReadbacks": 0,
+        "nativeExposureSamples": 2050,
+        "cache": {
+          "stages": 13,
+          "setups": 16,
+          "patches": 250,
+          "intermediateFrameReadbacks": 0
+        }
+      },
+      "visibleDraws": 197,
+      "sceneReuploads": 0,
+      "materialReuploads": 0
+    },
+    {
+      "level": "Dawn",
+      "loadMs": 11981.927964000002,
+      "frames": 4,
+      "navigationStatusFps": 1.5789225361246135,
+      "cameraMoved": true,
+      "resolution": [
+        269,
+        320
+      ],
+      "draws": 172,
+      "triangles": 238473,
+      "geometrySha256": "eaae68ecdde6a16d313d5ab913272482c10fdfc09d529cae1ed2145554ebc6e5",
+      "frameTiming": {
+        "environmentState": 0.6313020000088727,
+        "cloudPrepare": 1.7444269999978133,
+        "background": 0.1116150000016205,
+        "materials": 1.7695830000011483,
+        "fullEffectsAndPresent": 612.0410409999895
+      },
+      "fullTransport": {
+        "gpuResident": true,
+        "intermediateFrameReadbacks": 0,
+        "nativeExposureSamples": 2050,
+        "cache": {
+          "stages": 13,
+          "setups": 19,
+          "patches": 351,
+          "intermediateFrameReadbacks": 0
+        }
+      },
+      "visibleDraws": 172,
+      "sceneReuploads": 0,
+      "materialReuploads": 0
+    }
+  ],
+  "errors": [],
+  "device": {
+    "engine": "Sky Native Vulkan",
+    "backend": "Vulkan",
+    "device": "llvmpipe (LLVM 19.1.7, 128 bits)",
+    "apiVersion": 4210993,
+    "deviceType": 4,
+    "nativeSurface": true,
+    "shaderFloat16": true,
+    "samplerAnisotropyPolicy": "llvmpipe-trilinear",
+    "maxSamplerAnisotropy": 16
+  },
+  "fullEffectsOnly": true,
+  "interaction": {
+    "nodeId": 7,
+    "translation": 3,
+    "responseMs": 2826.050102999987,
+    "poseRequests": 1,
+    "sceneReuploads": 0,
+    "materialReuploads": 0,
+    "geometryUnchanged": true
+  },
+  "resizeAndDpi": {
+    "ratio": 1.5,
+    "physicalWidth": 1125,
+    "renderWidth": 320,
+    "renderHeight": 302
+  },
+  "empty": {
+    "scope": "Original terrain/skirt GLSL, real packed geometry/material textures with declared gamma/mip handling and supported anisotropy (16x preview request), recovered float32 shader time and three-layer scroll accumulation. Shared original Wind spatial/timer/order sampling, additional Marker OBBs and cached Rail equations feed original texture drift. Ambient/boundary/interaction force services and native Rail lifecycle remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/MotionGen/MotionDilate/TemporalAa/Tonemap chain. PNG area-filtered mip generation and anisotropy strength remain preview adapters, not original exporter/Metal parity. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending. Resource models and prepared Beamo LOD0 draws use original GLSL, packed float3/color/SNORM normals/half4 UV pairs and baked lighting. Transparent descriptor states use original blend/depth/cull evidence; back-to-front bounds ordering is an editor adapter, not the original Scene sort. Beamo normals use observed RSQRTSS capability; external weight volumes, automatic LOD/Visibility, Barn/GPU ownership and complete original classes remain open.",
+    "geometrySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "draws": 0,
+    "terrainDraws": 0,
+    "modelDraws": 0,
+    "beamoDraws": 0,
+    "beamoInstances": 0,
+    "levelMeshDraws": 0,
+    "modelBoundaries": [],
+    "modelParameterBindings": [],
+    "modelBindings": [],
+    "shaders": [],
+    "triangles": 0,
+    "textures": [],
+    "samplerPolicy": "llvmpipe-trilinear",
+    "textureSampling": [],
+    "dynamics": {
+      "time": 0,
+      "scrolls": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "materialUploads": 1,
+    "orderUpdates": 1,
+    "probeUpdates": 0,
+    "visibleDraws": 0,
+    "materialQuality": "original",
+    "quality": "full",
+    "materialCache": {
+      "slots": 0,
+      "setups": 0,
+      "patches": 0,
+      "capacity": 16
+    },
+    "fullCache": {
+      "stages": 12,
+      "setups": 19,
+      "patches": 521,
+      "intermediateFrameReadbacks": 0
+    },
+    "frameTiming": {
+      "environmentState": 0.03880200001003686,
+      "cloudPrepare": 5.382239999991725,
+      "background": 0.7561980000027688,
+      "materials": 0.1693749999976717,
+      "fullEffectsAndPresent": 199.72572899999795
+    },
+    "sceneUploads": 6,
+    "overlayUpdates": 9,
+    "cloud": {
+      "scope": "Original sparse cloud fields and CloudFluffy.vol; CloudCore history/signed depth, three depth passes, 1/8 and 1/4 R16F coarse passes, half-resolution dual RGBA16F CloudFluffy plus dynamic CloudCard, original FogUpsample, MotionGen/MotionDilate/TemporalAa and Tonemap GLSL. Native eight-phase scene and 32-phase half jitter, Gaussian taps and current-jitter correction of previous projection; editor frame clock. Stage-sized viewport uniforms; native top-row depth for AIR FragCoord and explicit lower-left storage for projected Coarse/Fog UV. Shared original environment/weather event bodies and real Wind/extra Marker/cached Rail sampling feed material and cloud motion; prepared ambient/boundary/interaction and native Rail lifecycle remain pending. Camera used for local avatar, original loaded GUID/remap lighting for compatible CloudCards; explicit neutral preview lighting only for unbaked cards, no Visibility occlusion, water/fog-volume/bloom/motion-blur inputs zero; recovered transparent color/log-depth outputs use opaque depth and feed FogUpsample, static opaque motion with original temporal resolve; deterministic editor rand31 stream with native conversion, explicit preview composed-HDR geometric-mean exposure and sRGB display transfer. Native opaque RGBA32F converted once to half RTE; transparent targets use explicit RGBA32F preview storage; original per-draw Metal half rounding/game image parity remain unverified.",
+      "enabled": true,
+      "frames": 2,
+      "volumeBlocks": 0,
+      "proxyTriangles": 0,
+      "visibleCards": 0,
+      "bakedCards": 0,
+      "unbakedCards": 0,
+      "cardBakeScope": "Prepared LevelData GUID/first-LOD gate and original Mesh remap; native resource/CloudCard lifecycle and unbaked default-light generation pending",
+      "passes": [
+        "OpaqueRGBDepth",
+        "DepthDownsample",
+        "DepthDownsampleGather",
+        "DepthDownsampleQuarter",
+        "AlphaColorLogDepth",
+        "PreviewLuminance",
+        "FogUpsample",
+        "MotionGen",
+        "MotionDilate",
+        "TemporalAa",
+        "Tonemap"
+      ],
+      "screenNoiseImages": [
+        "NoiseBlue3Ch",
+        "HeatTex"
+      ],
+      "randomOffset": [
+        0.40886253118515015,
+        0.20190106332302094,
+        0.5250416398048401
+      ],
+      "sampling": {
+        "frame": 1,
+        "phase": 1,
+        "halfPhase": 1,
+        "pixelOffset": [
+          -0.1875,
+          0.1875
+        ],
+        "jitter": [
+          0.0005859375232830644,
+          -0.0006208609556779265
+        ],
+        "jitterHalf": [
+          0.0015625000232830644,
+          -0.0016556291375309229
+        ],
+        "clockScope": "Editor completed-frame counter; native sampling sequence, not original process frame timing"
+      },
+      "randomStreamScope": "Deterministic editor 31-bit sequence with original Compositor conversion; process-wide Darwin rand stream not reproduced",
+      "wind": {
+        "move": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "scroll": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "time": 0
+      },
+      "undulationScale": 0,
+      "cloudMat": [
+        0.4562634229660034,
+        0.4562634229660034,
+        0.4562634229660034,
+        1
+      ],
+      "cloudNoiseTweaks": [
+        2.5,
+        0.5,
+        0.5,
+        0.15000000596046448
+      ],
+      "lastMilliseconds": 199.62025999999605,
+      "averageLum": 0.0037810919224653024,
+      "exposureScope": "Editor composed-HDR geometric mean and sRGB display transfer; original luminance feedback pending",
+      "statistics": {
+        "transport": {
+          "gpuResident": true,
+          "intermediateFrameReadbacks": 0,
+          "nativeExposureSamples": 2057,
+          "cache": {
+            "stages": 12,
+            "setups": 19,
+            "patches": 512,
+            "intermediateFrameReadbacks": 0
+          }
+        },
+        "temporal": {
+          "cameraCut": false,
+          "frames": 2,
+          "scope": "Original motion/temporal fragments with GPU-resident cloud and color history"
+        }
+      },
+      "active": true
+    }
+  },
+  "transport": {
+    "calls": {
+      "vulkanInfo": 2,
+      "bootstrap": 1,
+      "vulkanSurfaceBounds": 3,
+      "setData": 1,
+      "openLevel": 5,
+      "vulkanScene": 6,
+      "vulkanOverlay": 9,
+      "vulkanFrame": 44,
+      "resourceMesh": 249,
+      "modelPreviewBatch": 57,
+      "shaderProgram": 91,
+      "imageInfo": 137,
+      "vulkanViewportInfo": 9,
+      "editObjects": 1,
+      "vulkanModelTransforms": 1,
+      "undo": 1
+    },
+    "surfaceFrames": 43,
+    "pixelBytes": 0
+  },
+  "sourceHashesUnchanged": true
+}

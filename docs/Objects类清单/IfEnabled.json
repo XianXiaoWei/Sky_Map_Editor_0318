@@ -1,0 +1,1961 @@
+{
+  "className": "IfEnabled",
+  "functionGroup": "事件调度与逻辑条件",
+  "functionRole": "对象集合启用状态条件",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "partial",
+      "description": "IfEnabled 的原默认值、继承初始化及 5 个序列化字段变体；原注册字段 4 项。"
+    },
+    {
+      "name": "对象集合启用状态条件",
+      "status": "partial",
+      "description": "完整 OR 条件逐一查询、反向条件、事件逐一启用和 checkOnce 已核验；真实 Get/SetEnabled 元数据链与对象生命周期待闭合，大于65535项的原回绕保留为未支持范围。 本轮新增ClumpBarn→TGCL数组装载/引用修复→Enable/IfEnabled→原GetEnabled/SetEnabled继承反射→嵌套Clump→FloatAdd/FloatMult→卸载复位连续核验：164组、331快照、0差异。118个真实配置片段（82 Enable、全部36 IfEnabled）保留节点/成员顺序及字段值；原6组断言与117次未实现类服务边界分列，未将缺失类伪造启用状态。Clump无聚合GetEnabled；killEvents按原Start后清active字节。metadata/default缓存、方法缓存flag=true内部、未实现目标类、完整场景/Avatar与Windows验收仍待恢复。 本轮Enable/IfEnabled/Delay与嵌套Clump接入统一地图播放及原EventBarn完整Update/排序、首帧load/enable/update/finish：301组（293真实根、8合成混合链）、7525帧、263925600比较字节0差异。33图四类540配置满足字段/依赖预检，另须模型已加载；每根25帧有限核验，不称全部Delay已结束。Clump无聚合GetEnabled默认true、Delay原时间钳制、Marker保存enabled和LevelMesh启用转发保留。停止还原矩阵/可见性，编辑/模式/切图清理；metadata/保存字段/槽顺序/Heap/GameTime和Linux libm为准备输入/服务，真实Model仍prepared null，完整原类/实例验收保持0。 2026-11-20数值地图播放续接：FloatAdd/FloatMult/SetFloat与原EventBarn、对象组/延迟/条件、共享Float和后续TransformObject同链运行；362组、9146帧、307419512比较字节原机器码0差异，含342真实根与20组准备输入，全部31/14/4真实数值配置。33图七类589配置满足依赖预检。停止恢复保存值/矩阵，暂停及编辑/模式/切图清理；原Model仍prepared null，logf/expf为核验服务、JS Math仅预览，完整原类/实例保持0。 2026-11-20条件地图续接：OnFloat/FloatSplit加入统一播放，保留原比较/双侧嵌套求值、短字符串、原始反转字节、BODY条件指针/Object分支指针、独立结束请求及共享Float分段别名写序。396组、9676帧、323130696比较字节0差异，349真实根和47准备输入分列；新增3 OnFloat、全部2 FloatSplit及2 Delay真实根。33图九类596配置通过依赖预检。准备DayHubCave数值达到0.35后触发0.5秒Delay再变换原平台，15字段修改记录；相机矩阵与渲染对象帧对齐截图、暂停/还原/模式切图检查通过。debug输出/长字符串池/同步条件求值循环显式阻断。原材质非有限RGB错误未修复，Model/GPU/Avatar/完整场景及Windows验收仍缺，完整类/实例0不变。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "partial",
+      "description": "Clump（72 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "IfEnabled",
+    "category": "事件调度与逻辑条件",
+    "functionGroupId": "flow",
+    "functionRole": "对象集合启用状态条件",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "partial",
+        "description": "IfEnabled 的原默认值、继承初始化及 5 个序列化字段变体；原注册字段 4 项。"
+      },
+      {
+        "name": "对象集合启用状态条件",
+        "status": "partial",
+        "description": "完整 OR 条件逐一查询、反向条件、事件逐一启用和 checkOnce 已核验；真实 Get/SetEnabled 元数据链与对象生命周期待闭合，大于65535项的原回绕保留为未支持范围。 本轮新增ClumpBarn→TGCL数组装载/引用修复→Enable/IfEnabled→原GetEnabled/SetEnabled继承反射→嵌套Clump→FloatAdd/FloatMult→卸载复位连续核验：164组、331快照、0差异。118个真实配置片段（82 Enable、全部36 IfEnabled）保留节点/成员顺序及字段值；原6组断言与117次未实现类服务边界分列，未将缺失类伪造启用状态。Clump无聚合GetEnabled；killEvents按原Start后清active字节。metadata/default缓存、方法缓存flag=true内部、未实现目标类、完整场景/Avatar与Windows验收仍待恢复。 本轮Enable/IfEnabled/Delay与嵌套Clump接入统一地图播放及原EventBarn完整Update/排序、首帧load/enable/update/finish：301组（293真实根、8合成混合链）、7525帧、263925600比较字节0差异。33图四类540配置满足字段/依赖预检，另须模型已加载；每根25帧有限核验，不称全部Delay已结束。Clump无聚合GetEnabled默认true、Delay原时间钳制、Marker保存enabled和LevelMesh启用转发保留。停止还原矩阵/可见性，编辑/模式/切图清理；metadata/保存字段/槽顺序/Heap/GameTime和Linux libm为准备输入/服务，真实Model仍prepared null，完整原类/实例验收保持0。 2026-11-20数值地图播放续接：FloatAdd/FloatMult/SetFloat与原EventBarn、对象组/延迟/条件、共享Float和后续TransformObject同链运行；362组、9146帧、307419512比较字节原机器码0差异，含342真实根与20组准备输入，全部31/14/4真实数值配置。33图七类589配置满足依赖预检。停止恢复保存值/矩阵，暂停及编辑/模式/切图清理；原Model仍prepared null，logf/expf为核验服务、JS Math仅预览，完整原类/实例保持0。 2026-11-20条件地图续接：OnFloat/FloatSplit加入统一播放，保留原比较/双侧嵌套求值、短字符串、原始反转字节、BODY条件指针/Object分支指针、独立结束请求及共享Float分段别名写序。396组、9676帧、323130696比较字节0差异，349真实根和47准备输入分列；新增3 OnFloat、全部2 FloatSplit及2 Delay真实根。33图九类596配置通过依赖预检。准备DayHubCave数值达到0.35后触发0.5秒Delay再变换原平台，15字段修改记录；相机矩阵与渲染对象帧对齐截图、暂停/还原/模式切图检查通过。debug输出/长字符串池/同步条件求值循环显式阻断。原材质非有限RGB错误未修复，Model/GPU/Avatar/完整场景及Windows验收仍缺，完整类/实例0不变。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "partial",
+        "description": "Clump（72 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Clump",
+        "references": 72
+      }
+    ],
+    "rttiWorkingGroup": "系统和其余类型",
+    "role": "对象实例类型",
+    "instances": 36,
+    "nestedInstances": 0,
+    "referenceFields": 72,
+    "declaredLevels": 5,
+    "levels": [
+      {
+        "level": "DuskGraveyard",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Village",
+        "nodes": 14,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SkyHub2",
+        "nodes": 5,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SunsetEnd",
+        "nodes": 12,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "TitleWater",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "areTheseObjectsEnabled",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "checkOnce",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "events",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "triggerOnDisabled",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100d0c630",
+    "nativeRegisteredFields": [
+      {
+        "name": "events",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 72,
+        "registrationFunction": "0x10071a7e0",
+        "propertyAddress": "0x100d0a9f0"
+      },
+      {
+        "name": "triggerOnDisabled",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 64,
+        "registrationFunction": "0x10071a7e0",
+        "propertyAddress": "0x100d0aa40"
+      },
+      {
+        "name": "areTheseObjectsEnabled",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x10071a7e0",
+        "propertyAddress": "0x100d0aa90"
+      },
+      {
+        "name": "checkOnce",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 80,
+        "registrationFunction": "0x10071a7e0",
+        "propertyAddress": "0x100d0aae0"
+      }
+    ],
+    "completedCheckpoints": 4,
+    "partialCheckpoints": 4,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 40,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": true,
+    "implementation": [
+      "src/core/object-flow-runtime.ts",
+      "src/core/clump-runtime.ts",
+      "src/core/object-enabled-runtime.ts",
+      "src/core/logic-event-runtime.ts",
+      "src/core/object-playback-plan.ts",
+      "src/core/transform-object-preview.ts"
+    ],
+    "evidence": [
+      "docs/数值类事件与依赖音效逆向.md",
+      "docs/object-runtime-native.json",
+      "docs/Enable与IfEnabled对象组调用链逆向.md",
+      "docs/logic-chain-oracle.json",
+      "docs/Objects对象组启用延迟与条件地图播放.md",
+      "docs/object-logic-preview-oracle.json",
+      "docs/object-logic-preview-availability.json",
+      "docs/object-logic-preview-smoke.json",
+      "docs/object-logic-preview-verification.json",
+      "tests/fixtures/object-logic-preview-native.json.gz",
+      "docs/Objects数值与平滑控制地图播放.md",
+      "docs/numeric-map-preview-oracle.json",
+      "docs/numeric-map-preview-smoke.json",
+      "docs/set-float-map-preview-oracle.json",
+      "docs/set-float-map-preview-availability.json",
+      "tests/fixtures/set-float-map-preview-native.json.gz",
+      "docs/set-float-map-preview-smoke.json",
+      "docs/set-float-map-preview-material-boundary.json",
+      "docs/set-float-map-preview-before.png",
+      "docs/set-float-map-preview-moving.png",
+      "docs/Objects条件与分段数值地图播放.md",
+      "docs/float-condition-map-preview-oracle.json",
+      "docs/float-condition-map-preview-availability.json",
+      "docs/float-condition-map-preview-smoke.json",
+      "docs/float-condition-map-preview-screenshot-check.json",
+      "docs/float-condition-map-preview-verification.json",
+      "tests/fixtures/float-condition-map-preview-native.json.gz",
+      "docs/float-condition-map-preview-before.png",
+      "docs/float-condition-map-preview-moving.png",
+      "docs/object-batch-oracle.json"
+    ],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 4 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "partial",
+        "note": "完整 OR 条件逐一查询、反向条件、事件逐一启用和 checkOnce 已核验；真实 Get/SetEnabled 元数据链与对象生命周期待闭合，大于65535项的原回绕保留为未支持范围。 本轮新增ClumpBarn→TGCL数组装载/引用修复→Enable/IfEnabled→原GetEnabled/SetEnabled继承反射→嵌套Clump→FloatAdd/FloatMult→卸载复位连续核验：164组、331快照、0差异。118个真实配置片段（82 Enable、全部36 IfEnabled）保留节点/成员顺序及字段值；原6组断言与117次未实现类服务边界分列，未将缺失类伪造启用状态。Clump无聚合GetEnabled；killEvents按原Start后清active字节。metadata/default缓存、方法缓存flag=true内部、未实现目标类、完整场景/Avatar与Windows验收仍待恢复。 本轮Enable/IfEnabled/Delay与嵌套Clump接入统一地图播放及原EventBarn完整Update/排序、首帧load/enable/update/finish：301组（293真实根、8合成混合链）、7525帧、263925600比较字节0差异。33图四类540配置满足字段/依赖预检，另须模型已加载；每根25帧有限核验，不称全部Delay已结束。Clump无聚合GetEnabled默认true、Delay原时间钳制、Marker保存enabled和LevelMesh启用转发保留。停止还原矩阵/可见性，编辑/模式/切图清理；metadata/保存字段/槽顺序/Heap/GameTime和Linux libm为准备输入/服务，真实Model仍prepared null，完整原类/实例验收保持0。 2026-11-20数值地图播放续接：FloatAdd/FloatMult/SetFloat与原EventBarn、对象组/延迟/条件、共享Float和后续TransformObject同链运行；362组、9146帧、307419512比较字节原机器码0差异，含342真实根与20组准备输入，全部31/14/4真实数值配置。33图七类589配置满足依赖预检。停止恢复保存值/矩阵，暂停及编辑/模式/切图清理；原Model仍prepared null，logf/expf为核验服务、JS Math仅预览，完整原类/实例保持0。 2026-11-20条件地图续接：OnFloat/FloatSplit加入统一播放，保留原比较/双侧嵌套求值、短字符串、原始反转字节、BODY条件指针/Object分支指针、独立结束请求及共享Float分段别名写序。396组、9676帧、323130696比较字节0差异，349真实根和47准备输入分列；新增3 OnFloat、全部2 FloatSplit及2 Delay真实根。33图九类596配置通过依赖预检。准备DayHubCave数值达到0.35后触发0.5秒Delay再变换原平台，15字段修改记录；相机矩阵与渲染对象帧对齐截图、暂停/还原/模式切图检查通过。debug输出/长字符串池/同步条件求值循环显式阻断。原材质非有限RGB错误未修复，Model/GPU/Avatar/完整场景及Windows验收仍缺，完整类/实例0不变。",
+        "evidence": [
+          "docs/数值类事件与依赖音效逆向.md",
+          "docs/object-runtime-native.json",
+          "docs/Enable与IfEnabled对象组调用链逆向.md",
+          "docs/logic-chain-oracle.json",
+          "docs/Objects对象组启用延迟与条件地图播放.md",
+          "docs/object-logic-preview-oracle.json",
+          "docs/object-logic-preview-availability.json",
+          "docs/object-logic-preview-smoke.json",
+          "docs/object-logic-preview-verification.json",
+          "tests/fixtures/object-logic-preview-native.json.gz",
+          "docs/Objects数值与平滑控制地图播放.md",
+          "docs/numeric-map-preview-oracle.json",
+          "docs/numeric-map-preview-smoke.json",
+          "docs/set-float-map-preview-oracle.json",
+          "docs/set-float-map-preview-availability.json",
+          "tests/fixtures/set-float-map-preview-native.json.gz",
+          "docs/set-float-map-preview-smoke.json",
+          "docs/set-float-map-preview-material-boundary.json",
+          "docs/set-float-map-preview-before.png",
+          "docs/set-float-map-preview-moving.png",
+          "docs/Objects条件与分段数值地图播放.md",
+          "docs/float-condition-map-preview-oracle.json",
+          "docs/float-condition-map-preview-availability.json",
+          "docs/float-condition-map-preview-smoke.json",
+          "docs/float-condition-map-preview-screenshot-check.json",
+          "docs/float-condition-map-preview-verification.json",
+          "tests/fixtures/float-condition-map-preview-native.json.gz",
+          "docs/float-condition-map-preview-before.png",
+          "docs/float-condition-map-preview-moving.png",
+          "docs/object-batch-oracle.json"
+        ]
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "partial",
+        "note": "完整 OR 条件逐一查询、反向条件、事件逐一启用和 checkOnce 已核验；真实 Get/SetEnabled 元数据链与对象生命周期待闭合，大于65535项的原回绕保留为未支持范围。 本轮新增ClumpBarn→TGCL数组装载/引用修复→Enable/IfEnabled→原GetEnabled/SetEnabled继承反射→嵌套Clump→FloatAdd/FloatMult→卸载复位连续核验：164组、331快照、0差异。118个真实配置片段（82 Enable、全部36 IfEnabled）保留节点/成员顺序及字段值；原6组断言与117次未实现类服务边界分列，未将缺失类伪造启用状态。Clump无聚合GetEnabled；killEvents按原Start后清active字节。metadata/default缓存、方法缓存flag=true内部、未实现目标类、完整场景/Avatar与Windows验收仍待恢复。 本轮Enable/IfEnabled/Delay与嵌套Clump接入统一地图播放及原EventBarn完整Update/排序、首帧load/enable/update/finish：301组（293真实根、8合成混合链）、7525帧、263925600比较字节0差异。33图四类540配置满足字段/依赖预检，另须模型已加载；每根25帧有限核验，不称全部Delay已结束。Clump无聚合GetEnabled默认true、Delay原时间钳制、Marker保存enabled和LevelMesh启用转发保留。停止还原矩阵/可见性，编辑/模式/切图清理；metadata/保存字段/槽顺序/Heap/GameTime和Linux libm为准备输入/服务，真实Model仍prepared null，完整原类/实例验收保持0。 2026-11-20数值地图播放续接：FloatAdd/FloatMult/SetFloat与原EventBarn、对象组/延迟/条件、共享Float和后续TransformObject同链运行；362组、9146帧、307419512比较字节原机器码0差异，含342真实根与20组准备输入，全部31/14/4真实数值配置。33图七类589配置满足依赖预检。停止恢复保存值/矩阵，暂停及编辑/模式/切图清理；原Model仍prepared null，logf/expf为核验服务、JS Math仅预览，完整原类/实例保持0。 2026-11-20条件地图续接：OnFloat/FloatSplit加入统一播放，保留原比较/双侧嵌套求值、短字符串、原始反转字节、BODY条件指针/Object分支指针、独立结束请求及共享Float分段别名写序。396组、9676帧、323130696比较字节0差异，349真实根和47准备输入分列；新增3 OnFloat、全部2 FloatSplit及2 Delay真实根。33图九类596配置通过依赖预检。准备DayHubCave数值达到0.35后触发0.5秒Delay再变换原平台，15字段修改记录；相机矩阵与渲染对象帧对齐截图、暂停/还原/模式切图检查通过。debug输出/长字符串池/同步条件求值循环显式阻断。原材质非有限RGB错误未修复，Model/GPU/Avatar/完整场景及Windows验收仍缺，完整类/实例0不变。",
+        "evidence": [
+          "docs/数值类事件与依赖音效逆向.md",
+          "docs/object-runtime-native.json",
+          "docs/Enable与IfEnabled对象组调用链逆向.md",
+          "docs/logic-chain-oracle.json",
+          "docs/Objects对象组启用延迟与条件地图播放.md",
+          "docs/object-logic-preview-oracle.json",
+          "docs/object-logic-preview-availability.json",
+          "docs/object-logic-preview-smoke.json",
+          "docs/object-logic-preview-verification.json",
+          "tests/fixtures/object-logic-preview-native.json.gz",
+          "docs/Objects数值与平滑控制地图播放.md",
+          "docs/numeric-map-preview-oracle.json",
+          "docs/numeric-map-preview-smoke.json",
+          "docs/set-float-map-preview-oracle.json",
+          "docs/set-float-map-preview-availability.json",
+          "tests/fixtures/set-float-map-preview-native.json.gz",
+          "docs/set-float-map-preview-smoke.json",
+          "docs/set-float-map-preview-material-boundary.json",
+          "docs/set-float-map-preview-before.png",
+          "docs/set-float-map-preview-moving.png",
+          "docs/Objects条件与分段数值地图播放.md",
+          "docs/float-condition-map-preview-oracle.json",
+          "docs/float-condition-map-preview-availability.json",
+          "docs/float-condition-map-preview-smoke.json",
+          "docs/float-condition-map-preview-screenshot-check.json",
+          "docs/float-condition-map-preview-verification.json",
+          "tests/fixtures/float-condition-map-preview-native.json.gz",
+          "docs/float-condition-map-preview-before.png",
+          "docs/float-condition-map-preview-moving.png",
+          "docs/object-batch-oracle.json"
+        ]
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "verified",
+        "note": "完整 OR 条件逐一查询、反向条件、事件逐一启用和 checkOnce 已核验；真实 Get/SetEnabled 元数据链与对象生命周期待闭合，大于65535项的原回绕保留为未支持范围。 本轮新增ClumpBarn→TGCL数组装载/引用修复→Enable/IfEnabled→原GetEnabled/SetEnabled继承反射→嵌套Clump→FloatAdd/FloatMult→卸载复位连续核验：164组、331快照、0差异。118个真实配置片段（82 Enable、全部36 IfEnabled）保留节点/成员顺序及字段值；原6组断言与117次未实现类服务边界分列，未将缺失类伪造启用状态。Clump无聚合GetEnabled；killEvents按原Start后清active字节。metadata/default缓存、方法缓存flag=true内部、未实现目标类、完整场景/Avatar与Windows验收仍待恢复。 本轮Enable/IfEnabled/Delay与嵌套Clump接入统一地图播放及原EventBarn完整Update/排序、首帧load/enable/update/finish：301组（293真实根、8合成混合链）、7525帧、263925600比较字节0差异。33图四类540配置满足字段/依赖预检，另须模型已加载；每根25帧有限核验，不称全部Delay已结束。Clump无聚合GetEnabled默认true、Delay原时间钳制、Marker保存enabled和LevelMesh启用转发保留。停止还原矩阵/可见性，编辑/模式/切图清理；metadata/保存字段/槽顺序/Heap/GameTime和Linux libm为准备输入/服务，真实Model仍prepared null，完整原类/实例验收保持0。 2026-11-20数值地图播放续接：FloatAdd/FloatMult/SetFloat与原EventBarn、对象组/延迟/条件、共享Float和后续TransformObject同链运行；362组、9146帧、307419512比较字节原机器码0差异，含342真实根与20组准备输入，全部31/14/4真实数值配置。33图七类589配置满足依赖预检。停止恢复保存值/矩阵，暂停及编辑/模式/切图清理；原Model仍prepared null，logf/expf为核验服务、JS Math仅预览，完整原类/实例保持0。 2026-11-20条件地图续接：OnFloat/FloatSplit加入统一播放，保留原比较/双侧嵌套求值、短字符串、原始反转字节、BODY条件指针/Object分支指针、独立结束请求及共享Float分段别名写序。396组、9676帧、323130696比较字节0差异，349真实根和47准备输入分列；新增3 OnFloat、全部2 FloatSplit及2 Delay真实根。33图九类596配置通过依赖预检。准备DayHubCave数值达到0.35后触发0.5秒Delay再变换原平台，15字段修改记录；相机矩阵与渲染对象帧对齐截图、暂停/还原/模式切图检查通过。debug输出/长字符串池/同步条件求值循环显式阻断。原材质非有限RGB错误未修复，Model/GPU/Avatar/完整场景及Windows验收仍缺，完整类/实例0不变。",
+        "evidence": [
+          "docs/数值类事件与依赖音效逆向.md",
+          "docs/object-runtime-native.json",
+          "docs/Enable与IfEnabled对象组调用链逆向.md",
+          "docs/logic-chain-oracle.json",
+          "docs/Objects对象组启用延迟与条件地图播放.md",
+          "docs/object-logic-preview-oracle.json",
+          "docs/object-logic-preview-availability.json",
+          "docs/object-logic-preview-smoke.json",
+          "docs/object-logic-preview-verification.json",
+          "tests/fixtures/object-logic-preview-native.json.gz",
+          "docs/Objects数值与平滑控制地图播放.md",
+          "docs/numeric-map-preview-oracle.json",
+          "docs/numeric-map-preview-smoke.json",
+          "docs/set-float-map-preview-oracle.json",
+          "docs/set-float-map-preview-availability.json",
+          "tests/fixtures/set-float-map-preview-native.json.gz",
+          "docs/set-float-map-preview-smoke.json",
+          "docs/set-float-map-preview-material-boundary.json",
+          "docs/set-float-map-preview-before.png",
+          "docs/set-float-map-preview-moving.png",
+          "docs/Objects条件与分段数值地图播放.md",
+          "docs/float-condition-map-preview-oracle.json",
+          "docs/float-condition-map-preview-availability.json",
+          "docs/float-condition-map-preview-smoke.json",
+          "docs/float-condition-map-preview-screenshot-check.json",
+          "docs/float-condition-map-preview-verification.json",
+          "tests/fixtures/float-condition-map-preview-native.json.gz",
+          "docs/float-condition-map-preview-before.png",
+          "docs/float-condition-map-preview-moving.png",
+          "docs/object-batch-oracle.json"
+        ]
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "partial",
+        "note": "完整 OR 条件逐一查询、反向条件、事件逐一启用和 checkOnce 已核验；真实 Get/SetEnabled 元数据链与对象生命周期待闭合，大于65535项的原回绕保留为未支持范围。 本轮新增ClumpBarn→TGCL数组装载/引用修复→Enable/IfEnabled→原GetEnabled/SetEnabled继承反射→嵌套Clump→FloatAdd/FloatMult→卸载复位连续核验：164组、331快照、0差异。118个真实配置片段（82 Enable、全部36 IfEnabled）保留节点/成员顺序及字段值；原6组断言与117次未实现类服务边界分列，未将缺失类伪造启用状态。Clump无聚合GetEnabled；killEvents按原Start后清active字节。metadata/default缓存、方法缓存flag=true内部、未实现目标类、完整场景/Avatar与Windows验收仍待恢复。 本轮Enable/IfEnabled/Delay与嵌套Clump接入统一地图播放及原EventBarn完整Update/排序、首帧load/enable/update/finish：301组（293真实根、8合成混合链）、7525帧、263925600比较字节0差异。33图四类540配置满足字段/依赖预检，另须模型已加载；每根25帧有限核验，不称全部Delay已结束。Clump无聚合GetEnabled默认true、Delay原时间钳制、Marker保存enabled和LevelMesh启用转发保留。停止还原矩阵/可见性，编辑/模式/切图清理；metadata/保存字段/槽顺序/Heap/GameTime和Linux libm为准备输入/服务，真实Model仍prepared null，完整原类/实例验收保持0。 2026-11-20数值地图播放续接：FloatAdd/FloatMult/SetFloat与原EventBarn、对象组/延迟/条件、共享Float和后续TransformObject同链运行；362组、9146帧、307419512比较字节原机器码0差异，含342真实根与20组准备输入，全部31/14/4真实数值配置。33图七类589配置满足依赖预检。停止恢复保存值/矩阵，暂停及编辑/模式/切图清理；原Model仍prepared null，logf/expf为核验服务、JS Math仅预览，完整原类/实例保持0。 2026-11-20条件地图续接：OnFloat/FloatSplit加入统一播放，保留原比较/双侧嵌套求值、短字符串、原始反转字节、BODY条件指针/Object分支指针、独立结束请求及共享Float分段别名写序。396组、9676帧、323130696比较字节0差异，349真实根和47准备输入分列；新增3 OnFloat、全部2 FloatSplit及2 Delay真实根。33图九类596配置通过依赖预检。准备DayHubCave数值达到0.35后触发0.5秒Delay再变换原平台，15字段修改记录；相机矩阵与渲染对象帧对齐截图、暂停/还原/模式切图检查通过。debug输出/长字符串池/同步条件求值循环显式阻断。原材质非有限RGB错误未修复，Model/GPU/Avatar/完整场景及Windows验收仍缺，完整类/实例0不变。",
+        "evidence": [
+          "docs/数值类事件与依赖音效逆向.md",
+          "docs/object-runtime-native.json",
+          "docs/Enable与IfEnabled对象组调用链逆向.md",
+          "docs/logic-chain-oracle.json",
+          "docs/Objects对象组启用延迟与条件地图播放.md",
+          "docs/object-logic-preview-oracle.json",
+          "docs/object-logic-preview-availability.json",
+          "docs/object-logic-preview-smoke.json",
+          "docs/object-logic-preview-verification.json",
+          "tests/fixtures/object-logic-preview-native.json.gz",
+          "docs/Objects数值与平滑控制地图播放.md",
+          "docs/numeric-map-preview-oracle.json",
+          "docs/numeric-map-preview-smoke.json",
+          "docs/set-float-map-preview-oracle.json",
+          "docs/set-float-map-preview-availability.json",
+          "tests/fixtures/set-float-map-preview-native.json.gz",
+          "docs/set-float-map-preview-smoke.json",
+          "docs/set-float-map-preview-material-boundary.json",
+          "docs/set-float-map-preview-before.png",
+          "docs/set-float-map-preview-moving.png",
+          "docs/Objects条件与分段数值地图播放.md",
+          "docs/float-condition-map-preview-oracle.json",
+          "docs/float-condition-map-preview-availability.json",
+          "docs/float-condition-map-preview-smoke.json",
+          "docs/float-condition-map-preview-screenshot-check.json",
+          "docs/float-condition-map-preview-verification.json",
+          "tests/fixtures/float-condition-map-preview-native.json.gz",
+          "docs/float-condition-map-preview-before.png",
+          "docs/float-condition-map-preview-moving.png",
+          "docs/object-batch-oracle.json"
+        ]
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "partial",
+        "note": "完整 OR 条件逐一查询、反向条件、事件逐一启用和 checkOnce 已核验；真实 Get/SetEnabled 元数据链与对象生命周期待闭合，大于65535项的原回绕保留为未支持范围。 本轮新增ClumpBarn→TGCL数组装载/引用修复→Enable/IfEnabled→原GetEnabled/SetEnabled继承反射→嵌套Clump→FloatAdd/FloatMult→卸载复位连续核验：164组、331快照、0差异。118个真实配置片段（82 Enable、全部36 IfEnabled）保留节点/成员顺序及字段值；原6组断言与117次未实现类服务边界分列，未将缺失类伪造启用状态。Clump无聚合GetEnabled；killEvents按原Start后清active字节。metadata/default缓存、方法缓存flag=true内部、未实现目标类、完整场景/Avatar与Windows验收仍待恢复。 本轮Enable/IfEnabled/Delay与嵌套Clump接入统一地图播放及原EventBarn完整Update/排序、首帧load/enable/update/finish：301组（293真实根、8合成混合链）、7525帧、263925600比较字节0差异。33图四类540配置满足字段/依赖预检，另须模型已加载；每根25帧有限核验，不称全部Delay已结束。Clump无聚合GetEnabled默认true、Delay原时间钳制、Marker保存enabled和LevelMesh启用转发保留。停止还原矩阵/可见性，编辑/模式/切图清理；metadata/保存字段/槽顺序/Heap/GameTime和Linux libm为准备输入/服务，真实Model仍prepared null，完整原类/实例验收保持0。 2026-11-20数值地图播放续接：FloatAdd/FloatMult/SetFloat与原EventBarn、对象组/延迟/条件、共享Float和后续TransformObject同链运行；362组、9146帧、307419512比较字节原机器码0差异，含342真实根与20组准备输入，全部31/14/4真实数值配置。33图七类589配置满足依赖预检。停止恢复保存值/矩阵，暂停及编辑/模式/切图清理；原Model仍prepared null，logf/expf为核验服务、JS Math仅预览，完整原类/实例保持0。 2026-11-20条件地图续接：OnFloat/FloatSplit加入统一播放，保留原比较/双侧嵌套求值、短字符串、原始反转字节、BODY条件指针/Object分支指针、独立结束请求及共享Float分段别名写序。396组、9676帧、323130696比较字节0差异，349真实根和47准备输入分列；新增3 OnFloat、全部2 FloatSplit及2 Delay真实根。33图九类596配置通过依赖预检。准备DayHubCave数值达到0.35后触发0.5秒Delay再变换原平台，15字段修改记录；相机矩阵与渲染对象帧对齐截图、暂停/还原/模式切图检查通过。debug输出/长字符串池/同步条件求值循环显式阻断。原材质非有限RGB错误未修复，Model/GPU/Avatar/完整场景及Windows验收仍缺，完整类/实例0不变。",
+        "evidence": [
+          "docs/数值类事件与依赖音效逆向.md",
+          "docs/object-runtime-native.json",
+          "docs/Enable与IfEnabled对象组调用链逆向.md",
+          "docs/logic-chain-oracle.json",
+          "docs/Objects对象组启用延迟与条件地图播放.md",
+          "docs/object-logic-preview-oracle.json",
+          "docs/object-logic-preview-availability.json",
+          "docs/object-logic-preview-smoke.json",
+          "docs/object-logic-preview-verification.json",
+          "tests/fixtures/object-logic-preview-native.json.gz",
+          "docs/Objects数值与平滑控制地图播放.md",
+          "docs/numeric-map-preview-oracle.json",
+          "docs/numeric-map-preview-smoke.json",
+          "docs/set-float-map-preview-oracle.json",
+          "docs/set-float-map-preview-availability.json",
+          "tests/fixtures/set-float-map-preview-native.json.gz",
+          "docs/set-float-map-preview-smoke.json",
+          "docs/set-float-map-preview-material-boundary.json",
+          "docs/set-float-map-preview-before.png",
+          "docs/set-float-map-preview-moving.png",
+          "docs/Objects条件与分段数值地图播放.md",
+          "docs/float-condition-map-preview-oracle.json",
+          "docs/float-condition-map-preview-availability.json",
+          "docs/float-condition-map-preview-smoke.json",
+          "docs/float-condition-map-preview-screenshot-check.json",
+          "docs/float-condition-map-preview-verification.json",
+          "tests/fixtures/float-condition-map-preview-native.json.gz",
+          "docs/float-condition-map-preview-before.png",
+          "docs/float-condition-map-preview-moving.png",
+          "docs/object-batch-oracle.json"
+        ]
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "完整 OR 条件逐一查询、反向条件、事件逐一启用和 checkOnce 已核验；真实 Get/SetEnabled 元数据链与对象生命周期待闭合，大于65535项的原回绕保留为未支持范围。 本轮新增ClumpBarn→TGCL数组装载/引用修复→Enable/IfEnabled→原GetEnabled/SetEnabled继承反射→嵌套Clump→FloatAdd/FloatMult→卸载复位连续核验：164组、331快照、0差异。118个真实配置片段（82 Enable、全部36 IfEnabled）保留节点/成员顺序及字段值；原6组断言与117次未实现类服务边界分列，未将缺失类伪造启用状态。Clump无聚合GetEnabled；killEvents按原Start后清active字节。metadata/default缓存、方法缓存flag=true内部、未实现目标类、完整场景/Avatar与Windows验收仍待恢复。 本轮Enable/IfEnabled/Delay与嵌套Clump接入统一地图播放及原EventBarn完整Update/排序、首帧load/enable/update/finish：301组（293真实根、8合成混合链）、7525帧、263925600比较字节0差异。33图四类540配置满足字段/依赖预检，另须模型已加载；每根25帧有限核验，不称全部Delay已结束。Clump无聚合GetEnabled默认true、Delay原时间钳制、Marker保存enabled和LevelMesh启用转发保留。停止还原矩阵/可见性，编辑/模式/切图清理；metadata/保存字段/槽顺序/Heap/GameTime和Linux libm为准备输入/服务，真实Model仍prepared null，完整原类/实例验收保持0。 2026-11-20数值地图播放续接：FloatAdd/FloatMult/SetFloat与原EventBarn、对象组/延迟/条件、共享Float和后续TransformObject同链运行；362组、9146帧、307419512比较字节原机器码0差异，含342真实根与20组准备输入，全部31/14/4真实数值配置。33图七类589配置满足依赖预检。停止恢复保存值/矩阵，暂停及编辑/模式/切图清理；原Model仍prepared null，logf/expf为核验服务、JS Math仅预览，完整原类/实例保持0。 2026-11-20条件地图续接：OnFloat/FloatSplit加入统一播放，保留原比较/双侧嵌套求值、短字符串、原始反转字节、BODY条件指针/Object分支指针、独立结束请求及共享Float分段别名写序。396组、9676帧、323130696比较字节0差异，349真实根和47准备输入分列；新增3 OnFloat、全部2 FloatSplit及2 Delay真实根。33图九类596配置通过依赖预检。准备DayHubCave数值达到0.35后触发0.5秒Delay再变换原平台，15字段修改记录；相机矩阵与渲染对象帧对齐截图、暂停/还原/模式切图检查通过。debug输出/长字符串池/同步条件求值循环显式阻断。原材质非有限RGB错误未修复，Model/GPU/Avatar/完整场景及Windows验收仍缺，完整类/实例0不变。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "DuskGraveyard:n1260",
+      "level": "DuskGraveyard",
+      "nodeId": 1260,
+      "name": "BstNode_34603865",
+      "className": "IfEnabled",
+      "classIndex": 61,
+      "sourceOffset": 317171,
+      "sourceLength": 32,
+      "sourceSha256": "2a3591ce321ef9850a57010e07f46b7c0c3e60a764fd14f203c4a60693c1c39f",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1260/p3",
+          "fieldName": "events",
+          "target": "DuskGraveyard:n969",
+          "targetNodeId": 969,
+          "offset": 317195
+        },
+        {
+          "fieldId": "n1260/p4",
+          "fieldName": "areTheseObjectsEnabled",
+          "target": "DuskGraveyard:n1772",
+          "targetNodeId": 1772,
+          "offset": 317199
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n374",
+      "level": "Prairie_Village",
+      "nodeId": 374,
+      "name": "BstNode_1167523869",
+      "className": "IfEnabled",
+      "classIndex": 54,
+      "sourceOffset": 90889,
+      "sourceLength": 34,
+      "sourceSha256": "4850ef188d87439375848fb252b37d784955dceb1243e684228f24a31cc62213",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n374/p3",
+          "fieldName": "events",
+          "target": "Prairie_Village:n3212",
+          "targetNodeId": 3212,
+          "offset": 90915
+        },
+        {
+          "fieldId": "n374/p4",
+          "fieldName": "areTheseObjectsEnabled",
+          "target": "Prairie_Village:n3213",
+          "targetNodeId": 3213,
+          "offset": 90919
+        }
+      ],
+      "incomingReferenceCount": 4,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n831",
+      "level": "Prairie_Village",
+      "nodeId": 831,
+      "name": "BstNode_2446917804",
+      "className": "IfEnabled",
+      "classIndex": 54,
+      "sourceOffset": 166272,
+      "sourceLength": 34,
+      "sourceSha256": "f8120690223d06a4d40a40da512363685fee1aaef2276a3aec28ecad33dda26b",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n831/p3",
+          "fieldName": "events",
+          "target": "Prairie_Village:n2075",
+          "targetNodeId": 2075,
+          "offset": 166298
+        },
+        {
+          "fieldId": "n831/p4",
+          "fieldName": "areTheseObjectsEnabled",
+          "target": "Prairie_Village:n3292",
+          "targetNodeId": 3292,
+          "offset": 166302
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1258",
+      "level": "Prairie_Village",
+      "nodeId": 1258,
+      "name": "BstNode_1915",
+      "className": "IfEnabled",
+      "classIndex": 54,
+      "sourceOffset": 234132,
+      "sourceLength": 28,
+      "sourceSha256": "15644ea183f4b4660791e9d6d15a5ad41af65cff9e899bc05683d9a4ac3dfe36",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1258/p3",
+          "fieldName": "events",
+          "target": "Prairie_Village:n1028",
+          "targetNodeId": 1028,
+          "offset": 234152
+        },
+        {
+          "fieldId": "n1258/p4",
+          "fieldName": "areTheseObjectsEnabled",
+          "target": "Prairie_Village:n3380",
+          "targetNodeId": 3380,
+          "offset": 234156
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1923",
+      "level": "Prairie_Village",
+      "nodeId": 1923,
+      "name": "BstNode_1723",
+      "className": "IfEnabled",
+      "classIndex": 54,
+      "sourceOffset": 343359,
+      "sourceLength": 28,
+      "sourceSha256": "a534704b57b714e78cc2c11d83f2e6de2385f01c744594f9c2a82b76357f4ebe",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1923/p3",
+          "fieldName": "events",
+          "target": "Prairie_Village:n49",
+          "targetNodeId": 49,
+          "offset": 343379
+        },
+        {
+          "fieldId": "n1923/p4",
+          "fieldName": "areTheseObjectsEnabled",
+          "target": "Prairie_Village:n3515",
+          "targetNodeId": 3515,
+          "offset": 343383
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1946",
+      "level": "Prairie_Village",
+      "nodeId": 1946,
+      "name": "BstNode_2783838212",
+      "className": "IfEnabled",
+      "classIndex": 54,
+      "sourceOffset": 346611,
+      "sourceLength": 34,
+      "sourceSha256": "c2c842ca9d849e31dc34ab30bca81f98621195412d299901ef1887d0482219ba",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1946/p3",
+          "fieldName": "events",
+          "target": "Prairie_Village:n2967",
+          "targetNodeId": 2967,
+          "offset": 346637
+        },
+        {
+          "fieldId": "n1946/p4",
+          "fieldName": "areTheseObjectsEnabled",
+          "target": "Prairie_Village:n3517",
+          "targetNodeId": 3517,
+          "offset": 346641
+        }
+      ],
+      "incomingReferenceCount": 10,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1976",
+      "level": "Prairie_Village",
+      "nodeId": 1976,
+      "name": "BstNode_1870",
+      "className": "IfEnabled",
+      "classIndex": 54,
+      "sourceOffset": 352504,
+      "sourceLength": 28,
+      "sourceSha256": "7352eecf6ad8dd89c6bc8acb9a0df55ce4e871a543424f33c5e26407e1c1714d",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1976/p3",
+          "fieldName": "events",
+          "target": "Prairie_Village:n1570",
+          "targetNodeId": 1570,
+          "offset": 352524
+        },
+        {
+          "fieldId": "n1976/p4",
+          "fieldName": "areTheseObjectsEnabled",
+          "target": "Prairie_Village:n3523",
+          "targetNodeId": 3523,
+          "offset": 352528
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2066",
+      "level": "Prairie_Village",
+      "nodeId": 2066,
+      "name": "BstNode_244",
+      "className": "IfEnabled",
+      "classIndex": 54,
+      "sourceOffset": 365615,
+      "sourceLength": 27,
+      "sourceSha256": "ed2b5ea0675cf58f0378d8be8545ff64fcf669d433a8ea1cfd7f98722eefef74",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2066/p3",
+          "fieldName": "events",
+          "target": "Prairie_Village:n1745",
+          "targetNodeId": 1745,
+          "offset": 365634
+        },
+        {
+          "fieldId": "n2066/p4",
+          "fieldName": "areTheseObjectsEnabled",
+          "target": "Prairie_Village:n3537",
+          "targetNodeId": 3537,
+          "offset": 365638
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2142",
+      "level": "Prairie_Village",
+      "nodeId": 2142,
+      "name": "BstNode_2446917809",
+      "className": "IfEnabled",
+      "classIndex": 54,
+      "sourceOffset": 375198,
+      "sourceLength": 34,
+      "sourceSha256": "8c0e30af3089c9f3521c07f55b75fdb4f1f69418266512b6b225631ee6d34b34",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2142/p3",
+          "fieldName": "events",
+          "target": "Prairie_Village:n1615",
+          "targetNodeId": 1615,
+          "offset": 375224
+        },
+        {
+          "fieldId": "n2142/p4",
+          "fieldName": "areTheseObjectsEnabled",
+          "target": "Prairie_Village:n3554",
+          "targetNodeId": 3554,
+          "offset": 375228
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2150",
+      "level": "Prairie_Village",
+      "nodeId": 2150,
+      "name": "BstNode_271",
+      "className": "IfEnabled",
+      "classIndex": 54,
+      "sourceOffset": 376828,
+      "sourceLength": 27,
+      "sourceSha256": "18d89b3fb7883f2ba3d26221eab9e77fba5aa71defc55b6e4281d0fb620b0b40",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2150/p3",
+          "fieldName": "events",
+          "target": "Prairie_Village:n3059",
+          "targetNodeId": 3059,
+          "offset": 376847
+        },
+        {
+          "fieldId": "n2150/p4",
+          "fieldName": "areTheseObjectsEnabled",
+          "target": "Prairie_Village:n3555",
+          "targetNodeId": 3555,
+          "offset": 376851
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2459",
+      "level": "Prairie_Village",
+      "nodeId": 2459,
+      "name": "BstNode_1926",
+      "className": "IfEnabled",
+      "classIndex": 54,
+      "sourceOffset": 422229,
+      "sourceLength": 28,
+      "sourceSha256": "8d459e4d96faa02cac9054c63496af27bccfa68569091cd54a37ecd51720f456",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2459/p3",
+          "fieldName": "events",
+          "target": "Prairie_Village:n2186",
+          "targetNodeId": 2186,
+          "offset": 422249
+        },
+        {
+          "fieldId": "n2459/p4",
+          "fieldName": "areTheseObjectsEnabled",
+          "target": "Prairie_Village:n3608",
+          "targetNodeId": 3608,
+          "offset": 422253
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2595",
+      "level": "Prairie_Village",
+      "nodeId": 2595,
+      "name": "BstNode_282",
+      "className": "IfEnabled",
+      "classIndex": 54,
+      "sourceOffset": 439583,
+      "sourceLength": 27,
+      "sourceSha256": "90387a5b67d5ac569445e293edea17f902e6e1d13c1f83ed4eb8b7c538fa75f6",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2595/p3",
+          "fieldName": "events",
+          "target": "Prairie_Village:n2697",
+          "targetNodeId": 2697,
+          "offset": 439602
+        },
+        {
+          "fieldId": "n2595/p4",
+          "fieldName": "areTheseObjectsEnabled",
+          "target": "Prairie_Village:n3641",
+          "targetNodeId": 3641,
+          "offset": 439606
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2714",
+      "level": "Prairie_Village",
+      "nodeId": 2714,
+      "name": "BstNode_1931",
+      "className": "IfEnabled",
+      "classIndex": 54,
+      "sourceOffset": 460167,
+      "sourceLength": 28,
+      "sourceSha256": "7af3608052aa22b8d2f68d939f38921d190a0d471b98385c285b77208534c341",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2714/p3",
+          "fieldName": "events",
+          "target": "Prairie_Village:n10",
+          "targetNodeId": 10,
+          "offset": 460187
+        },
+        {
+          "fieldId": "n2714/p4",
+          "fieldName": "areTheseObjectsEnabled",
+          "target": "Prairie_Village:n3658",
+          "targetNodeId": 3658,
+          "offset": 460191
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2799",
+      "level": "Prairie_Village",
+      "nodeId": 2799,
+      "name": "BstNode_2446917810",
+      "className": "IfEnabled",
+      "classIndex": 54,
+      "sourceOffset": 474578,
+      "sourceLength": 34,
+      "sourceSha256": "f961571c6fd7d0179fd2f5bf8a8462f230ffb2f948bf359b90b0012b116e338d",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2799/p3",
+          "fieldName": "events",
+          "target": "Prairie_Village:n387",
+          "targetNodeId": 387,
+          "offset": 474604
+        },
+        {
+          "fieldId": "n2799/p4",
+          "fieldName": "areTheseObjectsEnabled",
+          "target": "Prairie_Village:n3668",
+          "targetNodeId": 3668,
+          "offset": 474608
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n3152",
+      "level": "Prairie_Village",
+      "nodeId": 3152,
+      "name": "BstNode_1872",
+      "className": "IfEnabled",
+      "classIndex": 54,
+      "sourceOffset": 534982,
+      "sourceLength": 28,
+      "sourceSha256": "9d59f6891d207b92af855dfc4a83fa329c8010fa1cb2e97c735a121ef89a61a3",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n3152/p3",
+          "fieldName": "events",
+          "target": "Prairie_Village:n1930",
+          "targetNodeId": 1930,
+          "offset": 535002
+        },
+        {
+          "fieldId": "n3152/p4",
+          "fieldName": "areTheseObjectsEnabled",
+          "target": "Prairie_Village:n3723",
+          "targetNodeId": 3723,
+          "offset": 535006
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n378",
+      "level": "SkyHub2",
+      "nodeId": 378,
+      "name": "BstNode_2529558768",
+      "className": "IfEnabled",
+      "classIndex": 56,
+      "sourceOffset": 104929,
+      "sourceLength": 34,
+      "sourceSha256": "024d493587e4b3973234ec11dd6de3a193649648373e818c9c2022a8e776e070",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n378/p3",
+          "fieldName": "events",
+          "target": "SkyHub2:n2519",
+          "targetNodeId": 2519,
+          "offset": 104955
+        },
+        {
+          "fieldId": "n378/p4",
+          "fieldName": "areTheseObjectsEnabled",
+          "target": "SkyHub2:n2520",
+          "targetNodeId": 2520,
+          "offset": 104959
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1734",
+      "level": "SkyHub2",
+      "nodeId": 1734,
+      "name": "BstNode_2446917663",
+      "className": "IfEnabled",
+      "classIndex": 56,
+      "sourceOffset": 330041,
+      "sourceLength": 34,
+      "sourceSha256": "a8c11ba6bc61de87bdda61bc2db8a0903065e0f4f36168026b1fd5d69ebd2cd6",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1734/p3",
+          "fieldName": "events",
+          "target": "SkyHub2:n486",
+          "targetNodeId": 486,
+          "offset": 330067
+        },
+        {
+          "fieldId": "n1734/p4",
+          "fieldName": "areTheseObjectsEnabled",
+          "target": "SkyHub2:n2762",
+          "targetNodeId": 2762,
+          "offset": 330071
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1949",
+      "level": "SkyHub2",
+      "nodeId": 1949,
+      "name": "BstNode_2446917856",
+      "className": "IfEnabled",
+      "classIndex": 56,
+      "sourceOffset": 371017,
+      "sourceLength": 34,
+      "sourceSha256": "4ab30c733fbf4706de9db9086727228610af271f0c845608407a46b490c0a7ae",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1949/p3",
+          "fieldName": "events",
+          "target": "SkyHub2:n1783",
+          "targetNodeId": 1783,
+          "offset": 371043
+        },
+        {
+          "fieldId": "n1949/p4",
+          "fieldName": "areTheseObjectsEnabled",
+          "target": "SkyHub2:n2805",
+          "targetNodeId": 2805,
+          "offset": 371047
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n2295",
+      "level": "SkyHub2",
+      "nodeId": 2295,
+      "name": "BstNode_2446917855",
+      "className": "IfEnabled",
+      "classIndex": 56,
+      "sourceOffset": 432598,
+      "sourceLength": 34,
+      "sourceSha256": "c417352c9711f8af83a897e358bd088406932a3d1c407993d269aeadcd828cd2",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2295/p3",
+          "fieldName": "events",
+          "target": "SkyHub2:n1696",
+          "targetNodeId": 1696,
+          "offset": 432624
+        },
+        {
+          "fieldId": "n2295/p4",
+          "fieldName": "areTheseObjectsEnabled",
+          "target": "SkyHub2:n2865",
+          "targetNodeId": 2865,
+          "offset": 432628
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n2354",
+      "level": "SkyHub2",
+      "nodeId": 2354,
+      "name": "BstNode_2446917681",
+      "className": "IfEnabled",
+      "classIndex": 56,
+      "sourceOffset": 443730,
+      "sourceLength": 34,
+      "sourceSha256": "850821d04bcb02b332216dec92ffc9c84dc528b8050f92405adb0d784b957c4b",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2354/p3",
+          "fieldName": "events",
+          "target": "SkyHub2:n1604",
+          "targetNodeId": 1604,
+          "offset": 443756
+        },
+        {
+          "fieldId": "n2354/p4",
+          "fieldName": "areTheseObjectsEnabled",
+          "target": "SkyHub2:n2876",
+          "targetNodeId": 2876,
+          "offset": 443760
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n0",
+      "level": "SunsetEnd",
+      "nodeId": 0,
+      "name": "BstNode_1167524033",
+      "className": "IfEnabled",
+      "classIndex": 0,
+      "sourceOffset": 26064,
+      "sourceLength": 34,
+      "sourceSha256": "9789ac95a6594173f887a457267d9183ac8e4f809840a42a1a1253546e61d4ef",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n0/p3",
+          "fieldName": "events",
+          "target": "SunsetEnd:n607",
+          "targetNodeId": 607,
+          "offset": 26090
+        },
+        {
+          "fieldId": "n0/p4",
+          "fieldName": "areTheseObjectsEnabled",
+          "target": "SunsetEnd:n1838",
+          "targetNodeId": 1838,
+          "offset": 26094
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n79",
+      "level": "SunsetEnd",
+      "nodeId": 79,
+      "name": "BstNode_1167524216",
+      "className": "IfEnabled",
+      "classIndex": 0,
+      "sourceOffset": 41721,
+      "sourceLength": 34,
+      "sourceSha256": "7e640814a24fddca95f7d3f1d405e59724b7379d9321ac50b7dca5a64326cd39",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n79/p3",
+          "fieldName": "events",
+          "target": "SunsetEnd:n309",
+          "targetNodeId": 309,
+          "offset": 41747
+        },
+        {
+          "fieldId": "n79/p4",
+          "fieldName": "areTheseObjectsEnabled",
+          "target": "SunsetEnd:n1842",
+          "targetNodeId": 1842,
+          "offset": 41751
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n223",
+      "level": "SunsetEnd",
+      "nodeId": 223,
+      "name": "BstNode_1167524044",
+      "className": "IfEnabled",
+      "classIndex": 0,
+      "sourceOffset": 69480,
+      "sourceLength": 34,
+      "sourceSha256": "11a46342fd8a8d62276f0bbd735eec797289283b35d46498b11b3a68f314b510",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n223/p3",
+          "fieldName": "events",
+          "target": "SunsetEnd:n408",
+          "targetNodeId": 408,
+          "offset": 69506
+        },
+        {
+          "fieldId": "n223/p4",
+          "fieldName": "areTheseObjectsEnabled",
+          "target": "SunsetEnd:n1852",
+          "targetNodeId": 1852,
+          "offset": 69510
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n371",
+      "level": "SunsetEnd",
+      "nodeId": 371,
+      "name": "BstNode_1167524262",
+      "className": "IfEnabled",
+      "classIndex": 0,
+      "sourceOffset": 92445,
+      "sourceLength": 34,
+      "sourceSha256": "9dba12cf608817fd2cc6a8b3deaa07494eb1c9785e993299d8a637d6e5442e8b",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n371/p3",
+          "fieldName": "events",
+          "target": "SunsetEnd:n1872",
+          "targetNodeId": 1872,
+          "offset": 92471
+        },
+        {
+          "fieldId": "n371/p4",
+          "fieldName": "areTheseObjectsEnabled",
+          "target": "SunsetEnd:n1873",
+          "targetNodeId": 1873,
+          "offset": 92475
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n379",
+      "level": "SunsetEnd",
+      "nodeId": 379,
+      "name": "BstNode_1167524279",
+      "className": "IfEnabled",
+      "classIndex": 0,
+      "sourceOffset": 94629,
+      "sourceLength": 34,
+      "sourceSha256": "9012a8671e4b628c279363e07edc6c656055ec7a460f1702cce7a4c3fa7865b2",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n379/p3",
+          "fieldName": "events",
+          "target": "SunsetEnd:n903",
+          "targetNodeId": 903,
+          "offset": 94655
+        },
+        {
+          "fieldId": "n379/p4",
+          "fieldName": "areTheseObjectsEnabled",
+          "target": "SunsetEnd:n1875",
+          "targetNodeId": 1875,
+          "offset": 94659
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n431",
+      "level": "SunsetEnd",
+      "nodeId": 431,
+      "name": "BstNode_1167524280",
+      "className": "IfEnabled",
+      "classIndex": 0,
+      "sourceOffset": 102936,
+      "sourceLength": 34,
+      "sourceSha256": "be6bd5a2924630cf2dbac330241b228957245b9022b69beb41df8abc0de8614d",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n431/p3",
+          "fieldName": "events",
+          "target": "SunsetEnd:n1176",
+          "targetNodeId": 1176,
+          "offset": 102962
+        },
+        {
+          "fieldId": "n431/p4",
+          "fieldName": "areTheseObjectsEnabled",
+          "target": "SunsetEnd:n1880",
+          "targetNodeId": 1880,
+          "offset": 102966
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n503",
+      "level": "SunsetEnd",
+      "nodeId": 503,
+      "name": "BstNode_1994",
+      "className": "IfEnabled",
+      "classIndex": 0,
+      "sourceOffset": 113336,
+      "sourceLength": 28,
+      "sourceSha256": "1bdd3255861ba1cd02980ec722bd00e8ef06db65af5f588897e7dd126bfb7b2b",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n503/p3",
+          "fieldName": "events",
+          "target": "SunsetEnd:n574",
+          "targetNodeId": 574,
+          "offset": 113356
+        },
+        {
+          "fieldId": "n503/p4",
+          "fieldName": "areTheseObjectsEnabled",
+          "target": "SunsetEnd:n1894",
+          "targetNodeId": 1894,
+          "offset": 113360
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n592",
+      "level": "SunsetEnd",
+      "nodeId": 592,
+      "name": "BstNode_1993",
+      "className": "IfEnabled",
+      "classIndex": 0,
+      "sourceOffset": 127429,
+      "sourceLength": 28,
+      "sourceSha256": "722157550fda467a61ade93153e72624fad2a99937b27fee89e0b527b903d692",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n592/p3",
+          "fieldName": "events",
+          "target": "SunsetEnd:n1758",
+          "targetNodeId": 1758,
+          "offset": 127449
+        },
+        {
+          "fieldId": "n592/p4",
+          "fieldName": "areTheseObjectsEnabled",
+          "target": "SunsetEnd:n1902",
+          "targetNodeId": 1902,
+          "offset": 127453
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n643",
+      "level": "SunsetEnd",
+      "nodeId": 643,
+      "name": "BstNode_1167524051",
+      "className": "IfEnabled",
+      "classIndex": 0,
+      "sourceOffset": 133391,
+      "sourceLength": 34,
+      "sourceSha256": "519d21d8b48400c735c715ee33bd254f5baecd5b7e1a632bc6e6d2472b924674",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n643/p3",
+          "fieldName": "events",
+          "target": "SunsetEnd:n1907",
+          "targetNodeId": 1907,
+          "offset": 133417
+        },
+        {
+          "fieldId": "n643/p4",
+          "fieldName": "areTheseObjectsEnabled",
+          "target": "SunsetEnd:n1908",
+          "targetNodeId": 1908,
+          "offset": 133421
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n737",
+      "level": "SunsetEnd",
+      "nodeId": 737,
+      "name": "BstNode_1167524621",
+      "className": "IfEnabled",
+      "classIndex": 0,
+      "sourceOffset": 149989,
+      "sourceLength": 34,
+      "sourceSha256": "7a90efc7bbd0b8ab87fd157b6b4b7dd40f9db9ff4641d9d16c8a119d1e39a788",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n737/p3",
+          "fieldName": "events",
+          "target": "SunsetEnd:n556",
+          "targetNodeId": 556,
+          "offset": 150015
+        },
+        {
+          "fieldId": "n737/p4",
+          "fieldName": "areTheseObjectsEnabled",
+          "target": "SunsetEnd:n1918",
+          "targetNodeId": 1918,
+          "offset": 150019
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n1107",
+      "level": "SunsetEnd",
+      "nodeId": 1107,
+      "name": "BstNode_1167524056",
+      "className": "IfEnabled",
+      "classIndex": 0,
+      "sourceOffset": 209555,
+      "sourceLength": 34,
+      "sourceSha256": "17dbdef105a9cb37d2a4a325ef2af319973985fe38a96d4ed473e2bfbd36c6d7",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1107/p3",
+          "fieldName": "events",
+          "target": "SunsetEnd:n363",
+          "targetNodeId": 363,
+          "offset": 209581
+        },
+        {
+          "fieldId": "n1107/p4",
+          "fieldName": "areTheseObjectsEnabled",
+          "target": "SunsetEnd:n1947",
+          "targetNodeId": 1947,
+          "offset": 209585
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n1687",
+      "level": "SunsetEnd",
+      "nodeId": 1687,
+      "name": "BstNode_1167524622",
+      "className": "IfEnabled",
+      "classIndex": 0,
+      "sourceOffset": 314460,
+      "sourceLength": 34,
+      "sourceSha256": "0e13e509119806da9c9c749fbb2e321ed07030c0fedeb8e4625afe8649ab446e",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1687/p3",
+          "fieldName": "events",
+          "target": "SunsetEnd:n1280",
+          "targetNodeId": 1280,
+          "offset": 314486
+        },
+        {
+          "fieldId": "n1687/p4",
+          "fieldName": "areTheseObjectsEnabled",
+          "target": "SunsetEnd:n1985",
+          "targetNodeId": 1985,
+          "offset": 314490
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "TitleWater:n40",
+      "level": "TitleWater",
+      "nodeId": 40,
+      "name": "BstNode_1528234055",
+      "className": "IfEnabled",
+      "classIndex": 21,
+      "sourceOffset": 22102,
+      "sourceLength": 34,
+      "sourceSha256": "eae527911d806e728f9b0b12707effe2d20c4a3ae5c2cf71124593ae41b85ad4",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n40/p3",
+          "fieldName": "events",
+          "target": "TitleWater:n204",
+          "targetNodeId": 204,
+          "offset": 22128
+        },
+        {
+          "fieldId": "n40/p4",
+          "fieldName": "areTheseObjectsEnabled",
+          "target": "TitleWater:n205",
+          "targetNodeId": 205,
+          "offset": 22132
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "TitleWater:n67",
+      "level": "TitleWater",
+      "nodeId": 67,
+      "name": "BstNode_2645622792",
+      "className": "IfEnabled",
+      "classIndex": 21,
+      "sourceOffset": 25466,
+      "sourceLength": 34,
+      "sourceSha256": "f0c76aacfed28255d017d258dc57cf84c27c40c5e1a868612e85a8e5273ca0f5",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n67/p3",
+          "fieldName": "events",
+          "target": "TitleWater:n82",
+          "targetNodeId": 82,
+          "offset": 25492
+        },
+        {
+          "fieldId": "n67/p4",
+          "fieldName": "areTheseObjectsEnabled",
+          "target": "TitleWater:n212",
+          "targetNodeId": 212,
+          "offset": 25496
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "TitleWater:n71",
+      "level": "TitleWater",
+      "nodeId": 71,
+      "name": "BstNode_1528234022",
+      "className": "IfEnabled",
+      "classIndex": 21,
+      "sourceOffset": 26397,
+      "sourceLength": 34,
+      "sourceSha256": "8d6339fec44d6bde0a03dc958fea1b26abb1d3b0a7cefd5c5a7a2080295772b5",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n71/p3",
+          "fieldName": "events",
+          "target": "TitleWater:n37",
+          "targetNodeId": 37,
+          "offset": 26423
+        },
+        {
+          "fieldId": "n71/p4",
+          "fieldName": "areTheseObjectsEnabled",
+          "target": "TitleWater:n213",
+          "targetNodeId": 213,
+          "offset": 26427
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "TitleWater:n89",
+      "level": "TitleWater",
+      "nodeId": 89,
+      "name": "BstNode_1528234044",
+      "className": "IfEnabled",
+      "classIndex": 21,
+      "sourceOffset": 28461,
+      "sourceLength": 34,
+      "sourceSha256": "d2232617267095f85bd07e778d944394b739e4fc811e45ff7b0452f9fbfdcfea",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n89/p3",
+          "fieldName": "events",
+          "target": "TitleWater:n96",
+          "targetNodeId": 96,
+          "offset": 28487
+        },
+        {
+          "fieldId": "n89/p4",
+          "fieldName": "areTheseObjectsEnabled",
+          "target": "TitleWater:n214",
+          "targetNodeId": 214,
+          "offset": 28491
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "DuskGraveyard",
+      "path": "Levels/DuskGraveyard/Objects.level.bin",
+      "sha256": "128b30dcbe40b68e68fc25d195b68dc39f897259453c02612049ccd37a90ffb4",
+      "bytes": 424333,
+      "nodes": 1791,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DuskGraveyard.json",
+      "markdown": "Objects对象清单/DuskGraveyard.md"
+    },
+    {
+      "level": "Prairie_Village",
+      "path": "Levels/Prairie_Village/Objects.level.bin",
+      "sha256": "4656296b54402016b59b894b4653fbdc71e106a21e0900294f73f2c7b7112385",
+      "bytes": 549989,
+      "nodes": 3724,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Village.json",
+      "markdown": "Objects对象清单/Prairie_Village.md"
+    },
+    {
+      "level": "SkyHub2",
+      "path": "Levels/SkyHub2/Objects.level.bin",
+      "sha256": "8b467f9b349d9d4ce0d038528c96e44dff30063149bf5bbf90232a56bb9dd36f",
+      "bytes": 475656,
+      "nodes": 2886,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SkyHub2.json",
+      "markdown": "Objects对象清单/SkyHub2.md"
+    },
+    {
+      "level": "SunsetEnd",
+      "path": "Levels/SunsetEnd/Objects.level.bin",
+      "sha256": "9995ebfef7aa72982f6b95073a98a4ef01376bd8ac56c3b79b09729f97f43d6e",
+      "bytes": 352573,
+      "nodes": 1998,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SunsetEnd.json",
+      "markdown": "Objects对象清单/SunsetEnd.md"
+    },
+    {
+      "level": "TitleWater",
+      "path": "Levels/TitleWater/Objects.level.bin",
+      "sha256": "46841a22d17b360fcc3c7ceb8406d8c7e73441fd59023f64b4bce4057e1b9414",
+      "bytes": 45511,
+      "nodes": 238,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/TitleWater.json",
+      "markdown": "Objects对象清单/TitleWater.md"
+    }
+  ]
+}

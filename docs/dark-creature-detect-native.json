@@ -1,0 +1,33 @@
+{
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "functions": {
+    "DarkCreature.Detect": {
+      "start": "0x10026d410",
+      "end": "0x10026ddb0",
+      "codeSha256": "812da2330ba7063d73a532b92ef61c563f7cebc2e6a25fc1607e868ba11c2f2a",
+      "assembly": "evidence/darkcreature-detect.asm"
+    },
+    "DarkCreature.Alert": {
+      "start": "0x10026d2a0",
+      "end": "0x10026d410",
+      "codeSha256": "0d8e47a794100e4994ddabc13beb5393cf7ab2156f7a55da16edca4d28aad55b",
+      "assembly": "evidence/darkcreature-alert.asm"
+    }
+  },
+  "constants": {
+    "maximumDistanceSquared": 2139095039,
+    "minimumEnergy": 3212669092,
+    "avatarRadiusBias": 3179282432,
+    "nearSquared": 1098907648,
+    "tipNearSquared": 1091567616,
+    "offsetNearSquared": 1130430464,
+    "epsilon": 953267991
+  },
+  "offset": [
+    0,
+    1097859072,
+    0,
+    1097859072
+  ],
+  "scope": "Whole original DarkCreature player/bird detector and its composition with the original alert caller. Live enabled/world-position/Avatar-query/bird-position, raycast and original atan2f/cosf remain explicit services. Exact candidate order, strict distance/cone/visibility conditions and alert-ID transitions are restored; full outer Update, attacks, real scene/resources and autonomous viewport behavior remain pending."
+}

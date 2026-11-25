@@ -1,0 +1,65 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "exposure": 0.25,
+      "expected": [
+        156,
+        124,
+        49,
+        255
+      ],
+      "actual": [
+        156,
+        124,
+        49,
+        255
+      ]
+    },
+    {
+      "exposure": 1,
+      "expected": [
+        213,
+        188,
+        94,
+        255
+      ],
+      "actual": [
+        213,
+        188,
+        94,
+        255
+      ]
+    },
+    {
+      "exposure": 4,
+      "expected": [
+        242,
+        231,
+        156,
+        255
+      ],
+      "actual": [
+        242,
+        231,
+        156,
+        255
+      ]
+    },
+    "Farther programmable material fails depth behind the first opaque draw",
+    "Uniform updates change the existing pipeline without reuploading geometry",
+    "Empty foreground, background-only rendering, resize, clearing and legacy frame requests work"
+  ],
+  "scope": "Independent synthetic HDR/linear blending, shared depth, uniform updates and explicit preview display adaptation; no claim of original-game composition",
+  "device": {
+    "engine": "Sky Native Vulkan",
+    "backend": "Vulkan",
+    "device": "llvmpipe (LLVM 19.1.7, 128 bits)",
+    "apiVersion": 4210993,
+    "deviceType": 4,
+    "nativeSurface": false,
+    "shaderFloat16": true,
+    "samplerAnisotropyPolicy": "llvmpipe-trilinear",
+    "maxSamplerAnisotropy": 16
+  }
+}

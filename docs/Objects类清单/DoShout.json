@@ -1,0 +1,2275 @@
+{
+  "className": "DoShout",
+  "functionGroup": "玩家状态与输入",
+  "functionRole": "在指定位置发起喊叫效果",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "DoShout 的原默认值、继承初始化及 3 个序列化字段变体；原注册字段 2 项。"
+    },
+    {
+      "name": "在指定位置发起喊叫效果",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Clump（59 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "DoShout",
+    "category": "玩家状态与输入",
+    "functionGroupId": "avatar",
+    "functionRole": "在指定位置发起喊叫效果",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "DoShout 的原默认值、继承初始化及 3 个序列化字段变体；原注册字段 2 项。"
+      },
+      {
+        "name": "在指定位置发起喊叫效果",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Clump（59 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Clump",
+        "references": 59
+      }
+    ],
+    "rttiWorkingGroup": "系统和其余类型",
+    "role": "对象实例类型",
+    "instances": 59,
+    "nestedInstances": 0,
+    "referenceFields": 59,
+    "declaredLevels": 8,
+    "levels": [
+      {
+        "level": "Dawn",
+        "nodes": 40,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DuskMid",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "HubReveal",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Night",
+        "nodes": 8,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_NestAndKeeper",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Village",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainForest",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainMid",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "positions",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "soundEventType",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100cd88e0",
+    "nativeRegisteredFields": [
+      {
+        "name": "positions",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x1004e6380",
+        "propertyAddress": "0x100cd8540"
+      },
+      {
+        "name": "soundEventType",
+        "typeGetter": "__Z17GetMetaTypeByTypeI10ShoutSoundERK8MetaTypev",
+        "nativeOffset": 64,
+        "registrationFunction": "0x1004e6380",
+        "propertyAddress": "0x100cd8590"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 2 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "Dawn:n5",
+      "level": "Dawn",
+      "nodeId": 5,
+      "name": "BstNode_1293287569",
+      "className": "DoShout",
+      "classIndex": 5,
+      "sourceOffset": 33446,
+      "sourceLength": 32,
+      "sourceSha256": "f68142dd060e9d745e9ea719253e840b5324d44ee469e28dd1568d12650724d3",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n5/p1",
+          "fieldName": "positions",
+          "target": "Dawn:n2965",
+          "targetNodeId": 2965,
+          "offset": 33470
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n38",
+      "level": "Dawn",
+      "nodeId": 38,
+      "name": "BstNode_3122856004",
+      "className": "DoShout",
+      "classIndex": 5,
+      "sourceOffset": 39990,
+      "sourceLength": 32,
+      "sourceSha256": "a0e5a1d0c7c4ddefa2999242174312b170661199cd8c748f068d8760eb0a3a7c",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n38/p1",
+          "fieldName": "positions",
+          "target": "Dawn:n2974",
+          "targetNodeId": 2974,
+          "offset": 40014
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n83",
+      "level": "Dawn",
+      "nodeId": 83,
+      "name": "BstNode_656801885",
+      "className": "DoShout",
+      "classIndex": 5,
+      "sourceOffset": 46887,
+      "sourceLength": 31,
+      "sourceSha256": "454f95b9f5e579703023219457224b168fd5b9aad5bf647c9375dce320315088",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n83/p1",
+          "fieldName": "positions",
+          "target": "Dawn:n2988",
+          "targetNodeId": 2988,
+          "offset": 46910
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n309",
+      "level": "Dawn",
+      "nodeId": 309,
+      "name": "BstNode_3122856133",
+      "className": "DoShout",
+      "classIndex": 5,
+      "sourceOffset": 81298,
+      "sourceLength": 32,
+      "sourceSha256": "cce5c22a39b75bb2b3a39dfc33fbc3606200186e86d3cd7bfd7000a6c6db3584",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n309/p1",
+          "fieldName": "positions",
+          "target": "Dawn:n3056",
+          "targetNodeId": 3056,
+          "offset": 81322
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n367",
+      "level": "Dawn",
+      "nodeId": 367,
+      "name": "BstNode_1293287584",
+      "className": "DoShout",
+      "classIndex": 5,
+      "sourceOffset": 89046,
+      "sourceLength": 32,
+      "sourceSha256": "cc0522026c00160771cef8fa3ea52e6682ec4e5517a4cd8f6c6043857f0ff4c8",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n367/p1",
+          "fieldName": "positions",
+          "target": "Dawn:n3071",
+          "targetNodeId": 3071,
+          "offset": 89070
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n449",
+      "level": "Dawn",
+      "nodeId": 449,
+      "name": "BstNode_3122856002",
+      "className": "DoShout",
+      "classIndex": 5,
+      "sourceOffset": 101057,
+      "sourceLength": 32,
+      "sourceSha256": "686696ad4949ad003a05f25d92261e59c9c8ca387e64ccd474d1b2563ab8b6b0",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n449/p1",
+          "fieldName": "positions",
+          "target": "Dawn:n3101",
+          "targetNodeId": 3101,
+          "offset": 101081
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n455",
+      "level": "Dawn",
+      "nodeId": 455,
+      "name": "BstNode_1293287562",
+      "className": "DoShout",
+      "classIndex": 5,
+      "sourceOffset": 102239,
+      "sourceLength": 32,
+      "sourceSha256": "ef5a95fb515fd504baec0b686070c39d3d1dfbbce680ccbd025cce4c7c0335f7",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n455/p1",
+          "fieldName": "positions",
+          "target": "Dawn:n3102",
+          "targetNodeId": 3102,
+          "offset": 102263
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n488",
+      "level": "Dawn",
+      "nodeId": 488,
+      "name": "BstNode_656801811",
+      "className": "DoShout",
+      "classIndex": 5,
+      "sourceOffset": 107912,
+      "sourceLength": 31,
+      "sourceSha256": "3467429cd678375048aa8004f9e40a377e7ba8cfb3074b883c1fd8c59371bd36",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n488/p1",
+          "fieldName": "positions",
+          "target": "Dawn:n3108",
+          "targetNodeId": 3108,
+          "offset": 107935
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n507",
+      "level": "Dawn",
+      "nodeId": 507,
+      "name": "BstNode_3122855993",
+      "className": "DoShout",
+      "classIndex": 5,
+      "sourceOffset": 111836,
+      "sourceLength": 32,
+      "sourceSha256": "d17359072a941a7cc4e01534b711bfe51b9020c7bb86499c60c49566d0ce1746",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n507/p1",
+          "fieldName": "positions",
+          "target": "Dawn:n3112",
+          "targetNodeId": 3112,
+          "offset": 111860
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n576",
+      "level": "Dawn",
+      "nodeId": 576,
+      "name": "BstNode_1293287559",
+      "className": "DoShout",
+      "classIndex": 5,
+      "sourceOffset": 122649,
+      "sourceLength": 32,
+      "sourceSha256": "d9abe0762516f6caa8495712ebcd0cd8c616265b639b6bb4d44c76c93cd10d0c",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n576/p1",
+          "fieldName": "positions",
+          "target": "Dawn:n3129",
+          "targetNodeId": 3129,
+          "offset": 122673
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n618",
+      "level": "Dawn",
+      "nodeId": 618,
+      "name": "BstNode_3122856015",
+      "className": "DoShout",
+      "classIndex": 5,
+      "sourceOffset": 128648,
+      "sourceLength": 32,
+      "sourceSha256": "989b1e1136deec0ec4dd2cef19eef18bf3df7fdc83e16eab1dcd41061247d518",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n618/p1",
+          "fieldName": "positions",
+          "target": "Dawn:n3140",
+          "targetNodeId": 3140,
+          "offset": 128672
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n897",
+      "level": "Dawn",
+      "nodeId": 897,
+      "name": "BstNode_284",
+      "className": "DoShout",
+      "classIndex": 5,
+      "sourceOffset": 175102,
+      "sourceLength": 25,
+      "sourceSha256": "014163a7996804792025f2ce26b12a71c821aeae0997ff4c7cb4b61f3b62cd73",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n897/p1",
+          "fieldName": "positions",
+          "target": "Dawn:n3205",
+          "targetNodeId": 3205,
+          "offset": 175119
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n943",
+      "level": "Dawn",
+      "nodeId": 943,
+      "name": "BstNode_1293287527",
+      "className": "DoShout",
+      "classIndex": 5,
+      "sourceOffset": 179794,
+      "sourceLength": 32,
+      "sourceSha256": "fecb26699cc0ed27db84860d4298e8dbe0f467de5d19c4e80b83036543da871c",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n943/p1",
+          "fieldName": "positions",
+          "target": "Dawn:n3225",
+          "targetNodeId": 3225,
+          "offset": 179818
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1080",
+      "level": "Dawn",
+      "nodeId": 1080,
+      "name": "BstNode_3122856172",
+      "className": "DoShout",
+      "classIndex": 5,
+      "sourceOffset": 198189,
+      "sourceLength": 32,
+      "sourceSha256": "c9b994c1cb331dc5ec87517a01c4764b78f8f0d05788e63f618fb7938776254d",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1080/p1",
+          "fieldName": "positions",
+          "target": "Dawn:n3271",
+          "targetNodeId": 3271,
+          "offset": 198213
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1161",
+      "level": "Dawn",
+      "nodeId": 1161,
+      "name": "BstNode_3122856181",
+      "className": "DoShout",
+      "classIndex": 5,
+      "sourceOffset": 207805,
+      "sourceLength": 32,
+      "sourceSha256": "7d7f29882c60fb01b01b41f75c880a0f6ba0492176998b33c16ba35f785a63c2",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1161/p1",
+          "fieldName": "positions",
+          "target": "Dawn:n3292",
+          "targetNodeId": 3292,
+          "offset": 207829
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1175",
+      "level": "Dawn",
+      "nodeId": 1175,
+      "name": "BstNode_656801890",
+      "className": "DoShout",
+      "classIndex": 5,
+      "sourceOffset": 208876,
+      "sourceLength": 31,
+      "sourceSha256": "bf490525f627ec29f3f65cf1d89edc554784ba0045bfd58bce54b96a6241a25b",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1175/p1",
+          "fieldName": "positions",
+          "target": "Dawn:n3295",
+          "targetNodeId": 3295,
+          "offset": 208899
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1322",
+      "level": "Dawn",
+      "nodeId": 1322,
+      "name": "BstNode_656801886",
+      "className": "DoShout",
+      "classIndex": 5,
+      "sourceOffset": 237961,
+      "sourceLength": 31,
+      "sourceSha256": "6d566709800b2ce17a8ba0ec85a9415227bd2c7d705bd0841a5b6751cb032ea8",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1322/p1",
+          "fieldName": "positions",
+          "target": "Dawn:n3315",
+          "targetNodeId": 3315,
+          "offset": 237984
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1355",
+      "level": "Dawn",
+      "nodeId": 1355,
+      "name": "BstNode_3122856290",
+      "className": "DoShout",
+      "classIndex": 5,
+      "sourceOffset": 241361,
+      "sourceLength": 32,
+      "sourceSha256": "072b14164347a292f6e1d615a86cf3f53bc31f5c8b094d8a87465118f5e516bc",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1355/p1",
+          "fieldName": "positions",
+          "target": "Dawn:n3333",
+          "targetNodeId": 3333,
+          "offset": 241385
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1561",
+      "level": "Dawn",
+      "nodeId": 1561,
+      "name": "BstNode_3122856180",
+      "className": "DoShout",
+      "classIndex": 5,
+      "sourceOffset": 271160,
+      "sourceLength": 32,
+      "sourceSha256": "d95a29d620fee8e64e969b9af538c211f2f8f5d79939213ed91242aa4c2d1bd1",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1561/p1",
+          "fieldName": "positions",
+          "target": "Dawn:n3395",
+          "targetNodeId": 3395,
+          "offset": 271184
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1757",
+      "level": "Dawn",
+      "nodeId": 1757,
+      "name": "BstNode_656801884",
+      "className": "DoShout",
+      "classIndex": 5,
+      "sourceOffset": 298338,
+      "sourceLength": 31,
+      "sourceSha256": "2e948efcd637f3c5deebf21b3ac3951c03fabe19eca59bb28aab72f64471510b",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1757/p1",
+          "fieldName": "positions",
+          "target": "Dawn:n3449",
+          "targetNodeId": 3449,
+          "offset": 298361
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1781",
+      "level": "Dawn",
+      "nodeId": 1781,
+      "name": "BstNode_3122856297",
+      "className": "DoShout",
+      "classIndex": 5,
+      "sourceOffset": 300682,
+      "sourceLength": 32,
+      "sourceSha256": "bbfbd9905de33b0ef201777a24f83d918dc3bb5c988595a237dfab24cf65f3a2",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1781/p1",
+          "fieldName": "positions",
+          "target": "Dawn:n3464",
+          "targetNodeId": 3464,
+          "offset": 300706
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1805",
+      "level": "Dawn",
+      "nodeId": 1805,
+      "name": "BstNode_656801883",
+      "className": "DoShout",
+      "classIndex": 5,
+      "sourceOffset": 303124,
+      "sourceLength": 31,
+      "sourceSha256": "120b95dfc5cca20f0cfa9390d8d06d0e121edc5f2bc113acc4cf15207b1d78d9",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1805/p1",
+          "fieldName": "positions",
+          "target": "Dawn:n3478",
+          "targetNodeId": 3478,
+          "offset": 303147
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1833",
+      "level": "Dawn",
+      "nodeId": 1833,
+      "name": "BstNode_656801882",
+      "className": "DoShout",
+      "classIndex": 5,
+      "sourceOffset": 306626,
+      "sourceLength": 31,
+      "sourceSha256": "cf74cd2ea23d415652d181bb910586fad054f21101eb2944fd19ff443e1d5075",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1833/p1",
+          "fieldName": "positions",
+          "target": "Dawn:n3491",
+          "targetNodeId": 3491,
+          "offset": 306649
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1848",
+      "level": "Dawn",
+      "nodeId": 1848,
+      "name": "BstNode_3122856301",
+      "className": "DoShout",
+      "classIndex": 5,
+      "sourceOffset": 307897,
+      "sourceLength": 32,
+      "sourceSha256": "fb68a18d6005178479cd9a0e270c1990fa2ed7310ec4cecd7554e8b844849582",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1848/p1",
+          "fieldName": "positions",
+          "target": "Dawn:n3497",
+          "targetNodeId": 3497,
+          "offset": 307921
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1870",
+      "level": "Dawn",
+      "nodeId": 1870,
+      "name": "BstNode_2504654883",
+      "className": "DoShout",
+      "classIndex": 5,
+      "sourceOffset": 310631,
+      "sourceLength": 32,
+      "sourceSha256": "3187fed36c9ee72fddcd9686d20962e1e18ae3e82575f59509d6b78d82138697",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1870/p1",
+          "fieldName": "positions",
+          "target": "Dawn:n3509",
+          "targetNodeId": 3509,
+          "offset": 310655
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1895",
+      "level": "Dawn",
+      "nodeId": 1895,
+      "name": "BstNode_1293287590",
+      "className": "DoShout",
+      "classIndex": 5,
+      "sourceOffset": 313308,
+      "sourceLength": 32,
+      "sourceSha256": "373a52c8bb86a4f80f4bd2418d8d28f27573bd39184da024e76e968226ee3e5c",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1895/p1",
+          "fieldName": "positions",
+          "target": "Dawn:n3520",
+          "targetNodeId": 3520,
+          "offset": 313332
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1934",
+      "level": "Dawn",
+      "nodeId": 1934,
+      "name": "BstNode_656801881",
+      "className": "DoShout",
+      "classIndex": 5,
+      "sourceOffset": 317881,
+      "sourceLength": 31,
+      "sourceSha256": "1e19360170324f196ae90ee8f406546b5d9ebe797e058848a7c4292feb9f924e",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1934/p1",
+          "fieldName": "positions",
+          "target": "Dawn:n3536",
+          "targetNodeId": 3536,
+          "offset": 317904
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1937",
+      "level": "Dawn",
+      "nodeId": 1937,
+      "name": "BstNode_656801889",
+      "className": "DoShout",
+      "classIndex": 5,
+      "sourceOffset": 318373,
+      "sourceLength": 31,
+      "sourceSha256": "a43eb7367d891955173936b9aaf7b9e6eee3dd8f6aedb5a1ffbba9fa4cb71fa0",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1937/p1",
+          "fieldName": "positions",
+          "target": "Dawn:n3537",
+          "targetNodeId": 3537,
+          "offset": 318396
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1953",
+      "level": "Dawn",
+      "nodeId": 1953,
+      "name": "BstNode_1293287578",
+      "className": "DoShout",
+      "classIndex": 5,
+      "sourceOffset": 320579,
+      "sourceLength": 32,
+      "sourceSha256": "6ab7831f301b4ed1402a2747812618f1e4e2de967e275fbf11d3e301035511c5",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1953/p1",
+          "fieldName": "positions",
+          "target": "Dawn:n3541",
+          "targetNodeId": 3541,
+          "offset": 320603
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2140",
+      "level": "Dawn",
+      "nodeId": 2140,
+      "name": "BstNode_1293287738",
+      "className": "DoShout",
+      "classIndex": 5,
+      "sourceOffset": 350362,
+      "sourceLength": 32,
+      "sourceSha256": "dfaccacfde191c0f51b163899d57243e818f44a2ecb6a105b81e933803fe0f56",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2140/p1",
+          "fieldName": "positions",
+          "target": "Dawn:n3576",
+          "targetNodeId": 3576,
+          "offset": 350386
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2287",
+      "level": "Dawn",
+      "nodeId": 2287,
+      "name": "BstNode_656801888",
+      "className": "DoShout",
+      "classIndex": 5,
+      "sourceOffset": 379011,
+      "sourceLength": 31,
+      "sourceSha256": "fe158829771116fc1a614bfa7fcab42c0b2ea24023e0299f042d12ed643304d5",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2287/p1",
+          "fieldName": "positions",
+          "target": "Dawn:n3618",
+          "targetNodeId": 3618,
+          "offset": 379034
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2294",
+      "level": "Dawn",
+      "nodeId": 2294,
+      "name": "BstNode_656801887",
+      "className": "DoShout",
+      "classIndex": 5,
+      "sourceOffset": 380046,
+      "sourceLength": 31,
+      "sourceSha256": "a759b7a3ffc50b9bf723ed66f4c58c6d16d01b1ad33494be0ebd5e1bf532181d",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2294/p1",
+          "fieldName": "positions",
+          "target": "Dawn:n3620",
+          "targetNodeId": 3620,
+          "offset": 380069
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2319",
+      "level": "Dawn",
+      "nodeId": 2319,
+      "name": "BstNode_3122856177",
+      "className": "DoShout",
+      "classIndex": 5,
+      "sourceOffset": 384390,
+      "sourceLength": 32,
+      "sourceSha256": "628ced6780b1145442af6901db45030f630e0bd3d875cd52e260a823c07d32fc",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2319/p1",
+          "fieldName": "positions",
+          "target": "Dawn:n3627",
+          "targetNodeId": 3627,
+          "offset": 384414
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2322",
+      "level": "Dawn",
+      "nodeId": 2322,
+      "name": "BstNode_3122856296",
+      "className": "DoShout",
+      "classIndex": 5,
+      "sourceOffset": 384624,
+      "sourceLength": 32,
+      "sourceSha256": "b44b8fd18c3a43700035fccc1012d8a4bde533bedbe43eb50df77861411956bd",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2322/p1",
+          "fieldName": "positions",
+          "target": "Dawn:n3628",
+          "targetNodeId": 3628,
+          "offset": 384648
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2459",
+      "level": "Dawn",
+      "nodeId": 2459,
+      "name": "BstNode_1293287639",
+      "className": "DoShout",
+      "classIndex": 5,
+      "sourceOffset": 409382,
+      "sourceLength": 32,
+      "sourceSha256": "4c7856f7cc52265e88a546e5dfb1763ceaabb8dcdf6fa456e4f246d65826b0ff",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2459/p1",
+          "fieldName": "positions",
+          "target": "Dawn:n3667",
+          "targetNodeId": 3667,
+          "offset": 409406
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2581",
+      "level": "Dawn",
+      "nodeId": 2581,
+      "name": "BstNode_219",
+      "className": "DoShout",
+      "classIndex": 5,
+      "sourceOffset": 430350,
+      "sourceLength": 25,
+      "sourceSha256": "baa302bd1d1da9401b9721c5a15c7299b78c148daeb033efb8cef303186d4df5",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2581/p1",
+          "fieldName": "positions",
+          "target": "Dawn:n3702",
+          "targetNodeId": 3702,
+          "offset": 430367
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2744",
+      "level": "Dawn",
+      "nodeId": 2744,
+      "name": "BstNode_3122855972",
+      "className": "DoShout",
+      "classIndex": 5,
+      "sourceOffset": 453810,
+      "sourceLength": 32,
+      "sourceSha256": "990f2286024fa578413082d89968fdc5d8689b45c7944c6f11cca2389e942dfc",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2744/p1",
+          "fieldName": "positions",
+          "target": "Dawn:n3736",
+          "targetNodeId": 3736,
+          "offset": 453834
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2769",
+      "level": "Dawn",
+      "nodeId": 2769,
+      "name": "BstNode_2446917735",
+      "className": "DoShout",
+      "classIndex": 5,
+      "sourceOffset": 456299,
+      "sourceLength": 32,
+      "sourceSha256": "8938e56fd2332a855cbad7736fdbc7273fa82cdb09253a497affb2b685e3a857",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2769/p1",
+          "fieldName": "positions",
+          "target": "Dawn:n3740",
+          "targetNodeId": 3740,
+          "offset": 456323
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2821",
+      "level": "Dawn",
+      "nodeId": 2821,
+      "name": "BstNode_2279669818",
+      "className": "DoShout",
+      "classIndex": 5,
+      "sourceOffset": 462522,
+      "sourceLength": 32,
+      "sourceSha256": "ea3345aa6e3823ab28ea9e0c262ae09d9fe7874a93f3a3d85cfb897f9c6d2a2f",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2821/p1",
+          "fieldName": "positions",
+          "target": "Dawn:n3757",
+          "targetNodeId": 3757,
+          "offset": 462546
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2849",
+      "level": "Dawn",
+      "nodeId": 2849,
+      "name": "BstNode_1842806920",
+      "className": "DoShout",
+      "classIndex": 5,
+      "sourceOffset": 466698,
+      "sourceLength": 32,
+      "sourceSha256": "e4298eab9622eabadfb0d7d56394f9b06379dd3c946317d231578bf743bf6be4",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2849/p1",
+          "fieldName": "positions",
+          "target": "Dawn:n3767",
+          "targetNodeId": 3767,
+          "offset": 466722
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n444",
+      "level": "DuskMid",
+      "nodeId": 444,
+      "name": "BstNode_2783838217",
+      "className": "DoShout",
+      "classIndex": 48,
+      "sourceOffset": 98774,
+      "sourceLength": 32,
+      "sourceSha256": "4f341adb99daa2deb5524e897fc7020a01337baae0e07b84d3a2ff1bae298358",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n444/p1",
+          "fieldName": "positions",
+          "target": "DuskMid:n1178",
+          "targetNodeId": 1178,
+          "offset": 98798
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n12",
+      "level": "HubReveal",
+      "nodeId": 12,
+      "name": "BstNode_1167523864",
+      "className": "DoShout",
+      "classIndex": 10,
+      "sourceOffset": 30877,
+      "sourceLength": 32,
+      "sourceSha256": "a903d19df81a6862e8089e1f6da0ef2be4e7d8dfe6ab9061789d5a4dbe1cf1ec",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n12/p1",
+          "fieldName": "positions",
+          "target": "HubReveal:n1508",
+          "targetNodeId": 1508,
+          "offset": 30901
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n456",
+      "level": "Night",
+      "nodeId": 456,
+      "name": "BstNode_1958",
+      "className": "DoShout",
+      "classIndex": 43,
+      "sourceOffset": 92585,
+      "sourceLength": 26,
+      "sourceSha256": "2980fbe53c8e5ebf0103c6215b5553f71ed045654a884d4efc186b35253cd3ad",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n456/p1",
+          "fieldName": "positions",
+          "target": "Night:n3195",
+          "targetNodeId": 3195,
+          "offset": 92603
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n666",
+      "level": "Night",
+      "nodeId": 666,
+      "name": "BstNode_1964",
+      "className": "DoShout",
+      "classIndex": 43,
+      "sourceOffset": 121931,
+      "sourceLength": 26,
+      "sourceSha256": "58560762080ab3bab1055fb852083ba27493864ab4072e55fd20e622fbd08db3",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n666/p1",
+          "fieldName": "positions",
+          "target": "Night:n3231",
+          "targetNodeId": 3231,
+          "offset": 121949
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n777",
+      "level": "Night",
+      "nodeId": 777,
+      "name": "BstNode_34604481",
+      "className": "DoShout",
+      "classIndex": 43,
+      "sourceOffset": 139541,
+      "sourceLength": 30,
+      "sourceSha256": "22451a5ef79e51fb0cc8a8ddc9b0b4c19b8c39e4411ceee35762846d548074df",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n777/p1",
+          "fieldName": "positions",
+          "target": "Night:n3247",
+          "targetNodeId": 3247,
+          "offset": 139563
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n965",
+      "level": "Night",
+      "nodeId": 965,
+      "name": "BstNode_1962",
+      "className": "DoShout",
+      "classIndex": 43,
+      "sourceOffset": 167585,
+      "sourceLength": 26,
+      "sourceSha256": "e4b1aa0d726800c913e7ad297889461c128e48c6e2ccb272418cdafa1b0f3b2c",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n965/p1",
+          "fieldName": "positions",
+          "target": "Night:n3283",
+          "targetNodeId": 3283,
+          "offset": 167603
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1000",
+      "level": "Night",
+      "nodeId": 1000,
+      "name": "BstNode_2482",
+      "className": "DoShout",
+      "classIndex": 43,
+      "sourceOffset": 173565,
+      "sourceLength": 26,
+      "sourceSha256": "719a8aa01fb4f466443878384f2bd919fa21f570721866cb21070136ce80b529",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1000/p1",
+          "fieldName": "positions",
+          "target": "Night:n3287",
+          "targetNodeId": 3287,
+          "offset": 173583
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1572",
+      "level": "Night",
+      "nodeId": 1572,
+      "name": "BstNode_34604477",
+      "className": "DoShout",
+      "classIndex": 43,
+      "sourceOffset": 246457,
+      "sourceLength": 30,
+      "sourceSha256": "2d7ebb5343cf274677c1e059281d0406c21bffcce2d664fb32eb901359d419e6",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1572/p1",
+          "fieldName": "positions",
+          "target": "Night:n3399",
+          "targetNodeId": 3399,
+          "offset": 246479
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1763",
+      "level": "Night",
+      "nodeId": 1763,
+      "name": "BstNode_1956",
+      "className": "DoShout",
+      "classIndex": 43,
+      "sourceOffset": 274872,
+      "sourceLength": 26,
+      "sourceSha256": "d37119ee16f005badd3ed0eb6c6378618966f2e25abce896b3dde843d064026d",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1763/p1",
+          "fieldName": "positions",
+          "target": "Night:n3434",
+          "targetNodeId": 3434,
+          "offset": 274890
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2226",
+      "level": "Night",
+      "nodeId": 2226,
+      "name": "BstNode_1960",
+      "className": "DoShout",
+      "classIndex": 43,
+      "sourceOffset": 350803,
+      "sourceLength": 26,
+      "sourceSha256": "710992f77480c338ef1627a50c918da2eb07b580e8056acc556f43c168efd406",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2226/p1",
+          "fieldName": "positions",
+          "target": "Night:n3527",
+          "targetNodeId": 3527,
+          "offset": 350821
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n273",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 273,
+      "name": "BstNode_656801809",
+      "className": "DoShout",
+      "classIndex": 38,
+      "sourceOffset": 84203,
+      "sourceLength": 31,
+      "sourceSha256": "ecb030b8c8046213cec3c9b3c45e2676aea95eb30cbb5212dde453bf8bd266a5",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n273/p1",
+          "fieldName": "positions",
+          "target": "Prairie_NestAndKeeper:n1006",
+          "targetNodeId": 1006,
+          "offset": 84226
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n338",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 338,
+      "name": "BstNode_656801811",
+      "className": "DoShout",
+      "classIndex": 38,
+      "sourceOffset": 99180,
+      "sourceLength": 31,
+      "sourceSha256": "177144e7c83f1b7371317579c08c1a89f08d4b7470f354d26b85620bc206af28",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n338/p1",
+          "fieldName": "positions",
+          "target": "Prairie_NestAndKeeper:n1013",
+          "targetNodeId": 1013,
+          "offset": 99203
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n814",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 814,
+      "name": "BstNode_656801812",
+      "className": "DoShout",
+      "classIndex": 38,
+      "sourceOffset": 202527,
+      "sourceLength": 31,
+      "sourceSha256": "02403b2a96884593eab82a5c1bbc89bbf932c73812e016a3021803532accd24f",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n814/p1",
+          "fieldName": "positions",
+          "target": "Prairie_NestAndKeeper:n1059",
+          "targetNodeId": 1059,
+          "offset": 202550
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n88",
+      "level": "Prairie_Village",
+      "nodeId": 88,
+      "name": "BstNode_235",
+      "className": "DoShout",
+      "classIndex": 26,
+      "sourceOffset": 44847,
+      "sourceLength": 25,
+      "sourceSha256": "0ec451eb91803425974ef5718e13b51d1c49ae32420b32f05ac84f17fabf52e9",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n88/p1",
+          "fieldName": "positions",
+          "target": "Prairie_Village:n3165",
+          "targetNodeId": 3165,
+          "offset": 44864
+        }
+      ],
+      "incomingReferenceCount": 4,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1104",
+      "level": "Prairie_Village",
+      "nodeId": 1104,
+      "name": "BstNode_2783838218",
+      "className": "DoShout",
+      "classIndex": 26,
+      "sourceOffset": 212436,
+      "sourceLength": 32,
+      "sourceSha256": "c1386c25ce808c39b25f62d6733f05c3893a06f0d8fedfd40e23ab4eb30e361a",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1104/p1",
+          "fieldName": "positions",
+          "target": "Prairie_Village:n3353",
+          "targetNodeId": 3353,
+          "offset": 212460
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2256",
+      "level": "Prairie_Village",
+      "nodeId": 2256,
+      "name": "BstNode_286",
+      "className": "DoShout",
+      "classIndex": 26,
+      "sourceOffset": 391706,
+      "sourceLength": 25,
+      "sourceSha256": "5de824fc74034f3a94dc8d7264254ff301030d5a0a036eea93b656fc76a4d9f1",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2256/p1",
+          "fieldName": "positions",
+          "target": "Prairie_Village:n3576",
+          "targetNodeId": 3576,
+          "offset": 391723
+        }
+      ],
+      "incomingReferenceCount": 4,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2606",
+      "level": "Prairie_Village",
+      "nodeId": 2606,
+      "name": "BstNode_289",
+      "className": "DoShout",
+      "classIndex": 26,
+      "sourceOffset": 441427,
+      "sourceLength": 25,
+      "sourceSha256": "fd2a1ccf2ac3346df864fdd22e0f4584675ff7e0bae3b6d295bb655f6519a42b",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2606/p1",
+          "fieldName": "positions",
+          "target": "Prairie_Village:n3643",
+          "targetNodeId": 3643,
+          "offset": 441444
+        }
+      ],
+      "incomingReferenceCount": 4,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n593",
+      "level": "RainForest",
+      "nodeId": 593,
+      "name": "BstNode_34603164",
+      "className": "DoShout",
+      "classIndex": 52,
+      "sourceOffset": 136841,
+      "sourceLength": 30,
+      "sourceSha256": "77825638e3b4915376a7a4c64a91bd825ada305b16d2d46fa4fe0a7ed9730295",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n593/p1",
+          "fieldName": "positions",
+          "target": "RainForest:n1266",
+          "targetNodeId": 1266,
+          "offset": 136863
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n1388",
+      "level": "RainMid",
+      "nodeId": 1388,
+      "name": "BstNode_2783838329",
+      "className": "DoShout",
+      "classIndex": 69,
+      "sourceOffset": 279820,
+      "sourceLength": 32,
+      "sourceSha256": "d1a5b6d38b72a7354c883b91e1235760071168a778175f07cdbae9e9c615beed",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1388/p1",
+          "fieldName": "positions",
+          "target": "RainMid:n2346",
+          "targetNodeId": 2346,
+          "offset": 279844
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "Dawn",
+      "path": "Levels/Dawn/Objects.level.bin",
+      "sha256": "16e26aafc7f9d120a548bf5d8bec04fbc18146bc8db531ef75144889b1ff197a",
+      "bytes": 504637,
+      "nodes": 3798,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dawn.json",
+      "markdown": "Objects对象清单/Dawn.md"
+    },
+    {
+      "level": "DuskMid",
+      "path": "Levels/DuskMid/Objects.level.bin",
+      "sha256": "899ca33226dabd04afecfe7888750938ff4e460cb586603364e150591e9cbda5",
+      "bytes": 234288,
+      "nodes": 1268,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DuskMid.json",
+      "markdown": "Objects对象清单/DuskMid.md"
+    },
+    {
+      "level": "HubReveal",
+      "path": "Levels/HubReveal/Objects.level.bin",
+      "sha256": "4b32f12bbe4b246cde9ca1e4ba0982000ff108359865bb4340aba640e609861b",
+      "bytes": 289438,
+      "nodes": 1829,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/HubReveal.json",
+      "markdown": "Objects对象清单/HubReveal.md"
+    },
+    {
+      "level": "Night",
+      "path": "Levels/Night/Objects.level.bin",
+      "sha256": "6ce612c9efb82834d648de81251033b341a44f4d9374d8338d868575aab6a723",
+      "bytes": 499756,
+      "nodes": 3719,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Night.json",
+      "markdown": "Objects对象清单/Night.md"
+    },
+    {
+      "level": "Prairie_NestAndKeeper",
+      "path": "Levels/Prairie_NestAndKeeper/Objects.level.bin",
+      "sha256": "5eabe877e07c84e5f9270035aaab73fa20144c87f6e9136e5285dbaff3f85b7a",
+      "bytes": 239403,
+      "nodes": 1077,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_NestAndKeeper.json",
+      "markdown": "Objects对象清单/Prairie_NestAndKeeper.md"
+    },
+    {
+      "level": "Prairie_Village",
+      "path": "Levels/Prairie_Village/Objects.level.bin",
+      "sha256": "4656296b54402016b59b894b4653fbdc71e106a21e0900294f73f2c7b7112385",
+      "bytes": 549989,
+      "nodes": 3724,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Village.json",
+      "markdown": "Objects对象清单/Prairie_Village.md"
+    },
+    {
+      "level": "RainForest",
+      "path": "Levels/RainForest/Objects.level.bin",
+      "sha256": "2e69b3314c70c61bd99435f4bb4418fba540f227c83670e1af3b5358c64c3b73",
+      "bytes": 271409,
+      "nodes": 1306,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainForest.json",
+      "markdown": "Objects对象清单/RainForest.md"
+    },
+    {
+      "level": "RainMid",
+      "path": "Levels/RainMid/Objects.level.bin",
+      "sha256": "139b219d9b71a2ab24418b1ec41f2ee8a2ebfdf4c5ea992c35348a758682ed23",
+      "bytes": 430825,
+      "nodes": 2457,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainMid.json",
+      "markdown": "Objects对象清单/RainMid.md"
+    }
+  ]
+}

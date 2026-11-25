@@ -1,0 +1,5731 @@
+{
+  "className": "AncientSpirit",
+  "functionGroup": "任务、先祖与场景机制",
+  "functionRole": "先祖交互、动画、收集与剧情",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "AncientSpirit 的原默认值、继承初始化及 44 个序列化字段变体；原注册字段 43 项。"
+    },
+    {
+      "name": "先祖交互、动画、收集与剧情",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Clump（105 条引用）、Marker（158 条引用）、Collectible（42 条引用）、Npc（42 条引用）、Timeline（25 条引用）、LevelMesh（40 条引用）、CameraKeyFrame（99 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "AncientSpirit",
+    "category": "任务、先祖与场景机制",
+    "functionGroupId": "quests",
+    "functionRole": "先祖交互、动画、收集与剧情",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "AncientSpirit 的原默认值、继承初始化及 44 个序列化字段变体；原注册字段 43 项。"
+      },
+      {
+        "name": "先祖交互、动画、收集与剧情",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Clump（105 条引用）、Marker（158 条引用）、Collectible（42 条引用）、Npc（42 条引用）、Timeline（25 条引用）、LevelMesh（40 条引用）、CameraKeyFrame（99 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Marker",
+        "references": 158
+      },
+      {
+        "className": "Clump",
+        "references": 105
+      },
+      {
+        "className": "CameraKeyFrame",
+        "references": 99
+      },
+      {
+        "className": "Collectible",
+        "references": 42
+      },
+      {
+        "className": "Npc",
+        "references": 42
+      },
+      {
+        "className": "LevelMesh",
+        "references": 40
+      },
+      {
+        "className": "Timeline",
+        "references": 25
+      }
+    ],
+    "rttiWorkingGroup": "系统和其余类型",
+    "role": "对象实例类型",
+    "instances": 42,
+    "nestedInstances": 0,
+    "referenceFields": 511,
+    "declaredLevels": 18,
+    "levels": [
+      {
+        "level": "CandleSpace",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DayHubCave",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Dusk",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DuskGraveyard",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DuskMid",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "HubReveal",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Night",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_ButterflyFields",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Cave",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_NestAndKeeper",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Village",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Rain",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainEnd",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainForest",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainMid",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SkyHub2",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Sunset",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SunsetEnd",
+        "nodes": 5,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "activateRadius",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "appearAnimName",
+        "type": 1,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "aThanklessJob",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "candles",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "chamIntensityMult",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "changeLevelAfterRecieving",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "collectible",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "customSettleTimeline",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "customSpiritEmoteTimeline",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "customSpiritEntranceTimeline",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "emoteAnimName",
+        "type": 1,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "emoteCamera",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "emoteCameraFadeInTime",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "entranceCamera",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "exitAnimName",
+        "type": 1,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "hideOtherPlayers",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "npc",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "onAlreadyCollected",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "onDisable",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "onEmote",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "onEntrance",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "onExit",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "onFinish",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "onSettle",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "onTurn",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "quest",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "rewardCollectible",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "safeTeleportRegion",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "settleAnimName",
+        "type": 1,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "settleCamera",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "settleHoldTime",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "skipEntranceCamera",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "skipTombstoneCamera",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "soulPresentAnimName",
+        "type": 1,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "soulPresentCamera",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "spawnPos",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "spiritActivateRegion",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "startState",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "tombActivateRegion",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "tombstoneCamera",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "tombstoneCham",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "uniqueTurnAnimName",
+        "type": 1,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "waitingOnPlayerInputAnim",
+        "type": 1,
+        "size": 0,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100c7db30",
+    "nativeRegisteredFields": [
+      {
+        "name": "npc",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP3NpcERK8MetaTypev",
+        "nativeOffset": 64,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7cc90"
+      },
+      {
+        "name": "collectible",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP11CollectibleERK8MetaTypev",
+        "nativeOffset": 72,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7cce0"
+      },
+      {
+        "name": "candles",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 256,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7cd30"
+      },
+      {
+        "name": "aThanklessJob",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 57,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7cd80"
+      },
+      {
+        "name": "hideOtherPlayers",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 59,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7cdd0"
+      },
+      {
+        "name": "spawnPos",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP6MarkerERK8MetaTypev",
+        "nativeOffset": 264,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7ce20"
+      },
+      {
+        "name": "onFinish",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 408,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7ce70"
+      },
+      {
+        "name": "onAlreadyCollected",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 416,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7cec0"
+      },
+      {
+        "name": "rewardCollectible",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7cf10"
+      },
+      {
+        "name": "tombstoneCamera",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP14CameraKeyFrameERK8MetaTypev",
+        "nativeOffset": 376,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7cf60"
+      },
+      {
+        "name": "chamIntensityMult",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 400,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7cfb0"
+      },
+      {
+        "name": "tombstoneCham",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP9LevelMeshERK8MetaTypev",
+        "nativeOffset": 392,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7d000"
+      },
+      {
+        "name": "tombActivateRegion",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP6MarkerERK8MetaTypev",
+        "nativeOffset": 424,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7d050"
+      },
+      {
+        "name": "activateRadius",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 448,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7d0a0"
+      },
+      {
+        "name": "safeTeleportRegion",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP6MarkerERK8MetaTypev",
+        "nativeOffset": 440,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7d0f0"
+      },
+      {
+        "name": "skipTombstoneCamera",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 460,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7d140"
+      },
+      {
+        "name": "appearAnimName",
+        "typeGetter": "__Z17GetMetaTypeByTypeINSt3__112basic_stringIcNS0_11char_traitsIcEE16StlPoolAllocatorIcEEEERK8MetaTypev",
+        "nativeOffset": 80,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7d190"
+      },
+      {
+        "name": "startState",
+        "typeGetter": "__Z17GetMetaTypeByTypeI23AncientSpiritStartStateERK8MetaTypev",
+        "nativeOffset": 384,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7d1e0"
+      },
+      {
+        "name": "entranceCamera",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP14CameraKeyFrameERK8MetaTypev",
+        "nativeOffset": 344,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7d230"
+      },
+      {
+        "name": "customSpiritEntranceTimeline",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP8TimelineERK8MetaTypev",
+        "nativeOffset": 336,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7d280"
+      },
+      {
+        "name": "onEntrance",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 272,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7d2d0"
+      },
+      {
+        "name": "skipEntranceCamera",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 461,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7d320"
+      },
+      {
+        "name": "settleAnimName",
+        "typeGetter": "__Z17GetMetaTypeByTypeINSt3__112basic_stringIcNS0_11char_traitsIcEE16StlPoolAllocatorIcEEEERK8MetaTypev",
+        "nativeOffset": 104,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7d370"
+      },
+      {
+        "name": "settleCamera",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP14CameraKeyFrameERK8MetaTypev",
+        "nativeOffset": 352,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7d3c0"
+      },
+      {
+        "name": "customSettleTimeline",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP8TimelineERK8MetaTypev",
+        "nativeOffset": 320,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7d410"
+      },
+      {
+        "name": "settleHoldTime",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 452,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7d460"
+      },
+      {
+        "name": "onSettle",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 288,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7d4b0"
+      },
+      {
+        "name": "spiritActivateRegion",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP6MarkerERK8MetaTypev",
+        "nativeOffset": 432,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7d500"
+      },
+      {
+        "name": "emoteAnimName",
+        "typeGetter": "__Z17GetMetaTypeByTypeINSt3__112basic_stringIcNS0_11char_traitsIcEE16StlPoolAllocatorIcEEEERK8MetaTypev",
+        "nativeOffset": 128,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7d550"
+      },
+      {
+        "name": "emoteCamera",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP14CameraKeyFrameERK8MetaTypev",
+        "nativeOffset": 360,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7d5a0"
+      },
+      {
+        "name": "emoteCameraFadeInTime",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 456,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7d5f0"
+      },
+      {
+        "name": "customSpiritEmoteTimeline",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP8TimelineERK8MetaTypev",
+        "nativeOffset": 328,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7d640"
+      },
+      {
+        "name": "onEmote",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 280,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7d690"
+      },
+      {
+        "name": "uniqueTurnAnimName",
+        "typeGetter": "__Z17GetMetaTypeByTypeINSt3__112basic_stringIcNS0_11char_traitsIcEE16StlPoolAllocatorIcEEEERK8MetaTypev",
+        "nativeOffset": 152,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7d6e0"
+      },
+      {
+        "name": "waitingOnPlayerInputAnim",
+        "typeGetter": "__Z17GetMetaTypeByTypeINSt3__112basic_stringIcNS0_11char_traitsIcEE16StlPoolAllocatorIcEEEERK8MetaTypev",
+        "nativeOffset": 200,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7d730"
+      },
+      {
+        "name": "onTurn",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 296,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7d780"
+      },
+      {
+        "name": "soulPresentAnimName",
+        "typeGetter": "__Z17GetMetaTypeByTypeINSt3__112basic_stringIcNS0_11char_traitsIcEE16StlPoolAllocatorIcEEEERK8MetaTypev",
+        "nativeOffset": 176,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7d7d0"
+      },
+      {
+        "name": "soulPresentCamera",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP14CameraKeyFrameERK8MetaTypev",
+        "nativeOffset": 368,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7d820"
+      },
+      {
+        "name": "changeLevelAfterRecieving",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 58,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7d870"
+      },
+      {
+        "name": "exitAnimName",
+        "typeGetter": "__Z17GetMetaTypeByTypeINSt3__112basic_stringIcNS0_11char_traitsIcEE16StlPoolAllocatorIcEEEERK8MetaTypev",
+        "nativeOffset": 224,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7d8c0"
+      },
+      {
+        "name": "onExit",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 304,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7d910"
+      },
+      {
+        "name": "onDisable",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 312,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7d960"
+      },
+      {
+        "name": "quest",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP10WorldQuestERK8MetaTypev",
+        "nativeOffset": 464,
+        "registrationFunction": "0x100089150",
+        "propertyAddress": "0x100c7d9b0"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 43 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "CandleSpace:n2",
+      "level": "CandleSpace",
+      "nodeId": 2,
+      "name": "BstNode_2529559023",
+      "className": "AncientSpirit",
+      "classIndex": 2,
+      "sourceOffset": 23698,
+      "sourceLength": 157,
+      "sourceSha256": "fc1df955af568916ef6925e3d8a73adc3a81996f283c94faefe7f64319011291",
+      "declaredFieldCount": 44,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2/p1",
+          "fieldName": "onExit",
+          "target": "CandleSpace:n466",
+          "targetNodeId": 466,
+          "offset": 23722
+        },
+        {
+          "fieldId": "n2/p2",
+          "fieldName": "spawnPos",
+          "target": "CandleSpace:n219",
+          "targetNodeId": 219,
+          "offset": 23726
+        },
+        {
+          "fieldId": "n2/p13",
+          "fieldName": "collectible",
+          "target": "CandleSpace:n277",
+          "targetNodeId": 277,
+          "offset": 23758
+        },
+        {
+          "fieldId": "n2/p16",
+          "fieldName": "spiritActivateRegion",
+          "target": "CandleSpace:n152",
+          "targetNodeId": 152,
+          "offset": 23770
+        },
+        {
+          "fieldId": "n2/p18",
+          "fieldName": "npc",
+          "target": "CandleSpace:n300",
+          "targetNodeId": 300,
+          "offset": 23778
+        },
+        {
+          "fieldId": "n2/p22",
+          "fieldName": "customSpiritEmoteTimeline",
+          "target": "CandleSpace:n424",
+          "targetNodeId": 424,
+          "offset": 23788
+        },
+        {
+          "fieldId": "n2/p40",
+          "fieldName": "onFinish",
+          "target": "CandleSpace:n467",
+          "targetNodeId": 467,
+          "offset": 23839
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayHubCave:n958",
+      "level": "DayHubCave",
+      "nodeId": 958,
+      "name": "BstNode_2446917675",
+      "className": "AncientSpirit",
+      "classIndex": 69,
+      "sourceOffset": 197959,
+      "sourceLength": 242,
+      "sourceSha256": "6933c479ae581742784d4f88a349e96593f8668848090c6a56a4029b7f6ba586",
+      "declaredFieldCount": 43,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n958/p1",
+          "fieldName": "onExit",
+          "target": "DayHubCave:n1123",
+          "targetNodeId": 1123,
+          "offset": 197983
+        },
+        {
+          "fieldId": "n958/p2",
+          "fieldName": "spawnPos",
+          "target": "DayHubCave:n64",
+          "targetNodeId": 64,
+          "offset": 197987
+        },
+        {
+          "fieldId": "n958/p4",
+          "fieldName": "onSettle",
+          "target": "DayHubCave:n1124",
+          "targetNodeId": 1124,
+          "offset": 197992
+        },
+        {
+          "fieldId": "n958/p9",
+          "fieldName": "tombstoneCham",
+          "target": "DayHubCave:n102",
+          "targetNodeId": 102,
+          "offset": 198034
+        },
+        {
+          "fieldId": "n958/p12",
+          "fieldName": "safeTeleportRegion",
+          "target": "DayHubCave:n623",
+          "targetNodeId": 623,
+          "offset": 198046
+        },
+        {
+          "fieldId": "n958/p13",
+          "fieldName": "collectible",
+          "target": "DayHubCave:n77",
+          "targetNodeId": 77,
+          "offset": 198050
+        },
+        {
+          "fieldId": "n958/p14",
+          "fieldName": "candles",
+          "target": "DayHubCave:n178",
+          "targetNodeId": 178,
+          "offset": 198054
+        },
+        {
+          "fieldId": "n958/p15",
+          "fieldName": "onTurn",
+          "target": "DayHubCave:n1125",
+          "targetNodeId": 1125,
+          "offset": 198058
+        },
+        {
+          "fieldId": "n958/p16",
+          "fieldName": "spiritActivateRegion",
+          "target": "DayHubCave:n308",
+          "targetNodeId": 308,
+          "offset": 198062
+        },
+        {
+          "fieldId": "n958/p18",
+          "fieldName": "npc",
+          "target": "DayHubCave:n60",
+          "targetNodeId": 60,
+          "offset": 198070
+        },
+        {
+          "fieldId": "n958/p27",
+          "fieldName": "soulPresentCamera",
+          "target": "DayHubCave:n595",
+          "targetNodeId": 595,
+          "offset": 198121
+        },
+        {
+          "fieldId": "n958/p34",
+          "fieldName": "entranceCamera",
+          "target": "DayHubCave:n953",
+          "targetNodeId": 953,
+          "offset": 198171
+        },
+        {
+          "fieldId": "n958/p39",
+          "fieldName": "onFinish",
+          "target": "DayHubCave:n1126",
+          "targetNodeId": 1126,
+          "offset": 198185
+        },
+        {
+          "fieldId": "n958/p40",
+          "fieldName": "tombActivateRegion",
+          "target": "DayHubCave:n308",
+          "targetNodeId": 308,
+          "offset": 198189
+        },
+        {
+          "fieldId": "n958/p41",
+          "fieldName": "onEntrance",
+          "target": "DayHubCave:n689",
+          "targetNodeId": 689,
+          "offset": 198193
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n117",
+      "level": "Dusk",
+      "nodeId": 117,
+      "name": "BstNode_1843",
+      "className": "AncientSpirit",
+      "classIndex": 26,
+      "sourceOffset": 43073,
+      "sourceLength": 191,
+      "sourceSha256": "4e8272f25b1f246eeedecd3a1f9747a26b4950314516b04fa69b50a0ffa8e879",
+      "declaredFieldCount": 43,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n117/p2",
+          "fieldName": "spawnPos",
+          "target": "Dusk:n220",
+          "targetNodeId": 220,
+          "offset": 43095
+        },
+        {
+          "fieldId": "n117/p9",
+          "fieldName": "tombstoneCham",
+          "target": "Dusk:n152",
+          "targetNodeId": 152,
+          "offset": 43132
+        },
+        {
+          "fieldId": "n117/p12",
+          "fieldName": "safeTeleportRegion",
+          "target": "Dusk:n610",
+          "targetNodeId": 610,
+          "offset": 43144
+        },
+        {
+          "fieldId": "n117/p13",
+          "fieldName": "collectible",
+          "target": "Dusk:n237",
+          "targetNodeId": 237,
+          "offset": 43148
+        },
+        {
+          "fieldId": "n117/p14",
+          "fieldName": "candles",
+          "target": "Dusk:n993",
+          "targetNodeId": 993,
+          "offset": 43152
+        },
+        {
+          "fieldId": "n117/p16",
+          "fieldName": "spiritActivateRegion",
+          "target": "Dusk:n223",
+          "targetNodeId": 223,
+          "offset": 43160
+        },
+        {
+          "fieldId": "n117/p18",
+          "fieldName": "npc",
+          "target": "Dusk:n536",
+          "targetNodeId": 536,
+          "offset": 43168
+        },
+        {
+          "fieldId": "n117/p21",
+          "fieldName": "tombstoneCamera",
+          "target": "Dusk:n150",
+          "targetNodeId": 150,
+          "offset": 43174
+        },
+        {
+          "fieldId": "n117/p22",
+          "fieldName": "customSpiritEmoteTimeline",
+          "target": "Dusk:n879",
+          "targetNodeId": 879,
+          "offset": 43178
+        },
+        {
+          "fieldId": "n117/p27",
+          "fieldName": "soulPresentCamera",
+          "target": "Dusk:n247",
+          "targetNodeId": 247,
+          "offset": 43192
+        },
+        {
+          "fieldId": "n117/p34",
+          "fieldName": "entranceCamera",
+          "target": "Dusk:n1154",
+          "targetNodeId": 1154,
+          "offset": 43211
+        },
+        {
+          "fieldId": "n117/p39",
+          "fieldName": "onFinish",
+          "target": "Dusk:n1187",
+          "targetNodeId": 1187,
+          "offset": 43248
+        },
+        {
+          "fieldId": "n117/p40",
+          "fieldName": "tombActivateRegion",
+          "target": "Dusk:n223",
+          "targetNodeId": 223,
+          "offset": 43252
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n616",
+      "level": "Dusk",
+      "nodeId": 616,
+      "name": "BstNode_2345992300",
+      "className": "AncientSpirit",
+      "classIndex": 26,
+      "sourceOffset": 136433,
+      "sourceLength": 171,
+      "sourceSha256": "73c9d933ffe379effb2f879c23be818469b7b0a5cb250ebe0b9ff05baa507870",
+      "declaredFieldCount": 43,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n616/p2",
+          "fieldName": "spawnPos",
+          "target": "Dusk:n766",
+          "targetNodeId": 766,
+          "offset": 136461
+        },
+        {
+          "fieldId": "n616/p9",
+          "fieldName": "tombstoneCham",
+          "target": "Dusk:n148",
+          "targetNodeId": 148,
+          "offset": 136495
+        },
+        {
+          "fieldId": "n616/p12",
+          "fieldName": "safeTeleportRegion",
+          "target": "Dusk:n798",
+          "targetNodeId": 798,
+          "offset": 136507
+        },
+        {
+          "fieldId": "n616/p13",
+          "fieldName": "collectible",
+          "target": "Dusk:n927",
+          "targetNodeId": 927,
+          "offset": 136511
+        },
+        {
+          "fieldId": "n616/p14",
+          "fieldName": "candles",
+          "target": "Dusk:n79",
+          "targetNodeId": 79,
+          "offset": 136515
+        },
+        {
+          "fieldId": "n616/p16",
+          "fieldName": "spiritActivateRegion",
+          "target": "Dusk:n941",
+          "targetNodeId": 941,
+          "offset": 136523
+        },
+        {
+          "fieldId": "n616/p18",
+          "fieldName": "npc",
+          "target": "Dusk:n320",
+          "targetNodeId": 320,
+          "offset": 136531
+        },
+        {
+          "fieldId": "n616/p22",
+          "fieldName": "customSpiritEmoteTimeline",
+          "target": "Dusk:n172",
+          "targetNodeId": 172,
+          "offset": 136541
+        },
+        {
+          "fieldId": "n616/p34",
+          "fieldName": "entranceCamera",
+          "target": "Dusk:n108",
+          "targetNodeId": 108,
+          "offset": 136574
+        },
+        {
+          "fieldId": "n616/p39",
+          "fieldName": "onFinish",
+          "target": "Dusk:n1242",
+          "targetNodeId": 1242,
+          "offset": 136588
+        },
+        {
+          "fieldId": "n616/p40",
+          "fieldName": "tombActivateRegion",
+          "target": "Dusk:n941",
+          "targetNodeId": 941,
+          "offset": 136592
+        },
+        {
+          "fieldId": "n616/p41",
+          "fieldName": "onEntrance",
+          "target": "Dusk:n1243",
+          "targetNodeId": 1243,
+          "offset": 136596
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n920",
+      "level": "DuskGraveyard",
+      "nodeId": 920,
+      "name": "BstNode_2345992758",
+      "className": "AncientSpirit",
+      "classIndex": 56,
+      "sourceOffset": 237462,
+      "sourceLength": 194,
+      "sourceSha256": "90a353bcabf2204c20bf47f18fe4632bf327ea79c30db3c6d5957f809ad4ac12",
+      "declaredFieldCount": 40,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n920/p2",
+          "fieldName": "spawnPos",
+          "target": "DuskGraveyard:n59",
+          "targetNodeId": 59,
+          "offset": 237490
+        },
+        {
+          "fieldId": "n920/p7",
+          "fieldName": "tombstoneCham",
+          "target": "DuskGraveyard:n1249",
+          "targetNodeId": 1249,
+          "offset": 237526
+        },
+        {
+          "fieldId": "n920/p10",
+          "fieldName": "safeTeleportRegion",
+          "target": "DuskGraveyard:n549",
+          "targetNodeId": 549,
+          "offset": 237538
+        },
+        {
+          "fieldId": "n920/p11",
+          "fieldName": "collectible",
+          "target": "DuskGraveyard:n183",
+          "targetNodeId": 183,
+          "offset": 237542
+        },
+        {
+          "fieldId": "n920/p12",
+          "fieldName": "candles",
+          "target": "DuskGraveyard:n1285",
+          "targetNodeId": 1285,
+          "offset": 237546
+        },
+        {
+          "fieldId": "n920/p14",
+          "fieldName": "spiritActivateRegion",
+          "target": "DuskGraveyard:n393",
+          "targetNodeId": 393,
+          "offset": 237554
+        },
+        {
+          "fieldId": "n920/p16",
+          "fieldName": "npc",
+          "target": "DuskGraveyard:n1346",
+          "targetNodeId": 1346,
+          "offset": 237562
+        },
+        {
+          "fieldId": "n920/p18",
+          "fieldName": "tombstoneCamera",
+          "target": "DuskGraveyard:n1337",
+          "targetNodeId": 1337,
+          "offset": 237567
+        },
+        {
+          "fieldId": "n920/p19",
+          "fieldName": "customSpiritEmoteTimeline",
+          "target": "DuskGraveyard:n1378",
+          "targetNodeId": 1378,
+          "offset": 237571
+        },
+        {
+          "fieldId": "n920/p31",
+          "fieldName": "entranceCamera",
+          "target": "DuskGraveyard:n1386",
+          "targetNodeId": 1386,
+          "offset": 237626
+        },
+        {
+          "fieldId": "n920/p36",
+          "fieldName": "onFinish",
+          "target": "DuskGraveyard:n1750",
+          "targetNodeId": 1750,
+          "offset": 237640
+        },
+        {
+          "fieldId": "n920/p37",
+          "fieldName": "tombActivateRegion",
+          "target": "DuskGraveyard:n393",
+          "targetNodeId": 393,
+          "offset": 237644
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n805",
+      "level": "DuskMid",
+      "nodeId": 805,
+      "name": "BstNode_2345992391",
+      "className": "AncientSpirit",
+      "classIndex": 60,
+      "sourceOffset": 172203,
+      "sourceLength": 195,
+      "sourceSha256": "f42c4d9ac7e4ab0795eca963b6e511f582a2e470a25086c1cbc51b1de2ca70f6",
+      "declaredFieldCount": 40,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n805/p2",
+          "fieldName": "spawnPos",
+          "target": "DuskMid:n594",
+          "targetNodeId": 594,
+          "offset": 172231
+        },
+        {
+          "fieldId": "n805/p7",
+          "fieldName": "tombstoneCham",
+          "target": "DuskMid:n818",
+          "targetNodeId": 818,
+          "offset": 172267
+        },
+        {
+          "fieldId": "n805/p10",
+          "fieldName": "safeTeleportRegion",
+          "target": "DuskMid:n1051",
+          "targetNodeId": 1051,
+          "offset": 172279
+        },
+        {
+          "fieldId": "n805/p11",
+          "fieldName": "collectible",
+          "target": "DuskMid:n454",
+          "targetNodeId": 454,
+          "offset": 172283
+        },
+        {
+          "fieldId": "n805/p12",
+          "fieldName": "candles",
+          "target": "DuskMid:n146",
+          "targetNodeId": 146,
+          "offset": 172287
+        },
+        {
+          "fieldId": "n805/p14",
+          "fieldName": "spiritActivateRegion",
+          "target": "DuskMid:n288",
+          "targetNodeId": 288,
+          "offset": 172295
+        },
+        {
+          "fieldId": "n805/p16",
+          "fieldName": "npc",
+          "target": "DuskMid:n584",
+          "targetNodeId": 584,
+          "offset": 172303
+        },
+        {
+          "fieldId": "n805/p18",
+          "fieldName": "tombstoneCamera",
+          "target": "DuskMid:n78",
+          "targetNodeId": 78,
+          "offset": 172331
+        },
+        {
+          "fieldId": "n805/p31",
+          "fieldName": "entranceCamera",
+          "target": "DuskMid:n78",
+          "targetNodeId": 78,
+          "offset": 172368
+        },
+        {
+          "fieldId": "n805/p36",
+          "fieldName": "onFinish",
+          "target": "DuskMid:n1225",
+          "targetNodeId": 1225,
+          "offset": 172382
+        },
+        {
+          "fieldId": "n805/p37",
+          "fieldName": "tombActivateRegion",
+          "target": "DuskMid:n288",
+          "targetNodeId": 288,
+          "offset": 172386
+        },
+        {
+          "fieldId": "n805/p39",
+          "fieldName": "emoteCamera",
+          "target": "DuskMid:n566",
+          "targetNodeId": 566,
+          "offset": 172394
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n893",
+      "level": "DuskMid",
+      "nodeId": 893,
+      "name": "BstNode_2504654859",
+      "className": "AncientSpirit",
+      "classIndex": 60,
+      "sourceOffset": 192230,
+      "sourceLength": 198,
+      "sourceSha256": "55f8a8cfc5ceae184ac7524eabe34b626ff0656b97bdc5156f2d922b4ba55f12",
+      "declaredFieldCount": 40,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n893/p1",
+          "fieldName": "onExit",
+          "target": "DuskMid:n1234",
+          "targetNodeId": 1234,
+          "offset": 192254
+        },
+        {
+          "fieldId": "n893/p2",
+          "fieldName": "spawnPos",
+          "target": "DuskMid:n101",
+          "targetNodeId": 101,
+          "offset": 192258
+        },
+        {
+          "fieldId": "n893/p7",
+          "fieldName": "tombstoneCham",
+          "target": "DuskMid:n125",
+          "targetNodeId": 125,
+          "offset": 192296
+        },
+        {
+          "fieldId": "n893/p10",
+          "fieldName": "safeTeleportRegion",
+          "target": "DuskMid:n130",
+          "targetNodeId": 130,
+          "offset": 192308
+        },
+        {
+          "fieldId": "n893/p11",
+          "fieldName": "collectible",
+          "target": "DuskMid:n400",
+          "targetNodeId": 400,
+          "offset": 192312
+        },
+        {
+          "fieldId": "n893/p12",
+          "fieldName": "candles",
+          "target": "DuskMid:n677",
+          "targetNodeId": 677,
+          "offset": 192316
+        },
+        {
+          "fieldId": "n893/p14",
+          "fieldName": "spiritActivateRegion",
+          "target": "DuskMid:n201",
+          "targetNodeId": 201,
+          "offset": 192324
+        },
+        {
+          "fieldId": "n893/p16",
+          "fieldName": "npc",
+          "target": "DuskMid:n884",
+          "targetNodeId": 884,
+          "offset": 192332
+        },
+        {
+          "fieldId": "n893/p18",
+          "fieldName": "tombstoneCamera",
+          "target": "DuskMid:n332",
+          "targetNodeId": 332,
+          "offset": 192337
+        },
+        {
+          "fieldId": "n893/p19",
+          "fieldName": "customSpiritEmoteTimeline",
+          "target": "DuskMid:n160",
+          "targetNodeId": 160,
+          "offset": 192341
+        },
+        {
+          "fieldId": "n893/p24",
+          "fieldName": "soulPresentCamera",
+          "target": "DuskMid:n900",
+          "targetNodeId": 900,
+          "offset": 192355
+        },
+        {
+          "fieldId": "n893/p31",
+          "fieldName": "entranceCamera",
+          "target": "DuskMid:n439",
+          "targetNodeId": 439,
+          "offset": 192398
+        },
+        {
+          "fieldId": "n893/p36",
+          "fieldName": "onFinish",
+          "target": "DuskMid:n1235",
+          "targetNodeId": 1235,
+          "offset": 192412
+        },
+        {
+          "fieldId": "n893/p37",
+          "fieldName": "tombActivateRegion",
+          "target": "DuskMid:n201",
+          "targetNodeId": 201,
+          "offset": 192416
+        },
+        {
+          "fieldId": "n893/p38",
+          "fieldName": "onEntrance",
+          "target": "DuskMid:n957",
+          "targetNodeId": 957,
+          "offset": 192420
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n418",
+      "level": "HubReveal",
+      "nodeId": 418,
+      "name": "BstNode_2529558608",
+      "className": "AncientSpirit",
+      "classIndex": 68,
+      "sourceOffset": 101312,
+      "sourceLength": 153,
+      "sourceSha256": "50c86e61ceeb51fe7574ee2f7831ebc2678f7a3e08a8d74d9cf7626c2d70beaf",
+      "declaredFieldCount": 43,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n418/p1",
+          "fieldName": "onExit",
+          "target": "HubReveal:n1582",
+          "targetNodeId": 1582,
+          "offset": 101336
+        },
+        {
+          "fieldId": "n418/p2",
+          "fieldName": "spawnPos",
+          "target": "HubReveal:n934",
+          "targetNodeId": 934,
+          "offset": 101340
+        },
+        {
+          "fieldId": "n418/p12",
+          "fieldName": "safeTeleportRegion",
+          "target": "HubReveal:n1145",
+          "targetNodeId": 1145,
+          "offset": 101368
+        },
+        {
+          "fieldId": "n418/p13",
+          "fieldName": "collectible",
+          "target": "HubReveal:n1164",
+          "targetNodeId": 1164,
+          "offset": 101372
+        },
+        {
+          "fieldId": "n418/p16",
+          "fieldName": "spiritActivateRegion",
+          "target": "HubReveal:n590",
+          "targetNodeId": 590,
+          "offset": 101384
+        },
+        {
+          "fieldId": "n418/p18",
+          "fieldName": "npc",
+          "target": "HubReveal:n626",
+          "targetNodeId": 626,
+          "offset": 101392
+        },
+        {
+          "fieldId": "n418/p39",
+          "fieldName": "onFinish",
+          "target": "HubReveal:n462",
+          "targetNodeId": 462,
+          "offset": 101449
+        },
+        {
+          "fieldId": "n418/p40",
+          "fieldName": "tombActivateRegion",
+          "target": "HubReveal:n590",
+          "targetNodeId": 590,
+          "offset": 101453
+        },
+        {
+          "fieldId": "n418/p41",
+          "fieldName": "onEntrance",
+          "target": "HubReveal:n1495",
+          "targetNodeId": 1495,
+          "offset": 101457
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n458",
+      "level": "HubReveal",
+      "nodeId": 458,
+      "name": "BstNode_1056",
+      "className": "AncientSpirit",
+      "classIndex": 68,
+      "sourceOffset": 109005,
+      "sourceLength": 233,
+      "sourceSha256": "8be46877bb1011a7817dc9f59813e369714efc1df6ad2faccfd3ffccf18a4048",
+      "declaredFieldCount": 43,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n458/p1",
+          "fieldName": "onExit",
+          "target": "HubReveal:n1592",
+          "targetNodeId": 1592,
+          "offset": 109023
+        },
+        {
+          "fieldId": "n458/p2",
+          "fieldName": "spawnPos",
+          "target": "HubReveal:n1042",
+          "targetNodeId": 1042,
+          "offset": 109027
+        },
+        {
+          "fieldId": "n458/p9",
+          "fieldName": "tombstoneCham",
+          "target": "HubReveal:n1316",
+          "targetNodeId": 1316,
+          "offset": 109073
+        },
+        {
+          "fieldId": "n458/p12",
+          "fieldName": "safeTeleportRegion",
+          "target": "HubReveal:n697",
+          "targetNodeId": 697,
+          "offset": 109085
+        },
+        {
+          "fieldId": "n458/p13",
+          "fieldName": "collectible",
+          "target": "HubReveal:n134",
+          "targetNodeId": 134,
+          "offset": 109089
+        },
+        {
+          "fieldId": "n458/p14",
+          "fieldName": "candles",
+          "target": "HubReveal:n1259",
+          "targetNodeId": 1259,
+          "offset": 109093
+        },
+        {
+          "fieldId": "n458/p16",
+          "fieldName": "spiritActivateRegion",
+          "target": "HubReveal:n635",
+          "targetNodeId": 635,
+          "offset": 109101
+        },
+        {
+          "fieldId": "n458/p18",
+          "fieldName": "npc",
+          "target": "HubReveal:n1331",
+          "targetNodeId": 1331,
+          "offset": 109109
+        },
+        {
+          "fieldId": "n458/p22",
+          "fieldName": "customSpiritEmoteTimeline",
+          "target": "HubReveal:n1317",
+          "targetNodeId": 1317,
+          "offset": 109145
+        },
+        {
+          "fieldId": "n458/p27",
+          "fieldName": "soulPresentCamera",
+          "target": "HubReveal:n45",
+          "targetNodeId": 45,
+          "offset": 109159
+        },
+        {
+          "fieldId": "n458/p34",
+          "fieldName": "entranceCamera",
+          "target": "HubReveal:n596",
+          "targetNodeId": 596,
+          "offset": 109208
+        },
+        {
+          "fieldId": "n458/p41",
+          "fieldName": "onEntrance",
+          "target": "HubReveal:n1290",
+          "targetNodeId": 1290,
+          "offset": 109230
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n1303",
+      "level": "HubReveal",
+      "nodeId": 1303,
+      "name": "BstNode_2529558568",
+      "className": "AncientSpirit",
+      "classIndex": 68,
+      "sourceOffset": 250606,
+      "sourceLength": 153,
+      "sourceSha256": "b7fe9d73bcc4cc547caeb13cdd4e2fee5ff79930c1985e5732de9198aef4566b",
+      "declaredFieldCount": 43,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1303/p1",
+          "fieldName": "onExit",
+          "target": "HubReveal:n1759",
+          "targetNodeId": 1759,
+          "offset": 250630
+        },
+        {
+          "fieldId": "n1303/p2",
+          "fieldName": "spawnPos",
+          "target": "HubReveal:n1347",
+          "targetNodeId": 1347,
+          "offset": 250634
+        },
+        {
+          "fieldId": "n1303/p9",
+          "fieldName": "tombstoneCham",
+          "target": "HubReveal:n1262",
+          "targetNodeId": 1262,
+          "offset": 250650
+        },
+        {
+          "fieldId": "n1303/p12",
+          "fieldName": "safeTeleportRegion",
+          "target": "HubReveal:n1145",
+          "targetNodeId": 1145,
+          "offset": 250662
+        },
+        {
+          "fieldId": "n1303/p13",
+          "fieldName": "collectible",
+          "target": "HubReveal:n663",
+          "targetNodeId": 663,
+          "offset": 250666
+        },
+        {
+          "fieldId": "n1303/p14",
+          "fieldName": "candles",
+          "target": "HubReveal:n569",
+          "targetNodeId": 569,
+          "offset": 250670
+        },
+        {
+          "fieldId": "n1303/p16",
+          "fieldName": "spiritActivateRegion",
+          "target": "HubReveal:n1476",
+          "targetNodeId": 1476,
+          "offset": 250678
+        },
+        {
+          "fieldId": "n1303/p18",
+          "fieldName": "npc",
+          "target": "HubReveal:n1056",
+          "targetNodeId": 1056,
+          "offset": 250686
+        },
+        {
+          "fieldId": "n1303/p21",
+          "fieldName": "tombstoneCamera",
+          "target": "HubReveal:n88",
+          "targetNodeId": 88,
+          "offset": 250692
+        },
+        {
+          "fieldId": "n1303/p22",
+          "fieldName": "customSpiritEmoteTimeline",
+          "target": "HubReveal:n204",
+          "targetNodeId": 204,
+          "offset": 250696
+        },
+        {
+          "fieldId": "n1303/p27",
+          "fieldName": "soulPresentCamera",
+          "target": "HubReveal:n492",
+          "targetNodeId": 492,
+          "offset": 250710
+        },
+        {
+          "fieldId": "n1303/p34",
+          "fieldName": "entranceCamera",
+          "target": "HubReveal:n1341",
+          "targetNodeId": 1341,
+          "offset": 250729
+        },
+        {
+          "fieldId": "n1303/p40",
+          "fieldName": "tombActivateRegion",
+          "target": "HubReveal:n1476",
+          "targetNodeId": 1476,
+          "offset": 250747
+        },
+        {
+          "fieldId": "n1303/p41",
+          "fieldName": "onEntrance",
+          "target": "HubReveal:n468",
+          "targetNodeId": 468,
+          "offset": 250751
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1279",
+      "level": "Night",
+      "nodeId": 1279,
+      "name": "BstNode_34603993",
+      "className": "AncientSpirit",
+      "classIndex": 59,
+      "sourceOffset": 210311,
+      "sourceLength": 243,
+      "sourceSha256": "d2951945bcb3d69e2fefd0a9fccaa1bb1a1807db11493e8b650ca910f03ac734",
+      "declaredFieldCount": 43,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1279/p2",
+          "fieldName": "spawnPos",
+          "target": "Night:n770",
+          "targetNodeId": 770,
+          "offset": 210337
+        },
+        {
+          "fieldId": "n1279/p9",
+          "fieldName": "tombstoneCham",
+          "target": "Night:n1997",
+          "targetNodeId": 1997,
+          "offset": 210385
+        },
+        {
+          "fieldId": "n1279/p12",
+          "fieldName": "safeTeleportRegion",
+          "target": "Night:n630",
+          "targetNodeId": 630,
+          "offset": 210397
+        },
+        {
+          "fieldId": "n1279/p13",
+          "fieldName": "collectible",
+          "target": "Night:n147",
+          "targetNodeId": 147,
+          "offset": 210401
+        },
+        {
+          "fieldId": "n1279/p14",
+          "fieldName": "candles",
+          "target": "Night:n465",
+          "targetNodeId": 465,
+          "offset": 210405
+        },
+        {
+          "fieldId": "n1279/p16",
+          "fieldName": "spiritActivateRegion",
+          "target": "Night:n1871",
+          "targetNodeId": 1871,
+          "offset": 210413
+        },
+        {
+          "fieldId": "n1279/p18",
+          "fieldName": "npc",
+          "target": "Night:n2159",
+          "targetNodeId": 2159,
+          "offset": 210421
+        },
+        {
+          "fieldId": "n1279/p21",
+          "fieldName": "tombstoneCamera",
+          "target": "Night:n1860",
+          "targetNodeId": 1860,
+          "offset": 210455
+        },
+        {
+          "fieldId": "n1279/p22",
+          "fieldName": "customSpiritEmoteTimeline",
+          "target": "Night:n408",
+          "targetNodeId": 408,
+          "offset": 210459
+        },
+        {
+          "fieldId": "n1279/p27",
+          "fieldName": "soulPresentCamera",
+          "target": "Night:n1673",
+          "targetNodeId": 1673,
+          "offset": 210473
+        },
+        {
+          "fieldId": "n1279/p34",
+          "fieldName": "entranceCamera",
+          "target": "Night:n1932",
+          "targetNodeId": 1932,
+          "offset": 210524
+        },
+        {
+          "fieldId": "n1279/p39",
+          "fieldName": "onFinish",
+          "target": "Night:n3336",
+          "targetNodeId": 3336,
+          "offset": 210538
+        },
+        {
+          "fieldId": "n1279/p40",
+          "fieldName": "tombActivateRegion",
+          "target": "Night:n1871",
+          "targetNodeId": 1871,
+          "offset": 210542
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2136",
+      "level": "Night",
+      "nodeId": 2136,
+      "name": "BstNode_2345992300",
+      "className": "AncientSpirit",
+      "classIndex": 59,
+      "sourceOffset": 339552,
+      "sourceLength": 245,
+      "sourceSha256": "5fe044a6fa3abed7118c2768ed10ecbf748959870104f7f12186368bd20110dd",
+      "declaredFieldCount": 43,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2136/p2",
+          "fieldName": "spawnPos",
+          "target": "Night:n2144",
+          "targetNodeId": 2144,
+          "offset": 339580
+        },
+        {
+          "fieldId": "n2136/p9",
+          "fieldName": "tombstoneCham",
+          "target": "Night:n2153",
+          "targetNodeId": 2153,
+          "offset": 339628
+        },
+        {
+          "fieldId": "n2136/p12",
+          "fieldName": "safeTeleportRegion",
+          "target": "Night:n2155",
+          "targetNodeId": 2155,
+          "offset": 339640
+        },
+        {
+          "fieldId": "n2136/p13",
+          "fieldName": "collectible",
+          "target": "Night:n2157",
+          "targetNodeId": 2157,
+          "offset": 339644
+        },
+        {
+          "fieldId": "n2136/p14",
+          "fieldName": "candles",
+          "target": "Night:n2102",
+          "targetNodeId": 2102,
+          "offset": 339648
+        },
+        {
+          "fieldId": "n2136/p16",
+          "fieldName": "spiritActivateRegion",
+          "target": "Night:n2156",
+          "targetNodeId": 2156,
+          "offset": 339656
+        },
+        {
+          "fieldId": "n2136/p18",
+          "fieldName": "npc",
+          "target": "Night:n404",
+          "targetNodeId": 404,
+          "offset": 339664
+        },
+        {
+          "fieldId": "n2136/p21",
+          "fieldName": "tombstoneCamera",
+          "target": "Night:n2554",
+          "targetNodeId": 2554,
+          "offset": 339698
+        },
+        {
+          "fieldId": "n2136/p27",
+          "fieldName": "soulPresentCamera",
+          "target": "Night:n2554",
+          "targetNodeId": 2554,
+          "offset": 339716
+        },
+        {
+          "fieldId": "n2136/p33",
+          "fieldName": "settleCamera",
+          "target": "Night:n2554",
+          "targetNodeId": 2554,
+          "offset": 339763
+        },
+        {
+          "fieldId": "n2136/p34",
+          "fieldName": "entranceCamera",
+          "target": "Night:n2554",
+          "targetNodeId": 2554,
+          "offset": 339767
+        },
+        {
+          "fieldId": "n2136/p39",
+          "fieldName": "onFinish",
+          "target": "Night:n3510",
+          "targetNodeId": 3510,
+          "offset": 339781
+        },
+        {
+          "fieldId": "n2136/p40",
+          "fieldName": "tombActivateRegion",
+          "target": "Night:n2156",
+          "targetNodeId": 2156,
+          "offset": 339785
+        },
+        {
+          "fieldId": "n2136/p42",
+          "fieldName": "emoteCamera",
+          "target": "Night:n2554",
+          "targetNodeId": 2554,
+          "offset": 339793
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2437",
+      "level": "Night",
+      "nodeId": 2437,
+      "name": "BstNode_34604513",
+      "className": "AncientSpirit",
+      "classIndex": 59,
+      "sourceOffset": 382860,
+      "sourceLength": 246,
+      "sourceSha256": "4bad74e4c268a4a9cf8d8a21fc6b51abd282331c268e1fa945ce0e1ab8340b3e",
+      "declaredFieldCount": 43,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2437/p2",
+          "fieldName": "spawnPos",
+          "target": "Night:n2540",
+          "targetNodeId": 2540,
+          "offset": 382886
+        },
+        {
+          "fieldId": "n2437/p9",
+          "fieldName": "tombstoneCham",
+          "target": "Night:n1771",
+          "targetNodeId": 1771,
+          "offset": 382932
+        },
+        {
+          "fieldId": "n2437/p10",
+          "fieldName": "onAlreadyCollected",
+          "target": "Night:n207",
+          "targetNodeId": 207,
+          "offset": 382936
+        },
+        {
+          "fieldId": "n2437/p13",
+          "fieldName": "collectible",
+          "target": "Night:n124",
+          "targetNodeId": 124,
+          "offset": 382948
+        },
+        {
+          "fieldId": "n2437/p14",
+          "fieldName": "candles",
+          "target": "Night:n2592",
+          "targetNodeId": 2592,
+          "offset": 382952
+        },
+        {
+          "fieldId": "n2437/p16",
+          "fieldName": "spiritActivateRegion",
+          "target": "Night:n1516",
+          "targetNodeId": 1516,
+          "offset": 382960
+        },
+        {
+          "fieldId": "n2437/p18",
+          "fieldName": "npc",
+          "target": "Night:n435",
+          "targetNodeId": 435,
+          "offset": 382968
+        },
+        {
+          "fieldId": "n2437/p21",
+          "fieldName": "tombstoneCamera",
+          "target": "Night:n2505",
+          "targetNodeId": 2505,
+          "offset": 383009
+        },
+        {
+          "fieldId": "n2437/p27",
+          "fieldName": "soulPresentCamera",
+          "target": "Night:n1677",
+          "targetNodeId": 1677,
+          "offset": 383027
+        },
+        {
+          "fieldId": "n2437/p34",
+          "fieldName": "entranceCamera",
+          "target": "Night:n3089",
+          "targetNodeId": 3089,
+          "offset": 383076
+        },
+        {
+          "fieldId": "n2437/p39",
+          "fieldName": "onFinish",
+          "target": "Night:n207",
+          "targetNodeId": 207,
+          "offset": 383090
+        },
+        {
+          "fieldId": "n2437/p40",
+          "fieldName": "tombActivateRegion",
+          "target": "Night:n1516",
+          "targetNodeId": 1516,
+          "offset": 383094
+        },
+        {
+          "fieldId": "n2437/p42",
+          "fieldName": "emoteCamera",
+          "target": "Night:n1677",
+          "targetNodeId": 1677,
+          "offset": 383102
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2734",
+      "level": "Night",
+      "nodeId": 2734,
+      "name": "BstNode_34603574",
+      "className": "AncientSpirit",
+      "classIndex": 59,
+      "sourceOffset": 425723,
+      "sourceLength": 240,
+      "sourceSha256": "8ab8703dc08e4b15ff04a12a4460d453cc47bd2f0e9e64a295e1e6137d1a848a",
+      "declaredFieldCount": 43,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2734/p2",
+          "fieldName": "spawnPos",
+          "target": "Night:n588",
+          "targetNodeId": 588,
+          "offset": 425749
+        },
+        {
+          "fieldId": "n2734/p4",
+          "fieldName": "onSettle",
+          "target": "Night:n3632",
+          "targetNodeId": 3632,
+          "offset": 425754
+        },
+        {
+          "fieldId": "n2734/p9",
+          "fieldName": "tombstoneCham",
+          "target": "Night:n1830",
+          "targetNodeId": 1830,
+          "offset": 425796
+        },
+        {
+          "fieldId": "n2734/p12",
+          "fieldName": "safeTeleportRegion",
+          "target": "Night:n98",
+          "targetNodeId": 98,
+          "offset": 425808
+        },
+        {
+          "fieldId": "n2734/p13",
+          "fieldName": "collectible",
+          "target": "Night:n2785",
+          "targetNodeId": 2785,
+          "offset": 425812
+        },
+        {
+          "fieldId": "n2734/p14",
+          "fieldName": "candles",
+          "target": "Night:n1733",
+          "targetNodeId": 1733,
+          "offset": 425816
+        },
+        {
+          "fieldId": "n2734/p16",
+          "fieldName": "spiritActivateRegion",
+          "target": "Night:n2149",
+          "targetNodeId": 2149,
+          "offset": 425824
+        },
+        {
+          "fieldId": "n2734/p18",
+          "fieldName": "npc",
+          "target": "Night:n298",
+          "targetNodeId": 298,
+          "offset": 425832
+        },
+        {
+          "fieldId": "n2734/p21",
+          "fieldName": "tombstoneCamera",
+          "target": "Night:n2201",
+          "targetNodeId": 2201,
+          "offset": 425865
+        },
+        {
+          "fieldId": "n2734/p27",
+          "fieldName": "soulPresentCamera",
+          "target": "Night:n911",
+          "targetNodeId": 911,
+          "offset": 425883
+        },
+        {
+          "fieldId": "n2734/p33",
+          "fieldName": "settleCamera",
+          "target": "Night:n142",
+          "targetNodeId": 142,
+          "offset": 425929
+        },
+        {
+          "fieldId": "n2734/p34",
+          "fieldName": "entranceCamera",
+          "target": "Night:n2825",
+          "targetNodeId": 2825,
+          "offset": 425933
+        },
+        {
+          "fieldId": "n2734/p39",
+          "fieldName": "onFinish",
+          "target": "Night:n3633",
+          "targetNodeId": 3633,
+          "offset": 425947
+        },
+        {
+          "fieldId": "n2734/p40",
+          "fieldName": "tombActivateRegion",
+          "target": "Night:n985",
+          "targetNodeId": 985,
+          "offset": 425951
+        },
+        {
+          "fieldId": "n2734/p42",
+          "fieldName": "emoteCamera",
+          "target": "Night:n911",
+          "targetNodeId": 911,
+          "offset": 425959
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n287",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 287,
+      "name": "BstNode_1844",
+      "className": "AncientSpirit",
+      "classIndex": 39,
+      "sourceOffset": 87116,
+      "sourceLength": 218,
+      "sourceSha256": "571d14f5f89bf9e7d3ae816677fcd9d357d7dd66ef62e995684f8881199daddc",
+      "declaredFieldCount": 44,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n287/p2",
+          "fieldName": "spawnPos",
+          "target": "Prairie_ButterflyFields:n445",
+          "targetNodeId": 445,
+          "offset": 87138
+        },
+        {
+          "fieldId": "n287/p8",
+          "fieldName": "onDisable",
+          "target": "Prairie_ButterflyFields:n1244",
+          "targetNodeId": 1244,
+          "offset": 87150
+        },
+        {
+          "fieldId": "n287/p9",
+          "fieldName": "tombstoneCham",
+          "target": "Prairie_ButterflyFields:n1026",
+          "targetNodeId": 1026,
+          "offset": 87154
+        },
+        {
+          "fieldId": "n287/p10",
+          "fieldName": "onAlreadyCollected",
+          "target": "Prairie_ButterflyFields:n1244",
+          "targetNodeId": 1244,
+          "offset": 87158
+        },
+        {
+          "fieldId": "n287/p12",
+          "fieldName": "safeTeleportRegion",
+          "target": "Prairie_ButterflyFields:n1352",
+          "targetNodeId": 1352,
+          "offset": 87166
+        },
+        {
+          "fieldId": "n287/p13",
+          "fieldName": "collectible",
+          "target": "Prairie_ButterflyFields:n336",
+          "targetNodeId": 336,
+          "offset": 87170
+        },
+        {
+          "fieldId": "n287/p16",
+          "fieldName": "spiritActivateRegion",
+          "target": "Prairie_ButterflyFields:n634",
+          "targetNodeId": 634,
+          "offset": 87182
+        },
+        {
+          "fieldId": "n287/p18",
+          "fieldName": "npc",
+          "target": "Prairie_ButterflyFields:n817",
+          "targetNodeId": 817,
+          "offset": 87190
+        },
+        {
+          "fieldId": "n287/p21",
+          "fieldName": "tombstoneCamera",
+          "target": "Prairie_ButterflyFields:n389",
+          "targetNodeId": 389,
+          "offset": 87224
+        },
+        {
+          "fieldId": "n287/p22",
+          "fieldName": "customSpiritEmoteTimeline",
+          "target": "Prairie_ButterflyFields:n1252",
+          "targetNodeId": 1252,
+          "offset": 87228
+        },
+        {
+          "fieldId": "n287/p35",
+          "fieldName": "entranceCamera",
+          "target": "Prairie_ButterflyFields:n977",
+          "targetNodeId": 977,
+          "offset": 87283
+        },
+        {
+          "fieldId": "n287/p39",
+          "fieldName": "customSpiritEntranceTimeline",
+          "target": "Prairie_ButterflyFields:n1314",
+          "targetNodeId": 1314,
+          "offset": 87314
+        },
+        {
+          "fieldId": "n287/p41",
+          "fieldName": "tombActivateRegion",
+          "target": "Prairie_ButterflyFields:n399",
+          "targetNodeId": 399,
+          "offset": 87322
+        },
+        {
+          "fieldId": "n287/p43",
+          "fieldName": "emoteCamera",
+          "target": "Prairie_ButterflyFields:n161",
+          "targetNodeId": 161,
+          "offset": 87330
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n1138",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 1138,
+      "name": "BstNode_2529558553",
+      "className": "AncientSpirit",
+      "classIndex": 39,
+      "sourceOffset": 247105,
+      "sourceLength": 157,
+      "sourceSha256": "09ab1cb878e8035840ffc58c6fe563117db99bb031be2a5f6ff004deb88aaf86",
+      "declaredFieldCount": 44,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1138/p2",
+          "fieldName": "spawnPos",
+          "target": "Prairie_ButterflyFields:n871",
+          "targetNodeId": 871,
+          "offset": 247133
+        },
+        {
+          "fieldId": "n1138/p9",
+          "fieldName": "tombstoneCham",
+          "target": "Prairie_ButterflyFields:n1110",
+          "targetNodeId": 1110,
+          "offset": 247149
+        },
+        {
+          "fieldId": "n1138/p12",
+          "fieldName": "safeTeleportRegion",
+          "target": "Prairie_ButterflyFields:n687",
+          "targetNodeId": 687,
+          "offset": 247161
+        },
+        {
+          "fieldId": "n1138/p13",
+          "fieldName": "collectible",
+          "target": "Prairie_ButterflyFields:n419",
+          "targetNodeId": 419,
+          "offset": 247165
+        },
+        {
+          "fieldId": "n1138/p16",
+          "fieldName": "spiritActivateRegion",
+          "target": "Prairie_ButterflyFields:n749",
+          "targetNodeId": 749,
+          "offset": 247177
+        },
+        {
+          "fieldId": "n1138/p18",
+          "fieldName": "npc",
+          "target": "Prairie_ButterflyFields:n17",
+          "targetNodeId": 17,
+          "offset": 247185
+        },
+        {
+          "fieldId": "n1138/p41",
+          "fieldName": "tombActivateRegion",
+          "target": "Prairie_ButterflyFields:n406",
+          "targetNodeId": 406,
+          "offset": 247250
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n249",
+      "level": "Prairie_Cave",
+      "nodeId": 249,
+      "name": "BstNode_3122856084",
+      "className": "AncientSpirit",
+      "classIndex": 35,
+      "sourceOffset": 81697,
+      "sourceLength": 167,
+      "sourceSha256": "85b1c03bd9248b90391a28321a9bf03468c5e6402d4b5ed5ebff6d8673136e5a",
+      "declaredFieldCount": 44,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n249/p2",
+          "fieldName": "spawnPos",
+          "target": "Prairie_Cave:n254",
+          "targetNodeId": 254,
+          "offset": 81725
+        },
+        {
+          "fieldId": "n249/p9",
+          "fieldName": "tombstoneCham",
+          "target": "Prairie_Cave:n392",
+          "targetNodeId": 392,
+          "offset": 81741
+        },
+        {
+          "fieldId": "n249/p13",
+          "fieldName": "collectible",
+          "target": "Prairie_Cave:n262",
+          "targetNodeId": 262,
+          "offset": 81757
+        },
+        {
+          "fieldId": "n249/p16",
+          "fieldName": "spiritActivateRegion",
+          "target": "Prairie_Cave:n237",
+          "targetNodeId": 237,
+          "offset": 81769
+        },
+        {
+          "fieldId": "n249/p18",
+          "fieldName": "npc",
+          "target": "Prairie_Cave:n228",
+          "targetNodeId": 228,
+          "offset": 81777
+        },
+        {
+          "fieldId": "n249/p21",
+          "fieldName": "tombstoneCamera",
+          "target": "Prairie_Cave:n225",
+          "targetNodeId": 225,
+          "offset": 81783
+        },
+        {
+          "fieldId": "n249/p22",
+          "fieldName": "customSpiritEmoteTimeline",
+          "target": "Prairie_Cave:n978",
+          "targetNodeId": 978,
+          "offset": 81787
+        },
+        {
+          "fieldId": "n249/p42",
+          "fieldName": "onEntrance",
+          "target": "Prairie_Cave:n1830",
+          "targetNodeId": 1830,
+          "offset": 81856
+        }
+      ],
+      "incomingReferenceCount": 4,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n355",
+      "level": "Prairie_Cave",
+      "nodeId": 355,
+      "name": "BstNode_1056",
+      "className": "AncientSpirit",
+      "classIndex": 35,
+      "sourceOffset": 105094,
+      "sourceLength": 237,
+      "sourceSha256": "0943b7da8ad6e588dff6da663e99c3e5c439c75792e35fb1979e08f839981e2f",
+      "declaredFieldCount": 44,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n355/p2",
+          "fieldName": "spawnPos",
+          "target": "Prairie_Cave:n156",
+          "targetNodeId": 156,
+          "offset": 105116
+        },
+        {
+          "fieldId": "n355/p9",
+          "fieldName": "tombstoneCham",
+          "target": "Prairie_Cave:n376",
+          "targetNodeId": 376,
+          "offset": 105162
+        },
+        {
+          "fieldId": "n355/p12",
+          "fieldName": "safeTeleportRegion",
+          "target": "Prairie_Cave:n282",
+          "targetNodeId": 282,
+          "offset": 105174
+        },
+        {
+          "fieldId": "n355/p13",
+          "fieldName": "collectible",
+          "target": "Prairie_Cave:n298",
+          "targetNodeId": 298,
+          "offset": 105178
+        },
+        {
+          "fieldId": "n355/p16",
+          "fieldName": "spiritActivateRegion",
+          "target": "Prairie_Cave:n186",
+          "targetNodeId": 186,
+          "offset": 105190
+        },
+        {
+          "fieldId": "n355/p18",
+          "fieldName": "npc",
+          "target": "Prairie_Cave:n787",
+          "targetNodeId": 787,
+          "offset": 105198
+        },
+        {
+          "fieldId": "n355/p22",
+          "fieldName": "customSpiritEmoteTimeline",
+          "target": "Prairie_Cave:n222",
+          "targetNodeId": 222,
+          "offset": 105234
+        },
+        {
+          "fieldId": "n355/p28",
+          "fieldName": "soulPresentCamera",
+          "target": "Prairie_Cave:n390",
+          "targetNodeId": 390,
+          "offset": 105252
+        },
+        {
+          "fieldId": "n355/p35",
+          "fieldName": "entranceCamera",
+          "target": "Prairie_Cave:n238",
+          "targetNodeId": 238,
+          "offset": 105301
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n359",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 359,
+      "name": "BstNode_34603448",
+      "className": "AncientSpirit",
+      "classIndex": 43,
+      "sourceOffset": 104008,
+      "sourceLength": 179,
+      "sourceSha256": "b2418c5a1a7b189bd29f8e48d1e55c1e9dc5af7452705ff1118681730d7b5fbf",
+      "declaredFieldCount": 44,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n359/p2",
+          "fieldName": "spawnPos",
+          "target": "Prairie_NestAndKeeper:n890",
+          "targetNodeId": 890,
+          "offset": 104034
+        },
+        {
+          "fieldId": "n359/p9",
+          "fieldName": "tombstoneCham",
+          "target": "Prairie_NestAndKeeper:n8",
+          "targetNodeId": 8,
+          "offset": 104064
+        },
+        {
+          "fieldId": "n359/p12",
+          "fieldName": "safeTeleportRegion",
+          "target": "Prairie_NestAndKeeper:n792",
+          "targetNodeId": 792,
+          "offset": 104076
+        },
+        {
+          "fieldId": "n359/p13",
+          "fieldName": "collectible",
+          "target": "Prairie_NestAndKeeper:n878",
+          "targetNodeId": 878,
+          "offset": 104080
+        },
+        {
+          "fieldId": "n359/p16",
+          "fieldName": "spiritActivateRegion",
+          "target": "Prairie_NestAndKeeper:n125",
+          "targetNodeId": 125,
+          "offset": 104092
+        },
+        {
+          "fieldId": "n359/p18",
+          "fieldName": "npc",
+          "target": "Prairie_NestAndKeeper:n347",
+          "targetNodeId": 347,
+          "offset": 104100
+        },
+        {
+          "fieldId": "n359/p21",
+          "fieldName": "tombstoneCamera",
+          "target": "Prairie_NestAndKeeper:n475",
+          "targetNodeId": 475,
+          "offset": 104106
+        },
+        {
+          "fieldId": "n359/p22",
+          "fieldName": "customSpiritEmoteTimeline",
+          "target": "Prairie_NestAndKeeper:n207",
+          "targetNodeId": 207,
+          "offset": 104110
+        },
+        {
+          "fieldId": "n359/p41",
+          "fieldName": "tombActivateRegion",
+          "target": "Prairie_NestAndKeeper:n125",
+          "targetNodeId": 125,
+          "offset": 104175
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n397",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 397,
+      "name": "BstNode_34603015",
+      "className": "AncientSpirit",
+      "classIndex": 43,
+      "sourceOffset": 112517,
+      "sourceLength": 179,
+      "sourceSha256": "a2298ee40c9784f67e54938b09265a98411754e1c7a15684780d47abd2f17e84",
+      "declaredFieldCount": 44,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n397/p2",
+          "fieldName": "spawnPos",
+          "target": "Prairie_NestAndKeeper:n839",
+          "targetNodeId": 839,
+          "offset": 112543
+        },
+        {
+          "fieldId": "n397/p9",
+          "fieldName": "tombstoneCham",
+          "target": "Prairie_NestAndKeeper:n126",
+          "targetNodeId": 126,
+          "offset": 112573
+        },
+        {
+          "fieldId": "n397/p12",
+          "fieldName": "safeTeleportRegion",
+          "target": "Prairie_NestAndKeeper:n586",
+          "targetNodeId": 586,
+          "offset": 112585
+        },
+        {
+          "fieldId": "n397/p13",
+          "fieldName": "collectible",
+          "target": "Prairie_NestAndKeeper:n488",
+          "targetNodeId": 488,
+          "offset": 112589
+        },
+        {
+          "fieldId": "n397/p16",
+          "fieldName": "spiritActivateRegion",
+          "target": "Prairie_NestAndKeeper:n84",
+          "targetNodeId": 84,
+          "offset": 112601
+        },
+        {
+          "fieldId": "n397/p18",
+          "fieldName": "npc",
+          "target": "Prairie_NestAndKeeper:n947",
+          "targetNodeId": 947,
+          "offset": 112609
+        },
+        {
+          "fieldId": "n397/p21",
+          "fieldName": "tombstoneCamera",
+          "target": "Prairie_NestAndKeeper:n930",
+          "targetNodeId": 930,
+          "offset": 112615
+        },
+        {
+          "fieldId": "n397/p22",
+          "fieldName": "customSpiritEmoteTimeline",
+          "target": "Prairie_NestAndKeeper:n499",
+          "targetNodeId": 499,
+          "offset": 112619
+        },
+        {
+          "fieldId": "n397/p28",
+          "fieldName": "soulPresentCamera",
+          "target": "Prairie_NestAndKeeper:n157",
+          "targetNodeId": 157,
+          "offset": 112637
+        },
+        {
+          "fieldId": "n397/p41",
+          "fieldName": "tombActivateRegion",
+          "target": "Prairie_NestAndKeeper:n84",
+          "targetNodeId": 84,
+          "offset": 112684
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n549",
+      "level": "Prairie_Village",
+      "nodeId": 549,
+      "name": "BstNode_3122855947",
+      "className": "AncientSpirit",
+      "classIndex": 66,
+      "sourceOffset": 119833,
+      "sourceLength": 157,
+      "sourceSha256": "b54a7aff0d2474a00a8eef2e3eed9532372d3bf51ca607c1a632153e48671bc2",
+      "declaredFieldCount": 44,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n549/p2",
+          "fieldName": "spawnPos",
+          "target": "Prairie_Village:n1065",
+          "targetNodeId": 1065,
+          "offset": 119861
+        },
+        {
+          "fieldId": "n549/p9",
+          "fieldName": "tombstoneCham",
+          "target": "Prairie_Village:n781",
+          "targetNodeId": 781,
+          "offset": 119877
+        },
+        {
+          "fieldId": "n549/p12",
+          "fieldName": "safeTeleportRegion",
+          "target": "Prairie_Village:n648",
+          "targetNodeId": 648,
+          "offset": 119889
+        },
+        {
+          "fieldId": "n549/p13",
+          "fieldName": "collectible",
+          "target": "Prairie_Village:n1525",
+          "targetNodeId": 1525,
+          "offset": 119893
+        },
+        {
+          "fieldId": "n549/p16",
+          "fieldName": "spiritActivateRegion",
+          "target": "Prairie_Village:n1938",
+          "targetNodeId": 1938,
+          "offset": 119905
+        },
+        {
+          "fieldId": "n549/p18",
+          "fieldName": "npc",
+          "target": "Prairie_Village:n2617",
+          "targetNodeId": 2617,
+          "offset": 119913
+        },
+        {
+          "fieldId": "n549/p21",
+          "fieldName": "tombstoneCamera",
+          "target": "Prairie_Village:n1852",
+          "targetNodeId": 1852,
+          "offset": 119919
+        },
+        {
+          "fieldId": "n549/p22",
+          "fieldName": "customSpiritEmoteTimeline",
+          "target": "Prairie_Village:n867",
+          "targetNodeId": 867,
+          "offset": 119923
+        },
+        {
+          "fieldId": "n549/p28",
+          "fieldName": "soulPresentCamera",
+          "target": "Prairie_Village:n2375",
+          "targetNodeId": 2375,
+          "offset": 119941
+        },
+        {
+          "fieldId": "n549/p35",
+          "fieldName": "entranceCamera",
+          "target": "Prairie_Village:n1622",
+          "targetNodeId": 1622,
+          "offset": 119960
+        },
+        {
+          "fieldId": "n549/p40",
+          "fieldName": "onFinish",
+          "target": "Prairie_Village:n3239",
+          "targetNodeId": 3239,
+          "offset": 119974
+        },
+        {
+          "fieldId": "n549/p41",
+          "fieldName": "tombActivateRegion",
+          "target": "Prairie_Village:n1938",
+          "targetNodeId": 1938,
+          "offset": 119978
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n801",
+      "level": "Prairie_Village",
+      "nodeId": 801,
+      "name": "BstNode_1293287623",
+      "className": "AncientSpirit",
+      "classIndex": 66,
+      "sourceOffset": 160496,
+      "sourceLength": 167,
+      "sourceSha256": "2e9104b02db648b338715e207f7c30769e31dc8cb511ca02675bfce40a2e6a8f",
+      "declaredFieldCount": 44,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n801/p2",
+          "fieldName": "spawnPos",
+          "target": "Prairie_Village:n1332",
+          "targetNodeId": 1332,
+          "offset": 160524
+        },
+        {
+          "fieldId": "n801/p9",
+          "fieldName": "tombstoneCham",
+          "target": "Prairie_Village:n1043",
+          "targetNodeId": 1043,
+          "offset": 160540
+        },
+        {
+          "fieldId": "n801/p12",
+          "fieldName": "safeTeleportRegion",
+          "target": "Prairie_Village:n1475",
+          "targetNodeId": 1475,
+          "offset": 160552
+        },
+        {
+          "fieldId": "n801/p13",
+          "fieldName": "collectible",
+          "target": "Prairie_Village:n2190",
+          "targetNodeId": 2190,
+          "offset": 160556
+        },
+        {
+          "fieldId": "n801/p16",
+          "fieldName": "spiritActivateRegion",
+          "target": "Prairie_Village:n1450",
+          "targetNodeId": 1450,
+          "offset": 160568
+        },
+        {
+          "fieldId": "n801/p18",
+          "fieldName": "npc",
+          "target": "Prairie_Village:n2427",
+          "targetNodeId": 2427,
+          "offset": 160576
+        },
+        {
+          "fieldId": "n801/p21",
+          "fieldName": "tombstoneCamera",
+          "target": "Prairie_Village:n901",
+          "targetNodeId": 901,
+          "offset": 160582
+        },
+        {
+          "fieldId": "n801/p22",
+          "fieldName": "customSpiritEmoteTimeline",
+          "target": "Prairie_Village:n1429",
+          "targetNodeId": 1429,
+          "offset": 160586
+        },
+        {
+          "fieldId": "n801/p28",
+          "fieldName": "soulPresentCamera",
+          "target": "Prairie_Village:n901",
+          "targetNodeId": 901,
+          "offset": 160604
+        },
+        {
+          "fieldId": "n801/p41",
+          "fieldName": "tombActivateRegion",
+          "target": "Prairie_Village:n1450",
+          "targetNodeId": 1450,
+          "offset": 160651
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1117",
+      "level": "Prairie_Village",
+      "nodeId": 1117,
+      "name": "BstNode_2504655003",
+      "className": "AncientSpirit",
+      "classIndex": 66,
+      "sourceOffset": 213968,
+      "sourceLength": 167,
+      "sourceSha256": "0d08d8e23eeca56f0c98afdc3d0eae6418a21200d7ed9a674d28495e2aec8b83",
+      "declaredFieldCount": 44,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1117/p2",
+          "fieldName": "spawnPos",
+          "target": "Prairie_Village:n1359",
+          "targetNodeId": 1359,
+          "offset": 213996
+        },
+        {
+          "fieldId": "n1117/p9",
+          "fieldName": "tombstoneCham",
+          "target": "Prairie_Village:n1064",
+          "targetNodeId": 1064,
+          "offset": 214012
+        },
+        {
+          "fieldId": "n1117/p12",
+          "fieldName": "safeTeleportRegion",
+          "target": "Prairie_Village:n41",
+          "targetNodeId": 41,
+          "offset": 214024
+        },
+        {
+          "fieldId": "n1117/p13",
+          "fieldName": "collectible",
+          "target": "Prairie_Village:n1479",
+          "targetNodeId": 1479,
+          "offset": 214028
+        },
+        {
+          "fieldId": "n1117/p16",
+          "fieldName": "spiritActivateRegion",
+          "target": "Prairie_Village:n1145",
+          "targetNodeId": 1145,
+          "offset": 214040
+        },
+        {
+          "fieldId": "n1117/p18",
+          "fieldName": "npc",
+          "target": "Prairie_Village:n351",
+          "targetNodeId": 351,
+          "offset": 214048
+        },
+        {
+          "fieldId": "n1117/p22",
+          "fieldName": "customSpiritEmoteTimeline",
+          "target": "Prairie_Village:n1955",
+          "targetNodeId": 1955,
+          "offset": 214058
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1240",
+      "level": "Prairie_Village",
+      "nodeId": 1240,
+      "name": "BstNode_3122855967",
+      "className": "AncientSpirit",
+      "classIndex": 66,
+      "sourceOffset": 230803,
+      "sourceLength": 167,
+      "sourceSha256": "d23050cd6d611451a08a6f6b3e46c7882bc174f5d32954f74a6ed0b09ebbff90",
+      "declaredFieldCount": 44,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1240/p2",
+          "fieldName": "spawnPos",
+          "target": "Prairie_Village:n178",
+          "targetNodeId": 178,
+          "offset": 230831
+        },
+        {
+          "fieldId": "n1240/p9",
+          "fieldName": "tombstoneCham",
+          "target": "Prairie_Village:n1308",
+          "targetNodeId": 1308,
+          "offset": 230847
+        },
+        {
+          "fieldId": "n1240/p12",
+          "fieldName": "safeTeleportRegion",
+          "target": "Prairie_Village:n1029",
+          "targetNodeId": 1029,
+          "offset": 230859
+        },
+        {
+          "fieldId": "n1240/p13",
+          "fieldName": "collectible",
+          "target": "Prairie_Village:n2250",
+          "targetNodeId": 2250,
+          "offset": 230863
+        },
+        {
+          "fieldId": "n1240/p15",
+          "fieldName": "onTurn",
+          "target": "Prairie_Village:n3376",
+          "targetNodeId": 3376,
+          "offset": 230871
+        },
+        {
+          "fieldId": "n1240/p16",
+          "fieldName": "spiritActivateRegion",
+          "target": "Prairie_Village:n1137",
+          "targetNodeId": 1137,
+          "offset": 230875
+        },
+        {
+          "fieldId": "n1240/p18",
+          "fieldName": "npc",
+          "target": "Prairie_Village:n1356",
+          "targetNodeId": 1356,
+          "offset": 230883
+        },
+        {
+          "fieldId": "n1240/p21",
+          "fieldName": "tombstoneCamera",
+          "target": "Prairie_Village:n1134",
+          "targetNodeId": 1134,
+          "offset": 230889
+        },
+        {
+          "fieldId": "n1240/p22",
+          "fieldName": "customSpiritEmoteTimeline",
+          "target": "Prairie_Village:n2974",
+          "targetNodeId": 2974,
+          "offset": 230893
+        },
+        {
+          "fieldId": "n1240/p28",
+          "fieldName": "soulPresentCamera",
+          "target": "Prairie_Village:n1408",
+          "targetNodeId": 1408,
+          "offset": 230911
+        },
+        {
+          "fieldId": "n1240/p35",
+          "fieldName": "entranceCamera",
+          "target": "Prairie_Village:n1335",
+          "targetNodeId": 1335,
+          "offset": 230940
+        },
+        {
+          "fieldId": "n1240/p40",
+          "fieldName": "onFinish",
+          "target": "Prairie_Village:n3377",
+          "targetNodeId": 3377,
+          "offset": 230954
+        },
+        {
+          "fieldId": "n1240/p41",
+          "fieldName": "tombActivateRegion",
+          "target": "Prairie_Village:n1137",
+          "targetNodeId": 1137,
+          "offset": 230958
+        },
+        {
+          "fieldId": "n1240/p42",
+          "fieldName": "onEntrance",
+          "target": "Prairie_Village:n1113",
+          "targetNodeId": 1113,
+          "offset": 230962
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n1621",
+      "level": "Rain",
+      "nodeId": 1621,
+      "name": "BstNode_2504655072",
+      "className": "AncientSpirit",
+      "classIndex": 90,
+      "sourceOffset": 389732,
+      "sourceLength": 236,
+      "sourceSha256": "302d6c55cc61a65b3664d52e1d35f1b0ed3835487d7367c6643f1a14d6378d85",
+      "declaredFieldCount": 43,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1621/p1",
+          "fieldName": "onExit",
+          "target": "Rain:n2052",
+          "targetNodeId": 2052,
+          "offset": 389756
+        },
+        {
+          "fieldId": "n1621/p2",
+          "fieldName": "spawnPos",
+          "target": "Rain:n457",
+          "targetNodeId": 457,
+          "offset": 389760
+        },
+        {
+          "fieldId": "n1621/p9",
+          "fieldName": "tombstoneCham",
+          "target": "Rain:n641",
+          "targetNodeId": 641,
+          "offset": 389805
+        },
+        {
+          "fieldId": "n1621/p12",
+          "fieldName": "safeTeleportRegion",
+          "target": "Rain:n715",
+          "targetNodeId": 715,
+          "offset": 389817
+        },
+        {
+          "fieldId": "n1621/p13",
+          "fieldName": "collectible",
+          "target": "Rain:n1705",
+          "targetNodeId": 1705,
+          "offset": 389821
+        },
+        {
+          "fieldId": "n1621/p16",
+          "fieldName": "spiritActivateRegion",
+          "target": "Rain:n1115",
+          "targetNodeId": 1115,
+          "offset": 389833
+        },
+        {
+          "fieldId": "n1621/p18",
+          "fieldName": "npc",
+          "target": "Rain:n1009",
+          "targetNodeId": 1009,
+          "offset": 389841
+        },
+        {
+          "fieldId": "n1621/p21",
+          "fieldName": "tombstoneCamera",
+          "target": "Rain:n455",
+          "targetNodeId": 455,
+          "offset": 389872
+        },
+        {
+          "fieldId": "n1621/p27",
+          "fieldName": "soulPresentCamera",
+          "target": "Rain:n1379",
+          "targetNodeId": 1379,
+          "offset": 389890
+        },
+        {
+          "fieldId": "n1621/p34",
+          "fieldName": "entranceCamera",
+          "target": "Rain:n1757",
+          "targetNodeId": 1757,
+          "offset": 389938
+        },
+        {
+          "fieldId": "n1621/p39",
+          "fieldName": "onFinish",
+          "target": "Rain:n1529",
+          "targetNodeId": 1529,
+          "offset": 389952
+        },
+        {
+          "fieldId": "n1621/p40",
+          "fieldName": "tombActivateRegion",
+          "target": "Rain:n1115",
+          "targetNodeId": 1115,
+          "offset": 389956
+        },
+        {
+          "fieldId": "n1621/p41",
+          "fieldName": "onEntrance",
+          "target": "Rain:n2053",
+          "targetNodeId": 2053,
+          "offset": 389960
+        },
+        {
+          "fieldId": "n1621/p42",
+          "fieldName": "emoteCamera",
+          "target": "Rain:n599",
+          "targetNodeId": 599,
+          "offset": 389964
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n1256",
+      "level": "RainEnd",
+      "nodeId": 1256,
+      "name": "BstNode_2345992604",
+      "className": "AncientSpirit",
+      "classIndex": 77,
+      "sourceOffset": 330138,
+      "sourceLength": 235,
+      "sourceSha256": "39226cbb61f5204eef3b206858c2ac4994f7d70eadb81e646c0050ab1426863c",
+      "declaredFieldCount": 43,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1256/p1",
+          "fieldName": "onExit",
+          "target": "RainEnd:n1867",
+          "targetNodeId": 1867,
+          "offset": 330162
+        },
+        {
+          "fieldId": "n1256/p2",
+          "fieldName": "spawnPos",
+          "target": "RainEnd:n1398",
+          "targetNodeId": 1398,
+          "offset": 330166
+        },
+        {
+          "fieldId": "n1256/p9",
+          "fieldName": "tombstoneCham",
+          "target": "RainEnd:n36",
+          "targetNodeId": 36,
+          "offset": 330209
+        },
+        {
+          "fieldId": "n1256/p12",
+          "fieldName": "safeTeleportRegion",
+          "target": "RainEnd:n1561",
+          "targetNodeId": 1561,
+          "offset": 330221
+        },
+        {
+          "fieldId": "n1256/p13",
+          "fieldName": "collectible",
+          "target": "RainEnd:n1455",
+          "targetNodeId": 1455,
+          "offset": 330225
+        },
+        {
+          "fieldId": "n1256/p16",
+          "fieldName": "spiritActivateRegion",
+          "target": "RainEnd:n40",
+          "targetNodeId": 40,
+          "offset": 330237
+        },
+        {
+          "fieldId": "n1256/p18",
+          "fieldName": "npc",
+          "target": "RainEnd:n675",
+          "targetNodeId": 675,
+          "offset": 330245
+        },
+        {
+          "fieldId": "n1256/p21",
+          "fieldName": "tombstoneCamera",
+          "target": "RainEnd:n501",
+          "targetNodeId": 501,
+          "offset": 330279
+        },
+        {
+          "fieldId": "n1256/p22",
+          "fieldName": "customSpiritEmoteTimeline",
+          "target": "RainEnd:n1281",
+          "targetNodeId": 1281,
+          "offset": 330283
+        },
+        {
+          "fieldId": "n1256/p27",
+          "fieldName": "soulPresentCamera",
+          "target": "RainEnd:n1340",
+          "targetNodeId": 1340,
+          "offset": 330297
+        },
+        {
+          "fieldId": "n1256/p34",
+          "fieldName": "entranceCamera",
+          "target": "RainEnd:n899",
+          "targetNodeId": 899,
+          "offset": 330343
+        },
+        {
+          "fieldId": "n1256/p39",
+          "fieldName": "onFinish",
+          "target": "RainEnd:n1868",
+          "targetNodeId": 1868,
+          "offset": 330357
+        },
+        {
+          "fieldId": "n1256/p40",
+          "fieldName": "tombActivateRegion",
+          "target": "RainEnd:n40",
+          "targetNodeId": 40,
+          "offset": 330361
+        },
+        {
+          "fieldId": "n1256/p41",
+          "fieldName": "onEntrance",
+          "target": "RainEnd:n53",
+          "targetNodeId": 53,
+          "offset": 330365
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n70",
+      "level": "RainForest",
+      "nodeId": 70,
+      "name": "BstNode_2345992418",
+      "className": "AncientSpirit",
+      "classIndex": 17,
+      "sourceOffset": 35381,
+      "sourceLength": 230,
+      "sourceSha256": "7e29041d16c43bc217d02bc641cdf63a779d06a9d15dbbbede6af9eb8c05c27f",
+      "declaredFieldCount": 43,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n70/p1",
+          "fieldName": "onExit",
+          "target": "RainForest:n1225",
+          "targetNodeId": 1225,
+          "offset": 35405
+        },
+        {
+          "fieldId": "n70/p2",
+          "fieldName": "spawnPos",
+          "target": "RainForest:n509",
+          "targetNodeId": 509,
+          "offset": 35409
+        },
+        {
+          "fieldId": "n70/p9",
+          "fieldName": "tombstoneCham",
+          "target": "RainForest:n1146",
+          "targetNodeId": 1146,
+          "offset": 35452
+        },
+        {
+          "fieldId": "n70/p12",
+          "fieldName": "safeTeleportRegion",
+          "target": "RainForest:n1176",
+          "targetNodeId": 1176,
+          "offset": 35464
+        },
+        {
+          "fieldId": "n70/p13",
+          "fieldName": "collectible",
+          "target": "RainForest:n639",
+          "targetNodeId": 639,
+          "offset": 35468
+        },
+        {
+          "fieldId": "n70/p14",
+          "fieldName": "candles",
+          "target": "RainForest:n146",
+          "targetNodeId": 146,
+          "offset": 35472
+        },
+        {
+          "fieldId": "n70/p16",
+          "fieldName": "spiritActivateRegion",
+          "target": "RainForest:n56",
+          "targetNodeId": 56,
+          "offset": 35480
+        },
+        {
+          "fieldId": "n70/p18",
+          "fieldName": "npc",
+          "target": "RainForest:n816",
+          "targetNodeId": 816,
+          "offset": 35488
+        },
+        {
+          "fieldId": "n70/p21",
+          "fieldName": "tombstoneCamera",
+          "target": "RainForest:n929",
+          "targetNodeId": 929,
+          "offset": 35517
+        },
+        {
+          "fieldId": "n70/p27",
+          "fieldName": "soulPresentCamera",
+          "target": "RainForest:n248",
+          "targetNodeId": 248,
+          "offset": 35535
+        },
+        {
+          "fieldId": "n70/p34",
+          "fieldName": "entranceCamera",
+          "target": "RainForest:n58",
+          "targetNodeId": 58,
+          "offset": 35581
+        },
+        {
+          "fieldId": "n70/p39",
+          "fieldName": "onFinish",
+          "target": "RainForest:n1226",
+          "targetNodeId": 1226,
+          "offset": 35595
+        },
+        {
+          "fieldId": "n70/p40",
+          "fieldName": "tombActivateRegion",
+          "target": "RainForest:n56",
+          "targetNodeId": 56,
+          "offset": 35599
+        },
+        {
+          "fieldId": "n70/p41",
+          "fieldName": "onEntrance",
+          "target": "RainForest:n1152",
+          "targetNodeId": 1152,
+          "offset": 35603
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n150",
+      "level": "RainForest",
+      "nodeId": 150,
+      "name": "BstNode_1621",
+      "className": "AncientSpirit",
+      "classIndex": 17,
+      "sourceOffset": 51361,
+      "sourceLength": 209,
+      "sourceSha256": "946f6d0dc746825e9ed765020c8ed3813d459bb7c2946ff1e5b5b2177f321ff8",
+      "declaredFieldCount": 43,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n150/p1",
+          "fieldName": "onExit",
+          "target": "RainForest:n1235",
+          "targetNodeId": 1235,
+          "offset": 51379
+        },
+        {
+          "fieldId": "n150/p2",
+          "fieldName": "spawnPos",
+          "target": "RainForest:n104",
+          "targetNodeId": 104,
+          "offset": 51383
+        },
+        {
+          "fieldId": "n150/p9",
+          "fieldName": "tombstoneCham",
+          "target": "RainForest:n135",
+          "targetNodeId": 135,
+          "offset": 51421
+        },
+        {
+          "fieldId": "n150/p12",
+          "fieldName": "safeTeleportRegion",
+          "target": "RainForest:n138",
+          "targetNodeId": 138,
+          "offset": 51433
+        },
+        {
+          "fieldId": "n150/p13",
+          "fieldName": "collectible",
+          "target": "RainForest:n460",
+          "targetNodeId": 460,
+          "offset": 51437
+        },
+        {
+          "fieldId": "n150/p14",
+          "fieldName": "candles",
+          "target": "RainForest:n936",
+          "targetNodeId": 936,
+          "offset": 51441
+        },
+        {
+          "fieldId": "n150/p16",
+          "fieldName": "spiritActivateRegion",
+          "target": "RainForest:n210",
+          "targetNodeId": 210,
+          "offset": 51449
+        },
+        {
+          "fieldId": "n150/p18",
+          "fieldName": "npc",
+          "target": "RainForest:n742",
+          "targetNodeId": 742,
+          "offset": 51457
+        },
+        {
+          "fieldId": "n150/p21",
+          "fieldName": "tombstoneCamera",
+          "target": "RainForest:n532",
+          "targetNodeId": 532,
+          "offset": 51463
+        },
+        {
+          "fieldId": "n150/p34",
+          "fieldName": "entranceCamera",
+          "target": "RainForest:n234",
+          "targetNodeId": 234,
+          "offset": 51522
+        },
+        {
+          "fieldId": "n150/p38",
+          "fieldName": "customSpiritEntranceTimeline",
+          "target": "RainForest:n173",
+          "targetNodeId": 173,
+          "offset": 51550
+        },
+        {
+          "fieldId": "n150/p39",
+          "fieldName": "onFinish",
+          "target": "RainForest:n1236",
+          "targetNodeId": 1236,
+          "offset": 51554
+        },
+        {
+          "fieldId": "n150/p40",
+          "fieldName": "tombActivateRegion",
+          "target": "RainForest:n210",
+          "targetNodeId": 210,
+          "offset": 51558
+        },
+        {
+          "fieldId": "n150/p41",
+          "fieldName": "onEntrance",
+          "target": "RainForest:n1123",
+          "targetNodeId": 1123,
+          "offset": 51562
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n635",
+      "level": "RainForest",
+      "nodeId": 635,
+      "name": "BstNode_2504654859",
+      "className": "AncientSpirit",
+      "classIndex": 17,
+      "sourceOffset": 145872,
+      "sourceLength": 201,
+      "sourceSha256": "13ee1d9609ffdc80238737975b37e23d195d441f7032c108c686f8eea1d33d76",
+      "declaredFieldCount": 43,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n635/p1",
+          "fieldName": "onExit",
+          "target": "RainForest:n1268",
+          "targetNodeId": 1268,
+          "offset": 145896
+        },
+        {
+          "fieldId": "n635/p2",
+          "fieldName": "spawnPos",
+          "target": "RainForest:n177",
+          "targetNodeId": 177,
+          "offset": 145900
+        },
+        {
+          "fieldId": "n635/p9",
+          "fieldName": "tombstoneCham",
+          "target": "RainForest:n577",
+          "targetNodeId": 577,
+          "offset": 145940
+        },
+        {
+          "fieldId": "n635/p12",
+          "fieldName": "safeTeleportRegion",
+          "target": "RainForest:n14",
+          "targetNodeId": 14,
+          "offset": 145952
+        },
+        {
+          "fieldId": "n635/p13",
+          "fieldName": "collectible",
+          "target": "RainForest:n418",
+          "targetNodeId": 418,
+          "offset": 145956
+        },
+        {
+          "fieldId": "n635/p14",
+          "fieldName": "candles",
+          "target": "RainForest:n267",
+          "targetNodeId": 267,
+          "offset": 145960
+        },
+        {
+          "fieldId": "n635/p16",
+          "fieldName": "spiritActivateRegion",
+          "target": "RainForest:n20",
+          "targetNodeId": 20,
+          "offset": 145968
+        },
+        {
+          "fieldId": "n635/p18",
+          "fieldName": "npc",
+          "target": "RainForest:n162",
+          "targetNodeId": 162,
+          "offset": 145976
+        },
+        {
+          "fieldId": "n635/p21",
+          "fieldName": "tombstoneCamera",
+          "target": "RainForest:n187",
+          "targetNodeId": 187,
+          "offset": 145982
+        },
+        {
+          "fieldId": "n635/p22",
+          "fieldName": "customSpiritEmoteTimeline",
+          "target": "RainForest:n1063",
+          "targetNodeId": 1063,
+          "offset": 145986
+        },
+        {
+          "fieldId": "n635/p34",
+          "fieldName": "entranceCamera",
+          "target": "RainForest:n550",
+          "targetNodeId": 550,
+          "offset": 146043
+        },
+        {
+          "fieldId": "n635/p39",
+          "fieldName": "onFinish",
+          "target": "RainForest:n1269",
+          "targetNodeId": 1269,
+          "offset": 146057
+        },
+        {
+          "fieldId": "n635/p40",
+          "fieldName": "tombActivateRegion",
+          "target": "RainForest:n20",
+          "targetNodeId": 20,
+          "offset": 146061
+        },
+        {
+          "fieldId": "n635/p41",
+          "fieldName": "onEntrance",
+          "target": "RainForest:n67",
+          "targetNodeId": 67,
+          "offset": 146065
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n89",
+      "level": "RainMid",
+      "nodeId": 89,
+      "name": "BstNode_2345992443",
+      "className": "AncientSpirit",
+      "classIndex": 27,
+      "sourceOffset": 44087,
+      "sourceLength": 181,
+      "sourceSha256": "d0e50c785c1f17f4d8bbee6e8fd36beea8cc374d2621e9abcb36014369404e3c",
+      "declaredFieldCount": 43,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n89/p1",
+          "fieldName": "onExit",
+          "target": "RainMid:n2205",
+          "targetNodeId": 2205,
+          "offset": 44111
+        },
+        {
+          "fieldId": "n89/p2",
+          "fieldName": "spawnPos",
+          "target": "RainMid:n2142",
+          "targetNodeId": 2142,
+          "offset": 44115
+        },
+        {
+          "fieldId": "n89/p9",
+          "fieldName": "tombstoneCham",
+          "target": "RainMid:n2154",
+          "targetNodeId": 2154,
+          "offset": 44131
+        },
+        {
+          "fieldId": "n89/p12",
+          "fieldName": "safeTeleportRegion",
+          "target": "RainMid:n622",
+          "targetNodeId": 622,
+          "offset": 44143
+        },
+        {
+          "fieldId": "n89/p13",
+          "fieldName": "collectible",
+          "target": "RainMid:n194",
+          "targetNodeId": 194,
+          "offset": 44147
+        },
+        {
+          "fieldId": "n89/p16",
+          "fieldName": "spiritActivateRegion",
+          "target": "RainMid:n1020",
+          "targetNodeId": 1020,
+          "offset": 44159
+        },
+        {
+          "fieldId": "n89/p18",
+          "fieldName": "npc",
+          "target": "RainMid:n38",
+          "targetNodeId": 38,
+          "offset": 44167
+        },
+        {
+          "fieldId": "n89/p34",
+          "fieldName": "entranceCamera",
+          "target": "RainMid:n1286",
+          "targetNodeId": 1286,
+          "offset": 44238
+        },
+        {
+          "fieldId": "n89/p36",
+          "fieldName": "onEmote",
+          "target": "RainMid:n2098",
+          "targetNodeId": 2098,
+          "offset": 44243
+        },
+        {
+          "fieldId": "n89/p39",
+          "fieldName": "onFinish",
+          "target": "RainMid:n2206",
+          "targetNodeId": 2206,
+          "offset": 44252
+        },
+        {
+          "fieldId": "n89/p40",
+          "fieldName": "tombActivateRegion",
+          "target": "RainMid:n1020",
+          "targetNodeId": 1020,
+          "offset": 44256
+        },
+        {
+          "fieldId": "n89/p41",
+          "fieldName": "onEntrance",
+          "target": "RainMid:n557",
+          "targetNodeId": 557,
+          "offset": 44260
+        },
+        {
+          "fieldId": "n89/p42",
+          "fieldName": "emoteCamera",
+          "target": "RainMid:n53",
+          "targetNodeId": 53,
+          "offset": 44264
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n503",
+      "level": "RainMid",
+      "nodeId": 503,
+      "name": "BstNode_2345992703",
+      "className": "AncientSpirit",
+      "classIndex": 27,
+      "sourceOffset": 120131,
+      "sourceLength": 239,
+      "sourceSha256": "9798bd8cfa55710a216c7230301bc4d323f4375980af6bdaa42f8ee13b7bd404",
+      "declaredFieldCount": 43,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n503/p1",
+          "fieldName": "onExit",
+          "target": "RainMid:n2265",
+          "targetNodeId": 2265,
+          "offset": 120155
+        },
+        {
+          "fieldId": "n503/p2",
+          "fieldName": "spawnPos",
+          "target": "RainMid:n231",
+          "targetNodeId": 231,
+          "offset": 120159
+        },
+        {
+          "fieldId": "n503/p9",
+          "fieldName": "tombstoneCham",
+          "target": "RainMid:n1749",
+          "targetNodeId": 1749,
+          "offset": 120205
+        },
+        {
+          "fieldId": "n503/p10",
+          "fieldName": "onAlreadyCollected",
+          "target": "RainMid:n2152",
+          "targetNodeId": 2152,
+          "offset": 120209
+        },
+        {
+          "fieldId": "n503/p12",
+          "fieldName": "safeTeleportRegion",
+          "target": "RainMid:n659",
+          "targetNodeId": 659,
+          "offset": 120217
+        },
+        {
+          "fieldId": "n503/p13",
+          "fieldName": "collectible",
+          "target": "RainMid:n1847",
+          "targetNodeId": 1847,
+          "offset": 120221
+        },
+        {
+          "fieldId": "n503/p14",
+          "fieldName": "candles",
+          "target": "RainMid:n1413",
+          "targetNodeId": 1413,
+          "offset": 120225
+        },
+        {
+          "fieldId": "n503/p16",
+          "fieldName": "spiritActivateRegion",
+          "target": "RainMid:n1331",
+          "targetNodeId": 1331,
+          "offset": 120233
+        },
+        {
+          "fieldId": "n503/p18",
+          "fieldName": "npc",
+          "target": "RainMid:n1591",
+          "targetNodeId": 1591,
+          "offset": 120241
+        },
+        {
+          "fieldId": "n503/p22",
+          "fieldName": "customSpiritEmoteTimeline",
+          "target": "RainMid:n860",
+          "targetNodeId": 860,
+          "offset": 120277
+        },
+        {
+          "fieldId": "n503/p27",
+          "fieldName": "soulPresentCamera",
+          "target": "RainMid:n1247",
+          "targetNodeId": 1247,
+          "offset": 120291
+        },
+        {
+          "fieldId": "n503/p34",
+          "fieldName": "entranceCamera",
+          "target": "RainMid:n1423",
+          "targetNodeId": 1423,
+          "offset": 120340
+        },
+        {
+          "fieldId": "n503/p39",
+          "fieldName": "onFinish",
+          "target": "RainMid:n1451",
+          "targetNodeId": 1451,
+          "offset": 120354
+        },
+        {
+          "fieldId": "n503/p40",
+          "fieldName": "tombActivateRegion",
+          "target": "RainMid:n1331",
+          "targetNodeId": 1331,
+          "offset": 120358
+        },
+        {
+          "fieldId": "n503/p41",
+          "fieldName": "onEntrance",
+          "target": "RainMid:n1396",
+          "targetNodeId": 1396,
+          "offset": 120362
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n1115",
+      "level": "RainMid",
+      "nodeId": 1115,
+      "name": "BstNode_1850",
+      "className": "AncientSpirit",
+      "classIndex": 27,
+      "sourceOffset": 229888,
+      "sourceLength": 236,
+      "sourceSha256": "987522f9b76109cda5ae08b08ccd9558a4f9655d3d417cc07bbf63c4cd327032",
+      "declaredFieldCount": 43,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1115/p1",
+          "fieldName": "onExit",
+          "target": "RainMid:n2323",
+          "targetNodeId": 2323,
+          "offset": 229906
+        },
+        {
+          "fieldId": "n1115/p2",
+          "fieldName": "spawnPos",
+          "target": "RainMid:n1042",
+          "targetNodeId": 1042,
+          "offset": 229910
+        },
+        {
+          "fieldId": "n1115/p9",
+          "fieldName": "tombstoneCham",
+          "target": "RainMid:n176",
+          "targetNodeId": 176,
+          "offset": 229957
+        },
+        {
+          "fieldId": "n1115/p12",
+          "fieldName": "safeTeleportRegion",
+          "target": "RainMid:n427",
+          "targetNodeId": 427,
+          "offset": 229969
+        },
+        {
+          "fieldId": "n1115/p13",
+          "fieldName": "collectible",
+          "target": "RainMid:n866",
+          "targetNodeId": 866,
+          "offset": 229973
+        },
+        {
+          "fieldId": "n1115/p16",
+          "fieldName": "spiritActivateRegion",
+          "target": "RainMid:n992",
+          "targetNodeId": 992,
+          "offset": 229985
+        },
+        {
+          "fieldId": "n1115/p17",
+          "fieldName": "customSettleTimeline",
+          "target": "RainMid:n1038",
+          "targetNodeId": 1038,
+          "offset": 229989
+        },
+        {
+          "fieldId": "n1115/p18",
+          "fieldName": "npc",
+          "target": "RainMid:n369",
+          "targetNodeId": 369,
+          "offset": 229993
+        },
+        {
+          "fieldId": "n1115/p21",
+          "fieldName": "tombstoneCamera",
+          "target": "RainMid:n1856",
+          "targetNodeId": 1856,
+          "offset": 229999
+        },
+        {
+          "fieldId": "n1115/p27",
+          "fieldName": "soulPresentCamera",
+          "target": "RainMid:n139",
+          "targetNodeId": 139,
+          "offset": 230017
+        },
+        {
+          "fieldId": "n1115/p34",
+          "fieldName": "entranceCamera",
+          "target": "RainMid:n991",
+          "targetNodeId": 991,
+          "offset": 230067
+        },
+        {
+          "fieldId": "n1115/p39",
+          "fieldName": "onFinish",
+          "target": "RainMid:n554",
+          "targetNodeId": 554,
+          "offset": 230108
+        },
+        {
+          "fieldId": "n1115/p40",
+          "fieldName": "tombActivateRegion",
+          "target": "RainMid:n992",
+          "targetNodeId": 992,
+          "offset": 230112
+        },
+        {
+          "fieldId": "n1115/p41",
+          "fieldName": "onEntrance",
+          "target": "RainMid:n1759",
+          "targetNodeId": 1759,
+          "offset": 230116
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n214",
+      "level": "SkyHub2",
+      "nodeId": 214,
+      "name": "BstNode_1167524204",
+      "className": "AncientSpirit",
+      "classIndex": 41,
+      "sourceOffset": 71962,
+      "sourceLength": 179,
+      "sourceSha256": "6cbddbc83983cb437169e66a7c909150f87eff348d6f0864b2d23735598b2a7f",
+      "declaredFieldCount": 44,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n214/p1",
+          "fieldName": "onExit",
+          "target": "SkyHub2:n652",
+          "targetNodeId": 652,
+          "offset": 71986
+        },
+        {
+          "fieldId": "n214/p2",
+          "fieldName": "spawnPos",
+          "target": "SkyHub2:n2440",
+          "targetNodeId": 2440,
+          "offset": 71990
+        },
+        {
+          "fieldId": "n214/p9",
+          "fieldName": "tombstoneCham",
+          "target": "SkyHub2:n1186",
+          "targetNodeId": 1186,
+          "offset": 72006
+        },
+        {
+          "fieldId": "n214/p12",
+          "fieldName": "safeTeleportRegion",
+          "target": "SkyHub2:n578",
+          "targetNodeId": 578,
+          "offset": 72018
+        },
+        {
+          "fieldId": "n214/p13",
+          "fieldName": "collectible",
+          "target": "SkyHub2:n955",
+          "targetNodeId": 955,
+          "offset": 72022
+        },
+        {
+          "fieldId": "n214/p14",
+          "fieldName": "candles",
+          "target": "SkyHub2:n695",
+          "targetNodeId": 695,
+          "offset": 72026
+        },
+        {
+          "fieldId": "n214/p16",
+          "fieldName": "spiritActivateRegion",
+          "target": "SkyHub2:n1425",
+          "targetNodeId": 1425,
+          "offset": 72034
+        },
+        {
+          "fieldId": "n214/p18",
+          "fieldName": "npc",
+          "target": "SkyHub2:n1625",
+          "targetNodeId": 1625,
+          "offset": 72042
+        },
+        {
+          "fieldId": "n214/p41",
+          "fieldName": "tombActivateRegion",
+          "target": "SkyHub2:n1425",
+          "targetNodeId": 1425,
+          "offset": 72129
+        },
+        {
+          "fieldId": "n214/p42",
+          "fieldName": "onEntrance",
+          "target": "SkyHub2:n610",
+          "targetNodeId": 610,
+          "offset": 72133
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n726",
+      "level": "SkyHub2",
+      "nodeId": 726,
+      "name": "BstNode_2446917930",
+      "className": "AncientSpirit",
+      "classIndex": 41,
+      "sourceOffset": 166206,
+      "sourceLength": 209,
+      "sourceSha256": "1a1a47ebc62bdbd280ea4e43ec16eda6d22f99edc4b5a5aeff150f330a12b139",
+      "declaredFieldCount": 44,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n726/p1",
+          "fieldName": "onExit",
+          "target": "SkyHub2:n2568",
+          "targetNodeId": 2568,
+          "offset": 166230
+        },
+        {
+          "fieldId": "n726/p2",
+          "fieldName": "spawnPos",
+          "target": "SkyHub2:n865",
+          "targetNodeId": 865,
+          "offset": 166234
+        },
+        {
+          "fieldId": "n726/p4",
+          "fieldName": "onSettle",
+          "target": "SkyHub2:n2569",
+          "targetNodeId": 2569,
+          "offset": 166239
+        },
+        {
+          "fieldId": "n726/p9",
+          "fieldName": "tombstoneCham",
+          "target": "SkyHub2:n550",
+          "targetNodeId": 550,
+          "offset": 166276
+        },
+        {
+          "fieldId": "n726/p12",
+          "fieldName": "safeTeleportRegion",
+          "target": "SkyHub2:n819",
+          "targetNodeId": 819,
+          "offset": 166288
+        },
+        {
+          "fieldId": "n726/p13",
+          "fieldName": "collectible",
+          "target": "SkyHub2:n1015",
+          "targetNodeId": 1015,
+          "offset": 166292
+        },
+        {
+          "fieldId": "n726/p14",
+          "fieldName": "candles",
+          "target": "SkyHub2:n9",
+          "targetNodeId": 9,
+          "offset": 166296
+        },
+        {
+          "fieldId": "n726/p16",
+          "fieldName": "spiritActivateRegion",
+          "target": "SkyHub2:n1020",
+          "targetNodeId": 1020,
+          "offset": 166304
+        },
+        {
+          "fieldId": "n726/p18",
+          "fieldName": "npc",
+          "target": "SkyHub2:n766",
+          "targetNodeId": 766,
+          "offset": 166312
+        },
+        {
+          "fieldId": "n726/p22",
+          "fieldName": "customSpiritEmoteTimeline",
+          "target": "SkyHub2:n2140",
+          "targetNodeId": 2140,
+          "offset": 166322
+        },
+        {
+          "fieldId": "n726/p28",
+          "fieldName": "soulPresentCamera",
+          "target": "SkyHub2:n41",
+          "targetNodeId": 41,
+          "offset": 166340
+        },
+        {
+          "fieldId": "n726/p35",
+          "fieldName": "entranceCamera",
+          "target": "SkyHub2:n2188",
+          "targetNodeId": 2188,
+          "offset": 166385
+        },
+        {
+          "fieldId": "n726/p40",
+          "fieldName": "onFinish",
+          "target": "SkyHub2:n2570",
+          "targetNodeId": 2570,
+          "offset": 166399
+        },
+        {
+          "fieldId": "n726/p42",
+          "fieldName": "onEntrance",
+          "target": "SkyHub2:n2571",
+          "targetNodeId": 2571,
+          "offset": 166407
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n2442",
+      "level": "SkyHub2",
+      "nodeId": 2442,
+      "name": "BstNode_2446917926",
+      "className": "AncientSpirit",
+      "classIndex": 41,
+      "sourceOffset": 462658,
+      "sourceLength": 180,
+      "sourceSha256": "7bac1512073094e213d4ab6c7448a35a5efe2449f630784308ea95884298eb54",
+      "declaredFieldCount": 44,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2442/p2",
+          "fieldName": "spawnPos",
+          "target": "SkyHub2:n1931",
+          "targetNodeId": 1931,
+          "offset": 462686
+        },
+        {
+          "fieldId": "n2442/p9",
+          "fieldName": "tombstoneCham",
+          "target": "SkyHub2:n727",
+          "targetNodeId": 727,
+          "offset": 462702
+        },
+        {
+          "fieldId": "n2442/p12",
+          "fieldName": "safeTeleportRegion",
+          "target": "SkyHub2:n196",
+          "targetNodeId": 196,
+          "offset": 462714
+        },
+        {
+          "fieldId": "n2442/p13",
+          "fieldName": "collectible",
+          "target": "SkyHub2:n1423",
+          "targetNodeId": 1423,
+          "offset": 462718
+        },
+        {
+          "fieldId": "n2442/p14",
+          "fieldName": "candles",
+          "target": "SkyHub2:n172",
+          "targetNodeId": 172,
+          "offset": 462722
+        },
+        {
+          "fieldId": "n2442/p16",
+          "fieldName": "spiritActivateRegion",
+          "target": "SkyHub2:n697",
+          "targetNodeId": 697,
+          "offset": 462730
+        },
+        {
+          "fieldId": "n2442/p18",
+          "fieldName": "npc",
+          "target": "SkyHub2:n2062",
+          "targetNodeId": 2062,
+          "offset": 462738
+        },
+        {
+          "fieldId": "n2442/p21",
+          "fieldName": "tombstoneCamera",
+          "target": "SkyHub2:n2379",
+          "targetNodeId": 2379,
+          "offset": 462767
+        },
+        {
+          "fieldId": "n2442/p22",
+          "fieldName": "customSpiritEmoteTimeline",
+          "target": "SkyHub2:n279",
+          "targetNodeId": 279,
+          "offset": 462771
+        },
+        {
+          "fieldId": "n2442/p28",
+          "fieldName": "soulPresentCamera",
+          "target": "SkyHub2:n2376",
+          "targetNodeId": 2376,
+          "offset": 462789
+        },
+        {
+          "fieldId": "n2442/p35",
+          "fieldName": "entranceCamera",
+          "target": "SkyHub2:n707",
+          "targetNodeId": 707,
+          "offset": 462808
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n197",
+      "level": "Sunset",
+      "nodeId": 197,
+      "name": "BstNode_1621",
+      "className": "AncientSpirit",
+      "classIndex": 29,
+      "sourceOffset": 61289,
+      "sourceLength": 219,
+      "sourceSha256": "211ec0592ddd66cf7ce084e125a04898506569ad35b7207fc974c04740f3a5c8",
+      "declaredFieldCount": 44,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n197/p1",
+          "fieldName": "onExit",
+          "target": "Sunset:n1766",
+          "targetNodeId": 1766,
+          "offset": 61307
+        },
+        {
+          "fieldId": "n197/p2",
+          "fieldName": "spawnPos",
+          "target": "Sunset:n1029",
+          "targetNodeId": 1029,
+          "offset": 61311
+        },
+        {
+          "fieldId": "n197/p9",
+          "fieldName": "tombstoneCham",
+          "target": "Sunset:n175",
+          "targetNodeId": 175,
+          "offset": 61351
+        },
+        {
+          "fieldId": "n197/p12",
+          "fieldName": "safeTeleportRegion",
+          "target": "Sunset:n182",
+          "targetNodeId": 182,
+          "offset": 61363
+        },
+        {
+          "fieldId": "n197/p13",
+          "fieldName": "collectible",
+          "target": "Sunset:n776",
+          "targetNodeId": 776,
+          "offset": 61367
+        },
+        {
+          "fieldId": "n197/p14",
+          "fieldName": "candles",
+          "target": "Sunset:n790",
+          "targetNodeId": 790,
+          "offset": 61371
+        },
+        {
+          "fieldId": "n197/p16",
+          "fieldName": "spiritActivateRegion",
+          "target": "Sunset:n348",
+          "targetNodeId": 348,
+          "offset": 61379
+        },
+        {
+          "fieldId": "n197/p18",
+          "fieldName": "npc",
+          "target": "Sunset:n1393",
+          "targetNodeId": 1393,
+          "offset": 61387
+        },
+        {
+          "fieldId": "n197/p21",
+          "fieldName": "tombstoneCamera",
+          "target": "Sunset:n850",
+          "targetNodeId": 850,
+          "offset": 61413
+        },
+        {
+          "fieldId": "n197/p35",
+          "fieldName": "entranceCamera",
+          "target": "Sunset:n857",
+          "targetNodeId": 857,
+          "offset": 61478
+        },
+        {
+          "fieldId": "n197/p40",
+          "fieldName": "onFinish",
+          "target": "Sunset:n1767",
+          "targetNodeId": 1767,
+          "offset": 61492
+        },
+        {
+          "fieldId": "n197/p41",
+          "fieldName": "tombActivateRegion",
+          "target": "Sunset:n348",
+          "targetNodeId": 348,
+          "offset": 61496
+        },
+        {
+          "fieldId": "n197/p42",
+          "fieldName": "onEntrance",
+          "target": "Sunset:n855",
+          "targetNodeId": 855,
+          "offset": 61500
+        },
+        {
+          "fieldId": "n197/p43",
+          "fieldName": "emoteCamera",
+          "target": "Sunset:n787",
+          "targetNodeId": 787,
+          "offset": 61504
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n1242",
+      "level": "Sunset",
+      "nodeId": 1242,
+      "name": "BstNode_1167524232",
+      "className": "AncientSpirit",
+      "classIndex": 29,
+      "sourceOffset": 236871,
+      "sourceLength": 243,
+      "sourceSha256": "fd796c3e3730197a484647bade30a5d3c33fc3863c877a9ccdb7bf0bcd90a565",
+      "declaredFieldCount": 44,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1242/p1",
+          "fieldName": "onExit",
+          "target": "Sunset:n1866",
+          "targetNodeId": 1866,
+          "offset": 236895
+        },
+        {
+          "fieldId": "n1242/p2",
+          "fieldName": "spawnPos",
+          "target": "Sunset:n1400",
+          "targetNodeId": 1400,
+          "offset": 236899
+        },
+        {
+          "fieldId": "n1242/p9",
+          "fieldName": "tombstoneCham",
+          "target": "Sunset:n1044",
+          "targetNodeId": 1044,
+          "offset": 236945
+        },
+        {
+          "fieldId": "n1242/p12",
+          "fieldName": "safeTeleportRegion",
+          "target": "Sunset:n1248",
+          "targetNodeId": 1248,
+          "offset": 236957
+        },
+        {
+          "fieldId": "n1242/p13",
+          "fieldName": "collectible",
+          "target": "Sunset:n25",
+          "targetNodeId": 25,
+          "offset": 236961
+        },
+        {
+          "fieldId": "n1242/p14",
+          "fieldName": "candles",
+          "target": "Sunset:n986",
+          "targetNodeId": 986,
+          "offset": 236965
+        },
+        {
+          "fieldId": "n1242/p16",
+          "fieldName": "spiritActivateRegion",
+          "target": "Sunset:n1278",
+          "targetNodeId": 1278,
+          "offset": 236973
+        },
+        {
+          "fieldId": "n1242/p18",
+          "fieldName": "npc",
+          "target": "Sunset:n1297",
+          "targetNodeId": 1297,
+          "offset": 236981
+        },
+        {
+          "fieldId": "n1242/p21",
+          "fieldName": "tombstoneCamera",
+          "target": "Sunset:n628",
+          "targetNodeId": 628,
+          "offset": 237013
+        },
+        {
+          "fieldId": "n1242/p28",
+          "fieldName": "soulPresentCamera",
+          "target": "Sunset:n1599",
+          "targetNodeId": 1599,
+          "offset": 237035
+        },
+        {
+          "fieldId": "n1242/p35",
+          "fieldName": "entranceCamera",
+          "target": "Sunset:n1169",
+          "targetNodeId": 1169,
+          "offset": 237084
+        },
+        {
+          "fieldId": "n1242/p40",
+          "fieldName": "onFinish",
+          "target": "Sunset:n1867",
+          "targetNodeId": 1867,
+          "offset": 237098
+        },
+        {
+          "fieldId": "n1242/p41",
+          "fieldName": "tombActivateRegion",
+          "target": "Sunset:n1278",
+          "targetNodeId": 1278,
+          "offset": 237102
+        },
+        {
+          "fieldId": "n1242/p42",
+          "fieldName": "onEntrance",
+          "target": "Sunset:n1167",
+          "targetNodeId": 1167,
+          "offset": 237106
+        },
+        {
+          "fieldId": "n1242/p43",
+          "fieldName": "emoteCamera",
+          "target": "Sunset:n764",
+          "targetNodeId": 764,
+          "offset": 237110
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n251",
+      "level": "SunsetEnd",
+      "nodeId": 251,
+      "name": "BstNode_1621",
+      "className": "AncientSpirit",
+      "classIndex": 32,
+      "sourceOffset": 75713,
+      "sourceLength": 232,
+      "sourceSha256": "0146b0b1ec1016d2e1b44cfa71926ad9c81989e5e8160d0f8132ea4cdb6e1699",
+      "declaredFieldCount": 44,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n251/p1",
+          "fieldName": "onExit",
+          "target": "SunsetEnd:n1853",
+          "targetNodeId": 1853,
+          "offset": 75731
+        },
+        {
+          "fieldId": "n251/p2",
+          "fieldName": "spawnPos",
+          "target": "SunsetEnd:n1090",
+          "targetNodeId": 1090,
+          "offset": 75735
+        },
+        {
+          "fieldId": "n251/p9",
+          "fieldName": "tombstoneCham",
+          "target": "SunsetEnd:n1142",
+          "targetNodeId": 1142,
+          "offset": 75780
+        },
+        {
+          "fieldId": "n251/p12",
+          "fieldName": "safeTeleportRegion",
+          "target": "SunsetEnd:n1105",
+          "targetNodeId": 1105,
+          "offset": 75792
+        },
+        {
+          "fieldId": "n251/p13",
+          "fieldName": "collectible",
+          "target": "SunsetEnd:n1135",
+          "targetNodeId": 1135,
+          "offset": 75796
+        },
+        {
+          "fieldId": "n251/p14",
+          "fieldName": "candles",
+          "target": "SunsetEnd:n1150",
+          "targetNodeId": 1150,
+          "offset": 75800
+        },
+        {
+          "fieldId": "n251/p16",
+          "fieldName": "spiritActivateRegion",
+          "target": "SunsetEnd:n405",
+          "targetNodeId": 405,
+          "offset": 75808
+        },
+        {
+          "fieldId": "n251/p18",
+          "fieldName": "npc",
+          "target": "SunsetEnd:n1465",
+          "targetNodeId": 1465,
+          "offset": 75816
+        },
+        {
+          "fieldId": "n251/p21",
+          "fieldName": "tombstoneCamera",
+          "target": "SunsetEnd:n1177",
+          "targetNodeId": 1177,
+          "offset": 75845
+        },
+        {
+          "fieldId": "n251/p28",
+          "fieldName": "soulPresentCamera",
+          "target": "SunsetEnd:n1169",
+          "targetNodeId": 1169,
+          "offset": 75867
+        },
+        {
+          "fieldId": "n251/p35",
+          "fieldName": "entranceCamera",
+          "target": "SunsetEnd:n762",
+          "targetNodeId": 762,
+          "offset": 75915
+        },
+        {
+          "fieldId": "n251/p40",
+          "fieldName": "onFinish",
+          "target": "SunsetEnd:n1854",
+          "targetNodeId": 1854,
+          "offset": 75929
+        },
+        {
+          "fieldId": "n251/p41",
+          "fieldName": "tombActivateRegion",
+          "target": "SunsetEnd:n405",
+          "targetNodeId": 405,
+          "offset": 75933
+        },
+        {
+          "fieldId": "n251/p42",
+          "fieldName": "onEntrance",
+          "target": "SunsetEnd:n1692",
+          "targetNodeId": 1692,
+          "offset": 75937
+        },
+        {
+          "fieldId": "n251/p43",
+          "fieldName": "emoteCamera",
+          "target": "SunsetEnd:n1148",
+          "targetNodeId": 1148,
+          "offset": 75941
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n270",
+      "level": "SunsetEnd",
+      "nodeId": 270,
+      "name": "BstNode_2688",
+      "className": "AncientSpirit",
+      "classIndex": 32,
+      "sourceOffset": 78978,
+      "sourceLength": 231,
+      "sourceSha256": "92162de1b11dc8037876fb2baeb3290ebcba3c5f9375dfc1b38e8c712064a6eb",
+      "declaredFieldCount": 44,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n270/p2",
+          "fieldName": "spawnPos",
+          "target": "SunsetEnd:n803",
+          "targetNodeId": 803,
+          "offset": 79000
+        },
+        {
+          "fieldId": "n270/p9",
+          "fieldName": "tombstoneCham",
+          "target": "SunsetEnd:n397",
+          "targetNodeId": 397,
+          "offset": 79045
+        },
+        {
+          "fieldId": "n270/p12",
+          "fieldName": "safeTeleportRegion",
+          "target": "SunsetEnd:n279",
+          "targetNodeId": 279,
+          "offset": 79057
+        },
+        {
+          "fieldId": "n270/p13",
+          "fieldName": "collectible",
+          "target": "SunsetEnd:n878",
+          "targetNodeId": 878,
+          "offset": 79061
+        },
+        {
+          "fieldId": "n270/p16",
+          "fieldName": "spiritActivateRegion",
+          "target": "SunsetEnd:n746",
+          "targetNodeId": 746,
+          "offset": 79073
+        },
+        {
+          "fieldId": "n270/p18",
+          "fieldName": "npc",
+          "target": "SunsetEnd:n456",
+          "targetNodeId": 456,
+          "offset": 79081
+        },
+        {
+          "fieldId": "n270/p40",
+          "fieldName": "onFinish",
+          "target": "SunsetEnd:n1857",
+          "targetNodeId": 1857,
+          "offset": 79193
+        },
+        {
+          "fieldId": "n270/p41",
+          "fieldName": "tombActivateRegion",
+          "target": "SunsetEnd:n519",
+          "targetNodeId": 519,
+          "offset": 79197
+        },
+        {
+          "fieldId": "n270/p43",
+          "fieldName": "emoteCamera",
+          "target": "SunsetEnd:n1441",
+          "targetNodeId": 1441,
+          "offset": 79205
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n352",
+      "level": "SunsetEnd",
+      "nodeId": 352,
+      "name": "BstNode_1167524494",
+      "className": "AncientSpirit",
+      "classIndex": 32,
+      "sourceOffset": 88931,
+      "sourceLength": 229,
+      "sourceSha256": "8cdf586d145d868db3e2566c5a869c7da930d7a412e388de579b78338bb4391a",
+      "declaredFieldCount": 44,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n352/p2",
+          "fieldName": "spawnPos",
+          "target": "SunsetEnd:n1094",
+          "targetNodeId": 1094,
+          "offset": 88959
+        },
+        {
+          "fieldId": "n352/p9",
+          "fieldName": "tombstoneCham",
+          "target": "SunsetEnd:n631",
+          "targetNodeId": 631,
+          "offset": 89000
+        },
+        {
+          "fieldId": "n352/p12",
+          "fieldName": "safeTeleportRegion",
+          "target": "SunsetEnd:n440",
+          "targetNodeId": 440,
+          "offset": 89012
+        },
+        {
+          "fieldId": "n352/p13",
+          "fieldName": "collectible",
+          "target": "SunsetEnd:n37",
+          "targetNodeId": 37,
+          "offset": 89016
+        },
+        {
+          "fieldId": "n352/p16",
+          "fieldName": "spiritActivateRegion",
+          "target": "SunsetEnd:n1292",
+          "targetNodeId": 1292,
+          "offset": 89028
+        },
+        {
+          "fieldId": "n352/p18",
+          "fieldName": "npc",
+          "target": "SunsetEnd:n1163",
+          "targetNodeId": 1163,
+          "offset": 89036
+        },
+        {
+          "fieldId": "n352/p28",
+          "fieldName": "soulPresentCamera",
+          "target": "SunsetEnd:n1162",
+          "targetNodeId": 1162,
+          "offset": 89086
+        },
+        {
+          "fieldId": "n352/p40",
+          "fieldName": "onFinish",
+          "target": "SunsetEnd:n1871",
+          "targetNodeId": 1871,
+          "offset": 89144
+        },
+        {
+          "fieldId": "n352/p41",
+          "fieldName": "tombActivateRegion",
+          "target": "SunsetEnd:n519",
+          "targetNodeId": 519,
+          "offset": 89148
+        },
+        {
+          "fieldId": "n352/p43",
+          "fieldName": "emoteCamera",
+          "target": "SunsetEnd:n1502",
+          "targetNodeId": 1502,
+          "offset": 89156
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n1158",
+      "level": "SunsetEnd",
+      "nodeId": 1158,
+      "name": "BstNode_1167524175",
+      "className": "AncientSpirit",
+      "classIndex": 32,
+      "sourceOffset": 216930,
+      "sourceLength": 228,
+      "sourceSha256": "bad5121999444579aa312dc2aaa1e2df4122ec421578ba98652e53abc107257b",
+      "declaredFieldCount": 44,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1158/p1",
+          "fieldName": "onExit",
+          "target": "SunsetEnd:n1948",
+          "targetNodeId": 1948,
+          "offset": 216954
+        },
+        {
+          "fieldId": "n1158/p2",
+          "fieldName": "spawnPos",
+          "target": "SunsetEnd:n1171",
+          "targetNodeId": 1171,
+          "offset": 216958
+        },
+        {
+          "fieldId": "n1158/p9",
+          "fieldName": "tombstoneCham",
+          "target": "SunsetEnd:n1766",
+          "targetNodeId": 1766,
+          "offset": 216999
+        },
+        {
+          "fieldId": "n1158/p12",
+          "fieldName": "safeTeleportRegion",
+          "target": "SunsetEnd:n1665",
+          "targetNodeId": 1665,
+          "offset": 217011
+        },
+        {
+          "fieldId": "n1158/p13",
+          "fieldName": "collectible",
+          "target": "SunsetEnd:n91",
+          "targetNodeId": 91,
+          "offset": 217015
+        },
+        {
+          "fieldId": "n1158/p14",
+          "fieldName": "candles",
+          "target": "SunsetEnd:n1647",
+          "targetNodeId": 1647,
+          "offset": 217019
+        },
+        {
+          "fieldId": "n1158/p16",
+          "fieldName": "spiritActivateRegion",
+          "target": "SunsetEnd:n1130",
+          "targetNodeId": 1130,
+          "offset": 217027
+        },
+        {
+          "fieldId": "n1158/p18",
+          "fieldName": "npc",
+          "target": "SunsetEnd:n564",
+          "targetNodeId": 564,
+          "offset": 217035
+        },
+        {
+          "fieldId": "n1158/p21",
+          "fieldName": "tombstoneCamera",
+          "target": "SunsetEnd:n1160",
+          "targetNodeId": 1160,
+          "offset": 217062
+        },
+        {
+          "fieldId": "n1158/p28",
+          "fieldName": "soulPresentCamera",
+          "target": "SunsetEnd:n1350",
+          "targetNodeId": 1350,
+          "offset": 217084
+        },
+        {
+          "fieldId": "n1158/p35",
+          "fieldName": "entranceCamera",
+          "target": "SunsetEnd:n247",
+          "targetNodeId": 247,
+          "offset": 217128
+        },
+        {
+          "fieldId": "n1158/p40",
+          "fieldName": "onFinish",
+          "target": "SunsetEnd:n1949",
+          "targetNodeId": 1949,
+          "offset": 217142
+        },
+        {
+          "fieldId": "n1158/p41",
+          "fieldName": "tombActivateRegion",
+          "target": "SunsetEnd:n1130",
+          "targetNodeId": 1130,
+          "offset": 217146
+        },
+        {
+          "fieldId": "n1158/p42",
+          "fieldName": "onEntrance",
+          "target": "SunsetEnd:n1101",
+          "targetNodeId": 1101,
+          "offset": 217150
+        },
+        {
+          "fieldId": "n1158/p43",
+          "fieldName": "emoteCamera",
+          "target": "SunsetEnd:n1350",
+          "targetNodeId": 1350,
+          "offset": 217154
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n1181",
+      "level": "SunsetEnd",
+      "nodeId": 1181,
+      "name": "BstNode_1167524449",
+      "className": "AncientSpirit",
+      "classIndex": 32,
+      "sourceOffset": 221123,
+      "sourceLength": 240,
+      "sourceSha256": "039955eb9cf99bd75b64c36eb3e67b3e2c3aa3aa6969d2371f2b1918b2ccfef8",
+      "declaredFieldCount": 44,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1181/p2",
+          "fieldName": "spawnPos",
+          "target": "SunsetEnd:n1039",
+          "targetNodeId": 1039,
+          "offset": 221151
+        },
+        {
+          "fieldId": "n1181/p9",
+          "fieldName": "tombstoneCham",
+          "target": "SunsetEnd:n1217",
+          "targetNodeId": 1217,
+          "offset": 221196
+        },
+        {
+          "fieldId": "n1181/p12",
+          "fieldName": "safeTeleportRegion",
+          "target": "SunsetEnd:n580",
+          "targetNodeId": 580,
+          "offset": 221208
+        },
+        {
+          "fieldId": "n1181/p13",
+          "fieldName": "collectible",
+          "target": "SunsetEnd:n1164",
+          "targetNodeId": 1164,
+          "offset": 221212
+        },
+        {
+          "fieldId": "n1181/p16",
+          "fieldName": "spiritActivateRegion",
+          "target": "SunsetEnd:n825",
+          "targetNodeId": 825,
+          "offset": 221224
+        },
+        {
+          "fieldId": "n1181/p18",
+          "fieldName": "npc",
+          "target": "SunsetEnd:n1793",
+          "targetNodeId": 1793,
+          "offset": 221232
+        },
+        {
+          "fieldId": "n1181/p28",
+          "fieldName": "soulPresentCamera",
+          "target": "SunsetEnd:n1156",
+          "targetNodeId": 1156,
+          "offset": 221285
+        },
+        {
+          "fieldId": "n1181/p40",
+          "fieldName": "onFinish",
+          "target": "SunsetEnd:n1950",
+          "targetNodeId": 1950,
+          "offset": 221347
+        },
+        {
+          "fieldId": "n1181/p41",
+          "fieldName": "tombActivateRegion",
+          "target": "SunsetEnd:n519",
+          "targetNodeId": 519,
+          "offset": 221351
+        },
+        {
+          "fieldId": "n1181/p43",
+          "fieldName": "emoteCamera",
+          "target": "SunsetEnd:n1138",
+          "targetNodeId": 1138,
+          "offset": 221359
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "CandleSpace",
+      "path": "Levels/CandleSpace/Objects.level.bin",
+      "sha256": "db7140d2dd5ee9cd2fcdcbb61a898b9facf1683ff21fec83fcbef81b885f56db",
+      "bytes": 92607,
+      "nodes": 564,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/CandleSpace.json",
+      "markdown": "Objects对象清单/CandleSpace.md"
+    },
+    {
+      "level": "DayHubCave",
+      "path": "Levels/DayHubCave/Objects.level.bin",
+      "sha256": "e4da920cc9f0b1569f14ad1a6d1990db7155dc07ebfc3214c4e385a367872457",
+      "bytes": 202745,
+      "nodes": 1128,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DayHubCave.json",
+      "markdown": "Objects对象清单/DayHubCave.md"
+    },
+    {
+      "level": "Dusk",
+      "path": "Levels/Dusk/Objects.level.bin",
+      "sha256": "9222b248f17fb4122cd4ad9650543ab86aab8b077b6965248c70ac2341bf2d5d",
+      "bytes": 242331,
+      "nodes": 1288,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dusk.json",
+      "markdown": "Objects对象清单/Dusk.md"
+    },
+    {
+      "level": "DuskGraveyard",
+      "path": "Levels/DuskGraveyard/Objects.level.bin",
+      "sha256": "128b30dcbe40b68e68fc25d195b68dc39f897259453c02612049ccd37a90ffb4",
+      "bytes": 424333,
+      "nodes": 1791,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DuskGraveyard.json",
+      "markdown": "Objects对象清单/DuskGraveyard.md"
+    },
+    {
+      "level": "DuskMid",
+      "path": "Levels/DuskMid/Objects.level.bin",
+      "sha256": "899ca33226dabd04afecfe7888750938ff4e460cb586603364e150591e9cbda5",
+      "bytes": 234288,
+      "nodes": 1268,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DuskMid.json",
+      "markdown": "Objects对象清单/DuskMid.md"
+    },
+    {
+      "level": "HubReveal",
+      "path": "Levels/HubReveal/Objects.level.bin",
+      "sha256": "4b32f12bbe4b246cde9ca1e4ba0982000ff108359865bb4340aba640e609861b",
+      "bytes": 289438,
+      "nodes": 1829,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/HubReveal.json",
+      "markdown": "Objects对象清单/HubReveal.md"
+    },
+    {
+      "level": "Night",
+      "path": "Levels/Night/Objects.level.bin",
+      "sha256": "6ce612c9efb82834d648de81251033b341a44f4d9374d8338d868575aab6a723",
+      "bytes": 499756,
+      "nodes": 3719,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Night.json",
+      "markdown": "Objects对象清单/Night.md"
+    },
+    {
+      "level": "Prairie_ButterflyFields",
+      "path": "Levels/Prairie_ButterflyFields/Objects.level.bin",
+      "sha256": "29d8d61a082f3e3414ecfbb501b5f65499deb37ad4a1078ce2e9b88ac0d1e441",
+      "bytes": 297606,
+      "nodes": 1513,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_ButterflyFields.json",
+      "markdown": "Objects对象清单/Prairie_ButterflyFields.md"
+    },
+    {
+      "level": "Prairie_Cave",
+      "path": "Levels/Prairie_Cave/Objects.level.bin",
+      "sha256": "675a2256e24f8c4b16540cee6a5cd2b7647ff2fb495724a8bf596717ca39d944",
+      "bytes": 466340,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Cave.json",
+      "markdown": "Objects对象清单/Prairie_Cave.md"
+    },
+    {
+      "level": "Prairie_NestAndKeeper",
+      "path": "Levels/Prairie_NestAndKeeper/Objects.level.bin",
+      "sha256": "5eabe877e07c84e5f9270035aaab73fa20144c87f6e9136e5285dbaff3f85b7a",
+      "bytes": 239403,
+      "nodes": 1077,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_NestAndKeeper.json",
+      "markdown": "Objects对象清单/Prairie_NestAndKeeper.md"
+    },
+    {
+      "level": "Prairie_Village",
+      "path": "Levels/Prairie_Village/Objects.level.bin",
+      "sha256": "4656296b54402016b59b894b4653fbdc71e106a21e0900294f73f2c7b7112385",
+      "bytes": 549989,
+      "nodes": 3724,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Village.json",
+      "markdown": "Objects对象清单/Prairie_Village.md"
+    },
+    {
+      "level": "Rain",
+      "path": "Levels/Rain/Objects.level.bin",
+      "sha256": "20093bccf3bb1ea0936cb993e66cef0187b40a5a411df3573eb28e4def4f75c6",
+      "bytes": 457732,
+      "nodes": 2079,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Rain.json",
+      "markdown": "Objects对象清单/Rain.md"
+    },
+    {
+      "level": "RainEnd",
+      "path": "Levels/RainEnd/Objects.level.bin",
+      "sha256": "247912ec955153e3df80c16a861eb872573502a285a17943518bdce448a8d5e3",
+      "bytes": 427926,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainEnd.json",
+      "markdown": "Objects对象清单/RainEnd.md"
+    },
+    {
+      "level": "RainForest",
+      "path": "Levels/RainForest/Objects.level.bin",
+      "sha256": "2e69b3314c70c61bd99435f4bb4418fba540f227c83670e1af3b5358c64c3b73",
+      "bytes": 271409,
+      "nodes": 1306,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainForest.json",
+      "markdown": "Objects对象清单/RainForest.md"
+    },
+    {
+      "level": "RainMid",
+      "path": "Levels/RainMid/Objects.level.bin",
+      "sha256": "139b219d9b71a2ab24418b1ec41f2ee8a2ebfdf4c5ea992c35348a758682ed23",
+      "bytes": 430825,
+      "nodes": 2457,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainMid.json",
+      "markdown": "Objects对象清单/RainMid.md"
+    },
+    {
+      "level": "SkyHub2",
+      "path": "Levels/SkyHub2/Objects.level.bin",
+      "sha256": "8b467f9b349d9d4ce0d038528c96e44dff30063149bf5bbf90232a56bb9dd36f",
+      "bytes": 475656,
+      "nodes": 2886,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SkyHub2.json",
+      "markdown": "Objects对象清单/SkyHub2.md"
+    },
+    {
+      "level": "Sunset",
+      "path": "Levels/Sunset/Objects.level.bin",
+      "sha256": "8126f2db693502576075505797624e0b5e53dc064fe6af82e90f2261ca427f8a",
+      "bytes": 325410,
+      "nodes": 1899,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Sunset.json",
+      "markdown": "Objects对象清单/Sunset.md"
+    },
+    {
+      "level": "SunsetEnd",
+      "path": "Levels/SunsetEnd/Objects.level.bin",
+      "sha256": "9995ebfef7aa72982f6b95073a98a4ef01376bd8ac56c3b79b09729f97f43d6e",
+      "bytes": 352573,
+      "nodes": 1998,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SunsetEnd.json",
+      "markdown": "Objects对象清单/SunsetEnd.md"
+    }
+  ]
+}

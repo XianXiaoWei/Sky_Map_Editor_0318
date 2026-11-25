@@ -1,0 +1,20 @@
+0x1006d9240: push rbp
+0x1006d9241: mov rbp, rsp
+0x1006d9244: push rbx
+0x1006d9245: push rax
+0x1006d9246: lea rax, [rip + 0x54c1a3] ; 0x100c253f0
+0x1006d924d: mov qword ptr [rdi], rax
+0x1006d9250: test byte ptr [rdi + 0x80], 1
+0x1006d9257: je 0x1006d9270
+0x1006d9259: mov rbx, qword ptr [rdi + 0x90]
+0x1006d9260: call 0x1007e50d0 ; 0x1007e50d0
+0x1006d9265: mov rdi, rax
+0x1006d9268: mov rsi, rbx
+0x1006d926b: call 0x1007e5db0 ; 0x1007e5db0
+0x1006d9270: add rsp, 8
+0x1006d9274: pop rbx
+0x1006d9275: pop rbp
+0x1006d9276: ret 
+0x1006d9277: mov rdi, rax
+0x1006d927a: call 0x100011bf0 ; 0x100011bf0
+0x1006d927f: nop 

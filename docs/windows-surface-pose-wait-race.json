@@ -1,0 +1,94 @@
+{
+  "passed": false,
+  "scope": "Production Electron desktop UI and XCB Vulkan presentation on Linux. Tests native replies, navigation, incremental editing, DPI, resizing and map cleanup. Does not validate Win32 HWND/transparent-window composition or Windows hardware FPS.",
+  "windowsTested": false,
+  "maps": [
+    {
+      "level": "Dawn",
+      "loadMs": 21549.759783999998,
+      "frames": 15,
+      "navigationStatusFps": 5.932637253312983,
+      "cameraMoved": true,
+      "resolution": [
+        695,
+        828
+      ],
+      "draws": 172,
+      "triangles": 238473,
+      "geometrySha256": "eaae68ecdde6a16d313d5ab913272482c10fdfc09d529cae1ed2145554ebc6e5",
+      "frameTiming": {
+        "environmentState": 4.6823440000007395,
+        "background": 12.291197999998985,
+        "materials": 12.25635400000101,
+        "compositionSetup": 0.1245310000012978,
+        "rasterAndPresent": 128.98776100000032
+      },
+      "visibleDraws": 172,
+      "sceneReuploads": 0,
+      "materialReuploads": 0
+    },
+    {
+      "level": "SkyHub2",
+      "loadMs": 15758.975202000001,
+      "frames": 16,
+      "navigationStatusFps": 6.377344087184007,
+      "cameraMoved": true,
+      "resolution": [
+        695,
+        828
+      ],
+      "draws": 197,
+      "triangles": 336284,
+      "geometrySha256": "34408faf583128afdc76eed176fd76225d127456b26824512c046cbb59ca3e87",
+      "frameTiming": {
+        "environmentState": 6.388437000001431,
+        "background": 17.847969000002195,
+        "materials": 11.368646000002627,
+        "compositionSetup": 0.42541699999856064,
+        "rasterAndPresent": 116.76098900000216
+      },
+      "visibleDraws": 139,
+      "sceneReuploads": 0,
+      "materialReuploads": 0
+    },
+    {
+      "level": "Dawn",
+      "loadMs": 9372.496299000006,
+      "frames": 15,
+      "navigationStatusFps": 5.8320603562352336,
+      "cameraMoved": true,
+      "resolution": [
+        695,
+        828
+      ],
+      "draws": 172,
+      "triangles": 238473,
+      "geometrySha256": "eaae68ecdde6a16d313d5ab913272482c10fdfc09d529cae1ed2145554ebc6e5",
+      "frameTiming": {
+        "environmentState": 3.1577089999991586,
+        "background": 14.713436999998521,
+        "materials": 9.378229000001738,
+        "compositionSetup": 0.26604199999565026,
+        "rasterAndPresent": 177.27625000000262
+      },
+      "visibleDraws": 172,
+      "sceneReuploads": 0,
+      "materialReuploads": 0
+    }
+  ],
+  "errors": [],
+  "device": {
+    "engine": "Sky Native Vulkan",
+    "backend": "Vulkan",
+    "device": "llvmpipe (LLVM 19.1.7, 128 bits)",
+    "apiVersion": 4210993,
+    "deviceType": 4,
+    "nativeSurface": true,
+    "shaderFloat16": true,
+    "samplerAnisotropyPolicy": "llvmpipe-trilinear",
+    "maxSamplerAnisotropy": 16
+  },
+  "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(afterCalls.calls.vulkanModelTransforms> (counts.calls.vulkanModelTransforms??0))\n",
+  "toast": "",
+  "status": "已编辑 LevelMesh.transform"
+}

@@ -1,0 +1,8 @@
+0x1001dec60: push rbp
+0x1001dec61: mov rbp, rsp
+0x1001dec64: add rdi, 0x42d0
+0x1001dec6b: mov esi, 0x4804
+0x1001dec70: call 0x100aa24aa ; 0x100aa24aa ___bzero
+0x1001dec75: pop rbp
+0x1001dec76: ret 
+0x1001dec77: nop word ptr [rax + rax]

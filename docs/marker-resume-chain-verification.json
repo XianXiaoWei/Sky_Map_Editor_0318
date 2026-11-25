@@ -1,0 +1,73 @@
+{
+  "dateUTC": "2026-11-19",
+  "passed": true,
+  "nativeReport": "docs/logic-chain-oracle.json",
+  "nativeSummary": {
+    "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+    "cases": 906,
+    "frames": 4313,
+    "comparedOutputBytes": 398249100,
+    "completed": 653,
+    "assertions": 25,
+    "lengthErrors": 1,
+    "dependencyBoundaries": 227,
+    "actualPrefixes": 616,
+    "actualPrefixClasses": {
+      "Enable": 196,
+      "IfEnabled": 36,
+      "Delay": 283,
+      "FloatSplit": 2,
+      "OnFloat": 94,
+      "ResumeEnable": 5
+    }
+  },
+  "markerSamples": {
+    "loadedSamples": 904,
+    "distinctRealNodes": 273,
+    "individuallyCompleteRuntimeVerified": 0
+  },
+  "chainTests": {
+    "tests": 28,
+    "passed": 28,
+    "failed": 0,
+    "skipped": 0,
+    "log": "/root/sky-research/marker-resume-chain-tests.log"
+  },
+  "projectTests": {
+    "tests": 278,
+    "passed": 278,
+    "failed": 0,
+    "skipped": 0,
+    "log": "/root/sky-research/marker-resume-project-tests.log"
+  },
+  "typecheck": {
+    "passed": true,
+    "log": "/root/sky-research/marker-resume-typecheck.log"
+  },
+  "build": {
+    "passed": true,
+    "log": "/root/sky-research/marker-resume-build.log"
+  },
+  "classSummary": {
+    "levels": 33,
+    "totalNodes": 49824,
+    "nodeClasses": 280,
+    "declaredClasses": 283,
+    "nestedOnlyClasses": 0,
+    "declarationOnlyClasses": 3,
+    "references": 60016,
+    "brokenReferences": 0,
+    "coreSubchainVerifiedClasses": 24,
+    "completeRuntimeClasses": 0,
+    "completedCheckpoints": 854,
+    "totalCheckpoints": 2830,
+    "meanClassCheckpointPercent": 30.18,
+    "histogram": {
+      "20": 19,
+      "30": 240,
+      "40": 24
+    }
+  },
+  "scope": "Connected MarkerBarn/ClumpBarn/ValueBarn/EventBarn creation -> prepared TGCL ReadFields and original pointer-fixup subrange -> original OnLevelLoad/Update/Dispatch/sort -> Enable/IfEnabled/Delay/OnFloat/ResumeEnable -> case-sensitive Object GetEnabled/SetEnabled/TryResume method lookup -> unmodified Event and Clump reflected wrappers -> recursive Clump propagation -> FloatAdd/FloatMult/FloatSplit -> release/unload/reinitialize. Marker placement, MarkerBarn placement/init/create/release and stable normal unload/terminate traversals, raw Marker enabled reflection, ResumeEnable placement/update, Clump and Enable OnResumeEnabled and TryResume bodies are also executed from the original image. MarkerBarn bootstrap bitmap is explicitly zeroed as a startup service; per-slot zeroing, first-free bitmap selection, capacity assertions, monotonically increasing/wrapped IDs, repeated release and reuse remain native. Missing Marker.enabled uses the prepared true default established by original registration; transforms, scene consumption, mutation during pool destruction and full metadata preparation are unverified. TryResume preserves required/null/receiver assertions, exact OnResumeEnabled lookup, Game name/type conversion services and fallback SetEnabled only when the method is absent. Debug pointer formatting remains a service. Whole ClumpBarn init/create/counted-create/release/unload, Clump array allocation, Enable/IfEnabled placements/updates plus complete Delay placement/enable/resume/update plus FloatSplit placement/update and OnFloat placement/destructor/update/recursive evaluation normal paths and uncached method lookup executed from SHA-gated original image. Delay uses native frame-time multiplication/clamps, comparison-before-frame-increment, staggered dispatch and reset-on-enable/resume. Game/Time state and the music beat callback remain explicit services. Absent Delay.waitForBeat is supplied by the prepared false default cache established by original registration, without adding saved field bytes. OnFloat normal string copying and destruction preserve inline/long descriptors, pool allocation/free order, ordered comparisons, strict float32-difference epsilon and both nested evaluations. Stream formatting/output, exception throw/unwind, registry/default preparation, casts/scalar conversions, Heap/pool and cached method lookup remain explicit services. Corpus prefixes preserve original supported-node field order, graph node/member order and remap reference indices locally; Unsupported endpoints retain class names and reference positions in service-owned Object pointer tokens; their fields/constructors/behavior are unavailable. A metadata service halts at the first unavailable class, reported separately from native assertions. Serialized autoStart is retained; a harness SetEnabled request exercises each selected real root. No synthetic enabled state is assigned; Marker uses original slot zeroing and saved/default enabled bytes. Empty-array and null-member assertions retained. No complete original scene/class or Avatar runtime claimed.",
+  "completeOriginalGameRuntime": false
+}

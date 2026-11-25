@@ -1,0 +1,1264 @@
+{
+  "scope": "按单独类的功能组织实施工作；每类显式归组，不使用名称正则自动分类。功能摘要依据当前文件声明/字段和既有原函数证据描述职责，分组本身不是完整行为或继承证明；原逻辑未闭合项仍待验。",
+  "groups": [
+    {
+      "id": "scene",
+      "name": "场景基础与对象变换",
+      "scope": "容器、空间标记、对象层级及变换控制"
+    },
+    {
+      "id": "paths",
+      "name": "轨道、导航与引导",
+      "scope": "曲线数据、路径跟随和轨道附着"
+    },
+    {
+      "id": "levels",
+      "name": "地图加载、出生与检查点",
+      "scope": "地图切换、入口选择、加载事件及恢复"
+    },
+    {
+      "id": "camera",
+      "name": "摄像机与镜头",
+      "scope": "相机引导、关键帧、切换与震动"
+    },
+    {
+      "id": "render",
+      "name": "模型、材质与绘制",
+      "scope": "模型资源、烘焙、材质与绘制状态"
+    },
+    {
+      "id": "terrain",
+      "name": "地形生成",
+      "scope": "地形密度、分组、预制体及烘焙来源"
+    },
+    {
+      "id": "environment",
+      "name": "云、风场与环境",
+      "scope": "环境参数、云对象、风场和空间混合"
+    },
+    {
+      "id": "weather",
+      "name": "水、雾与天气",
+      "scope": "水面、体积雾、降雨与空间天气"
+    },
+    {
+      "id": "floats",
+      "name": "数值变量与运算",
+      "scope": "Float 输入、输出、插值与条件表达式"
+    },
+    {
+      "id": "flow",
+      "name": "事件调度与逻辑条件",
+      "scope": "时间序列、启用传播与条件分支"
+    },
+    {
+      "id": "regions",
+      "name": "区域、喊叫与空间触发",
+      "scope": "位置、进入离开、人数和空间条件事件"
+    },
+    {
+      "id": "physics",
+      "name": "碰撞、受力与移动限制",
+      "scope": "碰撞几何、受力和运动区域"
+    },
+    {
+      "id": "avatar",
+      "name": "玩家状态与输入",
+      "scope": "能量、姿态、飞行、输入和玩家控制"
+    },
+    {
+      "id": "animation",
+      "name": "动画、回放与装扮",
+      "scope": "动画播放、动作、回放及衣柜事件"
+    },
+    {
+      "id": "npc",
+      "name": "NPC 行为与社交",
+      "scope": "NPC 状态、运动、动画、互动和回调"
+    },
+    {
+      "id": "creatures",
+      "name": "生物、群体与 AI",
+      "scope": "鸟、螃蟹、暗生物、伙伴与参数"
+    },
+    {
+      "id": "collectibles",
+      "name": "收集物、蜡烛与解锁",
+      "scope": "拾取、蜡烛、收集状态、货币与奖励"
+    },
+    {
+      "id": "fragments",
+      "name": "光点、碎片与灵魂",
+      "scope": "发射、携带、聚集、捕获与灵魂提交"
+    },
+    {
+      "id": "quests",
+      "name": "任务、先祖与场景机制",
+      "scope": "任务活动、奖励、机关和剧情控制"
+    },
+    {
+      "id": "races",
+      "name": "竞赛与计分",
+      "scope": "队伍、收集物分配、终点与退出"
+    },
+    {
+      "id": "effects",
+      "name": "粒子、灯光与场景效果",
+      "scope": "发射器、光效、花草及破坏反馈"
+    },
+    {
+      "id": "sound",
+      "name": "声音、音乐与混音",
+      "scope": "声音实例、播放、淡出、参数与混响"
+    },
+    {
+      "id": "ui",
+      "name": "按钮、文字与菜单",
+      "scope": "世界按钮、HUD、提示、菜单与显示"
+    },
+    {
+      "id": "network",
+      "name": "网络、账户与社交流程",
+      "scope": "匹配、连接、账户就绪及社交状态"
+    },
+    {
+      "id": "tutorial",
+      "name": "教程、平台门控与统计",
+      "scope": "教程、版本条件、调查和统计事件"
+    }
+  ],
+  "classes": {
+    "Clump": {
+      "group": "scene",
+      "role": "对象引用容器"
+    },
+    "Marker": {
+      "group": "scene",
+      "role": "位置、旋转、缩放与启用的空间标记"
+    },
+    "Parent": {
+      "group": "scene",
+      "role": "对象父子跟随与关节挂接"
+    },
+    "TransformObject": {
+      "group": "scene",
+      "role": "对象变换目标、过渡与完成事件"
+    },
+    "RotateObject": {
+      "group": "scene",
+      "role": "对象旋转范围与速度控制"
+    },
+    "MakeFloaty": {
+      "group": "scene",
+      "role": "对象浮动、旋转与错峰动画"
+    },
+    "RiseWhenStoodOn": {
+      "group": "scene",
+      "role": "站立交互引发网格升起"
+    },
+    "StrobeObject": {
+      "group": "scene",
+      "role": "对象闪烁、时长与结束状态"
+    },
+    "Tweener": {
+      "group": "scene",
+      "role": "属性与变换补间控制"
+    },
+    "Rail": {
+      "group": "paths",
+      "role": "轨道曲线、循环与更新"
+    },
+    "Waypoint": {
+      "group": "paths",
+      "role": "导航点与范围"
+    },
+    "Boundary": {
+      "group": "paths",
+      "role": "轨道定义的场景边界"
+    },
+    "MoveObjectAlongRail": {
+      "group": "paths",
+      "role": "对象沿轨道运动"
+    },
+    "TrackAvatarOnRail": {
+      "group": "paths",
+      "role": "按玩家位置跟踪轨道对象"
+    },
+    "AttachGuideRail": {
+      "group": "paths",
+      "role": "附加轨道引导与运动限制"
+    },
+    "AttachBeacon": {
+      "group": "paths",
+      "role": "空间信标、颜色与强度过渡"
+    },
+    "AddPoi": {
+      "group": "paths",
+      "role": "标记定义的关注点与权重"
+    },
+    "LevelParameters": {
+      "group": "levels",
+      "role": "地图与烘焙生成全局参数"
+    },
+    "LevelLink": {
+      "group": "levels",
+      "role": "地图连接、锚点与加载事件"
+    },
+    "StreamLevelLink": {
+      "group": "levels",
+      "role": "带轨道、门槛和场景引导的地图连接"
+    },
+    "ChangeLevelWithFade": {
+      "group": "levels",
+      "role": "带淡入淡出的地图切换"
+    },
+    "AvatarSetPos": {
+      "group": "levels",
+      "role": "玩家定位、相对标记与出生入口"
+    },
+    "Checkpoint": {
+      "group": "levels",
+      "role": "检查点记录与恢复区域"
+    },
+    "CheckpointRestore": {
+      "group": "levels",
+      "role": "恢复检查点与重载控制"
+    },
+    "CheckpointState": {
+      "group": "levels",
+      "role": "恢复时启用的对象集合"
+    },
+    "IsLatestCheckpoint": {
+      "group": "levels",
+      "role": "检查最新检查点与事件"
+    },
+    "ResumeEnable": {
+      "group": "levels",
+      "role": "恢复时启用对象"
+    },
+    "ResumeGate": {
+      "group": "levels",
+      "role": "恢复流程门控"
+    },
+    "HasReachedLevel": {
+      "group": "levels",
+      "role": "已到达地图条件事件"
+    },
+    "OnLevelStart": {
+      "group": "levels",
+      "role": "地图启动事件"
+    },
+    "OnLevelUp": {
+      "group": "levels",
+      "role": "等级变化事件"
+    },
+    "CameraGuide": {
+      "group": "camera",
+      "role": "空间摄像机引导与画面构图"
+    },
+    "CameraKeyFrame": {
+      "group": "camera",
+      "role": "镜头关键帧、视场角与运动参数"
+    },
+    "SnapToCam": {
+      "group": "camera",
+      "role": "摄像机切换、注视与过渡"
+    },
+    "PauseCameraConfig": {
+      "group": "camera",
+      "role": "摄像机配置保持、淡入和暂停"
+    },
+    "SetCameraShake": {
+      "group": "camera",
+      "role": "摄像机震动强度与时长"
+    },
+    "SetCameraKeyFrameShake": {
+      "group": "camera",
+      "role": "关键帧震动参数与过渡"
+    },
+    "LevelMesh": {
+      "group": "render",
+      "role": "场景模型、资源、烘焙及几何生成参数"
+    },
+    "Beamo": {
+      "group": "render",
+      "role": "密度模型、LOD、材质与烘焙参数"
+    },
+    "BeamoDecal": {
+      "group": "render",
+      "role": "模型贴花、距离与材质绑定"
+    },
+    "LevelMaterial": {
+      "group": "render",
+      "role": "原材质、shader、参数与物理材质绑定"
+    },
+    "LevelMeshShaderParam": {
+      "group": "render",
+      "role": "模型 shader 参数声明"
+    },
+    "LevelShaderParam": {
+      "group": "render",
+      "role": "shader 参数声明"
+    },
+    "SetMeshShaderParam": {
+      "group": "render",
+      "role": "模型 uniform 值与过渡"
+    },
+    "SetRender": {
+      "group": "render",
+      "role": "模型绘制开关"
+    },
+    "SetAvatarRender": {
+      "group": "render",
+      "role": "本地与远端玩家绘制开关"
+    },
+    "DropOcclusion": {
+      "group": "render",
+      "role": "遮挡对象、强度和淡入淡出"
+    },
+    "TerrainBlob": {
+      "group": "terrain",
+      "role": "地形密度形状、噪声与侵蚀参数"
+    },
+    "TerrainBlobGroup": {
+      "group": "terrain",
+      "role": "地形对象集合、网格生成与细分配置"
+    },
+    "TerrainBlobPrefab": {
+      "group": "terrain",
+      "role": "地形预制资源、变换与生成顺序"
+    },
+    "EnvNode": {
+      "group": "environment",
+      "role": "空间环境参数与混合"
+    },
+    "SetEnvDefault": {
+      "group": "environment",
+      "role": "设置默认环境参数"
+    },
+    "SetEnvHull": {
+      "group": "environment",
+      "role": "设置区域环境参数"
+    },
+    "Wind": {
+      "group": "environment",
+      "role": "区域、轨道与附加标记的风场"
+    },
+    "SetWind": {
+      "group": "environment",
+      "role": "全局或区域风场设置"
+    },
+    "CloudCard": {
+      "group": "environment",
+      "role": "云卡模型、烘焙与透明度"
+    },
+    "CloudBob": {
+      "group": "environment",
+      "role": "云对象运动及缓冲偏移"
+    },
+    "Water": {
+      "group": "weather",
+      "role": "水面空间与阴影配置"
+    },
+    "SetOceanRender": {
+      "group": "weather",
+      "role": "海洋绘制开关"
+    },
+    "FogVolumeSphere": {
+      "group": "weather",
+      "role": "球形体积雾与可见性参数"
+    },
+    "SetRainParams": {
+      "group": "weather",
+      "role": "降雨强度、速度与过渡"
+    },
+    "RainCurtainParams": {
+      "group": "weather",
+      "role": "雨幕标记、雨滴密度和尺寸"
+    },
+    "DarkstoneRainRegion": {
+      "group": "weather",
+      "role": "区域降落物、收集物与能量消耗"
+    },
+    "Float": {
+      "group": "floats",
+      "role": "浮点值对象"
+    },
+    "SetFloat": {
+      "group": "floats",
+      "role": "浮点目标值与时间过渡"
+    },
+    "FloatAdd": {
+      "group": "floats",
+      "role": "增量、限制范围及逐帧输出"
+    },
+    "FloatMult": {
+      "group": "floats",
+      "role": "两项浮点输入相乘"
+    },
+    "FloatSplit": {
+      "group": "floats",
+      "role": "按连续区间映射输入到多个浮点输出"
+    },
+    "FloatDistanceFade": {
+      "group": "floats",
+      "role": "按位置或摄像机距离映射浮点值"
+    },
+    "OnFloat": {
+      "group": "floats",
+      "role": "浮点条件组合与事件"
+    },
+    "AddFloatToStatUsingName": {
+      "group": "floats",
+      "role": "命名统计值增加浮点输入"
+    },
+    "SetDroppableCountFloat": {
+      "group": "floats",
+      "role": "可掉落数量到浮点输出"
+    },
+    "Enable": {
+      "group": "flow",
+      "role": "对象集合启用、禁用及事件终止"
+    },
+    "IfEnabled": {
+      "group": "flow",
+      "role": "对象集合启用状态条件"
+    },
+    "OnChangeAnd": {
+      "group": "flow",
+      "role": "集合状态与 AND 条件变化"
+    },
+    "Branch": {
+      "group": "flow",
+      "role": "事件分支与触发规则"
+    },
+    "Delay": {
+      "group": "flow",
+      "role": "时间、帧或节拍延迟事件"
+    },
+    "Timeline": {
+      "group": "flow",
+      "role": "时间轴对象和时间节点调度"
+    },
+    "TimelineNode": {
+      "group": "flow",
+      "role": "时间轴时间与目标对象声明"
+    },
+    "EventSeries": {
+      "group": "flow",
+      "role": "事件序列状态与重置计时"
+    },
+    "OnEventSeries": {
+      "group": "flow",
+      "role": "序列数量与触发规则"
+    },
+    "FireTriggerAtRandom": {
+      "group": "flow",
+      "role": "随机间隔及事件选择"
+    },
+    "ScheduledEvent": {
+      "group": "flow",
+      "role": "命名计划事件与对象集合"
+    },
+    "IfTweakVar": {
+      "group": "flow",
+      "role": "原调试变量条件分支"
+    },
+    "DebugLogline": {
+      "group": "flow",
+      "role": "日志文本事件"
+    },
+    "SetGlobalEventParameter": {
+      "group": "flow",
+      "role": "全局事件参数设置"
+    },
+    "OnRegion": {
+      "group": "regions",
+      "role": "进入离开、逐帧和人数条件区域触发"
+    },
+    "IfInRegion": {
+      "group": "regions",
+      "role": "区域内或区域外条件触发"
+    },
+    "NotOnRegion": {
+      "group": "regions",
+      "role": "区域外事件触发"
+    },
+    "OnShout": {
+      "group": "regions",
+      "role": "指定标记区域内喊叫事件"
+    },
+    "OnTapCount": {
+      "group": "regions",
+      "role": "区域内点击次数事件"
+    },
+    "IsOutfitInRegion": {
+      "group": "regions",
+      "role": "区域内装扮与玩家条件"
+    },
+    "Critter_OnRegion": {
+      "group": "regions",
+      "role": "生物集合进入区域条件"
+    },
+    "OnAvatarEnergy": {
+      "group": "regions",
+      "role": "玩家能量与区域条件事件"
+    },
+    "OnAvatarOnGround": {
+      "group": "regions",
+      "role": "玩家落地、速度与区域条件事件"
+    },
+    "OnMoteCarry": {
+      "group": "regions",
+      "role": "光点携带开始或结束事件"
+    },
+    "EnableCollision": {
+      "group": "physics",
+      "role": "碰撞几何开关"
+    },
+    "KillBox": {
+      "group": "physics",
+      "role": "空间死亡区域"
+    },
+    "PlatformingRegion": {
+      "group": "physics",
+      "role": "平台运动区域"
+    },
+    "ForwardAcceleration": {
+      "group": "physics",
+      "role": "区域方向与地面空中加速度"
+    },
+    "SetForce": {
+      "group": "physics",
+      "role": "标记区域内受力与速度限制"
+    },
+    "MakeMagnetize": {
+      "group": "physics",
+      "role": "标记区域吸附与反重力"
+    },
+    "BoomCone": {
+      "group": "physics",
+      "role": "锥形冲量、时长与继承速度"
+    },
+    "SetAvatarMinYSpeed": {
+      "group": "physics",
+      "role": "玩家最小竖直速度与起飞"
+    },
+    "AvatarChargeEnergy": {
+      "group": "avatar",
+      "role": "按速率与时长补充玩家能量"
+    },
+    "AvatarSetEnergy": {
+      "group": "avatar",
+      "role": "玩家能量设定或增量"
+    },
+    "AvatarSetEnergyCapacity": {
+      "group": "avatar",
+      "role": "玩家能量容量与时间过渡"
+    },
+    "AvatarSetCandleState": {
+      "group": "avatar",
+      "role": "玩家蜡烛状态"
+    },
+    "AvatarSetInnerGlow": {
+      "group": "avatar",
+      "role": "玩家内发光强度与过渡"
+    },
+    "AvatarSetStance": {
+      "group": "avatar",
+      "role": "站立、坐下、睡眠与朝向姿态"
+    },
+    "AvatarSetZeroG": {
+      "group": "avatar",
+      "role": "玩家零重力与能量状态"
+    },
+    "AvatarForceEnableFlightMode": {
+      "group": "avatar",
+      "role": "强制启用飞行模式"
+    },
+    "AvatarHijack": {
+      "group": "avatar",
+      "role": "玩家控制接管与恢复"
+    },
+    "AvatarGrindToPos": {
+      "group": "avatar",
+      "role": "玩家轨道式定位与停止"
+    },
+    "AvatarBreakHandHold": {
+      "group": "avatar",
+      "role": "玩家牵手关系解除"
+    },
+    "AvatarAirtimeEffectFloat": {
+      "group": "avatar",
+      "role": "玩家滞空效果的浮点输出"
+    },
+    "SetInputState": {
+      "group": "avatar",
+      "role": "玩家与摄像机输入开关"
+    },
+    "SetGlide": {
+      "group": "avatar",
+      "role": "滑翔与飞行能力开关"
+    },
+    "SetFlightParams": {
+      "group": "avatar",
+      "role": "飞行巡航角与升力配置"
+    },
+    "SetBlockUpdraftWind": {
+      "group": "avatar",
+      "role": "上升风场作用限制"
+    },
+    "StopGrinding": {
+      "group": "avatar",
+      "role": "停止轨道运动并关联动画"
+    },
+    "DisableCliffJump": {
+      "group": "avatar",
+      "role": "悬崖跳跃限制"
+    },
+    "DisableDpad": {
+      "group": "avatar",
+      "role": "方向输入限制"
+    },
+    "DisableJump": {
+      "group": "avatar",
+      "role": "跳跃限制"
+    },
+    "DisableRise": {
+      "group": "avatar",
+      "role": "上升动作限制"
+    },
+    "DisableStep": {
+      "group": "avatar",
+      "role": "步行动作限制"
+    },
+    "DoShout": {
+      "group": "avatar",
+      "role": "在指定位置发起喊叫效果"
+    },
+    "PlayAnimation": {
+      "group": "animation",
+      "role": "对象动画序列、速度与状态"
+    },
+    "PlayAvatarAnimSeq": {
+      "group": "animation",
+      "role": "本地或远端玩家动画序列"
+    },
+    "OnTapPlayAnim": {
+      "group": "animation",
+      "role": "点击动作动画、延迟与进度事件"
+    },
+    "OutfitSelect": {
+      "group": "animation",
+      "role": "衣柜、区域、商店与购买事件"
+    },
+    "CloseOutfitShop": {
+      "group": "animation",
+      "role": "关闭装扮商店"
+    },
+    "OnOutfitShopPurchase": {
+      "group": "animation",
+      "role": "装扮购买事件"
+    },
+    "OnUnlockOutfit": {
+      "group": "animation",
+      "role": "装扮解锁后启用对象"
+    },
+    "Replay": {
+      "group": "animation",
+      "role": "玩家回放及 NPC 显示控制"
+    },
+    "Replay_PlayAnim": {
+      "group": "animation",
+      "role": "回放玩家动画"
+    },
+    "Replay_HandHold": {
+      "group": "animation",
+      "role": "回放玩家与 NPC 牵手"
+    },
+    "Npc": {
+      "group": "npc",
+      "role": "NPC 模型、动画、装扮与玩家状态"
+    },
+    "Npc_PlayAnim": {
+      "group": "npc",
+      "role": "NPC 动画播放与速度"
+    },
+    "Npc_WalkTo": {
+      "group": "npc",
+      "role": "NPC 移动目标与完成事件"
+    },
+    "Npc_Teleport": {
+      "group": "npc",
+      "role": "NPC 定位"
+    },
+    "Npc_Turn": {
+      "group": "npc",
+      "role": "NPC 朝向过渡与完成事件"
+    },
+    "Npc_SetScale": {
+      "group": "npc",
+      "role": "NPC 身高、缩放与时间过渡"
+    },
+    "Npc_Reflect": {
+      "group": "npc",
+      "role": "NPC 状态向本地玩家的映射"
+    },
+    "Npc_HandHold": {
+      "group": "npc",
+      "role": "NPC 发起牵手"
+    },
+    "Npc_BreakHandHold": {
+      "group": "npc",
+      "role": "NPC 解除牵手"
+    },
+    "Npc_Hug": {
+      "group": "npc",
+      "role": "NPC 发起拥抱"
+    },
+    "Npc_GiveCandle": {
+      "group": "npc",
+      "role": "NPC 赠送蜡烛与接受事件"
+    },
+    "Npc_Chat": {
+      "group": "npc",
+      "role": "NPC 聊天消息"
+    },
+    "Npc_TakeOutFlame": {
+      "group": "npc",
+      "role": "NPC 取出或收起火焰"
+    },
+    "Npc_GetAttention": {
+      "group": "npc",
+      "role": "NPC 请求关注"
+    },
+    "Npc_Prompt": {
+      "group": "npc",
+      "role": "NPC 交互图标与激活事件"
+    },
+    "Npc_DisableGiftGiving": {
+      "group": "npc",
+      "role": "NPC 赠礼功能限制"
+    },
+    "Npc_DisableRelationshipMenu": {
+      "group": "npc",
+      "role": "NPC 关系菜单限制"
+    },
+    "Npc_OnHandHold": {
+      "group": "npc",
+      "role": "NPC 牵手事件"
+    },
+    "Npc_OnHug": {
+      "group": "npc",
+      "role": "NPC 拥抱事件"
+    },
+    "Npc_OnNicknamed": {
+      "group": "npc",
+      "role": "NPC 命名事件"
+    },
+    "Npc_OnRecieveGift": {
+      "group": "npc",
+      "role": "NPC 收礼事件"
+    },
+    "BirdFlock": {
+      "group": "creatures",
+      "role": "鸟群发射、轨道、距离与预填充"
+    },
+    "BirdV2": {
+      "group": "creatures",
+      "role": "鸟类实例与 AI 参数"
+    },
+    "BirdV2AiParams": {
+      "group": "creatures",
+      "role": "鸟类追踪、群体、目标与到达参数"
+    },
+    "BirdV2Params": {
+      "group": "creatures",
+      "role": "鸟类运动、引导与效果参数"
+    },
+    "BirdV2ParamSwap": {
+      "group": "creatures",
+      "role": "替换鸟类实例参数"
+    },
+    "SetBirdGuidesEnabled": {
+      "group": "creatures",
+      "role": "鸟类引导开关"
+    },
+    "DetachFromBirdGuides": {
+      "group": "creatures",
+      "role": "解除鸟类引导"
+    },
+    "ReleaseBirds": {
+      "group": "creatures",
+      "role": "释放鸟类集合"
+    },
+    "Crab": {
+      "group": "creatures",
+      "role": "螃蟹实例"
+    },
+    "CrabParams": {
+      "group": "creatures",
+      "role": "螃蟹追逐、逃跑与状态参数"
+    },
+    "DarkCreature": {
+      "group": "creatures",
+      "role": "暗生物实例"
+    },
+    "DarkCreatureParams": {
+      "group": "creatures",
+      "role": "暗生物巡逻轨道与计时参数"
+    },
+    "AwakenDarkCreatures": {
+      "group": "creatures",
+      "role": "唤醒暗生物集合"
+    },
+    "SetDarkCreaturesNetworked": {
+      "group": "creatures",
+      "role": "暗生物网络同步配置"
+    },
+    "Buddy": {
+      "group": "creatures",
+      "role": "伙伴实例"
+    },
+    "BuddyParams": {
+      "group": "creatures",
+      "role": "伙伴发现、休息与动画状态参数"
+    },
+    "Critter_Shout": {
+      "group": "creatures",
+      "role": "生物集合喊叫音效与视觉"
+    },
+    "Collectible": {
+      "group": "collectibles",
+      "role": "收集物类型、名称与空间"
+    },
+    "CollectCollectible": {
+      "group": "collectibles",
+      "role": "触发收集指定收集物"
+    },
+    "CollectibleDisplay": {
+      "group": "collectibles",
+      "role": "按地图收集状态显示对象"
+    },
+    "OnCollected": {
+      "group": "collectibles",
+      "role": "收集与使用状态条件事件"
+    },
+    "LockAllCollectible": {
+      "group": "collectibles",
+      "role": "锁定收集物状态"
+    },
+    "CandleObject": {
+      "group": "collectibles",
+      "role": "蜡烛实例、寿命、点燃与蜡量"
+    },
+    "Flame": {
+      "group": "collectibles",
+      "role": "火焰实例、点燃、按钮与熄灭"
+    },
+    "SetFlame": {
+      "group": "collectibles",
+      "role": "火焰集合点燃状态与计时"
+    },
+    "OnFlame": {
+      "group": "collectibles",
+      "role": "火焰集合、消耗、点燃与熄灭事件"
+    },
+    "CandleGate": {
+      "group": "collectibles",
+      "role": "蜡烛放置与门控事件"
+    },
+    "Pickup": {
+      "group": "collectibles",
+      "role": "拾取物、货币与拾取反馈"
+    },
+    "Star": {
+      "group": "collectibles",
+      "role": "星体收集、解锁与能量容量"
+    },
+    "Unlock": {
+      "group": "collectibles",
+      "role": "命名解锁与确认事件"
+    },
+    "DropUnlock": {
+      "group": "collectibles",
+      "role": "命名掉落解锁"
+    },
+    "OnUnlocked": {
+      "group": "collectibles",
+      "role": "解锁、未确认与未解锁事件"
+    },
+    "RedeemReward": {
+      "group": "collectibles",
+      "role": "奖励兑换结果事件"
+    },
+    "ReserveCurrency": {
+      "group": "collectibles",
+      "role": "预留指定货币数量"
+    },
+    "AccountAddCurrency": {
+      "group": "collectibles",
+      "role": "账户货币增加与反馈"
+    },
+    "StormKeyUnlock": {
+      "group": "collectibles",
+      "role": "风暴钥匙解锁结果"
+    },
+    "ResetAllStormKeyProgress": {
+      "group": "collectibles",
+      "role": "风暴钥匙进度重置"
+    },
+    "Mote": {
+      "group": "fragments",
+      "role": "光点实例与初始状态"
+    },
+    "MoteParams": {
+      "group": "fragments",
+      "role": "光点运动、携带、死亡与轨道参数"
+    },
+    "SpawnMotes": {
+      "group": "fragments",
+      "role": "发射光点数量、速度与时长"
+    },
+    "SwapMoteParams": {
+      "group": "fragments",
+      "role": "光点参数在区域与阶段间切换"
+    },
+    "SpinMotes": {
+      "group": "fragments",
+      "role": "区域光点旋转、捕获与死亡"
+    },
+    "StarFragment": {
+      "group": "fragments",
+      "role": "星体碎片实例与收集事件"
+    },
+    "StarFragmentParams": {
+      "group": "fragments",
+      "role": "碎片飞行、跟随、携带与人数条件"
+    },
+    "StarFragmentsConverge": {
+      "group": "fragments",
+      "role": "碎片汇聚、传送与完成事件"
+    },
+    "SoulTrap": {
+      "group": "fragments",
+      "role": "灵魂捕获物、几何与销毁事件"
+    },
+    "SoulDeposit": {
+      "group": "fragments",
+      "role": "灵魂提交类型、摄像机与事件"
+    },
+    "AncientSpirit": {
+      "group": "quests",
+      "role": "先祖交互、动画、收集与剧情"
+    },
+    "AncestorEngine": {
+      "group": "quests",
+      "role": "充能机关、区域与激活计时"
+    },
+    "CarryAncestorQuestPrefab": {
+      "group": "quests",
+      "role": "先祖携带任务预制体"
+    },
+    "CarryCreatureQuestPrefab": {
+      "group": "quests",
+      "role": "生物携带任务预制体"
+    },
+    "FragmentCollectActivity": {
+      "group": "quests",
+      "role": "碎片数量与收集活动"
+    },
+    "WorldQuest": {
+      "group": "quests",
+      "role": "世界任务、活动、加入与奖励状态"
+    },
+    "WorldQuestTable": {
+      "group": "quests",
+      "role": "任务桌、菜单与地图连接"
+    },
+    "WorldQuestWorldAreaGateEffect": {
+      "group": "quests",
+      "role": "世界任务区域门效果"
+    },
+    "DailyQuestsGiver": {
+      "group": "quests",
+      "role": "每日任务 NPC 与区域"
+    },
+    "MeditationArea": {
+      "group": "quests",
+      "role": "冥想区域、目标、相机与确认"
+    },
+    "SpiritSoulsDisplayLord": {
+      "group": "quests",
+      "role": "灵魂进度、标记与显示事件"
+    },
+    "AchievementShrine": {
+      "group": "quests",
+      "role": "成就机关、奖励与相机反馈"
+    },
+    "DeathMarch": {
+      "group": "quests",
+      "role": "剧情区域、时间轴与场景对象调度"
+    },
+    "ClockTower": {
+      "group": "quests",
+      "role": "钟塔与钟组控制"
+    },
+    "ClockBell": {
+      "group": "quests",
+      "role": "钟与网格控制"
+    },
+    "Turret": {
+      "group": "quests",
+      "role": "机关眼部、光束与转动参数"
+    },
+    "AncestorRace": {
+      "group": "races",
+      "role": "先祖竞赛、队伍区域与目标"
+    },
+    "AncestorRaceGoal": {
+      "group": "races",
+      "role": "竞赛终点、队伍得分与完成事件"
+    },
+    "DistributeRaceCollectibles": {
+      "group": "races",
+      "role": "队伍竞赛收集物分配"
+    },
+    "DistributeSpiritCollectibles": {
+      "group": "races",
+      "role": "灵魂收集物分配与完成事件"
+    },
+    "ScoreRaceCollectibles": {
+      "group": "races",
+      "role": "竞赛收集物计分"
+    },
+    "ExitRace": {
+      "group": "races",
+      "role": "退出竞赛"
+    },
+    "Emitter": {
+      "group": "effects",
+      "role": "粒子发射、附着、吸引与受力"
+    },
+    "SetEmitterFlowRail": {
+      "group": "effects",
+      "role": "发射器沿轨道流向设置"
+    },
+    "PointLight": {
+      "group": "effects",
+      "role": "点光源空间实例"
+    },
+    "LensFlair": {
+      "group": "effects",
+      "role": "镜头光效颜色、强度与样式"
+    },
+    "FlowerPatch": {
+      "group": "effects",
+      "role": "花草密度、尺寸、噪声与材质"
+    },
+    "Blaze": {
+      "group": "effects",
+      "role": "燃烧对象、网格和灰烬参数"
+    },
+    "OnBlaze": {
+      "group": "effects",
+      "role": "燃烧状态与激活事件"
+    },
+    "OnBoomDestroy": {
+      "group": "effects",
+      "role": "冲量破坏阈值、动画与网格反馈"
+    },
+    "StarFallShower": {
+      "group": "effects",
+      "role": "流星发射、颜色、轨道与范围"
+    },
+    "FireWorkShow": {
+      "group": "effects",
+      "role": "烟花源标记与演出"
+    },
+    "SoundEmitter": {
+      "group": "sound",
+      "role": "声音实例、距离、方向与自动播放"
+    },
+    "PlaySound2D": {
+      "group": "sound",
+      "role": "二维声音播放"
+    },
+    "PlaySound3D": {
+      "group": "sound",
+      "role": "空间声音播放"
+    },
+    "PlayMusic": {
+      "group": "sound",
+      "role": "音乐切换、音量与淡入淡出"
+    },
+    "FadeSound": {
+      "group": "sound",
+      "role": "声音集合音量过渡与停止"
+    },
+    "SetMusicVolume": {
+      "group": "sound",
+      "role": "音乐音量过渡"
+    },
+    "SetMixChannelVolume": {
+      "group": "sound",
+      "role": "混音通道音量过渡"
+    },
+    "SetMixChannelLowpassFreq": {
+      "group": "sound",
+      "role": "混音通道低通频率过渡"
+    },
+    "SetSoundParameter": {
+      "group": "sound",
+      "role": "全局、音乐或发射器声音参数"
+    },
+    "OnMusicOutro": {
+      "group": "sound",
+      "role": "音乐尾段事件"
+    },
+    "ReverbRegion": {
+      "group": "sound",
+      "role": "区域混响与参数过渡"
+    },
+    "DisplayText": {
+      "group": "ui",
+      "role": "文字、颜色、位置与淡入淡出"
+    },
+    "DisplayTitleCard": {
+      "group": "ui",
+      "role": "标题卡主副标题与显示规则"
+    },
+    "ShowHUDTimed": {
+      "group": "ui",
+      "role": "HUD 纹理、图层、时长与过渡"
+    },
+    "DialogHint": {
+      "group": "ui",
+      "role": "区域提示、文本、优先级与串联"
+    },
+    "OnBubbleButton": {
+      "group": "ui",
+      "role": "世界气泡按钮距离、图标与点击事件"
+    },
+    "OnButtonClick": {
+      "group": "ui",
+      "role": "按钮点击事件"
+    },
+    "OnConfirmMenu": {
+      "group": "ui",
+      "role": "确认菜单、图标与确认取消事件"
+    },
+    "OpenConstellationTable": {
+      "group": "ui",
+      "role": "星座桌菜单与关闭事件"
+    },
+    "UIInterestMask": {
+      "group": "ui",
+      "role": "界面关注区域标记"
+    },
+    "FriendDisplayLord": {
+      "group": "ui",
+      "role": "好友位置、蜡烛与场景显示"
+    },
+    "InviteDisplayLord": {
+      "group": "ui",
+      "role": "邀请状态及场景显示控制"
+    },
+    "InviteDisplayRig": {
+      "group": "ui",
+      "role": "邀请空位、待确认与已确认视图"
+    },
+    "NetFlag": {
+      "group": "network",
+      "role": "网络标志声明，实际行为待恢复"
+    },
+    "NetDisconnect": {
+      "group": "network",
+      "role": "网络断开事件"
+    },
+    "NetSetMatchmakingDisabled": {
+      "group": "network",
+      "role": "网络匹配开关"
+    },
+    "MatchHint": {
+      "group": "network",
+      "role": "匹配人数、距离与拆分规则"
+    },
+    "BenchChat": {
+      "group": "network",
+      "role": "长椅座位与聊天频道"
+    },
+    "OnAccountReady": {
+      "group": "network",
+      "role": "账户就绪、超时与回调"
+    },
+    "OnGameReady": {
+      "group": "network",
+      "role": "游戏就绪事件"
+    },
+    "OnJoinPreviousGame": {
+      "group": "network",
+      "role": "重返上一游戏与失败事件"
+    },
+    "RefreshGiftMessages": {
+      "group": "network",
+      "role": "刷新赠礼消息"
+    },
+    "OnForgeGift": {
+      "group": "network",
+      "role": "赠礼条件后启用对象"
+    },
+    "OnOfferGift": {
+      "group": "network",
+      "role": "赠礼发起事件"
+    },
+    "TutorialNode": {
+      "group": "tutorial",
+      "role": "教程步骤、目标、拖动与行走事件"
+    },
+    "SetTutorialMode": {
+      "group": "tutorial",
+      "role": "教程状态设置"
+    },
+    "SetShopTableTutorial": {
+      "group": "tutorial",
+      "role": "任务桌商店教程配置"
+    },
+    "FeatureFlag": {
+      "group": "tutorial",
+      "role": "命名功能旗标与存在性分支"
+    },
+    "OnBetaMode": {
+      "group": "tutorial",
+      "role": "测试版模式条件事件"
+    },
+    "OnDemoMode": {
+      "group": "tutorial",
+      "role": "演示模式条件事件"
+    },
+    "OnLatestVersion": {
+      "group": "tutorial",
+      "role": "最新版本条件事件"
+    },
+    "AgeGate": {
+      "group": "tutorial",
+      "role": "年龄验证与完成事件"
+    },
+    "TitleGate": {
+      "group": "tutorial",
+      "role": "标题流程门控"
+    },
+    "ShowMOTD": {
+      "group": "tutorial",
+      "role": "公告显示与关闭事件"
+    },
+    "Survey": {
+      "group": "tutorial",
+      "role": "问卷入口"
+    },
+    "SendAnalyticsEvent": {
+      "group": "tutorial",
+      "role": "命名统计事件"
+    }
+  }
+}

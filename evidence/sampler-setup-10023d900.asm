@@ -1,0 +1,119 @@
+0x10023d900: push rbp
+0x10023d901: mov rbp, rsp
+0x10023d904: push r15
+0x10023d906: push r14
+0x10023d908: push r13
+0x10023d90a: push r12
+0x10023d90c: push rbx
+0x10023d90d: push rax
+0x10023d90e: mov r14, rdi
+0x10023d911: mov eax, dword ptr [r14 + 0x1b7f8]
+0x10023d918: test eax, eax
+0x10023d91a: je 0x10023d97f
+0x10023d91c: xor r15d, r15d
+0x10023d91f: nop 
+0x10023d920: mov r15d, r15d
+0x10023d923: imul r13, r15, 0xf8
+0x10023d92a: lea r12, [r14 + r13 + 0x1b800]
+0x10023d932: cmp dword ptr [r14 + r13 + 0x1b800], 0
+0x10023d93b: je 0x10023d966
+0x10023d93d: xor ebx, ebx
+0x10023d93f: nop 
+0x10023d940: mov eax, ebx
+0x10023d942: lea rcx, [r14 + r13]
+0x10023d946: imul rax, rax, 0x78
+0x10023d94a: lea rdi, [rax + rcx + 0x1b808]
+0x10023d952: call 0x1007f0c90 ; 0x1007f0c90
+0x10023d957: inc ebx
+0x10023d959: cmp ebx, dword ptr [r12]
+0x10023d95d: jb 0x10023d940
+0x10023d95f: mov eax, dword ptr [r14 + 0x1b7f8]
+0x10023d966: mov byte ptr [r14 + r13 + 0x1b804], 1
+0x10023d96f: mov dword ptr [r12], 0
+0x10023d977: inc r15d
+0x10023d97a: cmp r15d, eax
+0x10023d97d: jb 0x10023d920
+0x10023d97f: cmp dword ptr [r14 + 0x200f8], 0
+0x10023d987: je 0x10023d9b1
+0x10023d989: xor ebx, ebx
+0x10023d98b: nop dword ptr [rax + rax]
+0x10023d990: mov eax, ebx
+0x10023d992: imul rax, rax, 0x9a0
+0x10023d999: lea rdi, [r14 + rax + 0x20100]
+0x10023d9a1: call 0x100544f10 ; 0x100544f10
+0x10023d9a6: inc ebx
+0x10023d9a8: cmp ebx, dword ptr [r14 + 0x200f8]
+0x10023d9af: jb 0x10023d990
+0x10023d9b1: cmp dword ptr [r14 + 0x38200], 0
+0x10023d9b9: je 0x10023d9de
+0x10023d9bb: xor ebx, ebx
+0x10023d9bd: nop dword ptr [rax]
+0x10023d9c0: mov eax, ebx
+0x10023d9c2: lea rax, [rax + rax*2]
+0x10023d9c6: lea rdi, [r14 + rax*8 + 0x38208]
+0x10023d9ce: call 0x100545300 ; 0x100545300
+0x10023d9d3: inc ebx
+0x10023d9d5: cmp ebx, dword ptr [r14 + 0x38200]
+0x10023d9dc: jb 0x10023d9c0
+0x10023d9de: cmp dword ptr [r14 + 0x385c8], 0
+0x10023d9e6: je 0x10023da19
+0x10023d9e8: xor ebx, ebx
+0x10023d9ea: nop word ptr [rax + rax]
+0x10023d9f0: mov rdi, qword ptr [r14 + 0x1b0]
+0x10023d9f7: mov rax, qword ptr [rdi]
+0x10023d9fa: mov ecx, ebx
+0x10023d9fc: shl rcx, 4
+0x10023da00: mov esi, dword ptr [r14 + rcx + 0x385d0]
+0x10023da08: call qword ptr [rax + 0xc8]
+0x10023da0e: inc ebx
+0x10023da10: cmp ebx, dword ptr [r14 + 0x385c8]
+0x10023da17: jb 0x10023d9f0
+0x10023da19: mov rdi, qword ptr [r14 + 0x1b6d0]
+0x10023da20: test rdi, rdi
+0x10023da23: je 0x10023da2a
+0x10023da25: call 0x1007f0510 ; 0x1007f0510
+0x10023da2a: mov rdi, qword ptr [r14 + 0x1b6d8]
+0x10023da31: test rdi, rdi
+0x10023da34: je 0x10023da3b
+0x10023da36: call 0x1007f0510 ; 0x1007f0510
+0x10023da3b: mov rdi, qword ptr [r14 + 0x1b6e0]
+0x10023da42: test rdi, rdi
+0x10023da45: je 0x10023da4c
+0x10023da47: call 0x1007f0510 ; 0x1007f0510
+0x10023da4c: mov rdi, qword ptr [r14 + 0x1b6e8]
+0x10023da53: test rdi, rdi
+0x10023da56: je 0x10023da5d
+0x10023da58: call 0x1007f0510 ; 0x1007f0510
+0x10023da5d: mov rdi, qword ptr [r14 + 0x1b6f0]
+0x10023da64: test rdi, rdi
+0x10023da67: je 0x10023da6e
+0x10023da69: call 0x1007f0510 ; 0x1007f0510
+0x10023da6e: mov rdi, qword ptr [r14 + 0x1b6f8]
+0x10023da75: test rdi, rdi
+0x10023da78: je 0x10023da7f
+0x10023da7a: call 0x1007f0510 ; 0x1007f0510
+0x10023da7f: mov rdi, qword ptr [r14 + 0x1b700]
+0x10023da86: test rdi, rdi
+0x10023da89: je 0x10023da90
+0x10023da8b: call 0x1007f0510 ; 0x1007f0510
+0x10023da90: lea rdi, [r14 + 0x19a08]
+0x10023da97: call 0x10041b670 ; 0x10041b670
+0x10023da9c: lea rdi, [r14 + 0x19e50]
+0x10023daa3: call 0x1007f5250 ; 0x1007f5250
+0x10023daa8: lea rdi, [r14 + 0x1a288]
+0x10023daaf: call 0x1007f5250 ; 0x1007f5250
+0x10023dab4: lea rdi, [r14 + 0x1a6c0]
+0x10023dabb: call 0x1007f6150 ; 0x1007f6150
+0x10023dac0: lea rdi, [r14 + 0x1ac00]
+0x10023dac7: call 0x1007f6150 ; 0x1007f6150
+0x10023dacc: add r14, 0x1b140
+0x10023dad3: mov rdi, r14
+0x10023dad6: add rsp, 8
+0x10023dada: pop rbx
+0x10023dadb: pop r12
+0x10023dadd: pop r13
+0x10023dadf: pop r14
+0x10023dae1: pop r15
+0x10023dae3: pop rbp
+0x10023dae4: jmp 0x1007f6150 ; 0x1007f6150
+0x10023dae9: nop dword ptr [rax]

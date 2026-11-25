@@ -1,0 +1,1840 @@
+{
+  "passed": false,
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "scope": "Full unmodified 0x10071e7f0 executed under QEMU x86_64 -cpu max with original Update MXCSR |= 0xe040. All xyz writes including counts <4, SIMD/scalar summation, last-four scalar overwrite, raw signed normals, 512 batching and nonpositive W are compared. W scratch lane and NaN payloads excluded. SSE arithmetic probe covers RTZ/FTZ/DAZ and QEMU RCPPS; actual Intel/Mac approximate RCPPS hardware remains unverified. No rasterization, Visibility classification or GPU/game runtime claimed.",
+  "reciprocalCapability": "qemu-x86_64-max-rtz",
+  "math": {
+    "pairs": 8417,
+    "compared": 58919,
+    "failed": 5181
+  },
+  "transform": {
+    "function": "0x10071e7f0",
+    "cases": 231,
+    "corpusMaps": 33,
+    "corpusVertices": 190987,
+    "compared": 1804779,
+    "failed": 31
+  },
+  "failures": [
+    {
+      "type": "math",
+      "pair": [
+        0,
+        1
+      ],
+      "operation": 5,
+      "expected": 1,
+      "actual": 0
+    },
+    {
+      "type": "math",
+      "pair": [
+        0,
+        2147483649
+      ],
+      "operation": 5,
+      "expected": 2147483649,
+      "actual": 2147483648
+    },
+    {
+      "type": "math",
+      "pair": [
+        0,
+        8388607
+      ],
+      "operation": 5,
+      "expected": 8388607,
+      "actual": 0
+    },
+    {
+      "type": "math",
+      "pair": [
+        0,
+        2155872255
+      ],
+      "operation": 5,
+      "expected": 2155872255,
+      "actual": 2147483648
+    },
+    {
+      "type": "math",
+      "pair": [
+        2147483648,
+        1
+      ],
+      "operation": 5,
+      "expected": 1,
+      "actual": 0
+    },
+    {
+      "type": "math",
+      "pair": [
+        2147483648,
+        2147483649
+      ],
+      "operation": 5,
+      "expected": 2147483649,
+      "actual": 2147483648
+    },
+    {
+      "type": "math",
+      "pair": [
+        2147483648,
+        8388607
+      ],
+      "operation": 5,
+      "expected": 8388607,
+      "actual": 0
+    },
+    {
+      "type": "math",
+      "pair": [
+        2147483648,
+        2155872255
+      ],
+      "operation": 5,
+      "expected": 2155872255,
+      "actual": 2147483648
+    },
+    {
+      "type": "math",
+      "pair": [
+        1,
+        1
+      ],
+      "operation": 5,
+      "expected": 1,
+      "actual": 0
+    },
+    {
+      "type": "math",
+      "pair": [
+        1,
+        2147483649
+      ],
+      "operation": 5,
+      "expected": 2147483649,
+      "actual": 2147483648
+    },
+    {
+      "type": "math",
+      "pair": [
+        1,
+        8388607
+      ],
+      "operation": 5,
+      "expected": 8388607,
+      "actual": 0
+    },
+    {
+      "type": "math",
+      "pair": [
+        1,
+        2155872255
+      ],
+      "operation": 5,
+      "expected": 2155872255,
+      "actual": 2147483648
+    },
+    {
+      "type": "math",
+      "pair": [
+        1,
+        2155872256
+      ],
+      "operation": 5,
+      "expected": 1,
+      "actual": 0
+    },
+    {
+      "type": "math",
+      "pair": [
+        1,
+        3212836864
+      ],
+      "operation": 5,
+      "expected": 1,
+      "actual": 0
+    },
+    {
+      "type": "math",
+      "pair": [
+        1,
+        4286578687
+      ],
+      "operation": 5,
+      "expected": 1,
+      "actual": 0
+    },
+    {
+      "type": "math",
+      "pair": [
+        1,
+        4286578688
+      ],
+      "operation": 5,
+      "expected": 1,
+      "actual": 0
+    },
+    {
+      "type": "math",
+      "pair": [
+        2147483649,
+        1
+      ],
+      "operation": 5,
+      "expected": 1,
+      "actual": 0
+    },
+    {
+      "type": "math",
+      "pair": [
+        2147483649,
+        2147483649
+      ],
+      "operation": 5,
+      "expected": 2147483649,
+      "actual": 2147483648
+    },
+    {
+      "type": "math",
+      "pair": [
+        2147483649,
+        8388607
+      ],
+      "operation": 5,
+      "expected": 8388607,
+      "actual": 0
+    },
+    {
+      "type": "math",
+      "pair": [
+        2147483649,
+        2155872255
+      ],
+      "operation": 5,
+      "expected": 2155872255,
+      "actual": 2147483648
+    }
+  ],
+  "rows": [
+    {
+      "name": "synthetic-0-0",
+      "vertices": 0,
+      "comparedComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-0-1",
+      "vertices": 0,
+      "comparedComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-0-2",
+      "vertices": 0,
+      "comparedComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-0-3",
+      "vertices": 0,
+      "comparedComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-0-4",
+      "vertices": 0,
+      "comparedComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-0-5",
+      "vertices": 0,
+      "comparedComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-1-0",
+      "vertices": 1,
+      "comparedComponents": 3,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-1-1",
+      "vertices": 1,
+      "comparedComponents": 3,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-1-2",
+      "vertices": 1,
+      "comparedComponents": 3,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-1-3",
+      "vertices": 1,
+      "comparedComponents": 3,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-1-4",
+      "vertices": 1,
+      "comparedComponents": 3,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-1-5",
+      "vertices": 1,
+      "comparedComponents": 3,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-2-0",
+      "vertices": 2,
+      "comparedComponents": 6,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-2-1",
+      "vertices": 2,
+      "comparedComponents": 6,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-2-2",
+      "vertices": 2,
+      "comparedComponents": 6,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-2-3",
+      "vertices": 2,
+      "comparedComponents": 6,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-2-4",
+      "vertices": 2,
+      "comparedComponents": 6,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-2-5",
+      "vertices": 2,
+      "comparedComponents": 6,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-3-0",
+      "vertices": 3,
+      "comparedComponents": 9,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-3-1",
+      "vertices": 3,
+      "comparedComponents": 9,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-3-2",
+      "vertices": 3,
+      "comparedComponents": 9,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-3-3",
+      "vertices": 3,
+      "comparedComponents": 9,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-3-4",
+      "vertices": 3,
+      "comparedComponents": 9,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-3-5",
+      "vertices": 3,
+      "comparedComponents": 9,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-4-0",
+      "vertices": 4,
+      "comparedComponents": 12,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-4-1",
+      "vertices": 4,
+      "comparedComponents": 12,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-4-2",
+      "vertices": 4,
+      "comparedComponents": 12,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-4-3",
+      "vertices": 4,
+      "comparedComponents": 12,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-4-4",
+      "vertices": 4,
+      "comparedComponents": 12,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-4-5",
+      "vertices": 4,
+      "comparedComponents": 12,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-5-0",
+      "vertices": 5,
+      "comparedComponents": 15,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-5-1",
+      "vertices": 5,
+      "comparedComponents": 15,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-5-2",
+      "vertices": 5,
+      "comparedComponents": 15,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-5-3",
+      "vertices": 5,
+      "comparedComponents": 15,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-5-4",
+      "vertices": 5,
+      "comparedComponents": 15,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-5-5",
+      "vertices": 5,
+      "comparedComponents": 15,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-7-0",
+      "vertices": 7,
+      "comparedComponents": 21,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-7-1",
+      "vertices": 7,
+      "comparedComponents": 21,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-7-2",
+      "vertices": 7,
+      "comparedComponents": 21,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-7-3",
+      "vertices": 7,
+      "comparedComponents": 21,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-7-4",
+      "vertices": 7,
+      "comparedComponents": 21,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-7-5",
+      "vertices": 7,
+      "comparedComponents": 21,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-8-0",
+      "vertices": 8,
+      "comparedComponents": 24,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-8-1",
+      "vertices": 8,
+      "comparedComponents": 24,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-8-2",
+      "vertices": 8,
+      "comparedComponents": 24,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-8-3",
+      "vertices": 8,
+      "comparedComponents": 24,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-8-4",
+      "vertices": 8,
+      "comparedComponents": 24,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-8-5",
+      "vertices": 8,
+      "comparedComponents": 24,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-9-0",
+      "vertices": 9,
+      "comparedComponents": 27,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-9-1",
+      "vertices": 9,
+      "comparedComponents": 27,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-9-2",
+      "vertices": 9,
+      "comparedComponents": 27,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-9-3",
+      "vertices": 9,
+      "comparedComponents": 27,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-9-4",
+      "vertices": 9,
+      "comparedComponents": 27,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-9-5",
+      "vertices": 9,
+      "comparedComponents": 27,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-11-0",
+      "vertices": 11,
+      "comparedComponents": 33,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-11-1",
+      "vertices": 11,
+      "comparedComponents": 33,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-11-2",
+      "vertices": 11,
+      "comparedComponents": 33,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-11-3",
+      "vertices": 11,
+      "comparedComponents": 33,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-11-4",
+      "vertices": 11,
+      "comparedComponents": 33,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-11-5",
+      "vertices": 11,
+      "comparedComponents": 33,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-12-0",
+      "vertices": 12,
+      "comparedComponents": 36,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-12-1",
+      "vertices": 12,
+      "comparedComponents": 36,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-12-2",
+      "vertices": 12,
+      "comparedComponents": 36,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-12-3",
+      "vertices": 12,
+      "comparedComponents": 36,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-12-4",
+      "vertices": 12,
+      "comparedComponents": 36,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-12-5",
+      "vertices": 12,
+      "comparedComponents": 36,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-15-0",
+      "vertices": 15,
+      "comparedComponents": 45,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-15-1",
+      "vertices": 15,
+      "comparedComponents": 45,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-15-2",
+      "vertices": 15,
+      "comparedComponents": 45,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-15-3",
+      "vertices": 15,
+      "comparedComponents": 45,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-15-4",
+      "vertices": 15,
+      "comparedComponents": 45,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-15-5",
+      "vertices": 15,
+      "comparedComponents": 45,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-16-0",
+      "vertices": 16,
+      "comparedComponents": 48,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-16-1",
+      "vertices": 16,
+      "comparedComponents": 48,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-16-2",
+      "vertices": 16,
+      "comparedComponents": 48,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-16-3",
+      "vertices": 16,
+      "comparedComponents": 48,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-16-4",
+      "vertices": 16,
+      "comparedComponents": 48,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-16-5",
+      "vertices": 16,
+      "comparedComponents": 48,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-31-0",
+      "vertices": 31,
+      "comparedComponents": 93,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-31-1",
+      "vertices": 31,
+      "comparedComponents": 93,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-31-2",
+      "vertices": 31,
+      "comparedComponents": 93,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-31-3",
+      "vertices": 31,
+      "comparedComponents": 93,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-31-4",
+      "vertices": 31,
+      "comparedComponents": 93,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-31-5",
+      "vertices": 31,
+      "comparedComponents": 93,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-32-0",
+      "vertices": 32,
+      "comparedComponents": 96,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-32-1",
+      "vertices": 32,
+      "comparedComponents": 96,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-32-2",
+      "vertices": 32,
+      "comparedComponents": 96,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-32-3",
+      "vertices": 32,
+      "comparedComponents": 96,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-32-4",
+      "vertices": 32,
+      "comparedComponents": 96,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-32-5",
+      "vertices": 32,
+      "comparedComponents": 96,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-511-0",
+      "vertices": 511,
+      "comparedComponents": 1533,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-511-1",
+      "vertices": 511,
+      "comparedComponents": 1533,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-511-2",
+      "vertices": 511,
+      "comparedComponents": 1533,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-511-3",
+      "vertices": 511,
+      "comparedComponents": 1533,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-511-4",
+      "vertices": 511,
+      "comparedComponents": 1533,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-511-5",
+      "vertices": 511,
+      "comparedComponents": 1533,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-512-0",
+      "vertices": 512,
+      "comparedComponents": 1536,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-512-1",
+      "vertices": 512,
+      "comparedComponents": 1536,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-512-2",
+      "vertices": 512,
+      "comparedComponents": 1536,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-512-3",
+      "vertices": 512,
+      "comparedComponents": 1536,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-512-4",
+      "vertices": 512,
+      "comparedComponents": 1536,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-512-5",
+      "vertices": 512,
+      "comparedComponents": 1536,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-513-0",
+      "vertices": 513,
+      "comparedComponents": 1539,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-513-1",
+      "vertices": 513,
+      "comparedComponents": 1539,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-513-2",
+      "vertices": 513,
+      "comparedComponents": 1539,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-513-3",
+      "vertices": 513,
+      "comparedComponents": 1539,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-513-4",
+      "vertices": 513,
+      "comparedComponents": 1539,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-513-5",
+      "vertices": 513,
+      "comparedComponents": 1539,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-515-0",
+      "vertices": 515,
+      "comparedComponents": 1545,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-515-1",
+      "vertices": 515,
+      "comparedComponents": 1545,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-515-2",
+      "vertices": 515,
+      "comparedComponents": 1545,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-515-3",
+      "vertices": 515,
+      "comparedComponents": 1545,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-515-4",
+      "vertices": 515,
+      "comparedComponents": 1545,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-515-5",
+      "vertices": 515,
+      "comparedComponents": 1545,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-516-0",
+      "vertices": 516,
+      "comparedComponents": 1548,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-516-1",
+      "vertices": 516,
+      "comparedComponents": 1548,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-516-2",
+      "vertices": 516,
+      "comparedComponents": 1548,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-516-3",
+      "vertices": 516,
+      "comparedComponents": 1548,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-516-4",
+      "vertices": 516,
+      "comparedComponents": 1548,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-516-5",
+      "vertices": 516,
+      "comparedComponents": 1548,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-1024-0",
+      "vertices": 1024,
+      "comparedComponents": 3072,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-1024-1",
+      "vertices": 1024,
+      "comparedComponents": 3072,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-1024-2",
+      "vertices": 1024,
+      "comparedComponents": 3072,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-1024-3",
+      "vertices": 1024,
+      "comparedComponents": 3072,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-1024-4",
+      "vertices": 1024,
+      "comparedComponents": 3072,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-1024-5",
+      "vertices": 1024,
+      "comparedComponents": 3072,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-1025-0",
+      "vertices": 1025,
+      "comparedComponents": 3075,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-1025-1",
+      "vertices": 1025,
+      "comparedComponents": 3075,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-1025-2",
+      "vertices": 1025,
+      "comparedComponents": 3075,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-1025-3",
+      "vertices": 1025,
+      "comparedComponents": 3075,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-1025-4",
+      "vertices": 1025,
+      "comparedComponents": 3075,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "synthetic-1025-5",
+      "vertices": 1025,
+      "comparedComponents": 3075,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-CandleSpace-occluder0-0",
+      "vertices": 137,
+      "comparedComponents": 411,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-CandleSpace-occluder0-1",
+      "vertices": 137,
+      "comparedComponents": 411,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-CandleSpace-occluder0-2",
+      "vertices": 137,
+      "comparedComponents": 411,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-CandleSpaceEnd-occluder0-0",
+      "vertices": 5911,
+      "comparedComponents": 17733,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-CandleSpaceEnd-occluder0-1",
+      "vertices": 5911,
+      "comparedComponents": 17733,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-CandleSpaceEnd-occluder0-2",
+      "vertices": 5911,
+      "comparedComponents": 17733,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-CarryLand-occluder0-0",
+      "vertices": 6031,
+      "comparedComponents": 18093,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-CarryLand-occluder0-1",
+      "vertices": 6031,
+      "comparedComponents": 18093,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-CarryLand-occluder0-2",
+      "vertices": 6031,
+      "comparedComponents": 18093,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-CarryLand2-occluder0-0",
+      "vertices": 6080,
+      "comparedComponents": 18240,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-CarryLand2-occluder0-1",
+      "vertices": 6080,
+      "comparedComponents": 18240,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-CarryLand2-occluder0-2",
+      "vertices": 6080,
+      "comparedComponents": 18240,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-CarryLand3-occluder0-0",
+      "vertices": 6054,
+      "comparedComponents": 18162,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-CarryLand3-occluder0-1",
+      "vertices": 6054,
+      "comparedComponents": 18162,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-CarryLand3-occluder0-2",
+      "vertices": 6054,
+      "comparedComponents": 18162,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Dawn-occluder0-0",
+      "vertices": 6051,
+      "comparedComponents": 18153,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Dawn-occluder0-1",
+      "vertices": 6051,
+      "comparedComponents": 18153,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Dawn-occluder0-2",
+      "vertices": 6051,
+      "comparedComponents": 18153,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-DayEnd-occluder0-0",
+      "vertices": 6100,
+      "comparedComponents": 18300,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-DayEnd-occluder0-1",
+      "vertices": 6100,
+      "comparedComponents": 18300,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-DayEnd-occluder0-2",
+      "vertices": 6100,
+      "comparedComponents": 18300,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-DayHubCave-occluder0-0",
+      "vertices": 6076,
+      "comparedComponents": 18228,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-DayHubCave-occluder0-1",
+      "vertices": 6076,
+      "comparedComponents": 18228,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-DayHubCave-occluder0-2",
+      "vertices": 6076,
+      "comparedComponents": 18228,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Dusk-occluder0-0",
+      "vertices": 5971,
+      "comparedComponents": 17913,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Dusk-occluder0-1",
+      "vertices": 5971,
+      "comparedComponents": 17913,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Dusk-occluder0-2",
+      "vertices": 5971,
+      "comparedComponents": 17913,
+      "failedComponents": 1,
+      "passed": false
+    },
+    {
+      "name": "map-DuskGraveyard-occluder0-0",
+      "vertices": 6016,
+      "comparedComponents": 18048,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-DuskGraveyard-occluder0-1",
+      "vertices": 6016,
+      "comparedComponents": 18048,
+      "failedComponents": 1,
+      "passed": false
+    },
+    {
+      "name": "map-DuskGraveyard-occluder0-2",
+      "vertices": 6016,
+      "comparedComponents": 18048,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-DuskMid-occluder0-0",
+      "vertices": 5939,
+      "comparedComponents": 17817,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-DuskMid-occluder0-1",
+      "vertices": 5939,
+      "comparedComponents": 17817,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-DuskMid-occluder0-2",
+      "vertices": 5939,
+      "comparedComponents": 17817,
+      "failedComponents": 1,
+      "passed": false
+    },
+    {
+      "name": "map-Dusk_CrabField-occluder0-0",
+      "vertices": 5988,
+      "comparedComponents": 17964,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Dusk_CrabField-occluder0-1",
+      "vertices": 5988,
+      "comparedComponents": 17964,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Dusk_CrabField-occluder0-2",
+      "vertices": 5988,
+      "comparedComponents": 17964,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-HubReveal-occluder0-0",
+      "vertices": 5872,
+      "comparedComponents": 17616,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-HubReveal-occluder0-1",
+      "vertices": 5872,
+      "comparedComponents": 17616,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-HubReveal-occluder0-2",
+      "vertices": 5872,
+      "comparedComponents": 17616,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Night-occluder0-0",
+      "vertices": 5856,
+      "comparedComponents": 17568,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Night-occluder0-1",
+      "vertices": 5856,
+      "comparedComponents": 17568,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Night-occluder0-2",
+      "vertices": 5856,
+      "comparedComponents": 17568,
+      "failedComponents": 3,
+      "passed": false
+    },
+    {
+      "name": "map-NightEnd-occluder0-0",
+      "vertices": 6142,
+      "comparedComponents": 18426,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-NightEnd-occluder0-1",
+      "vertices": 6142,
+      "comparedComponents": 18426,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-NightEnd-occluder0-2",
+      "vertices": 6142,
+      "comparedComponents": 18426,
+      "failedComponents": 3,
+      "passed": false
+    },
+    {
+      "name": "map-NightEntrance-occluder0-0",
+      "vertices": 6027,
+      "comparedComponents": 18081,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-NightEntrance-occluder0-1",
+      "vertices": 6027,
+      "comparedComponents": 18081,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-NightEntrance-occluder0-2",
+      "vertices": 6027,
+      "comparedComponents": 18081,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Prairie_ButterflyFields-occluder0-0",
+      "vertices": 6089,
+      "comparedComponents": 18267,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Prairie_ButterflyFields-occluder0-1",
+      "vertices": 6089,
+      "comparedComponents": 18267,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Prairie_ButterflyFields-occluder0-2",
+      "vertices": 6089,
+      "comparedComponents": 18267,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Prairie_Cave-occluder0-0",
+      "vertices": 6072,
+      "comparedComponents": 18216,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Prairie_Cave-occluder0-1",
+      "vertices": 6072,
+      "comparedComponents": 18216,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Prairie_Cave-occluder0-2",
+      "vertices": 6072,
+      "comparedComponents": 18216,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Prairie_NestAndKeeper-occluder0-0",
+      "vertices": 6051,
+      "comparedComponents": 18153,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Prairie_NestAndKeeper-occluder0-1",
+      "vertices": 6051,
+      "comparedComponents": 18153,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Prairie_NestAndKeeper-occluder0-2",
+      "vertices": 6051,
+      "comparedComponents": 18153,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Prairie_Village-occluder0-0",
+      "vertices": 6098,
+      "comparedComponents": 18294,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Prairie_Village-occluder0-1",
+      "vertices": 6098,
+      "comparedComponents": 18294,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Prairie_Village-occluder0-2",
+      "vertices": 6098,
+      "comparedComponents": 18294,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Rain-occluder0-0",
+      "vertices": 6099,
+      "comparedComponents": 18297,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Rain-occluder0-1",
+      "vertices": 6099,
+      "comparedComponents": 18297,
+      "failedComponents": 1,
+      "passed": false
+    },
+    {
+      "name": "map-Rain-occluder0-2",
+      "vertices": 6099,
+      "comparedComponents": 18297,
+      "failedComponents": 1,
+      "passed": false
+    },
+    {
+      "name": "map-RainEnd-occluder0-0",
+      "vertices": 6060,
+      "comparedComponents": 18180,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-RainEnd-occluder0-1",
+      "vertices": 6060,
+      "comparedComponents": 18180,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-RainEnd-occluder0-2",
+      "vertices": 6060,
+      "comparedComponents": 18180,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-RainForest-occluder0-0",
+      "vertices": 10108,
+      "comparedComponents": 30324,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-RainForest-occluder0-1",
+      "vertices": 10108,
+      "comparedComponents": 30324,
+      "failedComponents": 4,
+      "passed": false
+    },
+    {
+      "name": "map-RainForest-occluder0-2",
+      "vertices": 10108,
+      "comparedComponents": 30324,
+      "failedComponents": 6,
+      "passed": false
+    },
+    {
+      "name": "map-RainMid-occluder0-0",
+      "vertices": 6107,
+      "comparedComponents": 18321,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-RainMid-occluder0-1",
+      "vertices": 6107,
+      "comparedComponents": 18321,
+      "failedComponents": 1,
+      "passed": false
+    },
+    {
+      "name": "map-RainMid-occluder0-2",
+      "vertices": 6107,
+      "comparedComponents": 18321,
+      "failedComponents": 1,
+      "passed": false
+    },
+    {
+      "name": "map-SkyHub2-occluder0-0",
+      "vertices": 5923,
+      "comparedComponents": 17769,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-SkyHub2-occluder0-1",
+      "vertices": 5923,
+      "comparedComponents": 17769,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-SkyHub2-occluder0-2",
+      "vertices": 5923,
+      "comparedComponents": 17769,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Storm-occluder0-0",
+      "vertices": 5987,
+      "comparedComponents": 17961,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Storm-occluder0-1",
+      "vertices": 5987,
+      "comparedComponents": 17961,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Storm-occluder0-2",
+      "vertices": 5987,
+      "comparedComponents": 17961,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-StormEnd-occluder0-0",
+      "vertices": 5923,
+      "comparedComponents": 17769,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-StormEnd-occluder0-1",
+      "vertices": 5923,
+      "comparedComponents": 17769,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-StormEnd-occluder0-2",
+      "vertices": 5923,
+      "comparedComponents": 17769,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Sunset-occluder0-0",
+      "vertices": 6043,
+      "comparedComponents": 18129,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-Sunset-occluder0-1",
+      "vertices": 6043,
+      "comparedComponents": 18129,
+      "failedComponents": 2,
+      "passed": false
+    },
+    {
+      "name": "map-Sunset-occluder0-2",
+      "vertices": 6043,
+      "comparedComponents": 18129,
+      "failedComponents": 2,
+      "passed": false
+    },
+    {
+      "name": "map-SunsetEnd-occluder0-0",
+      "vertices": 6055,
+      "comparedComponents": 18165,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-SunsetEnd-occluder0-1",
+      "vertices": 6055,
+      "comparedComponents": 18165,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-SunsetEnd-occluder0-2",
+      "vertices": 6055,
+      "comparedComponents": 18165,
+      "failedComponents": 1,
+      "passed": false
+    },
+    {
+      "name": "map-SunsetEnd2-occluder0-0",
+      "vertices": 5900,
+      "comparedComponents": 17700,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-SunsetEnd2-occluder0-1",
+      "vertices": 5900,
+      "comparedComponents": 17700,
+      "failedComponents": 1,
+      "passed": false
+    },
+    {
+      "name": "map-SunsetEnd2-occluder0-2",
+      "vertices": 5900,
+      "comparedComponents": 17700,
+      "failedComponents": 2,
+      "passed": false
+    },
+    {
+      "name": "map-SunsetRace-occluder0-0",
+      "vertices": 6094,
+      "comparedComponents": 18282,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-SunsetRace-occluder0-1",
+      "vertices": 6094,
+      "comparedComponents": 18282,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-SunsetRace-occluder0-2",
+      "vertices": 6094,
+      "comparedComponents": 18282,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-TitleWater-occluder0-0",
+      "vertices": 6127,
+      "comparedComponents": 18381,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-TitleWater-occluder0-1",
+      "vertices": 6127,
+      "comparedComponents": 18381,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-TitleWater-occluder0-2",
+      "vertices": 6127,
+      "comparedComponents": 18381,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-WorldEmpty-occluder0-0",
+      "vertices": 0,
+      "comparedComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-WorldEmpty-occluder0-1",
+      "vertices": 0,
+      "comparedComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "map-WorldEmpty-occluder0-2",
+      "vertices": 0,
+      "comparedComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    }
+  ]
+}

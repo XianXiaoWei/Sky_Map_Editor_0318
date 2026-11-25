@@ -1,0 +1,75 @@
+{
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "functions": {
+    "Marker.placement": "0x10043e1b0",
+    "Marker.SetEnabled": "0x10043cff0",
+    "Marker.GetEnabled": "0x10043e2c0",
+    "Marker.destructor": "0x10043e2a0",
+    "Marker.setWrapper": "0x10043e700",
+    "Marker.getWrapper": "0x10043e820",
+    "MarkerBarn.placement": "0x10043eaa0",
+    "MarkerBarn.Initialize": "0x10043d020",
+    "MarkerBarn.CreateMarker": "0x10043d6a0",
+    "MarkerBarn.ReleaseMarker": "0x10043d7a0",
+    "MarkerBarn.OnLevelUnload": "0x10043d030",
+    "MarkerBarn.Terminate": "0x10043d1d0",
+    "ResumeEnable.placement": "0x10058abf0",
+    "ResumeEnable.Update": "0x10058a9e0",
+    "Clump.OnResumeEnabled": "0x10022bba0",
+    "Clump.resumeWrapper": "0x10022cba0",
+    "Enable.OnResumeEnabled": "0x100316400",
+    "Enable.resumeWrapper": "0x100316df0",
+    "ObjectFactory.TryResume": "0x1004d2440"
+  },
+  "vtables": {
+    "Marker": {
+      "vptr": "0x100cc6250",
+      "slots": {
+        "0x0": "0x10043e2a0",
+        "0x8": "0x10043e2b0",
+        "0x10": "0x10043e2c0",
+        "0x18": "0x10043e2d0",
+        "0x20": "0x10043e470",
+        "0x28": "0x10043e4b0"
+      }
+    },
+    "ResumeEnable": {
+      "vptr": "0x100c19300",
+      "slots": {
+        "0x0": "0x10058aa20",
+        "0x8": "0x10058aa30",
+        "0x10": "0x10001ecc0",
+        "0x18": "0x10001ecd0",
+        "0x20": "0x10001ece0",
+        "0x28": "0x10001ecf0",
+        "0x30": "0x10001ed40",
+        "0x38": "0x10001ed00",
+        "0x40": "0x10001ed10",
+        "0x48": "0x10058a9e0",
+        "0x50": "0x10001ed20"
+      }
+    }
+  },
+  "sizes": {
+    "Marker": 80,
+    "MarkerBarnComparedBytes": 82100,
+    "ResumeEnable": 64
+  },
+  "MarkerObjectSubobjectOffset": 8,
+  "MarkerBarnPool": {
+    "capacity": 1024,
+    "bitmapBytes": 128,
+    "bitmapOffset": 48,
+    "dataOffset": 176,
+    "nextIdOffset": 82096
+  },
+  "preparedMissingDefaults": {
+    "Marker.enabled": true
+  },
+  "resumeMethod": "OnResumeEnabled",
+  "supportedResumeMethods": {
+    "Clump": "0x10022bba0",
+    "Enable": "0x100316400"
+  },
+  "scope": "Disassembly and vtable/constant assertions. Separate logic-chain oracle executes normal Marker placement/pool create/release/unload/terminate, enabled reflection, ResumeEnable/Clump/Enable checkpoint methods and TryResume. Stable pool traversal only; registry/default/pool bootstrap, metadata casts, Game lookup/conversion, debug streams, exceptions/unwind and Marker transforms/scene rendering remain open."
+}

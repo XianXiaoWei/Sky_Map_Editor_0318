@@ -1,0 +1,1385 @@
+{
+  "passed": true,
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "scope": "Unchanged original normal RenderPipeline initialize/bind/free, GpuBuffer getReadId/reset, VertexData reset and Renderable reset, composed with original Beamo material loop, VertexRender initializers and ResourceRef bodies. Compare full 3MiB memory plus ordered service calls/assertion line and severity. Graphics reflection, GPU creation/binding/destruction, heap allocation/free, default matrix and RenderList unregister are explicit prepared services. Synthetic reflection names/counts, ID/layout gates, 14 buffers, live callback mutations and repeated-free assertion are exercised. The 33 original material/grouping cases retain original serialized input; sorted reflection tables and UBO sizes are prepared, not recovered real shader reflection. Service hook targets occupy an unused Beamo upload helper region; that helper is not executed in this oracle. Full class/game/native GPU/reflection/ResourceManager IO acceptance remains false.",
+  "cases": 222,
+  "preparedCases": 189,
+  "corpus": {
+    "maps": 33,
+    "objects": 7150,
+    "materials": 309,
+    "renderGroups": 252
+  },
+  "comparedBytes": 709077336,
+  "serviceCalls": 41880,
+  "sourceHashes": {
+    "CandleSpace": "db7140d2dd5ee9cd2fcdcbb61a898b9facf1683ff21fec83fcbef81b885f56db",
+    "CandleSpaceEnd": "d42c3e1f85fb9dcc75d903911a1e91e6e061d017ae47f809caf4375505071352",
+    "CarryLand": "05b7ec8214f29c52ae93d689df8bbea764240612425e0524259f3b185907993c",
+    "CarryLand2": "e20b1611daee8e87548c3e2902ef3f5d7b5ce43f48c62c2510b08374c9ac55d2",
+    "CarryLand3": "2a40e8794b6ca7c88d4b6b89a025ca6e9885e11f81c00bae76ca9798b64a674e",
+    "Dawn": "16e26aafc7f9d120a548bf5d8bec04fbc18146bc8db531ef75144889b1ff197a",
+    "DayEnd": "9b5c568cefa987e504a10236c5b61e5de4b748d965d09e42db3602e4e52cc904",
+    "DayHubCave": "e4da920cc9f0b1569f14ad1a6d1990db7155dc07ebfc3214c4e385a367872457",
+    "Dusk": "9222b248f17fb4122cd4ad9650543ab86aab8b077b6965248c70ac2341bf2d5d",
+    "DuskGraveyard": "128b30dcbe40b68e68fc25d195b68dc39f897259453c02612049ccd37a90ffb4",
+    "DuskMid": "899ca33226dabd04afecfe7888750938ff4e460cb586603364e150591e9cbda5",
+    "Dusk_CrabField": "718247937eb535034282dbd11473563a2034ec75e1a4a287c057589ca174c8a8",
+    "HubReveal": "4b32f12bbe4b246cde9ca1e4ba0982000ff108359865bb4340aba640e609861b",
+    "Night": "6ce612c9efb82834d648de81251033b341a44f4d9374d8338d868575aab6a723",
+    "NightEnd": "0dd8919c4f0ca58e9dc979e211b84dc990e012815929082b1004ed620af32422",
+    "NightEntrance": "d7cc9c4e290e146b459a8ddcddd19be2287fd2cc8ac19f98b688003e05ebb354",
+    "Prairie_ButterflyFields": "29d8d61a082f3e3414ecfbb501b5f65499deb37ad4a1078ce2e9b88ac0d1e441",
+    "Prairie_Cave": "675a2256e24f8c4b16540cee6a5cd2b7647ff2fb495724a8bf596717ca39d944",
+    "Prairie_NestAndKeeper": "5eabe877e07c84e5f9270035aaab73fa20144c87f6e9136e5285dbaff3f85b7a",
+    "Prairie_Village": "4656296b54402016b59b894b4653fbdc71e106a21e0900294f73f2c7b7112385",
+    "Rain": "20093bccf3bb1ea0936cb993e66cef0187b40a5a411df3573eb28e4def4f75c6",
+    "RainEnd": "247912ec955153e3df80c16a861eb872573502a285a17943518bdce448a8d5e3",
+    "RainForest": "2e69b3314c70c61bd99435f4bb4418fba540f227c83670e1af3b5358c64c3b73",
+    "RainMid": "139b219d9b71a2ab24418b1ec41f2ee8a2ebfdf4c5ea992c35348a758682ed23",
+    "SkyHub2": "8b467f9b349d9d4ce0d038528c96e44dff30063149bf5bbf90232a56bb9dd36f",
+    "Storm": "4be187f31f1ef86611831abeb45ed9c1deff5e925f3bae80a6be49af85fa52bd",
+    "StormEnd": "a9c13b592198ee01ab2922a0c7901f4516ae172d56a22d9b7f806ff7464c9162",
+    "Sunset": "8126f2db693502576075505797624e0b5e53dc064fe6af82e90f2261ca427f8a",
+    "SunsetEnd": "9995ebfef7aa72982f6b95073a98a4ef01376bd8ac56c3b79b09729f97f43d6e",
+    "SunsetEnd2": "f76249413f9412f3db6d726aacf7425d5da546f8a9b88b9614c8a33fdb87e711",
+    "SunsetRace": "2ebfc21451d30f976bcafafa0c42f409e322efeeb0f8403a4136899438e0b5dc",
+    "TitleWater": "46841a22d17b360fcc3c7ceb8406d8c7e73441fd59023f64b4bce4057e1b9414",
+    "WorldEmpty": "408b45191fd71fc376d2de75a4c475d77cf08c3f1d8c13db3e9c1b7db088e94c"
+  },
+  "results": [
+    {
+      "label": "prepared/sorted/0",
+      "line": 0,
+      "severity": 0,
+      "calls": 169
+    },
+    {
+      "label": "prepared/sorted/1",
+      "line": 0,
+      "severity": 0,
+      "calls": 169
+    },
+    {
+      "label": "prepared/sorted/2",
+      "line": 0,
+      "severity": 0,
+      "calls": 169
+    },
+    {
+      "label": "prepared/sorted/3",
+      "line": 0,
+      "severity": 0,
+      "calls": 169
+    },
+    {
+      "label": "prepared/sorted/4",
+      "line": 372,
+      "severity": 4,
+      "calls": 11
+    },
+    {
+      "label": "prepared/sorted/5",
+      "line": 0,
+      "severity": 0,
+      "calls": 169
+    },
+    {
+      "label": "prepared/sorted/6",
+      "line": 0,
+      "severity": 0,
+      "calls": 169
+    },
+    {
+      "label": "prepared/sorted/7",
+      "line": 0,
+      "severity": 0,
+      "calls": 169
+    },
+    {
+      "label": "prepared/sorted/8",
+      "line": 0,
+      "severity": 0,
+      "calls": 169
+    },
+    {
+      "label": "prepared/sorted/9",
+      "line": 372,
+      "severity": 4,
+      "calls": 11
+    },
+    {
+      "label": "prepared/sorted/10",
+      "line": 0,
+      "severity": 0,
+      "calls": 169
+    },
+    {
+      "label": "prepared/sorted/11",
+      "line": 0,
+      "severity": 0,
+      "calls": 169
+    },
+    {
+      "label": "prepared/sorted/12",
+      "line": 0,
+      "severity": 0,
+      "calls": 169
+    },
+    {
+      "label": "prepared/sorted/13",
+      "line": 0,
+      "severity": 0,
+      "calls": 169
+    },
+    {
+      "label": "prepared/sorted/14",
+      "line": 372,
+      "severity": 4,
+      "calls": 11
+    },
+    {
+      "label": "prepared/sorted/15",
+      "line": 0,
+      "severity": 0,
+      "calls": 169
+    },
+    {
+      "label": "prepared/sorted/16",
+      "line": 0,
+      "severity": 0,
+      "calls": 169
+    },
+    {
+      "label": "prepared/sorted/17",
+      "line": 0,
+      "severity": 0,
+      "calls": 169
+    },
+    {
+      "label": "prepared/sorted/18",
+      "line": 0,
+      "severity": 0,
+      "calls": 169
+    },
+    {
+      "label": "prepared/sorted/19",
+      "line": 372,
+      "severity": 4,
+      "calls": 11
+    },
+    {
+      "label": "prepared/sorted/20",
+      "line": 372,
+      "severity": 4,
+      "calls": 11
+    },
+    {
+      "label": "prepared/sorted/21",
+      "line": 372,
+      "severity": 4,
+      "calls": 11
+    },
+    {
+      "label": "prepared/sorted/22",
+      "line": 372,
+      "severity": 4,
+      "calls": 11
+    },
+    {
+      "label": "prepared/sorted/23",
+      "line": 372,
+      "severity": 4,
+      "calls": 11
+    },
+    {
+      "label": "prepared/sorted/24",
+      "line": 372,
+      "severity": 4,
+      "calls": 11
+    },
+    {
+      "label": "prepared/sorted/25",
+      "line": 372,
+      "severity": 4,
+      "calls": 11
+    },
+    {
+      "label": "prepared/sorted/26",
+      "line": 372,
+      "severity": 4,
+      "calls": 11
+    },
+    {
+      "label": "prepared/sorted/27",
+      "line": 372,
+      "severity": 4,
+      "calls": 11
+    },
+    {
+      "label": "prepared/sorted/28",
+      "line": 372,
+      "severity": 4,
+      "calls": 11
+    },
+    {
+      "label": "prepared/sorted/29",
+      "line": 372,
+      "severity": 4,
+      "calls": 11
+    },
+    {
+      "label": "prepared/sorted/30",
+      "line": 372,
+      "severity": 4,
+      "calls": 11
+    },
+    {
+      "label": "prepared/sorted/31",
+      "line": 372,
+      "severity": 4,
+      "calls": 11
+    },
+    {
+      "label": "prepared/sorted/32",
+      "line": 372,
+      "severity": 4,
+      "calls": 11
+    },
+    {
+      "label": "prepared/sorted/33",
+      "line": 372,
+      "severity": 4,
+      "calls": 11
+    },
+    {
+      "label": "prepared/sorted/34",
+      "line": 372,
+      "severity": 4,
+      "calls": 11
+    },
+    {
+      "label": "prepared/sorted/35",
+      "line": 0,
+      "severity": 0,
+      "calls": 169
+    },
+    {
+      "label": "prepared/sorted/36",
+      "line": 0,
+      "severity": 0,
+      "calls": 169
+    },
+    {
+      "label": "prepared/sorted/37",
+      "line": 0,
+      "severity": 0,
+      "calls": 169
+    },
+    {
+      "label": "prepared/sorted/38",
+      "line": 0,
+      "severity": 0,
+      "calls": 169
+    },
+    {
+      "label": "prepared/sorted/39",
+      "line": 372,
+      "severity": 4,
+      "calls": 11
+    },
+    {
+      "label": "prepared/ubo/0/0",
+      "line": 0,
+      "severity": 0,
+      "calls": 141
+    },
+    {
+      "label": "prepared/ubo/0/16",
+      "line": 0,
+      "severity": 0,
+      "calls": 141
+    },
+    {
+      "label": "prepared/ubo/0/64",
+      "line": 0,
+      "severity": 0,
+      "calls": 141
+    },
+    {
+      "label": "prepared/ubo/1/0",
+      "line": 0,
+      "severity": 0,
+      "calls": 169
+    },
+    {
+      "label": "prepared/ubo/1/16",
+      "line": 0,
+      "severity": 0,
+      "calls": 169
+    },
+    {
+      "label": "prepared/ubo/1/64",
+      "line": 0,
+      "severity": 0,
+      "calls": 169
+    },
+    {
+      "label": "prepared/ubo/2/0",
+      "line": 0,
+      "severity": 0,
+      "calls": 197
+    },
+    {
+      "label": "prepared/ubo/2/16",
+      "line": 0,
+      "severity": 0,
+      "calls": 197
+    },
+    {
+      "label": "prepared/ubo/2/64",
+      "line": 0,
+      "severity": 0,
+      "calls": 197
+    },
+    {
+      "label": "prepared/ubo/3/0",
+      "line": 0,
+      "severity": 0,
+      "calls": 225
+    },
+    {
+      "label": "prepared/ubo/3/16",
+      "line": 0,
+      "severity": 0,
+      "calls": 225
+    },
+    {
+      "label": "prepared/ubo/3/64",
+      "line": 0,
+      "severity": 0,
+      "calls": 225
+    },
+    {
+      "label": "prepared/ubo/4/0",
+      "line": 0,
+      "severity": 0,
+      "calls": 253
+    },
+    {
+      "label": "prepared/ubo/4/16",
+      "line": 0,
+      "severity": 0,
+      "calls": 253
+    },
+    {
+      "label": "prepared/ubo/4/64",
+      "line": 0,
+      "severity": 0,
+      "calls": 253
+    },
+    {
+      "label": "prepared/ubo/5/0",
+      "line": 0,
+      "severity": 0,
+      "calls": 281
+    },
+    {
+      "label": "prepared/ubo/5/16",
+      "line": 0,
+      "severity": 0,
+      "calls": 281
+    },
+    {
+      "label": "prepared/ubo/5/64",
+      "line": 0,
+      "severity": 0,
+      "calls": 281
+    },
+    {
+      "label": "prepared/ubo/6/0",
+      "line": 0,
+      "severity": 0,
+      "calls": 309
+    },
+    {
+      "label": "prepared/ubo/6/16",
+      "line": 0,
+      "severity": 0,
+      "calls": 309
+    },
+    {
+      "label": "prepared/ubo/6/64",
+      "line": 0,
+      "severity": 0,
+      "calls": 309
+    },
+    {
+      "label": "prepared/ids/0/0/false",
+      "line": 90,
+      "severity": 3,
+      "calls": 17
+    },
+    {
+      "label": "prepared/ids/0/0/true",
+      "line": 90,
+      "severity": 3,
+      "calls": 17
+    },
+    {
+      "label": "prepared/ids/0/1/false",
+      "line": 90,
+      "severity": 3,
+      "calls": 17
+    },
+    {
+      "label": "prepared/ids/0/1/true",
+      "line": 90,
+      "severity": 3,
+      "calls": 17
+    },
+    {
+      "label": "prepared/ids/0/2/false",
+      "line": 90,
+      "severity": 3,
+      "calls": 17
+    },
+    {
+      "label": "prepared/ids/0/2/true",
+      "line": 90,
+      "severity": 3,
+      "calls": 17
+    },
+    {
+      "label": "prepared/ids/0/3/false",
+      "line": 90,
+      "severity": 3,
+      "calls": 17
+    },
+    {
+      "label": "prepared/ids/0/3/true",
+      "line": 90,
+      "severity": 3,
+      "calls": 17
+    },
+    {
+      "label": "prepared/ids/1/0/false",
+      "line": 0,
+      "severity": 0,
+      "calls": 149
+    },
+    {
+      "label": "prepared/ids/1/0/true",
+      "line": 0,
+      "severity": 0,
+      "calls": 169
+    },
+    {
+      "label": "prepared/ids/1/1/false",
+      "line": 90,
+      "severity": 3,
+      "calls": 17
+    },
+    {
+      "label": "prepared/ids/1/1/true",
+      "line": 90,
+      "severity": 3,
+      "calls": 17
+    },
+    {
+      "label": "prepared/ids/1/2/false",
+      "line": 90,
+      "severity": 3,
+      "calls": 17
+    },
+    {
+      "label": "prepared/ids/1/2/true",
+      "line": 90,
+      "severity": 3,
+      "calls": 17
+    },
+    {
+      "label": "prepared/ids/1/3/false",
+      "line": 90,
+      "severity": 3,
+      "calls": 17
+    },
+    {
+      "label": "prepared/ids/1/3/true",
+      "line": 90,
+      "severity": 3,
+      "calls": 17
+    },
+    {
+      "label": "prepared/ids/2/0/false",
+      "line": 0,
+      "severity": 0,
+      "calls": 169
+    },
+    {
+      "label": "prepared/ids/2/0/true",
+      "line": 0,
+      "severity": 0,
+      "calls": 189
+    },
+    {
+      "label": "prepared/ids/2/1/false",
+      "line": 0,
+      "severity": 0,
+      "calls": 169
+    },
+    {
+      "label": "prepared/ids/2/1/true",
+      "line": 0,
+      "severity": 0,
+      "calls": 189
+    },
+    {
+      "label": "prepared/ids/2/2/false",
+      "line": 90,
+      "severity": 3,
+      "calls": 17
+    },
+    {
+      "label": "prepared/ids/2/2/true",
+      "line": 90,
+      "severity": 3,
+      "calls": 17
+    },
+    {
+      "label": "prepared/ids/2/3/false",
+      "line": 90,
+      "severity": 3,
+      "calls": 17
+    },
+    {
+      "label": "prepared/ids/2/3/true",
+      "line": 90,
+      "severity": 3,
+      "calls": 17
+    },
+    {
+      "label": "prepared/ids/3/0/false",
+      "line": 0,
+      "severity": 0,
+      "calls": 189
+    },
+    {
+      "label": "prepared/ids/3/0/true",
+      "line": 0,
+      "severity": 0,
+      "calls": 209
+    },
+    {
+      "label": "prepared/ids/3/1/false",
+      "line": 0,
+      "severity": 0,
+      "calls": 189
+    },
+    {
+      "label": "prepared/ids/3/1/true",
+      "line": 0,
+      "severity": 0,
+      "calls": 209
+    },
+    {
+      "label": "prepared/ids/3/2/false",
+      "line": 0,
+      "severity": 0,
+      "calls": 189
+    },
+    {
+      "label": "prepared/ids/3/2/true",
+      "line": 0,
+      "severity": 0,
+      "calls": 209
+    },
+    {
+      "label": "prepared/ids/3/3/false",
+      "line": 90,
+      "severity": 3,
+      "calls": 17
+    },
+    {
+      "label": "prepared/ids/3/3/true",
+      "line": 90,
+      "severity": 3,
+      "calls": 17
+    },
+    {
+      "label": "prepared/slots/93",
+      "line": 0,
+      "severity": 0,
+      "calls": 161
+    },
+    {
+      "label": "prepared/slots/94",
+      "line": 0,
+      "severity": 0,
+      "calls": 161
+    },
+    {
+      "label": "prepared/slots/95",
+      "line": 0,
+      "severity": 0,
+      "calls": 161
+    },
+    {
+      "label": "prepared/slots/96",
+      "line": 0,
+      "severity": 0,
+      "calls": 161
+    },
+    {
+      "label": "prepared/slots/97",
+      "line": 0,
+      "severity": 0,
+      "calls": 209
+    },
+    {
+      "label": "prepared/slots/98",
+      "line": 0,
+      "severity": 0,
+      "calls": 211
+    },
+    {
+      "label": "prepared/slots/99",
+      "line": 0,
+      "severity": 0,
+      "calls": 221
+    },
+    {
+      "label": "prepared/slots/100",
+      "line": 0,
+      "severity": 0,
+      "calls": 221
+    },
+    {
+      "label": "prepared/slots/101",
+      "line": 0,
+      "severity": 0,
+      "calls": 185
+    },
+    {
+      "label": "prepared/slots/102",
+      "line": 0,
+      "severity": 0,
+      "calls": 185
+    },
+    {
+      "label": "prepared/slots/103",
+      "line": 0,
+      "severity": 0,
+      "calls": 191
+    },
+    {
+      "label": "prepared/slots/104",
+      "line": 0,
+      "severity": 0,
+      "calls": 191
+    },
+    {
+      "label": "prepared/slots/105",
+      "line": 0,
+      "severity": 0,
+      "calls": 169
+    },
+    {
+      "label": "prepared/slots/106",
+      "line": 0,
+      "severity": 0,
+      "calls": 171
+    },
+    {
+      "label": "prepared/slots/107",
+      "line": 0,
+      "severity": 0,
+      "calls": 171
+    },
+    {
+      "label": "prepared/slots/108",
+      "line": 79,
+      "severity": 4,
+      "calls": 103
+    },
+    {
+      "label": "prepared/stride/0/false",
+      "line": 0,
+      "severity": 0,
+      "calls": 161
+    },
+    {
+      "label": "prepared/stride/0/true",
+      "line": 79,
+      "severity": 4,
+      "calls": 16
+    },
+    {
+      "label": "prepared/stride/1/false",
+      "line": 0,
+      "severity": 0,
+      "calls": 161
+    },
+    {
+      "label": "prepared/stride/1/true",
+      "line": 79,
+      "severity": 4,
+      "calls": 16
+    },
+    {
+      "label": "prepared/stride/2/false",
+      "line": 0,
+      "severity": 0,
+      "calls": 161
+    },
+    {
+      "label": "prepared/stride/2/true",
+      "line": 79,
+      "severity": 4,
+      "calls": 16
+    },
+    {
+      "label": "prepared/stride/3/false",
+      "line": 0,
+      "severity": 0,
+      "calls": 161
+    },
+    {
+      "label": "prepared/stride/3/true",
+      "line": 79,
+      "severity": 4,
+      "calls": 16
+    },
+    {
+      "label": "prepared/stride/4/false",
+      "line": 0,
+      "severity": 0,
+      "calls": 161
+    },
+    {
+      "label": "prepared/stride/4/true",
+      "line": 79,
+      "severity": 4,
+      "calls": 16
+    },
+    {
+      "label": "prepared/stride/5/false",
+      "line": 0,
+      "severity": 0,
+      "calls": 161
+    },
+    {
+      "label": "prepared/stride/5/true",
+      "line": 79,
+      "severity": 4,
+      "calls": 16
+    },
+    {
+      "label": "prepared/live/1/0",
+      "line": 0,
+      "severity": 0,
+      "calls": 163
+    },
+    {
+      "label": "prepared/live/1/1",
+      "line": 0,
+      "severity": 0,
+      "calls": 197
+    },
+    {
+      "label": "prepared/live/1/2",
+      "line": 0,
+      "severity": 0,
+      "calls": 233
+    },
+    {
+      "label": "prepared/live/2/0",
+      "line": 0,
+      "severity": 0,
+      "calls": 269
+    },
+    {
+      "label": "prepared/live/2/1",
+      "line": 0,
+      "severity": 0,
+      "calls": 269
+    },
+    {
+      "label": "prepared/live/2/2",
+      "line": 0,
+      "severity": 0,
+      "calls": 269
+    },
+    {
+      "label": "prepared/live/4/0",
+      "line": 0,
+      "severity": 0,
+      "calls": 251
+    },
+    {
+      "label": "prepared/live/4/1",
+      "line": 0,
+      "severity": 0,
+      "calls": 251
+    },
+    {
+      "label": "prepared/live/4/2",
+      "line": 0,
+      "severity": 0,
+      "calls": 251
+    },
+    {
+      "label": "prepared/live/8/0",
+      "line": 0,
+      "severity": 0,
+      "calls": 204
+    },
+    {
+      "label": "prepared/live/8/1",
+      "line": 0,
+      "severity": 0,
+      "calls": 225
+    },
+    {
+      "label": "prepared/live/8/2",
+      "line": 0,
+      "severity": 0,
+      "calls": 247
+    },
+    {
+      "label": "prepared/live/16/0",
+      "line": 0,
+      "severity": 0,
+      "calls": 261
+    },
+    {
+      "label": "prepared/live/16/1",
+      "line": 0,
+      "severity": 0,
+      "calls": 261
+    },
+    {
+      "label": "prepared/live/16/2",
+      "line": 0,
+      "severity": 0,
+      "calls": 261
+    },
+    {
+      "label": "prepared/live/32/0",
+      "line": 0,
+      "severity": 0,
+      "calls": 269
+    },
+    {
+      "label": "prepared/live/32/1",
+      "line": 0,
+      "severity": 0,
+      "calls": 269
+    },
+    {
+      "label": "prepared/live/32/2",
+      "line": 0,
+      "severity": 0,
+      "calls": 269
+    },
+    {
+      "label": "prepared/live/64/0",
+      "line": 0,
+      "severity": 0,
+      "calls": 269
+    },
+    {
+      "label": "prepared/live/64/1",
+      "line": 0,
+      "severity": 0,
+      "calls": 269
+    },
+    {
+      "label": "prepared/live/64/2",
+      "line": 0,
+      "severity": 0,
+      "calls": 269
+    },
+    {
+      "label": "prepared/live/128/0",
+      "line": 0,
+      "severity": 0,
+      "calls": 245
+    },
+    {
+      "label": "prepared/live/128/1",
+      "line": 0,
+      "severity": 0,
+      "calls": 245
+    },
+    {
+      "label": "prepared/live/128/2",
+      "line": 0,
+      "severity": 0,
+      "calls": 245
+    },
+    {
+      "label": "prepared/live/12/0",
+      "line": 0,
+      "severity": 0,
+      "calls": 198
+    },
+    {
+      "label": "prepared/live/12/1",
+      "line": 0,
+      "severity": 0,
+      "calls": 207
+    },
+    {
+      "label": "prepared/live/12/2",
+      "line": 0,
+      "severity": 0,
+      "calls": 229
+    },
+    {
+      "label": "prepared/live/112/0",
+      "line": 0,
+      "severity": 0,
+      "calls": 261
+    },
+    {
+      "label": "prepared/live/112/1",
+      "line": 0,
+      "severity": 0,
+      "calls": 261
+    },
+    {
+      "label": "prepared/live/112/2",
+      "line": 0,
+      "severity": 0,
+      "calls": 261
+    },
+    {
+      "label": "prepared/reset/0",
+      "line": 0,
+      "severity": 0,
+      "calls": 109
+    },
+    {
+      "label": "prepared/reset/1",
+      "line": 0,
+      "severity": 0,
+      "calls": 189
+    },
+    {
+      "label": "prepared/reset/2",
+      "line": 0,
+      "severity": 0,
+      "calls": 145
+    },
+    {
+      "label": "prepared/reset/3",
+      "line": 0,
+      "severity": 0,
+      "calls": 225
+    },
+    {
+      "label": "prepared/reset/8",
+      "line": 495,
+      "severity": 4,
+      "calls": 126
+    },
+    {
+      "label": "prepared/reset/9",
+      "line": 495,
+      "severity": 4,
+      "calls": 189
+    },
+    {
+      "label": "prepared/reset/11",
+      "line": 495,
+      "severity": 4,
+      "calls": 225
+    },
+    {
+      "label": "prepared/all-fourteen/0/0",
+      "line": 0,
+      "severity": 0,
+      "calls": 313
+    },
+    {
+      "label": "prepared/all-fourteen/0/4",
+      "line": 0,
+      "severity": 0,
+      "calls": 285
+    },
+    {
+      "label": "prepared/all-fourteen/0/128",
+      "line": 0,
+      "severity": 0,
+      "calls": 229
+    },
+    {
+      "label": "prepared/all-fourteen/1/0",
+      "line": 0,
+      "severity": 0,
+      "calls": 313
+    },
+    {
+      "label": "prepared/all-fourteen/1/4",
+      "line": 0,
+      "severity": 0,
+      "calls": 285
+    },
+    {
+      "label": "prepared/all-fourteen/1/128",
+      "line": 0,
+      "severity": 0,
+      "calls": 313
+    },
+    {
+      "label": "prepared/all-fourteen/2/0",
+      "line": 0,
+      "severity": 0,
+      "calls": 313
+    },
+    {
+      "label": "prepared/all-fourteen/2/4",
+      "line": 0,
+      "severity": 0,
+      "calls": 285
+    },
+    {
+      "label": "prepared/all-fourteen/2/128",
+      "line": 0,
+      "severity": 0,
+      "calls": 313
+    },
+    {
+      "label": "prepared/reset-matrix/80000000",
+      "line": 0,
+      "severity": 0,
+      "calls": 169
+    },
+    {
+      "label": "prepared/reset-matrix/7f800000",
+      "line": 0,
+      "severity": 0,
+      "calls": 169
+    },
+    {
+      "label": "prepared/reset-matrix/ff800000",
+      "line": 0,
+      "severity": 0,
+      "calls": 169
+    },
+    {
+      "label": "prepared/reset-matrix/7fc12345",
+      "line": 0,
+      "severity": 0,
+      "calls": 169
+    },
+    {
+      "label": "prepared/reset-matrix/7fa12345",
+      "line": 0,
+      "severity": 0,
+      "calls": 169
+    },
+    {
+      "label": "prepared/reset-matrix/1",
+      "line": 0,
+      "severity": 0,
+      "calls": 169
+    },
+    {
+      "label": "prepared/reset-matrix/800000",
+      "line": 0,
+      "severity": 0,
+      "calls": 169
+    },
+    {
+      "label": "prepared/reset-matrix/3f800000",
+      "line": 0,
+      "severity": 0,
+      "calls": 169
+    },
+    {
+      "label": "prepared/entry/1/0/0",
+      "line": 226,
+      "severity": 4,
+      "calls": 2
+    },
+    {
+      "label": "prepared/entry/1/0/1",
+      "line": 0,
+      "severity": 0,
+      "calls": 49
+    },
+    {
+      "label": "prepared/entry/1/1/0",
+      "line": 206,
+      "severity": 3,
+      "calls": 0
+    },
+    {
+      "label": "prepared/entry/1/1/1",
+      "line": 206,
+      "severity": 3,
+      "calls": 0
+    },
+    {
+      "label": "prepared/entry/1/2/0",
+      "line": 226,
+      "severity": 4,
+      "calls": 2
+    },
+    {
+      "label": "prepared/entry/1/2/1",
+      "line": 0,
+      "severity": 0,
+      "calls": 49
+    },
+    {
+      "label": "prepared/entry/2/0/0",
+      "line": 226,
+      "severity": 4,
+      "calls": 0
+    },
+    {
+      "label": "prepared/entry/2/0/1",
+      "line": 0,
+      "severity": 0,
+      "calls": 47
+    },
+    {
+      "label": "prepared/entry/2/1/0",
+      "line": 225,
+      "severity": 3,
+      "calls": 0
+    },
+    {
+      "label": "prepared/entry/2/1/1",
+      "line": 225,
+      "severity": 3,
+      "calls": 0
+    },
+    {
+      "label": "prepared/entry/2/2/0",
+      "line": 226,
+      "severity": 4,
+      "calls": 0
+    },
+    {
+      "label": "prepared/entry/2/2/1",
+      "line": 0,
+      "severity": 0,
+      "calls": 47
+    },
+    {
+      "label": "prepared/empty-materials",
+      "line": 0,
+      "severity": 0,
+      "calls": 24
+    },
+    {
+      "label": "prepared/missing-shader",
+      "line": 770,
+      "severity": 4,
+      "calls": 3
+    },
+    {
+      "label": "CandleSpace",
+      "line": 0,
+      "severity": 0,
+      "calls": 232
+    },
+    {
+      "label": "CandleSpaceEnd",
+      "line": 0,
+      "severity": 0,
+      "calls": 80
+    },
+    {
+      "label": "CarryLand",
+      "line": 0,
+      "severity": 0,
+      "calls": 83
+    },
+    {
+      "label": "CarryLand2",
+      "line": 0,
+      "severity": 0,
+      "calls": 130
+    },
+    {
+      "label": "CarryLand3",
+      "line": 0,
+      "severity": 0,
+      "calls": 83
+    },
+    {
+      "label": "Dawn",
+      "line": 0,
+      "severity": 0,
+      "calls": 695
+    },
+    {
+      "label": "DayEnd",
+      "line": 0,
+      "severity": 0,
+      "calls": 404
+    },
+    {
+      "label": "DayHubCave",
+      "line": 0,
+      "severity": 0,
+      "calls": 350
+    },
+    {
+      "label": "Dusk",
+      "line": 0,
+      "severity": 0,
+      "calls": 542
+    },
+    {
+      "label": "DuskGraveyard",
+      "line": 0,
+      "severity": 0,
+      "calls": 610
+    },
+    {
+      "label": "DuskMid",
+      "line": 0,
+      "severity": 0,
+      "calls": 455
+    },
+    {
+      "label": "Dusk_CrabField",
+      "line": 0,
+      "severity": 0,
+      "calls": 434
+    },
+    {
+      "label": "HubReveal",
+      "line": 0,
+      "severity": 0,
+      "calls": 619
+    },
+    {
+      "label": "Night",
+      "line": 0,
+      "severity": 0,
+      "calls": 415
+    },
+    {
+      "label": "NightEnd",
+      "line": 0,
+      "severity": 0,
+      "calls": 137
+    },
+    {
+      "label": "NightEntrance",
+      "line": 0,
+      "severity": 0,
+      "calls": 263
+    },
+    {
+      "label": "Prairie_ButterflyFields",
+      "line": 0,
+      "severity": 0,
+      "calls": 554
+    },
+    {
+      "label": "Prairie_Cave",
+      "line": 0,
+      "severity": 0,
+      "calls": 563
+    },
+    {
+      "label": "Prairie_NestAndKeeper",
+      "line": 0,
+      "severity": 0,
+      "calls": 512
+    },
+    {
+      "label": "Prairie_Village",
+      "line": 0,
+      "severity": 0,
+      "calls": 726
+    },
+    {
+      "label": "Rain",
+      "line": 0,
+      "severity": 0,
+      "calls": 552
+    },
+    {
+      "label": "RainEnd",
+      "line": 0,
+      "severity": 0,
+      "calls": 570
+    },
+    {
+      "label": "RainForest",
+      "line": 0,
+      "severity": 0,
+      "calls": 444
+    },
+    {
+      "label": "RainMid",
+      "line": 0,
+      "severity": 0,
+      "calls": 653
+    },
+    {
+      "label": "SkyHub2",
+      "line": 0,
+      "severity": 0,
+      "calls": 393
+    },
+    {
+      "label": "Storm",
+      "line": 0,
+      "severity": 0,
+      "calls": 393
+    },
+    {
+      "label": "StormEnd",
+      "line": 0,
+      "severity": 0,
+      "calls": 292
+    },
+    {
+      "label": "Sunset",
+      "line": 0,
+      "severity": 0,
+      "calls": 751
+    },
+    {
+      "label": "SunsetEnd",
+      "line": 0,
+      "severity": 0,
+      "calls": 759
+    },
+    {
+      "label": "SunsetEnd2",
+      "line": 0,
+      "severity": 0,
+      "calls": 657
+    },
+    {
+      "label": "SunsetRace",
+      "line": 0,
+      "severity": 0,
+      "calls": 712
+    },
+    {
+      "label": "TitleWater",
+      "line": 0,
+      "severity": 0,
+      "calls": 144
+    },
+    {
+      "label": "WorldEmpty",
+      "line": 0,
+      "severity": 0,
+      "calls": 36
+    }
+  ],
+  "failures": []
+}

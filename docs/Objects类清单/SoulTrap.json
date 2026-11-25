@@ -1,0 +1,3079 @@
+{
+  "className": "SoulTrap",
+  "functionGroup": "光点、碎片与灵魂",
+  "functionRole": "灵魂捕获物、几何与销毁事件",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "SoulTrap 的原默认值、继承初始化及 9 个序列化字段变体；原注册字段 9 项。"
+    },
+    {
+      "name": "灵魂捕获物、几何与销毁事件",
+      "status": "partial",
+      "description": "原 SoulTrap.Load、Darkstone/SoulTrap 池分配、子节点登记、完整普通 Darkstone.Initialize 和原 OBB 层级生成已独立核验。初始化真实 SoulTrap→Clump→LevelMesh 材质已接入 33 图 932 网格；近距离点火、颜色、缩退和消失已有编辑器交互预览。燃烧缩退仍是模拟，完整 Darkstone.Update／传播／奖励／联网、真实 Model 生命周期及卸载仍待接，完整类不计完成。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Clump（58 条引用）、Collectible（6 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "SoulTrap",
+    "category": "光点、碎片与灵魂",
+    "functionGroupId": "fragments",
+    "functionRole": "灵魂捕获物、几何与销毁事件",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "SoulTrap 的原默认值、继承初始化及 9 个序列化字段变体；原注册字段 9 项。"
+      },
+      {
+        "name": "灵魂捕获物、几何与销毁事件",
+        "status": "partial",
+        "description": "原 SoulTrap.Load、Darkstone/SoulTrap 池分配、子节点登记、完整普通 Darkstone.Initialize 和原 OBB 层级生成已独立核验。初始化真实 SoulTrap→Clump→LevelMesh 材质已接入 33 图 932 网格；近距离点火、颜色、缩退和消失已有编辑器交互预览。燃烧缩退仍是模拟，完整 Darkstone.Update／传播／奖励／联网、真实 Model 生命周期及卸载仍待接，完整类不计完成。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Clump（58 条引用）、Collectible（6 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Clump",
+        "references": 58
+      },
+      {
+        "className": "Collectible",
+        "references": 6
+      }
+    ],
+    "rttiWorkingGroup": "系统和其余类型",
+    "role": "对象实例类型",
+    "instances": 49,
+    "nestedInstances": 0,
+    "referenceFields": 64,
+    "declaredLevels": 12,
+    "levels": [
+      {
+        "level": "CarryLand2",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Dusk",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DuskGraveyard",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DuskMid",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Cave",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Village",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Rain",
+        "nodes": 5,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainEnd",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainForest",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainMid",
+        "nodes": 14,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SkyHub2",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Storm",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "bstGuid",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "collectible",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "darkstoneLevel",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "enabled",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "finishFX",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "meshes",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "onKilled",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "rootKillable",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "useHierarchy",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100c9f780",
+    "nativeRegisteredFields": [
+      {
+        "name": "meshes",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 8,
+        "registrationFunction": "0x100280bc0",
+        "propertyAddress": "0x100c9f368"
+      },
+      {
+        "name": "finishFX",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 16,
+        "registrationFunction": "0x100280bc0",
+        "propertyAddress": "0x100c9f3b8"
+      },
+      {
+        "name": "onKilled",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 24,
+        "registrationFunction": "0x100280bc0",
+        "propertyAddress": "0x100c9f408"
+      },
+      {
+        "name": "useHierarchy",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 32,
+        "registrationFunction": "0x100280bc0",
+        "propertyAddress": "0x100c9f458"
+      },
+      {
+        "name": "rootKillable",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 33,
+        "registrationFunction": "0x100280bc0",
+        "propertyAddress": "0x100c9f4a8"
+      },
+      {
+        "name": "darkstoneLevel",
+        "typeGetter": "__Z17GetMetaTypeByTypeIjERK8MetaTypev",
+        "nativeOffset": 36,
+        "registrationFunction": "0x100280bc0",
+        "propertyAddress": "0x100c9f4f8"
+      },
+      {
+        "name": "bstGuid",
+        "typeGetter": "__Z17GetMetaTypeByTypeIjERK8MetaTypev",
+        "nativeOffset": 40,
+        "registrationFunction": "0x100280bc0",
+        "propertyAddress": "0x100c9f548"
+      },
+      {
+        "name": "enabled",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x100280bc0",
+        "propertyAddress": "0x100c9f598"
+      },
+      {
+        "name": "collectible",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP11CollectibleERK8MetaTypev",
+        "nativeOffset": 48,
+        "registrationFunction": "0x100280bc0",
+        "propertyAddress": "0x100c9f5e8"
+      }
+    ],
+    "completedCheckpoints": 4,
+    "partialCheckpoints": 1,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 40,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": true,
+    "implementation": [
+      "src/core/darkstone-runtime.ts",
+      "src/core/darkstone-initialize-runtime.ts",
+      "src/core/darkstone-hierarchy-runtime.ts",
+      "src/core/darkstone-material.ts",
+      "src/core/viewport-ignition.ts",
+      "src/renderer/ignition-controller.ts"
+    ],
+    "evidence": [
+      "docs/黑暗植物与生物加载续接.md",
+      "docs/darkstone-oracle.json",
+      "docs/creature-plant-load-native.json",
+      "docs/dark-plant-owner-dependencies.json",
+      "docs/dark-plant-owner-native-discovery.json",
+      "docs/darkstone-initialize-oracle.json",
+      "docs/darkstone-hierarchy-oracle.json",
+      "docs/darkstone-material-gpu-check.json"
+    ],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 9 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "partial",
+        "note": "原 SoulTrap.Load、Darkstone/SoulTrap 池分配、子节点登记、完整普通 Darkstone.Initialize 和原 OBB 层级生成已独立核验。初始化真实 SoulTrap→Clump→LevelMesh 材质已接入 33 图 932 网格；近距离点火、颜色、缩退和消失已有编辑器交互预览。燃烧缩退仍是模拟，完整 Darkstone.Update／传播／奖励／联网、真实 Model 生命周期及卸载仍待接，完整类不计完成。",
+        "evidence": [
+          "docs/黑暗植物与生物加载续接.md",
+          "docs/darkstone-oracle.json",
+          "docs/creature-plant-load-native.json",
+          "docs/dark-plant-owner-dependencies.json",
+          "docs/dark-plant-owner-native-discovery.json",
+          "docs/darkstone-initialize-oracle.json",
+          "docs/darkstone-hierarchy-oracle.json",
+          "docs/darkstone-material-gpu-check.json"
+        ]
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "verified",
+        "note": "原 SoulTrap.Load、Darkstone/SoulTrap 池分配、子节点登记、完整普通 Darkstone.Initialize 和原 OBB 层级生成已独立核验。初始化真实 SoulTrap→Clump→LevelMesh 材质已接入 33 图 932 网格；近距离点火、颜色、缩退和消失已有编辑器交互预览。燃烧缩退仍是模拟，完整 Darkstone.Update／传播／奖励／联网、真实 Model 生命周期及卸载仍待接，完整类不计完成。",
+        "evidence": [
+          "docs/黑暗植物与生物加载续接.md",
+          "docs/darkstone-oracle.json",
+          "docs/creature-plant-load-native.json",
+          "docs/dark-plant-owner-dependencies.json",
+          "docs/dark-plant-owner-native-discovery.json",
+          "docs/darkstone-initialize-oracle.json",
+          "docs/darkstone-hierarchy-oracle.json",
+          "docs/darkstone-material-gpu-check.json"
+        ]
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "原 SoulTrap.Load、Darkstone/SoulTrap 池分配、子节点登记、完整普通 Darkstone.Initialize 和原 OBB 层级生成已独立核验。初始化真实 SoulTrap→Clump→LevelMesh 材质已接入 33 图 932 网格；近距离点火、颜色、缩退和消失已有编辑器交互预览。燃烧缩退仍是模拟，完整 Darkstone.Update／传播／奖励／联网、真实 Model 生命周期及卸载仍待接，完整类不计完成。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "CarryLand2:n21",
+      "level": "CarryLand2",
+      "nodeId": 21,
+      "name": "BstNode_3707306203",
+      "className": "SoulTrap",
+      "classIndex": 8,
+      "sourceOffset": 16540,
+      "sourceLength": 50,
+      "sourceSha256": "6134afb3472e59c65d9c4487c2f4c26d311ca4904147cf2215f3fde0eca2a892",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306203,
+            "int": -587661093,
+            "float": -560705678390329340
+          },
+          "raw": "db00f9dc"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n21/p1",
+          "fieldName": "meshes",
+          "target": "CarryLand2:n240",
+          "targetNodeId": 240,
+          "offset": 16564
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n681",
+      "level": "Dusk",
+      "nodeId": 681,
+      "name": "BstNode_2060386314",
+      "className": "SoulTrap",
+      "classIndex": 61,
+      "sourceOffset": 146373,
+      "sourceLength": 50,
+      "sourceSha256": "bbb3fd8231f6325f8eb2286d7fbe652428d7efefec2827fadf9e671f604d0a57",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2060386314,
+            "int": 2060386314,
+            "float": 5.374031209991672e+35
+          },
+          "raw": "0a00cf7a"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n681/p1",
+          "fieldName": "meshes",
+          "target": "Dusk:n842",
+          "targetNodeId": 842,
+          "offset": 146397
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n704",
+      "level": "Dusk",
+      "nodeId": 704,
+      "name": "BstNode_2060386312",
+      "className": "SoulTrap",
+      "classIndex": 61,
+      "sourceOffset": 149448,
+      "sourceLength": 50,
+      "sourceSha256": "8910a1c62c056275c29b73de0529f1dbfdea39f0e64b2c3a0301efe0c0751656",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2060386312,
+            "int": 2060386312,
+            "float": 5.374030417710047e+35
+          },
+          "raw": "0800cf7a"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n704/p1",
+          "fieldName": "meshes",
+          "target": "Dusk:n368",
+          "targetNodeId": 368,
+          "offset": 149472
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n983",
+      "level": "Dusk",
+      "nodeId": 983,
+      "name": "BstNode_2060386334",
+      "className": "SoulTrap",
+      "classIndex": 61,
+      "sourceOffset": 200721,
+      "sourceLength": 50,
+      "sourceSha256": "edbcc6e5c7c02006147012d190208c1abe7200f9fa96c4449466669149c07260",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2060386334,
+            "int": 2060386334,
+            "float": 5.374039132807924e+35
+          },
+          "raw": "1e00cf7a"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n983/p1",
+          "fieldName": "meshes",
+          "target": "Dusk:n1053",
+          "targetNodeId": 1053,
+          "offset": 200745
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n1071",
+      "level": "Dusk",
+      "nodeId": 1071,
+      "name": "BstNode_2060386360",
+      "className": "SoulTrap",
+      "classIndex": 61,
+      "sourceOffset": 219192,
+      "sourceLength": 50,
+      "sourceSha256": "e4f3a20de290264b3e9f39528d70ad0864fd918e4034a237ca9f2ce4fdc3e2ea",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2060386360,
+            "int": 2060386360,
+            "float": 5.3740494324690506e+35
+          },
+          "raw": "3800cf7a"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1071/p1",
+          "fieldName": "meshes",
+          "target": "Dusk:n703",
+          "targetNodeId": 703,
+          "offset": 219216
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n153",
+      "level": "DuskGraveyard",
+      "nodeId": 153,
+      "name": "BstNode_2060386326",
+      "className": "SoulTrap",
+      "classIndex": 23,
+      "sourceOffset": 59889,
+      "sourceLength": 50,
+      "sourceSha256": "54d474096cd543a807065340e437796f15ea0c40dd5e5907e2aaf577860f5e8b",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2060386326,
+            "int": 2060386326,
+            "float": 5.374035963681423e+35
+          },
+          "raw": "1600cf7a"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n153/p1",
+          "fieldName": "meshes",
+          "target": "DuskGraveyard:n328",
+          "targetNodeId": 328,
+          "offset": 59913
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n1182",
+      "level": "DuskGraveyard",
+      "nodeId": 1182,
+      "name": "BstNode_2060386312",
+      "className": "SoulTrap",
+      "classIndex": 23,
+      "sourceOffset": 301839,
+      "sourceLength": 50,
+      "sourceSha256": "35ca6e7e1a754853c86d40bff5bdf9cde7a282f0cef35915f3468bbca160f7a7",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2060386312,
+            "int": 2060386312,
+            "float": 5.374030417710047e+35
+          },
+          "raw": "0800cf7a"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1182/p1",
+          "fieldName": "meshes",
+          "target": "DuskGraveyard:n1437",
+          "targetNodeId": 1437,
+          "offset": 301863
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n1326",
+      "level": "DuskGraveyard",
+      "nodeId": 1326,
+      "name": "BstNode_2060386313",
+      "className": "SoulTrap",
+      "classIndex": 23,
+      "sourceOffset": 328884,
+      "sourceLength": 50,
+      "sourceSha256": "05625e7dc740699da2dadf5f98c06b210225ebbcf8ee9dad70593f213cb92ee7",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2060386313,
+            "int": 2060386313,
+            "float": 5.37403081385086e+35
+          },
+          "raw": "0900cf7a"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1326/p1",
+          "fieldName": "meshes",
+          "target": "DuskGraveyard:n653",
+          "targetNodeId": 653,
+          "offset": 328908
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n1544",
+      "level": "DuskGraveyard",
+      "nodeId": 1544,
+      "name": "BstNode_2060386310",
+      "className": "SoulTrap",
+      "classIndex": 23,
+      "sourceOffset": 381184,
+      "sourceLength": 50,
+      "sourceSha256": "a6d996aea6e67291a7862603bb3d754bb1ef722cab2a2b1f112f14433f3c4ec3",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2060386310,
+            "int": 2060386310,
+            "float": 5.374029625428422e+35
+          },
+          "raw": "0600cf7a"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1544/p1",
+          "fieldName": "meshes",
+          "target": "DuskGraveyard:n876",
+          "targetNodeId": 876,
+          "offset": 381208
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n159",
+      "level": "DuskMid",
+      "nodeId": 159,
+      "name": "BstNode_2060386365",
+      "className": "SoulTrap",
+      "classIndex": 30,
+      "sourceOffset": 47849,
+      "sourceLength": 50,
+      "sourceSha256": "51e4f901cafd8d2b1cc9897309cb1387135b316f2eea2fbe5fb092f0fccb6929",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2060386365,
+            "int": 2060386365,
+            "float": 5.3740514131731134e+35
+          },
+          "raw": "3d00cf7a"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n159/p1",
+          "fieldName": "meshes",
+          "target": "DuskMid:n59",
+          "targetNodeId": 59,
+          "offset": 47873
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n635",
+      "level": "DuskMid",
+      "nodeId": 635,
+      "name": "BstNode_2060386315",
+      "className": "SoulTrap",
+      "classIndex": 30,
+      "sourceOffset": 136567,
+      "sourceLength": 50,
+      "sourceSha256": "883d362b1bb18bb9d4940f183aecb051225b55b652bdb1bbe4ca58c41fbe8a1a",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2060386315,
+            "int": 2060386315,
+            "float": 5.374031606132485e+35
+          },
+          "raw": "0b00cf7a"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n635/p1",
+          "fieldName": "meshes",
+          "target": "DuskMid:n457",
+          "targetNodeId": 457,
+          "offset": 136591
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n679",
+      "level": "DuskMid",
+      "nodeId": 679,
+      "name": "BstNode_2060386323",
+      "className": "SoulTrap",
+      "classIndex": 30,
+      "sourceOffset": 142831,
+      "sourceLength": 50,
+      "sourceSha256": "90a7743f237336ae99a0ab66b751e496345f5cbda25bf5fb3bda40d69c068fdb",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2060386323,
+            "int": 2060386323,
+            "float": 5.3740347752589855e+35
+          },
+          "raw": "1300cf7a"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n679/p1",
+          "fieldName": "meshes",
+          "target": "DuskMid:n1090",
+          "targetNodeId": 1090,
+          "offset": 142855
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n1005",
+      "level": "DuskMid",
+      "nodeId": 1005,
+      "name": "BstNode_2060386317",
+      "className": "SoulTrap",
+      "classIndex": 30,
+      "sourceOffset": 214073,
+      "sourceLength": 50,
+      "sourceSha256": "708789d7cdf26b38fb4ac9396f931cd550893aede25e3bee5222d5afba713dfd",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2060386317,
+            "int": 2060386317,
+            "float": 5.37403239841411e+35
+          },
+          "raw": "0d00cf7a"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1005/p1",
+          "fieldName": "meshes",
+          "target": "DuskMid:n99",
+          "targetNodeId": 99,
+          "offset": 214097
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n476",
+      "level": "Prairie_Cave",
+      "nodeId": 476,
+      "name": "BstNode_1167523896",
+      "className": "SoulTrap",
+      "classIndex": 47,
+      "sourceOffset": 134078,
+      "sourceLength": 50,
+      "sourceSha256": "d8b29371e1c3f927b66e2b18c374a2e8a3091c45f25b75cada495050533bee13",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 1167523896,
+            "int": 1167523896,
+            "float": 4832.02734375
+          },
+          "raw": "38009745"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n476/p1",
+          "fieldName": "meshes",
+          "target": "Prairie_Cave:n1863",
+          "targetNodeId": 1863,
+          "offset": 134102
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n1000",
+      "level": "Prairie_Cave",
+      "nodeId": 1000,
+      "name": "BstNode_3156082747",
+      "className": "SoulTrap",
+      "classIndex": 47,
+      "sourceOffset": 254514,
+      "sourceLength": 50,
+      "sourceSha256": "06e934a534158aca03186ed8c203aacd4ac19db998e3b208eaa537004afa74a3",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3156082747,
+            "int": -1138884549,
+            "float": -0.009643609635531902
+          },
+          "raw": "3b001ebc"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1000/p1",
+          "fieldName": "meshes",
+          "target": "Prairie_Cave:n351",
+          "targetNodeId": 351,
+          "offset": 254538
+        },
+        {
+          "fieldId": "n1000/p4",
+          "fieldName": "onKilled",
+          "target": "Prairie_Cave:n1905",
+          "targetNodeId": 1905,
+          "offset": 254550
+        },
+        {
+          "fieldId": "n1000/p7",
+          "fieldName": "collectible",
+          "target": "Prairie_Cave:n262",
+          "targetNodeId": 262,
+          "offset": 254559
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n343",
+      "level": "Prairie_Village",
+      "nodeId": 343,
+      "name": "BstNode_34603160",
+      "className": "SoulTrap",
+      "classIndex": 49,
+      "sourceOffset": 85479,
+      "sourceLength": 48,
+      "sourceSha256": "6db8ae13a12f75c4d8e1719cc71392ac68c3d0977c3246bf9e33ee3d026076d3",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 34603160,
+            "int": 34603160,
+            "float": 1.057961955529385e-37
+          },
+          "raw": "98001002"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n343/p1",
+          "fieldName": "meshes",
+          "target": "Prairie_Village:n2234",
+          "targetNodeId": 2234,
+          "offset": 85501
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1383",
+      "level": "Prairie_Village",
+      "nodeId": 1383,
+      "name": "BstNode_1528234068",
+      "className": "SoulTrap",
+      "classIndex": 49,
+      "sourceOffset": 253035,
+      "sourceLength": 50,
+      "sourceSha256": "dfe7b9eabf9047fce440fd3260d72e78d253a896185640a49b66fa745fec9c10",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 1528234068,
+            "int": 1528234068,
+            "float": 42503082260561920
+          },
+          "raw": "5400175b"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1383/p1",
+          "fieldName": "meshes",
+          "target": "Prairie_Village:n2231",
+          "targetNodeId": 2231,
+          "offset": 253059
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1497",
+      "level": "Prairie_Village",
+      "nodeId": 1497,
+      "name": "BstNode_1528234062",
+      "className": "SoulTrap",
+      "classIndex": 49,
+      "sourceOffset": 269587,
+      "sourceLength": 50,
+      "sourceSha256": "d5bdbbff4cd740a613c36890e279644a7c160edf2a5010315e34e3c1546a78db",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 1528234062,
+            "int": 1528234062,
+            "float": 42503056490758140
+          },
+          "raw": "4e00175b"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1497/p1",
+          "fieldName": "meshes",
+          "target": "Prairie_Village:n1401",
+          "targetNodeId": 1401,
+          "offset": 269611
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n1197",
+      "level": "Rain",
+      "nodeId": 1197,
+      "name": "BstNode_34603098",
+      "className": "SoulTrap",
+      "classIndex": 79,
+      "sourceOffset": 296718,
+      "sourceLength": 48,
+      "sourceSha256": "7ae5aaa3cf481b6205ecb805b1b282c26e2cb4650a5775cd3081d4580fca6e97",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 34603098,
+            "int": 34603098,
+            "float": 1.057955005089002e-37
+          },
+          "raw": "5a001002"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1197/p1",
+          "fieldName": "meshes",
+          "target": "Rain:n694",
+          "targetNodeId": 694,
+          "offset": 296740
+        },
+        {
+          "fieldId": "n1197/p4",
+          "fieldName": "onKilled",
+          "target": "Rain:n2005",
+          "targetNodeId": 2005,
+          "offset": 296752
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n1234",
+      "level": "Rain",
+      "nodeId": 1234,
+      "name": "BstNode_2060386413",
+      "className": "SoulTrap",
+      "classIndex": 79,
+      "sourceOffset": 303824,
+      "sourceLength": 50,
+      "sourceSha256": "a4e9330534e360fd4aac23ce4ff2eac95735d12955f079fcb24d52afd77daf0e",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2060386413,
+            "int": 2060386413,
+            "float": 5.374070427932117e+35
+          },
+          "raw": "6d00cf7a"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1234/p1",
+          "fieldName": "meshes",
+          "target": "Rain:n1824",
+          "targetNodeId": 1824,
+          "offset": 303848
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n1478",
+      "level": "Rain",
+      "nodeId": 1478,
+      "name": "BstNode_2060386370",
+      "className": "SoulTrap",
+      "classIndex": 79,
+      "sourceOffset": 358300,
+      "sourceLength": 50,
+      "sourceSha256": "63995149b0f27237f1ff862b31a4d63a8c5de63fd7e2f9047aed166189f44b8c",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2060386370,
+            "int": 2060386370,
+            "float": 5.374053393877176e+35
+          },
+          "raw": "4200cf7a"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1478/p1",
+          "fieldName": "meshes",
+          "target": "Rain:n746",
+          "targetNodeId": 746,
+          "offset": 358324
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n1603",
+      "level": "Rain",
+      "nodeId": 1603,
+      "name": "BstNode_34603140",
+      "className": "SoulTrap",
+      "classIndex": 79,
+      "sourceOffset": 385647,
+      "sourceLength": 48,
+      "sourceSha256": "bc6ac9dc2f011d8f586baf0eaed667720ae55f459064442a94313a8dfa02ac4d",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 34603140,
+            "int": 34603140,
+            "float": 1.057959713451842e-37
+          },
+          "raw": "84001002"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1603/p1",
+          "fieldName": "meshes",
+          "target": "Rain:n266",
+          "targetNodeId": 266,
+          "offset": 385669
+        },
+        {
+          "fieldId": "n1603/p4",
+          "fieldName": "onKilled",
+          "target": "Rain:n2050",
+          "targetNodeId": 2050,
+          "offset": 385681
+        },
+        {
+          "fieldId": "n1603/p7",
+          "fieldName": "collectible",
+          "target": "Rain:n1705",
+          "targetNodeId": 1705,
+          "offset": 385690
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n1665",
+      "level": "Rain",
+      "nodeId": 1665,
+      "name": "BstNode_2060386411",
+      "className": "SoulTrap",
+      "classIndex": 79,
+      "sourceOffset": 399585,
+      "sourceLength": 50,
+      "sourceSha256": "b3e1082d2346f8ffd35d913d59f1d0ea516f2ae8485d7174e84ccd531dd73745",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2060386411,
+            "int": 2060386411,
+            "float": 5.374069635650492e+35
+          },
+          "raw": "6b00cf7a"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1665/p1",
+          "fieldName": "meshes",
+          "target": "Rain:n375",
+          "targetNodeId": 375,
+          "offset": 399609
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n203",
+      "level": "RainEnd",
+      "nodeId": 203,
+      "name": "BstNode_2060386350",
+      "className": "SoulTrap",
+      "classIndex": 34,
+      "sourceOffset": 77963,
+      "sourceLength": 50,
+      "sourceSha256": "1b292cffa9a819c5432434b34462ef2c582d7b676931aa81749b6a425b90e612",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2060386350,
+            "int": 2060386350,
+            "float": 5.374045471060925e+35
+          },
+          "raw": "2e00cf7a"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n203/p1",
+          "fieldName": "meshes",
+          "target": "RainEnd:n1284",
+          "targetNodeId": 1284,
+          "offset": 77987
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n1260",
+      "level": "RainEnd",
+      "nodeId": 1260,
+      "name": "BstNode_2060386400",
+      "className": "SoulTrap",
+      "classIndex": 34,
+      "sourceOffset": 331213,
+      "sourceLength": 50,
+      "sourceSha256": "a8483f7aa30a4154d0f9abccfe346603243caacb877fee4dd22f5119e20758c5",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2060386400,
+            "int": 2060386400,
+            "float": 5.3740652781015534e+35
+          },
+          "raw": "6000cf7a"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1260/p1",
+          "fieldName": "meshes",
+          "target": "RainEnd:n1092",
+          "targetNodeId": 1092,
+          "offset": 331237
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n1276",
+      "level": "RainEnd",
+      "nodeId": 1276,
+      "name": "BstNode_2060386362",
+      "className": "SoulTrap",
+      "classIndex": 34,
+      "sourceOffset": 335442,
+      "sourceLength": 50,
+      "sourceSha256": "c30dd8659083c722ade38ff8fc81540029ab4158c05620b3d5edcf3a96aef8e6",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2060386362,
+            "int": 2060386362,
+            "float": 5.374050224750676e+35
+          },
+          "raw": "3a00cf7a"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1276/p1",
+          "fieldName": "meshes",
+          "target": "RainEnd:n721",
+          "targetNodeId": 721,
+          "offset": 335466
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n1297",
+      "level": "RainEnd",
+      "nodeId": 1297,
+      "name": "BstNode_2060386327",
+      "className": "SoulTrap",
+      "classIndex": 34,
+      "sourceOffset": 340155,
+      "sourceLength": 50,
+      "sourceSha256": "586b08de0424696e0957be053c592813b9657e21f2088b4c5e3c3502d996cddb",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2060386327,
+            "int": 2060386327,
+            "float": 5.374036359822236e+35
+          },
+          "raw": "1700cf7a"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1297/p1",
+          "fieldName": "meshes",
+          "target": "RainEnd:n489",
+          "targetNodeId": 489,
+          "offset": 340179
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n265",
+      "level": "RainForest",
+      "nodeId": 265,
+      "name": "BstNode_2060386403",
+      "className": "SoulTrap",
+      "classIndex": 33,
+      "sourceOffset": 73097,
+      "sourceLength": 50,
+      "sourceSha256": "2c1d963386533f1b8d23f6c38f0c2592c3801d71d4379f6077fc55516b7d03e1",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2060386403,
+            "int": 2060386403,
+            "float": 5.374066466523991e+35
+          },
+          "raw": "6300cf7a"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n265/p1",
+          "fieldName": "meshes",
+          "target": "RainForest:n257",
+          "targetNodeId": 257,
+          "offset": 73121
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n677",
+      "level": "RainForest",
+      "nodeId": 677,
+      "name": "BstNode_2060386510",
+      "className": "SoulTrap",
+      "classIndex": 33,
+      "sourceOffset": 155831,
+      "sourceLength": 50,
+      "sourceSha256": "f2818abffdc6606244ec783d59df75b61fbe50918c7ea151f92f4c8c975fa31c",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2060386510,
+            "int": 2060386510,
+            "float": 5.374108853590936e+35
+          },
+          "raw": "ce00cf7a"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n677/p1",
+          "fieldName": "meshes",
+          "target": "RainForest:n745",
+          "targetNodeId": 745,
+          "offset": 155855
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n717",
+      "level": "RainForest",
+      "nodeId": 717,
+      "name": "BstNode_2060386399",
+      "className": "SoulTrap",
+      "classIndex": 33,
+      "sourceOffset": 166002,
+      "sourceLength": 50,
+      "sourceSha256": "5f207340533c24c71791262a128d9794599988ca4d07173af2bfb6bf8e5205ed",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2060386399,
+            "int": 2060386399,
+            "float": 5.374064881960741e+35
+          },
+          "raw": "5f00cf7a"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n717/p1",
+          "fieldName": "meshes",
+          "target": "RainForest:n714",
+          "targetNodeId": 714,
+          "offset": 166026
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n1139",
+      "level": "RainForest",
+      "nodeId": 1139,
+      "name": "BstNode_2060386387",
+      "className": "SoulTrap",
+      "classIndex": 33,
+      "sourceOffset": 255858,
+      "sourceLength": 50,
+      "sourceSha256": "7a62ae481569b4ce5aa6358b703df8749cdcad88abf751395f16f6717ffb5407",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2060386387,
+            "int": 2060386387,
+            "float": 5.37406012827099e+35
+          },
+          "raw": "5300cf7a"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1139/p1",
+          "fieldName": "meshes",
+          "target": "RainForest:n545",
+          "targetNodeId": 545,
+          "offset": 255882
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n383",
+      "level": "RainMid",
+      "nodeId": 383,
+      "name": "BstNode_2446917729",
+      "className": "SoulTrap",
+      "classIndex": 46,
+      "sourceOffset": 98059,
+      "sourceLength": 50,
+      "sourceSha256": "1278955c8d070b990dec49588cc33d4b18d024edb0086c06f3a88b4f0e75218c",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2446917729,
+            "int": -1848049567,
+            "float": -3.423679680559767e-28
+          },
+          "raw": "6100d991"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n383/p1",
+          "fieldName": "meshes",
+          "target": "RainMid:n1338",
+          "targetNodeId": 1338,
+          "offset": 98083
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n409",
+      "level": "RainMid",
+      "nodeId": 409,
+      "name": "BstNode_2060386482",
+      "className": "SoulTrap",
+      "classIndex": 46,
+      "sourceOffset": 103136,
+      "sourceLength": 50,
+      "sourceSha256": "2c097c634ea3f0450a0ac151d638aad980c5ae04060231a55b7dc2ac440ad317",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2060386482,
+            "int": 2060386482,
+            "float": 5.374097761648184e+35
+          },
+          "raw": "b200cf7a"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n409/p1",
+          "fieldName": "meshes",
+          "target": "RainMid:n2087",
+          "targetNodeId": 2087,
+          "offset": 103160
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n520",
+      "level": "RainMid",
+      "nodeId": 520,
+      "name": "BstNode_2345992367",
+      "className": "SoulTrap",
+      "classIndex": 46,
+      "sourceOffset": 122596,
+      "sourceLength": 50,
+      "sourceSha256": "1f30d5dab643cb0692f1961c523a20988e2cea2f3701ebefbf4c12e7cdc450ff",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2345992367,
+            "int": -1948974929,
+            "float": -8.204564418845322e-32
+          },
+          "raw": "af00d58b"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n520/p1",
+          "fieldName": "meshes",
+          "target": "RainMid:n1811",
+          "targetNodeId": 1811,
+          "offset": 122620
+        },
+        {
+          "fieldId": "n520/p4",
+          "fieldName": "onKilled",
+          "target": "RainMid:n867",
+          "targetNodeId": 867,
+          "offset": 122632
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n592",
+      "level": "RainMid",
+      "nodeId": 592,
+      "name": "BstNode_2060386512",
+      "className": "SoulTrap",
+      "classIndex": 46,
+      "sourceOffset": 138146,
+      "sourceLength": 50,
+      "sourceSha256": "c9f94d7d51b0e3d9b21cef1b0b99b4aa553b13b300c6376ebd69fdefef384af7",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2060386512,
+            "int": 2060386512,
+            "float": 5.3741096458725614e+35
+          },
+          "raw": "d000cf7a"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n592/p1",
+          "fieldName": "meshes",
+          "target": "RainMid:n501",
+          "targetNodeId": 501,
+          "offset": 138170
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n608",
+      "level": "RainMid",
+      "nodeId": 608,
+      "name": "BstNode_2446917741",
+      "className": "SoulTrap",
+      "classIndex": 46,
+      "sourceOffset": 141120,
+      "sourceLength": 50,
+      "sourceSha256": "01ea0a688604fceb64bb0c18ad8398997f33b4a5578983bb7a5866cd50f8e943",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2446917741,
+            "int": -1848049555,
+            "float": -3.4236825694546835e-28
+          },
+          "raw": "6d00d991"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n608/p1",
+          "fieldName": "meshes",
+          "target": "RainMid:n742",
+          "targetNodeId": 742,
+          "offset": 141144
+        },
+        {
+          "fieldId": "n608/p4",
+          "fieldName": "onKilled",
+          "target": "RainMid:n1432",
+          "targetNodeId": 1432,
+          "offset": 141156
+        },
+        {
+          "fieldId": "n608/p7",
+          "fieldName": "collectible",
+          "target": "RainMid:n19",
+          "targetNodeId": 19,
+          "offset": 141165
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n716",
+      "level": "RainMid",
+      "nodeId": 716,
+      "name": "BstNode_2060386567",
+      "className": "SoulTrap",
+      "classIndex": 46,
+      "sourceOffset": 161850,
+      "sourceLength": 50,
+      "sourceSha256": "87513f7a9f6120700ccbf3238983254a9fea19c399dac26b9281d944e339ce1b",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2060386567,
+            "int": 2060386567,
+            "float": 5.374131433617253e+35
+          },
+          "raw": "0701cf7a"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n716/p1",
+          "fieldName": "meshes",
+          "target": "RainMid:n733",
+          "targetNodeId": 733,
+          "offset": 161874
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n913",
+      "level": "RainMid",
+      "nodeId": 913,
+      "name": "BstNode_2060386532",
+      "className": "SoulTrap",
+      "classIndex": 46,
+      "sourceOffset": 195280,
+      "sourceLength": 50,
+      "sourceSha256": "2d544a73477b2e72721bf9c38fad490f5019614f071cc2d305fd2bd5aa144f4f",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2060386532,
+            "int": 2060386532,
+            "float": 5.374117568688813e+35
+          },
+          "raw": "e400cf7a"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n913/p1",
+          "fieldName": "meshes",
+          "target": "RainMid:n2068",
+          "targetNodeId": 2068,
+          "offset": 195304
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n922",
+      "level": "RainMid",
+      "nodeId": 922,
+      "name": "BstNode_34603372",
+      "className": "SoulTrap",
+      "classIndex": 46,
+      "sourceOffset": 196324,
+      "sourceLength": 48,
+      "sourceSha256": "44051df0d1da3ba40f835328368b06c66efcdb3518c085afb358c084866648d8",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 34603372,
+            "int": 34603372,
+            "float": 1.05798572155134e-37
+          },
+          "raw": "6c011002"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n922/p1",
+          "fieldName": "meshes",
+          "target": "RainMid:n1456",
+          "targetNodeId": 1456,
+          "offset": 196346
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n1257",
+      "level": "RainMid",
+      "nodeId": 1257,
+      "name": "BstNode_2446917735",
+      "className": "SoulTrap",
+      "classIndex": 46,
+      "sourceOffset": 256268,
+      "sourceLength": 50,
+      "sourceSha256": "1745980c4572c91746ce034932ef87fa62093c5722c7cfb770adfcb7c3212f37",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2446917735,
+            "int": -1848049561,
+            "float": -3.423681125007225e-28
+          },
+          "raw": "6700d991"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1257/p1",
+          "fieldName": "meshes",
+          "target": "RainMid:n52",
+          "targetNodeId": 52,
+          "offset": 256292
+        },
+        {
+          "fieldId": "n1257/p4",
+          "fieldName": "onKilled",
+          "target": "RainMid:n2340",
+          "targetNodeId": 2340,
+          "offset": 256304
+        },
+        {
+          "fieldId": "n1257/p7",
+          "fieldName": "collectible",
+          "target": "RainMid:n326",
+          "targetNodeId": 326,
+          "offset": 256313
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n1504",
+      "level": "RainMid",
+      "nodeId": 1504,
+      "name": "BstNode_34603313",
+      "className": "SoulTrap",
+      "classIndex": 46,
+      "sourceOffset": 301658,
+      "sourceLength": 48,
+      "sourceSha256": "4694c5e7ff1af33f23d049f67686be263e4dd1d8789c469d2b19e559e93f62ad",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 34603313,
+            "int": 34603313,
+            "float": 1.0579791074225883e-37
+          },
+          "raw": "31011002"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1504/p1",
+          "fieldName": "meshes",
+          "target": "RainMid:n2159",
+          "targetNodeId": 2159,
+          "offset": 301680
+        },
+        {
+          "fieldId": "n1504/p4",
+          "fieldName": "onKilled",
+          "target": "RainMid:n2364",
+          "targetNodeId": 2364,
+          "offset": 301692
+        },
+        {
+          "fieldId": "n1504/p7",
+          "fieldName": "collectible",
+          "target": "RainMid:n866",
+          "targetNodeId": 866,
+          "offset": 301701
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n1722",
+      "level": "RainMid",
+      "nodeId": 1722,
+      "name": "BstNode_2345992997",
+      "className": "SoulTrap",
+      "classIndex": 46,
+      "sourceOffset": 343122,
+      "sourceLength": 50,
+      "sourceSha256": "b4777505e3cb9c2e11553530471d70d911e4efa9c41732fb7d740c5273b0b9b8",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2345992997,
+            "int": -1948974299,
+            "float": -8.204934699565831e-32
+          },
+          "raw": "2503d58b"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1722/p1",
+          "fieldName": "meshes",
+          "target": "RainMid:n1713",
+          "targetNodeId": 1713,
+          "offset": 343146
+        },
+        {
+          "fieldId": "n1722/p4",
+          "fieldName": "onKilled",
+          "target": "RainMid:n282",
+          "targetNodeId": 282,
+          "offset": 343158
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n1945",
+      "level": "RainMid",
+      "nodeId": 1945,
+      "name": "BstNode_34603287",
+      "className": "SoulTrap",
+      "classIndex": 46,
+      "sourceOffset": 378334,
+      "sourceLength": 48,
+      "sourceSha256": "1edc9308857663b977dfbafc8ccbd72496b1b9381ec473137e3b5d9d347b7134",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 34603287,
+            "int": 34603287,
+            "float": 1.0579761927217825e-37
+          },
+          "raw": "17011002"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1945/p1",
+          "fieldName": "meshes",
+          "target": "RainMid:n1367",
+          "targetNodeId": 1367,
+          "offset": 378356
+        },
+        {
+          "fieldId": "n1945/p4",
+          "fieldName": "onKilled",
+          "target": "RainMid:n2427",
+          "targetNodeId": 2427,
+          "offset": 378368
+        },
+        {
+          "fieldId": "n1945/p7",
+          "fieldName": "collectible",
+          "target": "RainMid:n194",
+          "targetNodeId": 194,
+          "offset": 378377
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n2027",
+      "level": "RainMid",
+      "nodeId": 2027,
+      "name": "BstNode_2446917731",
+      "className": "SoulTrap",
+      "classIndex": 46,
+      "sourceOffset": 390461,
+      "sourceLength": 50,
+      "sourceSha256": "4a1b2e87ddff10dfc6dc24ecc2bd2284b071f6e66d1ffa869336ee195fc43b4c",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2446917731,
+            "int": -1848049565,
+            "float": -3.423680162042253e-28
+          },
+          "raw": "6300d991"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n2027/p1",
+          "fieldName": "meshes",
+          "target": "RainMid:n2001",
+          "targetNodeId": 2001,
+          "offset": 390485
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n2089",
+      "level": "RainMid",
+      "nodeId": 2089,
+      "name": "BstNode_2060386515",
+      "className": "SoulTrap",
+      "classIndex": 46,
+      "sourceOffset": 403051,
+      "sourceLength": 50,
+      "sourceSha256": "817c32c9c27b3de6a1ba535c109a2a70348f5bc9c9f558e8cd85d18f3397b024",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2060386515,
+            "int": 2060386515,
+            "float": 5.374110834294999e+35
+          },
+          "raw": "d300cf7a"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n2089/p1",
+          "fieldName": "meshes",
+          "target": "RainMid:n502",
+          "targetNodeId": 502,
+          "offset": 403075
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n984",
+      "level": "SkyHub2",
+      "nodeId": 984,
+      "name": "BstNode_2060386361",
+      "className": "SoulTrap",
+      "classIndex": 88,
+      "sourceOffset": 211542,
+      "sourceLength": 50,
+      "sourceSha256": "6d441cd8f3d697b88c4d6a300621e0fa0633898bbd8f4be8722cdadc6d2c5597",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2060386361,
+            "int": 2060386361,
+            "float": 5.374049828609863e+35
+          },
+          "raw": "3900cf7a"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n984/p1",
+          "fieldName": "meshes",
+          "target": "SkyHub2:n1818",
+          "targetNodeId": 1818,
+          "offset": 211566
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1101",
+      "level": "SkyHub2",
+      "nodeId": 1101,
+      "name": "BstNode_2060386424",
+      "className": "SoulTrap",
+      "classIndex": 88,
+      "sourceOffset": 234179,
+      "sourceLength": 50,
+      "sourceSha256": "0b699fedb3afcb0274f959fd517caa8d342f111472981f7ce9967cd084813877",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2060386424,
+            "int": 2060386424,
+            "float": 5.374074785481055e+35
+          },
+          "raw": "7800cf7a"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1101/p1",
+          "fieldName": "meshes",
+          "target": "SkyHub2:n364",
+          "targetNodeId": 364,
+          "offset": 234203
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n2390",
+      "level": "SkyHub2",
+      "nodeId": 2390,
+      "name": "BstNode_2060386413",
+      "className": "SoulTrap",
+      "classIndex": 88,
+      "sourceOffset": 451693,
+      "sourceLength": 50,
+      "sourceSha256": "1c0e3e849584c75940b7a92d5f2bd804e17e40e21f221d04f83828f601c25602",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2060386413,
+            "int": 2060386413,
+            "float": 5.374070427932117e+35
+          },
+          "raw": "6d00cf7a"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n2390/p1",
+          "fieldName": "meshes",
+          "target": "SkyHub2:n2215",
+          "targetNodeId": 2215,
+          "offset": 451717
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n1471",
+      "level": "Storm",
+      "nodeId": 1471,
+      "name": "BstNode_2345992657",
+      "className": "SoulTrap",
+      "classIndex": 66,
+      "sourceOffset": 282179,
+      "sourceLength": 50,
+      "sourceSha256": "c744f13d22ef9c75a7f7d0787df8f83a266b930b4d3fa6bf616dff29ffbe1ac1",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2345992657,
+            "int": -1948974639,
+            "float": -8.204734865526191e-32
+          },
+          "raw": "d101d58b"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1471/p1",
+          "fieldName": "meshes",
+          "target": "Storm:n530",
+          "targetNodeId": 530,
+          "offset": 282203
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "CarryLand2",
+      "path": "Levels/CarryLand2/Objects.level.bin",
+      "sha256": "e20b1611daee8e87548c3e2902ef3f5d7b5ce43f48c62c2510b08374c9ac55d2",
+      "bytes": 52809,
+      "nodes": 249,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/CarryLand2.json",
+      "markdown": "Objects对象清单/CarryLand2.md"
+    },
+    {
+      "level": "Dusk",
+      "path": "Levels/Dusk/Objects.level.bin",
+      "sha256": "9222b248f17fb4122cd4ad9650543ab86aab8b077b6965248c70ac2341bf2d5d",
+      "bytes": 242331,
+      "nodes": 1288,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dusk.json",
+      "markdown": "Objects对象清单/Dusk.md"
+    },
+    {
+      "level": "DuskGraveyard",
+      "path": "Levels/DuskGraveyard/Objects.level.bin",
+      "sha256": "128b30dcbe40b68e68fc25d195b68dc39f897259453c02612049ccd37a90ffb4",
+      "bytes": 424333,
+      "nodes": 1791,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DuskGraveyard.json",
+      "markdown": "Objects对象清单/DuskGraveyard.md"
+    },
+    {
+      "level": "DuskMid",
+      "path": "Levels/DuskMid/Objects.level.bin",
+      "sha256": "899ca33226dabd04afecfe7888750938ff4e460cb586603364e150591e9cbda5",
+      "bytes": 234288,
+      "nodes": 1268,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DuskMid.json",
+      "markdown": "Objects对象清单/DuskMid.md"
+    },
+    {
+      "level": "Prairie_Cave",
+      "path": "Levels/Prairie_Cave/Objects.level.bin",
+      "sha256": "675a2256e24f8c4b16540cee6a5cd2b7647ff2fb495724a8bf596717ca39d944",
+      "bytes": 466340,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Cave.json",
+      "markdown": "Objects对象清单/Prairie_Cave.md"
+    },
+    {
+      "level": "Prairie_Village",
+      "path": "Levels/Prairie_Village/Objects.level.bin",
+      "sha256": "4656296b54402016b59b894b4653fbdc71e106a21e0900294f73f2c7b7112385",
+      "bytes": 549989,
+      "nodes": 3724,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Village.json",
+      "markdown": "Objects对象清单/Prairie_Village.md"
+    },
+    {
+      "level": "Rain",
+      "path": "Levels/Rain/Objects.level.bin",
+      "sha256": "20093bccf3bb1ea0936cb993e66cef0187b40a5a411df3573eb28e4def4f75c6",
+      "bytes": 457732,
+      "nodes": 2079,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Rain.json",
+      "markdown": "Objects对象清单/Rain.md"
+    },
+    {
+      "level": "RainEnd",
+      "path": "Levels/RainEnd/Objects.level.bin",
+      "sha256": "247912ec955153e3df80c16a861eb872573502a285a17943518bdce448a8d5e3",
+      "bytes": 427926,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainEnd.json",
+      "markdown": "Objects对象清单/RainEnd.md"
+    },
+    {
+      "level": "RainForest",
+      "path": "Levels/RainForest/Objects.level.bin",
+      "sha256": "2e69b3314c70c61bd99435f4bb4418fba540f227c83670e1af3b5358c64c3b73",
+      "bytes": 271409,
+      "nodes": 1306,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainForest.json",
+      "markdown": "Objects对象清单/RainForest.md"
+    },
+    {
+      "level": "RainMid",
+      "path": "Levels/RainMid/Objects.level.bin",
+      "sha256": "139b219d9b71a2ab24418b1ec41f2ee8a2ebfdf4c5ea992c35348a758682ed23",
+      "bytes": 430825,
+      "nodes": 2457,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainMid.json",
+      "markdown": "Objects对象清单/RainMid.md"
+    },
+    {
+      "level": "SkyHub2",
+      "path": "Levels/SkyHub2/Objects.level.bin",
+      "sha256": "8b467f9b349d9d4ce0d038528c96e44dff30063149bf5bbf90232a56bb9dd36f",
+      "bytes": 475656,
+      "nodes": 2886,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SkyHub2.json",
+      "markdown": "Objects对象清单/SkyHub2.md"
+    },
+    {
+      "level": "Storm",
+      "path": "Levels/Storm/Objects.level.bin",
+      "sha256": "4be187f31f1ef86611831abeb45ed9c1deff5e925f3bae80a6be49af85fa52bd",
+      "bytes": 324849,
+      "nodes": 1954,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Storm.json",
+      "markdown": "Objects对象清单/Storm.md"
+    }
+  ]
+}

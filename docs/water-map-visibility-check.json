@@ -1,0 +1,510 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "level": "Dawn",
+      "camera": [
+        125.42965698242188,
+        4,
+        -956.359130859375
+      ],
+      "target": [
+        125.42965698242188,
+        0,
+        -962.359130859375
+      ],
+      "changedPixels": 4698,
+      "maximumDifference": 55,
+      "visiblePixels": [
+        4698,
+        0
+      ],
+      "attempts": [
+        {
+          "camera": [
+            125.42965698242188,
+            4,
+            -956.359130859375
+          ],
+          "target": [
+            125.42965698242188,
+            0,
+            -962.359130859375
+          ],
+          "changedPixels": 4698,
+          "maximumDifference": 55,
+          "visiblePixels": [
+            4698,
+            0
+          ]
+        }
+      ],
+      "water": {
+        "objects": 1,
+        "frames": 1,
+        "shader": "OceanMesh",
+        "ocean": {
+          "enabled": true,
+          "shader": "Ocean",
+          "indices": 54150,
+          "rows": 96,
+          "grid": [
+            96,
+            96
+          ],
+          "math": "Browser float libm and reciprocal square root; original captured arithmetic verified independently"
+        },
+        "normal": "OceanNormal",
+        "caustics": "Caustics",
+        "puddleNormal": null,
+        "grid": [
+          256,
+          256
+        ],
+        "terms": [
+          117.375,
+          -964.375,
+          0,
+          0.0625
+        ],
+        "waterNodeIds": [
+          365
+        ],
+        "scope": "Original 96x96 Ocean projected sphere grid under the shared SetOceanRender state, Plane10x10 local Water transforms and original Ocean/OceanMesh variants; WaterSim/Reset two-target GLSL with GPU history and restored material wind scroll. The water opaque sampler maps viewport zero sky depth to the equivalent 256000m far distance; actual surface depth is unchanged. Browser Ocean math, editor camera grid focus, zero Avatar contact impulses, sky-only probe and empty point-light grid are explicit adapters. Wet variants bind the PuddleSim signed zero-gradient reset. Actual PuddleSim/rain drops, scene reflections, complete Ocean lifecycle and Metal image parity remain pending",
+        "renderPath": "gpu-resident",
+        "enabled": true
+      },
+      "passes": [
+        "CloudCore",
+        "OpaqueRGBDepth",
+        "WaterSimReset",
+        "Ocean",
+        "OceanMesh",
+        "DepthDownsample",
+        "DepthDownsampleGather",
+        "DepthDownsampleQuarter",
+        "CloudFluffySuperCoarse",
+        "CloudFluffyCoarse",
+        "CloudFluffy",
+        "AlphaColorLogDepth",
+        "FogVolume",
+        "PreviewLuminance",
+        "FogUpsample",
+        "MotionGen",
+        "MotionDilate",
+        "TemporalAa",
+        "Tonemap"
+      ],
+      "statistics": {
+        "transport": {
+          "gpuResident": true,
+          "cloudSampling": "reference-float32",
+          "intermediateFrameReadbacks": 0,
+          "nativeExposureSamples": 2048,
+          "cache": {
+            "stages": 16,
+            "setups": 16,
+            "patches": 0,
+            "intermediateFrameReadbacks": 0,
+            "resourceHashBytes": 15700482,
+            "digestCacheHits": 32,
+            "skippedUpdates": 0
+          }
+        },
+        "temporal": {
+          "cameraCut": true,
+          "frames": 1,
+          "scope": "Original motion/temporal fragments with GPU-resident cloud and color history"
+        }
+      },
+      "screenshot": "docs/water-visible-Dawn.png",
+      "without": "docs/water-hidden-Dawn.png",
+      "sourceHashes": {
+        "objects": "16e26aafc7f9d120a548bf5d8bec04fbc18146bc8db531ef75144889b1ff197a",
+        "meshes": "309bdcf43bcb8c1a8257c2492e103bb694e42193ff72b843e36e07d913311920"
+      }
+    },
+    {
+      "level": "Dusk",
+      "camera": [
+        -263.0619201660156,
+        4,
+        177.22206115722656
+      ],
+      "target": [
+        -263.0619201660156,
+        0,
+        171.22206115722656
+      ],
+      "changedPixels": 12288,
+      "maximumDifference": 114,
+      "visiblePixels": [
+        12288,
+        0
+      ],
+      "attempts": [
+        {
+          "camera": [
+            -263.0619201660156,
+            4,
+            177.22206115722656
+          ],
+          "target": [
+            -263.0619201660156,
+            0,
+            171.22206115722656
+          ],
+          "changedPixels": 12288,
+          "maximumDifference": 114,
+          "visiblePixels": [
+            12288,
+            0
+          ]
+        }
+      ],
+      "water": {
+        "objects": 1,
+        "frames": 1,
+        "shader": "OceanDarkMesh",
+        "ocean": {
+          "enabled": true,
+          "shader": "OceanDark",
+          "indices": 54150,
+          "rows": 96,
+          "grid": [
+            96,
+            96
+          ],
+          "math": "Browser float libm and reciprocal square root; original captured arithmetic verified independently"
+        },
+        "normal": "OceanNormal",
+        "caustics": "Caustics",
+        "puddleNormal": null,
+        "grid": [
+          256,
+          256
+        ],
+        "terms": [
+          -271.0625,
+          169.1875,
+          0,
+          0.0625
+        ],
+        "waterNodeIds": [
+          1103
+        ],
+        "scope": "Original 96x96 Ocean projected sphere grid under the shared SetOceanRender state, Plane10x10 local Water transforms and original Ocean/OceanMesh variants; WaterSim/Reset two-target GLSL with GPU history and restored material wind scroll. The water opaque sampler maps viewport zero sky depth to the equivalent 256000m far distance; actual surface depth is unchanged. Browser Ocean math, editor camera grid focus, zero Avatar contact impulses, sky-only probe and empty point-light grid are explicit adapters. Wet variants bind the PuddleSim signed zero-gradient reset. Actual PuddleSim/rain drops, scene reflections, complete Ocean lifecycle and Metal image parity remain pending",
+        "renderPath": "gpu-resident",
+        "enabled": true
+      },
+      "passes": [
+        "CloudCore",
+        "OpaqueRGBDepth",
+        "WaterSimReset",
+        "OceanDark",
+        "OceanDarkMesh",
+        "DepthDownsample",
+        "DepthDownsampleGather",
+        "DepthDownsampleQuarter",
+        "CloudFluffySuperCoarse",
+        "CloudFluffyCoarse",
+        "CloudFluffy",
+        "AlphaColorLogDepth",
+        "PreviewLuminance",
+        "FogUpsample",
+        "MotionGen",
+        "MotionDilate",
+        "TemporalAa",
+        "Tonemap"
+      ],
+      "statistics": {
+        "transport": {
+          "gpuResident": true,
+          "cloudSampling": "reference-float32",
+          "intermediateFrameReadbacks": 0,
+          "nativeExposureSamples": 2048,
+          "cache": {
+            "stages": 16,
+            "setups": 21,
+            "patches": 3,
+            "intermediateFrameReadbacks": 0,
+            "resourceHashBytes": 34656062,
+            "digestCacheHits": 60,
+            "skippedUpdates": 7
+          }
+        },
+        "temporal": {
+          "cameraCut": true,
+          "frames": 1,
+          "scope": "Original motion/temporal fragments with GPU-resident cloud and color history"
+        }
+      },
+      "screenshot": "docs/water-visible-Dusk.png",
+      "without": "docs/water-hidden-Dusk.png",
+      "sourceHashes": {
+        "objects": "9222b248f17fb4122cd4ad9650543ab86aab8b077b6965248c70ac2341bf2d5d",
+        "meshes": "7ee4233606e0ff96dcc36e2c2a7ebc3798c41ba70a1e3a2dc0fe00f2a920c712"
+      }
+    },
+    {
+      "level": "SkyHub2",
+      "camera": [
+        533.6797485351562,
+        208.20516967773438,
+        -43.77083969116211
+      ],
+      "target": [
+        533.6797485351562,
+        204.20516967773438,
+        -49.77083969116211
+      ],
+      "changedPixels": 11887,
+      "maximumDifference": 155,
+      "visiblePixels": [
+        11943,
+        11392
+      ],
+      "attempts": [
+        {
+          "camera": [
+            533.6797485351562,
+            208.20516967773438,
+            -43.77083969116211
+          ],
+          "target": [
+            533.6797485351562,
+            204.20516967773438,
+            -49.77083969116211
+          ],
+          "changedPixels": 11887,
+          "maximumDifference": 155,
+          "visiblePixels": [
+            11943,
+            11392
+          ]
+        }
+      ],
+      "water": {
+        "objects": 2,
+        "frames": 1,
+        "shader": "OceanMesh",
+        "ocean": {
+          "enabled": false,
+          "shader": "Ocean",
+          "indices": 0,
+          "rows": 0,
+          "grid": [
+            96,
+            96
+          ],
+          "math": "Browser float libm and reciprocal square root; original captured arithmetic verified independently"
+        },
+        "normal": "OceanNormal",
+        "caustics": "Caustics",
+        "puddleNormal": null,
+        "grid": [
+          256,
+          256
+        ],
+        "terms": [
+          525.625,
+          -51.8125,
+          0,
+          0.0625
+        ],
+        "waterNodeIds": [
+          692,
+          1917
+        ],
+        "scope": "Original 96x96 Ocean projected sphere grid under the shared SetOceanRender state, Plane10x10 local Water transforms and original Ocean/OceanMesh variants; WaterSim/Reset two-target GLSL with GPU history and restored material wind scroll. The water opaque sampler maps viewport zero sky depth to the equivalent 256000m far distance; actual surface depth is unchanged. Browser Ocean math, editor camera grid focus, zero Avatar contact impulses, sky-only probe and empty point-light grid are explicit adapters. Wet variants bind the PuddleSim signed zero-gradient reset. Actual PuddleSim/rain drops, scene reflections, complete Ocean lifecycle and Metal image parity remain pending",
+        "renderPath": "gpu-resident",
+        "enabled": true
+      },
+      "passes": [
+        "CloudCore",
+        "OpaqueRGBDepth",
+        "WaterSimReset",
+        "OceanMesh",
+        "DepthDownsample",
+        "DepthDownsampleGather",
+        "DepthDownsampleQuarter",
+        "CloudFluffySuperCoarse",
+        "CloudFluffyCoarse",
+        "CloudFluffy",
+        "AlphaColorLogDepth",
+        "PreviewLuminance",
+        "FogUpsample",
+        "MotionGen",
+        "MotionDilate",
+        "TemporalAa",
+        "Tonemap"
+      ],
+      "statistics": {
+        "transport": {
+          "gpuResident": true,
+          "cloudSampling": "reference-float32",
+          "intermediateFrameReadbacks": 0,
+          "nativeExposureSamples": 2048,
+          "cache": {
+            "stages": 16,
+            "setups": 25,
+            "patches": 6,
+            "intermediateFrameReadbacks": 0,
+            "resourceHashBytes": 42634590,
+            "digestCacheHits": 92,
+            "skippedUpdates": 15
+          }
+        },
+        "temporal": {
+          "cameraCut": true,
+          "frames": 1,
+          "scope": "Original motion/temporal fragments with GPU-resident cloud and color history"
+        }
+      },
+      "screenshot": "docs/water-visible-SkyHub2.png",
+      "without": "docs/water-hidden-SkyHub2.png",
+      "sourceHashes": {
+        "objects": "8b467f9b349d9d4ce0d038528c96e44dff30063149bf5bbf90232a56bb9dd36f",
+        "meshes": "f3476d70eff88c830334562840cc03c10330892f6fe39d412e6e89d8d9d57c59"
+      }
+    },
+    {
+      "level": "RainForest",
+      "camera": [
+        75.13397979736328,
+        99.83332824707031,
+        -8.655957221984863
+      ],
+      "target": [
+        75.13397979736328,
+        95.83332824707031,
+        -14.655957221984863
+      ],
+      "changedPixels": 12281,
+      "maximumDifference": 183,
+      "visiblePixels": [
+        12288,
+        12288
+      ],
+      "attempts": [
+        {
+          "camera": [
+            75.13397979736328,
+            99.83332824707031,
+            -8.655957221984863
+          ],
+          "target": [
+            75.13397979736328,
+            95.83332824707031,
+            -14.655957221984863
+          ],
+          "changedPixels": 12281,
+          "maximumDifference": 183,
+          "visiblePixels": [
+            12288,
+            12288
+          ]
+        }
+      ],
+      "water": {
+        "objects": 2,
+        "frames": 1,
+        "shader": "OceanMeshWet",
+        "ocean": {
+          "enabled": false,
+          "shader": "Ocean",
+          "indices": 0,
+          "rows": 0,
+          "grid": [
+            96,
+            96
+          ],
+          "math": "Browser float libm and reciprocal square root; original captured arithmetic verified independently"
+        },
+        "normal": "OceanNormal",
+        "caustics": "Caustics",
+        "puddleNormal": "PuddleSim zero-gradient reset",
+        "grid": [
+          256,
+          256
+        ],
+        "terms": [
+          67.125,
+          -16.6875,
+          0,
+          0.0625
+        ],
+        "waterNodeIds": [
+          506,
+          726
+        ],
+        "scope": "Original 96x96 Ocean projected sphere grid under the shared SetOceanRender state, Plane10x10 local Water transforms and original Ocean/OceanMesh variants; WaterSim/Reset two-target GLSL with GPU history and restored material wind scroll. The water opaque sampler maps viewport zero sky depth to the equivalent 256000m far distance; actual surface depth is unchanged. Browser Ocean math, editor camera grid focus, zero Avatar contact impulses, sky-only probe and empty point-light grid are explicit adapters. Wet variants bind the PuddleSim signed zero-gradient reset. Actual PuddleSim/rain drops, scene reflections, complete Ocean lifecycle and Metal image parity remain pending",
+        "renderPath": "gpu-resident",
+        "enabled": true
+      },
+      "passes": [
+        "CloudCore",
+        "OpaqueRGBDepth",
+        "WaterSimReset",
+        "OceanMeshWet",
+        "DepthDownsample",
+        "DepthDownsampleGather",
+        "DepthDownsampleQuarter",
+        "CloudFluffySuperCoarse",
+        "CloudFluffyCoarse",
+        "CloudFluffy",
+        "AlphaColorLogDepth",
+        "PreviewLuminance",
+        "FogUpsample",
+        "MotionGen",
+        "MotionDilate",
+        "TemporalAa",
+        "Tonemap"
+      ],
+      "statistics": {
+        "transport": {
+          "gpuResident": true,
+          "cloudSampling": "reference-float32",
+          "intermediateFrameReadbacks": 0,
+          "nativeExposureSamples": 2048,
+          "cache": {
+            "stages": 16,
+            "setups": 29,
+            "patches": 9,
+            "intermediateFrameReadbacks": 0,
+            "resourceHashBytes": 46692830,
+            "digestCacheHits": 124,
+            "skippedUpdates": 23
+          }
+        },
+        "temporal": {
+          "cameraCut": true,
+          "frames": 1,
+          "scope": "Original motion/temporal fragments with GPU-resident cloud and color history"
+        }
+      },
+      "screenshot": "docs/water-visible-RainForest.png",
+      "without": "docs/water-hidden-RainForest.png",
+      "sourceHashes": {
+        "objects": "2e69b3314c70c61bd99435f4bb4418fba540f227c83670e1af3b5358c64c3b73",
+        "meshes": "37bd864127ff0d36fd32a5e83ec879ec0eed78c7d0ab4c6a67ad6b3a3c955999"
+      }
+    }
+  ],
+  "scope": "Actual terrain/skirt/cloud full composition with original Ocean/OceanDark and local Water shaders. Identical deterministic frames with water draws enabled and removed verify final visible pixels and real terrain depth. Browser Ocean math, sky-only probes and empty point-light grid remain adapters; no game/Metal or Windows hardware parity.",
+  "device": {
+    "engine": "Sky Native Vulkan",
+    "backend": "Vulkan",
+    "device": "llvmpipe (LLVM 19.1.7, 128 bits)",
+    "apiVersion": 4210993,
+    "deviceType": 4,
+    "nativeSurface": false,
+    "dynamicGeometry": true,
+    "shaderFloat16": true,
+    "gpuCanvasPacking": false,
+    "gpuExposureGather": false,
+    "samplerAnisotropyPolicy": "llvmpipe-trilinear",
+    "maxSamplerAnisotropy": 16
+  },
+  "sourceUnchanged": true
+}

@@ -1,0 +1,67 @@
+{
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "functions": {
+    "Buddy.Load": {
+      "start": "0x1001cfaf0",
+      "end": "0x1001d0020",
+      "codeSha256": "4448fda97d546feda77a44153d4bf2f4062f7d86275b7307151e2662abe464e9",
+      "assembly": "evidence/buddy-Buddy.Load.asm"
+    },
+    "BuddyParams.Initialize": {
+      "start": "0x1001cf940",
+      "end": "0x1001cfaf0",
+      "codeSha256": "167d1ecc0b2a3028147a24eb297ad706844826c069f79a211566a6dfdd639eae",
+      "assembly": "evidence/buddy-BuddyParams.Initialize.asm"
+    },
+    "Buddy.Unload": {
+      "start": "0x1001d3790",
+      "end": "0x1001d37a0",
+      "codeSha256": "73541726a60070b66b1f9c8d4c658f7132820422f03049c13e6fa17d6a75ef77",
+      "assembly": "evidence/buddy-Buddy.Unload.asm"
+    },
+    "Buddy.GetPos": {
+      "start": "0x1001d37a0",
+      "end": "0x1001d37d0",
+      "codeSha256": "c8371e98790b970e172408967c95aaf85569dd6f0a84d841b9a96ba6934bb1c4",
+      "assembly": "evidence/buddy-Buddy.GetPos.asm"
+    },
+    "Buddy.GetVelocity": {
+      "start": "0x1001d37d0",
+      "end": "0x1001d37f0",
+      "codeSha256": "42e195ab3a08dd7480f70038e9e90d952aa3f386edcc210df97297e29fe936bc",
+      "assembly": "evidence/buddy-Buddy.GetVelocity.asm"
+    },
+    "Buddy.GetObb": {
+      "start": "0x1001d2fe0",
+      "end": "0x1001d3090",
+      "codeSha256": "8ca783fc8db0af4e9d62f63d1f5f42de60606ea70e31053f64d9c781f231b203",
+      "assembly": "evidence/buddy-Buddy.GetObb.asm"
+    },
+    "Buddy.GetTransform": {
+      "start": "0x1001a6610",
+      "end": "0x1001a6660",
+      "codeSha256": "1c57a9e8dc42fdbd5a838106bbb83f953001bbf83628aeefe241e9c6e88418f9",
+      "assembly": "evidence/buddy-Buddy.GetTransform.asm"
+    },
+    "Buddy.GetEnabled": {
+      "start": "0x1001a6600",
+      "end": "0x1001a6610",
+      "codeSha256": "7fff8fbc1aadec3201988d30fdbb57020f0c8f2e5785225f79a4c036296f18de",
+      "assembly": "evidence/buddy-Buddy.GetEnabled.asm"
+    },
+    "Buddy.MotionCache.Initialize": {
+      "start": "0x1007331f0",
+      "end": "0x100733230",
+      "codeSha256": "c35a70da244f0afe11d7107c40e55fbfd02a8b881b114a17870e485cf914e86c",
+      "assembly": "evidence/buddy-Buddy.MotionCache.Initialize.asm"
+    }
+  },
+  "scope": "Whole ordinary Buddy Load and shared parameter action lookup plus original motion-cache initialization. Parent constructors independently verified. Actual Model cloning, animation sequence registry, active-player/Marker and game owners remain explicit services; Buddy.Update, collision, network, dynamic drawing and complete owner lifecycle remain pending. Native Unload is an empty body and does not release the Model or Barn.",
+  "constants": {
+    "thresholdBits": 925353388,
+    "randomScaleBits": 805306368
+  },
+  "vectors": {
+    "modelScaleHex": "0000803f0000803f0000803f00000000"
+  }
+}

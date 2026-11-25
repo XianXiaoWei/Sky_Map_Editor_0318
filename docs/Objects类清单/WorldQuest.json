@@ -1,0 +1,1288 @@
+{
+  "className": "WorldQuest",
+  "functionGroup": "任务、先祖与场景机制",
+  "functionRole": "世界任务、活动、加入与奖励状态",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "WorldQuest 的原默认值、继承初始化及 15 个序列化字段变体；原注册字段 15 项。"
+    },
+    {
+      "name": "世界任务、活动、加入与奖励状态",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "FragmentCollectActivity（15 条引用）、MeditationArea（15 条引用）、Clump（23 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "WorldQuest",
+    "category": "任务、先祖与场景机制",
+    "functionGroupId": "quests",
+    "functionRole": "世界任务、活动、加入与奖励状态",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "WorldQuest 的原默认值、继承初始化及 15 个序列化字段变体；原注册字段 15 项。"
+      },
+      {
+        "name": "世界任务、活动、加入与奖励状态",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "FragmentCollectActivity（15 条引用）、MeditationArea（15 条引用）、Clump（23 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Clump",
+        "references": 23
+      },
+      {
+        "className": "FragmentCollectActivity",
+        "references": 15
+      },
+      {
+        "className": "MeditationArea",
+        "references": 15
+      }
+    ],
+    "rttiWorkingGroup": "交互、事件与任务",
+    "role": "对象实例类型",
+    "instances": 15,
+    "nestedInstances": 0,
+    "referenceFields": 53,
+    "declaredLevels": 7,
+    "levels": [
+      {
+        "level": "CarryLand",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "CarryLand2",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Dawn",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_ButterflyFields",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Cave",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_NestAndKeeper",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Village",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "activity",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "holdRegion",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "joinType",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "onActivityComplete",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "onFail",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "onLoadIfJoinable",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "onLoadIfNotAvailable",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "onLoadIfNotJoinable",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "onReward",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "onStart",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "onStop",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "onSucceed",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "questDef",
+        "type": 1,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "startMeditation",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "startType",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100cebb60",
+    "nativeRegisteredFields": [
+      {
+        "name": "questDef",
+        "typeGetter": "__Z17GetMetaTypeByTypeINSt3__112basic_stringIcNS0_11char_traitsIcEE16StlPoolAllocatorIcEEEERK8MetaTypev",
+        "nativeOffset": 8,
+        "registrationFunction": "0x10054e9d0",
+        "propertyAddress": "0x100ceac00"
+      },
+      {
+        "name": "startMeditation",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP14MeditationAreaERK8MetaTypev",
+        "nativeOffset": 32,
+        "registrationFunction": "0x10054e9d0",
+        "propertyAddress": "0x100ceac50"
+      },
+      {
+        "name": "activity",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP8ActivityERK8MetaTypev",
+        "nativeOffset": 40,
+        "registrationFunction": "0x10054e9d0",
+        "propertyAddress": "0x100ceaca0"
+      },
+      {
+        "name": "holdRegion",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x10054e9d0",
+        "propertyAddress": "0x100ceacf0"
+      },
+      {
+        "name": "startType",
+        "typeGetter": "__Z17GetMetaTypeByTypeI14QuestStartTypeERK8MetaTypev",
+        "nativeOffset": 64,
+        "registrationFunction": "0x10054e9d0",
+        "propertyAddress": "0x100cead40"
+      },
+      {
+        "name": "joinType",
+        "typeGetter": "__Z17GetMetaTypeByTypeI13QuestJoinTypeERK8MetaTypev",
+        "nativeOffset": 68,
+        "registrationFunction": "0x10054e9d0",
+        "propertyAddress": "0x100cead90"
+      },
+      {
+        "name": "onLoadIfJoinable",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 80,
+        "registrationFunction": "0x10054e9d0",
+        "propertyAddress": "0x100ceade0"
+      },
+      {
+        "name": "onLoadIfNotJoinable",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 88,
+        "registrationFunction": "0x10054e9d0",
+        "propertyAddress": "0x100ceae30"
+      },
+      {
+        "name": "onLoadIfNotAvailable",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 96,
+        "registrationFunction": "0x10054e9d0",
+        "propertyAddress": "0x100ceae80"
+      },
+      {
+        "name": "onStart",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 104,
+        "registrationFunction": "0x10054e9d0",
+        "propertyAddress": "0x100ceaed0"
+      },
+      {
+        "name": "onActivityComplete",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 112,
+        "registrationFunction": "0x10054e9d0",
+        "propertyAddress": "0x100ceaf20"
+      },
+      {
+        "name": "onSucceed",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 120,
+        "registrationFunction": "0x10054e9d0",
+        "propertyAddress": "0x100ceaf70"
+      },
+      {
+        "name": "onReward",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 128,
+        "registrationFunction": "0x10054e9d0",
+        "propertyAddress": "0x100ceafc0"
+      },
+      {
+        "name": "onFail",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 136,
+        "registrationFunction": "0x10054e9d0",
+        "propertyAddress": "0x100ceb010"
+      },
+      {
+        "name": "onStop",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 144,
+        "registrationFunction": "0x10054e9d0",
+        "propertyAddress": "0x100ceb060"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 15 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "CarryLand:n32",
+      "level": "CarryLand",
+      "nodeId": 32,
+      "name": "BstNode_3707305987",
+      "className": "WorldQuest",
+      "classIndex": 12,
+      "sourceOffset": 13178,
+      "sourceLength": 80,
+      "sourceSha256": "e6de2fefd741da2db697b86514adf633788046e567ad633733abc8f1a5f19d85",
+      "declaredFieldCount": 15,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n32/p1",
+          "fieldName": "activity",
+          "target": "CarryLand:n66",
+          "targetNodeId": 66,
+          "offset": 13205
+        },
+        {
+          "fieldId": "n32/p7",
+          "fieldName": "startMeditation",
+          "target": "CarryLand:n57",
+          "targetNodeId": 57,
+          "offset": 13229
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n45",
+      "level": "CarryLand",
+      "nodeId": 45,
+      "name": "BstNode_3707306041",
+      "className": "WorldQuest",
+      "classIndex": 12,
+      "sourceOffset": 15014,
+      "sourceLength": 80,
+      "sourceSha256": "c3ab510b7eaa88c4862779d8c315a399c1f5693e2e036d1c2bd1f5f8581318f7",
+      "declaredFieldCount": 15,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n45/p1",
+          "fieldName": "activity",
+          "target": "CarryLand:n27",
+          "targetNodeId": 27,
+          "offset": 15041
+        },
+        {
+          "fieldId": "n45/p7",
+          "fieldName": "startMeditation",
+          "target": "CarryLand:n52",
+          "targetNodeId": 52,
+          "offset": 15065
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n48",
+      "level": "CarryLand",
+      "nodeId": 48,
+      "name": "BstNode_3707306015",
+      "className": "WorldQuest",
+      "classIndex": 12,
+      "sourceOffset": 15315,
+      "sourceLength": 80,
+      "sourceSha256": "4663789ef67c3482f28d967901959c51bf3e42b1a9f38814afdfa46a97e77528",
+      "declaredFieldCount": 15,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n48/p1",
+          "fieldName": "activity",
+          "target": "CarryLand:n22",
+          "targetNodeId": 22,
+          "offset": 15342
+        },
+        {
+          "fieldId": "n48/p7",
+          "fieldName": "startMeditation",
+          "target": "CarryLand:n76",
+          "targetNodeId": 76,
+          "offset": 15366
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand2:n34",
+      "level": "CarryLand2",
+      "nodeId": 34,
+      "name": "BstNode_3707305987",
+      "className": "WorldQuest",
+      "classIndex": 12,
+      "sourceOffset": 18385,
+      "sourceLength": 80,
+      "sourceSha256": "fa6dab93e1bdb785360dc0196a5da854722987a0bce562ca50cd141e5f87718d",
+      "declaredFieldCount": 15,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n34/p1",
+          "fieldName": "activity",
+          "target": "CarryLand2:n71",
+          "targetNodeId": 71,
+          "offset": 18412
+        },
+        {
+          "fieldId": "n34/p7",
+          "fieldName": "startMeditation",
+          "target": "CarryLand2:n62",
+          "targetNodeId": 62,
+          "offset": 18436
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand2:n35",
+      "level": "CarryLand2",
+      "nodeId": 35,
+      "name": "BstNode_3707306041",
+      "className": "WorldQuest",
+      "classIndex": 12,
+      "sourceOffset": 18465,
+      "sourceLength": 80,
+      "sourceSha256": "6ff03111e77484d995460ae3d1c612558bfd3eb5abdd13336c7706be1c68776b",
+      "declaredFieldCount": 15,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n35/p1",
+          "fieldName": "activity",
+          "target": "CarryLand2:n28",
+          "targetNodeId": 28,
+          "offset": 18492
+        },
+        {
+          "fieldId": "n35/p7",
+          "fieldName": "startMeditation",
+          "target": "CarryLand2:n185",
+          "targetNodeId": 185,
+          "offset": 18516
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand2:n198",
+      "level": "CarryLand2",
+      "nodeId": 198,
+      "name": "BstNode_3707306015",
+      "className": "WorldQuest",
+      "classIndex": 12,
+      "sourceOffset": 46143,
+      "sourceLength": 80,
+      "sourceSha256": "07d213bedc257a79b0661fb8957a6ebd543f628d545dea1c32747b7418e9f9e5",
+      "declaredFieldCount": 15,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n198/p1",
+          "fieldName": "activity",
+          "target": "CarryLand2:n148",
+          "targetNodeId": 148,
+          "offset": 46170
+        },
+        {
+          "fieldId": "n198/p7",
+          "fieldName": "startMeditation",
+          "target": "CarryLand2:n33",
+          "targetNodeId": 33,
+          "offset": 46194
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n880",
+      "level": "Dawn",
+      "nodeId": 880,
+      "name": "BstNode_34603011",
+      "className": "WorldQuest",
+      "classIndex": 81,
+      "sourceOffset": 172585,
+      "sourceLength": 89,
+      "sourceSha256": "1857cbf62ed10100e2e1bf36d1e0207411cb3eaa60c8ab0797aa5d0f1074ff25",
+      "declaredFieldCount": 15,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n880/p0",
+          "fieldName": "onLoadIfNotAvailable",
+          "target": "Dawn:n1658",
+          "targetNodeId": 1658,
+          "offset": 172606
+        },
+        {
+          "fieldId": "n880/p1",
+          "fieldName": "activity",
+          "target": "Dawn:n876",
+          "targetNodeId": 876,
+          "offset": 172610
+        },
+        {
+          "fieldId": "n880/p4",
+          "fieldName": "onReward",
+          "target": "Dawn:n3198",
+          "targetNodeId": 3198,
+          "offset": 172622
+        },
+        {
+          "fieldId": "n880/p7",
+          "fieldName": "startMeditation",
+          "target": "Dawn:n271",
+          "targetNodeId": 271,
+          "offset": 172634
+        },
+        {
+          "fieldId": "n880/p11",
+          "fieldName": "onStart",
+          "target": "Dawn:n3199",
+          "targetNodeId": 3199,
+          "offset": 172658
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n427",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 427,
+      "name": "BstNode_3122855986",
+      "className": "WorldQuest",
+      "classIndex": 46,
+      "sourceOffset": 115896,
+      "sourceLength": 97,
+      "sourceSha256": "adef0df5da12190409dd07eee7a1d75ac77329ca63263312be0a0bda9fae837b",
+      "declaredFieldCount": 15,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n427/p1",
+          "fieldName": "activity",
+          "target": "Prairie_ButterflyFields:n268",
+          "targetNodeId": 268,
+          "offset": 115923
+        },
+        {
+          "fieldId": "n427/p4",
+          "fieldName": "onReward",
+          "target": "Prairie_ButterflyFields:n1416",
+          "targetNodeId": 1416,
+          "offset": 115935
+        },
+        {
+          "fieldId": "n427/p7",
+          "fieldName": "startMeditation",
+          "target": "Prairie_ButterflyFields:n936",
+          "targetNodeId": 936,
+          "offset": 115947
+        },
+        {
+          "fieldId": "n427/p11",
+          "fieldName": "onStart",
+          "target": "Prairie_ButterflyFields:n1417",
+          "targetNodeId": 1417,
+          "offset": 115977
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n558",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 558,
+      "name": "BstNode_3707305985",
+      "className": "WorldQuest",
+      "classIndex": 46,
+      "sourceOffset": 143102,
+      "sourceLength": 98,
+      "sourceSha256": "0f5e75868c41fbb14eb1394805edd1b05dae04805fbb3710b466a30d54c68280",
+      "declaredFieldCount": 15,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n558/p1",
+          "fieldName": "activity",
+          "target": "Prairie_ButterflyFields:n1180",
+          "targetNodeId": 1180,
+          "offset": 143129
+        },
+        {
+          "fieldId": "n558/p4",
+          "fieldName": "onReward",
+          "target": "Prairie_ButterflyFields:n1426",
+          "targetNodeId": 1426,
+          "offset": 143141
+        },
+        {
+          "fieldId": "n558/p7",
+          "fieldName": "startMeditation",
+          "target": "Prairie_ButterflyFields:n936",
+          "targetNodeId": 936,
+          "offset": 143153
+        },
+        {
+          "fieldId": "n558/p11",
+          "fieldName": "onStart",
+          "target": "Prairie_ButterflyFields:n1427",
+          "targetNodeId": 1427,
+          "offset": 143184
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n747",
+      "level": "Prairie_Cave",
+      "nodeId": 747,
+      "name": "BstNode_3122855986",
+      "className": "WorldQuest",
+      "classIndex": 57,
+      "sourceOffset": 198357,
+      "sourceLength": 93,
+      "sourceSha256": "d67399dc651a370ebf4844cb40372e9ca005d565bfde036e8a4e4a9c00823ceb",
+      "declaredFieldCount": 15,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n747/p1",
+          "fieldName": "activity",
+          "target": "Prairie_Cave:n423",
+          "targetNodeId": 423,
+          "offset": 198384
+        },
+        {
+          "fieldId": "n747/p4",
+          "fieldName": "onReward",
+          "target": "Prairie_Cave:n1874",
+          "targetNodeId": 1874,
+          "offset": 198396
+        },
+        {
+          "fieldId": "n747/p5",
+          "fieldName": "onActivityComplete",
+          "target": "Prairie_Cave:n1875",
+          "targetNodeId": 1875,
+          "offset": 198400
+        },
+        {
+          "fieldId": "n747/p7",
+          "fieldName": "startMeditation",
+          "target": "Prairie_Cave:n1225",
+          "targetNodeId": 1225,
+          "offset": 198408
+        },
+        {
+          "fieldId": "n747/p11",
+          "fieldName": "onStart",
+          "target": "Prairie_Cave:n1876",
+          "targetNodeId": 1876,
+          "offset": 198434
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n932",
+      "level": "Prairie_Cave",
+      "nodeId": 932,
+      "name": "BstNode_3707305985",
+      "className": "WorldQuest",
+      "classIndex": 57,
+      "sourceOffset": 239868,
+      "sourceLength": 94,
+      "sourceSha256": "3654aa9f1ba47b6bb458271336c206940ce719587c440c3e78c2047ab0b84af2",
+      "declaredFieldCount": 15,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n932/p1",
+          "fieldName": "activity",
+          "target": "Prairie_Cave:n1610",
+          "targetNodeId": 1610,
+          "offset": 239895
+        },
+        {
+          "fieldId": "n932/p4",
+          "fieldName": "onReward",
+          "target": "Prairie_Cave:n1898",
+          "targetNodeId": 1898,
+          "offset": 239907
+        },
+        {
+          "fieldId": "n932/p5",
+          "fieldName": "onActivityComplete",
+          "target": "Prairie_Cave:n1899",
+          "targetNodeId": 1899,
+          "offset": 239911
+        },
+        {
+          "fieldId": "n932/p7",
+          "fieldName": "startMeditation",
+          "target": "Prairie_Cave:n1225",
+          "targetNodeId": 1225,
+          "offset": 239919
+        },
+        {
+          "fieldId": "n932/p11",
+          "fieldName": "onStart",
+          "target": "Prairie_Cave:n1900",
+          "targetNodeId": 1900,
+          "offset": 239946
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n512",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 512,
+      "name": "BstNode_3122855986",
+      "className": "WorldQuest",
+      "classIndex": 55,
+      "sourceOffset": 131943,
+      "sourceLength": 92,
+      "sourceSha256": "f734dfbd7ed2ffdc59980f74f59fc6d5ec4bf693f1a568472dd353a630ab63b2",
+      "declaredFieldCount": 15,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n512/p1",
+          "fieldName": "activity",
+          "target": "Prairie_NestAndKeeper:n28",
+          "targetNodeId": 28,
+          "offset": 131970
+        },
+        {
+          "fieldId": "n512/p4",
+          "fieldName": "onReward",
+          "target": "Prairie_NestAndKeeper:n807",
+          "targetNodeId": 807,
+          "offset": 131982
+        },
+        {
+          "fieldId": "n512/p5",
+          "fieldName": "onActivityComplete",
+          "target": "Prairie_NestAndKeeper:n1027",
+          "targetNodeId": 1027,
+          "offset": 131986
+        },
+        {
+          "fieldId": "n512/p7",
+          "fieldName": "startMeditation",
+          "target": "Prairie_NestAndKeeper:n496",
+          "targetNodeId": 496,
+          "offset": 131994
+        },
+        {
+          "fieldId": "n512/p11",
+          "fieldName": "onStart",
+          "target": "Prairie_NestAndKeeper:n1028",
+          "targetNodeId": 1028,
+          "offset": 132019
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n524",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 524,
+      "name": "BstNode_34603017",
+      "className": "WorldQuest",
+      "classIndex": 55,
+      "sourceOffset": 134660,
+      "sourceLength": 91,
+      "sourceSha256": "6c108f6855be70689dae6ccbf5ea37adf53f88e140928fb52910b584fb0f8917",
+      "declaredFieldCount": 15,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n524/p1",
+          "fieldName": "activity",
+          "target": "Prairie_NestAndKeeper:n201",
+          "targetNodeId": 201,
+          "offset": 134685
+        },
+        {
+          "fieldId": "n524/p4",
+          "fieldName": "onReward",
+          "target": "Prairie_NestAndKeeper:n498",
+          "targetNodeId": 498,
+          "offset": 134697
+        },
+        {
+          "fieldId": "n524/p5",
+          "fieldName": "onActivityComplete",
+          "target": "Prairie_NestAndKeeper:n1033",
+          "targetNodeId": 1033,
+          "offset": 134701
+        },
+        {
+          "fieldId": "n524/p7",
+          "fieldName": "startMeditation",
+          "target": "Prairie_NestAndKeeper:n496",
+          "targetNodeId": 496,
+          "offset": 134709
+        },
+        {
+          "fieldId": "n524/p11",
+          "fieldName": "onStart",
+          "target": "Prairie_NestAndKeeper:n1034",
+          "targetNodeId": 1034,
+          "offset": 134735
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n617",
+      "level": "Prairie_Village",
+      "nodeId": 617,
+      "name": "BstNode_3707305985",
+      "className": "WorldQuest",
+      "classIndex": 71,
+      "sourceOffset": 130178,
+      "sourceLength": 96,
+      "sourceSha256": "1dbb3db68d71a6d21867919206c2fd3c0732a56047957107ab66b8fa1d6917ac",
+      "declaredFieldCount": 15,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n617/p1",
+          "fieldName": "activity",
+          "target": "Prairie_Village:n1342",
+          "targetNodeId": 1342,
+          "offset": 130205
+        },
+        {
+          "fieldId": "n617/p4",
+          "fieldName": "onReward",
+          "target": "Prairie_Village:n3255",
+          "targetNodeId": 3255,
+          "offset": 130217
+        },
+        {
+          "fieldId": "n617/p7",
+          "fieldName": "startMeditation",
+          "target": "Prairie_Village:n1511",
+          "targetNodeId": 1511,
+          "offset": 130229
+        },
+        {
+          "fieldId": "n617/p11",
+          "fieldName": "onStart",
+          "target": "Prairie_Village:n3256",
+          "targetNodeId": 3256,
+          "offset": 130258
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1331",
+      "level": "Prairie_Village",
+      "nodeId": 1331,
+      "name": "BstNode_1528234044",
+      "className": "WorldQuest",
+      "classIndex": 71,
+      "sourceOffset": 244944,
+      "sourceLength": 97,
+      "sourceSha256": "c42f83a5f0e68edba4d6ec7bf2658e3c4aed3bd2d7025422e3693defcfd492e8",
+      "declaredFieldCount": 15,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1331/p1",
+          "fieldName": "activity",
+          "target": "Prairie_Village:n927",
+          "targetNodeId": 927,
+          "offset": 244971
+        },
+        {
+          "fieldId": "n1331/p4",
+          "fieldName": "onReward",
+          "target": "Prairie_Village:n3401",
+          "targetNodeId": 3401,
+          "offset": 244983
+        },
+        {
+          "fieldId": "n1331/p7",
+          "fieldName": "startMeditation",
+          "target": "Prairie_Village:n1461",
+          "targetNodeId": 1461,
+          "offset": 244995
+        },
+        {
+          "fieldId": "n1331/p11",
+          "fieldName": "onStart",
+          "target": "Prairie_Village:n3402",
+          "targetNodeId": 3402,
+          "offset": 245025
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "CarryLand",
+      "path": "Levels/CarryLand/Objects.level.bin",
+      "sha256": "05b7ec8214f29c52ae93d689df8bbea764240612425e0524259f3b185907993c",
+      "bytes": 26338,
+      "nodes": 109,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/CarryLand.json",
+      "markdown": "Objects对象清单/CarryLand.md"
+    },
+    {
+      "level": "CarryLand2",
+      "path": "Levels/CarryLand2/Objects.level.bin",
+      "sha256": "e20b1611daee8e87548c3e2902ef3f5d7b5ce43f48c62c2510b08374c9ac55d2",
+      "bytes": 52809,
+      "nodes": 249,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/CarryLand2.json",
+      "markdown": "Objects对象清单/CarryLand2.md"
+    },
+    {
+      "level": "Dawn",
+      "path": "Levels/Dawn/Objects.level.bin",
+      "sha256": "16e26aafc7f9d120a548bf5d8bec04fbc18146bc8db531ef75144889b1ff197a",
+      "bytes": 504637,
+      "nodes": 3798,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dawn.json",
+      "markdown": "Objects对象清单/Dawn.md"
+    },
+    {
+      "level": "Prairie_ButterflyFields",
+      "path": "Levels/Prairie_ButterflyFields/Objects.level.bin",
+      "sha256": "29d8d61a082f3e3414ecfbb501b5f65499deb37ad4a1078ce2e9b88ac0d1e441",
+      "bytes": 297606,
+      "nodes": 1513,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_ButterflyFields.json",
+      "markdown": "Objects对象清单/Prairie_ButterflyFields.md"
+    },
+    {
+      "level": "Prairie_Cave",
+      "path": "Levels/Prairie_Cave/Objects.level.bin",
+      "sha256": "675a2256e24f8c4b16540cee6a5cd2b7647ff2fb495724a8bf596717ca39d944",
+      "bytes": 466340,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Cave.json",
+      "markdown": "Objects对象清单/Prairie_Cave.md"
+    },
+    {
+      "level": "Prairie_NestAndKeeper",
+      "path": "Levels/Prairie_NestAndKeeper/Objects.level.bin",
+      "sha256": "5eabe877e07c84e5f9270035aaab73fa20144c87f6e9136e5285dbaff3f85b7a",
+      "bytes": 239403,
+      "nodes": 1077,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_NestAndKeeper.json",
+      "markdown": "Objects对象清单/Prairie_NestAndKeeper.md"
+    },
+    {
+      "level": "Prairie_Village",
+      "path": "Levels/Prairie_Village/Objects.level.bin",
+      "sha256": "4656296b54402016b59b894b4653fbdc71e106a21e0900294f73f2c7b7112385",
+      "bytes": 549989,
+      "nodes": 3724,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Village.json",
+      "markdown": "Objects对象清单/Prairie_Village.md"
+    }
+  ]
+}

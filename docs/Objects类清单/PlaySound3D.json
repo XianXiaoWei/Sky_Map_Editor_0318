@@ -1,0 +1,1287 @@
+{
+  "className": "PlaySound3D",
+  "functionGroup": "声音、音乐与混音",
+  "functionRole": "空间声音播放",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "PlaySound3D 的原默认值、继承初始化及 7 个序列化字段变体；原注册字段 6 项。"
+    },
+    {
+      "name": "空间声音播放",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Marker（27 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "PlaySound3D",
+    "category": "声音、音乐与混音",
+    "functionGroupId": "sound",
+    "functionRole": "空间声音播放",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "PlaySound3D 的原默认值、继承初始化及 7 个序列化字段变体；原注册字段 6 项。"
+      },
+      {
+        "name": "空间声音播放",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Marker（27 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Marker",
+        "references": 27
+      }
+    ],
+    "rttiWorkingGroup": "交互、事件与任务",
+    "role": "对象实例类型",
+    "instances": 27,
+    "nestedInstances": 0,
+    "referenceFields": 27,
+    "declaredLevels": 7,
+    "levels": [
+      {
+        "level": "Dawn",
+        "nodes": 15,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "NightEnd",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_ButterflyFields",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Cave",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_NestAndKeeper",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SkyHub2",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Storm",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "maxDist",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "minDist",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "mixChannel",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "pos",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "sound",
+        "type": 1,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "volume",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100ce9490",
+    "nativeRegisteredFields": [
+      {
+        "name": "sound",
+        "typeGetter": "__Z17GetMetaTypeByTypeINSt3__112basic_stringIcNS0_11char_traitsIcEE16StlPoolAllocatorIcEEEERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x100538940",
+        "propertyAddress": "0x100ce7e70"
+      },
+      {
+        "name": "volume",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 80,
+        "registrationFunction": "0x100538940",
+        "propertyAddress": "0x100ce7ec0"
+      },
+      {
+        "name": "pos",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP6MarkerERK8MetaTypev",
+        "nativeOffset": 88,
+        "registrationFunction": "0x100538940",
+        "propertyAddress": "0x100ce7f10"
+      },
+      {
+        "name": "minDist",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 96,
+        "registrationFunction": "0x100538940",
+        "propertyAddress": "0x100ce7f60"
+      },
+      {
+        "name": "maxDist",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 100,
+        "registrationFunction": "0x100538940",
+        "propertyAddress": "0x100ce7fb0"
+      },
+      {
+        "name": "mixChannel",
+        "typeGetter": "__Z17GetMetaTypeByTypeI10MixChannelERK8MetaTypev",
+        "nativeOffset": 104,
+        "registrationFunction": "0x100538940",
+        "propertyAddress": "0x100ce8000"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 6 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "Dawn:n179",
+      "level": "Dawn",
+      "nodeId": 179,
+      "name": "BstNode_1293287737",
+      "className": "PlaySound3D",
+      "classIndex": 39,
+      "sourceOffset": 61131,
+      "sourceLength": 57,
+      "sourceSha256": "262662f08a9bbb44c45f473f999fc6e8645f86aed2b07d17374a448d61ffbd2e",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n179/p4",
+          "fieldName": "pos",
+          "target": "Dawn:n640",
+          "targetNodeId": 640,
+          "offset": 61176
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n333",
+      "level": "Dawn",
+      "nodeId": 333,
+      "name": "BstNode_1293287916",
+      "className": "PlaySound3D",
+      "classIndex": 39,
+      "sourceOffset": 85289,
+      "sourceLength": 57,
+      "sourceSha256": "eebb65e9920dd75fdde285772fc6b8ae0dfe1ed40f77fb315efaab22b8122967",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n333/p4",
+          "fieldName": "pos",
+          "target": "Dawn:n640",
+          "targetNodeId": 640,
+          "offset": 85334
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n347",
+      "level": "Dawn",
+      "nodeId": 347,
+      "name": "BstNode_3122856381",
+      "className": "PlaySound3D",
+      "classIndex": 39,
+      "sourceOffset": 86381,
+      "sourceLength": 49,
+      "sourceSha256": "b1d64036bab3ec9b354b40e3523513f6d8d488a7c71630a40a1ae06e60305a50",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n347/p4",
+          "fieldName": "pos",
+          "target": "Dawn:n527",
+          "targetNodeId": 527,
+          "offset": 86418
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n664",
+      "level": "Dawn",
+      "nodeId": 664,
+      "name": "BstNode_1293287550",
+      "className": "PlaySound3D",
+      "classIndex": 39,
+      "sourceOffset": 137820,
+      "sourceLength": 57,
+      "sourceSha256": "0e66b1d744559c388a198b8f1d4ee12c15261f541e0787e107495e64538c93d7",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n664/p4",
+          "fieldName": "pos",
+          "target": "Dawn:n640",
+          "targetNodeId": 640,
+          "offset": 137865
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n801",
+      "level": "Dawn",
+      "nodeId": 801,
+      "name": "BstNode_3122856374",
+      "className": "PlaySound3D",
+      "classIndex": 39,
+      "sourceOffset": 160252,
+      "sourceLength": 49,
+      "sourceSha256": "65f649f0cb0103238776f7f67c06fd9745237ce9ba44722c796b3c81f34fbc63",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n801/p4",
+          "fieldName": "pos",
+          "target": "Dawn:n527",
+          "targetNodeId": 527,
+          "offset": 160289
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n879",
+      "level": "Dawn",
+      "nodeId": 879,
+      "name": "BstNode_1293287847",
+      "className": "PlaySound3D",
+      "classIndex": 39,
+      "sourceOffset": 172528,
+      "sourceLength": 57,
+      "sourceSha256": "27ea44679e1fa2aa485047b83eac2c8dca3cb6f16e31d5334b6e63cc732602e7",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n879/p4",
+          "fieldName": "pos",
+          "target": "Dawn:n640",
+          "targetNodeId": 640,
+          "offset": 172573
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1308",
+      "level": "Dawn",
+      "nodeId": 1308,
+      "name": "BstNode_3122856382",
+      "className": "PlaySound3D",
+      "classIndex": 39,
+      "sourceOffset": 235324,
+      "sourceLength": 49,
+      "sourceSha256": "a268f81d66ed0c37ab1af7c6321070dcb13d0a73b288e5d6016cf78ec0f27c69",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1308/p4",
+          "fieldName": "pos",
+          "target": "Dawn:n527",
+          "targetNodeId": 527,
+          "offset": 235361
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1448",
+      "level": "Dawn",
+      "nodeId": 1448,
+      "name": "BstNode_3122855978",
+      "className": "PlaySound3D",
+      "classIndex": 39,
+      "sourceOffset": 255297,
+      "sourceLength": 57,
+      "sourceSha256": "810259dddd2d37faea35efe6b1b48a8da8b401cd71325fad546d66c25bc5b82b",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1448/p4",
+          "fieldName": "pos",
+          "target": "Dawn:n640",
+          "targetNodeId": 640,
+          "offset": 255342
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1562",
+      "level": "Dawn",
+      "nodeId": 1562,
+      "name": "BstNode_3122856839",
+      "className": "PlaySound3D",
+      "classIndex": 39,
+      "sourceOffset": 271192,
+      "sourceLength": 54,
+      "sourceSha256": "3e6f1ea12dbaeb87ea7ca0b78f5c14acefb3d776dd30197f282e59f683b119dc",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1562/p4",
+          "fieldName": "pos",
+          "target": "Dawn:n1674",
+          "targetNodeId": 1674,
+          "offset": 271234
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1628",
+      "level": "Dawn",
+      "nodeId": 1628,
+      "name": "BstNode_320",
+      "className": "PlaySound3D",
+      "classIndex": 39,
+      "sourceOffset": 279463,
+      "sourceLength": 51,
+      "sourceSha256": "13b1a8839d99438b31746849f40a2e3d2bcaf21a4d3a355da18d18fbe2427eb9",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1628/p4",
+          "fieldName": "pos",
+          "target": "Dawn:n194",
+          "targetNodeId": 194,
+          "offset": 279502
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1720",
+      "level": "Dawn",
+      "nodeId": 1720,
+      "name": "BstNode_1293287459",
+      "className": "PlaySound3D",
+      "classIndex": 39,
+      "sourceOffset": 292094,
+      "sourceLength": 54,
+      "sourceSha256": "ee6e92f3e36735a79f996b0830e454c75bb3a3117f8b7ae2357fd423284d03b9",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1720/p4",
+          "fieldName": "pos",
+          "target": "Dawn:n1996",
+          "targetNodeId": 1996,
+          "offset": 292136
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1845",
+      "level": "Dawn",
+      "nodeId": 1845,
+      "name": "BstNode_1293287455",
+      "className": "PlaySound3D",
+      "classIndex": 39,
+      "sourceOffset": 307639,
+      "sourceLength": 57,
+      "sourceSha256": "52991836d0b80af98d838040fa43db779d8142b0919217771179e269ac6f28cc",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1845/p4",
+          "fieldName": "pos",
+          "target": "Dawn:n640",
+          "targetNodeId": 640,
+          "offset": 307684
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2498",
+      "level": "Dawn",
+      "nodeId": 2498,
+      "name": "BstNode_1293287900",
+      "className": "PlaySound3D",
+      "classIndex": 39,
+      "sourceOffset": 416065,
+      "sourceLength": 57,
+      "sourceSha256": "b86a1e29f969db1a3c42071d73a4b99670485c949925d55687dca4621cf618f7",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2498/p4",
+          "fieldName": "pos",
+          "target": "Dawn:n640",
+          "targetNodeId": 640,
+          "offset": 416110
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2633",
+      "level": "Dawn",
+      "nodeId": 2633,
+      "name": "BstNode_1293287454",
+      "className": "PlaySound3D",
+      "classIndex": 39,
+      "sourceOffset": 437594,
+      "sourceLength": 57,
+      "sourceSha256": "3c3df96fc53b36238a6e67e7bcf786ff23ae1ab0957e1f141d2c60a6b43e07e1",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2633/p4",
+          "fieldName": "pos",
+          "target": "Dawn:n640",
+          "targetNodeId": 640,
+          "offset": 437639
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2944",
+      "level": "Dawn",
+      "nodeId": 2944,
+      "name": "BstNode_3122856342",
+      "className": "PlaySound3D",
+      "classIndex": 39,
+      "sourceOffset": 481201,
+      "sourceLength": 55,
+      "sourceSha256": "68b6da656ab4e538357e23edef166a22cd244f7f2362bd690bc1c86fe4e747f6",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2944/p4",
+          "fieldName": "pos",
+          "target": "Dawn:n2736",
+          "targetNodeId": 2736,
+          "offset": 481244
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "NightEnd:n499",
+      "level": "NightEnd",
+      "nodeId": 499,
+      "name": "BstNode_1293287776",
+      "className": "PlaySound3D",
+      "classIndex": 49,
+      "sourceOffset": 106348,
+      "sourceLength": 58,
+      "sourceSha256": "9fc02ae4892218282b38e7488c2ce5a78e363eb21e4662badf7898e6331ad76a",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n499/p4",
+          "fieldName": "pos",
+          "target": "NightEnd:n77",
+          "targetNodeId": 77,
+          "offset": 106394
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n3",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 3,
+      "name": "BstNode_1167523935",
+      "className": "PlaySound3D",
+      "classIndex": 2,
+      "sourceOffset": 24617,
+      "sourceLength": 56,
+      "sourceSha256": "e6be71986013afc9a11d0efae42aa59b22af3845e0fe6f12dcd87b8d6c92d9a9",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n3/p4",
+          "fieldName": "pos",
+          "target": "Prairie_ButterflyFields:n738",
+          "targetNodeId": 738,
+          "offset": 24661
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n126",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 126,
+      "name": "BstNode_3122856039",
+      "className": "PlaySound3D",
+      "classIndex": 2,
+      "sourceOffset": 50818,
+      "sourceLength": 56,
+      "sourceSha256": "8447ae5d1b9c25eaf9695917ad4a0667bffc7590ba8036adb77af88a4d9c21f2",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n126/p4",
+          "fieldName": "pos",
+          "target": "Prairie_ButterflyFields:n440",
+          "targetNodeId": 440,
+          "offset": 50862
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n801",
+      "level": "Prairie_Cave",
+      "nodeId": 801,
+      "name": "BstNode_3122856039",
+      "className": "PlaySound3D",
+      "classIndex": 61,
+      "sourceOffset": 209372,
+      "sourceLength": 56,
+      "sourceSha256": "4ccaf2759a90916c3a6708462044ef00324ab97a9170a82ad5e63e842bcf31d3",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n801/p4",
+          "fieldName": "pos",
+          "target": "Prairie_Cave:n1359",
+          "targetNodeId": 1359,
+          "offset": 209416
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n1220",
+      "level": "Prairie_Cave",
+      "nodeId": 1220,
+      "name": "BstNode_34603017",
+      "className": "PlaySound3D",
+      "classIndex": 61,
+      "sourceOffset": 304129,
+      "sourceLength": 54,
+      "sourceSha256": "60b581965959a6b8bc306c083758536a1ac2797a910af9d941f474495f9f2ad5",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1220/p4",
+          "fieldName": "pos",
+          "target": "Prairie_Cave:n1359",
+          "targetNodeId": 1359,
+          "offset": 304171
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n445",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 445,
+      "name": "BstNode_3122856039",
+      "className": "PlaySound3D",
+      "classIndex": 49,
+      "sourceOffset": 121816,
+      "sourceLength": 56,
+      "sourceSha256": "f64d232c8db73a0b44f7590759d0d72681bfc5764e873de202d9ef7c72fed812",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n445/p4",
+          "fieldName": "pos",
+          "target": "Prairie_NestAndKeeper:n459",
+          "targetNodeId": 459,
+          "offset": 121860
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n461",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 461,
+      "name": "BstNode_34603069",
+      "className": "PlaySound3D",
+      "classIndex": 49,
+      "sourceOffset": 123919,
+      "sourceLength": 54,
+      "sourceSha256": "bd81a390061ba04dd5c929835b8c8cadf5e537f412f23a3412c8c4309185e0cf",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n461/p4",
+          "fieldName": "pos",
+          "target": "Prairie_NestAndKeeper:n459",
+          "targetNodeId": 459,
+          "offset": 123961
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n668",
+      "level": "SkyHub2",
+      "nodeId": 668,
+      "name": "BstNode_1682898980",
+      "className": "PlaySound3D",
+      "classIndex": 68,
+      "sourceOffset": 156293,
+      "sourceLength": 59,
+      "sourceSha256": "20cf3bcce0980bf0141bcc53e2b03f01cbde20afe9c51e656c47484202433aba",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n668/p4",
+          "fieldName": "pos",
+          "target": "SkyHub2:n1593",
+          "targetNodeId": 1593,
+          "offset": 156340
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1043",
+      "level": "SkyHub2",
+      "nodeId": 1043,
+      "name": "BstNode_1682898982",
+      "className": "PlaySound3D",
+      "classIndex": 68,
+      "sourceOffset": 221925,
+      "sourceLength": 59,
+      "sourceSha256": "aaafed6beb271f9ac8194376144801e9450ed0bcef3f41a6e85e6d36ab9f3447",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1043/p4",
+          "fieldName": "pos",
+          "target": "SkyHub2:n1593",
+          "targetNodeId": 1593,
+          "offset": 221972
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n2395",
+      "level": "SkyHub2",
+      "nodeId": 2395,
+      "name": "BstNode_1682898983",
+      "className": "PlaySound3D",
+      "classIndex": 68,
+      "sourceOffset": 452393,
+      "sourceLength": 53,
+      "sourceSha256": "9825c0f7c347a6dc31e42b5da949263f09c0656dbf5dedb7f115e93e77c93b6c",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2395/p4",
+          "fieldName": "pos",
+          "target": "SkyHub2:n1593",
+          "targetNodeId": 1593,
+          "offset": 452434
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n2415",
+      "level": "SkyHub2",
+      "nodeId": 2415,
+      "name": "BstNode_1682898981",
+      "className": "PlaySound3D",
+      "classIndex": 68,
+      "sourceOffset": 455769,
+      "sourceLength": 58,
+      "sourceSha256": "8360c8433a10441d3974583c4477dd3a3236821c1ec3d4dfa9a28ba2c1fa654b",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2415/p4",
+          "fieldName": "pos",
+          "target": "SkyHub2:n1593",
+          "targetNodeId": 1593,
+          "offset": 455815
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n270",
+      "level": "Storm",
+      "nodeId": 270,
+      "name": "BstNode_1293287776",
+      "className": "PlaySound3D",
+      "classIndex": 30,
+      "sourceOffset": 70692,
+      "sourceLength": 58,
+      "sourceSha256": "9bdf73ff23e7317c587813095d3b9e09a0f141a1b706b543e5858f0d9a57d5cf",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n270/p4",
+          "fieldName": "pos",
+          "target": "Storm:n73",
+          "targetNodeId": 73,
+          "offset": 70738
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "Dawn",
+      "path": "Levels/Dawn/Objects.level.bin",
+      "sha256": "16e26aafc7f9d120a548bf5d8bec04fbc18146bc8db531ef75144889b1ff197a",
+      "bytes": 504637,
+      "nodes": 3798,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dawn.json",
+      "markdown": "Objects对象清单/Dawn.md"
+    },
+    {
+      "level": "NightEnd",
+      "path": "Levels/NightEnd/Objects.level.bin",
+      "sha256": "0dd8919c4f0ca58e9dc979e211b84dc990e012815929082b1004ed620af32422",
+      "bytes": 156479,
+      "nodes": 1090,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/NightEnd.json",
+      "markdown": "Objects对象清单/NightEnd.md"
+    },
+    {
+      "level": "Prairie_ButterflyFields",
+      "path": "Levels/Prairie_ButterflyFields/Objects.level.bin",
+      "sha256": "29d8d61a082f3e3414ecfbb501b5f65499deb37ad4a1078ce2e9b88ac0d1e441",
+      "bytes": 297606,
+      "nodes": 1513,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_ButterflyFields.json",
+      "markdown": "Objects对象清单/Prairie_ButterflyFields.md"
+    },
+    {
+      "level": "Prairie_Cave",
+      "path": "Levels/Prairie_Cave/Objects.level.bin",
+      "sha256": "675a2256e24f8c4b16540cee6a5cd2b7647ff2fb495724a8bf596717ca39d944",
+      "bytes": 466340,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Cave.json",
+      "markdown": "Objects对象清单/Prairie_Cave.md"
+    },
+    {
+      "level": "Prairie_NestAndKeeper",
+      "path": "Levels/Prairie_NestAndKeeper/Objects.level.bin",
+      "sha256": "5eabe877e07c84e5f9270035aaab73fa20144c87f6e9136e5285dbaff3f85b7a",
+      "bytes": 239403,
+      "nodes": 1077,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_NestAndKeeper.json",
+      "markdown": "Objects对象清单/Prairie_NestAndKeeper.md"
+    },
+    {
+      "level": "SkyHub2",
+      "path": "Levels/SkyHub2/Objects.level.bin",
+      "sha256": "8b467f9b349d9d4ce0d038528c96e44dff30063149bf5bbf90232a56bb9dd36f",
+      "bytes": 475656,
+      "nodes": 2886,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SkyHub2.json",
+      "markdown": "Objects对象清单/SkyHub2.md"
+    },
+    {
+      "level": "Storm",
+      "path": "Levels/Storm/Objects.level.bin",
+      "sha256": "4be187f31f1ef86611831abeb45ed9c1deff5e925f3bae80a6be49af85fa52bd",
+      "bytes": 324849,
+      "nodes": 1954,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Storm.json",
+      "markdown": "Objects对象清单/Storm.md"
+    }
+  ]
+}

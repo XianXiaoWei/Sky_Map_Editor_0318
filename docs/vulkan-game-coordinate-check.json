@@ -1,0 +1,153 @@
+{
+  "passed": true,
+  "scope": "Original GLES to Vulkan coordinate mapping; analytical rasterization and real terrain program compilation, not game image parity",
+  "device": {
+    "engine": "Sky Native Vulkan",
+    "backend": "Vulkan",
+    "device": "llvmpipe (LLVM 19.1.7, 128 bits)",
+    "apiVersion": 4210993,
+    "deviceType": 4,
+    "shaderFloat16": true
+  },
+  "componentsVerified": 128,
+  "earlyReturn": true,
+  "backFaceCulling": true,
+  "terrainPrograms": [
+    {
+      "name": "RockFaceSh",
+      "key": "f423ed4a3934057a130516b91f802001a4e299ff5a90063f8cadf723227da9ee",
+      "descriptors": [
+        "SkyGlobals",
+        "u_lightColorsTex",
+        "u_lightCountsTex",
+        "u_lightOffsetsTex",
+        "u_lightPositionsTex",
+        "u_probeCube",
+        "u_sideGeoTexture",
+        "u_topGeoTexture"
+      ],
+      "artifacts": [
+        {
+          "stage": "vert",
+          "sha256": "88cb3bfa557dcefc07e318854d41404894655a334056d4254d000fe322248d68"
+        },
+        {
+          "stage": "frag",
+          "sha256": "32b06e4e7b7abc6a7017b5585f1aa3ceed54e7ddcdb94eb2e23c32900a4e9297"
+        }
+      ]
+    },
+    {
+      "name": "RockFaceRainSh",
+      "key": "f423ed4a3934057a130516b91f802001a4e299ff5a90063f8cadf723227da9ee",
+      "descriptors": [
+        "SkyGlobals",
+        "u_lightColorsTex",
+        "u_lightCountsTex",
+        "u_lightOffsetsTex",
+        "u_lightPositionsTex",
+        "u_probeCube",
+        "u_sideGeoTexture",
+        "u_topGeoTexture"
+      ],
+      "artifacts": [
+        {
+          "stage": "vert",
+          "sha256": "88cb3bfa557dcefc07e318854d41404894655a334056d4254d000fe322248d68"
+        },
+        {
+          "stage": "frag",
+          "sha256": "32b06e4e7b7abc6a7017b5585f1aa3ceed54e7ddcdb94eb2e23c32900a4e9297"
+        }
+      ]
+    },
+    {
+      "name": "SandSh",
+      "key": "b3b225284c4b83960727d4d9a0dce7e00472c056aa6b1fb3e5aa11de30b6aa41",
+      "descriptors": [
+        "SkyGlobals",
+        "u_lightColorsTex",
+        "u_lightCountsTex",
+        "u_lightOffsetsTex",
+        "u_lightPositionsTex",
+        "u_normalTex",
+        "u_waterSim"
+      ],
+      "artifacts": [
+        {
+          "stage": "vert",
+          "sha256": "4d19ae6415c4334a3554f84e54e8bae09ffd93ed1494a978be1c85deb2b336e1"
+        },
+        {
+          "stage": "frag",
+          "sha256": "2580448c380497749feea4e715b0c66f051e007cb697de2019f2e26a0a910a2a"
+        }
+      ]
+    },
+    {
+      "name": "SandRainSh",
+      "key": "6608e033b14d43fa1db3b9fb7c508d4de03f4f6c06d8d50b45d587abdf8432d8",
+      "descriptors": [
+        "SkyGlobals",
+        "u_lightColorsTex",
+        "u_lightCountsTex",
+        "u_lightOffsetsTex",
+        "u_lightPositionsTex",
+        "u_normalTex",
+        "u_puddleSimNorm",
+        "u_waterSim"
+      ],
+      "artifacts": [
+        {
+          "stage": "vert",
+          "sha256": "4d19ae6415c4334a3554f84e54e8bae09ffd93ed1494a978be1c85deb2b336e1"
+        },
+        {
+          "stage": "frag",
+          "sha256": "6c77b20af679fe8bc821ffda154b6166d369eb5a14c9084086bc6c31fa81642d"
+        }
+      ]
+    },
+    {
+      "name": "GrassSh",
+      "key": "058f78794d0e2ba895c7b669814b922fc914d5c692e3b63f857d2f8a0dfeb9ae",
+      "descriptors": [
+        "SkyGlobals",
+        "u_grassMaskTex",
+        "u_grassNorm1Tex",
+        "u_grassNorm2Tex",
+        "u_lightColorsTex",
+        "u_lightCountsTex",
+        "u_lightOffsetsTex",
+        "u_lightPositionsTex"
+      ],
+      "artifacts": [
+        {
+          "stage": "vert",
+          "sha256": "4136bbdfdc7df978806ddad7a716ad616fd391c5567a0c6541a5ba0dee5edd4a"
+        },
+        {
+          "stage": "frag",
+          "sha256": "1fc0ead2427794eb6405a37bfd88304895269f072074039b0547fb3079fae764"
+        }
+      ]
+    },
+    {
+      "name": "CloudSh",
+      "key": "c3b23855c2cd855ad2d3572b1ffadf56adb8ca595da369f3c5a1b80fe7f4e98f",
+      "descriptors": [
+        "SkyGlobals"
+      ],
+      "artifacts": [
+        {
+          "stage": "vert",
+          "sha256": "7254e7748ac295be7fa6a0095e2c17613dca48c5be3baeca740daffdd359ceef"
+        },
+        {
+          "stage": "frag",
+          "sha256": "1415203c5a54e3d9b98ad2e6aad6b2b236fdb592f7cafce0984b11a26c8e5df2"
+        }
+      ]
+    }
+  ]
+}

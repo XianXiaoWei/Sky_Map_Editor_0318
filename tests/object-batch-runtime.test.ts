@@ -1,0 +1,11 @@
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import {gunzipSync} from 'node:zlib';
+import {evaluateObjectBatch} from '../tools/object-batch-evaluate';import {executeFloatEnable,numericFloatBits,type FloatCell} from '../src/core/object-numeric-runtime';import {executeIfEnabled} from '../src/core/object-flow-runtime';
+const fixture=JSON.parse(gunzipSync(fs.readFileSync('tests/fixtures/object-batch-native.json.gz')).toString());
+test('Batched numeric/flow/SetFloat bodies match whole native fixtures and captured native math arguments',()=>{assert.equal(fixture.executableSha256,'3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20');for(const c of fixture.cases.filter((c:any)=>c.kind<5))assert.deepEqual(evaluateObjectBatch(c,Buffer.from(c.mathHex,'hex')).bytes,Buffer.from(c.expectedHex,'hex'),c.name);});
+test('Base Event constructor, resume, identity assertions and virtual transition order match original fixtures',()=>{for(const c of fixture.cases.filter((c:any)=>c.kind>=5))assert.deepEqual(evaluateObjectBatch(c,Buffer.from(c.mathHex,'hex')).bytes,Buffer.from(c.expectedHex,'hex'),c.name);});
+test('FloatEnable observes changed input/count after callbacks; IfEnabled queries all objects and starts twice for match plus checkOnce',()=>{
+ const storage=Buffer.alloc(32);storage.writeUInt32LE(numericFloatBits(3),0x10);const input:FloatCell={storage};let count=3;const changes:boolean[]=[];
+ executeFloatEnable(input,{objects:()=>({count:()=>count,member:()=>input}),castObject:o=>o,setEnabled:(_o,v)=>{changes.push(v);storage.writeUInt32LE(numericFloatBits(0),0x10);if(changes.length===2)count=2;}});assert.deepEqual(changes,[true,false]);
+ let reads=0,starts=0,writes=0;executeIfEnabled({objects:()=>({count:()=>3,member:i=>i}),events:()=>({count:()=>2,member:i=>i}),getEnabled:()=>{reads++;return true;},setEnabled:()=>{writes++;},startEvent:()=>{starts++;},triggerOnDisabled:()=>false,checkOnce:()=>true});assert.deepEqual([reads,writes,starts],[3,2,2]);
+ assert.throws(()=>executeIfEnabled({objects:()=>({count:()=>65536,member:()=>null}),events:()=>({count:()=>0,member:()=>null}),getEnabled:()=>true,setEnabled:()=>{},startEvent:()=>{},triggerOnDisabled:()=>false,checkOnce:()=>false}),/uint16/);
+});

@@ -1,0 +1,14 @@
+{
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "registry": "0x101dd2af8",
+  "consumer": "0x100095170",
+  "investigationOnly": true,
+  "scope": "Animation.Load consumes the pack-group registry at 0x101dd2af8. The 0x1000e1fe0 body initializes AnimationList metadata/allocation tags/global variable descriptors and resets the registry count at 0x1000e4227. It establishes startup storage; actual group population through the global/TGCL loading owner still requires recovery. This is continuing investigation evidence, not runtime registry-loading acceptance.",
+  "staticInitializer": {
+    "address": "0x1000e1fe0",
+    "end": "0x1000e42b0",
+    "bytes": 8912,
+    "codeSha256": "0f87bfcb7db0ad6f4a35082dff69f4590a8f27c5688a30cbe773c7f68d294edb",
+    "evidence": "evidence/resource-animation-PackGroupRegistryOwner.0x1000e1fe0.asm"
+  }
+}

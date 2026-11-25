@@ -1,0 +1,134 @@
+#version 450
+#extension GL_EXT_shader_explicit_arithmetic_types_float16 : require
+// Generated from original Metal AIR. GPU equivalence remains unverified.
+float air_quantize(float v) {
+  uint bits = floatBitsToUint(v), magnitude = bits & 0x7fffffffu;
+  if (magnitude >= 0x7f800000u) return v;
+  if (magnitude < 0x38800000u) {
+    float q = roundEven(abs(v) * 16777216.0) * 0.000000059604644775390625;
+    return uintBitsToFloat((bits & 0x80000000u) | floatBitsToUint(q));
+  }
+  uint rounded = magnitude + 0xfffu + ((magnitude >> 13u) & 1u);
+  if (rounded >= 0x47800000u) rounded = 0x7f800000u;
+  return uintBitsToFloat((bits & 0x80000000u) | (rounded & 0x7fffe000u));
+}
+vec2 air_quantize(vec2 v) { return vec2(air_quantize(v[0]), air_quantize(v[1])); }
+vec3 air_quantize(vec3 v) { return vec3(air_quantize(v[0]), air_quantize(v[1]), air_quantize(v[2])); }
+vec4 air_quantize(vec4 v) { return vec4(air_quantize(v[0]), air_quantize(v[1]), air_quantize(v[2]), air_quantize(v[3])); }
+
+ivec3 air_texel_coord(ivec3 p, ivec3 size, bool repeat) {
+  // The only recovered repeating cloud resource is the power-of-two 64^3
+  // CloudFluffy volume. Integer masking also handles its negative coordinates.
+  return repeat ? (p & (size-1)) : clamp(p,ivec3(0),size-1);
+}
+vec4 air_sample3d(sampler3D image,vec3 uv,ivec3 offset,bool linear,bool repeat) {
+  ivec3 size=textureSize(image,0);
+  precise vec3 p=uv*vec3(size)+vec3(offset)-(linear?vec3(0.5):vec3(0.0));
+  ivec3 base=ivec3(floor(p));
+  if(!linear) return texelFetch(image,air_texel_coord(base,size,repeat),0);
+  precise vec3 f=p-vec3(base);
+  vec4 a000=texelFetch(image,air_texel_coord(base,size,repeat),0);
+  vec4 a100=texelFetch(image,air_texel_coord(base+ivec3(1,0,0),size,repeat),0);
+  vec4 a010=texelFetch(image,air_texel_coord(base+ivec3(0,1,0),size,repeat),0);
+  vec4 a110=texelFetch(image,air_texel_coord(base+ivec3(1,1,0),size,repeat),0);
+  vec4 a001=texelFetch(image,air_texel_coord(base+ivec3(0,0,1),size,repeat),0);
+  vec4 a101=texelFetch(image,air_texel_coord(base+ivec3(1,0,1),size,repeat),0);
+  vec4 a011=texelFetch(image,air_texel_coord(base+ivec3(0,1,1),size,repeat),0);
+  vec4 a111=texelFetch(image,air_texel_coord(base+ivec3(1,1,1),size,repeat),0);
+  precise vec4 x00=a000*(1.0-f.x)+a100*f.x;
+  precise vec4 x10=a010*(1.0-f.x)+a110*f.x;
+  precise vec4 x01=a001*(1.0-f.x)+a101*f.x;
+  precise vec4 x11=a011*(1.0-f.x)+a111*f.x;
+  precise vec4 y0=x00*(1.0-f.y)+x10*f.y;
+  precise vec4 y1=x01*(1.0-f.y)+x11*f.y;
+  precise vec4 z=y0*(1.0-f.z)+y1*f.z;
+  return z;
+}
+
+layout(location=0) out vec2 v_uv;
+uniform vec2 u_jitterHalf;
+void main() {
+  int r3;
+  int r4;
+  bool r8;
+  float16_t r9;
+  f16vec2 r10;
+  f16vec2 r11;
+  f16vec2 r13;
+  f16vec2 r14;
+  f16vec2 r15;
+  f16vec2 r16;
+  float16_t r17;
+  float r18;
+  vec2 r19;
+  float16_t r20;
+  float r21;
+  vec2 r22;
+  f16vec2 r23;
+  f16vec2 r24;
+  float16_t r25;
+  float r26;
+  vec4 r27;
+  float16_t r28;
+  float r29;
+  vec4 r30;
+  float r31;
+  vec4 r32;
+  vec4 r33;
+  float16_t r7;
+  float16_t p7;
+  int _block = 2; int _prev = -1;
+  for (;;) {
+    switch (_block) {
+    case 2: {
+      r3 = int(uint(gl_VertexIndex) << 16u);
+      r4 = (r3 >> 16);
+      _prev = _block; _block = (r4 == 0 ? 6 : (r4 == 3 ? 6 : 5)); break;
+    }
+    case 5: {
+      _prev = _block; _block = 6; break;
+    }
+    case 6: {
+      p7 = (_prev == 5 ? float16_t(1.0) : (_prev == 2 ? float16_t(-1.0) : float16_t(-1.0)));
+      r7 = p7;
+      r8 = (r3 < 131072);
+      r9 = float16_t(air_quantize(float((r8 ? float16_t(1.0) : float16_t(-1.0)))));
+      r10 = f16vec2(0);
+      r10[0] = r7;
+      r11 = r10;
+      r11[1] = r9;
+      r13 = f16vec2(air_quantize(vec2(u_jitterHalf)));
+      r14 = f16vec2(air_quantize(vec2((vec2(r13) * vec2(f16vec2(float16_t(4.0)))))));
+      r15 = f16vec2(air_quantize(vec2(fma(-(vec2(r13)), vec2(f16vec2(float16_t(4.0))), vec2(r11)))));
+      r16 = f16vec2(air_quantize(vec2(min(vec2(r11), vec2(r15)))));
+      r17 = float16_t(air_quantize(float(r16[0])));
+      r18 = float(r17);
+      r19 = vec2(0);
+      r19[0] = r18;
+      r20 = float16_t(air_quantize(float(r16[1])));
+      r21 = float(r20);
+      r22 = r19;
+      r22[1] = r21;
+      r23 = f16vec2(air_quantize(vec2((vec2(r11) * vec2(f16vec2(float16_t(2.0)))))));
+      r24 = f16vec2(air_quantize(vec2(fma(vec2(r11), vec2(f16vec2(float16_t(2.0))), vec2(f16vec2(float16_t(-1.0)))))));
+      r25 = float16_t(air_quantize(float(r24[0])));
+      r26 = float(r25);
+      r27 = vec4(0);
+      r27[0] = r26;
+      r28 = float16_t(air_quantize(float(r24[1])));
+      r29 = float(r28);
+      r30 = r27;
+      r30[3] = 1.0;
+      r31 = (-0.0 - r29);
+      r32 = r30;
+      r32[1] = r31;
+      r33 = r32;
+      r33[2] = 0.5;
+      gl_Position = vec4(r33);
+      v_uv = vec2(r22);
+      return;
+    }
+    default: return;
+    }
+  }
+}

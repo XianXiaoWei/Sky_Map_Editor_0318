@@ -1,0 +1,36 @@
+import fs from 'node:fs';import os from 'node:os';import path from 'node:path';import crypto from 'node:crypto';import {spawnSync} from 'node:child_process';import {gzipSync} from 'node:zlib';
+import {prepareBeamoBarnUpload,evaluateBeamoBarnUpload,type BeamoBarnUploadCase,type BeamoBarnUploadRecord} from './beamo-upload-barn-cases';
+import {ObjectsDocument} from '../src/core/objects';import {readResourceMesh} from '../src/core/resources';import {objectText} from '../src/core/model-material-index';
+const executable=process.argv[2]??'/storage/emulated/0/Download/地图编辑器/sky-map-editor/reference/Sky.app/Contents/MacOS/Sky',data=process.env.SKY_DATA??'/root/sky-research/original-runtime-corpus',sha=(b:Uint8Array)=>crypto.createHash('sha256').update(b).digest('hex');
+const executableSha256=sha(fs.readFileSync(executable));if(executableSha256!=='3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20')throw new Error('Original executable required');
+const cases:BeamoBarnUploadCase[]=[];
+const record=(lods:number,seed:number):BeamoBarnUploadRecord=>({sphereBits:[seed,0x80000000,0x7fc12345,0x3f800000+seed],baked:!!(seed&1),lods:Array.from({length:lods},(_,lod)=>({vertices:seed===0xffffffff?seed:seed*103+lod,indices:seed===0xffffffff?seed:seed*301+lod,counts:[1+lod,3+lod*3,6+lod*3,9+lod*3]}))});
+for(const count of [0,1,2,3,7,32,768])for(const lods of [0,1,2,3,4])cases.push({label:`prepared/count${count}/lods${lods}`,records:Array.from({length:count},(_,i)=>record(lods,i+1))});
+for(const lods of [1,2,3,4])for(const after of [0,1,2,3])for(const swapTable of [false,true])for(const mutateOffsets of [false,true])cases.push({label:`prepared/dynamic/${lods}/${after}/${swapTable}/${mutateOffsets}`,records:[record(lods,1),record(4,2),record(0,3)],initialCount:2,countAfterFirst:after,swapTable,mutateOffsets});
+for(const before of [1,2,3,4])for(const after of [0,1,2,3,4])cases.push({label:`prepared/lod-mutation/${before}/${after}`,records:[record(4,1)],initialLodCount:before,lodCountAfterFirst:after,initialCount:1});
+for(const count of [1,2,3,4])cases.push({label:`prepared/uint64/${count}`,records:Array.from({length:count},()=>record(4,0xffffffff))});
+const preparedCases=cases.length,corpus={maps:0,objects:0,lods:0},sourceHashes:Record<string,string>={};
+const uploadReport=JSON.parse(fs.readFileSync('docs/beamo-upload-oracle.json','utf8'));if(!uploadReport.passed||uploadReport.corpus.lods!==7739)throw new Error('Complete independent upload corpus verification required');
+const outputs=new Map<string,number[]>(uploadReport.results.map((r:any)=>[r.label,[r.counts.vertices,r.counts.primaryIndices,r.counts.secondaryIndices,r.counts.alphaIndices]]));
+const cache=new Map<string,ReturnType<typeof readResourceMesh>>(),resolve=(name:string)=>{let m=cache.get(name);if(!m){const file=path.join(data,'Meshes/Bin',name+'.mesh');m=readResourceMesh(fs.readFileSync(fs.existsSync(file)?file:path.join(data,'Meshes/Bin/UnitCube.mesh')));cache.set(name,m);}return m;};
+for(const level of fs.readdirSync(path.join(data,'Levels')).sort()){
+ const file=path.join(data,'Levels',level,'Objects.level.bin');if(!fs.existsSync(file))continue;const bytes=fs.readFileSync(file),nodes=new ObjectsDocument(bytes).nodes.filter(n=>['Beamo','BeamoDecal'].includes(n.className));sourceHashes[level]=sha(bytes);
+ const records=nodes.map(node=>{const mesh=resolve(objectText(node,'meshName')),lods=mesh.levels.map((l,lod)=>{const label=`${level}/#${node.id}/${node.className}/LOD${lod}`,counts=outputs.get(label);if(!counts)throw new Error('Missing independently verified upload '+label);corpus.lods++;return{vertices:l.positions.length/3,indices:l.indices.length,counts};});return{sphereBits:[node.id,0x80000000,0x7fc12345,0x3f800000+node.id],baked:true,lods};});
+ corpus.maps++;corpus.objects+=nodes.length;cases.push({label:level,records});
+}
+const temp=fs.mkdtempSync(path.join(os.tmpdir(),'sky-beamo-barn-upload-'));
+try{
+ const input=path.join(temp,'input.bin'),output=path.join(temp,'output.bin'),fd=fs.openSync(input,'w'),head=Buffer.alloc(4);head.writeUInt32LE(cases.length);fs.writeSync(fd,head);for(const c of cases)fs.writeSync(fd,prepareBeamoBarnUpload(c).b);fs.closeSync(fd);
+ const runner=path.join(temp,'oracle'),build=spawnSync('x86_64-linux-gnu-gcc',['-O2','-msse4.1','-Wall','-Wextra','tools/native-beamo-upload-barn-oracle.c','-o',runner]);if(build.status!==0)throw new Error(build.stderr.toString());
+ const infd=fs.openSync(input,'r'),outfd=fs.openSync(output,'w'),run=spawnSync('qemu-x86_64',['-L','/usr/x86_64-linux-gnu','-cpu','max',runner,executable],{stdio:[infd,outfd,'pipe'],timeout:120000});fs.closeSync(infd);fs.closeSync(outfd);if(run.status!==0)throw new Error(`Native Barn upload failed: ${run.status} ${run.stderr}`);
+ const native=fs.openSync(output,'r');fs.readSync(native,head,0,4,0);if(head.readUInt32LE(0)!==cases.length)throw new Error('Invalid native case count');let cursor=4,comparedBytes=0,uploadCalls=0;const failures:unknown[]=[],fixture:unknown[]=[];
+ for(const c of cases){fs.readSync(native,head,0,4,cursor);const count=head.readUInt32LE(0),actual=Buffer.alloc(4+count*192+0x2e0000+32);if(fs.readSync(native,actual,0,actual.length,cursor)!==actual.length)throw new Error('Truncated native snapshot');cursor+=actual.length;comparedBytes+=actual.length;
+  for(let i=0;i<count;i++)if(actual.readBigUInt64LE(4+i*192)===5n)uploadCalls++;
+  const expected=evaluateBeamoBarnUpload(c);if(!actual.equals(expected)){const offsets=[];for(let i=0;i<Math.max(actual.length,expected.length);i++)if(actual[i]!==expected[i]){offsets.push(i);if(offsets.length===25)break;}failures.push({label:c.label,nativeBytes:actual.length,expectedBytes:expected.length,offsets});}
+  fixture.push({input:c,nativeSha256:sha(actual)});
+ }
+ fs.closeSync(native);if(cursor!==fs.statSync(output).size)throw new Error('Trailing native bytes');
+ const scope='Original Barn.Load CFG 0x100195be7..0x100195f45 executes unchanged. Compare entire Barn, both prepared runtime tables, all Mesh/storage bytes before private loader context, caller offsets/control inputs, original stream descriptors and ordered create/configure/map/upload/unmap/finish calls. Exact all-LOD ranges and dynamic count/table reloads are included. Private loader context temporaries are outside the comparison. VertexData and upload are explicit services: corpus uses independently native-verified upload result counts for 7739 LODs; prepared sphere bytes (including NaN payloads) test copy publication, not original sphere generation. All saved Beamo/Decal records are supplied in explicit prepared order; original resource IO/Observe, geometry bounds/collision, material merging/drawing, Visibility/lifecycle and whole-class acceptance remain open. No live Barn/record/Mesh bytes excluded.';
+ const report={passed:!failures.length,executableSha256,scope,cases:cases.length,preparedCases,corpus,uploadCalls,comparedBytes,sourceHashes,failures};fs.writeFileSync('docs/beamo-upload-barn-oracle.json',JSON.stringify(report,null,2)+'\n');if(report.passed)fs.writeFileSync('tests/fixtures/beamo-upload-barn-native.json.gz',gzipSync(JSON.stringify({executableSha256,scope,cases:fixture})));
+ console.log(JSON.stringify({...report,sourceHashes:undefined}));if(failures.length)process.exitCode=1;
+}finally{fs.rmSync(temp,{recursive:true,force:true});}

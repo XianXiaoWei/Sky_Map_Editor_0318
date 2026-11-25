@@ -1,0 +1,904 @@
+{
+  "className": "BirdV2ParamSwap",
+  "functionGroup": "生物、群体与 AI",
+  "functionRole": "替换鸟类实例参数",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "partial",
+      "description": "BirdV2ParamSwap 的原默认值、继承初始化及 3 个序列化字段变体；原注册字段 2 项。"
+    },
+    {
+      "name": "替换鸟类实例参数",
+      "status": "partial",
+      "description": "原普通构造、共享保存字段和已定位的池式创建／启用子链已有实现与核验；实际资源装载、AI、骨骼动画、碰撞／效果和动态绘制及完整生命周期继续待接。 此类原事件调用体已独立核验，部分真实事件接共享 EventBarn；缺失转换／玩家／声音／Model 消费者的分支保留明确依赖，不能计为完整类。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "BirdV2（15 条引用）、BirdV2Params（15 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "BirdV2ParamSwap",
+    "category": "生物、群体与 AI",
+    "functionGroupId": "creatures",
+    "functionRole": "替换鸟类实例参数",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "partial",
+        "description": "BirdV2ParamSwap 的原默认值、继承初始化及 3 个序列化字段变体；原注册字段 2 项。"
+      },
+      {
+        "name": "替换鸟类实例参数",
+        "status": "partial",
+        "description": "原普通构造、共享保存字段和已定位的池式创建／启用子链已有实现与核验；实际资源装载、AI、骨骼动画、碰撞／效果和动态绘制及完整生命周期继续待接。 此类原事件调用体已独立核验，部分真实事件接共享 EventBarn；缺失转换／玩家／声音／Model 消费者的分支保留明确依赖，不能计为完整类。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "BirdV2（15 条引用）、BirdV2Params（15 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "BirdV2",
+        "references": 15
+      },
+      {
+        "className": "BirdV2Params",
+        "references": 15
+      }
+    ],
+    "rttiWorkingGroup": "玩家、角色与动画",
+    "role": "对象实例类型",
+    "instances": 15,
+    "nestedInstances": 0,
+    "referenceFields": 30,
+    "declaredLevels": 1,
+    "levels": [
+      {
+        "level": "Prairie_Village",
+        "nodes": 15,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "newParams",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "target",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100c8ad70",
+    "nativeRegisteredFields": [
+      {
+        "name": "target",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP6BirdV2ERK8MetaTypev",
+        "nativeOffset": 64,
+        "registrationFunction": "0x1001aaa50",
+        "propertyAddress": "0x100c89d90"
+      },
+      {
+        "name": "newParams",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP12BirdV2ParamsERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x1001aaa50",
+        "propertyAddress": "0x100c89de0"
+      }
+    ],
+    "completedCheckpoints": 4,
+    "partialCheckpoints": 2,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 40,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": true,
+    "implementation": [
+      "src/core/environment-object-state.ts",
+      "src/core/creature-construction-runtime.ts",
+      "src/core/creature-runtime.ts",
+      "src/core/nature-event-runtime.ts"
+    ],
+    "evidence": [
+      "docs/生物骨骼动画续接.md",
+      "docs/creature-construction.json",
+      "docs/creature-construction-oracle.json",
+      "docs/creature-kernel-oracle.json",
+      "docs/objects-nature-audit.json",
+      "docs/nature-event-audit.json",
+      "docs/nature-event-verification.json",
+      "docs/nature-event-oracle.json"
+    ],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 2 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "partial",
+        "note": "原普通构造、共享保存字段和已定位的池式创建／启用子链已有实现与核验；实际资源装载、AI、骨骼动画、碰撞／效果和动态绘制及完整生命周期继续待接。 此类原事件调用体已独立核验，部分真实事件接共享 EventBarn；缺失转换／玩家／声音／Model 消费者的分支保留明确依赖，不能计为完整类。",
+        "evidence": [
+          "docs/生物骨骼动画续接.md",
+          "docs/creature-construction.json",
+          "docs/creature-construction-oracle.json",
+          "docs/creature-kernel-oracle.json",
+          "docs/objects-nature-audit.json",
+          "docs/nature-event-audit.json",
+          "docs/nature-event-verification.json",
+          "docs/nature-event-oracle.json"
+        ]
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "partial",
+        "note": "原普通构造、共享保存字段和已定位的池式创建／启用子链已有实现与核验；实际资源装载、AI、骨骼动画、碰撞／效果和动态绘制及完整生命周期继续待接。 此类原事件调用体已独立核验，部分真实事件接共享 EventBarn；缺失转换／玩家／声音／Model 消费者的分支保留明确依赖，不能计为完整类。",
+        "evidence": [
+          "docs/生物骨骼动画续接.md",
+          "docs/creature-construction.json",
+          "docs/creature-construction-oracle.json",
+          "docs/creature-kernel-oracle.json",
+          "docs/objects-nature-audit.json",
+          "docs/nature-event-audit.json",
+          "docs/nature-event-verification.json",
+          "docs/nature-event-oracle.json"
+        ]
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "verified",
+        "note": "原普通构造、共享保存字段和已定位的池式创建／启用子链已有实现与核验；实际资源装载、AI、骨骼动画、碰撞／效果和动态绘制及完整生命周期继续待接。 此类原事件调用体已独立核验，部分真实事件接共享 EventBarn；缺失转换／玩家／声音／Model 消费者的分支保留明确依赖，不能计为完整类。",
+        "evidence": [
+          "docs/生物骨骼动画续接.md",
+          "docs/creature-construction.json",
+          "docs/creature-construction-oracle.json",
+          "docs/creature-kernel-oracle.json",
+          "docs/objects-nature-audit.json",
+          "docs/nature-event-audit.json",
+          "docs/nature-event-verification.json",
+          "docs/nature-event-oracle.json"
+        ]
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "原普通构造、共享保存字段和已定位的池式创建／启用子链已有实现与核验；实际资源装载、AI、骨骼动画、碰撞／效果和动态绘制及完整生命周期继续待接。 此类原事件调用体已独立核验，部分真实事件接共享 EventBarn；缺失转换／玩家／声音／Model 消费者的分支保留明确依赖，不能计为完整类。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "Prairie_Village:n9",
+      "level": "Prairie_Village",
+      "nodeId": 9,
+      "name": "BstNode_2783838238",
+      "className": "BirdV2ParamSwap",
+      "classIndex": 5,
+      "sourceOffset": 32936,
+      "sourceLength": 32,
+      "sourceSha256": "665c3b3bb1a32484dce8e3e62634305c28ee9bcfedc7825c90ceb4f6cca7a2d8",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n9/p1",
+          "fieldName": "target",
+          "target": "Prairie_Village:n126",
+          "targetNodeId": 126,
+          "offset": 32960
+        },
+        {
+          "fieldId": "n9/p2",
+          "fieldName": "newParams",
+          "target": "Prairie_Village:n2176",
+          "targetNodeId": 2176,
+          "offset": 32964
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n23",
+      "level": "Prairie_Village",
+      "nodeId": 23,
+      "name": "BstNode_343",
+      "className": "BirdV2ParamSwap",
+      "classIndex": 5,
+      "sourceOffset": 35225,
+      "sourceLength": 25,
+      "sourceSha256": "d8201cc1963f89f24982c2e07d3843a0b7cc24897173f59b7947c8d428d26fda",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n23/p1",
+          "fieldName": "target",
+          "target": "Prairie_Village:n419",
+          "targetNodeId": 419,
+          "offset": 35242
+        },
+        {
+          "fieldId": "n23/p2",
+          "fieldName": "newParams",
+          "target": "Prairie_Village:n142",
+          "targetNodeId": 142,
+          "offset": 35246
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n906",
+      "level": "Prairie_Village",
+      "nodeId": 906,
+      "name": "BstNode_2783838251",
+      "className": "BirdV2ParamSwap",
+      "classIndex": 5,
+      "sourceOffset": 179476,
+      "sourceLength": 32,
+      "sourceSha256": "0d7f35c7f42bf10886f88cb87963aa18c3c45452d8218c07d6336c6cacb1b6f4",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n906/p1",
+          "fieldName": "target",
+          "target": "Prairie_Village:n419",
+          "targetNodeId": 419,
+          "offset": 179500
+        },
+        {
+          "fieldId": "n906/p2",
+          "fieldName": "newParams",
+          "target": "Prairie_Village:n1803",
+          "targetNodeId": 1803,
+          "offset": 179504
+        }
+      ],
+      "incomingReferenceCount": 4,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1522",
+      "level": "Prairie_Village",
+      "nodeId": 1522,
+      "name": "BstNode_2783838261",
+      "className": "BirdV2ParamSwap",
+      "classIndex": 5,
+      "sourceOffset": 273196,
+      "sourceLength": 32,
+      "sourceSha256": "9bf20cab11c2a6f66bd2480f5cdb4f31ced556a701ee02cf86f8c0b416a2865a",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1522/p1",
+          "fieldName": "target",
+          "target": "Prairie_Village:n1699",
+          "targetNodeId": 1699,
+          "offset": 273220
+        },
+        {
+          "fieldId": "n1522/p2",
+          "fieldName": "newParams",
+          "target": "Prairie_Village:n1671",
+          "targetNodeId": 1671,
+          "offset": 273224
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1546",
+      "level": "Prairie_Village",
+      "nodeId": 1546,
+      "name": "BstNode_2783838260",
+      "className": "BirdV2ParamSwap",
+      "classIndex": 5,
+      "sourceOffset": 277328,
+      "sourceLength": 32,
+      "sourceSha256": "3d485208e4264b84c3aa2849f49623a88261f12eab00f9b1871aa8ce300030da",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1546/p1",
+          "fieldName": "target",
+          "target": "Prairie_Village:n1699",
+          "targetNodeId": 1699,
+          "offset": 277352
+        },
+        {
+          "fieldId": "n1546/p2",
+          "fieldName": "newParams",
+          "target": "Prairie_Village:n2188",
+          "targetNodeId": 2188,
+          "offset": 277356
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1896",
+      "level": "Prairie_Village",
+      "nodeId": 1896,
+      "name": "BstNode_2783838246",
+      "className": "BirdV2ParamSwap",
+      "classIndex": 5,
+      "sourceOffset": 338063,
+      "sourceLength": 32,
+      "sourceSha256": "d65d354eac6f23a449df36edbd1e7c5b4337c26b6986b8fea84f7787a5fb6961",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1896/p1",
+          "fieldName": "target",
+          "target": "Prairie_Village:n419",
+          "targetNodeId": 419,
+          "offset": 338087
+        },
+        {
+          "fieldId": "n1896/p2",
+          "fieldName": "newParams",
+          "target": "Prairie_Village:n461",
+          "targetNodeId": 461,
+          "offset": 338091
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2004",
+      "level": "Prairie_Village",
+      "nodeId": 2004,
+      "name": "BstNode_2783838253",
+      "className": "BirdV2ParamSwap",
+      "classIndex": 5,
+      "sourceOffset": 356492,
+      "sourceLength": 32,
+      "sourceSha256": "193bbdb46c4f9df564fa32c39e63dac2e5379e1ec89ebb784975a65eeb8ea043",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2004/p1",
+          "fieldName": "target",
+          "target": "Prairie_Village:n1699",
+          "targetNodeId": 1699,
+          "offset": 356516
+        },
+        {
+          "fieldId": "n2004/p2",
+          "fieldName": "newParams",
+          "target": "Prairie_Village:n2511",
+          "targetNodeId": 2511,
+          "offset": 356520
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2089",
+      "level": "Prairie_Village",
+      "nodeId": 2089,
+      "name": "BstNode_2783838242",
+      "className": "BirdV2ParamSwap",
+      "classIndex": 5,
+      "sourceOffset": 368913,
+      "sourceLength": 32,
+      "sourceSha256": "774a76c061cde00201483540ae25b9ce4c788f35834fe431aa91b41e4c5733ce",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2089/p1",
+          "fieldName": "target",
+          "target": "Prairie_Village:n1699",
+          "targetNodeId": 1699,
+          "offset": 368937
+        },
+        {
+          "fieldId": "n2089/p2",
+          "fieldName": "newParams",
+          "target": "Prairie_Village:n1455",
+          "targetNodeId": 1455,
+          "offset": 368941
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2107",
+      "level": "Prairie_Village",
+      "nodeId": 2107,
+      "name": "BstNode_2783838258",
+      "className": "BirdV2ParamSwap",
+      "classIndex": 5,
+      "sourceOffset": 370800,
+      "sourceLength": 32,
+      "sourceSha256": "21e6f4fe19579ed5fbfdf76d59fef7d4c244de2ead08f0382cf96f58f73d801d",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2107/p1",
+          "fieldName": "target",
+          "target": "Prairie_Village:n1051",
+          "targetNodeId": 1051,
+          "offset": 370824
+        },
+        {
+          "fieldId": "n2107/p2",
+          "fieldName": "newParams",
+          "target": "Prairie_Village:n1484",
+          "targetNodeId": 1484,
+          "offset": 370828
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2180",
+      "level": "Prairie_Village",
+      "nodeId": 2180,
+      "name": "BstNode_2783838244",
+      "className": "BirdV2ParamSwap",
+      "classIndex": 5,
+      "sourceOffset": 380796,
+      "sourceLength": 32,
+      "sourceSha256": "7ca648945ab9b9f838aeb6df10ba3e161e5fdd782c1d162bf4acf97183c7cba6",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2180/p1",
+          "fieldName": "target",
+          "target": "Prairie_Village:n1699",
+          "targetNodeId": 1699,
+          "offset": 380820
+        },
+        {
+          "fieldId": "n2180/p2",
+          "fieldName": "newParams",
+          "target": "Prairie_Village:n2181",
+          "targetNodeId": 2181,
+          "offset": 380824
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2189",
+      "level": "Prairie_Village",
+      "nodeId": 2189,
+      "name": "BstNode_2783838259",
+      "className": "BirdV2ParamSwap",
+      "classIndex": 5,
+      "sourceOffset": 382420,
+      "sourceLength": 32,
+      "sourceSha256": "c3ac7c03513a7a078adcaac4c5b8a0d21ba3699e7a3d5b5001bbe98cd032de4d",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2189/p1",
+          "fieldName": "target",
+          "target": "Prairie_Village:n1051",
+          "targetNodeId": 1051,
+          "offset": 382444
+        },
+        {
+          "fieldId": "n2189/p2",
+          "fieldName": "newParams",
+          "target": "Prairie_Village:n1265",
+          "targetNodeId": 1265,
+          "offset": 382448
+        }
+      ],
+      "incomingReferenceCount": 4,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2220",
+      "level": "Prairie_Village",
+      "nodeId": 2220,
+      "name": "BstNode_344",
+      "className": "BirdV2ParamSwap",
+      "classIndex": 5,
+      "sourceOffset": 386427,
+      "sourceLength": 25,
+      "sourceSha256": "6884991847de33284845dad1505e9168e1078b2c335a44d6e3ac9d2f0b96a8d1",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2220/p1",
+          "fieldName": "target",
+          "target": "Prairie_Village:n126",
+          "targetNodeId": 126,
+          "offset": 386444
+        },
+        {
+          "fieldId": "n2220/p2",
+          "fieldName": "newParams",
+          "target": "Prairie_Village:n588",
+          "targetNodeId": 588,
+          "offset": 386448
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2246",
+      "level": "Prairie_Village",
+      "nodeId": 2246,
+      "name": "BstNode_340",
+      "className": "BirdV2ParamSwap",
+      "classIndex": 5,
+      "sourceOffset": 390028,
+      "sourceLength": 25,
+      "sourceSha256": "c5eef0679f3cfc146a4bc0a4244b128822d04ea549f84fad98bbb81eeeddeacc",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2246/p1",
+          "fieldName": "target",
+          "target": "Prairie_Village:n1051",
+          "targetNodeId": 1051,
+          "offset": 390045
+        },
+        {
+          "fieldId": "n2246/p2",
+          "fieldName": "newParams",
+          "target": "Prairie_Village:n2242",
+          "targetNodeId": 2242,
+          "offset": 390049
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2532",
+      "level": "Prairie_Village",
+      "nodeId": 2532,
+      "name": "BstNode_2783838252",
+      "className": "BirdV2ParamSwap",
+      "classIndex": 5,
+      "sourceOffset": 430760,
+      "sourceLength": 32,
+      "sourceSha256": "4fbf966714ebde9b1380c568d7889d8af356a8ab5a75778813cf10d0d2978c02",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2532/p1",
+          "fieldName": "target",
+          "target": "Prairie_Village:n1699",
+          "targetNodeId": 1699,
+          "offset": 430784
+        },
+        {
+          "fieldId": "n2532/p2",
+          "fieldName": "newParams",
+          "target": "Prairie_Village:n864",
+          "targetNodeId": 864,
+          "offset": 430788
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2652",
+      "level": "Prairie_Village",
+      "nodeId": 2652,
+      "name": "BstNode_2783838241",
+      "className": "BirdV2ParamSwap",
+      "classIndex": 5,
+      "sourceOffset": 449094,
+      "sourceLength": 32,
+      "sourceSha256": "e321eca99c3d2be96964050e8f1a969a2cdc11f81b33e43cf257a7dc9059a53f",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2652/p1",
+          "fieldName": "target",
+          "target": "Prairie_Village:n126",
+          "targetNodeId": 126,
+          "offset": 449118
+        },
+        {
+          "fieldId": "n2652/p2",
+          "fieldName": "newParams",
+          "target": "Prairie_Village:n2490",
+          "targetNodeId": 2490,
+          "offset": 449122
+        }
+      ],
+      "incomingReferenceCount": 4,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "Prairie_Village",
+      "path": "Levels/Prairie_Village/Objects.level.bin",
+      "sha256": "4656296b54402016b59b894b4653fbdc71e106a21e0900294f73f2c7b7112385",
+      "bytes": 549989,
+      "nodes": 3724,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Village.json",
+      "markdown": "Objects对象清单/Prairie_Village.md"
+    }
+  ]
+}

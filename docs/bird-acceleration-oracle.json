@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "start": "0x1001a2260",
+  "end": "0x1001a2770",
+  "cases": 104,
+  "comparedCases": 104,
+  "comparedBytes": 41179680,
+  "serviceCalls": 1780,
+  "scope": "Whole ordinary BirdV2Ai acceleration dispatcher composed with original Steering.Begin/End and BirdV2 flight integration/Update. Target/rail/guide/flocking forces, powf, world queries and collision remain explicit services. Complete autonomous AI and live resource ownership remain pending. Whole ordinary BirdV2 AI integration caller, including acceleration application, drag, speed cap, up to three collision responses, pitch correction, arrival and neighborhood-driven target reselection. Acceleration selection, world collision/query and original acosf/sincosf remain explicit services. Autonomous AI, Model/GPU ownership and complete BirdV2/manta lifecycle are not yet complete. Complete caller arena and ordered services compared, including consecutive frames and live callback changes. Original acosf/sincosf/powf inputs and outputs are recorded and replayed as explicit math services; no JavaScript/libm equivalence claim.",
+  "failures": [],
+  "flightIntegration": {
+    "start": "0x1001a2f30",
+    "end": "0x1001a34c0",
+    "codeSha256": "c75c5c2b8e22d34b0c5d90296e683d9f736402f61e2a9117952cf29a6cac880f"
+  },
+  "acceleration": {
+    "start": "0x1001a0060",
+    "end": "0x1001a0450",
+    "codeSha256": "ad5a07968b6f49f1265c8b7448408be122157c8e8b3eae432c4c0754d008b42b"
+  },
+  "scratchScope": "The 112-byte private TypeScript motion/output scratch models original stack storage and is cleared before exporting caller arena bytes. Every captured motion byte supplied to downstream services is recorded and compared; original object memory, steering state and service trace bytes are not excluded."
+}

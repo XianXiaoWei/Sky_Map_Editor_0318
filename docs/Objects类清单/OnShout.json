@@ -1,0 +1,567 @@
+{
+  "className": "OnShout",
+  "functionGroup": "区域、喊叫与空间触发",
+  "functionRole": "指定标记区域内喊叫事件",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "OnShout 的原默认值、继承初始化及 5 个序列化字段变体；原注册字段 4 项。"
+    },
+    {
+      "name": "指定标记区域内喊叫事件",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Clump（12 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "OnShout",
+    "category": "区域、喊叫与空间触发",
+    "functionGroupId": "regions",
+    "functionRole": "指定标记区域内喊叫事件",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "OnShout 的原默认值、继承初始化及 5 个序列化字段变体；原注册字段 4 项。"
+      },
+      {
+        "name": "指定标记区域内喊叫事件",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Clump（12 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Clump",
+        "references": 12
+      }
+    ],
+    "rttiWorkingGroup": "交互、事件与任务",
+    "role": "对象实例类型",
+    "instances": 6,
+    "nestedInstances": 0,
+    "referenceFields": 12,
+    "declaredLevels": 3,
+    "levels": [
+      {
+        "level": "Dawn",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Cave",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SunsetEnd",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "events",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "fireOnce",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "markers",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "useLocalOnly",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100cd86e0",
+    "nativeRegisteredFields": [
+      {
+        "name": "markers",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x1004e6380",
+        "propertyAddress": "0x100cd8400"
+      },
+      {
+        "name": "events",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 64,
+        "registrationFunction": "0x1004e6380",
+        "propertyAddress": "0x100cd8450"
+      },
+      {
+        "name": "fireOnce",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 72,
+        "registrationFunction": "0x1004e6380",
+        "propertyAddress": "0x100cd84a0"
+      },
+      {
+        "name": "useLocalOnly",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 73,
+        "registrationFunction": "0x1004e6380",
+        "propertyAddress": "0x100cd84f0"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 4 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "Dawn:n362",
+      "level": "Dawn",
+      "nodeId": 362,
+      "name": "BstNode_2645622824",
+      "className": "OnShout",
+      "classIndex": 57,
+      "sourceOffset": 88686,
+      "sourceLength": 34,
+      "sourceSha256": "7a74f0da5876169e678ea8d1fe37d6d4da21637922f013412a0353b9fadb7b5b",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n362/p1",
+          "fieldName": "markers",
+          "target": "Dawn:n2725",
+          "targetNodeId": 2725,
+          "offset": 88710
+        },
+        {
+          "fieldId": "n362/p3",
+          "fieldName": "events",
+          "target": "Dawn:n2880",
+          "targetNodeId": 2880,
+          "offset": 88715
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2042",
+      "level": "Dawn",
+      "nodeId": 2042,
+      "name": "BstNode_1842806924",
+      "className": "OnShout",
+      "classIndex": 57,
+      "sourceOffset": 334267,
+      "sourceLength": 34,
+      "sourceSha256": "33b76a2fc443d564c6f3a0202d9460eabbb8c70806441ce6eb2d64bf569d4bda",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2042/p1",
+          "fieldName": "markers",
+          "target": "Dawn:n3555",
+          "targetNodeId": 3555,
+          "offset": 334291
+        },
+        {
+          "fieldId": "n2042/p3",
+          "fieldName": "events",
+          "target": "Dawn:n3556",
+          "targetNodeId": 3556,
+          "offset": 334296
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n196",
+      "level": "Prairie_Cave",
+      "nodeId": 196,
+      "name": "BstNode_34603021",
+      "className": "OnShout",
+      "classIndex": 29,
+      "sourceOffset": 67319,
+      "sourceLength": 32,
+      "sourceSha256": "5cae8dae12154c4d7b7da108d99ecc18194ab65daef6840f7c9656939394a464",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n196/p1",
+          "fieldName": "markers",
+          "target": "Prairie_Cave:n1821",
+          "targetNodeId": 1821,
+          "offset": 67341
+        },
+        {
+          "fieldId": "n196/p3",
+          "fieldName": "events",
+          "target": "Prairie_Cave:n1822",
+          "targetNodeId": 1822,
+          "offset": 67346
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n892",
+      "level": "Prairie_Cave",
+      "nodeId": 892,
+      "name": "BstNode_34603011",
+      "className": "OnShout",
+      "classIndex": 29,
+      "sourceOffset": 231612,
+      "sourceLength": 32,
+      "sourceSha256": "487010eed843a27e4df8347d94f9b2974c402fd7de8fefb59b31a9f8fcccb146",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n892/p1",
+          "fieldName": "markers",
+          "target": "Prairie_Cave:n1883",
+          "targetNodeId": 1883,
+          "offset": 231634
+        },
+        {
+          "fieldId": "n892/p3",
+          "fieldName": "events",
+          "target": "Prairie_Cave:n1884",
+          "targetNodeId": 1884,
+          "offset": 231639
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n443",
+      "level": "SunsetEnd",
+      "nodeId": 443,
+      "name": "BstNode_1989",
+      "className": "OnShout",
+      "classIndex": 52,
+      "sourceOffset": 103930,
+      "sourceLength": 28,
+      "sourceSha256": "9fc6b6b522acbe4183a8fb46754a0dd8cdc395b51f32b3b19469469319aeb824",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n443/p1",
+          "fieldName": "markers",
+          "target": "SunsetEnd:n1883",
+          "targetNodeId": 1883,
+          "offset": 103948
+        },
+        {
+          "fieldId": "n443/p3",
+          "fieldName": "events",
+          "target": "SunsetEnd:n1884",
+          "targetNodeId": 1884,
+          "offset": 103953
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n831",
+      "level": "SunsetEnd",
+      "nodeId": 831,
+      "name": "BstNode_1990",
+      "className": "OnShout",
+      "classIndex": 52,
+      "sourceOffset": 165268,
+      "sourceLength": 28,
+      "sourceSha256": "497e784248773a6c6ba412f075a63bc51d091d785195ef73c43138079d8f00f2",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n831/p1",
+          "fieldName": "markers",
+          "target": "SunsetEnd:n1931",
+          "targetNodeId": 1931,
+          "offset": 165286
+        },
+        {
+          "fieldId": "n831/p3",
+          "fieldName": "events",
+          "target": "SunsetEnd:n1932",
+          "targetNodeId": 1932,
+          "offset": 165291
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "Dawn",
+      "path": "Levels/Dawn/Objects.level.bin",
+      "sha256": "16e26aafc7f9d120a548bf5d8bec04fbc18146bc8db531ef75144889b1ff197a",
+      "bytes": 504637,
+      "nodes": 3798,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dawn.json",
+      "markdown": "Objects对象清单/Dawn.md"
+    },
+    {
+      "level": "Prairie_Cave",
+      "path": "Levels/Prairie_Cave/Objects.level.bin",
+      "sha256": "675a2256e24f8c4b16540cee6a5cd2b7647ff2fb495724a8bf596717ca39d944",
+      "bytes": 466340,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Cave.json",
+      "markdown": "Objects对象清单/Prairie_Cave.md"
+    },
+    {
+      "level": "SunsetEnd",
+      "path": "Levels/SunsetEnd/Objects.level.bin",
+      "sha256": "9995ebfef7aa72982f6b95073a98a4ef01376bd8ac56c3b79b09729f97f43d6e",
+      "bytes": 352573,
+      "nodes": 1998,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SunsetEnd.json",
+      "markdown": "Objects对象清单/SunsetEnd.md"
+    }
+  ]
+}

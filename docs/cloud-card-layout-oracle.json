@@ -1,0 +1,597 @@
+{
+  "passed": true,
+  "complete": true,
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "scope": "Original CloudCardBarn full load instruction stream executes bounds center, vertex radius, world scale, sphere overlap and recursive component IDs. Explicit initialized card/mesh storage and resource observation/GPU callbacks. Sort intercepted to capture original pre-sort results. TGCL source order supplied explicitly. Native registration schedule, visibility, vertex expansion and Metal/game images are outside this check.",
+  "functions": {
+    "load": "0x10021fb40",
+    "sphere": "0x10021fd80",
+    "overlap": "0x100220090",
+    "flood": "0x10021fa30",
+    "allocate": "0x1002216b0"
+  },
+  "nativeCapacity": 512,
+  "nativeOracleSourceSha256": "4b0bb0d242acfa11f9d22427bb1fd7c2f3e11b372dca7657b5b0036cf259f578",
+  "cases": 72,
+  "cards": 690,
+  "comparedComponents": 3450,
+  "indexComponents": 0,
+  "rows": [
+    {
+      "name": "empty",
+      "cards": 0,
+      "groups": 0,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "touching-separated",
+      "cards": 2,
+      "groups": 2,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "just-overlapping",
+      "cards": 2,
+      "groups": 1,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "transitive-chain-and-isolated",
+      "cards": 4,
+      "groups": 2,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "coincident-zero-radii",
+      "cards": 3,
+      "groups": 1,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "stored-center-not-vertex-mean",
+      "cards": 1,
+      "groups": 1,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "zero-matrix-empty-vertices",
+      "cards": 1,
+      "groups": 1,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "random-0",
+      "cards": 1,
+      "groups": 1,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "random-1",
+      "cards": 2,
+      "groups": 1,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "random-2",
+      "cards": 3,
+      "groups": 1,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "random-3",
+      "cards": 4,
+      "groups": 1,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "random-4",
+      "cards": 5,
+      "groups": 1,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "random-5",
+      "cards": 6,
+      "groups": 1,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "random-6",
+      "cards": 7,
+      "groups": 1,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "random-7",
+      "cards": 8,
+      "groups": 1,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "random-8",
+      "cards": 9,
+      "groups": 1,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "random-9",
+      "cards": 10,
+      "groups": 1,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "random-10",
+      "cards": 11,
+      "groups": 1,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "random-11",
+      "cards": 12,
+      "groups": 1,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "random-12",
+      "cards": 13,
+      "groups": 1,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "random-13",
+      "cards": 14,
+      "groups": 1,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "random-14",
+      "cards": 15,
+      "groups": 1,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "random-15",
+      "cards": 16,
+      "groups": 1,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "random-16",
+      "cards": 17,
+      "groups": 1,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "random-17",
+      "cards": 18,
+      "groups": 1,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "random-18",
+      "cards": 19,
+      "groups": 1,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "random-19",
+      "cards": 20,
+      "groups": 1,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "random-20",
+      "cards": 21,
+      "groups": 1,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "random-21",
+      "cards": 22,
+      "groups": 1,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "random-22",
+      "cards": 23,
+      "groups": 1,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "random-23",
+      "cards": 1,
+      "groups": 1,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "random-24",
+      "cards": 2,
+      "groups": 1,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "random-25",
+      "cards": 3,
+      "groups": 1,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "random-26",
+      "cards": 4,
+      "groups": 1,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "random-27",
+      "cards": 5,
+      "groups": 1,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "random-28",
+      "cards": 6,
+      "groups": 1,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "random-29",
+      "cards": 7,
+      "groups": 1,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "random-30",
+      "cards": 8,
+      "groups": 1,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "random-31",
+      "cards": 9,
+      "groups": 1,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "CandleSpace",
+      "cards": 0,
+      "groups": 0,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "CandleSpaceEnd",
+      "cards": 0,
+      "groups": 0,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "CarryLand",
+      "cards": 0,
+      "groups": 0,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "CarryLand2",
+      "cards": 0,
+      "groups": 0,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "CarryLand3",
+      "cards": 0,
+      "groups": 0,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "Dawn",
+      "cards": 78,
+      "groups": 6,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "DayEnd",
+      "cards": 24,
+      "groups": 1,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "DayHubCave",
+      "cards": 0,
+      "groups": 0,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "Dusk",
+      "cards": 0,
+      "groups": 0,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "DuskGraveyard",
+      "cards": 0,
+      "groups": 0,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "DuskMid",
+      "cards": 0,
+      "groups": 0,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "Dusk_CrabField",
+      "cards": 0,
+      "groups": 0,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "HubReveal",
+      "cards": 2,
+      "groups": 2,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "Night",
+      "cards": 0,
+      "groups": 0,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "NightEnd",
+      "cards": 0,
+      "groups": 0,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "NightEntrance",
+      "cards": 0,
+      "groups": 0,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "Prairie_ButterflyFields",
+      "cards": 18,
+      "groups": 8,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "Prairie_Cave",
+      "cards": 7,
+      "groups": 4,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "Prairie_NestAndKeeper",
+      "cards": 19,
+      "groups": 8,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "Prairie_Village",
+      "cards": 13,
+      "groups": 7,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "Rain",
+      "cards": 0,
+      "groups": 0,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "RainEnd",
+      "cards": 0,
+      "groups": 0,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "RainForest",
+      "cards": 0,
+      "groups": 0,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "RainMid",
+      "cards": 0,
+      "groups": 0,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "SkyHub2",
+      "cards": 7,
+      "groups": 6,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "Storm",
+      "cards": 36,
+      "groups": 1,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "StormEnd",
+      "cards": 71,
+      "groups": 3,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "Sunset",
+      "cards": 26,
+      "groups": 10,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "SunsetEnd",
+      "cards": 41,
+      "groups": 8,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "SunsetEnd2",
+      "cards": 0,
+      "groups": 0,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "SunsetRace",
+      "cards": 14,
+      "groups": 3,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "TitleWater",
+      "cards": 0,
+      "groups": 0,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    },
+    {
+      "name": "WorldEmpty",
+      "cards": 0,
+      "groups": 0,
+      "indexComponents": 0,
+      "failedComponents": 0,
+      "passed": true
+    }
+  ]
+}

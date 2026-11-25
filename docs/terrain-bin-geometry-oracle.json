@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "scope": "Complete original TerrainBarn creation normal body 0x1006a9000 and original GetScale 0x100789e80, bounds-to-OBB 0x10078c950, matrix multiply 0x100076df0 and global/per-bin scatter 0x1006a7280 execute continuously under ambient RTE. CPU heap/scratch getter/allocate/release and imported memory/string/powf use explicit host services. Explicit terrain+0xc1=1 suppresses CollisionGeoBarn registration; loaded terrain fields/material definition pointers, free-list model and Barn capacity are harness snapshots. JS parity covers produced bin sphere xyz/radius, all four minima/maxima lanes (arithmetic NaN payload excluded), LOD FFFF, untouched pending bytes, every packet byte including untouched empty slots, 59 surface populations/counts and complete index streams plus 64-byte guards. All 77 serialized terrain records and original patch partitions/grid metadata in 31 maps use identity and explicit unit-scale yaw transforms; these are not original object transforms or proof of actual loader state. Packet overflow above 16 nonempty surfaces is rejected; uint16 count truncation, ignored NaN positions, signed zeros and empty bins covered. Allocation policy, other model fields, collision, LOD jobs/transitions, actual loaded object/resource registration, RTZ creation, viewport/GPU/hardware/game remain unverified.",
+  "cases": 170,
+  "compared": 76061296,
+  "failed": 0,
+  "failures": [],
+  "corpusMaps": 31,
+  "corpusRecords": 77,
+  "corpusBins": 96309,
+  "binGeometryAndPacketsVerified": true,
+  "actualLoaderRestored": false,
+  "collisionRegistrationRestored": false,
+  "lodTransitionsAndJobsRestored": false,
+  "viewportIntegrated": false
+}

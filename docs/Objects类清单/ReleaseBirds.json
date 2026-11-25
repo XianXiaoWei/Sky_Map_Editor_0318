@@ -1,0 +1,417 @@
+{
+  "className": "ReleaseBirds",
+  "functionGroup": "生物、群体与 AI",
+  "functionRole": "释放鸟类集合",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "partial",
+      "description": "ReleaseBirds 的原默认值、继承初始化及 2 个序列化字段变体；原注册字段 1 项。"
+    },
+    {
+      "name": "释放鸟类集合",
+      "status": "partial",
+      "description": "原 OnEnabled 与所依赖的 Avatar 断言子函数已有独立原对照，保留 secondary forced FadeSequence(0.3,0)、实时模型／Clump重读、原平方距离严格阈值和统计递增。与 Detach 共133组、61,560,380字节零差异，接共享 EventBarn；三份实际保存配置仍因各鸟真实 Model／动画 owner 尚未装载而明确不可运行，Avatar／统计／淡出服务和完整下游生命周期继续待接。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "partial",
+      "description": "Clump（3 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "partial",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "ReleaseBirds",
+    "category": "生物、群体与 AI",
+    "functionGroupId": "creatures",
+    "functionRole": "释放鸟类集合",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "partial",
+        "description": "ReleaseBirds 的原默认值、继承初始化及 2 个序列化字段变体；原注册字段 1 项。"
+      },
+      {
+        "name": "释放鸟类集合",
+        "status": "partial",
+        "description": "原 OnEnabled 与所依赖的 Avatar 断言子函数已有独立原对照，保留 secondary forced FadeSequence(0.3,0)、实时模型／Clump重读、原平方距离严格阈值和统计递增。与 Detach 共133组、61,560,380字节零差异，接共享 EventBarn；三份实际保存配置仍因各鸟真实 Model／动画 owner 尚未装载而明确不可运行，Avatar／统计／淡出服务和完整下游生命周期继续待接。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "partial",
+        "description": "Clump（3 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "partial",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Clump",
+        "references": 3
+      }
+    ],
+    "rttiWorkingGroup": "玩家、角色与动画",
+    "role": "对象实例类型",
+    "instances": 3,
+    "nestedInstances": 0,
+    "referenceFields": 3,
+    "declaredLevels": 1,
+    "levels": [
+      {
+        "level": "RainMid",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "birds",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100c8b130",
+    "nativeRegisteredFields": [
+      {
+        "name": "birds",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x1001aaa50",
+        "propertyAddress": "0x100c89e80"
+      }
+    ],
+    "completedCheckpoints": 4,
+    "partialCheckpoints": 4,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 40,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": true,
+    "implementation": [
+      "src/core/environment-object-state.ts",
+      "src/core/creature-construction-runtime.ts",
+      "src/core/creature-runtime.ts",
+      "src/core/bird-guide-runtime.ts",
+      "src/core/environment-event-owner.ts"
+    ],
+    "evidence": [
+      "docs/生物骨骼动画续接.md",
+      "docs/creature-construction.json",
+      "docs/creature-construction-oracle.json",
+      "docs/creature-kernel-oracle.json",
+      "docs/objects-nature-audit.json",
+      "docs/bird-guide-native.json",
+      "docs/自然动画与鸟群引导续接.md",
+      "docs/bird-guide-oracle.json"
+    ],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 1 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "partial",
+        "note": "原 OnEnabled 与所依赖的 Avatar 断言子函数已有独立原对照，保留 secondary forced FadeSequence(0.3,0)、实时模型／Clump重读、原平方距离严格阈值和统计递增。与 Detach 共133组、61,560,380字节零差异，接共享 EventBarn；三份实际保存配置仍因各鸟真实 Model／动画 owner 尚未装载而明确不可运行，Avatar／统计／淡出服务和完整下游生命周期继续待接。",
+        "evidence": [
+          "docs/生物骨骼动画续接.md",
+          "docs/creature-construction.json",
+          "docs/creature-construction-oracle.json",
+          "docs/creature-kernel-oracle.json",
+          "docs/objects-nature-audit.json",
+          "docs/bird-guide-native.json",
+          "docs/自然动画与鸟群引导续接.md",
+          "docs/bird-guide-oracle.json"
+        ]
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "partial",
+        "note": "原 OnEnabled 与所依赖的 Avatar 断言子函数已有独立原对照，保留 secondary forced FadeSequence(0.3,0)、实时模型／Clump重读、原平方距离严格阈值和统计递增。与 Detach 共133组、61,560,380字节零差异，接共享 EventBarn；三份实际保存配置仍因各鸟真实 Model／动画 owner 尚未装载而明确不可运行，Avatar／统计／淡出服务和完整下游生命周期继续待接。",
+        "evidence": [
+          "docs/生物骨骼动画续接.md",
+          "docs/creature-construction.json",
+          "docs/creature-construction-oracle.json",
+          "docs/creature-kernel-oracle.json",
+          "docs/objects-nature-audit.json",
+          "docs/bird-guide-native.json",
+          "docs/自然动画与鸟群引导续接.md",
+          "docs/bird-guide-oracle.json"
+        ]
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "verified",
+        "note": "原 OnEnabled 与所依赖的 Avatar 断言子函数已有独立原对照，保留 secondary forced FadeSequence(0.3,0)、实时模型／Clump重读、原平方距离严格阈值和统计递增。与 Detach 共133组、61,560,380字节零差异，接共享 EventBarn；三份实际保存配置仍因各鸟真实 Model／动画 owner 尚未装载而明确不可运行，Avatar／统计／淡出服务和完整下游生命周期继续待接。",
+        "evidence": [
+          "docs/生物骨骼动画续接.md",
+          "docs/creature-construction.json",
+          "docs/creature-construction-oracle.json",
+          "docs/creature-kernel-oracle.json",
+          "docs/objects-nature-audit.json",
+          "docs/bird-guide-native.json",
+          "docs/自然动画与鸟群引导续接.md",
+          "docs/bird-guide-oracle.json"
+        ]
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "partial",
+        "note": "原 OnEnabled 与所依赖的 Avatar 断言子函数已有独立原对照，保留 secondary forced FadeSequence(0.3,0)、实时模型／Clump重读、原平方距离严格阈值和统计递增。与 Detach 共133组、61,560,380字节零差异，接共享 EventBarn；三份实际保存配置仍因各鸟真实 Model／动画 owner 尚未装载而明确不可运行，Avatar／统计／淡出服务和完整下游生命周期继续待接。",
+        "evidence": [
+          "docs/生物骨骼动画续接.md",
+          "docs/creature-construction.json",
+          "docs/creature-construction-oracle.json",
+          "docs/creature-kernel-oracle.json",
+          "docs/objects-nature-audit.json",
+          "docs/bird-guide-native.json",
+          "docs/自然动画与鸟群引导续接.md",
+          "docs/bird-guide-oracle.json"
+        ]
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "partial",
+        "note": "原 OnEnabled 与所依赖的 Avatar 断言子函数已有独立原对照，保留 secondary forced FadeSequence(0.3,0)、实时模型／Clump重读、原平方距离严格阈值和统计递增。与 Detach 共133组、61,560,380字节零差异，接共享 EventBarn；三份实际保存配置仍因各鸟真实 Model／动画 owner 尚未装载而明确不可运行，Avatar／统计／淡出服务和完整下游生命周期继续待接。",
+        "evidence": [
+          "docs/生物骨骼动画续接.md",
+          "docs/creature-construction.json",
+          "docs/creature-construction-oracle.json",
+          "docs/creature-kernel-oracle.json",
+          "docs/objects-nature-audit.json",
+          "docs/bird-guide-native.json",
+          "docs/自然动画与鸟群引导续接.md",
+          "docs/bird-guide-oracle.json"
+        ]
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "原 OnEnabled 与所依赖的 Avatar 断言子函数已有独立原对照，保留 secondary forced FadeSequence(0.3,0)、实时模型／Clump重读、原平方距离严格阈值和统计递增。与 Detach 共133组、61,560,380字节零差异，接共享 EventBarn；三份实际保存配置仍因各鸟真实 Model／动画 owner 尚未装载而明确不可运行，Avatar／统计／淡出服务和完整下游生命周期继续待接。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "RainMid:n65",
+      "level": "RainMid",
+      "nodeId": 65,
+      "name": "BstNode_2345992369",
+      "className": "ReleaseBirds",
+      "classIndex": 22,
+      "sourceOffset": 38825,
+      "sourceLength": 28,
+      "sourceSha256": "df890b52af082b17f360e404a3ccdb238e7c370f221d669e25c32eff9c1c22dd",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n65/p1",
+          "fieldName": "birds",
+          "target": "RainMid:n2202",
+          "targetNodeId": 2202,
+          "offset": 38849
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n1460",
+      "level": "RainMid",
+      "nodeId": 1460,
+      "name": "BstNode_2345992354",
+      "className": "ReleaseBirds",
+      "classIndex": 22,
+      "sourceOffset": 292370,
+      "sourceLength": 28,
+      "sourceSha256": "5c7de2ef321c7991a2a6df5128f189a4e690d6bb110da92b3c6c9e7811c32a63",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1460/p1",
+          "fieldName": "birds",
+          "target": "RainMid:n2356",
+          "targetNodeId": 2356,
+          "offset": 292394
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n1842",
+      "level": "RainMid",
+      "nodeId": 1842,
+      "name": "BstNode_2060386401",
+      "className": "ReleaseBirds",
+      "classIndex": 22,
+      "sourceOffset": 361848,
+      "sourceLength": 28,
+      "sourceSha256": "afdfda551490f323efbfe699d640e32da92dad04c225c6f4130c969f3371360a",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1842/p1",
+          "fieldName": "birds",
+          "target": "RainMid:n2416",
+          "targetNodeId": 2416,
+          "offset": 361872
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "RainMid",
+      "path": "Levels/RainMid/Objects.level.bin",
+      "sha256": "139b219d9b71a2ab24418b1ec41f2ee8a2ebfdf4c5ea992c35348a758682ed23",
+      "bytes": 430825,
+      "nodes": 2457,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainMid.json",
+      "markdown": "Objects对象清单/RainMid.md"
+    }
+  ]
+}

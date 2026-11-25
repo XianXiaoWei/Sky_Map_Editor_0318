@@ -1,0 +1,2669 @@
+{
+  "passed": true,
+  "maps": [
+    {
+      "level": "CandleSpace",
+      "passed": true,
+      "scope": "Original terrain/skirt GLSL, real packed geometry/material textures with declared gamma/mip handling and supported anisotropy (16x preview request), recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/MotionGen/MotionDilate/TemporalAa/Tonemap chain. PNG area-filtered mip generation and anisotropy strength remain preview adapters, not original exporter/Metal parity. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending.",
+      "draws": 0,
+      "shaders": [],
+      "triangles": 0,
+      "textures": [],
+      "textureSampling": [],
+      "dynamics": {
+        "time": 0,
+        "scrolls": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "level": "CandleSpaceEnd",
+      "passed": true,
+      "scope": "Original terrain/skirt GLSL, real packed geometry/material textures with declared gamma/mip handling and supported anisotropy (16x preview request), recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/MotionGen/MotionDilate/TemporalAa/Tonemap chain. PNG area-filtered mip generation and anisotropy strength remain preview adapters, not original exporter/Metal parity. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending.",
+      "draws": 1,
+      "shaders": [
+        "CloudSh"
+      ],
+      "triangles": 128094,
+      "textures": [],
+      "textureSampling": [],
+      "dynamics": {
+        "time": 0,
+        "scrolls": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "level": "CarryLand",
+      "passed": true,
+      "scope": "Original terrain/skirt GLSL, real packed geometry/material textures with declared gamma/mip handling and supported anisotropy (16x preview request), recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/MotionGen/MotionDilate/TemporalAa/Tonemap chain. PNG area-filtered mip generation and anisotropy strength remain preview adapters, not original exporter/Metal parity. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending.",
+      "draws": 5,
+      "shaders": [
+        "RockFaceSh",
+        "SandSh",
+        "GrassSh",
+        "SandShAlpha",
+        "GrassShAlpha"
+      ],
+      "triangles": 140038,
+      "textures": [
+        "CliffSh",
+        "Noise3Ch",
+        "GrassNorTex0",
+        "GrassNorTex1",
+        "GrassMask"
+      ],
+      "textureSampling": [
+        {
+          "name": "CliffSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "Noise3Ch",
+          "mipLevels": 10,
+          "anisotropy": 1,
+          "gamma": false
+        },
+        {
+          "name": "GrassNorTex0",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "GrassNorTex1",
+          "mipLevels": 9,
+          "anisotropy": 1,
+          "gamma": false
+        },
+        {
+          "name": "GrassMask",
+          "mipLevels": 10,
+          "anisotropy": 1,
+          "gamma": false
+        }
+      ],
+      "dynamics": {
+        "time": 0,
+        "scrolls": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "level": "CarryLand2",
+      "passed": true,
+      "scope": "Original terrain/skirt GLSL, real packed geometry/material textures with declared gamma/mip handling and supported anisotropy (16x preview request), recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/MotionGen/MotionDilate/TemporalAa/Tonemap chain. PNG area-filtered mip generation and anisotropy strength remain preview adapters, not original exporter/Metal parity. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending.",
+      "draws": 5,
+      "shaders": [
+        "RockFaceSh",
+        "SandSh",
+        "GrassSh",
+        "SandShAlpha",
+        "GrassShAlpha"
+      ],
+      "triangles": 139487,
+      "textures": [
+        "CliffSh",
+        "Noise3Ch",
+        "GrassNorTex0",
+        "GrassNorTex1",
+        "GrassMask"
+      ],
+      "textureSampling": [
+        {
+          "name": "CliffSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "Noise3Ch",
+          "mipLevels": 10,
+          "anisotropy": 1,
+          "gamma": false
+        },
+        {
+          "name": "GrassNorTex0",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "GrassNorTex1",
+          "mipLevels": 9,
+          "anisotropy": 1,
+          "gamma": false
+        },
+        {
+          "name": "GrassMask",
+          "mipLevels": 10,
+          "anisotropy": 1,
+          "gamma": false
+        }
+      ],
+      "dynamics": {
+        "time": 0,
+        "scrolls": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "level": "CarryLand3",
+      "passed": true,
+      "scope": "Original terrain/skirt GLSL, real packed geometry/material textures with declared gamma/mip handling and supported anisotropy (16x preview request), recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/MotionGen/MotionDilate/TemporalAa/Tonemap chain. PNG area-filtered mip generation and anisotropy strength remain preview adapters, not original exporter/Metal parity. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending.",
+      "draws": 5,
+      "shaders": [
+        "RockFaceSh",
+        "SandSh",
+        "GrassSh",
+        "SandShAlpha",
+        "GrassShAlpha"
+      ],
+      "triangles": 140166,
+      "textures": [
+        "CliffSh",
+        "Noise3Ch",
+        "GrassNorTex0",
+        "GrassNorTex1",
+        "GrassMask"
+      ],
+      "textureSampling": [
+        {
+          "name": "CliffSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "Noise3Ch",
+          "mipLevels": 10,
+          "anisotropy": 1,
+          "gamma": false
+        },
+        {
+          "name": "GrassNorTex0",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "GrassNorTex1",
+          "mipLevels": 9,
+          "anisotropy": 1,
+          "gamma": false
+        },
+        {
+          "name": "GrassMask",
+          "mipLevels": 10,
+          "anisotropy": 1,
+          "gamma": false
+        }
+      ],
+      "dynamics": {
+        "time": 0,
+        "scrolls": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "level": "Dawn",
+      "passed": true,
+      "scope": "Original terrain/skirt GLSL, real packed geometry/material textures with declared gamma/mip handling and supported anisotropy (16x preview request), recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/MotionGen/MotionDilate/TemporalAa/Tonemap chain. PNG area-filtered mip generation and anisotropy strength remain preview adapters, not original exporter/Metal parity. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending.",
+      "draws": 20,
+      "shaders": [
+        "RockFaceSh",
+        "SandSh",
+        "GrassSh",
+        "RockFaceShAlpha",
+        "SandShAlpha",
+        "GrassShAlpha",
+        "RockFaceShAlphaSkirt",
+        "SandShAlphaSkirt",
+        "GrassShAlphaSkirt"
+      ],
+      "triangles": 138277,
+      "textures": [
+        "CliffSh",
+        "CliffWetSh",
+        "Noise3Ch",
+        "GrassNorTex0",
+        "GrassNorTex1",
+        "GrassMask"
+      ],
+      "textureSampling": [
+        {
+          "name": "CliffSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "CliffWetSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "Noise3Ch",
+          "mipLevels": 10,
+          "anisotropy": 1,
+          "gamma": false
+        },
+        {
+          "name": "GrassNorTex0",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "GrassNorTex1",
+          "mipLevels": 9,
+          "anisotropy": 1,
+          "gamma": false
+        },
+        {
+          "name": "GrassMask",
+          "mipLevels": 10,
+          "anisotropy": 1,
+          "gamma": false
+        }
+      ],
+      "dynamics": {
+        "time": 0,
+        "scrolls": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "level": "DayEnd",
+      "passed": true,
+      "scope": "Original terrain/skirt GLSL, real packed geometry/material textures with declared gamma/mip handling and supported anisotropy (16x preview request), recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/MotionGen/MotionDilate/TemporalAa/Tonemap chain. PNG area-filtered mip generation and anisotropy strength remain preview adapters, not original exporter/Metal parity. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending.",
+      "draws": 17,
+      "shaders": [
+        "RockFaceSh",
+        "SandSh",
+        "GrassSh",
+        "RockFaceShAlpha",
+        "SandShAlpha",
+        "GrassShAlpha",
+        "RockFaceShAlphaSkirt",
+        "SandShAlphaSkirt",
+        "GrassShAlphaSkirt"
+      ],
+      "triangles": 91978,
+      "textures": [
+        "CliffSh",
+        "TileFloorSh",
+        "WallSh",
+        "WoodSh",
+        "Noise3Ch",
+        "GrassNorTex0",
+        "GrassNorTex1",
+        "GrassMask"
+      ],
+      "textureSampling": [
+        {
+          "name": "CliffSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "TileFloorSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "WallSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "WoodSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "Noise3Ch",
+          "mipLevels": 10,
+          "anisotropy": 1,
+          "gamma": false
+        },
+        {
+          "name": "GrassNorTex0",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "GrassNorTex1",
+          "mipLevels": 9,
+          "anisotropy": 1,
+          "gamma": false
+        },
+        {
+          "name": "GrassMask",
+          "mipLevels": 10,
+          "anisotropy": 1,
+          "gamma": false
+        }
+      ],
+      "dynamics": {
+        "time": 0,
+        "scrolls": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "level": "DayHubCave",
+      "passed": true,
+      "scope": "Original terrain/skirt GLSL, real packed geometry/material textures with declared gamma/mip handling and supported anisotropy (16x preview request), recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/MotionGen/MotionDilate/TemporalAa/Tonemap chain. PNG area-filtered mip generation and anisotropy strength remain preview adapters, not original exporter/Metal parity. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending.",
+      "draws": 22,
+      "shaders": [
+        "RockFaceSh",
+        "SandSh",
+        "GrassSh",
+        "RockFaceShAlpha",
+        "SandShAlpha",
+        "GrassShAlpha",
+        "RockFaceShAlphaSkirt",
+        "SandShAlphaSkirt",
+        "GrassShAlphaSkirt"
+      ],
+      "triangles": 103977,
+      "textures": [
+        "CliffSh",
+        "SoilSh",
+        "TileCeilingSh",
+        "TileFloorSh",
+        "WallSh",
+        "WoodSh",
+        "Noise3Ch",
+        "GrassNorTex0",
+        "GrassNorTex1",
+        "GrassMask"
+      ],
+      "textureSampling": [
+        {
+          "name": "CliffSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "SoilSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "TileCeilingSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "TileFloorSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "WallSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "WoodSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "Noise3Ch",
+          "mipLevels": 10,
+          "anisotropy": 1,
+          "gamma": false
+        },
+        {
+          "name": "GrassNorTex0",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "GrassNorTex1",
+          "mipLevels": 9,
+          "anisotropy": 1,
+          "gamma": false
+        },
+        {
+          "name": "GrassMask",
+          "mipLevels": 10,
+          "anisotropy": 1,
+          "gamma": false
+        }
+      ],
+      "dynamics": {
+        "time": 0,
+        "scrolls": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "level": "Dusk",
+      "passed": true,
+      "scope": "Original terrain/skirt GLSL, real packed geometry/material textures with declared gamma/mip handling and supported anisotropy (16x preview request), recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/MotionGen/MotionDilate/TemporalAa/Tonemap chain. PNG area-filtered mip generation and anisotropy strength remain preview adapters, not original exporter/Metal parity. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending.",
+      "draws": 11,
+      "shaders": [
+        "RockFaceSh",
+        "SandSh",
+        "SandRainSh",
+        "RockFaceShAlpha",
+        "SandShAlpha",
+        "SandRainShAlpha",
+        "RockFaceShAlphaSkirt",
+        "SandShAlphaSkirt",
+        "SandRainShAlphaSkirt"
+      ],
+      "triangles": 113424,
+      "textures": [
+        "CliffSh",
+        "CliffWetSh",
+        "Noise3Ch",
+        "UpNormal"
+      ],
+      "textureSampling": [
+        {
+          "name": "CliffSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "CliffWetSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "Noise3Ch",
+          "mipLevels": 10,
+          "anisotropy": 1,
+          "gamma": false
+        },
+        {
+          "name": "UpNormal",
+          "mipLevels": 1,
+          "anisotropy": 1,
+          "gamma": false
+        }
+      ],
+      "dynamics": {
+        "time": 0,
+        "scrolls": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "level": "DuskGraveyard",
+      "passed": true,
+      "scope": "Original terrain/skirt GLSL, real packed geometry/material textures with declared gamma/mip handling and supported anisotropy (16x preview request), recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/MotionGen/MotionDilate/TemporalAa/Tonemap chain. PNG area-filtered mip generation and anisotropy strength remain preview adapters, not original exporter/Metal parity. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending.",
+      "draws": 29,
+      "shaders": [
+        "RockFaceSh",
+        "RockFaceRainSh",
+        "SandSh",
+        "SandRainSh",
+        "RockFaceShAlpha",
+        "RockFaceRainShAlpha",
+        "SandShAlpha",
+        "SandRainShAlpha",
+        "RockFaceShAlphaSkirt",
+        "RockFaceRainShAlphaSkirt",
+        "SandShAlphaSkirt",
+        "SandRainShAlphaSkirt"
+      ],
+      "triangles": 333839,
+      "textures": [
+        "CliffSh",
+        "SoilSh",
+        "TileFloorSh",
+        "WallSh",
+        "WallBrickSh",
+        "CliffWetSh",
+        "Noise3Ch",
+        "UpNormal"
+      ],
+      "textureSampling": [
+        {
+          "name": "CliffSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "SoilSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "TileFloorSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "WallSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "WallBrickSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "CliffWetSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "Noise3Ch",
+          "mipLevels": 10,
+          "anisotropy": 1,
+          "gamma": false
+        },
+        {
+          "name": "UpNormal",
+          "mipLevels": 1,
+          "anisotropy": 1,
+          "gamma": false
+        }
+      ],
+      "dynamics": {
+        "time": 0,
+        "scrolls": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "level": "DuskMid",
+      "passed": true,
+      "scope": "Original terrain/skirt GLSL, real packed geometry/material textures with declared gamma/mip handling and supported anisotropy (16x preview request), recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/MotionGen/MotionDilate/TemporalAa/Tonemap chain. PNG area-filtered mip generation and anisotropy strength remain preview adapters, not original exporter/Metal parity. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending.",
+      "draws": 17,
+      "shaders": [
+        "RockFaceSh",
+        "SandSh",
+        "SandRainSh",
+        "RockFaceShAlpha",
+        "SandShAlpha",
+        "SandRainShAlpha",
+        "RockFaceShAlphaSkirt",
+        "SandShAlphaSkirt",
+        "SandRainShAlphaSkirt"
+      ],
+      "triangles": 83469,
+      "textures": [
+        "CliffSh",
+        "TileFloorSh",
+        "WallSh",
+        "CliffWetSh",
+        "Noise3Ch",
+        "UpNormal"
+      ],
+      "textureSampling": [
+        {
+          "name": "CliffSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "TileFloorSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "WallSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "CliffWetSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "Noise3Ch",
+          "mipLevels": 10,
+          "anisotropy": 1,
+          "gamma": false
+        },
+        {
+          "name": "UpNormal",
+          "mipLevels": 1,
+          "anisotropy": 1,
+          "gamma": false
+        }
+      ],
+      "dynamics": {
+        "time": 0,
+        "scrolls": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "level": "Dusk_CrabField",
+      "passed": true,
+      "scope": "Original terrain/skirt GLSL, real packed geometry/material textures with declared gamma/mip handling and supported anisotropy (16x preview request), recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/MotionGen/MotionDilate/TemporalAa/Tonemap chain. PNG area-filtered mip generation and anisotropy strength remain preview adapters, not original exporter/Metal parity. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending.",
+      "draws": 14,
+      "shaders": [
+        "RockFaceSh",
+        "SandSh",
+        "SandRainSh",
+        "RockFaceShAlpha",
+        "SandShAlpha",
+        "SandRainShAlpha",
+        "RockFaceShAlphaSkirt",
+        "SandShAlphaSkirt",
+        "SandRainShAlphaSkirt"
+      ],
+      "triangles": 205692,
+      "textures": [
+        "CliffSh",
+        "CliffWetSh",
+        "Noise3Ch",
+        "UpNormal"
+      ],
+      "textureSampling": [
+        {
+          "name": "CliffSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "CliffWetSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "Noise3Ch",
+          "mipLevels": 10,
+          "anisotropy": 1,
+          "gamma": false
+        },
+        {
+          "name": "UpNormal",
+          "mipLevels": 1,
+          "anisotropy": 1,
+          "gamma": false
+        }
+      ],
+      "dynamics": {
+        "time": 0,
+        "scrolls": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "level": "HubReveal",
+      "passed": true,
+      "scope": "Original terrain/skirt GLSL, real packed geometry/material textures with declared gamma/mip handling and supported anisotropy (16x preview request), recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/MotionGen/MotionDilate/TemporalAa/Tonemap chain. PNG area-filtered mip generation and anisotropy strength remain preview adapters, not original exporter/Metal parity. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending.",
+      "draws": 19,
+      "shaders": [
+        "RockFaceSh",
+        "SandSh",
+        "GrassSh",
+        "RockFaceShAlpha",
+        "SandShAlpha",
+        "GrassShAlpha",
+        "RockFaceShAlphaSkirt",
+        "SandShAlphaSkirt",
+        "GrassShAlphaSkirt"
+      ],
+      "triangles": 148884,
+      "textures": [
+        "CliffSh",
+        "GoldSh",
+        "Noise3Ch",
+        "GrassNorTex0",
+        "GrassNorTex1",
+        "GrassMask"
+      ],
+      "textureSampling": [
+        {
+          "name": "CliffSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "GoldSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "Noise3Ch",
+          "mipLevels": 10,
+          "anisotropy": 1,
+          "gamma": false
+        },
+        {
+          "name": "GrassNorTex0",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "GrassNorTex1",
+          "mipLevels": 9,
+          "anisotropy": 1,
+          "gamma": false
+        },
+        {
+          "name": "GrassMask",
+          "mipLevels": 10,
+          "anisotropy": 1,
+          "gamma": false
+        }
+      ],
+      "dynamics": {
+        "time": 0,
+        "scrolls": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "level": "Night",
+      "passed": true,
+      "scope": "Original terrain/skirt GLSL, real packed geometry/material textures with declared gamma/mip handling and supported anisotropy (16x preview request), recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/MotionGen/MotionDilate/TemporalAa/Tonemap chain. PNG area-filtered mip generation and anisotropy strength remain preview adapters, not original exporter/Metal parity. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending.",
+      "draws": 8,
+      "shaders": [
+        "RockFaceSh",
+        "RockFaceShAlpha",
+        "RockFaceShAlphaSkirt"
+      ],
+      "triangles": 179882,
+      "textures": [
+        "CliffSh",
+        "TileFloorSh",
+        "WallSh"
+      ],
+      "textureSampling": [
+        {
+          "name": "CliffSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "TileFloorSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "WallSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        }
+      ],
+      "dynamics": {
+        "time": 0,
+        "scrolls": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "level": "NightEnd",
+      "passed": true,
+      "scope": "Original terrain/skirt GLSL, real packed geometry/material textures with declared gamma/mip handling and supported anisotropy (16x preview request), recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/MotionGen/MotionDilate/TemporalAa/Tonemap chain. PNG area-filtered mip generation and anisotropy strength remain preview adapters, not original exporter/Metal parity. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending.",
+      "draws": 11,
+      "shaders": [
+        "RockFaceSh",
+        "RockFaceShAlpha",
+        "RockFaceShAlphaSkirt"
+      ],
+      "triangles": 153636,
+      "textures": [
+        "CliffSh",
+        "TileCeilingSh",
+        "TileFloorSh",
+        "WallSh"
+      ],
+      "textureSampling": [
+        {
+          "name": "CliffSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "TileCeilingSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "TileFloorSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "WallSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        }
+      ],
+      "dynamics": {
+        "time": 0,
+        "scrolls": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "level": "NightEntrance",
+      "passed": true,
+      "scope": "Original terrain/skirt GLSL, real packed geometry/material textures with declared gamma/mip handling and supported anisotropy (16x preview request), recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/MotionGen/MotionDilate/TemporalAa/Tonemap chain. PNG area-filtered mip generation and anisotropy strength remain preview adapters, not original exporter/Metal parity. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending.",
+      "draws": 11,
+      "shaders": [
+        "RockFaceSh",
+        "SandSh",
+        "RockFaceShAlpha",
+        "SandShAlpha",
+        "RockFaceShAlphaSkirt",
+        "SandShAlphaSkirt"
+      ],
+      "triangles": 157992,
+      "textures": [
+        "CliffSh",
+        "WallSh",
+        "Noise3Ch"
+      ],
+      "textureSampling": [
+        {
+          "name": "CliffSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "WallSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "Noise3Ch",
+          "mipLevels": 10,
+          "anisotropy": 1,
+          "gamma": false
+        }
+      ],
+      "dynamics": {
+        "time": 0,
+        "scrolls": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "level": "Prairie_ButterflyFields",
+      "passed": true,
+      "scope": "Original terrain/skirt GLSL, real packed geometry/material textures with declared gamma/mip handling and supported anisotropy (16x preview request), recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/MotionGen/MotionDilate/TemporalAa/Tonemap chain. PNG area-filtered mip generation and anisotropy strength remain preview adapters, not original exporter/Metal parity. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending.",
+      "draws": 20,
+      "shaders": [
+        "RockFaceSh",
+        "SandSh",
+        "SandRainSh",
+        "GrassSh",
+        "CloudSh",
+        "RockFaceShAlpha",
+        "SandShAlpha",
+        "GrassShAlpha",
+        "CloudShAlpha",
+        "RockFaceShAlphaSkirt",
+        "SandShAlphaSkirt",
+        "GrassShAlphaSkirt"
+      ],
+      "triangles": 242704,
+      "textures": [
+        "CliffSh",
+        "Noise3Ch",
+        "UpNormal",
+        "GrassNorTex0",
+        "GrassNorTex1",
+        "GrassMask"
+      ],
+      "textureSampling": [
+        {
+          "name": "CliffSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "Noise3Ch",
+          "mipLevels": 10,
+          "anisotropy": 1,
+          "gamma": false
+        },
+        {
+          "name": "UpNormal",
+          "mipLevels": 1,
+          "anisotropy": 1,
+          "gamma": false
+        },
+        {
+          "name": "GrassNorTex0",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "GrassNorTex1",
+          "mipLevels": 9,
+          "anisotropy": 1,
+          "gamma": false
+        },
+        {
+          "name": "GrassMask",
+          "mipLevels": 10,
+          "anisotropy": 1,
+          "gamma": false
+        }
+      ],
+      "dynamics": {
+        "time": 0,
+        "scrolls": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "level": "Prairie_Cave",
+      "passed": true,
+      "scope": "Original terrain/skirt GLSL, real packed geometry/material textures with declared gamma/mip handling and supported anisotropy (16x preview request), recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/MotionGen/MotionDilate/TemporalAa/Tonemap chain. PNG area-filtered mip generation and anisotropy strength remain preview adapters, not original exporter/Metal parity. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending.",
+      "draws": 23,
+      "shaders": [
+        "RockFaceSh",
+        "SandSh",
+        "GrassSh",
+        "RockFaceShAlpha",
+        "SandShAlpha",
+        "GrassShAlpha",
+        "RockFaceShAlphaSkirt",
+        "SandShAlphaSkirt",
+        "GrassShAlphaSkirt"
+      ],
+      "triangles": 213048,
+      "textures": [
+        "CliffSh",
+        "SoilSh",
+        "CliffWetSh",
+        "Noise3Ch",
+        "GrassNorTex0",
+        "GrassNorTex1",
+        "GrassMask"
+      ],
+      "textureSampling": [
+        {
+          "name": "CliffSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "SoilSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "CliffWetSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "Noise3Ch",
+          "mipLevels": 10,
+          "anisotropy": 1,
+          "gamma": false
+        },
+        {
+          "name": "GrassNorTex0",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "GrassNorTex1",
+          "mipLevels": 9,
+          "anisotropy": 1,
+          "gamma": false
+        },
+        {
+          "name": "GrassMask",
+          "mipLevels": 10,
+          "anisotropy": 1,
+          "gamma": false
+        }
+      ],
+      "dynamics": {
+        "time": 0,
+        "scrolls": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "level": "Prairie_NestAndKeeper",
+      "passed": true,
+      "scope": "Original terrain/skirt GLSL, real packed geometry/material textures with declared gamma/mip handling and supported anisotropy (16x preview request), recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/MotionGen/MotionDilate/TemporalAa/Tonemap chain. PNG area-filtered mip generation and anisotropy strength remain preview adapters, not original exporter/Metal parity. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending.",
+      "draws": 11,
+      "shaders": [
+        "RockFaceSh",
+        "GrassSh",
+        "RockFaceShAlpha",
+        "GrassShAlpha",
+        "RockFaceShAlphaSkirt",
+        "GrassShAlphaSkirt"
+      ],
+      "triangles": 113506,
+      "textures": [
+        "CliffSh",
+        "GrassNorTex0",
+        "GrassNorTex1",
+        "GrassMask"
+      ],
+      "textureSampling": [
+        {
+          "name": "CliffSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "GrassNorTex0",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "GrassNorTex1",
+          "mipLevels": 9,
+          "anisotropy": 1,
+          "gamma": false
+        },
+        {
+          "name": "GrassMask",
+          "mipLevels": 10,
+          "anisotropy": 1,
+          "gamma": false
+        }
+      ],
+      "dynamics": {
+        "time": 0,
+        "scrolls": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "level": "Prairie_Village",
+      "passed": true,
+      "scope": "Original terrain/skirt GLSL, real packed geometry/material textures with declared gamma/mip handling and supported anisotropy (16x preview request), recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/MotionGen/MotionDilate/TemporalAa/Tonemap chain. PNG area-filtered mip generation and anisotropy strength remain preview adapters, not original exporter/Metal parity. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending.",
+      "draws": 17,
+      "shaders": [
+        "RockFaceSh",
+        "SandSh",
+        "GrassSh",
+        "RockFaceShAlpha",
+        "SandShAlpha",
+        "GrassShAlpha",
+        "RockFaceShAlphaSkirt",
+        "SandShAlphaSkirt",
+        "GrassShAlphaSkirt"
+      ],
+      "triangles": 210687,
+      "textures": [
+        "CliffSh",
+        "SoilSh",
+        "Noise3Ch",
+        "GrassNorTex0",
+        "GrassNorTex1",
+        "GrassMask",
+        "GoldSh"
+      ],
+      "textureSampling": [
+        {
+          "name": "CliffSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "SoilSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "Noise3Ch",
+          "mipLevels": 10,
+          "anisotropy": 1,
+          "gamma": false
+        },
+        {
+          "name": "GrassNorTex0",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "GrassNorTex1",
+          "mipLevels": 9,
+          "anisotropy": 1,
+          "gamma": false
+        },
+        {
+          "name": "GrassMask",
+          "mipLevels": 10,
+          "anisotropy": 1,
+          "gamma": false
+        },
+        {
+          "name": "GoldSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        }
+      ],
+      "dynamics": {
+        "time": 0,
+        "scrolls": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "level": "Rain",
+      "passed": true,
+      "scope": "Original terrain/skirt GLSL, real packed geometry/material textures with declared gamma/mip handling and supported anisotropy (16x preview request), recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/MotionGen/MotionDilate/TemporalAa/Tonemap chain. PNG area-filtered mip generation and anisotropy strength remain preview adapters, not original exporter/Metal parity. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending.",
+      "draws": 38,
+      "shaders": [
+        "RockFaceSh",
+        "RockFaceRainSh",
+        "SandSh",
+        "SandRainSh",
+        "GrassSh",
+        "RockFaceShAlpha",
+        "RockFaceRainShAlpha",
+        "SandShAlpha",
+        "SandRainShAlpha",
+        "GrassShAlpha",
+        "RockFaceShAlphaSkirt",
+        "RockFaceRainShAlphaSkirt",
+        "SandShAlphaSkirt",
+        "SandRainShAlphaSkirt",
+        "GrassShAlphaSkirt"
+      ],
+      "triangles": 182889,
+      "textures": [
+        "CliffSh",
+        "SoilSh",
+        "TileFloorSh",
+        "WallSh",
+        "WallBrickSh",
+        "CliffWetSh",
+        "WoodSh",
+        "Noise3Ch",
+        "UpNormal",
+        "GrassNorTex0",
+        "GrassNorTex1",
+        "GrassMask"
+      ],
+      "textureSampling": [
+        {
+          "name": "CliffSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "SoilSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "TileFloorSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "WallSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "WallBrickSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "CliffWetSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "WoodSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "Noise3Ch",
+          "mipLevels": 10,
+          "anisotropy": 1,
+          "gamma": false
+        },
+        {
+          "name": "UpNormal",
+          "mipLevels": 1,
+          "anisotropy": 1,
+          "gamma": false
+        },
+        {
+          "name": "GrassNorTex0",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "GrassNorTex1",
+          "mipLevels": 9,
+          "anisotropy": 1,
+          "gamma": false
+        },
+        {
+          "name": "GrassMask",
+          "mipLevels": 10,
+          "anisotropy": 1,
+          "gamma": false
+        }
+      ],
+      "dynamics": {
+        "time": 0,
+        "scrolls": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "level": "RainEnd",
+      "passed": true,
+      "scope": "Original terrain/skirt GLSL, real packed geometry/material textures with declared gamma/mip handling and supported anisotropy (16x preview request), recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/MotionGen/MotionDilate/TemporalAa/Tonemap chain. PNG area-filtered mip generation and anisotropy strength remain preview adapters, not original exporter/Metal parity. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending.",
+      "draws": 28,
+      "shaders": [
+        "RockFaceSh",
+        "SandSh",
+        "GrassSh",
+        "RockFaceShAlpha",
+        "SandShAlpha",
+        "GrassShAlpha",
+        "RockFaceShAlphaSkirt",
+        "SandShAlphaSkirt",
+        "GrassShAlphaSkirt"
+      ],
+      "triangles": 168796,
+      "textures": [
+        "CliffSh",
+        "WallSh",
+        "TileFloorSh",
+        "WallBrickBigSh",
+        "CliffWetSh",
+        "WoodSh",
+        "Noise3Ch",
+        "GrassNorTex0",
+        "GrassNorTex1",
+        "GrassMask"
+      ],
+      "textureSampling": [
+        {
+          "name": "CliffSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "WallSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "TileFloorSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "WallBrickBigSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "CliffWetSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "WoodSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "Noise3Ch",
+          "mipLevels": 10,
+          "anisotropy": 1,
+          "gamma": false
+        },
+        {
+          "name": "GrassNorTex0",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "GrassNorTex1",
+          "mipLevels": 9,
+          "anisotropy": 1,
+          "gamma": false
+        },
+        {
+          "name": "GrassMask",
+          "mipLevels": 10,
+          "anisotropy": 1,
+          "gamma": false
+        }
+      ],
+      "dynamics": {
+        "time": 0,
+        "scrolls": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "level": "RainForest",
+      "passed": true,
+      "scope": "Original terrain/skirt GLSL, real packed geometry/material textures with declared gamma/mip handling and supported anisotropy (16x preview request), recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/MotionGen/MotionDilate/TemporalAa/Tonemap chain. PNG area-filtered mip generation and anisotropy strength remain preview adapters, not original exporter/Metal parity. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending.",
+      "draws": 32,
+      "shaders": [
+        "RockFaceSh",
+        "RockFaceRainSh",
+        "SandSh",
+        "SandRainSh",
+        "GrassSh",
+        "RockFaceShAlpha",
+        "RockFaceRainShAlpha",
+        "SandShAlpha",
+        "SandRainShAlpha",
+        "GrassShAlpha",
+        "RockFaceShAlphaSkirt",
+        "RockFaceRainShAlphaSkirt",
+        "SandShAlphaSkirt",
+        "SandRainShAlphaSkirt",
+        "GrassShAlphaSkirt"
+      ],
+      "triangles": 205244,
+      "textures": [
+        "CliffSh",
+        "SoilSh",
+        "CliffWetSh",
+        "WoodSh",
+        "Noise3Ch",
+        "UpNormal",
+        "GrassNorTex0",
+        "GrassNorTex1",
+        "GrassMask"
+      ],
+      "textureSampling": [
+        {
+          "name": "CliffSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "SoilSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "CliffWetSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "WoodSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "Noise3Ch",
+          "mipLevels": 10,
+          "anisotropy": 1,
+          "gamma": false
+        },
+        {
+          "name": "UpNormal",
+          "mipLevels": 1,
+          "anisotropy": 1,
+          "gamma": false
+        },
+        {
+          "name": "GrassNorTex0",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "GrassNorTex1",
+          "mipLevels": 9,
+          "anisotropy": 1,
+          "gamma": false
+        },
+        {
+          "name": "GrassMask",
+          "mipLevels": 10,
+          "anisotropy": 1,
+          "gamma": false
+        }
+      ],
+      "dynamics": {
+        "time": 0,
+        "scrolls": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "level": "RainMid",
+      "passed": true,
+      "scope": "Original terrain/skirt GLSL, real packed geometry/material textures with declared gamma/mip handling and supported anisotropy (16x preview request), recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/MotionGen/MotionDilate/TemporalAa/Tonemap chain. PNG area-filtered mip generation and anisotropy strength remain preview adapters, not original exporter/Metal parity. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending.",
+      "draws": 26,
+      "shaders": [
+        "RockFaceSh",
+        "SandSh",
+        "SandRainSh",
+        "RockFaceShAlpha",
+        "SandShAlpha",
+        "SandRainShAlpha",
+        "RockFaceShAlphaSkirt",
+        "SandShAlphaSkirt",
+        "SandRainShAlphaSkirt"
+      ],
+      "triangles": 165194,
+      "textures": [
+        "CliffSh",
+        "TileFloorSh",
+        "WallSh",
+        "WallBrickSh",
+        "CliffWetSh",
+        "WoodSh",
+        "Noise3Ch",
+        "UpNormal"
+      ],
+      "textureSampling": [
+        {
+          "name": "CliffSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "TileFloorSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "WallSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "WallBrickSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "CliffWetSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "WoodSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "Noise3Ch",
+          "mipLevels": 10,
+          "anisotropy": 1,
+          "gamma": false
+        },
+        {
+          "name": "UpNormal",
+          "mipLevels": 1,
+          "anisotropy": 1,
+          "gamma": false
+        }
+      ],
+      "dynamics": {
+        "time": 0,
+        "scrolls": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "level": "SkyHub2",
+      "passed": true,
+      "scope": "Original terrain/skirt GLSL, real packed geometry/material textures with declared gamma/mip handling and supported anisotropy (16x preview request), recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/MotionGen/MotionDilate/TemporalAa/Tonemap chain. PNG area-filtered mip generation and anisotropy strength remain preview adapters, not original exporter/Metal parity. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending.",
+      "draws": 20,
+      "shaders": [
+        "RockFaceSh",
+        "SandSh",
+        "GrassSh",
+        "CloudSh",
+        "RockFaceShAlpha",
+        "SandShAlpha",
+        "GrassShAlpha",
+        "RockFaceShAlphaSkirt",
+        "SandShAlphaSkirt",
+        "GrassShAlphaSkirt"
+      ],
+      "triangles": 153143,
+      "textures": [
+        "CliffSh",
+        "GoldSh",
+        "Noise3Ch",
+        "GrassNorTex0",
+        "GrassNorTex1",
+        "GrassMask"
+      ],
+      "textureSampling": [
+        {
+          "name": "CliffSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "GoldSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "Noise3Ch",
+          "mipLevels": 10,
+          "anisotropy": 1,
+          "gamma": false
+        },
+        {
+          "name": "GrassNorTex0",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "GrassNorTex1",
+          "mipLevels": 9,
+          "anisotropy": 1,
+          "gamma": false
+        },
+        {
+          "name": "GrassMask",
+          "mipLevels": 10,
+          "anisotropy": 1,
+          "gamma": false
+        }
+      ],
+      "dynamics": {
+        "time": 0,
+        "scrolls": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "level": "Storm",
+      "passed": true,
+      "scope": "Original terrain/skirt GLSL, real packed geometry/material textures with declared gamma/mip handling and supported anisotropy (16x preview request), recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/MotionGen/MotionDilate/TemporalAa/Tonemap chain. PNG area-filtered mip generation and anisotropy strength remain preview adapters, not original exporter/Metal parity. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending.",
+      "draws": 7,
+      "shaders": [
+        "RockFaceSh",
+        "RockFaceShAlpha",
+        "GrassShAlpha",
+        "RockFaceShAlphaSkirt"
+      ],
+      "triangles": 158202,
+      "textures": [
+        "CliffSh",
+        "SoilSh",
+        "GrassNorTex0",
+        "GrassNorTex1",
+        "GrassMask"
+      ],
+      "textureSampling": [
+        {
+          "name": "CliffSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "SoilSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "GrassNorTex0",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "GrassNorTex1",
+          "mipLevels": 9,
+          "anisotropy": 1,
+          "gamma": false
+        },
+        {
+          "name": "GrassMask",
+          "mipLevels": 10,
+          "anisotropy": 1,
+          "gamma": false
+        }
+      ],
+      "dynamics": {
+        "time": 0,
+        "scrolls": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "level": "StormEnd",
+      "passed": true,
+      "scope": "Original terrain/skirt GLSL, real packed geometry/material textures with declared gamma/mip handling and supported anisotropy (16x preview request), recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/MotionGen/MotionDilate/TemporalAa/Tonemap chain. PNG area-filtered mip generation and anisotropy strength remain preview adapters, not original exporter/Metal parity. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending.",
+      "draws": 6,
+      "shaders": [
+        "RockFaceSh",
+        "RockFaceShAlpha",
+        "RockFaceShAlphaSkirt"
+      ],
+      "triangles": 216690,
+      "textures": [
+        "CliffSh",
+        "TileFloorSh",
+        "WallSh"
+      ],
+      "textureSampling": [
+        {
+          "name": "CliffSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "TileFloorSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "WallSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        }
+      ],
+      "dynamics": {
+        "time": 0,
+        "scrolls": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "level": "Sunset",
+      "passed": true,
+      "scope": "Original terrain/skirt GLSL, real packed geometry/material textures with declared gamma/mip handling and supported anisotropy (16x preview request), recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/MotionGen/MotionDilate/TemporalAa/Tonemap chain. PNG area-filtered mip generation and anisotropy strength remain preview adapters, not original exporter/Metal parity. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending.",
+      "draws": 17,
+      "shaders": [
+        "RockFaceSh",
+        "SandSh",
+        "RockFaceShAlpha",
+        "SandShAlpha",
+        "CloudShAlpha",
+        "RockFaceShAlphaSkirt",
+        "SandShAlphaSkirt"
+      ],
+      "triangles": 169136,
+      "textures": [
+        "CliffSh",
+        "GlacierSh",
+        "TileFloorSh",
+        "WallSh",
+        "WallBrickSh",
+        "Noise3Ch"
+      ],
+      "textureSampling": [
+        {
+          "name": "CliffSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "GlacierSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "TileFloorSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "WallSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "WallBrickSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "Noise3Ch",
+          "mipLevels": 10,
+          "anisotropy": 1,
+          "gamma": false
+        }
+      ],
+      "dynamics": {
+        "time": 0,
+        "scrolls": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "level": "SunsetEnd",
+      "passed": true,
+      "scope": "Original terrain/skirt GLSL, real packed geometry/material textures with declared gamma/mip handling and supported anisotropy (16x preview request), recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/MotionGen/MotionDilate/TemporalAa/Tonemap chain. PNG area-filtered mip generation and anisotropy strength remain preview adapters, not original exporter/Metal parity. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending.",
+      "draws": 8,
+      "shaders": [
+        "RockFaceSh",
+        "SandSh",
+        "RockFaceShAlpha",
+        "SandShAlpha",
+        "RockFaceShAlphaSkirt",
+        "SandShAlphaSkirt"
+      ],
+      "triangles": 90671,
+      "textures": [
+        "CliffSh",
+        "GoldSh",
+        "Noise3Ch"
+      ],
+      "textureSampling": [
+        {
+          "name": "CliffSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "GoldSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "Noise3Ch",
+          "mipLevels": 10,
+          "anisotropy": 1,
+          "gamma": false
+        }
+      ],
+      "dynamics": {
+        "time": 0,
+        "scrolls": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "level": "SunsetEnd2",
+      "passed": true,
+      "scope": "Original terrain/skirt GLSL, real packed geometry/material textures with declared gamma/mip handling and supported anisotropy (16x preview request), recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/MotionGen/MotionDilate/TemporalAa/Tonemap chain. PNG area-filtered mip generation and anisotropy strength remain preview adapters, not original exporter/Metal parity. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending.",
+      "draws": 14,
+      "shaders": [
+        "RockFaceSh",
+        "SandSh",
+        "RockFaceShAlpha",
+        "SandShAlpha",
+        "RockFaceShAlphaSkirt",
+        "SandShAlphaSkirt"
+      ],
+      "triangles": 68927,
+      "textures": [
+        "CliffSh",
+        "GoldSh",
+        "TileFloorSh",
+        "WallSh",
+        "WallBrickSh",
+        "Noise3Ch"
+      ],
+      "textureSampling": [
+        {
+          "name": "CliffSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "GoldSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "TileFloorSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "WallSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "WallBrickSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "Noise3Ch",
+          "mipLevels": 10,
+          "anisotropy": 1,
+          "gamma": false
+        }
+      ],
+      "dynamics": {
+        "time": 0,
+        "scrolls": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "level": "SunsetRace",
+      "passed": true,
+      "scope": "Original terrain/skirt GLSL, real packed geometry/material textures with declared gamma/mip handling and supported anisotropy (16x preview request), recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/MotionGen/MotionDilate/TemporalAa/Tonemap chain. PNG area-filtered mip generation and anisotropy strength remain preview adapters, not original exporter/Metal parity. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending.",
+      "draws": 15,
+      "shaders": [
+        "RockFaceSh",
+        "SandSh",
+        "RockFaceShAlpha",
+        "SandShAlpha",
+        "RockFaceShAlphaSkirt",
+        "SandShAlphaSkirt"
+      ],
+      "triangles": 243729,
+      "textures": [
+        "CliffSh",
+        "GoldSh",
+        "GlacierSh",
+        "WallBrickSh",
+        "Noise3Ch"
+      ],
+      "textureSampling": [
+        {
+          "name": "CliffSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "GoldSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "GlacierSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "WallBrickSh",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "Noise3Ch",
+          "mipLevels": 10,
+          "anisotropy": 1,
+          "gamma": false
+        }
+      ],
+      "dynamics": {
+        "time": 0,
+        "scrolls": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "level": "TitleWater",
+      "passed": true,
+      "scope": "Original terrain/skirt GLSL, real packed geometry/material textures with declared gamma/mip handling and supported anisotropy (16x preview request), recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/MotionGen/MotionDilate/TemporalAa/Tonemap chain. PNG area-filtered mip generation and anisotropy strength remain preview adapters, not original exporter/Metal parity. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending.",
+      "draws": 4,
+      "shaders": [
+        "GrassSh",
+        "GrassShAlpha",
+        "GrassShAlphaSkirt"
+      ],
+      "triangles": 53765,
+      "textures": [
+        "GrassNorTex0",
+        "GrassNorTex1",
+        "GrassMask"
+      ],
+      "textureSampling": [
+        {
+          "name": "GrassNorTex0",
+          "mipLevels": 10,
+          "anisotropy": 16,
+          "gamma": false
+        },
+        {
+          "name": "GrassNorTex1",
+          "mipLevels": 9,
+          "anisotropy": 1,
+          "gamma": false
+        },
+        {
+          "name": "GrassMask",
+          "mipLevels": 10,
+          "anisotropy": 1,
+          "gamma": false
+        }
+      ],
+      "dynamics": {
+        "time": 0,
+        "scrolls": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "level": "WorldEmpty",
+      "passed": true,
+      "scope": "Original terrain/skirt GLSL, real packed geometry/material textures with declared gamma/mip handling and supported anisotropy (16x preview request), recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/MotionGen/MotionDilate/TemporalAa/Tonemap chain. PNG area-filtered mip generation and anisotropy strength remain preview adapters, not original exporter/Metal parity. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending.",
+      "draws": 0,
+      "shaders": [],
+      "triangles": 0,
+      "textures": [],
+      "textureSampling": [],
+      "dynamics": {
+        "time": 0,
+        "scrolls": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    }
+  ],
+  "scope": "Original terrain/skirt GLSL, real packed geometry/material textures with declared gamma/mip handling and supported anisotropy (16x preview request), recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/MotionGen/MotionDilate/TemporalAa/Tonemap chain. PNG area-filtered mip generation and anisotropy strength remain preview adapters, not original exporter/Metal parity. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending.",
+  "device": {
+    "engine": "Sky Native Vulkan",
+    "backend": "Vulkan",
+    "device": "llvmpipe (LLVM 19.1.7, 128 bits)",
+    "apiVersion": 4210993,
+    "deviceType": 4,
+    "shaderFloat16": true
+  },
+  "checks": [
+    "All available real terrain/skirt streams, original shader variants and real PNG textures render without nonfinite RGB with native eight-phase projection jitter",
+    "Camera movement updates existing material uniforms or spatial environment resources; original map files remain read-only"
+  ]
+}

@@ -1,0 +1,2781 @@
+{
+  "className": "BirdV2Params",
+  "functionGroup": "生物、群体与 AI",
+  "functionRole": "鸟类运动、引导与效果参数",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "partial",
+      "description": "BirdV2Params 的原默认值、继承初始化及 21 个序列化字段变体；原注册字段 21 项。"
+    },
+    {
+      "name": "鸟类运动、引导与效果参数",
+      "status": "pending",
+      "description": "原普通构造、共享保存字段和已定位的池式创建／启用子链已有实现与核验；实际资源装载、AI、骨骼动画、碰撞／效果和动态绘制及完整生命周期继续待接。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "LevelMesh（46 条引用）、Marker（35 条引用）、Clump（48 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "BirdV2Params",
+    "category": "生物、群体与 AI",
+    "functionGroupId": "creatures",
+    "functionRole": "鸟类运动、引导与效果参数",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "partial",
+        "description": "BirdV2Params 的原默认值、继承初始化及 21 个序列化字段变体；原注册字段 21 项。"
+      },
+      {
+        "name": "鸟类运动、引导与效果参数",
+        "status": "pending",
+        "description": "原普通构造、共享保存字段和已定位的池式创建／启用子链已有实现与核验；实际资源装载、AI、骨骼动画、碰撞／效果和动态绘制及完整生命周期继续待接。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "LevelMesh（46 条引用）、Marker（35 条引用）、Clump（48 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Clump",
+        "references": 48
+      },
+      {
+        "className": "LevelMesh",
+        "references": 46
+      },
+      {
+        "className": "Marker",
+        "references": 35
+      }
+    ],
+    "rttiWorkingGroup": "玩家、角色与动画",
+    "role": "对象实例类型",
+    "instances": 46,
+    "nestedInstances": 0,
+    "referenceFields": 129,
+    "declaredLevels": 12,
+    "levels": [
+      {
+        "level": "Dawn",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DuskGraveyard",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "HubReveal",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Village",
+        "nodes": 24,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Rain",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainEnd",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainForest",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainMid",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Sunset",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SunsetEnd",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SunsetRace",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "TitleWater",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "addTrailParticles",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "gravityInfluence",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "guideOnAttachRadius",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "guidesEnabled",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "hasBoom",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "hasCloudParticles",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "hasGuide",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "hasResponseShout",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "maxAcceleration",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "maxSpeed",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "meshType",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "onAttach",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "onAttachLocoOnly",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "onDetach",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "radius",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "randShoutsMaxTime",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "randShoutsMinTime",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "shoutType",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "startPos",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "useDistanceCulling",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "usePredictiveGuide",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100c8a1b0",
+    "nativeRegisteredFields": [
+      {
+        "name": "startPos",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP6MarkerERK8MetaTypev",
+        "nativeOffset": 8,
+        "registrationFunction": "0x1001aaa50",
+        "propertyAddress": "0x100c88c10"
+      },
+      {
+        "name": "meshType",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP9LevelMeshERK8MetaTypev",
+        "nativeOffset": 16,
+        "registrationFunction": "0x1001aaa50",
+        "propertyAddress": "0x100c88c60"
+      },
+      {
+        "name": "radius",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 24,
+        "registrationFunction": "0x1001aaa50",
+        "propertyAddress": "0x100c88cb0"
+      },
+      {
+        "name": "maxSpeed",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 28,
+        "registrationFunction": "0x1001aaa50",
+        "propertyAddress": "0x100c88d00"
+      },
+      {
+        "name": "maxAcceleration",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 32,
+        "registrationFunction": "0x1001aaa50",
+        "propertyAddress": "0x100c88d50"
+      },
+      {
+        "name": "gravityInfluence",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 36,
+        "registrationFunction": "0x1001aaa50",
+        "propertyAddress": "0x100c88da0"
+      },
+      {
+        "name": "hasGuide",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 40,
+        "registrationFunction": "0x1001aaa50",
+        "propertyAddress": "0x100c88df0"
+      },
+      {
+        "name": "usePredictiveGuide",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 41,
+        "registrationFunction": "0x1001aaa50",
+        "propertyAddress": "0x100c88e40"
+      },
+      {
+        "name": "guidesEnabled",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 42,
+        "registrationFunction": "0x1001aaa50",
+        "propertyAddress": "0x100c88e90"
+      },
+      {
+        "name": "guideOnAttachRadius",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 44,
+        "registrationFunction": "0x1001aaa50",
+        "propertyAddress": "0x100c88ee0"
+      },
+      {
+        "name": "shoutType",
+        "typeGetter": "__Z17GetMetaTypeByTypeI9ShoutTypeERK8MetaTypev",
+        "nativeOffset": 48,
+        "registrationFunction": "0x1001aaa50",
+        "propertyAddress": "0x100c88f30"
+      },
+      {
+        "name": "randShoutsMinTime",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 52,
+        "registrationFunction": "0x1001aaa50",
+        "propertyAddress": "0x100c88f80"
+      },
+      {
+        "name": "randShoutsMaxTime",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x1001aaa50",
+        "propertyAddress": "0x100c88fd0"
+      },
+      {
+        "name": "addTrailParticles",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 60,
+        "registrationFunction": "0x1001aaa50",
+        "propertyAddress": "0x100c89020"
+      },
+      {
+        "name": "useDistanceCulling",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 61,
+        "registrationFunction": "0x1001aaa50",
+        "propertyAddress": "0x100c89070"
+      },
+      {
+        "name": "hasBoom",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 62,
+        "registrationFunction": "0x1001aaa50",
+        "propertyAddress": "0x100c890c0"
+      },
+      {
+        "name": "hasCloudParticles",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 63,
+        "registrationFunction": "0x1001aaa50",
+        "propertyAddress": "0x100c89110"
+      },
+      {
+        "name": "hasResponseShout",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 64,
+        "registrationFunction": "0x1001aaa50",
+        "propertyAddress": "0x100c89160"
+      },
+      {
+        "name": "onAttach",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 72,
+        "registrationFunction": "0x1001aaa50",
+        "propertyAddress": "0x100c891b0"
+      },
+      {
+        "name": "onAttachLocoOnly",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 80,
+        "registrationFunction": "0x1001aaa50",
+        "propertyAddress": "0x100c89200"
+      },
+      {
+        "name": "onDetach",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 88,
+        "registrationFunction": "0x1001aaa50",
+        "propertyAddress": "0x100c89250"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 3,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [
+      "src/core/environment-object-state.ts",
+      "src/core/creature-construction-runtime.ts",
+      "src/core/creature-runtime.ts"
+    ],
+    "evidence": [
+      "docs/生物骨骼动画续接.md",
+      "docs/creature-construction.json",
+      "docs/creature-construction-oracle.json",
+      "docs/creature-kernel-oracle.json",
+      "docs/objects-nature-audit.json"
+    ],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 21 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "partial",
+        "note": "原普通构造、共享保存字段和已定位的池式创建／启用子链已有实现与核验；实际资源装载、AI、骨骼动画、碰撞／效果和动态绘制及完整生命周期继续待接。",
+        "evidence": [
+          "docs/生物骨骼动画续接.md",
+          "docs/creature-construction.json",
+          "docs/creature-construction-oracle.json",
+          "docs/creature-kernel-oracle.json",
+          "docs/objects-nature-audit.json"
+        ]
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "partial",
+        "note": "原普通构造、共享保存字段和已定位的池式创建／启用子链已有实现与核验；实际资源装载、AI、骨骼动画、碰撞／效果和动态绘制及完整生命周期继续待接。",
+        "evidence": [
+          "docs/生物骨骼动画续接.md",
+          "docs/creature-construction.json",
+          "docs/creature-construction-oracle.json",
+          "docs/creature-kernel-oracle.json",
+          "docs/objects-nature-audit.json"
+        ]
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "partial",
+        "note": "原普通构造、共享保存字段和已定位的池式创建／启用子链已有实现与核验；实际资源装载、AI、骨骼动画、碰撞／效果和动态绘制及完整生命周期继续待接。",
+        "evidence": [
+          "docs/生物骨骼动画续接.md",
+          "docs/creature-construction.json",
+          "docs/creature-construction-oracle.json",
+          "docs/creature-kernel-oracle.json",
+          "docs/objects-nature-audit.json"
+        ]
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "原普通构造、共享保存字段和已定位的池式创建／启用子链已有实现与核验；实际资源装载、AI、骨骼动画、碰撞／效果和动态绘制及完整生命周期继续待接。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "Dawn:n907",
+      "level": "Dawn",
+      "nodeId": 907,
+      "name": "BstNode_1842806892",
+      "className": "BirdV2Params",
+      "classIndex": 83,
+      "sourceOffset": 176403,
+      "sourceLength": 83,
+      "sourceSha256": "4ec1051a2e41d3659cb288ee9de4e66d6d757b886360f00fbc3a764ff439231a",
+      "declaredFieldCount": 21,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n907/p16",
+          "fieldName": "meshType",
+          "target": "Dawn:n1548",
+          "targetNodeId": 1548,
+          "offset": 176472
+        }
+      ],
+      "incomingReferenceCount": 7,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1180",
+      "level": "Dawn",
+      "nodeId": 1180,
+      "name": "BstNode_1842806826",
+      "className": "BirdV2Params",
+      "classIndex": 83,
+      "sourceOffset": 209456,
+      "sourceLength": 83,
+      "sourceSha256": "102713482cd6028a46e9340da037a922176d66df1cb36e557250f01684c10d34",
+      "declaredFieldCount": 21,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1180/p16",
+          "fieldName": "meshType",
+          "target": "Dawn:n1202",
+          "targetNodeId": 1202,
+          "offset": 209525
+        }
+      ],
+      "incomingReferenceCount": 10,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2952",
+      "level": "Dawn",
+      "nodeId": 2952,
+      "name": "BstNode_1473",
+      "className": "BirdV2Params",
+      "classIndex": 83,
+      "sourceOffset": 482106,
+      "sourceLength": 77,
+      "sourceSha256": "c1a173924012d73e38074ce5b05fa004b88e3eaf7cbcdf8174160fa761f80abc",
+      "declaredFieldCount": 21,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2952/p16",
+          "fieldName": "meshType",
+          "target": "Dawn:n2512",
+          "targetNodeId": 2512,
+          "offset": 482169
+        }
+      ],
+      "incomingReferenceCount": 31,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n221",
+      "level": "DuskGraveyard",
+      "nodeId": 221,
+      "name": "BstNode_1413",
+      "className": "BirdV2Params",
+      "classIndex": 28,
+      "sourceOffset": 76048,
+      "sourceLength": 73,
+      "sourceSha256": "5501d5a046df6939750f3e7a17f625aefc565fc331c30e3b0151fc8200bdbd70",
+      "declaredFieldCount": 20,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n221/p15",
+          "fieldName": "meshType",
+          "target": "DuskGraveyard:n1267",
+          "targetNodeId": 1267,
+          "offset": 76107
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n264",
+      "level": "HubReveal",
+      "nodeId": 264,
+      "name": "BstNode_301",
+      "className": "BirdV2Params",
+      "classIndex": 55,
+      "sourceOffset": 73747,
+      "sourceLength": 72,
+      "sourceSha256": "5967607b7896c3598a1345912aa77c365498e5f00493341ffa47518a6bc26105",
+      "declaredFieldCount": 20,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n264/p15",
+          "fieldName": "meshType",
+          "target": "HubReveal:n579",
+          "targetNodeId": 579,
+          "offset": 73805
+        },
+        {
+          "fieldId": "n264/p18",
+          "fieldName": "startPos",
+          "target": "HubReveal:n1065",
+          "targetNodeId": 1065,
+          "offset": 73814
+        }
+      ],
+      "incomingReferenceCount": 12,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n353",
+      "level": "HubReveal",
+      "nodeId": 353,
+      "name": "BstNode_666",
+      "className": "BirdV2Params",
+      "classIndex": 55,
+      "sourceOffset": 90060,
+      "sourceLength": 72,
+      "sourceSha256": "dcdee725e1d621a541cea43c3c078ec25e21e59d0ef6a9d7c13eb46b99940e99",
+      "declaredFieldCount": 20,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n353/p15",
+          "fieldName": "meshType",
+          "target": "HubReveal:n1189",
+          "targetNodeId": 1189,
+          "offset": 90118
+        },
+        {
+          "fieldId": "n353/p18",
+          "fieldName": "startPos",
+          "target": "HubReveal:n412",
+          "targetNodeId": 412,
+          "offset": 90127
+        }
+      ],
+      "incomingReferenceCount": 10,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n708",
+      "level": "HubReveal",
+      "nodeId": 708,
+      "name": "BstNode_479",
+      "className": "BirdV2Params",
+      "classIndex": 55,
+      "sourceOffset": 147473,
+      "sourceLength": 72,
+      "sourceSha256": "bd66fc9a6ed8d2da5d35d7eca96878c379ad883bb8b8e2d585acaeb97022ccc6",
+      "declaredFieldCount": 20,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n708/p15",
+          "fieldName": "meshType",
+          "target": "HubReveal:n579",
+          "targetNodeId": 579,
+          "offset": 147531
+        },
+        {
+          "fieldId": "n708/p18",
+          "fieldName": "startPos",
+          "target": "HubReveal:n1441",
+          "targetNodeId": 1441,
+          "offset": 147540
+        }
+      ],
+      "incomingReferenceCount": 12,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n71",
+      "level": "Prairie_Village",
+      "nodeId": 71,
+      "name": "BstNode_1541",
+      "className": "BirdV2Params",
+      "classIndex": 22,
+      "sourceOffset": 42485,
+      "sourceLength": 77,
+      "sourceSha256": "22d88aa3568f5b7ae82b08d60b6b606ad1f2463dd57243c63919e84b1e21e06b",
+      "declaredFieldCount": 21,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n71/p6",
+          "fieldName": "onAttach",
+          "target": "Prairie_Village:n105",
+          "targetNodeId": 105,
+          "offset": 42517
+        },
+        {
+          "fieldId": "n71/p14",
+          "fieldName": "onDetach",
+          "target": "Prairie_Village:n2456",
+          "targetNodeId": 2456,
+          "offset": 42540
+        },
+        {
+          "fieldId": "n71/p16",
+          "fieldName": "meshType",
+          "target": "Prairie_Village:n1392",
+          "targetNodeId": 1392,
+          "offset": 42548
+        },
+        {
+          "fieldId": "n71/p19",
+          "fieldName": "startPos",
+          "target": "Prairie_Village:n2105",
+          "targetNodeId": 2105,
+          "offset": 42557
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n142",
+      "level": "Prairie_Village",
+      "nodeId": 142,
+      "name": "BstNode_342",
+      "className": "BirdV2Params",
+      "classIndex": 22,
+      "sourceOffset": 53798,
+      "sourceLength": 76,
+      "sourceSha256": "23cb9261d59f3789ac88f133a889cab9bc11a21e6c60b6fd45ee46bbd9c0920a",
+      "declaredFieldCount": 21,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n142/p4",
+          "fieldName": "onAttachLocoOnly",
+          "target": "Prairie_Village:n3173",
+          "targetNodeId": 3173,
+          "offset": 53821
+        },
+        {
+          "fieldId": "n142/p6",
+          "fieldName": "onAttach",
+          "target": "Prairie_Village:n2389",
+          "targetNodeId": 2389,
+          "offset": 53829
+        },
+        {
+          "fieldId": "n142/p14",
+          "fieldName": "onDetach",
+          "target": "Prairie_Village:n2297",
+          "targetNodeId": 2297,
+          "offset": 53852
+        },
+        {
+          "fieldId": "n142/p16",
+          "fieldName": "meshType",
+          "target": "Prairie_Village:n1392",
+          "targetNodeId": 1392,
+          "offset": 53860
+        },
+        {
+          "fieldId": "n142/p19",
+          "fieldName": "startPos",
+          "target": "Prairie_Village:n1963",
+          "targetNodeId": 1963,
+          "offset": 53869
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n386",
+      "level": "Prairie_Village",
+      "nodeId": 386,
+      "name": "BstNode_580",
+      "className": "BirdV2Params",
+      "classIndex": 22,
+      "sourceOffset": 92596,
+      "sourceLength": 76,
+      "sourceSha256": "5b73417507b24d68441796ad86103215b5ce4b163f73c2eaa3a2582a6f01d65a",
+      "declaredFieldCount": 21,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n386/p16",
+          "fieldName": "meshType",
+          "target": "Prairie_Village:n2371",
+          "targetNodeId": 2371,
+          "offset": 92658
+        },
+        {
+          "fieldId": "n386/p19",
+          "fieldName": "startPos",
+          "target": "Prairie_Village:n2394",
+          "targetNodeId": 2394,
+          "offset": 92667
+        }
+      ],
+      "incomingReferenceCount": 9,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n461",
+      "level": "Prairie_Village",
+      "nodeId": 461,
+      "name": "BstNode_2783838247",
+      "className": "BirdV2Params",
+      "classIndex": 22,
+      "sourceOffset": 106792,
+      "sourceLength": 83,
+      "sourceSha256": "111f0be15508c8dd8b85da2ef466ee2058ccbad27e431e0888c0cfb1c3593d6a",
+      "declaredFieldCount": 21,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n461/p6",
+          "fieldName": "onAttach",
+          "target": "Prairie_Village:n203",
+          "targetNodeId": 203,
+          "offset": 106830
+        },
+        {
+          "fieldId": "n461/p14",
+          "fieldName": "onDetach",
+          "target": "Prairie_Village:n2160",
+          "targetNodeId": 2160,
+          "offset": 106853
+        },
+        {
+          "fieldId": "n461/p16",
+          "fieldName": "meshType",
+          "target": "Prairie_Village:n1392",
+          "targetNodeId": 1392,
+          "offset": 106861
+        },
+        {
+          "fieldId": "n461/p19",
+          "fieldName": "startPos",
+          "target": "Prairie_Village:n1963",
+          "targetNodeId": 1963,
+          "offset": 106870
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n588",
+      "level": "Prairie_Village",
+      "nodeId": 588,
+      "name": "BstNode_345",
+      "className": "BirdV2Params",
+      "classIndex": 22,
+      "sourceOffset": 125197,
+      "sourceLength": 76,
+      "sourceSha256": "62a150b6086c1a0779fd1ed2baf068b887f19abd122452a9c040bcdd5988bc7d",
+      "declaredFieldCount": 21,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n588/p4",
+          "fieldName": "onAttachLocoOnly",
+          "target": "Prairie_Village:n3244",
+          "targetNodeId": 3244,
+          "offset": 125220
+        },
+        {
+          "fieldId": "n588/p6",
+          "fieldName": "onAttach",
+          "target": "Prairie_Village:n1106",
+          "targetNodeId": 1106,
+          "offset": 125228
+        },
+        {
+          "fieldId": "n588/p14",
+          "fieldName": "onDetach",
+          "target": "Prairie_Village:n1067",
+          "targetNodeId": 1067,
+          "offset": 125251
+        },
+        {
+          "fieldId": "n588/p16",
+          "fieldName": "meshType",
+          "target": "Prairie_Village:n1392",
+          "targetNodeId": 1392,
+          "offset": 125259
+        },
+        {
+          "fieldId": "n588/p19",
+          "fieldName": "startPos",
+          "target": "Prairie_Village:n2105",
+          "targetNodeId": 2105,
+          "offset": 125268
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n608",
+      "level": "Prairie_Village",
+      "nodeId": 608,
+      "name": "BstNode_666",
+      "className": "BirdV2Params",
+      "classIndex": 22,
+      "sourceOffset": 128547,
+      "sourceLength": 76,
+      "sourceSha256": "98ce27d3019244d58ef2e24c50df8540e942f0d8a71e8855116bcc4b2a09896d",
+      "declaredFieldCount": 21,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n608/p16",
+          "fieldName": "meshType",
+          "target": "Prairie_Village:n2371",
+          "targetNodeId": 2371,
+          "offset": 128609
+        },
+        {
+          "fieldId": "n608/p19",
+          "fieldName": "startPos",
+          "target": "Prairie_Village:n43",
+          "targetNodeId": 43,
+          "offset": 128618
+        }
+      ],
+      "incomingReferenceCount": 9,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n812",
+      "level": "Prairie_Village",
+      "nodeId": 812,
+      "name": "BstNode_1562",
+      "className": "BirdV2Params",
+      "classIndex": 22,
+      "sourceOffset": 163068,
+      "sourceLength": 77,
+      "sourceSha256": "1be9e21418e7da9add68e5b4e2f810a2c32501df50c355881c5dd57547da539d",
+      "declaredFieldCount": 21,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n812/p6",
+          "fieldName": "onAttach",
+          "target": "Prairie_Village:n2202",
+          "targetNodeId": 2202,
+          "offset": 163100
+        },
+        {
+          "fieldId": "n812/p14",
+          "fieldName": "onDetach",
+          "target": "Prairie_Village:n2353",
+          "targetNodeId": 2353,
+          "offset": 163123
+        },
+        {
+          "fieldId": "n812/p16",
+          "fieldName": "meshType",
+          "target": "Prairie_Village:n1392",
+          "targetNodeId": 1392,
+          "offset": 163131
+        },
+        {
+          "fieldId": "n812/p19",
+          "fieldName": "startPos",
+          "target": "Prairie_Village:n815",
+          "targetNodeId": 815,
+          "offset": 163140
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n864",
+      "level": "Prairie_Village",
+      "nodeId": 864,
+      "name": "BstNode_2783838255",
+      "className": "BirdV2Params",
+      "classIndex": 22,
+      "sourceOffset": 172051,
+      "sourceLength": 83,
+      "sourceSha256": "09be729a47855e6aaee1b6863cd77edf2a4b15c8d67f34844e64ef592316c908",
+      "declaredFieldCount": 21,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n864/p4",
+          "fieldName": "onAttachLocoOnly",
+          "target": "Prairie_Village:n3300",
+          "targetNodeId": 3300,
+          "offset": 172081
+        },
+        {
+          "fieldId": "n864/p6",
+          "fieldName": "onAttach",
+          "target": "Prairie_Village:n2391",
+          "targetNodeId": 2391,
+          "offset": 172089
+        },
+        {
+          "fieldId": "n864/p14",
+          "fieldName": "onDetach",
+          "target": "Prairie_Village:n2951",
+          "targetNodeId": 2951,
+          "offset": 172112
+        },
+        {
+          "fieldId": "n864/p16",
+          "fieldName": "meshType",
+          "target": "Prairie_Village:n2383",
+          "targetNodeId": 2383,
+          "offset": 172120
+        },
+        {
+          "fieldId": "n864/p19",
+          "fieldName": "startPos",
+          "target": "Prairie_Village:n557",
+          "targetNodeId": 557,
+          "offset": 172129
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1265",
+      "level": "Prairie_Village",
+      "nodeId": 1265,
+      "name": "BstNode_2783838250",
+      "className": "BirdV2Params",
+      "classIndex": 22,
+      "sourceOffset": 235064,
+      "sourceLength": 83,
+      "sourceSha256": "f698f0fe52b435e1d85d9eac200f4fa8aab42ad6c228fde0adb5e3c3cbcf03f7",
+      "declaredFieldCount": 21,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1265/p6",
+          "fieldName": "onAttach",
+          "target": "Prairie_Village:n2202",
+          "targetNodeId": 2202,
+          "offset": 235102
+        },
+        {
+          "fieldId": "n1265/p14",
+          "fieldName": "onDetach",
+          "target": "Prairie_Village:n2353",
+          "targetNodeId": 2353,
+          "offset": 235125
+        },
+        {
+          "fieldId": "n1265/p16",
+          "fieldName": "meshType",
+          "target": "Prairie_Village:n1392",
+          "targetNodeId": 1392,
+          "offset": 235133
+        },
+        {
+          "fieldId": "n1265/p19",
+          "fieldName": "startPos",
+          "target": "Prairie_Village:n815",
+          "targetNodeId": 815,
+          "offset": 235142
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1455",
+      "level": "Prairie_Village",
+      "nodeId": 1455,
+      "name": "BstNode_2783838243",
+      "className": "BirdV2Params",
+      "classIndex": 22,
+      "sourceOffset": 263359,
+      "sourceLength": 83,
+      "sourceSha256": "2bdc439be6d8531d5b5582e2b560eb61acd404969cea8261356487b47868e5b6",
+      "declaredFieldCount": 21,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1455/p4",
+          "fieldName": "onAttachLocoOnly",
+          "target": "Prairie_Village:n3424",
+          "targetNodeId": 3424,
+          "offset": 263389
+        },
+        {
+          "fieldId": "n1455/p6",
+          "fieldName": "onAttach",
+          "target": "Prairie_Village:n2391",
+          "targetNodeId": 2391,
+          "offset": 263397
+        },
+        {
+          "fieldId": "n1455/p14",
+          "fieldName": "onDetach",
+          "target": "Prairie_Village:n2951",
+          "targetNodeId": 2951,
+          "offset": 263420
+        },
+        {
+          "fieldId": "n1455/p16",
+          "fieldName": "meshType",
+          "target": "Prairie_Village:n2383",
+          "targetNodeId": 2383,
+          "offset": 263428
+        },
+        {
+          "fieldId": "n1455/p19",
+          "fieldName": "startPos",
+          "target": "Prairie_Village:n557",
+          "targetNodeId": 557,
+          "offset": 263437
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1484",
+      "level": "Prairie_Village",
+      "nodeId": 1484,
+      "name": "BstNode_2783838249",
+      "className": "BirdV2Params",
+      "classIndex": 22,
+      "sourceOffset": 268382,
+      "sourceLength": 83,
+      "sourceSha256": "e93bd646b2927f2a6b6c9bb25a83227fbbc517982a833d45046aadd170c4b241",
+      "declaredFieldCount": 21,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1484/p6",
+          "fieldName": "onAttach",
+          "target": "Prairie_Village:n2202",
+          "targetNodeId": 2202,
+          "offset": 268420
+        },
+        {
+          "fieldId": "n1484/p14",
+          "fieldName": "onDetach",
+          "target": "Prairie_Village:n2353",
+          "targetNodeId": 2353,
+          "offset": 268443
+        },
+        {
+          "fieldId": "n1484/p16",
+          "fieldName": "meshType",
+          "target": "Prairie_Village:n1392",
+          "targetNodeId": 1392,
+          "offset": 268451
+        },
+        {
+          "fieldId": "n1484/p19",
+          "fieldName": "startPos",
+          "target": "Prairie_Village:n815",
+          "targetNodeId": 815,
+          "offset": 268460
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1638",
+      "level": "Prairie_Village",
+      "nodeId": 1638,
+      "name": "BstNode_1413",
+      "className": "BirdV2Params",
+      "classIndex": 22,
+      "sourceOffset": 292192,
+      "sourceLength": 77,
+      "sourceSha256": "aa38c6e2fd4f13b7987f615974e0c6c879f06c4155fa74e4c3a56b56154a215b",
+      "declaredFieldCount": 21,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1638/p16",
+          "fieldName": "meshType",
+          "target": "Prairie_Village:n2295",
+          "targetNodeId": 2295,
+          "offset": 292255
+        }
+      ],
+      "incomingReferenceCount": 6,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1671",
+      "level": "Prairie_Village",
+      "nodeId": 1671,
+      "name": "BstNode_2783838256",
+      "className": "BirdV2Params",
+      "classIndex": 22,
+      "sourceOffset": 296730,
+      "sourceLength": 83,
+      "sourceSha256": "a1b2c89faa2912bab1696da69b35799cbd2243ae68f731b25d08d31528e9cbb8",
+      "declaredFieldCount": 21,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1671/p4",
+          "fieldName": "onAttachLocoOnly",
+          "target": "Prairie_Village:n3463",
+          "targetNodeId": 3463,
+          "offset": 296760
+        },
+        {
+          "fieldId": "n1671/p6",
+          "fieldName": "onAttach",
+          "target": "Prairie_Village:n2391",
+          "targetNodeId": 2391,
+          "offset": 296768
+        },
+        {
+          "fieldId": "n1671/p14",
+          "fieldName": "onDetach",
+          "target": "Prairie_Village:n2951",
+          "targetNodeId": 2951,
+          "offset": 296791
+        },
+        {
+          "fieldId": "n1671/p16",
+          "fieldName": "meshType",
+          "target": "Prairie_Village:n2383",
+          "targetNodeId": 2383,
+          "offset": 296799
+        },
+        {
+          "fieldId": "n1671/p19",
+          "fieldName": "startPos",
+          "target": "Prairie_Village:n557",
+          "targetNodeId": 557,
+          "offset": 296808
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1803",
+      "level": "Prairie_Village",
+      "nodeId": 1803,
+      "name": "BstNode_2783838248",
+      "className": "BirdV2Params",
+      "classIndex": 22,
+      "sourceOffset": 321219,
+      "sourceLength": 83,
+      "sourceSha256": "6d93cb9fe57294653cf6bf0ab9272b98817a9c567ff36df650bb87368b9aebf0",
+      "declaredFieldCount": 21,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1803/p6",
+          "fieldName": "onAttach",
+          "target": "Prairie_Village:n203",
+          "targetNodeId": 203,
+          "offset": 321257
+        },
+        {
+          "fieldId": "n1803/p14",
+          "fieldName": "onDetach",
+          "target": "Prairie_Village:n2160",
+          "targetNodeId": 2160,
+          "offset": 321280
+        },
+        {
+          "fieldId": "n1803/p16",
+          "fieldName": "meshType",
+          "target": "Prairie_Village:n1392",
+          "targetNodeId": 1392,
+          "offset": 321288
+        },
+        {
+          "fieldId": "n1803/p19",
+          "fieldName": "startPos",
+          "target": "Prairie_Village:n1963",
+          "targetNodeId": 1963,
+          "offset": 321297
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1964",
+      "level": "Prairie_Village",
+      "nodeId": 1964,
+      "name": "BstNode_1600",
+      "className": "BirdV2Params",
+      "classIndex": 22,
+      "sourceOffset": 350705,
+      "sourceLength": 77,
+      "sourceSha256": "6b0350e0c4179640159d2d7d3e6a42944d43974ffb3639f2be8f0372c6d05c07",
+      "declaredFieldCount": 21,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1964/p4",
+          "fieldName": "onAttachLocoOnly",
+          "target": "Prairie_Village:n3520",
+          "targetNodeId": 3520,
+          "offset": 350729
+        },
+        {
+          "fieldId": "n1964/p6",
+          "fieldName": "onAttach",
+          "target": "Prairie_Village:n2391",
+          "targetNodeId": 2391,
+          "offset": 350737
+        },
+        {
+          "fieldId": "n1964/p14",
+          "fieldName": "onDetach",
+          "target": "Prairie_Village:n2951",
+          "targetNodeId": 2951,
+          "offset": 350760
+        },
+        {
+          "fieldId": "n1964/p16",
+          "fieldName": "meshType",
+          "target": "Prairie_Village:n2383",
+          "targetNodeId": 2383,
+          "offset": 350768
+        },
+        {
+          "fieldId": "n1964/p19",
+          "fieldName": "startPos",
+          "target": "Prairie_Village:n557",
+          "targetNodeId": 557,
+          "offset": 350777
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2159",
+      "level": "Prairie_Village",
+      "nodeId": 2159,
+      "name": "BstNode_2366",
+      "className": "BirdV2Params",
+      "classIndex": 22,
+      "sourceOffset": 377644,
+      "sourceLength": 77,
+      "sourceSha256": "03b6ac4e75e2adfef80efd8fdd5ab9d07f5f1d35c73a03a20b15ecf45c1835a4",
+      "declaredFieldCount": 21,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2159/p16",
+          "fieldName": "meshType",
+          "target": "Prairie_Village:n2371",
+          "targetNodeId": 2371,
+          "offset": 377707
+        },
+        {
+          "fieldId": "n2159/p19",
+          "fieldName": "startPos",
+          "target": "Prairie_Village:n1209",
+          "targetNodeId": 1209,
+          "offset": 377716
+        }
+      ],
+      "incomingReferenceCount": 9,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2176",
+      "level": "Prairie_Village",
+      "nodeId": 2176,
+      "name": "BstNode_2783838239",
+      "className": "BirdV2Params",
+      "classIndex": 22,
+      "sourceOffset": 380089,
+      "sourceLength": 83,
+      "sourceSha256": "ea627a407d4476486768829b7bcbbc4910ed37141a96a8c52b5386fa5bd647b6",
+      "declaredFieldCount": 21,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2176/p6",
+          "fieldName": "onAttach",
+          "target": "Prairie_Village:n105",
+          "targetNodeId": 105,
+          "offset": 380127
+        },
+        {
+          "fieldId": "n2176/p14",
+          "fieldName": "onDetach",
+          "target": "Prairie_Village:n2456",
+          "targetNodeId": 2456,
+          "offset": 380150
+        },
+        {
+          "fieldId": "n2176/p16",
+          "fieldName": "meshType",
+          "target": "Prairie_Village:n1392",
+          "targetNodeId": 1392,
+          "offset": 380158
+        },
+        {
+          "fieldId": "n2176/p19",
+          "fieldName": "startPos",
+          "target": "Prairie_Village:n2105",
+          "targetNodeId": 2105,
+          "offset": 380167
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2181",
+      "level": "Prairie_Village",
+      "nodeId": 2181,
+      "name": "BstNode_2783838245",
+      "className": "BirdV2Params",
+      "classIndex": 22,
+      "sourceOffset": 380828,
+      "sourceLength": 83,
+      "sourceSha256": "333b15dee2dc431865561e00645b6108d1edd127e18317c3689eeee4582114ee",
+      "declaredFieldCount": 21,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2181/p4",
+          "fieldName": "onAttachLocoOnly",
+          "target": "Prairie_Village:n3559",
+          "targetNodeId": 3559,
+          "offset": 380858
+        },
+        {
+          "fieldId": "n2181/p6",
+          "fieldName": "onAttach",
+          "target": "Prairie_Village:n2391",
+          "targetNodeId": 2391,
+          "offset": 380866
+        },
+        {
+          "fieldId": "n2181/p14",
+          "fieldName": "onDetach",
+          "target": "Prairie_Village:n2951",
+          "targetNodeId": 2951,
+          "offset": 380889
+        },
+        {
+          "fieldId": "n2181/p16",
+          "fieldName": "meshType",
+          "target": "Prairie_Village:n2383",
+          "targetNodeId": 2383,
+          "offset": 380897
+        },
+        {
+          "fieldId": "n2181/p19",
+          "fieldName": "startPos",
+          "target": "Prairie_Village:n557",
+          "targetNodeId": 557,
+          "offset": 380906
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2188",
+      "level": "Prairie_Village",
+      "nodeId": 2188,
+      "name": "BstNode_2783838257",
+      "className": "BirdV2Params",
+      "classIndex": 22,
+      "sourceOffset": 382337,
+      "sourceLength": 83,
+      "sourceSha256": "82a3375bbdbdb70f1197f6a2d767c249af671816dfe73d6aa0eb910c0077fdfc",
+      "declaredFieldCount": 21,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2188/p4",
+          "fieldName": "onAttachLocoOnly",
+          "target": "Prairie_Village:n3560",
+          "targetNodeId": 3560,
+          "offset": 382367
+        },
+        {
+          "fieldId": "n2188/p6",
+          "fieldName": "onAttach",
+          "target": "Prairie_Village:n2391",
+          "targetNodeId": 2391,
+          "offset": 382375
+        },
+        {
+          "fieldId": "n2188/p14",
+          "fieldName": "onDetach",
+          "target": "Prairie_Village:n2951",
+          "targetNodeId": 2951,
+          "offset": 382398
+        },
+        {
+          "fieldId": "n2188/p16",
+          "fieldName": "meshType",
+          "target": "Prairie_Village:n2383",
+          "targetNodeId": 2383,
+          "offset": 382406
+        },
+        {
+          "fieldId": "n2188/p19",
+          "fieldName": "startPos",
+          "target": "Prairie_Village:n557",
+          "targetNodeId": 557,
+          "offset": 382415
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2242",
+      "level": "Prairie_Village",
+      "nodeId": 2242,
+      "name": "BstNode_341",
+      "className": "BirdV2Params",
+      "classIndex": 22,
+      "sourceOffset": 388701,
+      "sourceLength": 76,
+      "sourceSha256": "24753a4c027feb59ef02370939e048e459152b3b4ec26e4c6c68b82a56561ae5",
+      "declaredFieldCount": 21,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2242/p4",
+          "fieldName": "onAttachLocoOnly",
+          "target": "Prairie_Village:n3572",
+          "targetNodeId": 3572,
+          "offset": 388724
+        },
+        {
+          "fieldId": "n2242/p6",
+          "fieldName": "onAttach",
+          "target": "Prairie_Village:n189",
+          "targetNodeId": 189,
+          "offset": 388732
+        },
+        {
+          "fieldId": "n2242/p14",
+          "fieldName": "onDetach",
+          "target": "Prairie_Village:n2543",
+          "targetNodeId": 2543,
+          "offset": 388755
+        },
+        {
+          "fieldId": "n2242/p16",
+          "fieldName": "meshType",
+          "target": "Prairie_Village:n1392",
+          "targetNodeId": 1392,
+          "offset": 388763
+        },
+        {
+          "fieldId": "n2242/p19",
+          "fieldName": "startPos",
+          "target": "Prairie_Village:n815",
+          "targetNodeId": 815,
+          "offset": 388772
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2381",
+      "level": "Prairie_Village",
+      "nodeId": 2381,
+      "name": "BstNode_1545",
+      "className": "BirdV2Params",
+      "classIndex": 22,
+      "sourceOffset": 410484,
+      "sourceLength": 77,
+      "sourceSha256": "9c7a84c53b570b718acc01cb4ac1b9415d35e740b0c6c13f46de13833c1b2809",
+      "declaredFieldCount": 21,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2381/p6",
+          "fieldName": "onAttach",
+          "target": "Prairie_Village:n203",
+          "targetNodeId": 203,
+          "offset": 410516
+        },
+        {
+          "fieldId": "n2381/p14",
+          "fieldName": "onDetach",
+          "target": "Prairie_Village:n2160",
+          "targetNodeId": 2160,
+          "offset": 410539
+        },
+        {
+          "fieldId": "n2381/p16",
+          "fieldName": "meshType",
+          "target": "Prairie_Village:n1392",
+          "targetNodeId": 1392,
+          "offset": 410547
+        },
+        {
+          "fieldId": "n2381/p19",
+          "fieldName": "startPos",
+          "target": "Prairie_Village:n1963",
+          "targetNodeId": 1963,
+          "offset": 410556
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2490",
+      "level": "Prairie_Village",
+      "nodeId": 2490,
+      "name": "BstNode_2783838240",
+      "className": "BirdV2Params",
+      "classIndex": 22,
+      "sourceOffset": 426001,
+      "sourceLength": 83,
+      "sourceSha256": "d53c224785583a041d961b3344ce2efdf29dd58ea9e1244b6877b4ac585e3a62",
+      "declaredFieldCount": 21,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2490/p6",
+          "fieldName": "onAttach",
+          "target": "Prairie_Village:n105",
+          "targetNodeId": 105,
+          "offset": 426039
+        },
+        {
+          "fieldId": "n2490/p14",
+          "fieldName": "onDetach",
+          "target": "Prairie_Village:n2456",
+          "targetNodeId": 2456,
+          "offset": 426062
+        },
+        {
+          "fieldId": "n2490/p16",
+          "fieldName": "meshType",
+          "target": "Prairie_Village:n1392",
+          "targetNodeId": 1392,
+          "offset": 426070
+        },
+        {
+          "fieldId": "n2490/p19",
+          "fieldName": "startPos",
+          "target": "Prairie_Village:n2105",
+          "targetNodeId": 2105,
+          "offset": 426079
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2511",
+      "level": "Prairie_Village",
+      "nodeId": 2511,
+      "name": "BstNode_2783838254",
+      "className": "BirdV2Params",
+      "classIndex": 22,
+      "sourceOffset": 428195,
+      "sourceLength": 83,
+      "sourceSha256": "61cac241fa5f48d170e29c4f5ac97fa247c568f9f5496a427134cd2152fd6438",
+      "declaredFieldCount": 21,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2511/p4",
+          "fieldName": "onAttachLocoOnly",
+          "target": "Prairie_Village:n3622",
+          "targetNodeId": 3622,
+          "offset": 428225
+        },
+        {
+          "fieldId": "n2511/p6",
+          "fieldName": "onAttach",
+          "target": "Prairie_Village:n2391",
+          "targetNodeId": 2391,
+          "offset": 428233
+        },
+        {
+          "fieldId": "n2511/p14",
+          "fieldName": "onDetach",
+          "target": "Prairie_Village:n2951",
+          "targetNodeId": 2951,
+          "offset": 428256
+        },
+        {
+          "fieldId": "n2511/p16",
+          "fieldName": "meshType",
+          "target": "Prairie_Village:n2383",
+          "targetNodeId": 2383,
+          "offset": 428264
+        },
+        {
+          "fieldId": "n2511/p19",
+          "fieldName": "startPos",
+          "target": "Prairie_Village:n557",
+          "targetNodeId": 557,
+          "offset": 428273
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2897",
+      "level": "Prairie_Village",
+      "nodeId": 2897,
+      "name": "BstNode_2100",
+      "className": "BirdV2Params",
+      "classIndex": 22,
+      "sourceOffset": 492650,
+      "sourceLength": 77,
+      "sourceSha256": "c3a21288b18207c43a11c7231f7e8b0d63defa6360a285a778c0618a0136ed01",
+      "declaredFieldCount": 21,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2897/p16",
+          "fieldName": "meshType",
+          "target": "Prairie_Village:n2371",
+          "targetNodeId": 2371,
+          "offset": 492713
+        },
+        {
+          "fieldId": "n2897/p19",
+          "fieldName": "startPos",
+          "target": "Prairie_Village:n988",
+          "targetNodeId": 988,
+          "offset": 492722
+        }
+      ],
+      "incomingReferenceCount": 9,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n682",
+      "level": "Rain",
+      "nodeId": 682,
+      "name": "BstNode_1778",
+      "className": "BirdV2Params",
+      "classIndex": 59,
+      "sourceOffset": 183571,
+      "sourceLength": 73,
+      "sourceSha256": "11bcc16a2cbb5de18cff69d810c67dec62bbe16dcc9659361b0e885c9fc1918c",
+      "declaredFieldCount": 20,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n682/p15",
+          "fieldName": "meshType",
+          "target": "Rain:n1286",
+          "targetNodeId": 1286,
+          "offset": 183630
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n1513",
+      "level": "RainEnd",
+      "nodeId": 1513,
+      "name": "BstNode_1604",
+      "className": "BirdV2Params",
+      "classIndex": 82,
+      "sourceOffset": 387677,
+      "sourceLength": 73,
+      "sourceSha256": "3d369cafa5811f2ebd8b0998bf16301cff090928d37812efea58ed8fb67cb03e",
+      "declaredFieldCount": 20,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1513/p15",
+          "fieldName": "meshType",
+          "target": "RainEnd:n114",
+          "targetNodeId": 114,
+          "offset": 387736
+        }
+      ],
+      "incomingReferenceCount": 13,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n391",
+      "level": "RainForest",
+      "nodeId": 391,
+      "name": "BstNode_1778",
+      "className": "BirdV2Params",
+      "classIndex": 44,
+      "sourceOffset": 92512,
+      "sourceLength": 73,
+      "sourceSha256": "8d30ccec24437f08b0ee57a1b538e9cc3e856d6728d99557e0ec812a929021e6",
+      "declaredFieldCount": 20,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n391/p15",
+          "fieldName": "meshType",
+          "target": "RainForest:n399",
+          "targetNodeId": 399,
+          "offset": 92571
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n1018",
+      "level": "RainForest",
+      "nodeId": 1018,
+      "name": "BstNode_1604",
+      "className": "BirdV2Params",
+      "classIndex": 44,
+      "sourceOffset": 232631,
+      "sourceLength": 73,
+      "sourceSha256": "678c7f699eed8cb4dbe5f55f45e4f763dd844e26cb52a720ebd60a5f878ed2cb",
+      "declaredFieldCount": 20,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1018/p15",
+          "fieldName": "meshType",
+          "target": "RainForest:n1120",
+          "targetNodeId": 1120,
+          "offset": 232690
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n55",
+      "level": "RainMid",
+      "nodeId": 55,
+      "name": "BstNode_34603234",
+      "className": "BirdV2Params",
+      "classIndex": 19,
+      "sourceOffset": 36672,
+      "sourceLength": 77,
+      "sourceSha256": "07ec673e9939006ff3cad8e2e0e2472608b5d5394e17c8e8aa5ebd5f281a498e",
+      "declaredFieldCount": 20,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n55/p15",
+          "fieldName": "meshType",
+          "target": "RainMid:n1645",
+          "targetNodeId": 1645,
+          "offset": 36735
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n1267",
+      "level": "RainMid",
+      "nodeId": 1267,
+      "name": "BstNode_1778",
+      "className": "BirdV2Params",
+      "classIndex": 19,
+      "sourceOffset": 258245,
+      "sourceLength": 73,
+      "sourceSha256": "9e8333dc5ba9fcf20339b2c6f83528fa3ca0ae96cfc1d97ab50e24041ccad99b",
+      "declaredFieldCount": 20,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1267/p15",
+          "fieldName": "meshType",
+          "target": "RainMid:n1519",
+          "targetNodeId": 1519,
+          "offset": 258304
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n235",
+      "level": "Sunset",
+      "nodeId": 235,
+      "name": "BstNode_1413",
+      "className": "BirdV2Params",
+      "classIndex": 31,
+      "sourceOffset": 71600,
+      "sourceLength": 77,
+      "sourceSha256": "3f0a8fe1413fe5d16db1f44f78a5384da8de5c88882822520dd7f88fdeb500ee",
+      "declaredFieldCount": 21,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n235/p16",
+          "fieldName": "meshType",
+          "target": "Sunset:n1413",
+          "targetNodeId": 1413,
+          "offset": 71663
+        },
+        {
+          "fieldId": "n235/p19",
+          "fieldName": "startPos",
+          "target": "Sunset:n140",
+          "targetNodeId": 140,
+          "offset": 71672
+        }
+      ],
+      "incomingReferenceCount": 4,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n1142",
+      "level": "Sunset",
+      "nodeId": 1142,
+      "name": "BstNode_82",
+      "className": "BirdV2Params",
+      "classIndex": 31,
+      "sourceOffset": 220192,
+      "sourceLength": 75,
+      "sourceSha256": "116b4785189b2b31f6d6505a2298bf0e95ba8b1960ad733d686bf2bd87d5769f",
+      "declaredFieldCount": 21,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1142/p16",
+          "fieldName": "meshType",
+          "target": "Sunset:n1413",
+          "targetNodeId": 1413,
+          "offset": 220253
+        },
+        {
+          "fieldId": "n1142/p19",
+          "fieldName": "startPos",
+          "target": "Sunset:n1428",
+          "targetNodeId": 1428,
+          "offset": 220262
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n288",
+      "level": "SunsetEnd",
+      "nodeId": 288,
+      "name": "BstNode_1413",
+      "className": "BirdV2Params",
+      "classIndex": 36,
+      "sourceOffset": 80796,
+      "sourceLength": 77,
+      "sourceSha256": "b6465adb8899b03d9f3d0200b02c5e5f1d32810f92277cbd094e43719189c8d4",
+      "declaredFieldCount": 21,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n288/p16",
+          "fieldName": "meshType",
+          "target": "SunsetEnd:n1486",
+          "targetNodeId": 1486,
+          "offset": 80859
+        },
+        {
+          "fieldId": "n288/p19",
+          "fieldName": "startPos",
+          "target": "SunsetEnd:n1053",
+          "targetNodeId": 1053,
+          "offset": 80868
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n1067",
+      "level": "SunsetEnd",
+      "nodeId": 1067,
+      "name": "BstNode_82",
+      "className": "BirdV2Params",
+      "classIndex": 36,
+      "sourceOffset": 204462,
+      "sourceLength": 75,
+      "sourceSha256": "0006fb54dc6696f68d7cbced0e2f026feb1cf2b7f35a9cf1e55cf96676b46313",
+      "declaredFieldCount": 21,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1067/p16",
+          "fieldName": "meshType",
+          "target": "SunsetEnd:n1486",
+          "targetNodeId": 1486,
+          "offset": 204523
+        },
+        {
+          "fieldId": "n1067/p19",
+          "fieldName": "startPos",
+          "target": "SunsetEnd:n469",
+          "targetNodeId": 469,
+          "offset": 204532
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetRace:n94",
+      "level": "SunsetRace",
+      "nodeId": 94,
+      "name": "BstNode_1167524129",
+      "className": "BirdV2Params",
+      "classIndex": 15,
+      "sourceOffset": 40254,
+      "sourceLength": 83,
+      "sourceSha256": "53983500f7dd43ca0bec3debdfcf373f2d6db792a89958e2dd60c7cfecd7d551",
+      "declaredFieldCount": 21,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n94/p16",
+          "fieldName": "meshType",
+          "target": "SunsetRace:n839",
+          "targetNodeId": 839,
+          "offset": 40323
+        },
+        {
+          "fieldId": "n94/p19",
+          "fieldName": "startPos",
+          "target": "SunsetRace:n465",
+          "targetNodeId": 465,
+          "offset": 40332
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetRace:n799",
+      "level": "SunsetRace",
+      "nodeId": 799,
+      "name": "BstNode_666",
+      "className": "BirdV2Params",
+      "classIndex": 15,
+      "sourceOffset": 179698,
+      "sourceLength": 76,
+      "sourceSha256": "ad8c26d7d04fb419bddc506b736a120191e4da9e337703c868dc2fd8074397ee",
+      "declaredFieldCount": 21,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n799/p16",
+          "fieldName": "meshType",
+          "target": "SunsetRace:n1170",
+          "targetNodeId": 1170,
+          "offset": 179760
+        },
+        {
+          "fieldId": "n799/p19",
+          "fieldName": "startPos",
+          "target": "SunsetRace:n1031",
+          "targetNodeId": 1031,
+          "offset": 179769
+        }
+      ],
+      "incomingReferenceCount": 5,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetRace:n1050",
+      "level": "SunsetRace",
+      "nodeId": 1050,
+      "name": "BstNode_1167524161",
+      "className": "BirdV2Params",
+      "classIndex": 15,
+      "sourceOffset": 220083,
+      "sourceLength": 83,
+      "sourceSha256": "beddc344b970ecd3914adcfaf4767c38d1a78d68fa9f60797ddda853dd00ef5e",
+      "declaredFieldCount": 21,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1050/p16",
+          "fieldName": "meshType",
+          "target": "SunsetRace:n839",
+          "targetNodeId": 839,
+          "offset": 220152
+        },
+        {
+          "fieldId": "n1050/p19",
+          "fieldName": "startPos",
+          "target": "SunsetRace:n145",
+          "targetNodeId": 145,
+          "offset": 220161
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetRace:n1342",
+      "level": "SunsetRace",
+      "nodeId": 1342,
+      "name": "BstNode_840695845",
+      "className": "BirdV2Params",
+      "classIndex": 15,
+      "sourceOffset": 274986,
+      "sourceLength": 82,
+      "sourceSha256": "5f17194b33ed7ec6569d25427d4fad7048e95f579dd9738ba6a70a29a1f9b6ed",
+      "declaredFieldCount": 21,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1342/p16",
+          "fieldName": "meshType",
+          "target": "SunsetRace:n1170",
+          "targetNodeId": 1170,
+          "offset": 275054
+        },
+        {
+          "fieldId": "n1342/p19",
+          "fieldName": "startPos",
+          "target": "SunsetRace:n235",
+          "targetNodeId": 235,
+          "offset": 275063
+        }
+      ],
+      "incomingReferenceCount": 5,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "TitleWater:n41",
+      "level": "TitleWater",
+      "nodeId": 41,
+      "name": "BstNode_251",
+      "className": "BirdV2Params",
+      "classIndex": 22,
+      "sourceOffset": 22136,
+      "sourceLength": 76,
+      "sourceSha256": "e7e62ae5edbeafdf313638b62c3f7dd9224f24a17df0a71dcbdfafb3cad42292",
+      "declaredFieldCount": 21,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n41/p16",
+          "fieldName": "meshType",
+          "target": "TitleWater:n104",
+          "targetNodeId": 104,
+          "offset": 22198
+        },
+        {
+          "fieldId": "n41/p19",
+          "fieldName": "startPos",
+          "target": "TitleWater:n90",
+          "targetNodeId": 90,
+          "offset": 22207
+        }
+      ],
+      "incomingReferenceCount": 15,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "Dawn",
+      "path": "Levels/Dawn/Objects.level.bin",
+      "sha256": "16e26aafc7f9d120a548bf5d8bec04fbc18146bc8db531ef75144889b1ff197a",
+      "bytes": 504637,
+      "nodes": 3798,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dawn.json",
+      "markdown": "Objects对象清单/Dawn.md"
+    },
+    {
+      "level": "DuskGraveyard",
+      "path": "Levels/DuskGraveyard/Objects.level.bin",
+      "sha256": "128b30dcbe40b68e68fc25d195b68dc39f897259453c02612049ccd37a90ffb4",
+      "bytes": 424333,
+      "nodes": 1791,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DuskGraveyard.json",
+      "markdown": "Objects对象清单/DuskGraveyard.md"
+    },
+    {
+      "level": "HubReveal",
+      "path": "Levels/HubReveal/Objects.level.bin",
+      "sha256": "4b32f12bbe4b246cde9ca1e4ba0982000ff108359865bb4340aba640e609861b",
+      "bytes": 289438,
+      "nodes": 1829,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/HubReveal.json",
+      "markdown": "Objects对象清单/HubReveal.md"
+    },
+    {
+      "level": "Prairie_Village",
+      "path": "Levels/Prairie_Village/Objects.level.bin",
+      "sha256": "4656296b54402016b59b894b4653fbdc71e106a21e0900294f73f2c7b7112385",
+      "bytes": 549989,
+      "nodes": 3724,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Village.json",
+      "markdown": "Objects对象清单/Prairie_Village.md"
+    },
+    {
+      "level": "Rain",
+      "path": "Levels/Rain/Objects.level.bin",
+      "sha256": "20093bccf3bb1ea0936cb993e66cef0187b40a5a411df3573eb28e4def4f75c6",
+      "bytes": 457732,
+      "nodes": 2079,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Rain.json",
+      "markdown": "Objects对象清单/Rain.md"
+    },
+    {
+      "level": "RainEnd",
+      "path": "Levels/RainEnd/Objects.level.bin",
+      "sha256": "247912ec955153e3df80c16a861eb872573502a285a17943518bdce448a8d5e3",
+      "bytes": 427926,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainEnd.json",
+      "markdown": "Objects对象清单/RainEnd.md"
+    },
+    {
+      "level": "RainForest",
+      "path": "Levels/RainForest/Objects.level.bin",
+      "sha256": "2e69b3314c70c61bd99435f4bb4418fba540f227c83670e1af3b5358c64c3b73",
+      "bytes": 271409,
+      "nodes": 1306,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainForest.json",
+      "markdown": "Objects对象清单/RainForest.md"
+    },
+    {
+      "level": "RainMid",
+      "path": "Levels/RainMid/Objects.level.bin",
+      "sha256": "139b219d9b71a2ab24418b1ec41f2ee8a2ebfdf4c5ea992c35348a758682ed23",
+      "bytes": 430825,
+      "nodes": 2457,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainMid.json",
+      "markdown": "Objects对象清单/RainMid.md"
+    },
+    {
+      "level": "Sunset",
+      "path": "Levels/Sunset/Objects.level.bin",
+      "sha256": "8126f2db693502576075505797624e0b5e53dc064fe6af82e90f2261ca427f8a",
+      "bytes": 325410,
+      "nodes": 1899,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Sunset.json",
+      "markdown": "Objects对象清单/Sunset.md"
+    },
+    {
+      "level": "SunsetEnd",
+      "path": "Levels/SunsetEnd/Objects.level.bin",
+      "sha256": "9995ebfef7aa72982f6b95073a98a4ef01376bd8ac56c3b79b09729f97f43d6e",
+      "bytes": 352573,
+      "nodes": 1998,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SunsetEnd.json",
+      "markdown": "Objects对象清单/SunsetEnd.md"
+    },
+    {
+      "level": "SunsetRace",
+      "path": "Levels/SunsetRace/Objects.level.bin",
+      "sha256": "2ebfc21451d30f976bcafafa0c42f409e322efeeb0f8403a4136899438e0b5dc",
+      "bytes": 333403,
+      "nodes": 1722,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SunsetRace.json",
+      "markdown": "Objects对象清单/SunsetRace.md"
+    },
+    {
+      "level": "TitleWater",
+      "path": "Levels/TitleWater/Objects.level.bin",
+      "sha256": "46841a22d17b360fcc3c7ceb8406d8c7e73441fd59023f64b4bce4057e1b9414",
+      "bytes": 45511,
+      "nodes": 238,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/TitleWater.json",
+      "markdown": "Objects对象清单/TitleWater.md"
+    }
+  ]
+}

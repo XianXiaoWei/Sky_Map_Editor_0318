@@ -1,0 +1,808 @@
+{
+  "className": "Critter_Shout",
+  "functionGroup": "生物、群体与 AI",
+  "functionRole": "生物集合喊叫音效与视觉",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "partial",
+      "description": "Critter_Shout 的原默认值、继承初始化及 4 个序列化字段变体；原注册字段 3 项。"
+    },
+    {
+      "name": "生物集合喊叫音效与视觉",
+      "status": "partial",
+      "description": "原父构造、缺省标志和完整普通 OnEnabled 已核验；捕获初始数量，回调后重读 Clump、玩家 owner 和两项字节标志，保留断言与 Event.Start。实际 15 个保存事件明确阻止执行并显示 CritterV2 视觉／音频 owner 未接入，不以空服务代替效果。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Clump（15 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "Critter_Shout",
+    "category": "生物、群体与 AI",
+    "functionGroupId": "creatures",
+    "functionRole": "生物集合喊叫音效与视觉",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "partial",
+        "description": "Critter_Shout 的原默认值、继承初始化及 4 个序列化字段变体；原注册字段 3 项。"
+      },
+      {
+        "name": "生物集合喊叫音效与视觉",
+        "status": "partial",
+        "description": "原父构造、缺省标志和完整普通 OnEnabled 已核验；捕获初始数量，回调后重读 Clump、玩家 owner 和两项字节标志，保留断言与 Event.Start。实际 15 个保存事件明确阻止执行并显示 CritterV2 视觉／音频 owner 未接入，不以空服务代替效果。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Clump（15 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Clump",
+        "references": 15
+      }
+    ],
+    "rttiWorkingGroup": "系统和其余类型",
+    "role": "对象实例类型",
+    "instances": 15,
+    "nestedInstances": 0,
+    "referenceFields": 15,
+    "declaredLevels": 1,
+    "levels": [
+      {
+        "level": "Prairie_Village",
+        "nodes": 15,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "critters",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "hasAudio",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "hasVisual",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100c9ce20",
+    "nativeRegisteredFields": [
+      {
+        "name": "critters",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x1002675a0",
+        "propertyAddress": "0x100c9c570"
+      },
+      {
+        "name": "hasVisual",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 64,
+        "registrationFunction": "0x1002675a0",
+        "propertyAddress": "0x100c9c5c0"
+      },
+      {
+        "name": "hasAudio",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 65,
+        "registrationFunction": "0x1002675a0",
+        "propertyAddress": "0x100c9c610"
+      }
+    ],
+    "completedCheckpoints": 4,
+    "partialCheckpoints": 2,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 40,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": true,
+    "implementation": [
+      "src/core/environment-object-state.ts",
+      "src/core/creature-construction-runtime.ts",
+      "src/core/nature-event-runtime.ts",
+      "src/core/environment-event-owner.ts"
+    ],
+    "evidence": [
+      "docs/creature-construction.json",
+      "docs/creature-construction-oracle.json",
+      "docs/creature-objects-defaults.json",
+      "docs/creature-objects-default-oracle.json",
+      "docs/objects-nature-audit.json",
+      "docs/生物类续接.md",
+      "docs/nature-events-native.json",
+      "docs/nature-event-oracle.json"
+    ],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 3 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "partial",
+        "note": "原父构造、缺省标志和完整普通 OnEnabled 已核验；捕获初始数量，回调后重读 Clump、玩家 owner 和两项字节标志，保留断言与 Event.Start。实际 15 个保存事件明确阻止执行并显示 CritterV2 视觉／音频 owner 未接入，不以空服务代替效果。",
+        "evidence": [
+          "docs/creature-construction.json",
+          "docs/creature-construction-oracle.json",
+          "docs/creature-objects-defaults.json",
+          "docs/creature-objects-default-oracle.json",
+          "docs/objects-nature-audit.json",
+          "docs/生物类续接.md",
+          "docs/nature-events-native.json",
+          "docs/nature-event-oracle.json"
+        ]
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "partial",
+        "note": "原父构造、缺省标志和完整普通 OnEnabled 已核验；捕获初始数量，回调后重读 Clump、玩家 owner 和两项字节标志，保留断言与 Event.Start。实际 15 个保存事件明确阻止执行并显示 CritterV2 视觉／音频 owner 未接入，不以空服务代替效果。",
+        "evidence": [
+          "docs/creature-construction.json",
+          "docs/creature-construction-oracle.json",
+          "docs/creature-objects-defaults.json",
+          "docs/creature-objects-default-oracle.json",
+          "docs/objects-nature-audit.json",
+          "docs/生物类续接.md",
+          "docs/nature-events-native.json",
+          "docs/nature-event-oracle.json"
+        ]
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "verified",
+        "note": "原父构造、缺省标志和完整普通 OnEnabled 已核验；捕获初始数量，回调后重读 Clump、玩家 owner 和两项字节标志，保留断言与 Event.Start。实际 15 个保存事件明确阻止执行并显示 CritterV2 视觉／音频 owner 未接入，不以空服务代替效果。",
+        "evidence": [
+          "docs/creature-construction.json",
+          "docs/creature-construction-oracle.json",
+          "docs/creature-objects-defaults.json",
+          "docs/creature-objects-default-oracle.json",
+          "docs/objects-nature-audit.json",
+          "docs/生物类续接.md",
+          "docs/nature-events-native.json",
+          "docs/nature-event-oracle.json"
+        ]
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "原父构造、缺省标志和完整普通 OnEnabled 已核验；捕获初始数量，回调后重读 Clump、玩家 owner 和两项字节标志，保留断言与 Event.Start。实际 15 个保存事件明确阻止执行并显示 CritterV2 视觉／音频 owner 未接入，不以空服务代替效果。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "Prairie_Village:n81",
+      "level": "Prairie_Village",
+      "nodeId": 81,
+      "name": "BstNode_1032",
+      "className": "Critter_Shout",
+      "classIndex": 24,
+      "sourceOffset": 43912,
+      "sourceLength": 24,
+      "sourceSha256": "3698658aea6491d717e3c855598ef356789e843832632860d456dbc180cb0866",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n81/p1",
+          "fieldName": "critters",
+          "target": "Prairie_Village:n3163",
+          "targetNodeId": 3163,
+          "offset": 43930
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n578",
+      "level": "Prairie_Village",
+      "nodeId": 578,
+      "name": "BstNode_1046",
+      "className": "Critter_Shout",
+      "classIndex": 24,
+      "sourceOffset": 123583,
+      "sourceLength": 24,
+      "sourceSha256": "90dc1d4280866ceb1ed5079af9781567de90f280c8533d9a4ca74d672ed49f86",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n578/p1",
+          "fieldName": "critters",
+          "target": "Prairie_Village:n3241",
+          "targetNodeId": 3241,
+          "offset": 123601
+        }
+      ],
+      "incomingReferenceCount": 4,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n625",
+      "level": "Prairie_Village",
+      "nodeId": 625,
+      "name": "BstNode_1018",
+      "className": "Critter_Shout",
+      "classIndex": 24,
+      "sourceOffset": 131543,
+      "sourceLength": 24,
+      "sourceSha256": "7f45786facfaabf7b020b01d7f5700c774a1c3ebf1a2452c925771eaa0ee58bf",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n625/p1",
+          "fieldName": "critters",
+          "target": "Prairie_Village:n3258",
+          "targetNodeId": 3258,
+          "offset": 131561
+        }
+      ],
+      "incomingReferenceCount": 4,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n733",
+      "level": "Prairie_Village",
+      "nodeId": 733,
+      "name": "BstNode_1015",
+      "className": "Critter_Shout",
+      "classIndex": 24,
+      "sourceOffset": 150062,
+      "sourceLength": 24,
+      "sourceSha256": "c1e3bcf13b84f7c0f6be1d44ee8c7de5dbb1681dc18b02914a82fb190d2dd253",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n733/p1",
+          "fieldName": "critters",
+          "target": "Prairie_Village:n3268",
+          "targetNodeId": 3268,
+          "offset": 150080
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n860",
+      "level": "Prairie_Village",
+      "nodeId": 860,
+      "name": "BstNode_596",
+      "className": "Critter_Shout",
+      "classIndex": 24,
+      "sourceOffset": 171714,
+      "sourceLength": 23,
+      "sourceSha256": "4fa62eb9bfa2782f840e83d720dfb5e3ed7eff2f9bf3c5ac188e1e42ff913b3b",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n860/p1",
+          "fieldName": "critters",
+          "target": "Prairie_Village:n3298",
+          "targetNodeId": 3298,
+          "offset": 171731
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1275",
+      "level": "Prairie_Village",
+      "nodeId": 1275,
+      "name": "BstNode_1031",
+      "className": "Critter_Shout",
+      "classIndex": 24,
+      "sourceOffset": 236524,
+      "sourceLength": 24,
+      "sourceSha256": "dbc664aae90b4208ffb1a4145c83baad2634cd77cc645f611d4efacea7e70dda",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1275/p1",
+          "fieldName": "critters",
+          "target": "Prairie_Village:n3387",
+          "targetNodeId": 3387,
+          "offset": 236542
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1302",
+      "level": "Prairie_Village",
+      "nodeId": 1302,
+      "name": "BstNode_1937",
+      "className": "Critter_Shout",
+      "classIndex": 24,
+      "sourceOffset": 241185,
+      "sourceLength": 24,
+      "sourceSha256": "b947d7ce9dc471ba03fd701869f03c7ca2d8ea3c9f357ae06a2a3e1372431ca1",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1302/p1",
+          "fieldName": "critters",
+          "target": "Prairie_Village:n3391",
+          "targetNodeId": 3391,
+          "offset": 241203
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1477",
+      "level": "Prairie_Village",
+      "nodeId": 1477,
+      "name": "BstNode_1936",
+      "className": "Critter_Shout",
+      "classIndex": 24,
+      "sourceOffset": 267185,
+      "sourceLength": 24,
+      "sourceSha256": "1475e322e39897005fed4b0fc5cadb2e29e6032596c3c99945bc3dfe5dc9b03a",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1477/p1",
+          "fieldName": "critters",
+          "target": "Prairie_Village:n3426",
+          "targetNodeId": 3426,
+          "offset": 267203
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1889",
+      "level": "Prairie_Village",
+      "nodeId": 1889,
+      "name": "BstNode_994",
+      "className": "Critter_Shout",
+      "classIndex": 24,
+      "sourceOffset": 337235,
+      "sourceLength": 23,
+      "sourceSha256": "231154552b5f098d78925d645410e7d7d72df81c59cea6490cc8bbf80c8990ce",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1889/p1",
+          "fieldName": "critters",
+          "target": "Prairie_Village:n3507",
+          "targetNodeId": 3507,
+          "offset": 337252
+        }
+      ],
+      "incomingReferenceCount": 4,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2213",
+      "level": "Prairie_Village",
+      "nodeId": 2213,
+      "name": "BstNode_2106",
+      "className": "Critter_Shout",
+      "classIndex": 24,
+      "sourceOffset": 385742,
+      "sourceLength": 24,
+      "sourceSha256": "066d51238536aff46a1e7163fbf98a9ab324b548882dda8c980dd13211113005",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2213/p1",
+          "fieldName": "critters",
+          "target": "Prairie_Village:n3563",
+          "targetNodeId": 3563,
+          "offset": 385760
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2254",
+      "level": "Prairie_Village",
+      "nodeId": 2254,
+      "name": "BstNode_1016",
+      "className": "Critter_Shout",
+      "classIndex": 24,
+      "sourceOffset": 391658,
+      "sourceLength": 24,
+      "sourceSha256": "a085de5714f8afd17835b2a1036c9740febf78632ceb9c26449e685f5379dd70",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2254/p1",
+          "fieldName": "critters",
+          "target": "Prairie_Village:n3574",
+          "targetNodeId": 3574,
+          "offset": 391676
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2255",
+      "level": "Prairie_Village",
+      "nodeId": 2255,
+      "name": "BstNode_1019",
+      "className": "Critter_Shout",
+      "classIndex": 24,
+      "sourceOffset": 391682,
+      "sourceLength": 24,
+      "sourceSha256": "b7fd603054b146baee440d7b29292af18d53f3c308261b7adbcaaa7fa0eddb1d",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2255/p1",
+          "fieldName": "critters",
+          "target": "Prairie_Village:n3575",
+          "targetNodeId": 3575,
+          "offset": 391700
+        }
+      ],
+      "incomingReferenceCount": 4,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2708",
+      "level": "Prairie_Village",
+      "nodeId": 2708,
+      "name": "BstNode_1017",
+      "className": "Critter_Shout",
+      "classIndex": 24,
+      "sourceOffset": 458774,
+      "sourceLength": 24,
+      "sourceSha256": "ad6bf6e88931e9ac31f3f89054a481b9eb87768f2ca907b55c4ce6f9679c405d",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2708/p1",
+          "fieldName": "critters",
+          "target": "Prairie_Village:n3657",
+          "targetNodeId": 3657,
+          "offset": 458792
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2792",
+      "level": "Prairie_Village",
+      "nodeId": 2792,
+      "name": "BstNode_1045",
+      "className": "Critter_Shout",
+      "classIndex": 24,
+      "sourceOffset": 473874,
+      "sourceLength": 24,
+      "sourceSha256": "6a8cc14628ba6e7564b63eadf43a3a25a418e5f636171070030c0a78033d1eb9",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2792/p1",
+          "fieldName": "critters",
+          "target": "Prairie_Village:n3666",
+          "targetNodeId": 3666,
+          "offset": 473892
+        }
+      ],
+      "incomingReferenceCount": 4,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2825",
+      "level": "Prairie_Village",
+      "nodeId": 2825,
+      "name": "BstNode_997",
+      "className": "Critter_Shout",
+      "classIndex": 24,
+      "sourceOffset": 479507,
+      "sourceLength": 23,
+      "sourceSha256": "9ae00b2922e7cd4e3c2ed053708fd562aa2631fd626df1b7da0f975a0798a46f",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2825/p1",
+          "fieldName": "critters",
+          "target": "Prairie_Village:n3672",
+          "targetNodeId": 3672,
+          "offset": 479524
+        }
+      ],
+      "incomingReferenceCount": 4,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "Prairie_Village",
+      "path": "Levels/Prairie_Village/Objects.level.bin",
+      "sha256": "4656296b54402016b59b894b4653fbdc71e106a21e0900294f73f2c7b7112385",
+      "bytes": 549989,
+      "nodes": 3724,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Village.json",
+      "markdown": "Objects对象清单/Prairie_Village.md"
+    }
+  ]
+}

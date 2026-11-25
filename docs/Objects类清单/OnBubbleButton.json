@@ -1,0 +1,481 @@
+{
+  "className": "OnBubbleButton",
+  "functionGroup": "按钮、文字与菜单",
+  "functionRole": "世界气泡按钮距离、图标与点击事件",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "OnBubbleButton 的原默认值、继承初始化及 5 个序列化字段变体；原注册字段 4 项。"
+    },
+    {
+      "name": "世界气泡按钮距离、图标与点击事件",
+      "status": "pending",
+      "description": "实际节点和字段已清点；原交互对象/距离选择、图标、摄像机或玩家输入和事件待恢复。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Marker（3 条引用）、Clump（4 条引用）、Emitter（1 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "OnBubbleButton",
+    "category": "按钮、文字与菜单",
+    "functionGroupId": "ui",
+    "functionRole": "世界气泡按钮距离、图标与点击事件",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "OnBubbleButton 的原默认值、继承初始化及 5 个序列化字段变体；原注册字段 4 项。"
+      },
+      {
+        "name": "世界气泡按钮距离、图标与点击事件",
+        "status": "pending",
+        "description": "实际节点和字段已清点；原交互对象/距离选择、图标、摄像机或玩家输入和事件待恢复。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Marker（3 条引用）、Clump（4 条引用）、Emitter（1 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Clump",
+        "references": 4
+      },
+      {
+        "className": "Marker",
+        "references": 3
+      },
+      {
+        "className": "Emitter",
+        "references": 1
+      }
+    ],
+    "rttiWorkingGroup": "交互、事件与任务",
+    "role": "对象实例类型",
+    "instances": 4,
+    "nestedInstances": 0,
+    "referenceFields": 8,
+    "declaredLevels": 2,
+    "levels": [
+      {
+        "level": "SkyHub2",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "TitleWater",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "activeDistance",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "buttonTarget",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "events",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "iconName",
+        "type": 1,
+        "size": 0,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100c8da10",
+    "nativeRegisteredFields": [
+      {
+        "name": "events",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 64,
+        "registrationFunction": "0x1001cedf0",
+        "propertyAddress": "0x100c8d338"
+      },
+      {
+        "name": "buttonTarget",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP6ObjectERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x1001cedf0",
+        "propertyAddress": "0x100c8d388"
+      },
+      {
+        "name": "iconName",
+        "typeGetter": "__Z17GetMetaTypeByTypeINSt3__112basic_stringIcNS0_11char_traitsIcEE16StlPoolAllocatorIcEEEERK8MetaTypev",
+        "nativeOffset": 72,
+        "registrationFunction": "0x1001cedf0",
+        "propertyAddress": "0x100c8d3d8"
+      },
+      {
+        "name": "activeDistance",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 96,
+        "registrationFunction": "0x1001cedf0",
+        "propertyAddress": "0x100c8d428"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 4 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "实际节点和字段已清点；原交互对象/距离选择、图标、摄像机或玩家输入和事件待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "SkyHub2:n834",
+      "level": "SkyHub2",
+      "nodeId": 834,
+      "name": "BstNode_2446917871",
+      "className": "OnBubbleButton",
+      "classIndex": 80,
+      "sourceOffset": 186488,
+      "sourceLength": 50,
+      "sourceSha256": "2053459d476d3bf5cf9ac650307740399848bc3ed7e20e787f1fd612a4dc2859",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n834/p2",
+          "fieldName": "buttonTarget",
+          "target": "SkyHub2:n1076",
+          "targetNodeId": 1076,
+          "offset": 186516
+        },
+        {
+          "fieldId": "n834/p3",
+          "fieldName": "events",
+          "target": "SkyHub2:n1809",
+          "targetNodeId": 1809,
+          "offset": 186520
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1437",
+      "level": "SkyHub2",
+      "nodeId": 1437,
+      "name": "BstNode_2529558626",
+      "className": "OnBubbleButton",
+      "classIndex": 80,
+      "sourceOffset": 283138,
+      "sourceLength": 46,
+      "sourceSha256": "cb9ba2acf88c5ae5075762df2e826ea17e4a0680ae838c7af82380fa6398b7df",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1437/p2",
+          "fieldName": "buttonTarget",
+          "target": "SkyHub2:n1611",
+          "targetNodeId": 1611,
+          "offset": 283166
+        },
+        {
+          "fieldId": "n1437/p3",
+          "fieldName": "events",
+          "target": "SkyHub2:n2693",
+          "targetNodeId": 2693,
+          "offset": 283170
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n2016",
+      "level": "SkyHub2",
+      "nodeId": 2016,
+      "name": "BstNode_2529558712",
+      "className": "OnBubbleButton",
+      "classIndex": 80,
+      "sourceOffset": 379940,
+      "sourceLength": 50,
+      "sourceSha256": "d2406b62c27ef5b2122a1a70e0ee96af61b06dab405b0ff3847d1c62a65b348c",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2016/p2",
+          "fieldName": "buttonTarget",
+          "target": "SkyHub2:n1076",
+          "targetNodeId": 1076,
+          "offset": 379968
+        },
+        {
+          "fieldId": "n2016/p3",
+          "fieldName": "events",
+          "target": "SkyHub2:n970",
+          "targetNodeId": 970,
+          "offset": 379972
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "TitleWater:n65",
+      "level": "TitleWater",
+      "nodeId": 65,
+      "name": "BstNode_3156082689",
+      "className": "OnBubbleButton",
+      "classIndex": 26,
+      "sourceOffset": 25281,
+      "sourceLength": 47,
+      "sourceSha256": "f0d8a8e45c3ae5ff35d754d5ed6d2f874af098d1f81f65048216828d3703c389",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n65/p2",
+          "fieldName": "buttonTarget",
+          "target": "TitleWater:n164",
+          "targetNodeId": 164,
+          "offset": 25309
+        },
+        {
+          "fieldId": "n65/p3",
+          "fieldName": "events",
+          "target": "TitleWater:n51",
+          "targetNodeId": 51,
+          "offset": 25313
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "SkyHub2",
+      "path": "Levels/SkyHub2/Objects.level.bin",
+      "sha256": "8b467f9b349d9d4ce0d038528c96e44dff30063149bf5bbf90232a56bb9dd36f",
+      "bytes": 475656,
+      "nodes": 2886,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SkyHub2.json",
+      "markdown": "Objects对象清单/SkyHub2.md"
+    },
+    {
+      "level": "TitleWater",
+      "path": "Levels/TitleWater/Objects.level.bin",
+      "sha256": "46841a22d17b360fcc3c7ceb8406d8c7e73441fd59023f64b4bce4057e1b9414",
+      "bytes": 45511,
+      "nodes": 238,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/TitleWater.json",
+      "markdown": "Objects对象清单/TitleWater.md"
+    }
+  ]
+}

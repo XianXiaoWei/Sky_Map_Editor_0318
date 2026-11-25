@@ -1,0 +1,197 @@
+{
+  "passed": false,
+  "scope": "Production Electron desktop UI and XCB Vulkan presentation on Linux. Tests native replies, navigation, incremental editing, DPI, resizing and map cleanup. Does not validate Win32 HWND/transparent-window composition or Windows hardware FPS.",
+  "windowsTested": false,
+  "maps": [
+    {
+      "level": "Dawn",
+      "loadMs": 15854.456973,
+      "frames": 15,
+      "navigationStatusFps": 5.924389975309865,
+      "cameraMoved": true,
+      "resolution": [
+        695,
+        828
+      ],
+      "draws": 172,
+      "triangles": 238473,
+      "geometrySha256": "eaae68ecdde6a16d313d5ab913272482c10fdfc09d529cae1ed2145554ebc6e5",
+      "frameTiming": {
+        "environmentState": 0.6718229999969481,
+        "background": 1.5677080000023125,
+        "materials": 2.7095829999998386,
+        "compositionSetup": 0.14546899999913876,
+        "rasterAndPresent": 198.5076560000016
+      },
+      "visibleDraws": 172,
+      "sceneReuploads": 0,
+      "materialReuploads": 0
+    },
+    {
+      "level": "SkyHub2",
+      "loadMs": 13310.087443000004,
+      "frames": 17,
+      "navigationStatusFps": 6.699313506409473,
+      "cameraMoved": true,
+      "resolution": [
+        695,
+        828
+      ],
+      "draws": 197,
+      "triangles": 336284,
+      "geometrySha256": "34408faf583128afdc76eed176fd76225d127456b26824512c046cbb59ca3e87",
+      "frameTiming": {
+        "environmentState": 7.6525519999995595,
+        "background": 4.426458999994793,
+        "materials": 3.2621870000002673,
+        "compositionSetup": 0.11583300000347663,
+        "rasterAndPresent": 122.84536500000104
+      },
+      "visibleDraws": 139,
+      "sceneReuploads": 0,
+      "materialReuploads": 0
+    },
+    {
+      "level": "Dawn",
+      "loadMs": 7555.5587469999955,
+      "frames": 17,
+      "navigationStatusFps": 7.055303664291231,
+      "cameraMoved": true,
+      "resolution": [
+        695,
+        828
+      ],
+      "draws": 172,
+      "triangles": 238473,
+      "geometrySha256": "eaae68ecdde6a16d313d5ab913272482c10fdfc09d529cae1ed2145554ebc6e5",
+      "frameTiming": {
+        "environmentState": 11.405572999996366,
+        "background": 12.607030999999552,
+        "materials": 2.911770999999135,
+        "compositionSetup": 0.09906300000147894,
+        "rasterAndPresent": 130.9639060000045
+      },
+      "visibleDraws": 172,
+      "sceneReuploads": 0,
+      "materialReuploads": 0
+    }
+  ],
+  "errors": [],
+  "device": {
+    "engine": "Sky Native Vulkan",
+    "backend": "Vulkan",
+    "device": "llvmpipe (LLVM 19.1.7, 128 bits)",
+    "apiVersion": 4210993,
+    "deviceType": 4,
+    "nativeSurface": true,
+    "shaderFloat16": true,
+    "samplerAnisotropyPolicy": "llvmpipe-trilinear",
+    "maxSamplerAnisotropy": 16
+  },
+  "interaction": {
+    "nodeId": 7,
+    "translation": 3,
+    "responseMs": 742.5655209999968,
+    "poseRequests": 1,
+    "sceneReuploads": 0,
+    "materialReuploads": 0,
+    "geometryUnchanged": true
+  },
+  "resizeAndDpi": {
+    "ratio": 1.5,
+    "physicalWidth": 1125,
+    "renderWidth": 1125,
+    "renderHeight": 1062
+  },
+  "empty": {
+    "scope": "Original terrain/skirt GLSL, real packed geometry/material textures with declared gamma/mip handling and supported anisotropy (16x preview request), recovered float32 shader time and three-layer scroll accumulation. Shared original Wind spatial/timer/order sampling, additional Marker OBBs and cached Rail equations feed original texture drift. Ambient/boundary/interaction force services and native Rail lifecycle remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/MotionGen/MotionDilate/TemporalAa/Tonemap chain. PNG area-filtered mip generation and anisotropy strength remain preview adapters, not original exporter/Metal parity. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending. Resource models and prepared Beamo LOD0 draws use original GLSL, packed float3/color/SNORM normals/half4 UV pairs and baked lighting. Transparent descriptor states use original blend/depth/cull evidence; back-to-front bounds ordering is an editor adapter, not the original Scene sort. Beamo normals use observed RSQRTSS capability; external weight volumes, automatic LOD/Visibility, Barn/GPU ownership and complete original classes remain open.",
+    "geometrySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "draws": 0,
+    "terrainDraws": 0,
+    "modelDraws": 0,
+    "beamoDraws": 0,
+    "beamoInstances": 0,
+    "levelMeshDraws": 0,
+    "modelBoundaries": [],
+    "modelParameterBindings": [],
+    "modelBindings": [],
+    "shaders": [],
+    "triangles": 0,
+    "textures": [],
+    "samplerPolicy": "llvmpipe-trilinear",
+    "textureSampling": [],
+    "dynamics": {
+      "time": 0,
+      "scrolls": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "materialUploads": 1,
+    "orderUpdates": 1,
+    "probeUpdates": 0,
+    "visibleDraws": 0,
+    "materialQuality": "original",
+    "quality": "fast",
+    "fast": {
+      "frames": 4,
+      "setups": 1,
+      "textureUpdates": 0,
+      "path": "gpu-resident-fog-tonemap",
+      "hdrReadbacks": 0,
+      "clouds": false,
+      "temporalAA": false,
+      "metering": "fixed preview luminance 1"
+    },
+    "frameTiming": {
+      "environmentState": 0.04619799999636598,
+      "background": 3.0844270000015968,
+      "materials": 0.42161399999895366,
+      "compositionSetup": 0.18708399999741232,
+      "rasterAndPresent": 122.89161400000012
+    },
+    "sceneUploads": 7,
+    "overlayUpdates": 10
+  },
+  "transport": {
+    "calls": {
+      "vulkanInfo": 2,
+      "bootstrap": 1,
+      "vulkanSurfaceBounds": 3,
+      "vulkanScene": 7,
+      "vulkanOverlay": 10,
+      "vulkanFrame": 95,
+      "setData": 1,
+      "openLevel": 5,
+      "resourceMesh": 249,
+      "modelPreviewBatch": 57,
+      "shaderProgram": 91,
+      "imageInfo": 137,
+      "vulkanViewportInfo": 9,
+      "editObjects": 1,
+      "vulkanModelTransforms": 1,
+      "undo": 1
+    },
+    "surfaceFrames": 90,
+    "pixelBytes": 9207360
+  },
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n9207360 !== 0\n",
+  "toast": "",
+  "status": "已打开 WorldEmpty"
+}

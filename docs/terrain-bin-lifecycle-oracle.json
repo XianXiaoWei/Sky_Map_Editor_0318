@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "scope": "Unmodified original TerrainBarn release 0x1006a8100 normal path and original visibility-transition span 0x1006a331f..0x1006a343a execute with complete original prepare 0x1006a7b50 and heap reference removal 0x10077e4b0. Imported exclusive-access and bzero services are explicit serialized host callbacks; release/prepare/removal bodies are not patched. Lock callbacks optionally update the selected LOD to verify its post-lock re-read. Compare all draw bytes, all bins, reference records/counts including stale discarded tails and 64-byte guards, LOD/pending markers, lock balance, unchanged desired targets and normalized model/packets. Native creation packets from zero-initialized heap sample first/middle/last bins across all 77 records in 31 maps; original packet offsets retained, bins reindexed only in isolated snapshots. Synthetic fine-LOD draw contents and heap registrations are explicit snapshots, not restored tessellation outputs. Ownership deregistration does not prove allocation reclamation. Actual distance-sort/LOD job queue, tessellation, concurrency, loaders, Camera, viewport, hardware/game remain open. Complete TessBinJob 0x1006ad3f0 dispatch uses explicit recording callbacks at refinement/coarsening entries, verifying signed int16 comparison including equality and hidden/sentinel words. Worker bodies and automatic queue are not claimed.",
+  "functions": {
+    "release": "0x1006a8100",
+    "visibility": {
+      "start": "0x1006a331f",
+      "end": "0x1006a343a"
+    },
+    "prepare": "0x1006a7b50",
+    "removeReferences": "0x10077e4b0",
+    "jobDispatch": "0x1006ad3f0"
+  },
+  "cases": 345,
+  "steps": 1558,
+  "exclusiveSections": 9058,
+  "jobDispatches": 100,
+  "compared": 56684094,
+  "failed": 0,
+  "failures": [],
+  "corpusMaps": 31,
+  "corpusRecords": 77,
+  "corpusBins": 96309,
+  "selectedBins": 5339,
+  "visibilityTransitionsVerified": true,
+  "heapReferenceRemovalVerified": true,
+  "postLockLodRereadVerified": true,
+  "jobDispatchVerified": true,
+  "allocationReclamationRestored": false,
+  "lodTransitionsAndJobsRestored": false,
+  "actualLoaderRestored": false,
+  "viewportIntegrated": false
+}

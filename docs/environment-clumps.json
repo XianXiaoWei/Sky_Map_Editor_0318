@@ -1,0 +1,38 @@
+{
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "functions": {
+    "env-clump-register": "0x10031b3c0",
+    "env-clump-fade": "0x10031a450",
+    "env-clump-spatial": "0x10031a6f0",
+    "marker-enabled": "0x10043e2c0",
+    "marker-cast": "0x100011cb0",
+    "marker-object-to-mixin": "0x10043e220",
+    "env-create-queue": "0x100319d40",
+    "tgcl-create-by-name": "0x1004d0b60"
+  },
+  "spatialRule": "max(all direct Marker OBB weights) * temporalAlpha; per-marker enabled does not filter boxes",
+  "controlRule": "first direct Marker enabled byte; expiry writes false to that Marker, shared across parameter groups and hulls",
+  "registrationRule": "nonempty Clump of valid Marker Object references; original checked cast resolves Object* at Marker+8",
+  "markerEnabledOffset": 64,
+  "markerObjectMixinOffset": 8,
+  "markerDefaults": {
+    "enabled": {
+      "text": "true",
+      "encodedHex": "01",
+      "nativeOffset": 64,
+      "keyPointer": "0x100b5ea02",
+      "valuePointer": "0x100b5e9df",
+      "tagAddress": "0x1020045f0",
+      "propertyAddress": "0x100cc60d0",
+      "storeInstruction": "0x10043f239",
+      "propertyTagLinkInstruction": "0x10043f253"
+    }
+  },
+  "queuedEnvNodeLimit": 16,
+  "queueStride": 1040,
+  "unresolved": [
+    "Level object creation and event dispatch order",
+    "automatic SetEnvHull event attachment",
+    "initial Ambience output and complete camera environment evaluation"
+  ]
+}

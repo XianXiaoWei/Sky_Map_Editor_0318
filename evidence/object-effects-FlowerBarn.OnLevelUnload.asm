@@ -1,0 +1,17 @@
+0x10034f050: push rbp
+0x10034f051: mov rbp, rsp
+0x10034f054: push rbx
+0x10034f055: push rax
+0x10034f056: mov rbx, rdi
+0x10034f059: lea rdi, [rbx + 0x10]
+0x10034f05d: call 0x1007f5250 ; 0x1007f5250
+0x10034f062: lea rdi, [rbx + 0x450]
+0x10034f069: call 0x1007f6150 ; 0x1007f6150
+0x10034f06e: lea rdi, [rbx + 0x990]
+0x10034f075: call 0x1007f6150 ; 0x1007f6150
+0x10034f07a: mov dword ptr [rbx + 0x11dc0], 0
+0x10034f084: add rsp, 8
+0x10034f088: pop rbx
+0x10034f089: pop rbp
+0x10034f08a: ret 
+0x10034f08b: nop dword ptr [rax + rax]

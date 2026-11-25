@@ -1,0 +1,3316 @@
+{
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "functions": {
+    "compositor-outline": "0x10023de50",
+    "compositor-create": "0x10023d350",
+    "target-resources": "0x100243a30",
+    "outline-resource": "0x1007bc100",
+    "outline-resource-alt": "0x1007bc2d0",
+    "outline-pass": "0x1007bc8b0",
+    "outline-quad": "0x1007bcde0",
+    "outline-end": "0x1007bcbc0",
+    "param-texture": "0x1007bb3f0",
+    "param-group": "0x1007bbe10",
+    "metal-cloud-target-format": "0x100a6afc0",
+    "metal-cloud-target-sampler": "0x100a6aa30"
+  },
+  "scope": "Original Compositor instruction stream through EndRenderPass for Cloud. Original resource/pass/quad/list/binding descriptor writes and six sampler declarations execute. Shader parameter copy, depth-state storage, general setup and GPU allocations use explicit callbacks. Original target allocation loop executes floor division, minimum-one sizing and double-buffer count. Metal format/wrap conversion tables read from executable; no Metal driver/game image acceptance.",
+  "stop": {
+    "outlineJump": "0x10023fcc6",
+    "outlineEpilogue": "0x100241cc8",
+    "samplerJump": "0x10023d565",
+    "samplerEpilogue": "0x10023d8e9",
+    "allocationJump": "0x100243dff",
+    "allocationEpilogue": "0x100244014"
+  },
+  "formatTable": {
+    "address": "0x100b066c0",
+    "values": [
+      0,
+      0,
+      10,
+      0,
+      30,
+      0,
+      70,
+      73,
+      71,
+      80,
+      81,
+      90,
+      0,
+      23,
+      92,
+      25,
+      65,
+      115,
+      105,
+      125,
+      252,
+      260
+    ]
+  },
+  "wrapTable": {
+    "address": "0x100b066a0",
+    "values": [
+      0,
+      4,
+      2,
+      3
+    ]
+  },
+  "resources": [
+    {
+      "index": 0,
+      "name": "rtInvalid",
+      "size": 0,
+      "formatEnum": 0,
+      "metalFormat": 0,
+      "format": null,
+      "kind": 0,
+      "sampler": 1,
+      "flags": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 1,
+      "name": "rtFullRGBDepth",
+      "size": 1,
+      "formatEnum": 17,
+      "metalFormat": 115,
+      "format": "rgba16f",
+      "kind": 5,
+      "sampler": 1,
+      "flags": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "name": "dtFull",
+      "size": 1,
+      "formatEnum": 21,
+      "metalFormat": 260,
+      "format": "depth32f-stencil8",
+      "kind": 4,
+      "sampler": 1,
+      "flags": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "name": "dtHalf",
+      "size": 2,
+      "formatEnum": 21,
+      "metalFormat": 260,
+      "format": "depth32f-stencil8",
+      "kind": 4,
+      "sampler": 1,
+      "flags": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 4,
+      "name": "rtAlphaA",
+      "size": 1,
+      "formatEnum": 17,
+      "metalFormat": 115,
+      "format": "rgba16f",
+      "kind": 5,
+      "sampler": 1,
+      "flags": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 5,
+      "name": "rtAlphaB",
+      "size": 1,
+      "formatEnum": 17,
+      "metalFormat": 115,
+      "format": "rgba16f",
+      "kind": 5,
+      "sampler": 1,
+      "flags": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 6,
+      "name": "rtDepthHalfMin",
+      "size": 2,
+      "formatEnum": 16,
+      "metalFormat": 65,
+      "format": "rg16f",
+      "kind": 5,
+      "sampler": 1,
+      "flags": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 7,
+      "name": "rtDepthHalf",
+      "size": 2,
+      "formatEnum": 17,
+      "metalFormat": 115,
+      "format": "rgba16f",
+      "kind": 5,
+      "sampler": 1,
+      "flags": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 8,
+      "name": "rtDepthQuarter",
+      "size": 4,
+      "formatEnum": 16,
+      "metalFormat": 65,
+      "format": "rg16f",
+      "kind": 5,
+      "sampler": 1,
+      "flags": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 9,
+      "name": "rtCloudCoarseLo",
+      "size": 8,
+      "formatEnum": 15,
+      "metalFormat": 25,
+      "format": "r16f",
+      "kind": 5,
+      "sampler": 1,
+      "flags": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 10,
+      "name": "rtCloudCoarseHi",
+      "size": 4,
+      "formatEnum": 15,
+      "metalFormat": 25,
+      "format": "r16f",
+      "kind": 5,
+      "sampler": 1,
+      "flags": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 11,
+      "name": "rtCloudA",
+      "size": 2,
+      "formatEnum": 17,
+      "metalFormat": 115,
+      "format": "rgba16f",
+      "kind": 5,
+      "sampler": 2,
+      "flags": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 12,
+      "name": "rtCloudB",
+      "size": 2,
+      "formatEnum": 17,
+      "metalFormat": 115,
+      "format": "rgba16f",
+      "kind": 5,
+      "sampler": 2,
+      "flags": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 13,
+      "name": "rtFogHalf",
+      "size": 2,
+      "formatEnum": 15,
+      "metalFormat": 25,
+      "format": "r16f",
+      "kind": 5,
+      "sampler": 1,
+      "flags": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 14,
+      "name": "rtMotionDilated",
+      "size": 2,
+      "formatEnum": 17,
+      "metalFormat": 115,
+      "format": "rgba16f",
+      "kind": 5,
+      "sampler": 2,
+      "flags": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 15,
+      "name": "rtMotion",
+      "size": 2,
+      "formatEnum": 17,
+      "metalFormat": 115,
+      "format": "rgba16f",
+      "kind": 5,
+      "sampler": 1,
+      "flags": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 16,
+      "name": "rtMotionBlurred",
+      "size": 2,
+      "formatEnum": 17,
+      "metalFormat": 115,
+      "format": "rgba16f",
+      "kind": 5,
+      "sampler": 2,
+      "flags": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 17,
+      "name": "rtFullLdr",
+      "size": 1,
+      "formatEnum": 17,
+      "metalFormat": 115,
+      "format": "rgba16f",
+      "kind": 5,
+      "sampler": 2,
+      "flags": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 18,
+      "name": "rtResolve",
+      "size": 1,
+      "formatEnum": 17,
+      "metalFormat": 115,
+      "format": "rgba16f",
+      "kind": 5,
+      "sampler": 2,
+      "flags": [
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 19,
+      "name": "rtScreenshot",
+      "size": 1,
+      "formatEnum": 6,
+      "metalFormat": 70,
+      "format": null,
+      "kind": 13,
+      "sampler": 2,
+      "flags": [
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 20,
+      "name": "rtBloom",
+      "size": 2,
+      "formatEnum": 17,
+      "metalFormat": 115,
+      "format": "rgba16f",
+      "kind": 5,
+      "sampler": 2,
+      "flags": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 21,
+      "name": "rtBloomChain",
+      "size": 4,
+      "formatEnum": 14,
+      "metalFormat": 92,
+      "format": null,
+      "kind": 5,
+      "sampler": 2,
+      "flags": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 22,
+      "name": "rtBloomChain",
+      "size": 8,
+      "formatEnum": 14,
+      "metalFormat": 92,
+      "format": null,
+      "kind": 5,
+      "sampler": 2,
+      "flags": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 23,
+      "name": "rtBloomChain",
+      "size": 16,
+      "formatEnum": 14,
+      "metalFormat": 92,
+      "format": null,
+      "kind": 5,
+      "sampler": 2,
+      "flags": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 24,
+      "name": "rtBloomChain",
+      "size": 32,
+      "formatEnum": 14,
+      "metalFormat": 92,
+      "format": null,
+      "kind": 5,
+      "sampler": 2,
+      "flags": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 25,
+      "name": "rtWaterSim",
+      "size": 256,
+      "formatEnum": 17,
+      "metalFormat": 115,
+      "format": "rgba16f",
+      "kind": 7,
+      "sampler": 2,
+      "flags": [
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "index": 26,
+      "name": "rtWaterSimNorm",
+      "size": 256,
+      "formatEnum": 14,
+      "metalFormat": 92,
+      "format": null,
+      "kind": 5,
+      "sampler": 2,
+      "flags": [
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "index": 27,
+      "name": "rtPuddleSim",
+      "size": 256,
+      "formatEnum": 16,
+      "metalFormat": 65,
+      "format": "rg16f",
+      "kind": 5,
+      "sampler": 2,
+      "flags": [
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "index": 28,
+      "name": "rtPuddleSimNorm",
+      "size": 256,
+      "formatEnum": 14,
+      "metalFormat": 92,
+      "format": null,
+      "kind": 5,
+      "sampler": 2,
+      "flags": [
+        1,
+        0,
+        1,
+        0
+      ]
+    }
+  ],
+  "samplers": [
+    {
+      "index": 1,
+      "fields": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        4294966296,
+        1000,
+        1,
+        0
+      ],
+      "linear": false,
+      "metalWrap": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "fields": [
+        2,
+        2,
+        0,
+        0,
+        0,
+        0,
+        4294966296,
+        1000,
+        1,
+        0
+      ],
+      "linear": true,
+      "metalWrap": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 3,
+      "fields": [
+        2,
+        2,
+        0,
+        2,
+        2,
+        0,
+        4294966296,
+        1000,
+        1,
+        0
+      ],
+      "linear": true,
+      "metalWrap": [
+        2,
+        2,
+        0
+      ]
+    },
+    {
+      "index": 4,
+      "fields": [
+        2,
+        2,
+        0,
+        1,
+        1,
+        0,
+        4294966296,
+        1000,
+        1,
+        0
+      ],
+      "linear": true,
+      "metalWrap": [
+        4,
+        4,
+        0
+      ]
+    },
+    {
+      "index": 5,
+      "fields": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        4294966296,
+        1000,
+        1,
+        0
+      ],
+      "linear": false,
+      "metalWrap": [
+        4,
+        4,
+        0
+      ]
+    },
+    {
+      "index": 6,
+      "fields": [
+        1,
+        1,
+        0,
+        2,
+        2,
+        0,
+        4294966296,
+        1000,
+        1,
+        0
+      ],
+      "linear": false,
+      "metalWrap": [
+        2,
+        2,
+        0
+      ]
+    }
+  ],
+  "passes": [
+    {
+      "index": 7,
+      "name": "Depth Downsample",
+      "colors": [
+        {
+          "resource": 6,
+          "loadEnum": 0,
+          "storeEnum": 1,
+          "clear": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "draws": [
+        {
+          "kind": "quad",
+          "index": 2,
+          "shader": "DepthDownsample",
+          "pass": 7,
+          "group": 4294967295,
+          "bindings": [
+            {
+              "name": "u_depthFullTex",
+              "resource": 1,
+              "samplerOverride": 1,
+              "previous": 0
+            }
+          ],
+          "context": 17
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "name": "Depth Downsample",
+      "colors": [
+        {
+          "resource": 7,
+          "loadEnum": 0,
+          "storeEnum": 1,
+          "clear": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "draws": [
+        {
+          "kind": "quad",
+          "index": 3,
+          "shader": "DepthDownsampleGather",
+          "pass": 8,
+          "group": 4294967295,
+          "bindings": [
+            {
+              "name": "u_depthMinTex",
+              "resource": 6,
+              "samplerOverride": 0,
+              "previous": 0
+            }
+          ],
+          "context": 18
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "name": "Depth Downsample",
+      "colors": [
+        {
+          "resource": 8,
+          "loadEnum": 0,
+          "storeEnum": 1,
+          "clear": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "draws": [
+        {
+          "kind": "quad",
+          "index": 4,
+          "shader": "DepthDownsampleQuarter",
+          "pass": 9,
+          "group": 4294967295,
+          "bindings": [],
+          "context": 19
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "name": "Cloud Coarse",
+      "colors": [
+        {
+          "resource": 9,
+          "loadEnum": 0,
+          "storeEnum": 1,
+          "clear": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "draws": [
+        {
+          "kind": "quad",
+          "index": 5,
+          "shader": "CloudFluffySuperCoarse",
+          "pass": 10,
+          "group": 6,
+          "bindings": [],
+          "context": 20
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "name": "Cloud Coarse",
+      "colors": [
+        {
+          "resource": 10,
+          "loadEnum": 0,
+          "storeEnum": 1,
+          "clear": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "draws": [
+        {
+          "kind": "quad",
+          "index": 6,
+          "shader": "CloudFluffyCoarse",
+          "pass": 11,
+          "group": 6,
+          "bindings": [
+            {
+              "name": "u_cloudCoarseTTex",
+              "resource": 9,
+              "samplerOverride": 0,
+              "previous": 0
+            }
+          ],
+          "context": 21
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "name": "Cloud",
+      "colors": [
+        {
+          "resource": 11,
+          "loadEnum": 0,
+          "storeEnum": 1,
+          "clear": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "resource": 12,
+          "loadEnum": 0,
+          "storeEnum": 1,
+          "clear": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "draws": [
+        {
+          "kind": "quad",
+          "index": 7,
+          "shader": "CloudFluffy",
+          "pass": 12,
+          "group": 6,
+          "bindings": [
+            {
+              "name": "u_cloudTTex",
+              "resource": 10,
+              "samplerOverride": 0,
+              "previous": 0
+            }
+          ],
+          "context": 22
+        },
+        {
+          "kind": "list",
+          "index": 20,
+          "name": "Cloud",
+          "context": 23,
+          "depthState": 0,
+          "cullEnum": 0,
+          "bias": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "flags": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "colors": [
+            {
+              "rgbWrite": true,
+              "alphaWrite": true,
+              "blend": true,
+              "factors": [
+                6,
+                1,
+                1,
+                1
+              ],
+              "operations": [
+                0,
+                0
+              ]
+            },
+            {
+              "rgbWrite": true,
+              "alphaWrite": true,
+              "blend": true,
+              "factors": [
+                6,
+                1,
+                1,
+                1
+              ],
+              "operations": [
+                0,
+                0
+              ]
+            },
+            {
+              "rgbWrite": true,
+              "alphaWrite": true,
+              "blend": false,
+              "factors": [
+                1,
+                0,
+                1,
+                0
+              ],
+              "operations": [
+                0,
+                0
+              ]
+            },
+            {
+              "rgbWrite": true,
+              "alphaWrite": true,
+              "blend": false,
+              "factors": [
+                1,
+                0,
+                1,
+                0
+              ],
+              "operations": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dimensionCases": [
+    {
+      "viewport": [
+        1,
+        1
+      ],
+      "allocations": [
+        {
+          "name": "rtFullRGBDepth",
+          "kind": 5,
+          "width": 1,
+          "height": 1,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "dtFull",
+          "kind": 4,
+          "width": 1,
+          "height": 1,
+          "formatEnum": 21,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "dtHalf",
+          "kind": 4,
+          "width": 1,
+          "height": 1,
+          "formatEnum": 21,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtAlphaA",
+          "kind": 5,
+          "width": 1,
+          "height": 1,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtAlphaB",
+          "kind": 5,
+          "width": 1,
+          "height": 1,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtDepthHalfMin",
+          "kind": 5,
+          "width": 1,
+          "height": 1,
+          "formatEnum": 16,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtDepthHalf",
+          "kind": 5,
+          "width": 1,
+          "height": 1,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtDepthQuarter",
+          "kind": 5,
+          "width": 1,
+          "height": 1,
+          "formatEnum": 16,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtCloudCoarseLo",
+          "kind": 5,
+          "width": 1,
+          "height": 1,
+          "formatEnum": 15,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtCloudCoarseHi",
+          "kind": 5,
+          "width": 1,
+          "height": 1,
+          "formatEnum": 15,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtCloudA",
+          "kind": 5,
+          "width": 1,
+          "height": 1,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtCloudB",
+          "kind": 5,
+          "width": 1,
+          "height": 1,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtFogHalf",
+          "kind": 5,
+          "width": 1,
+          "height": 1,
+          "formatEnum": 15,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtMotionDilated",
+          "kind": 5,
+          "width": 1,
+          "height": 1,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtMotion",
+          "kind": 5,
+          "width": 1,
+          "height": 1,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtMotionBlurred",
+          "kind": 5,
+          "width": 1,
+          "height": 1,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtFullLdr",
+          "kind": 5,
+          "width": 1,
+          "height": 1,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtResolve",
+          "kind": 5,
+          "width": 1,
+          "height": 1,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtResolve",
+          "kind": 5,
+          "width": 1,
+          "height": 1,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtScreenshot",
+          "kind": 13,
+          "width": 1,
+          "height": 1,
+          "formatEnum": 6,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtScreenshot",
+          "kind": 13,
+          "width": 1,
+          "height": 1,
+          "formatEnum": 6,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtBloom",
+          "kind": 5,
+          "width": 1,
+          "height": 1,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtBloomChain",
+          "kind": 5,
+          "width": 1,
+          "height": 1,
+          "formatEnum": 14,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtBloomChain",
+          "kind": 5,
+          "width": 1,
+          "height": 1,
+          "formatEnum": 14,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtBloomChain",
+          "kind": 5,
+          "width": 1,
+          "height": 1,
+          "formatEnum": 14,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtBloomChain",
+          "kind": 5,
+          "width": 1,
+          "height": 1,
+          "formatEnum": 14,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtWaterSim",
+          "kind": 7,
+          "width": 256,
+          "height": 256,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtWaterSimNorm",
+          "kind": 5,
+          "width": 256,
+          "height": 256,
+          "formatEnum": 14,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtPuddleSim",
+          "kind": 5,
+          "width": 256,
+          "height": 256,
+          "formatEnum": 16,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtPuddleSimNorm",
+          "kind": 5,
+          "width": 256,
+          "height": 256,
+          "formatEnum": 14,
+          "flags": [
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "viewport": [
+        7,
+        5
+      ],
+      "allocations": [
+        {
+          "name": "rtFullRGBDepth",
+          "kind": 5,
+          "width": 7,
+          "height": 5,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "dtFull",
+          "kind": 4,
+          "width": 7,
+          "height": 5,
+          "formatEnum": 21,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "dtHalf",
+          "kind": 4,
+          "width": 3,
+          "height": 2,
+          "formatEnum": 21,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtAlphaA",
+          "kind": 5,
+          "width": 7,
+          "height": 5,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtAlphaB",
+          "kind": 5,
+          "width": 7,
+          "height": 5,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtDepthHalfMin",
+          "kind": 5,
+          "width": 3,
+          "height": 2,
+          "formatEnum": 16,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtDepthHalf",
+          "kind": 5,
+          "width": 3,
+          "height": 2,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtDepthQuarter",
+          "kind": 5,
+          "width": 1,
+          "height": 1,
+          "formatEnum": 16,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtCloudCoarseLo",
+          "kind": 5,
+          "width": 1,
+          "height": 1,
+          "formatEnum": 15,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtCloudCoarseHi",
+          "kind": 5,
+          "width": 1,
+          "height": 1,
+          "formatEnum": 15,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtCloudA",
+          "kind": 5,
+          "width": 3,
+          "height": 2,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtCloudB",
+          "kind": 5,
+          "width": 3,
+          "height": 2,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtFogHalf",
+          "kind": 5,
+          "width": 3,
+          "height": 2,
+          "formatEnum": 15,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtMotionDilated",
+          "kind": 5,
+          "width": 3,
+          "height": 2,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtMotion",
+          "kind": 5,
+          "width": 3,
+          "height": 2,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtMotionBlurred",
+          "kind": 5,
+          "width": 3,
+          "height": 2,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtFullLdr",
+          "kind": 5,
+          "width": 7,
+          "height": 5,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtResolve",
+          "kind": 5,
+          "width": 7,
+          "height": 5,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtResolve",
+          "kind": 5,
+          "width": 7,
+          "height": 5,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtScreenshot",
+          "kind": 13,
+          "width": 7,
+          "height": 5,
+          "formatEnum": 6,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtScreenshot",
+          "kind": 13,
+          "width": 7,
+          "height": 5,
+          "formatEnum": 6,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtBloom",
+          "kind": 5,
+          "width": 3,
+          "height": 2,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtBloomChain",
+          "kind": 5,
+          "width": 1,
+          "height": 1,
+          "formatEnum": 14,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtBloomChain",
+          "kind": 5,
+          "width": 1,
+          "height": 1,
+          "formatEnum": 14,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtBloomChain",
+          "kind": 5,
+          "width": 1,
+          "height": 1,
+          "formatEnum": 14,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtBloomChain",
+          "kind": 5,
+          "width": 1,
+          "height": 1,
+          "formatEnum": 14,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtWaterSim",
+          "kind": 7,
+          "width": 256,
+          "height": 256,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtWaterSimNorm",
+          "kind": 5,
+          "width": 256,
+          "height": 256,
+          "formatEnum": 14,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtPuddleSim",
+          "kind": 5,
+          "width": 256,
+          "height": 256,
+          "formatEnum": 16,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtPuddleSimNorm",
+          "kind": 5,
+          "width": 256,
+          "height": 256,
+          "formatEnum": 14,
+          "flags": [
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "viewport": [
+        16,
+        16
+      ],
+      "allocations": [
+        {
+          "name": "rtFullRGBDepth",
+          "kind": 5,
+          "width": 16,
+          "height": 16,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "dtFull",
+          "kind": 4,
+          "width": 16,
+          "height": 16,
+          "formatEnum": 21,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "dtHalf",
+          "kind": 4,
+          "width": 8,
+          "height": 8,
+          "formatEnum": 21,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtAlphaA",
+          "kind": 5,
+          "width": 16,
+          "height": 16,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtAlphaB",
+          "kind": 5,
+          "width": 16,
+          "height": 16,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtDepthHalfMin",
+          "kind": 5,
+          "width": 8,
+          "height": 8,
+          "formatEnum": 16,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtDepthHalf",
+          "kind": 5,
+          "width": 8,
+          "height": 8,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtDepthQuarter",
+          "kind": 5,
+          "width": 4,
+          "height": 4,
+          "formatEnum": 16,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtCloudCoarseLo",
+          "kind": 5,
+          "width": 2,
+          "height": 2,
+          "formatEnum": 15,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtCloudCoarseHi",
+          "kind": 5,
+          "width": 4,
+          "height": 4,
+          "formatEnum": 15,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtCloudA",
+          "kind": 5,
+          "width": 8,
+          "height": 8,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtCloudB",
+          "kind": 5,
+          "width": 8,
+          "height": 8,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtFogHalf",
+          "kind": 5,
+          "width": 8,
+          "height": 8,
+          "formatEnum": 15,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtMotionDilated",
+          "kind": 5,
+          "width": 8,
+          "height": 8,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtMotion",
+          "kind": 5,
+          "width": 8,
+          "height": 8,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtMotionBlurred",
+          "kind": 5,
+          "width": 8,
+          "height": 8,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtFullLdr",
+          "kind": 5,
+          "width": 16,
+          "height": 16,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtResolve",
+          "kind": 5,
+          "width": 16,
+          "height": 16,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtResolve",
+          "kind": 5,
+          "width": 16,
+          "height": 16,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtScreenshot",
+          "kind": 13,
+          "width": 16,
+          "height": 16,
+          "formatEnum": 6,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtScreenshot",
+          "kind": 13,
+          "width": 16,
+          "height": 16,
+          "formatEnum": 6,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtBloom",
+          "kind": 5,
+          "width": 8,
+          "height": 8,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtBloomChain",
+          "kind": 5,
+          "width": 4,
+          "height": 4,
+          "formatEnum": 14,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtBloomChain",
+          "kind": 5,
+          "width": 2,
+          "height": 2,
+          "formatEnum": 14,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtBloomChain",
+          "kind": 5,
+          "width": 1,
+          "height": 1,
+          "formatEnum": 14,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtBloomChain",
+          "kind": 5,
+          "width": 1,
+          "height": 1,
+          "formatEnum": 14,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtWaterSim",
+          "kind": 7,
+          "width": 256,
+          "height": 256,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtWaterSimNorm",
+          "kind": 5,
+          "width": 256,
+          "height": 256,
+          "formatEnum": 14,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtPuddleSim",
+          "kind": 5,
+          "width": 256,
+          "height": 256,
+          "formatEnum": 16,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtPuddleSimNorm",
+          "kind": 5,
+          "width": 256,
+          "height": 256,
+          "formatEnum": 14,
+          "flags": [
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "viewport": [
+        63,
+        37
+      ],
+      "allocations": [
+        {
+          "name": "rtFullRGBDepth",
+          "kind": 5,
+          "width": 63,
+          "height": 37,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "dtFull",
+          "kind": 4,
+          "width": 63,
+          "height": 37,
+          "formatEnum": 21,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "dtHalf",
+          "kind": 4,
+          "width": 31,
+          "height": 18,
+          "formatEnum": 21,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtAlphaA",
+          "kind": 5,
+          "width": 63,
+          "height": 37,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtAlphaB",
+          "kind": 5,
+          "width": 63,
+          "height": 37,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtDepthHalfMin",
+          "kind": 5,
+          "width": 31,
+          "height": 18,
+          "formatEnum": 16,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtDepthHalf",
+          "kind": 5,
+          "width": 31,
+          "height": 18,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtDepthQuarter",
+          "kind": 5,
+          "width": 15,
+          "height": 9,
+          "formatEnum": 16,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtCloudCoarseLo",
+          "kind": 5,
+          "width": 7,
+          "height": 4,
+          "formatEnum": 15,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtCloudCoarseHi",
+          "kind": 5,
+          "width": 15,
+          "height": 9,
+          "formatEnum": 15,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtCloudA",
+          "kind": 5,
+          "width": 31,
+          "height": 18,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtCloudB",
+          "kind": 5,
+          "width": 31,
+          "height": 18,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtFogHalf",
+          "kind": 5,
+          "width": 31,
+          "height": 18,
+          "formatEnum": 15,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtMotionDilated",
+          "kind": 5,
+          "width": 31,
+          "height": 18,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtMotion",
+          "kind": 5,
+          "width": 31,
+          "height": 18,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtMotionBlurred",
+          "kind": 5,
+          "width": 31,
+          "height": 18,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtFullLdr",
+          "kind": 5,
+          "width": 63,
+          "height": 37,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtResolve",
+          "kind": 5,
+          "width": 63,
+          "height": 37,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtResolve",
+          "kind": 5,
+          "width": 63,
+          "height": 37,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtScreenshot",
+          "kind": 13,
+          "width": 63,
+          "height": 37,
+          "formatEnum": 6,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtScreenshot",
+          "kind": 13,
+          "width": 63,
+          "height": 37,
+          "formatEnum": 6,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtBloom",
+          "kind": 5,
+          "width": 31,
+          "height": 18,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtBloomChain",
+          "kind": 5,
+          "width": 15,
+          "height": 9,
+          "formatEnum": 14,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtBloomChain",
+          "kind": 5,
+          "width": 7,
+          "height": 4,
+          "formatEnum": 14,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtBloomChain",
+          "kind": 5,
+          "width": 3,
+          "height": 2,
+          "formatEnum": 14,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtBloomChain",
+          "kind": 5,
+          "width": 1,
+          "height": 1,
+          "formatEnum": 14,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtWaterSim",
+          "kind": 7,
+          "width": 256,
+          "height": 256,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtWaterSimNorm",
+          "kind": 5,
+          "width": 256,
+          "height": 256,
+          "formatEnum": 14,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtPuddleSim",
+          "kind": 5,
+          "width": 256,
+          "height": 256,
+          "formatEnum": 16,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtPuddleSimNorm",
+          "kind": 5,
+          "width": 256,
+          "height": 256,
+          "formatEnum": 14,
+          "flags": [
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "viewport": [
+        127,
+        73
+      ],
+      "allocations": [
+        {
+          "name": "rtFullRGBDepth",
+          "kind": 5,
+          "width": 127,
+          "height": 73,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "dtFull",
+          "kind": 4,
+          "width": 127,
+          "height": 73,
+          "formatEnum": 21,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "dtHalf",
+          "kind": 4,
+          "width": 63,
+          "height": 36,
+          "formatEnum": 21,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtAlphaA",
+          "kind": 5,
+          "width": 127,
+          "height": 73,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtAlphaB",
+          "kind": 5,
+          "width": 127,
+          "height": 73,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtDepthHalfMin",
+          "kind": 5,
+          "width": 63,
+          "height": 36,
+          "formatEnum": 16,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtDepthHalf",
+          "kind": 5,
+          "width": 63,
+          "height": 36,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtDepthQuarter",
+          "kind": 5,
+          "width": 31,
+          "height": 18,
+          "formatEnum": 16,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtCloudCoarseLo",
+          "kind": 5,
+          "width": 15,
+          "height": 9,
+          "formatEnum": 15,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtCloudCoarseHi",
+          "kind": 5,
+          "width": 31,
+          "height": 18,
+          "formatEnum": 15,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtCloudA",
+          "kind": 5,
+          "width": 63,
+          "height": 36,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtCloudB",
+          "kind": 5,
+          "width": 63,
+          "height": 36,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtFogHalf",
+          "kind": 5,
+          "width": 63,
+          "height": 36,
+          "formatEnum": 15,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtMotionDilated",
+          "kind": 5,
+          "width": 63,
+          "height": 36,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtMotion",
+          "kind": 5,
+          "width": 63,
+          "height": 36,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtMotionBlurred",
+          "kind": 5,
+          "width": 63,
+          "height": 36,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtFullLdr",
+          "kind": 5,
+          "width": 127,
+          "height": 73,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtResolve",
+          "kind": 5,
+          "width": 127,
+          "height": 73,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtResolve",
+          "kind": 5,
+          "width": 127,
+          "height": 73,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtScreenshot",
+          "kind": 13,
+          "width": 127,
+          "height": 73,
+          "formatEnum": 6,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtScreenshot",
+          "kind": 13,
+          "width": 127,
+          "height": 73,
+          "formatEnum": 6,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtBloom",
+          "kind": 5,
+          "width": 63,
+          "height": 36,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtBloomChain",
+          "kind": 5,
+          "width": 31,
+          "height": 18,
+          "formatEnum": 14,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtBloomChain",
+          "kind": 5,
+          "width": 15,
+          "height": 9,
+          "formatEnum": 14,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtBloomChain",
+          "kind": 5,
+          "width": 7,
+          "height": 4,
+          "formatEnum": 14,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtBloomChain",
+          "kind": 5,
+          "width": 3,
+          "height": 2,
+          "formatEnum": 14,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtWaterSim",
+          "kind": 7,
+          "width": 256,
+          "height": 256,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtWaterSimNorm",
+          "kind": 5,
+          "width": 256,
+          "height": 256,
+          "formatEnum": 14,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtPuddleSim",
+          "kind": 5,
+          "width": 256,
+          "height": 256,
+          "formatEnum": 16,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtPuddleSimNorm",
+          "kind": 5,
+          "width": 256,
+          "height": 256,
+          "formatEnum": 14,
+          "flags": [
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "viewport": [
+        128,
+        80
+      ],
+      "allocations": [
+        {
+          "name": "rtFullRGBDepth",
+          "kind": 5,
+          "width": 128,
+          "height": 80,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "dtFull",
+          "kind": 4,
+          "width": 128,
+          "height": 80,
+          "formatEnum": 21,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "dtHalf",
+          "kind": 4,
+          "width": 64,
+          "height": 40,
+          "formatEnum": 21,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtAlphaA",
+          "kind": 5,
+          "width": 128,
+          "height": 80,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtAlphaB",
+          "kind": 5,
+          "width": 128,
+          "height": 80,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtDepthHalfMin",
+          "kind": 5,
+          "width": 64,
+          "height": 40,
+          "formatEnum": 16,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtDepthHalf",
+          "kind": 5,
+          "width": 64,
+          "height": 40,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtDepthQuarter",
+          "kind": 5,
+          "width": 32,
+          "height": 20,
+          "formatEnum": 16,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtCloudCoarseLo",
+          "kind": 5,
+          "width": 16,
+          "height": 10,
+          "formatEnum": 15,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtCloudCoarseHi",
+          "kind": 5,
+          "width": 32,
+          "height": 20,
+          "formatEnum": 15,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtCloudA",
+          "kind": 5,
+          "width": 64,
+          "height": 40,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtCloudB",
+          "kind": 5,
+          "width": 64,
+          "height": 40,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtFogHalf",
+          "kind": 5,
+          "width": 64,
+          "height": 40,
+          "formatEnum": 15,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtMotionDilated",
+          "kind": 5,
+          "width": 64,
+          "height": 40,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtMotion",
+          "kind": 5,
+          "width": 64,
+          "height": 40,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtMotionBlurred",
+          "kind": 5,
+          "width": 64,
+          "height": 40,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtFullLdr",
+          "kind": 5,
+          "width": 128,
+          "height": 80,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtResolve",
+          "kind": 5,
+          "width": 128,
+          "height": 80,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtResolve",
+          "kind": 5,
+          "width": 128,
+          "height": 80,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtScreenshot",
+          "kind": 13,
+          "width": 128,
+          "height": 80,
+          "formatEnum": 6,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtScreenshot",
+          "kind": 13,
+          "width": 128,
+          "height": 80,
+          "formatEnum": 6,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtBloom",
+          "kind": 5,
+          "width": 64,
+          "height": 40,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtBloomChain",
+          "kind": 5,
+          "width": 32,
+          "height": 20,
+          "formatEnum": 14,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtBloomChain",
+          "kind": 5,
+          "width": 16,
+          "height": 10,
+          "formatEnum": 14,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtBloomChain",
+          "kind": 5,
+          "width": 8,
+          "height": 5,
+          "formatEnum": 14,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtBloomChain",
+          "kind": 5,
+          "width": 4,
+          "height": 2,
+          "formatEnum": 14,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtWaterSim",
+          "kind": 7,
+          "width": 256,
+          "height": 256,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtWaterSimNorm",
+          "kind": 5,
+          "width": 256,
+          "height": 256,
+          "formatEnum": 14,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtPuddleSim",
+          "kind": 5,
+          "width": 256,
+          "height": 256,
+          "formatEnum": 16,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtPuddleSimNorm",
+          "kind": 5,
+          "width": 256,
+          "height": 256,
+          "formatEnum": 14,
+          "flags": [
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "viewport": [
+        1921,
+        1081
+      ],
+      "allocations": [
+        {
+          "name": "rtFullRGBDepth",
+          "kind": 5,
+          "width": 1921,
+          "height": 1081,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "dtFull",
+          "kind": 4,
+          "width": 1921,
+          "height": 1081,
+          "formatEnum": 21,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "dtHalf",
+          "kind": 4,
+          "width": 960,
+          "height": 540,
+          "formatEnum": 21,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtAlphaA",
+          "kind": 5,
+          "width": 1921,
+          "height": 1081,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtAlphaB",
+          "kind": 5,
+          "width": 1921,
+          "height": 1081,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtDepthHalfMin",
+          "kind": 5,
+          "width": 960,
+          "height": 540,
+          "formatEnum": 16,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtDepthHalf",
+          "kind": 5,
+          "width": 960,
+          "height": 540,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtDepthQuarter",
+          "kind": 5,
+          "width": 480,
+          "height": 270,
+          "formatEnum": 16,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtCloudCoarseLo",
+          "kind": 5,
+          "width": 240,
+          "height": 135,
+          "formatEnum": 15,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtCloudCoarseHi",
+          "kind": 5,
+          "width": 480,
+          "height": 270,
+          "formatEnum": 15,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtCloudA",
+          "kind": 5,
+          "width": 960,
+          "height": 540,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtCloudB",
+          "kind": 5,
+          "width": 960,
+          "height": 540,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtFogHalf",
+          "kind": 5,
+          "width": 960,
+          "height": 540,
+          "formatEnum": 15,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtMotionDilated",
+          "kind": 5,
+          "width": 960,
+          "height": 540,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtMotion",
+          "kind": 5,
+          "width": 960,
+          "height": 540,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtMotionBlurred",
+          "kind": 5,
+          "width": 960,
+          "height": 540,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtFullLdr",
+          "kind": 5,
+          "width": 1921,
+          "height": 1081,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtResolve",
+          "kind": 5,
+          "width": 1921,
+          "height": 1081,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtResolve",
+          "kind": 5,
+          "width": 1921,
+          "height": 1081,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtScreenshot",
+          "kind": 13,
+          "width": 1921,
+          "height": 1081,
+          "formatEnum": 6,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtScreenshot",
+          "kind": 13,
+          "width": 1921,
+          "height": 1081,
+          "formatEnum": 6,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtBloom",
+          "kind": 5,
+          "width": 960,
+          "height": 540,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtBloomChain",
+          "kind": 5,
+          "width": 480,
+          "height": 270,
+          "formatEnum": 14,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtBloomChain",
+          "kind": 5,
+          "width": 240,
+          "height": 135,
+          "formatEnum": 14,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtBloomChain",
+          "kind": 5,
+          "width": 120,
+          "height": 67,
+          "formatEnum": 14,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtBloomChain",
+          "kind": 5,
+          "width": 60,
+          "height": 33,
+          "formatEnum": 14,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtWaterSim",
+          "kind": 7,
+          "width": 256,
+          "height": 256,
+          "formatEnum": 17,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtWaterSimNorm",
+          "kind": 5,
+          "width": 256,
+          "height": 256,
+          "formatEnum": 14,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtPuddleSim",
+          "kind": 5,
+          "width": 256,
+          "height": 256,
+          "formatEnum": 16,
+          "flags": [
+            1,
+            0
+          ]
+        },
+        {
+          "name": "rtPuddleSimNorm",
+          "kind": 5,
+          "width": 256,
+          "height": 256,
+          "formatEnum": 14,
+          "flags": [
+            1,
+            0
+          ]
+        }
+      ]
+    }
+  ],
+  "capabilityVariants": 2,
+  "originalGameVerified": false
+}

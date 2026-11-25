@@ -1,0 +1,57 @@
+{
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "functions": [
+    {
+      "name": "AvatarPhysical.SetPosition",
+      "address": "0x100146de0",
+      "end": "0x100146eb0",
+      "instructions": 37,
+      "sha256": "4c7a941831c54eb240ac3a63fd4bf487750f40424d27b2365b3e96bc66fefd3e",
+      "evidence": "evidence/avatar-state-100146de0.asm"
+    },
+    {
+      "name": "AvatarPhysical.SetPositionImmediate",
+      "address": "0x1001480d0",
+      "end": "0x100148160",
+      "instructions": 26,
+      "sha256": "43b3841958bd2a26bdb9b7f34e55496d94565067979d99e436a72f3bf3cb79f5",
+      "evidence": "evidence/avatar-state-1001480d0.asm"
+    },
+    {
+      "name": "Avatar.eulerToForward",
+      "address": "0x100147510",
+      "end": "0x1001476a0",
+      "instructions": 87,
+      "sha256": "33da9a18454b2ba72f923eb927d81d5c6eff8a1b4ac4112eeaed6a46afb60fa6",
+      "evidence": "evidence/avatar-state-100147510.asm"
+    },
+    {
+      "name": "AvatarBarn.IsLocalReady",
+      "address": "0x1000fe060",
+      "end": "0x1000fe0c0",
+      "instructions": 30,
+      "sha256": "055d0e7d1545b79d5a42264a1c016cd28dfaa8f1002f55d05ed138f5bfb40339",
+      "evidence": "evidence/avatar-state-1000fe060.asm"
+    }
+  ],
+  "constants": [
+    {
+      "address": "0x100ac185c",
+      "bytes": "295c8f3d",
+      "float32": 0.07000000029802322
+    },
+    {
+      "address": "0x100aa85b0",
+      "bytes": "0ad7233c",
+      "float32": 0.009999999776482582
+    }
+  ],
+  "runtimeInputs": {
+    "0x1020041f0": "Runtime vec4 offset axis, not a recovered file default",
+    "physicalState+0xe4": "Float scalar; constructor and semantic owner unresolved",
+    "0x100d31e54": "Runtime BSS camera word; explicitly supplied by snapshot",
+    "Game+0x70 -> +4": "Runtime game tick; explicitly supplied by snapshot"
+  },
+  "oracle": "docs/avatar-physical-oracle.json",
+  "scope": "Evidence for whole physical setters, Euler-forward and readiness. Whole Whisker initializer/reset evidence is in avatar-camera-native.json. Byte oracle supplies runtime globals, libm/packed ABI and handhold/leader services. Complete physical construction, continuous camera and full Avatar runtime remain unresolved."
+}

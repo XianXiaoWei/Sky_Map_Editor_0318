@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "functions": {
+    "DarkCreature.Detect": {
+      "start": "0x10026d410",
+      "end": "0x10026ddb0",
+      "codeSha256": "812da2330ba7063d73a532b92ef61c563f7cebc2e6a25fc1607e868ba11c2f2a",
+      "assembly": "evidence/darkcreature-detect.asm"
+    },
+    "DarkCreature.Alert": {
+      "start": "0x10026d2a0",
+      "end": "0x10026d410",
+      "codeSha256": "0d8e47a794100e4994ddabc13beb5393cf7ab2156f7a55da16edca4d28aad55b",
+      "assembly": "evidence/darkcreature-alert.asm"
+    }
+  },
+  "cases": 179,
+  "comparedCases": 179,
+  "comparedBytes": 35741516,
+  "serviceCalls": 2854,
+  "nativeArithmeticProbes": 16,
+  "scope": "Whole original DarkCreature player/bird detector and its composition with the original alert caller. Live enabled/world-position/Avatar-query/bird-position, raycast and original atan2f/cosf remain explicit services. Exact candidate order, strict distance/cone/visibility conditions and alert-ID transitions are restored; full outer Update, attacks, real scene/resources and autonomous viewport behavior remain pending. Complete caller arena and ordered services compare near-anchor bypasses, energy/enabled gates, distance/cone thresholds, target ordering, player IDs and 64-slot bird bounds, blocked-current alerts, callback rereads and consecutive alert-caller frames. Native atan2f/cosf inputs and outputs are recorded/replayed explicitly; no JS/libm equivalence claim.",
+  "failures": []
+}

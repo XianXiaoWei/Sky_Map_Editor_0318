@@ -1,0 +1,64 @@
+{
+  "passed": true,
+  "maps": 33,
+  "originalSourcesUnchanged": true,
+  "originalEventBodies": 10,
+  "originalMachineCodeCases": 202,
+  "comparedBytes": 14068088,
+  "availableEvents": {
+    "SetFlame": 23,
+    "SetDarkCreaturesNetworked": 3,
+    "BirdV2ParamSwap": 15,
+    "SetBirdGuidesEnabled": 4
+  },
+  "blockedEvents": {
+    "OnFlame": 154,
+    "SetFlame": 20,
+    "AwakenDarkCreatures": 9
+  },
+  "tests": {
+    "passed": 511,
+    "failed": 0,
+    "command": "GOMAXPROCS=1 node --import tsx --test --test-concurrency=1 tests/*.test.ts"
+  },
+  "typescript": {
+    "passed": true,
+    "command": "GOMAXPROCS=1 node node_modules/typescript/bin/tsc --noEmit"
+  },
+  "desktopBuild": {
+    "passed": true,
+    "updated": "dist/",
+    "windowsZipRepacked": false
+  },
+  "editorSmoke": {
+    "passed": true,
+    "maps": [
+      "Dawn",
+      "Prairie_Village",
+      "DuskMid",
+      "WorldEmpty"
+    ],
+    "checks": [
+      "Dawn inspector triggers a direct Flame light-on event through the shared Barn",
+      "Unavailable Flame chains disable the inspector button and explain the missing dependency",
+      "Prairie_Village inspector executes parameter and guide switches in the current shared creature storage",
+      "Reset reconstructs original saved creature references",
+      "DuskMid inspector executes the native DarkCreature network flag event",
+      "Switching to WorldEmpty releases the previous nature/event state"
+    ]
+  },
+  "completeClasses": 0,
+  "files": {
+    "src/core/nature-event-runtime.ts": "1be826fdd765ba1ba0132e9c5f9a0c00e819595908aabc2c972971752338132f",
+    "src/core/flame-event-runtime.ts": "1c62a8cb2ffa4fb3fa7d940f907195063ed4342e1f3abae8e068c45044b896a6",
+    "src/core/environment-event-owner.ts": "4ab766f2a1610604a2660e84ecc3840f1faee4e4af8742368dece8aaa480d6aa",
+    "src/core/environment-event-types.ts": "e6670bb0d6efc8c98ce32b20cada11f7043d58462a534fa44cc99c71dbe5b004",
+    "src/core/environment-object-state.ts": "a266491353695dec692616a0e4741d2c696efc7932939e6f41937531fd3f6c5c",
+    "src/main/viewport-environment.ts": "7110a275e7bb2ad962adb61328237cfcb8e279d8a129d992521e59af12fceeb1",
+    "src/renderer/app.ts": "9d680d09b872917e7b4ddff083f2485927ae318df4ee4cbe551e127cba99d321",
+    "dist/main.cjs": "78bcc35861f6da1ef2b0417bd6a0d8f163fe70aba9cd21bfcc5a912c8331348d",
+    "dist/app.js": "51e5b9b0f13acfda7d68a1bd43752dcf66369de8f7c4ad1450fbc8b662618552",
+    "dist/native/sky-vulkan": "f4d21e3f57a08e94d2117040c344c1adea6628fdfc675474307e05ee4ca3184e"
+  },
+  "scope": "Dependency-satisfied events in the shared original Barn; creature parameter/guide/network writes and direct Flame light-on events. Original kernel oracle separately includes blocked branches through injected services. Creature AI/animation, Candle records, player authority, reflected event chains and downstream rendering remain pending."
+}

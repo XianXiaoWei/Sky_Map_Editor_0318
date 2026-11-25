@@ -1,0 +1,653 @@
+{
+  "className": "SetCameraShake",
+  "functionGroup": "摄像机与镜头",
+  "functionRole": "摄像机震动强度与时长",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "SetCameraShake 的原默认值、继承初始化及 6 个序列化字段变体；原注册字段 5 项。"
+    },
+    {
+      "name": "摄像机震动强度与时长",
+      "status": "partial",
+      "description": "原 OnStart/Update 与 CameraSystem 相机句柄、metadata getter、Event Start 已联合核验；220组、1,540帧、3,642,016字节零差异，含两类全部20条真实字段/Clump引用配置。原Whisker速度/幅度/权重写入，先输出后推进计时；结束使用严格大于。Avatar面板显式运行实际地图事件并隔离预览状态；时钟、类型解析和结束分发为服务。缺字段构造默认值、自动场景事件、完整相机/避障及完整运行仍待恢复。 本轮新增完整Whisker震动/基底辅助函数核验：162组、1,296帧、2,126,416字节零差异，含10条真实speed/force输入；原三轴哈希噪声、事件权重幂次混合/衰减及射线/擦身音效请求参数已核对。Avatar已接位置震动，暂停/停止/重启保留基准镜头；物理、Wind、射线和音效为服务，原连续相机、避障和关键帧震动未闭合。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "partial",
+      "description": "当前无非空序列化依赖；原虚方法、资源或全局调用仍需恢复。"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "partial",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "SetCameraShake",
+    "category": "摄像机与镜头",
+    "functionGroupId": "camera",
+    "functionRole": "摄像机震动强度与时长",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "SetCameraShake 的原默认值、继承初始化及 6 个序列化字段变体；原注册字段 5 项。"
+      },
+      {
+        "name": "摄像机震动强度与时长",
+        "status": "partial",
+        "description": "原 OnStart/Update 与 CameraSystem 相机句柄、metadata getter、Event Start 已联合核验；220组、1,540帧、3,642,016字节零差异，含两类全部20条真实字段/Clump引用配置。原Whisker速度/幅度/权重写入，先输出后推进计时；结束使用严格大于。Avatar面板显式运行实际地图事件并隔离预览状态；时钟、类型解析和结束分发为服务。缺字段构造默认值、自动场景事件、完整相机/避障及完整运行仍待恢复。 本轮新增完整Whisker震动/基底辅助函数核验：162组、1,296帧、2,126,416字节零差异，含10条真实speed/force输入；原三轴哈希噪声、事件权重幂次混合/衰减及射线/擦身音效请求参数已核对。Avatar已接位置震动，暂停/停止/重启保留基准镜头；物理、Wind、射线和音效为服务，原连续相机、避障和关键帧震动未闭合。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "partial",
+        "description": "当前无非空序列化依赖；原虚方法、资源或全局调用仍需恢复。"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "partial",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [],
+    "rttiWorkingGroup": "场景与路径基础",
+    "role": "对象实例类型",
+    "instances": 10,
+    "nestedInstances": 0,
+    "referenceFields": 0,
+    "declaredLevels": 5,
+    "levels": [
+      {
+        "level": "Dawn",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Dusk",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DuskGraveyard",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Night",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Sunset",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "duration",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "fadeInDuration",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "fadeOutDuration",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "force",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "speed",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100cbb3a0",
+    "nativeRegisteredFields": [
+      {
+        "name": "speed",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x1003a1890",
+        "propertyAddress": "0x100cbaf80"
+      },
+      {
+        "name": "force",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 60,
+        "registrationFunction": "0x1003a1890",
+        "propertyAddress": "0x100cbafd0"
+      },
+      {
+        "name": "fadeInDuration",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 64,
+        "registrationFunction": "0x1003a1890",
+        "propertyAddress": "0x100cbb020"
+      },
+      {
+        "name": "fadeOutDuration",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 68,
+        "registrationFunction": "0x1003a1890",
+        "propertyAddress": "0x100cbb070"
+      },
+      {
+        "name": "duration",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 72,
+        "registrationFunction": "0x1003a1890",
+        "propertyAddress": "0x100cbb0c0"
+      }
+    ],
+    "completedCheckpoints": 4,
+    "partialCheckpoints": 2,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 40,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": true,
+    "implementation": [
+      "src/core/camera-events.ts",
+      "src/core/camera-event-preview.ts",
+      "src/renderer/avatar-camera-controller.ts",
+      "src/core/avatar-camera-shake.ts"
+    ],
+    "evidence": [
+      "docs/camera-events-native.json",
+      "docs/camera-events-oracle.json",
+      "docs/camera-events-smoke.json",
+      "docs/Objects相机事件与Avatar推进.md",
+      "docs/avatar-camera-shake-native.json",
+      "docs/avatar-camera-shake-oracle.json",
+      "docs/avatar-camera-shake-smoke.json",
+      "docs/Avatar位置震动与Objects相机推进.md"
+    ],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 5 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "verified",
+        "note": "原 OnStart/Update 与 CameraSystem 相机句柄、metadata getter、Event Start 已联合核验；220组、1,540帧、3,642,016字节零差异，含两类全部20条真实字段/Clump引用配置。原Whisker速度/幅度/权重写入，先输出后推进计时；结束使用严格大于。Avatar面板显式运行实际地图事件并隔离预览状态；时钟、类型解析和结束分发为服务。缺字段构造默认值、自动场景事件、完整相机/避障及完整运行仍待恢复。 本轮新增完整Whisker震动/基底辅助函数核验：162组、1,296帧、2,126,416字节零差异，含10条真实speed/force输入；原三轴哈希噪声、事件权重幂次混合/衰减及射线/擦身音效请求参数已核对。Avatar已接位置震动，暂停/停止/重启保留基准镜头；物理、Wind、射线和音效为服务，原连续相机、避障和关键帧震动未闭合。",
+        "evidence": [
+          "docs/camera-events-native.json",
+          "docs/camera-events-oracle.json",
+          "docs/camera-events-smoke.json",
+          "docs/Objects相机事件与Avatar推进.md",
+          "docs/avatar-camera-shake-native.json",
+          "docs/avatar-camera-shake-oracle.json",
+          "docs/avatar-camera-shake-smoke.json",
+          "docs/Avatar位置震动与Objects相机推进.md"
+        ]
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "partial",
+        "note": "原 OnStart/Update 与 CameraSystem 相机句柄、metadata getter、Event Start 已联合核验；220组、1,540帧、3,642,016字节零差异，含两类全部20条真实字段/Clump引用配置。原Whisker速度/幅度/权重写入，先输出后推进计时；结束使用严格大于。Avatar面板显式运行实际地图事件并隔离预览状态；时钟、类型解析和结束分发为服务。缺字段构造默认值、自动场景事件、完整相机/避障及完整运行仍待恢复。 本轮新增完整Whisker震动/基底辅助函数核验：162组、1,296帧、2,126,416字节零差异，含10条真实speed/force输入；原三轴哈希噪声、事件权重幂次混合/衰减及射线/擦身音效请求参数已核对。Avatar已接位置震动，暂停/停止/重启保留基准镜头；物理、Wind、射线和音效为服务，原连续相机、避障和关键帧震动未闭合。",
+        "evidence": [
+          "docs/camera-events-native.json",
+          "docs/camera-events-oracle.json",
+          "docs/camera-events-smoke.json",
+          "docs/Objects相机事件与Avatar推进.md",
+          "docs/avatar-camera-shake-native.json",
+          "docs/avatar-camera-shake-oracle.json",
+          "docs/avatar-camera-shake-smoke.json",
+          "docs/Avatar位置震动与Objects相机推进.md"
+        ]
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "partial",
+        "note": "原 OnStart/Update 与 CameraSystem 相机句柄、metadata getter、Event Start 已联合核验；220组、1,540帧、3,642,016字节零差异，含两类全部20条真实字段/Clump引用配置。原Whisker速度/幅度/权重写入，先输出后推进计时；结束使用严格大于。Avatar面板显式运行实际地图事件并隔离预览状态；时钟、类型解析和结束分发为服务。缺字段构造默认值、自动场景事件、完整相机/避障及完整运行仍待恢复。 本轮新增完整Whisker震动/基底辅助函数核验：162组、1,296帧、2,126,416字节零差异，含10条真实speed/force输入；原三轴哈希噪声、事件权重幂次混合/衰减及射线/擦身音效请求参数已核对。Avatar已接位置震动，暂停/停止/重启保留基准镜头；物理、Wind、射线和音效为服务，原连续相机、避障和关键帧震动未闭合。",
+        "evidence": [
+          "docs/camera-events-native.json",
+          "docs/camera-events-oracle.json",
+          "docs/camera-events-smoke.json",
+          "docs/Objects相机事件与Avatar推进.md",
+          "docs/avatar-camera-shake-native.json",
+          "docs/avatar-camera-shake-oracle.json",
+          "docs/avatar-camera-shake-smoke.json",
+          "docs/Avatar位置震动与Objects相机推进.md"
+        ]
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "原 OnStart/Update 与 CameraSystem 相机句柄、metadata getter、Event Start 已联合核验；220组、1,540帧、3,642,016字节零差异，含两类全部20条真实字段/Clump引用配置。原Whisker速度/幅度/权重写入，先输出后推进计时；结束使用严格大于。Avatar面板显式运行实际地图事件并隔离预览状态；时钟、类型解析和结束分发为服务。缺字段构造默认值、自动场景事件、完整相机/避障及完整运行仍待恢复。 本轮新增完整Whisker震动/基底辅助函数核验：162组、1,296帧、2,126,416字节零差异，含10条真实speed/force输入；原三轴哈希噪声、事件权重幂次混合/衰减及射线/擦身音效请求参数已核对。Avatar已接位置震动，暂停/停止/重启保留基准镜头；物理、Wind、射线和音效为服务，原连续相机、避障和关键帧震动未闭合。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "Dawn:n871",
+      "level": "Dawn",
+      "nodeId": 871,
+      "name": "BstNode_1293287701",
+      "className": "SetCameraShake",
+      "classIndex": 78,
+      "sourceOffset": 171440,
+      "sourceLength": 44,
+      "sourceSha256": "8cd0a85a750b72f17adfcc3a61653c080b5c8cf4846e93800573f5c096f45e93",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1784",
+      "level": "Dawn",
+      "nodeId": 1784,
+      "name": "BstNode_1293287428",
+      "className": "SetCameraShake",
+      "classIndex": 78,
+      "sourceOffset": 300774,
+      "sourceLength": 44,
+      "sourceSha256": "f176bca09c9dae57fa6ef29053d9cb5c97778fbbeb5bf2187514630d8a4d2d52",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n712",
+      "level": "Dusk",
+      "nodeId": 712,
+      "name": "BstNode_34603727",
+      "className": "SetCameraShake",
+      "classIndex": 63,
+      "sourceOffset": 151474,
+      "sourceLength": 42,
+      "sourceSha256": "d1e2002e0a4b05f6513911220b7ff57598d3ec388affe353b24d1cea274650ed",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n53",
+      "level": "DuskGraveyard",
+      "nodeId": 53,
+      "name": "BstNode_34603848",
+      "className": "SetCameraShake",
+      "classIndex": 12,
+      "sourceOffset": 37603,
+      "sourceLength": 42,
+      "sourceSha256": "4a3315e6b42bbe5c57f2f746c7d6c4522c69149074df4c9046c6bbc9d6fad4af",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n1421",
+      "level": "DuskGraveyard",
+      "nodeId": 1421,
+      "name": "BstNode_34603847",
+      "className": "SetCameraShake",
+      "classIndex": 12,
+      "sourceOffset": 349640,
+      "sourceLength": 42,
+      "sourceSha256": "7f3fa5978d0e9993523ce873c934aebc3667767e4e5369fbe116b5d9fd45ac3a",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n340",
+      "level": "Night",
+      "nodeId": 340,
+      "name": "BstNode_1005",
+      "className": "SetCameraShake",
+      "classIndex": 39,
+      "sourceOffset": 72487,
+      "sourceLength": 38,
+      "sourceSha256": "eefe45ef1aef5e1b08c7ecc6463eb24b5a2d605abc023381547712a762392506",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2286",
+      "level": "Night",
+      "nodeId": 2286,
+      "name": "BstNode_1007",
+      "className": "SetCameraShake",
+      "classIndex": 39,
+      "sourceOffset": 360307,
+      "sourceLength": 38,
+      "sourceSha256": "753b4bc9e47a2b80a6207411ec383cfdce650d31170e43f073ea0c9fec6d5269",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2347",
+      "level": "Night",
+      "nodeId": 2347,
+      "name": "BstNode_910",
+      "className": "SetCameraShake",
+      "classIndex": 39,
+      "sourceOffset": 368360,
+      "sourceLength": 37,
+      "sourceSha256": "459525030157d7fbdeb918b69e39bf3f2db0b374bda02b76dfec4c98ecdd1ea2",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2865",
+      "level": "Night",
+      "nodeId": 2865,
+      "name": "BstNode_1006",
+      "className": "SetCameraShake",
+      "classIndex": 39,
+      "sourceOffset": 445034,
+      "sourceLength": 38,
+      "sourceSha256": "0e96ca690d88c1bc66fa6b2560e6a102ef0f1ef3cefcb6a319c4f3d15110b7c6",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n1292",
+      "level": "Sunset",
+      "nodeId": 1292,
+      "name": "BstNode_34603068",
+      "className": "SetCameraShake",
+      "classIndex": 73,
+      "sourceOffset": 245033,
+      "sourceLength": 42,
+      "sourceSha256": "fda808fb26284eff65f2dc1d2b6f08a80d19a984bfbed3b62d6f50abf76fe641",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "Dawn",
+      "path": "Levels/Dawn/Objects.level.bin",
+      "sha256": "16e26aafc7f9d120a548bf5d8bec04fbc18146bc8db531ef75144889b1ff197a",
+      "bytes": 504637,
+      "nodes": 3798,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dawn.json",
+      "markdown": "Objects对象清单/Dawn.md"
+    },
+    {
+      "level": "Dusk",
+      "path": "Levels/Dusk/Objects.level.bin",
+      "sha256": "9222b248f17fb4122cd4ad9650543ab86aab8b077b6965248c70ac2341bf2d5d",
+      "bytes": 242331,
+      "nodes": 1288,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dusk.json",
+      "markdown": "Objects对象清单/Dusk.md"
+    },
+    {
+      "level": "DuskGraveyard",
+      "path": "Levels/DuskGraveyard/Objects.level.bin",
+      "sha256": "128b30dcbe40b68e68fc25d195b68dc39f897259453c02612049ccd37a90ffb4",
+      "bytes": 424333,
+      "nodes": 1791,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DuskGraveyard.json",
+      "markdown": "Objects对象清单/DuskGraveyard.md"
+    },
+    {
+      "level": "Night",
+      "path": "Levels/Night/Objects.level.bin",
+      "sha256": "6ce612c9efb82834d648de81251033b341a44f4d9374d8338d868575aab6a723",
+      "bytes": 499756,
+      "nodes": 3719,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Night.json",
+      "markdown": "Objects对象清单/Night.md"
+    },
+    {
+      "level": "Sunset",
+      "path": "Levels/Sunset/Objects.level.bin",
+      "sha256": "8126f2db693502576075505797624e0b5e53dc064fe6af82e90f2261ca427f8a",
+      "bytes": 325410,
+      "nodes": 1899,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Sunset.json",
+      "markdown": "Objects对象清单/Sunset.md"
+    }
+  ]
+}

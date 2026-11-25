@@ -1,0 +1,23 @@
+{
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "passed": true,
+  "comparison": "exact float32 and uint16 bits; no tolerance",
+  "runtime": "QEMU x86_64 -cpu max; original 0x10005cb80 constructor, 0x10006103b reduction and 0x1007ec050 half conversion",
+  "oracleIsolation": "Original job prologue jumps to reduction after stack guard setup; scene raycast/color stage is explicit supplied input. Imported bzero bound to memset.",
+  "limitation": "Does not validate scene intersections/material colors, original sample jitter, full startup, sampler defaults or viewport parity.",
+  "table": {
+    "sha256": "1d2a90820caca3d3b25eae8a12e557b75cf56379c851edb9d1053e812aa9ea2e",
+    "indices": 32736,
+    "outputPixels": 2046,
+    "crossFaceTaps": 2736
+  },
+  "cases": 32,
+  "shComponents": 864,
+  "cubeComponents": 1048320,
+  "halfWords": 1048320,
+  "mismatches": 0,
+  "conversionWords": 10316,
+  "flushComponents": 1088,
+  "uploadsVerified": 1152,
+  "failures": []
+}

@@ -1,0 +1,3114 @@
+{
+  "passed": true,
+  "checks": [
+    "FPS/frame-time HUD sits inside the viewport bottom right and does not intercept navigation",
+    "Original Hull event finishes through Barn and repeated events append eight distinct parameter handles",
+    "A shared native Marker enables/disables all current hull registrations",
+    "Reset replaces shared environment state and the next real Vulkan frame uses the current owner",
+    "Map switching clears runtime objects and leaves original Objects.level.bin unchanged",
+    "Idle FPS sampling adds no Vulkan frames; rendering remains on demand",
+    "Camera navigation presents a real new frame and updates measured frame time"
+  ],
+  "errors": [],
+  "scope": "Actual Electron/Vulkan light0 viewport, restored environment parent constructors and EventBarn with editor metadata/resource/camera services. Shared native Marker/Clump references, dynamic hulls, independent entry handles and renderer reset tested. Full native factory, weather rendering, all environment classes and original game images are not established.",
+  "initial": {
+    "revision": 1,
+    "frame": 1,
+    "events": [
+      {
+        "id": 156,
+        "kind": "SetRainParams",
+        "starts": 0,
+        "running": false,
+        "pending": false,
+        "paused": false,
+        "available": true,
+        "reason": ""
+      },
+      {
+        "id": 326,
+        "kind": "SetEnvHull",
+        "starts": 1,
+        "running": false,
+        "pending": false,
+        "paused": false,
+        "available": true,
+        "reason": ""
+      },
+      {
+        "id": 327,
+        "kind": "SetWind",
+        "starts": 0,
+        "running": false,
+        "pending": false,
+        "paused": false,
+        "available": true,
+        "reason": ""
+      },
+      {
+        "id": 625,
+        "kind": "DropOcclusion",
+        "starts": 1,
+        "running": true,
+        "pending": false,
+        "paused": false,
+        "available": true,
+        "reason": ""
+      },
+      {
+        "id": 827,
+        "kind": "SetEnvDefault",
+        "starts": 1,
+        "running": false,
+        "pending": false,
+        "paused": false,
+        "available": true,
+        "reason": ""
+      }
+    ],
+    "objects": [
+      {
+        "id": 7,
+        "className": "CloudCard",
+        "pointer": "21743296688",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 9,
+        "className": "PointLight",
+        "pointer": "21743272096",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "transform"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 10,
+        "className": "PointLight",
+        "pointer": "21743272192",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "transform"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 34,
+        "className": "CloudCard",
+        "pointer": "21743296816",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 37,
+        "className": "CloudCard",
+        "pointer": "21743296944",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 38,
+        "className": "Marker",
+        "pointer": "21743297072",
+        "storageBytes": 80,
+        "fieldsLoaded": [
+          "enabled",
+          "scale",
+          "quat",
+          "pos"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 42,
+        "className": "CloudCard",
+        "pointer": "21743297152",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 45,
+        "className": "PointLight",
+        "pointer": "21743272288",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "transform"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 48,
+        "className": "CloudCard",
+        "pointer": "21743297280",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 62,
+        "className": "CloudCard",
+        "pointer": "21743297408",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 64,
+        "className": "CloudCard",
+        "pointer": "21743297536",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 73,
+        "className": "DarkstoneRainRegion",
+        "pointer": "21743297664",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "dropRatePerSecond",
+          "dropCollectibles",
+          "dropSizeMin",
+          "dropSizeMax",
+          "playerEnergyDrain",
+          "region"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 74,
+        "className": "CloudCard",
+        "pointer": "21743297760",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 76,
+        "className": "CloudCard",
+        "pointer": "21743297888",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 89,
+        "className": "CloudCard",
+        "pointer": "21743298016",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 91,
+        "className": "DarkstoneRainRegion",
+        "pointer": "21743298144",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "dropRatePerSecond",
+          "dropCollectibles",
+          "dropSizeMin",
+          "dropSizeMax",
+          "playerEnergyDrain",
+          "region"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 93,
+        "className": "CloudCard",
+        "pointer": "21743298240",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 97,
+        "className": "DarkstoneRainRegion",
+        "pointer": "21743298368",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "dropRatePerSecond",
+          "dropCollectibles",
+          "dropSizeMin",
+          "dropSizeMax",
+          "playerEnergyDrain",
+          "region"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 99,
+        "className": "Wind",
+        "pointer": "21743298464",
+        "storageBytes": 208,
+        "fieldsLoaded": [
+          "enabled",
+          "transform",
+          "intensity",
+          "fadeDist",
+          "order",
+          "fadeTime",
+          "maxDist",
+          "minDist",
+          "spawnParticle",
+          "windSound",
+          "additionalWindMarkers",
+          "rail"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 104,
+        "className": "Wind",
+        "pointer": "21743298672",
+        "storageBytes": 208,
+        "fieldsLoaded": [
+          "enabled",
+          "transform",
+          "intensity",
+          "fadeDist",
+          "order",
+          "fadeTime",
+          "maxDist",
+          "minDist",
+          "spawnParticle",
+          "windSound",
+          "additionalWindMarkers",
+          "rail"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 114,
+        "className": "CloudCard",
+        "pointer": "21743298880",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 122,
+        "className": "EnvNode",
+        "pointer": "21743299008",
+        "storageBytes": 1040,
+        "fieldsLoaded": [
+          "transform",
+          "cheapFogTintMidTop",
+          "cheapFogFar",
+          "duration",
+          "bloomFalloff",
+          "cheapFogTintMidMid",
+          "sunAngleXZ",
+          "undulationScale",
+          "enabled",
+          "tintBot",
+          "sunAngleY",
+          "bloomIntensity",
+          "cheapFogEnabled",
+          "bloomGhost",
+          "exposure",
+          "sunInt",
+          "pos",
+          "cheapFogHeight",
+          "tintTop",
+          "scale",
+          "cheapFogTintBot",
+          "quat",
+          "sunToMoon",
+          "pointIntensity",
+          "layer",
+          "bloomOverbright",
+          "cheapFogHeightDensity",
+          "tintMidTop",
+          "sunSize",
+          "fogHeight",
+          "atmosphereDensity",
+          "fadeInTime",
+          "tintMidMid",
+          "fogVolumeIntensity",
+          "pointColor",
+          "fogDensity",
+          "fadeOutTime",
+          "moonPhase",
+          "tintMidBot",
+          "sunColor",
+          "falloff",
+          "drawDistance",
+          "bloomTint",
+          "cheapFogTintTop",
+          "cheapFogLumReduction",
+          "cheapFogTintMidBot",
+          "cheapFogNear"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 132,
+        "className": "CloudCard",
+        "pointer": "21743300048",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 147,
+        "className": "PointLight",
+        "pointer": "21743272384",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "transform"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 156,
+        "className": "SetRainParams",
+        "pointer": "21743300176",
+        "storageBytes": 80,
+        "fieldsLoaded": [
+          "intensity",
+          "oscillationDuration",
+          "transitionDuration",
+          "oscillationAmount",
+          "fallRate"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 167,
+        "className": "CloudCard",
+        "pointer": "21743300256",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 181,
+        "className": "Wind",
+        "pointer": "21743300384",
+        "storageBytes": 208,
+        "fieldsLoaded": [
+          "enabled",
+          "transform",
+          "intensity",
+          "fadeDist",
+          "order",
+          "fadeTime",
+          "maxDist",
+          "minDist",
+          "spawnParticle",
+          "windSound",
+          "additionalWindMarkers",
+          "rail"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 197,
+        "className": "CloudCard",
+        "pointer": "21743300592",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 203,
+        "className": "CloudCard",
+        "pointer": "21743300720",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 205,
+        "className": "Clump",
+        "pointer": "21743300848",
+        "storageBytes": 32,
+        "fieldsLoaded": [
+          "data"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 207,
+        "className": "PointLight",
+        "pointer": "21743272480",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "transform"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 225,
+        "className": "PointLight",
+        "pointer": "21743272576",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "transform"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 238,
+        "className": "CloudCard",
+        "pointer": "21743300880",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 239,
+        "className": "PointLight",
+        "pointer": "21743272672",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "transform"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 298,
+        "className": "PointLight",
+        "pointer": "21743272768",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "transform"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 315,
+        "className": "CloudCard",
+        "pointer": "21743301008",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 317,
+        "className": "PointLight",
+        "pointer": "21743272864",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "transform"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 319,
+        "className": "CloudCard",
+        "pointer": "21743301136",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 322,
+        "className": "PointLight",
+        "pointer": "21743272960",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "transform"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 326,
+        "className": "SetEnvHull",
+        "pointer": "21743301264",
+        "storageBytes": 1040,
+        "fieldsLoaded": [
+          "cheapFogTintMidTop",
+          "cheapFogFar",
+          "duration",
+          "bloomFalloff",
+          "cheapFogTintMidMid",
+          "sunAngleXZ",
+          "undulationScale",
+          "pointIntensity",
+          "tintBot",
+          "sunAngleY",
+          "bloomIntensity",
+          "cheapFogEnabled",
+          "bloomGhost",
+          "exposure",
+          "sunInt",
+          "cheapFogHeight",
+          "cheapFogTintBot",
+          "tintTop",
+          "layer",
+          "fogHeight",
+          "bloomOverbright",
+          "cheapFogHeightDensity",
+          "tintMidTop",
+          "sunToMoon",
+          "sunSize",
+          "atmosphereDensity",
+          "fadeInTime",
+          "tintMidMid",
+          "fogVolumeIntensity",
+          "pointColor",
+          "fogDensity",
+          "fadeOutTime",
+          "moonPhase",
+          "tintMidBot",
+          "sunColor",
+          "falloff",
+          "drawDistance",
+          "bloomTint",
+          "cheapFogTintTop",
+          "cheapFogLumReduction",
+          "cheapFogTintMidBot",
+          "cheapFogNear",
+          "hull"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 327,
+        "className": "SetWind",
+        "pointer": "21743302304",
+        "storageBytes": 144,
+        "fieldsLoaded": [
+          "useWindTarget",
+          "fireOnce",
+          "windForce",
+          "useWindRegions",
+          "windDir",
+          "windRegions",
+          "windTarget"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 330,
+        "className": "DarkstoneRainRegion",
+        "pointer": "21743302448",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "dropRatePerSecond",
+          "dropCollectibles",
+          "dropSizeMin",
+          "dropSizeMax",
+          "playerEnergyDrain",
+          "region"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 346,
+        "className": "PointLight",
+        "pointer": "21743273056",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "transform"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 350,
+        "className": "CloudCard",
+        "pointer": "21743302544",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 357,
+        "className": "CloudCard",
+        "pointer": "21743302672",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 363,
+        "className": "PointLight",
+        "pointer": "21743273152",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "transform"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 378,
+        "className": "CloudCard",
+        "pointer": "21743302800",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 394,
+        "className": "Wind",
+        "pointer": "21743302928",
+        "storageBytes": 208,
+        "fieldsLoaded": [
+          "enabled",
+          "transform",
+          "intensity",
+          "fadeDist",
+          "order",
+          "fadeTime",
+          "maxDist",
+          "minDist",
+          "spawnParticle",
+          "windSound",
+          "additionalWindMarkers",
+          "rail"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 400,
+        "className": "EnvNode",
+        "pointer": "21743303136",
+        "storageBytes": 1040,
+        "fieldsLoaded": [
+          "transform",
+          "cheapFogTintMidTop",
+          "cheapFogFar",
+          "duration",
+          "bloomFalloff",
+          "cheapFogTintMidMid",
+          "sunAngleXZ",
+          "undulationScale",
+          "enabled",
+          "tintBot",
+          "sunAngleY",
+          "bloomIntensity",
+          "cheapFogEnabled",
+          "bloomGhost",
+          "exposure",
+          "sunInt",
+          "pos",
+          "cheapFogHeight",
+          "tintTop",
+          "scale",
+          "cheapFogTintBot",
+          "quat",
+          "sunToMoon",
+          "pointIntensity",
+          "layer",
+          "bloomOverbright",
+          "cheapFogHeightDensity",
+          "tintMidTop",
+          "sunSize",
+          "fogHeight",
+          "atmosphereDensity",
+          "fadeInTime",
+          "tintMidMid",
+          "fogVolumeIntensity",
+          "pointColor",
+          "fogDensity",
+          "fadeOutTime",
+          "moonPhase",
+          "tintMidBot",
+          "sunColor",
+          "falloff",
+          "drawDistance",
+          "bloomTint",
+          "cheapFogTintTop",
+          "cheapFogLumReduction",
+          "cheapFogTintMidBot",
+          "cheapFogNear"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 401,
+        "className": "CloudCard",
+        "pointer": "21743304176",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 408,
+        "className": "PointLight",
+        "pointer": "21743273248",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "transform"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 410,
+        "className": "Marker",
+        "pointer": "21743304304",
+        "storageBytes": 80,
+        "fieldsLoaded": [
+          "enabled",
+          "scale",
+          "quat",
+          "pos"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 415,
+        "className": "PointLight",
+        "pointer": "21743273344",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "transform"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 423,
+        "className": "Emitter",
+        "pointer": "21743304384",
+        "storageBytes": 512,
+        "fieldsLoaded": [
+          "scaleMult",
+          "attachToCameraPredictionMult",
+          "duration",
+          "quat",
+          "forceMult",
+          "enabled",
+          "spdMult",
+          "lifetimeMult",
+          "scale",
+          "emitterDef",
+          "attractMult",
+          "attachToCamera",
+          "railForceMult",
+          "radiusMult",
+          "rateMult",
+          "forwardOffSetMult",
+          "attachToCameraOffset",
+          "pos",
+          "attractTargetObject"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 438,
+        "className": "DarkstoneRainRegion",
+        "pointer": "21743304896",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "dropRatePerSecond",
+          "dropCollectibles",
+          "dropSizeMin",
+          "dropSizeMax",
+          "playerEnergyDrain",
+          "region"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 446,
+        "className": "CloudCard",
+        "pointer": "21743304992",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 495,
+        "className": "CloudCard",
+        "pointer": "21743305120",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 498,
+        "className": "CloudCard",
+        "pointer": "21743305248",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 515,
+        "className": "PointLight",
+        "pointer": "21743273440",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "transform"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 521,
+        "className": "CloudCard",
+        "pointer": "21743305376",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 550,
+        "className": "PointLight",
+        "pointer": "21743273536",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "transform"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 556,
+        "className": "CloudCard",
+        "pointer": "21743305504",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 572,
+        "className": "Wind",
+        "pointer": "21743305632",
+        "storageBytes": 208,
+        "fieldsLoaded": [
+          "enabled",
+          "transform",
+          "intensity",
+          "fadeDist",
+          "order",
+          "fadeTime",
+          "maxDist",
+          "minDist",
+          "spawnParticle",
+          "windSound",
+          "additionalWindMarkers",
+          "rail"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 575,
+        "className": "CloudCard",
+        "pointer": "21743305840",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 578,
+        "className": "CloudCard",
+        "pointer": "21743305968",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 585,
+        "className": "PointLight",
+        "pointer": "21743273632",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "transform"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 591,
+        "className": "CloudCard",
+        "pointer": "21743306096",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 600,
+        "className": "EnvNode",
+        "pointer": "21743306224",
+        "storageBytes": 1040,
+        "fieldsLoaded": [
+          "transform",
+          "cheapFogTintMidTop",
+          "cheapFogFar",
+          "duration",
+          "bloomFalloff",
+          "cheapFogTintMidMid",
+          "sunAngleXZ",
+          "undulationScale",
+          "enabled",
+          "tintBot",
+          "sunAngleY",
+          "bloomIntensity",
+          "cheapFogEnabled",
+          "bloomGhost",
+          "exposure",
+          "sunInt",
+          "pos",
+          "cheapFogHeight",
+          "tintTop",
+          "scale",
+          "cheapFogTintBot",
+          "quat",
+          "sunToMoon",
+          "pointIntensity",
+          "layer",
+          "bloomOverbright",
+          "cheapFogHeightDensity",
+          "tintMidTop",
+          "sunSize",
+          "fogHeight",
+          "atmosphereDensity",
+          "fadeInTime",
+          "tintMidMid",
+          "fogVolumeIntensity",
+          "pointColor",
+          "fogDensity",
+          "fadeOutTime",
+          "moonPhase",
+          "tintMidBot",
+          "sunColor",
+          "falloff",
+          "drawDistance",
+          "bloomTint",
+          "cheapFogTintTop",
+          "cheapFogLumReduction",
+          "cheapFogTintMidBot",
+          "cheapFogNear"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 601,
+        "className": "Marker",
+        "pointer": "21743307264",
+        "storageBytes": 80,
+        "fieldsLoaded": [
+          "enabled",
+          "scale",
+          "quat",
+          "pos"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 604,
+        "className": "CloudCard",
+        "pointer": "21743307344",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 625,
+        "className": "DropOcclusion",
+        "pointer": "21743307472",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "fadeInSnappiness",
+          "intensity",
+          "tint",
+          "occlusionType",
+          "fadeOutSnappiness",
+          "sharpness",
+          "fadeEnable",
+          "maxSize",
+          "transforms",
+          "intensityFloat"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 642,
+        "className": "PointLight",
+        "pointer": "21743273728",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "transform"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 655,
+        "className": "Wind",
+        "pointer": "21743307600",
+        "storageBytes": 208,
+        "fieldsLoaded": [
+          "enabled",
+          "transform",
+          "intensity",
+          "fadeDist",
+          "order",
+          "fadeTime",
+          "maxDist",
+          "minDist",
+          "spawnParticle",
+          "windSound",
+          "additionalWindMarkers",
+          "rail"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 691,
+        "className": "DarkstoneRainRegion",
+        "pointer": "21743307808",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "dropRatePerSecond",
+          "dropCollectibles",
+          "dropSizeMin",
+          "dropSizeMax",
+          "playerEnergyDrain",
+          "region"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 693,
+        "className": "PointLight",
+        "pointer": "21743273824",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "transform"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 708,
+        "className": "CloudCard",
+        "pointer": "21743307904",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 721,
+        "className": "CloudCard",
+        "pointer": "21743308032",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 731,
+        "className": "Marker",
+        "pointer": "21743308160",
+        "storageBytes": 80,
+        "fieldsLoaded": [
+          "enabled",
+          "scale",
+          "quat",
+          "pos"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 743,
+        "className": "Marker",
+        "pointer": "21743308240",
+        "storageBytes": 80,
+        "fieldsLoaded": [
+          "enabled",
+          "scale",
+          "quat",
+          "pos"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 745,
+        "className": "DarkstoneRainRegion",
+        "pointer": "21743308320",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "dropRatePerSecond",
+          "dropCollectibles",
+          "dropSizeMin",
+          "dropSizeMax",
+          "playerEnergyDrain",
+          "region"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 750,
+        "className": "Marker",
+        "pointer": "21743308416",
+        "storageBytes": 80,
+        "fieldsLoaded": [
+          "enabled",
+          "scale",
+          "quat",
+          "pos"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 754,
+        "className": "DarkstoneRainRegion",
+        "pointer": "21743308496",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "dropRatePerSecond",
+          "dropCollectibles",
+          "dropSizeMin",
+          "dropSizeMax",
+          "playerEnergyDrain",
+          "region"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 756,
+        "className": "PointLight",
+        "pointer": "21743273920",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "transform"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 757,
+        "className": "Marker",
+        "pointer": "21743308592",
+        "storageBytes": 80,
+        "fieldsLoaded": [
+          "enabled",
+          "scale",
+          "quat",
+          "pos"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 759,
+        "className": "Marker",
+        "pointer": "21743308672",
+        "storageBytes": 80,
+        "fieldsLoaded": [
+          "enabled",
+          "scale",
+          "quat",
+          "pos"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 771,
+        "className": "CloudCard",
+        "pointer": "21743308752",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 775,
+        "className": "CloudCard",
+        "pointer": "21743308880",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 777,
+        "className": "CloudCard",
+        "pointer": "21743309008",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 782,
+        "className": "CloudCard",
+        "pointer": "21743309136",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 783,
+        "className": "CloudCard",
+        "pointer": "21743309264",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 784,
+        "className": "CloudCard",
+        "pointer": "21743309392",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 785,
+        "className": "CloudCard",
+        "pointer": "21743309520",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 786,
+        "className": "CloudCard",
+        "pointer": "21743309648",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 787,
+        "className": "CloudCard",
+        "pointer": "21743309776",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 788,
+        "className": "DarkstoneRainRegion",
+        "pointer": "21743309904",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "dropRatePerSecond",
+          "dropCollectibles",
+          "dropSizeMin",
+          "dropSizeMax",
+          "playerEnergyDrain",
+          "region"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 789,
+        "className": "CloudCard",
+        "pointer": "21743310000",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 793,
+        "className": "CloudCard",
+        "pointer": "21743310128",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 798,
+        "className": "DarkstoneRainRegion",
+        "pointer": "21743310256",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "dropRatePerSecond",
+          "dropCollectibles",
+          "dropSizeMin",
+          "dropSizeMax",
+          "playerEnergyDrain",
+          "region"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 801,
+        "className": "CloudCard",
+        "pointer": "21743310352",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 802,
+        "className": "PointLight",
+        "pointer": "21743274016",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "transform"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 803,
+        "className": "CloudCard",
+        "pointer": "21743310480",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 807,
+        "className": "CloudCard",
+        "pointer": "21743310608",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 808,
+        "className": "CloudCard",
+        "pointer": "21743310736",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 809,
+        "className": "CloudCard",
+        "pointer": "21743310864",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 810,
+        "className": "CloudCard",
+        "pointer": "21743310992",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 811,
+        "className": "CloudCard",
+        "pointer": "21743311120",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 812,
+        "className": "CloudCard",
+        "pointer": "21743311248",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 813,
+        "className": "CloudCard",
+        "pointer": "21743311376",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 814,
+        "className": "CloudCard",
+        "pointer": "21743311504",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 819,
+        "className": "CloudCard",
+        "pointer": "21743311632",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 820,
+        "className": "PointLight",
+        "pointer": "21743274112",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "transform"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 827,
+        "className": "SetEnvDefault",
+        "pointer": "21743311760",
+        "storageBytes": 864,
+        "fieldsLoaded": [
+          "cheapFogTintMidTop",
+          "cheapFogFar",
+          "sunSize",
+          "bloomFalloff",
+          "cheapFogTintMidMid",
+          "sunAngleXZ",
+          "undulationScale",
+          "pointIntensity",
+          "tintBot",
+          "sunAngleY",
+          "bloomIntensity",
+          "cheapFogEnabled",
+          "bloomGhost",
+          "exposure",
+          "sunInt",
+          "cheapFogHeight",
+          "cheapFogTintBot",
+          "bloomOverbright",
+          "cheapFogHeightDensity",
+          "tintMidTop",
+          "atmosphereDensity",
+          "tintTop",
+          "tintMidMid",
+          "fogVolumeIntensity",
+          "pointColor",
+          "fogDensity",
+          "moonPhase",
+          "sunToMoon",
+          "tintMidBot",
+          "sunColor",
+          "fogHeight",
+          "drawDistance",
+          "bloomTint",
+          "cheapFogTintTop",
+          "cheapFogLumReduction",
+          "cheapFogTintMidBot",
+          "cheapFogNear"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 829,
+        "className": "CloudCard",
+        "pointer": "21743312624",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 832,
+        "className": "Emitter",
+        "pointer": "21743312752",
+        "storageBytes": 512,
+        "fieldsLoaded": [
+          "scaleMult",
+          "attachToCameraPredictionMult",
+          "duration",
+          "quat",
+          "forceMult",
+          "enabled",
+          "spdMult",
+          "lifetimeMult",
+          "scale",
+          "emitterDef",
+          "attractMult",
+          "attachToCamera",
+          "railForceMult",
+          "radiusMult",
+          "rateMult",
+          "forwardOffSetMult",
+          "attachToCameraOffset",
+          "pos",
+          "attractTargetObject"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 865,
+        "className": "PointLight",
+        "pointer": "21743274208",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "transform"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 866,
+        "className": "CloudCard",
+        "pointer": "21743313264",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 882,
+        "className": "CloudCard",
+        "pointer": "21743313392",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 897,
+        "className": "Marker",
+        "pointer": "21743313520",
+        "storageBytes": 80,
+        "fieldsLoaded": [
+          "enabled",
+          "scale",
+          "quat",
+          "pos"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 899,
+        "className": "Water",
+        "pointer": "21743313600",
+        "storageBytes": 1488,
+        "fieldsLoaded": [
+          "sunShadowed",
+          "transform"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 918,
+        "className": "Marker",
+        "pointer": "21743315088",
+        "storageBytes": 80,
+        "fieldsLoaded": [
+          "enabled",
+          "scale",
+          "quat",
+          "pos"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 921,
+        "className": "CloudCard",
+        "pointer": "21743315168",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 922,
+        "className": "PointLight",
+        "pointer": "21743274304",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "transform"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 940,
+        "className": "PointLight",
+        "pointer": "21743274400",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "transform"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 941,
+        "className": "PointLight",
+        "pointer": "21743274496",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "transform"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 947,
+        "className": "CloudCard",
+        "pointer": "21743315296",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 949,
+        "className": "CloudCard",
+        "pointer": "21743315424",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 950,
+        "className": "CloudCard",
+        "pointer": "21743315552",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 955,
+        "className": "PointLight",
+        "pointer": "21743274592",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "transform"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 961,
+        "className": "PointLight",
+        "pointer": "21743274688",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "transform"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 966,
+        "className": "CloudCard",
+        "pointer": "21743315680",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 984,
+        "className": "CloudCard",
+        "pointer": "21743315808",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 985,
+        "className": "PointLight",
+        "pointer": "21743274784",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "transform"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 1008,
+        "className": "CloudCard",
+        "pointer": "21743315936",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 1009,
+        "className": "CloudCard",
+        "pointer": "21743316064",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 1037,
+        "className": "CloudCard",
+        "pointer": "21743316192",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 1041,
+        "className": "LensFlair",
+        "pointer": "21743316320",
+        "storageBytes": 240,
+        "fieldsLoaded": [
+          "enabled",
+          "transform",
+          "useDots",
+          "flareSound",
+          "color",
+          "brightness",
+          "useSunDog",
+          "useStar"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 1048,
+        "className": "PointLight",
+        "pointer": "21743274880",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "transform"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 1059,
+        "className": "Emitter",
+        "pointer": "21743316560",
+        "storageBytes": 512,
+        "fieldsLoaded": [
+          "scaleMult",
+          "attachToCameraPredictionMult",
+          "duration",
+          "quat",
+          "forceMult",
+          "enabled",
+          "spdMult",
+          "lifetimeMult",
+          "scale",
+          "emitterDef",
+          "attractMult",
+          "attachToCamera",
+          "railForceMult",
+          "radiusMult",
+          "rateMult",
+          "forwardOffSetMult",
+          "attachToCameraOffset",
+          "pos",
+          "attractTargetObject"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 1063,
+        "className": "PointLight",
+        "pointer": "21743274976",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "transform"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 1067,
+        "className": "Wind",
+        "pointer": "21743317072",
+        "storageBytes": 208,
+        "fieldsLoaded": [
+          "enabled",
+          "transform",
+          "intensity",
+          "fadeDist",
+          "order",
+          "fadeTime",
+          "maxDist",
+          "minDist",
+          "spawnParticle",
+          "windSound",
+          "additionalWindMarkers",
+          "rail"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 1071,
+        "className": "PointLight",
+        "pointer": "21743275072",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "transform"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 1087,
+        "className": "PointLight",
+        "pointer": "21743275168",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "transform"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 1088,
+        "className": "PointLight",
+        "pointer": "21743275264",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "transform"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 1104,
+        "className": "PointLight",
+        "pointer": "21743275360",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "transform"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 1120,
+        "className": "CloudCard",
+        "pointer": "21743317280",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 1131,
+        "className": "CloudCard",
+        "pointer": "21743317408",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 1139,
+        "className": "PointLight",
+        "pointer": "21743275456",
+        "storageBytes": 96,
+        "fieldsLoaded": [
+          "transform"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 1152,
+        "className": "CloudCard",
+        "pointer": "21743317536",
+        "storageBytes": 128,
+        "fieldsLoaded": [
+          "alphaMult",
+          "bstGuid",
+          "transform",
+          "meshName"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      },
+      {
+        "id": 1168,
+        "className": "Clump",
+        "pointer": "21743317664",
+        "storageBytes": 32,
+        "fieldsLoaded": [
+          "data"
+        ],
+        "defaultsApplied": [],
+        "pending": [],
+        "runtimeComplete": false
+      }
+    ],
+    "weather": {
+      "time": 0.01666666753590107,
+      "rain": {
+        "enabled": false,
+        "intensity": 0,
+        "fallRate": 0,
+        "baseIntensity": 0,
+        "phase": 0,
+        "amount": 0,
+        "frequency": 0,
+        "transition": 0,
+        "slopes": [
+          0,
+          0,
+          0
+        ],
+        "scope": "Original parameter update with prepared emitter/Avatar and JS sinf; rain geometry/collision/audio remain pending"
+      },
+      "oceanRender": false,
+      "globalWind": [
+        0,
+        0,
+        0
+      ]
+    },
+    "wind": {
+      "winds": 7,
+      "rails": 0,
+      "timers": [
+        {
+          "id": 99,
+          "enabled": true,
+          "timer": 0
+        },
+        {
+          "id": 104,
+          "enabled": true,
+          "timer": 0
+        },
+        {
+          "id": 181,
+          "enabled": true,
+          "timer": 0.01666666753590107
+        },
+        {
+          "id": 394,
+          "enabled": true,
+          "timer": 0
+        },
+        {
+          "id": 572,
+          "enabled": true,
+          "timer": 0
+        },
+        {
+          "id": 655,
+          "enabled": true,
+          "timer": 0
+        },
+        {
+          "id": 1067,
+          "enabled": true,
+          "timer": 0
+        }
+      ],
+      "scope": "Original saved Wind fields, Marker world OBBs and cached Rail equations. Native Rail lifecycle/selfUpdating and ambient/boundary/interaction force services remain separate; JS libm is an editor service."
+    },
+    "occlusion": {
+      "cloudDrops": 6,
+      "records": [
+        {
+          "type": 2,
+          "maxSize": 1,
+          "radius": 10,
+          "intensity": -1,
+          "sharpness": 0,
+          "position": [
+            -48.61452102661133,
+            91.4937973022461,
+            -153.3286895751953,
+            1
+          ],
+          "tint": [
+            1,
+            0.05564900115132332,
+            0.05564900115132332,
+            1
+          ],
+          "eventId": 625
+        },
+        {
+          "type": 2,
+          "maxSize": 1,
+          "radius": 10,
+          "intensity": -1,
+          "sharpness": 0,
+          "position": [
+            -48.61452102661133,
+            91.4937973022461,
+            -108.39030456542969,
+            1
+          ],
+          "tint": [
+            1,
+            0.05564900115132332,
+            0.05564900115132332,
+            1
+          ],
+          "eventId": 625
+        },
+        {
+          "type": 2,
+          "maxSize": 1,
+          "radius": 10,
+          "intensity": -1,
+          "sharpness": 0,
+          "position": [
+            -48.61452102661133,
+            87.21240234375,
+            -65.80184173583984,
+            1
+          ],
+          "tint": [
+            1,
+            0.05564900115132332,
+            0.05564900115132332,
+            1
+          ],
+          "eventId": 625
+        },
+        {
+          "type": 2,
+          "maxSize": 1,
+          "radius": 10,
+          "intensity": -1,
+          "sharpness": 0,
+          "position": [
+            -48.777645111083984,
+            91.4937973022461,
+            -123.28334045410156,
+            1
+          ],
+          "tint": [
+            1,
+            0.05564900115132332,
+            0.05564900115132332,
+            1
+          ],
+          "eventId": 625
+        },
+        {
+          "type": 2,
+          "maxSize": 1,
+          "radius": 10,
+          "intensity": -1,
+          "sharpness": 0,
+          "position": [
+            -48.61452102661133,
+            91.4937973022461,
+            2.628901958465576,
+            1
+          ],
+          "tint": [
+            1,
+            0.05564900115132332,
+            0.05564900115132332,
+            1
+          ],
+          "eventId": 625
+        },
+        {
+          "type": 2,
+          "maxSize": 1,
+          "radius": 10,
+          "intensity": -1,
+          "sharpness": 0,
+          "position": [
+            -48.61452102661133,
+            91.4937973022461,
+            -32.78247833251953,
+            1
+          ],
+          "tint": [
+            1,
+            0.05564900115132332,
+            0.05564900115132332,
+            1
+          ],
+          "eventId": 625
+        }
+      ],
+      "warnings": [
+        {
+          "eventId": 625,
+          "radius": 10,
+          "maxSize": 1
+        },
+        {
+          "eventId": 625,
+          "radius": 10,
+          "maxSize": 1
+        },
+        {
+          "eventId": 625,
+          "radius": 10,
+          "maxSize": 1
+        },
+        {
+          "eventId": 625,
+          "radius": 10,
+          "maxSize": 1
+        },
+        {
+          "eventId": 625,
+          "radius": 10,
+          "maxSize": 1
+        },
+        {
+          "eventId": 625,
+          "radius": 10,
+          "maxSize": 1
+        }
+      ],
+      "states": [
+        {
+          "id": 625,
+          "loaded": true,
+          "alpha": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "scope": "Original DropOcclusion Load/Unload/OnEnabled/Update; shared native spatial and Float bytes. JS logf/expf, prepared allocation and oversize log adapter; downstream drop rasterization remains pending"
+    },
+    "registrations": [
+      {
+        "nodeId": 326,
+        "group": "AmbienceSun",
+        "kind": "hull"
+      },
+      {
+        "nodeId": 326,
+        "group": "AmbienceSky",
+        "kind": "hull"
+      },
+      {
+        "nodeId": 326,
+        "group": "AmbienceFog",
+        "kind": "hull"
+      },
+      {
+        "nodeId": 326,
+        "group": "AmbienceBloom",
+        "kind": "hull"
+      },
+      {
+        "nodeId": 326,
+        "group": "AmbienceToneMap",
+        "kind": "hull"
+      },
+      {
+        "nodeId": 326,
+        "group": "AmbiencePointLight",
+        "kind": "hull"
+      },
+      {
+        "nodeId": 326,
+        "group": "CloudEnvParams",
+        "kind": "hull"
+      },
+      {
+        "nodeId": 326,
+        "group": "FogVolumeParams",
+        "kind": "hull"
+      },
+      {
+        "nodeId": 827,
+        "group": "AmbienceSun",
+        "kind": "default"
+      },
+      {
+        "nodeId": 827,
+        "group": "AmbienceSky",
+        "kind": "default"
+      },
+      {
+        "nodeId": 827,
+        "group": "AmbienceFog",
+        "kind": "default"
+      },
+      {
+        "nodeId": 827,
+        "group": "AmbienceBloom",
+        "kind": "default"
+      },
+      {
+        "nodeId": 827,
+        "group": "AmbienceToneMap",
+        "kind": "default"
+      },
+      {
+        "nodeId": 827,
+        "group": "AmbiencePointLight",
+        "kind": "default"
+      },
+      {
+        "nodeId": 827,
+        "group": "CloudEnvParams",
+        "kind": "default"
+      },
+      {
+        "nodeId": 827,
+        "group": "FogVolumeParams",
+        "kind": "default"
+      }
+    ],
+    "registrationHandles": [
+      {
+        "pointer": "20937965568",
+        "nodeId": 326,
+        "group": "AmbienceSun"
+      },
+      {
+        "pointer": "20937965584",
+        "nodeId": 326,
+        "group": "AmbienceSky"
+      },
+      {
+        "pointer": "20937965600",
+        "nodeId": 326,
+        "group": "AmbienceFog"
+      },
+      {
+        "pointer": "20937965616",
+        "nodeId": 326,
+        "group": "AmbienceBloom"
+      },
+      {
+        "pointer": "20937965632",
+        "nodeId": 326,
+        "group": "AmbienceToneMap"
+      },
+      {
+        "pointer": "20937965648",
+        "nodeId": 326,
+        "group": "AmbiencePointLight"
+      },
+      {
+        "pointer": "20937965664",
+        "nodeId": 326,
+        "group": "CloudEnvParams"
+      },
+      {
+        "pointer": "20937965680",
+        "nodeId": 326,
+        "group": "FogVolumeParams"
+      }
+    ],
+    "nodes": [
+      {
+        "id": 122,
+        "enabled": true,
+        "states": [
+          {
+            "enabled": true,
+            "wasEnabled": true,
+            "remaining": 0,
+            "alpha": 1
+          },
+          {
+            "enabled": true,
+            "wasEnabled": true,
+            "remaining": 0,
+            "alpha": 1
+          },
+          {
+            "enabled": true,
+            "wasEnabled": true,
+            "remaining": 0,
+            "alpha": 1
+          },
+          {
+            "enabled": true,
+            "wasEnabled": true,
+            "remaining": 0,
+            "alpha": 1
+          },
+          {
+            "enabled": true,
+            "wasEnabled": true,
+            "remaining": 0,
+            "alpha": 1
+          },
+          {
+            "enabled": true,
+            "wasEnabled": true,
+            "remaining": 0,
+            "alpha": 1
+          },
+          {
+            "enabled": true,
+            "wasEnabled": true,
+            "remaining": 0,
+            "alpha": 1
+          },
+          {
+            "enabled": true,
+            "wasEnabled": true,
+            "remaining": 0,
+            "alpha": 1
+          }
+        ]
+      },
+      {
+        "id": 400,
+        "enabled": true,
+        "states": [
+          {
+            "enabled": true,
+            "wasEnabled": true,
+            "remaining": 0,
+            "alpha": 1
+          },
+          {
+            "enabled": true,
+            "wasEnabled": true,
+            "remaining": 0,
+            "alpha": 1
+          },
+          {
+            "enabled": true,
+            "wasEnabled": true,
+            "remaining": 0,
+            "alpha": 1
+          },
+          {
+            "enabled": true,
+            "wasEnabled": true,
+            "remaining": 0,
+            "alpha": 1
+          },
+          {
+            "enabled": true,
+            "wasEnabled": true,
+            "remaining": 0,
+            "alpha": 1
+          },
+          {
+            "enabled": true,
+            "wasEnabled": true,
+            "remaining": 0,
+            "alpha": 1
+          },
+          {
+            "enabled": true,
+            "wasEnabled": true,
+            "remaining": 0,
+            "alpha": 1
+          },
+          {
+            "enabled": true,
+            "wasEnabled": true,
+            "remaining": 0,
+            "alpha": 1
+          }
+        ]
+      },
+      {
+        "id": 600,
+        "enabled": true,
+        "states": [
+          {
+            "enabled": true,
+            "wasEnabled": true,
+            "remaining": 0,
+            "alpha": 1
+          },
+          {
+            "enabled": true,
+            "wasEnabled": true,
+            "remaining": 0,
+            "alpha": 1
+          },
+          {
+            "enabled": true,
+            "wasEnabled": true,
+            "remaining": 0,
+            "alpha": 1
+          },
+          {
+            "enabled": true,
+            "wasEnabled": true,
+            "remaining": 0,
+            "alpha": 1
+          },
+          {
+            "enabled": true,
+            "wasEnabled": true,
+            "remaining": 0,
+            "alpha": 1
+          },
+          {
+            "enabled": true,
+            "wasEnabled": true,
+            "remaining": 0,
+            "alpha": 1
+          },
+          {
+            "enabled": true,
+            "wasEnabled": true,
+            "remaining": 0,
+            "alpha": 1
+          },
+          {
+            "enabled": true,
+            "wasEnabled": true,
+            "remaining": 0,
+            "alpha": 1
+          }
+        ]
+      },
+      {
+        "id": 326,
+        "enabled": false,
+        "states": [
+          {
+            "enabled": false,
+            "wasEnabled": false,
+            "remaining": 0,
+            "alpha": 0
+          },
+          {
+            "enabled": false,
+            "wasEnabled": false,
+            "remaining": 0,
+            "alpha": 0
+          },
+          {
+            "enabled": false,
+            "wasEnabled": false,
+            "remaining": 0,
+            "alpha": 0
+          },
+          {
+            "enabled": false,
+            "wasEnabled": false,
+            "remaining": 0,
+            "alpha": 0
+          },
+          {
+            "enabled": false,
+            "wasEnabled": false,
+            "remaining": 0,
+            "alpha": 0
+          },
+          {
+            "enabled": false,
+            "wasEnabled": false,
+            "remaining": 0,
+            "alpha": 0
+          },
+          {
+            "enabled": false,
+            "wasEnabled": false,
+            "remaining": 0,
+            "alpha": 0
+          },
+          {
+            "enabled": false,
+            "wasEnabled": false,
+            "remaining": 0,
+            "alpha": 0
+          }
+        ]
+      }
+    ],
+    "scope": "Shared owner for all 24 restored parent constructors, seven derived environment/weather event bodies and native PointLight pool through original EventBarn. Prepared allocation/metadata/trigger IDs/resource/camera services; unimplemented class updates, occlusion/weather rendering and full native startup remain pending"
+  },
+  "performance": {
+    "text": "FPS 1 · 250.0 ms · 581×640",
+    "fps": "1",
+    "frameMs": "250.000"
+  }
+}

@@ -1,0 +1,5809 @@
+{
+  "className": "TerrainBlobGroup",
+  "functionGroup": "地形生成",
+  "functionRole": "地形对象集合、网格生成与细分配置",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "TerrainBlobGroup 的原默认值、继承初始化及 15 个序列化字段变体；原注册字段 16 项。"
+    },
+    {
+      "name": "地形对象集合、网格生成与细分配置",
+      "status": "pending",
+      "description": "已有 BST GUID 与实际地形记录关联；完整 Blob/Group/Prefab 加载、生成、事件和碰撞重建待恢复。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Clump（134 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "partial",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "TerrainBlobGroup",
+    "category": "地形生成",
+    "functionGroupId": "terrain",
+    "functionRole": "地形对象集合、网格生成与细分配置",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "TerrainBlobGroup 的原默认值、继承初始化及 15 个序列化字段变体；原注册字段 16 项。"
+      },
+      {
+        "name": "地形对象集合、网格生成与细分配置",
+        "status": "pending",
+        "description": "已有 BST GUID 与实际地形记录关联；完整 Blob/Group/Prefab 加载、生成、事件和碰撞重建待恢复。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Clump（134 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "partial",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Clump",
+        "references": 134
+      }
+    ],
+    "rttiWorkingGroup": "地形、云、水和环境",
+    "role": "对象实例类型",
+    "instances": 109,
+    "nestedInstances": 0,
+    "referenceFields": 134,
+    "declaredLevels": 32,
+    "levels": [
+      {
+        "level": "CandleSpace",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "CandleSpaceEnd",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "CarryLand",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "CarryLand2",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "CarryLand3",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Dawn",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DayEnd",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DayHubCave",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Dusk",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DuskGraveyard",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DuskMid",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Dusk_CrabField",
+        "nodes": 5,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "HubReveal",
+        "nodes": 5,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Night",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "NightEnd",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "NightEntrance",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_ButterflyFields",
+        "nodes": 7,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Cave",
+        "nodes": 6,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_NestAndKeeper",
+        "nodes": 5,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Village",
+        "nodes": 5,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Rain",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainEnd",
+        "nodes": 5,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainForest",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainMid",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SkyHub2",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Storm",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "StormEnd",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Sunset",
+        "nodes": 5,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SunsetEnd",
+        "nodes": 6,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SunsetEnd2",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SunsetRace",
+        "nodes": 7,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "TitleWater",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "blobPrefabs",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "blobs",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "bstGuid",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "canPassThrough",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "cutoffLevel",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "enableTessellation",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "fineMode",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "generateOctree",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "gridResolution",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "isBackground",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "isCloud",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "isEnabled",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "maxVertCount",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "seaLevelCutoff",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "subsurfaceDensity",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100d05090",
+    "nativeRegisteredFields": [
+      {
+        "name": "maxVertCount",
+        "typeGetter": "__Z17GetMetaTypeByTypeIjERK8MetaTypev",
+        "nativeOffset": 24,
+        "registrationFunction": "0x1006b2840",
+        "propertyAddress": "0x100d044b0"
+      },
+      {
+        "name": "canPassThrough",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 47,
+        "registrationFunction": "0x1006b2840",
+        "propertyAddress": "0x100d04500"
+      },
+      {
+        "name": "bstGuid",
+        "typeGetter": "__Z17GetMetaTypeByTypeIjERK8MetaTypev",
+        "nativeOffset": 4,
+        "registrationFunction": "0x1006b2840",
+        "propertyAddress": "0x100d04550"
+      },
+      {
+        "name": "blobs",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 8,
+        "registrationFunction": "0x1006b2840",
+        "propertyAddress": "0x100d045a0"
+      },
+      {
+        "name": "blobPrefabs",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 16,
+        "registrationFunction": "0x1006b2840",
+        "propertyAddress": "0x100d045f0"
+      },
+      {
+        "name": "gridResolution",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 28,
+        "registrationFunction": "0x1006b2840",
+        "propertyAddress": "0x100d04640"
+      },
+      {
+        "name": "subsurfaceDensity",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 32,
+        "registrationFunction": "0x1006b2840",
+        "propertyAddress": "0x100d04690"
+      },
+      {
+        "name": "seaLevelCutoff",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 40,
+        "registrationFunction": "0x1006b2840",
+        "propertyAddress": "0x100d046e0"
+      },
+      {
+        "name": "cutoffLevel",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 36,
+        "registrationFunction": "0x1006b2840",
+        "propertyAddress": "0x100d04730"
+      },
+      {
+        "name": "generateOctree",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 41,
+        "registrationFunction": "0x1006b2840",
+        "propertyAddress": "0x100d04780"
+      },
+      {
+        "name": "enableTessellation",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 42,
+        "registrationFunction": "0x1006b2840",
+        "propertyAddress": "0x100d047d0"
+      },
+      {
+        "name": "fineMode",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 43,
+        "registrationFunction": "0x1006b2840",
+        "propertyAddress": "0x100d04820"
+      },
+      {
+        "name": "isCloud",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 44,
+        "registrationFunction": "0x1006b2840",
+        "propertyAddress": "0x100d04870"
+      },
+      {
+        "name": "isBackground",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 45,
+        "registrationFunction": "0x1006b2840",
+        "propertyAddress": "0x100d048c0"
+      },
+      {
+        "name": "isEnabled",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 46,
+        "registrationFunction": "0x1006b2840",
+        "propertyAddress": "0x100d04910"
+      },
+      {
+        "name": "blobPrefabHash",
+        "typeGetter": "__Z17GetMetaTypeByTypeIjERK8MetaTypev",
+        "nativeOffset": 52,
+        "registrationFunction": "0x1006b2840",
+        "propertyAddress": "0x100d04960"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 2,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [
+      "docs/BstBaked数据段清单.md"
+    ],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 16 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "partial",
+        "note": "已有 BST GUID 与实际地形记录关联；完整 Blob/Group/Prefab 加载、生成、事件和碰撞重建待恢复。",
+        "evidence": [
+          "docs/BstBaked数据段清单.md"
+        ]
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "partial",
+        "note": "已有 BST GUID 与实际地形记录关联；完整 Blob/Group/Prefab 加载、生成、事件和碰撞重建待恢复。",
+        "evidence": [
+          "docs/BstBaked数据段清单.md"
+        ]
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已有 BST GUID 与实际地形记录关联；完整 Blob/Group/Prefab 加载、生成、事件和碰撞重建待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "CandleSpace:n39",
+      "level": "CandleSpace",
+      "nodeId": 39,
+      "name": "BstNode_2529559349",
+      "className": "TerrainBlobGroup",
+      "classIndex": 18,
+      "sourceOffset": 28919,
+      "sourceLength": 59,
+      "sourceSha256": "03422d38a328e410a2224b4a7c6bc02957ca84916ebebcda3f1dd0dc55ea3dc6",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2529559349,
+            "int": -1765407947,
+            "float": -3.1990649172334075e-25
+          },
+          "raw": "3503c696"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n39/p8",
+          "fieldName": "blobs",
+          "target": "CandleSpace:n185",
+          "targetNodeId": 185,
+          "offset": 28962
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CandleSpaceEnd:n109",
+      "level": "CandleSpaceEnd",
+      "nodeId": 109,
+      "name": "BstNode_2529559349",
+      "className": "TerrainBlobGroup",
+      "classIndex": 27,
+      "sourceOffset": 32054,
+      "sourceLength": 59,
+      "sourceSha256": "26d475a0bdf0e4626164e4b991e28278139d79536a2e886d1970637349d51e1c",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2529559349,
+            "int": -1765407947,
+            "float": -3.1990649172334075e-25
+          },
+          "raw": "3503c696"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n109/p8",
+          "fieldName": "blobs",
+          "target": "CandleSpaceEnd:n527",
+          "targetNodeId": 527,
+          "offset": 32097
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n6",
+      "level": "CarryLand",
+      "nodeId": 6,
+      "name": "BstNode_6",
+      "className": "TerrainBlobGroup",
+      "classIndex": 5,
+      "sourceOffset": 9800,
+      "sourceLength": 50,
+      "sourceSha256": "fbb97c9fb501e2be58d7548d097c7b13a58b4bacc49805787055ce8485ca2e16",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 6,
+            "int": 6,
+            "float": 8.407790785948902e-45
+          },
+          "raw": "06000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n6/p8",
+          "fieldName": "blobs",
+          "target": "CarryLand:n20",
+          "targetNodeId": 20,
+          "offset": 9834
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n19",
+      "level": "CarryLand",
+      "nodeId": 19,
+      "name": "BstNode_5",
+      "className": "TerrainBlobGroup",
+      "classIndex": 5,
+      "sourceOffset": 11677,
+      "sourceLength": 50,
+      "sourceSha256": "b2100863cb53bc74047b6b400adc2329acea1ee608b0c2fffab8b48b06b4fd22",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 5,
+            "int": 5,
+            "float": 7.006492321624085e-45
+          },
+          "raw": "05000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n19/p5",
+          "fieldName": "blobPrefabs",
+          "target": "CarryLand:n50",
+          "targetNodeId": 50,
+          "offset": 11702
+        },
+        {
+          "fieldId": "n19/p8",
+          "fieldName": "blobs",
+          "target": "CarryLand:n28",
+          "targetNodeId": 28,
+          "offset": 11711
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand2:n144",
+      "level": "CarryLand2",
+      "nodeId": 144,
+      "name": "BstNode_5",
+      "className": "TerrainBlobGroup",
+      "classIndex": 20,
+      "sourceOffset": 36344,
+      "sourceLength": 50,
+      "sourceSha256": "e58b0cd1a11c5a320b59bd8bc03f788736220b1fa9f97e12771dd0577d205c42",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 5,
+            "int": 5,
+            "float": 7.006492321624085e-45
+          },
+          "raw": "05000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n144/p5",
+          "fieldName": "blobPrefabs",
+          "target": "CarryLand2:n103",
+          "targetNodeId": 103,
+          "offset": 36369
+        },
+        {
+          "fieldId": "n144/p8",
+          "fieldName": "blobs",
+          "target": "CarryLand2:n196",
+          "targetNodeId": 196,
+          "offset": 36378
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand2:n220",
+      "level": "CarryLand2",
+      "nodeId": 220,
+      "name": "BstNode_6",
+      "className": "TerrainBlobGroup",
+      "classIndex": 20,
+      "sourceOffset": 49263,
+      "sourceLength": 50,
+      "sourceSha256": "dbe093a73f4656fa2d0e96c9ddf045890e9c563289f8fcce072b186eaaef2722",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 6,
+            "int": 6,
+            "float": 8.407790785948902e-45
+          },
+          "raw": "06000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n220/p8",
+          "fieldName": "blobs",
+          "target": "CarryLand2:n145",
+          "targetNodeId": 145,
+          "offset": 49297
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand3:n13",
+      "level": "CarryLand3",
+      "nodeId": 13,
+      "name": "BstNode_5",
+      "className": "TerrainBlobGroup",
+      "classIndex": 7,
+      "sourceOffset": 7692,
+      "sourceLength": 50,
+      "sourceSha256": "8df71a7f3ac4046a1c390fe1ac52465e089ae54e7ee4bc3082d19b3d59ab8f99",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 5,
+            "int": 5,
+            "float": 7.006492321624085e-45
+          },
+          "raw": "05000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n13/p5",
+          "fieldName": "blobPrefabs",
+          "target": "CarryLand3:n32",
+          "targetNodeId": 32,
+          "offset": 7717
+        },
+        {
+          "fieldId": "n13/p8",
+          "fieldName": "blobs",
+          "target": "CarryLand3:n23",
+          "targetNodeId": 23,
+          "offset": 7726
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand3:n39",
+      "level": "CarryLand3",
+      "nodeId": 39,
+      "name": "BstNode_6",
+      "className": "TerrainBlobGroup",
+      "classIndex": 7,
+      "sourceOffset": 11167,
+      "sourceLength": 50,
+      "sourceSha256": "1e471d2014e344a399e98573c3e66a00b09db2c8b07750b1f9741716d164c081",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 6,
+            "int": 6,
+            "float": 8.407790785948902e-45
+          },
+          "raw": "06000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n39/p8",
+          "fieldName": "blobs",
+          "target": "CarryLand3:n14",
+          "targetNodeId": 14,
+          "offset": 11201
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n270",
+      "level": "Dawn",
+      "nodeId": 270,
+      "name": "BstNode_1680",
+      "className": "TerrainBlobGroup",
+      "classIndex": 47,
+      "sourceOffset": 77080,
+      "sourceLength": 53,
+      "sourceSha256": "eafaa7580c78e0b46c1b7d50aa32444b2564bbed2f10fb0e2828320c24adaf4f",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 1680,
+            "int": 1680,
+            "float": 2.3541814200656927e-42
+          },
+          "raw": "90060000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n270/p8",
+          "fieldName": "blobs",
+          "target": "Dawn:n380",
+          "targetNodeId": 380,
+          "offset": 77117
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1181",
+      "level": "Dawn",
+      "nodeId": 1181,
+      "name": "BstNode_2446917830",
+      "className": "TerrainBlobGroup",
+      "classIndex": 47,
+      "sourceOffset": 209539,
+      "sourceLength": 59,
+      "sourceSha256": "3a19b0e8e191b1c992959e84ff0adc948619fa9e45c3192ff89550df52e45a4b",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2446917830,
+            "int": -1848049466,
+            "float": -3.423703995425315e-28
+          },
+          "raw": "c600d991"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1181/p8",
+          "fieldName": "blobs",
+          "target": "Dawn:n1405",
+          "targetNodeId": 1405,
+          "offset": 209582
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2630",
+      "level": "Dawn",
+      "nodeId": 2630,
+      "name": "BstNode_6",
+      "className": "TerrainBlobGroup",
+      "classIndex": 47,
+      "sourceOffset": 437305,
+      "sourceLength": 50,
+      "sourceSha256": "565a67109dbcd63d52d326a4467e79d9746964faa9596b50b20f415203165c2d",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 6,
+            "int": 6,
+            "float": 8.407790785948902e-45
+          },
+          "raw": "06000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n2630/p8",
+          "fieldName": "blobs",
+          "target": "Dawn:n2337",
+          "targetNodeId": 2337,
+          "offset": 437339
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n201",
+      "level": "DayEnd",
+      "nodeId": 201,
+      "name": "BstNode_654",
+      "className": "TerrainBlobGroup",
+      "classIndex": 37,
+      "sourceOffset": 63981,
+      "sourceLength": 52,
+      "sourceSha256": "83aebf50bb338bbf70562edee536758712c5171216394200b43d1fb54563e1be",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 654,
+            "int": 654,
+            "float": 9.164491956684304e-43
+          },
+          "raw": "8e020000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n201/p8",
+          "fieldName": "blobs",
+          "target": "DayEnd:n974",
+          "targetNodeId": 974,
+          "offset": 64017
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n366",
+      "level": "DayEnd",
+      "nodeId": 366,
+      "name": "BstNode_42",
+      "className": "TerrainBlobGroup",
+      "classIndex": 37,
+      "sourceOffset": 92694,
+      "sourceLength": 51,
+      "sourceSha256": "d9d662aaac686a2a3e3dae709c7b8f0062650d9e33d7caaf6736339b0ef820a4",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 42,
+            "int": 42,
+            "float": 5.885453550164232e-44
+          },
+          "raw": "2a000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n366/p8",
+          "fieldName": "blobs",
+          "target": "DayEnd:n568",
+          "targetNodeId": 568,
+          "offset": 92729
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n891",
+      "level": "DayEnd",
+      "nodeId": 891,
+      "name": "BstNode_6",
+      "className": "TerrainBlobGroup",
+      "classIndex": 37,
+      "sourceOffset": 191690,
+      "sourceLength": 50,
+      "sourceSha256": "5c3dd099d4f50a7651e960552dc9eca7b59357e4de1a98055d4bd3ca21437281",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 6,
+            "int": 6,
+            "float": 8.407790785948902e-45
+          },
+          "raw": "06000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n891/p8",
+          "fieldName": "blobs",
+          "target": "DayEnd:n416",
+          "targetNodeId": 416,
+          "offset": 191724
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayHubCave:n378",
+      "level": "DayHubCave",
+      "nodeId": 378,
+      "name": "BstNode_5",
+      "className": "TerrainBlobGroup",
+      "classIndex": 45,
+      "sourceOffset": 93570,
+      "sourceLength": 50,
+      "sourceSha256": "58fe1eda4064dba1429b4fe76deb510987235c58ac941913649338b8621ca5f7",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 5,
+            "int": 5,
+            "float": 7.006492321624085e-45
+          },
+          "raw": "05000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n378/p5",
+          "fieldName": "blobPrefabs",
+          "target": "DayHubCave:n655",
+          "targetNodeId": 655,
+          "offset": 93595
+        },
+        {
+          "fieldId": "n378/p8",
+          "fieldName": "blobs",
+          "target": "DayHubCave:n248",
+          "targetNodeId": 248,
+          "offset": 93604
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayHubCave:n601",
+      "level": "DayHubCave",
+      "nodeId": 601,
+      "name": "BstNode_6",
+      "className": "TerrainBlobGroup",
+      "classIndex": 45,
+      "sourceOffset": 139062,
+      "sourceLength": 50,
+      "sourceSha256": "0b406625f84be3c880c0a278e197f6fb94c4d3c42ff5477d4d83bd2643770e93",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 6,
+            "int": 6,
+            "float": 8.407790785948902e-45
+          },
+          "raw": "06000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n601/p8",
+          "fieldName": "blobs",
+          "target": "DayHubCave:n870",
+          "targetNodeId": 870,
+          "offset": 139096
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n93",
+      "level": "Dusk",
+      "nodeId": 93,
+      "name": "BstNode_2345992566",
+      "className": "TerrainBlobGroup",
+      "classIndex": 24,
+      "sourceOffset": 39723,
+      "sourceLength": 59,
+      "sourceSha256": "75ef95533bf1efa11739854a8358ff8adc7e9a61b9c6891008200258ca3d2960",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2345992566,
+            "int": -1948974730,
+            "float": -8.204681380533229e-32
+          },
+          "raw": "7601d58b"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n93/p8",
+          "fieldName": "blobs",
+          "target": "Dusk:n99",
+          "targetNodeId": 99,
+          "offset": 39766
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n156",
+      "level": "Dusk",
+      "nodeId": 156,
+      "name": "BstNode_5",
+      "className": "TerrainBlobGroup",
+      "classIndex": 24,
+      "sourceOffset": 52079,
+      "sourceLength": 50,
+      "sourceSha256": "1b230345a372a45c4187d1a241fff80d837570652775bb67df44bd28dba73a5c",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 5,
+            "int": 5,
+            "float": 7.006492321624085e-45
+          },
+          "raw": "05000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n156/p5",
+          "fieldName": "blobPrefabs",
+          "target": "Dusk:n314",
+          "targetNodeId": 314,
+          "offset": 52104
+        },
+        {
+          "fieldId": "n156/p8",
+          "fieldName": "blobs",
+          "target": "Dusk:n281",
+          "targetNodeId": 281,
+          "offset": 52113
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n871",
+      "level": "Dusk",
+      "nodeId": 871,
+      "name": "BstNode_6",
+      "className": "TerrainBlobGroup",
+      "classIndex": 24,
+      "sourceOffset": 182067,
+      "sourceLength": 50,
+      "sourceSha256": "6103eb15407d116be297486e010ececbd0d45722e6b99c963cfb67afbca54691",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 6,
+            "int": 6,
+            "float": 8.407790785948902e-45
+          },
+          "raw": "06000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n871/p8",
+          "fieldName": "blobs",
+          "target": "Dusk:n380",
+          "targetNodeId": 380,
+          "offset": 182101
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n226",
+      "level": "DuskGraveyard",
+      "nodeId": 226,
+      "name": "BstNode_5",
+      "className": "TerrainBlobGroup",
+      "classIndex": 29,
+      "sourceOffset": 76811,
+      "sourceLength": 50,
+      "sourceSha256": "b5fc396e9ed60ee69c9f9057e7e40b35900fe4b385a766884261fc8caf9633ea",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 5,
+            "int": 5,
+            "float": 7.006492321624085e-45
+          },
+          "raw": "05000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n226/p5",
+          "fieldName": "blobPrefabs",
+          "target": "DuskGraveyard:n531",
+          "targetNodeId": 531,
+          "offset": 76836
+        },
+        {
+          "fieldId": "n226/p8",
+          "fieldName": "blobs",
+          "target": "DuskGraveyard:n458",
+          "targetNodeId": 458,
+          "offset": 76845
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n1563",
+      "level": "DuskGraveyard",
+      "nodeId": 1563,
+      "name": "BstNode_132",
+      "className": "TerrainBlobGroup",
+      "classIndex": 29,
+      "sourceOffset": 386734,
+      "sourceLength": 52,
+      "sourceSha256": "a1b2d74ea70c11220e9923bcacd97cd1e35e3777725ddc373fd9813ea104a2d3",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 132,
+            "int": 132,
+            "float": 1.8497139729087585e-43
+          },
+          "raw": "84000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1563/p5",
+          "fieldName": "blobPrefabs",
+          "target": "DuskGraveyard:n396",
+          "targetNodeId": 396,
+          "offset": 386761
+        },
+        {
+          "fieldId": "n1563/p8",
+          "fieldName": "blobs",
+          "target": "DuskGraveyard:n632",
+          "targetNodeId": 632,
+          "offset": 386770
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n131",
+      "level": "DuskMid",
+      "nodeId": 131,
+      "name": "BstNode_2345992610",
+      "className": "TerrainBlobGroup",
+      "classIndex": 26,
+      "sourceOffset": 43112,
+      "sourceLength": 59,
+      "sourceSha256": "ad2e95793b1fb07c4c48376d95e15825d1c52b995db347c93dfda30ec5ccdcd1",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2345992610,
+            "int": -1948974686,
+            "float": -8.204707241408947e-32
+          },
+          "raw": "a201d58b"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n131/p8",
+          "fieldName": "blobs",
+          "target": "DuskMid:n589",
+          "targetNodeId": 589,
+          "offset": 43155
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n137",
+      "level": "DuskMid",
+      "nodeId": 137,
+      "name": "BstNode_132",
+      "className": "TerrainBlobGroup",
+      "classIndex": 26,
+      "sourceOffset": 43907,
+      "sourceLength": 52,
+      "sourceSha256": "c25de774e116d159d62c874472429843d7325c0864fa8298e91ca1b7d6ce315b",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 132,
+            "int": 132,
+            "float": 1.8497139729087585e-43
+          },
+          "raw": "84000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n137/p8",
+          "fieldName": "blobs",
+          "target": "DuskMid:n358",
+          "targetNodeId": 358,
+          "offset": 43943
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n154",
+      "level": "DuskMid",
+      "nodeId": 154,
+      "name": "BstNode_5",
+      "className": "TerrainBlobGroup",
+      "classIndex": 26,
+      "sourceOffset": 47394,
+      "sourceLength": 50,
+      "sourceSha256": "1704a1f9496b3126f70178c342ff962f85de9d71d128f44486ab0f7babcc324d",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 5,
+            "int": 5,
+            "float": 7.006492321624085e-45
+          },
+          "raw": "05000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n154/p5",
+          "fieldName": "blobPrefabs",
+          "target": "DuskMid:n310",
+          "targetNodeId": 310,
+          "offset": 47419
+        },
+        {
+          "fieldId": "n154/p8",
+          "fieldName": "blobs",
+          "target": "DuskMid:n277",
+          "targetNodeId": 277,
+          "offset": 47428
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n744",
+      "level": "DuskMid",
+      "nodeId": 744,
+      "name": "BstNode_6",
+      "className": "TerrainBlobGroup",
+      "classIndex": 26,
+      "sourceOffset": 159870,
+      "sourceLength": 50,
+      "sourceSha256": "0367662c8802f1c84544447db3622d367783c8c11f591deb234dbcaec82cfea9",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 6,
+            "int": 6,
+            "float": 8.407790785948902e-45
+          },
+          "raw": "06000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n744/p8",
+          "fieldName": "blobs",
+          "target": "DuskMid:n377",
+          "targetNodeId": 377,
+          "offset": 159904
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n144",
+      "level": "Dusk_CrabField",
+      "nodeId": 144,
+      "name": "BstNode_5",
+      "className": "TerrainBlobGroup",
+      "classIndex": 18,
+      "sourceOffset": 46451,
+      "sourceLength": 50,
+      "sourceSha256": "8cf6fb36af4ae3a2353339a9aad0d58132767944f39065936ddb321dfd4ccdb2",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 5,
+            "int": 5,
+            "float": 7.006492321624085e-45
+          },
+          "raw": "05000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n144/p5",
+          "fieldName": "blobPrefabs",
+          "target": "Dusk_CrabField:n584",
+          "targetNodeId": 584,
+          "offset": 46476
+        },
+        {
+          "fieldId": "n144/p8",
+          "fieldName": "blobs",
+          "target": "Dusk_CrabField:n739",
+          "targetNodeId": 739,
+          "offset": 46485
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n235",
+      "level": "Dusk_CrabField",
+      "nodeId": 235,
+      "name": "BstNode_2529559093",
+      "className": "TerrainBlobGroup",
+      "classIndex": 18,
+      "sourceOffset": 68273,
+      "sourceLength": 59,
+      "sourceSha256": "d54071d734cda92baa73bea3baaaa1ba6d83f9e10403dbf0baf6959d2f3d656d",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2529559093,
+            "int": -1765408203,
+            "float": -3.19900180836099e-25
+          },
+          "raw": "3502c696"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n235/p8",
+          "fieldName": "blobs",
+          "target": "Dusk_CrabField:n868",
+          "targetNodeId": 868,
+          "offset": 68316
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n837",
+      "level": "Dusk_CrabField",
+      "nodeId": 837,
+      "name": "BstNode_6",
+      "className": "TerrainBlobGroup",
+      "classIndex": 18,
+      "sourceOffset": 207119,
+      "sourceLength": 50,
+      "sourceSha256": "0d0e6269329778677909ac2188fe4dc94e368f0c94faf560d42318b3b24c9df2",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 6,
+            "int": 6,
+            "float": 8.407790785948902e-45
+          },
+          "raw": "06000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n837/p8",
+          "fieldName": "blobs",
+          "target": "Dusk_CrabField:n997",
+          "targetNodeId": 997,
+          "offset": 207153
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n938",
+      "level": "Dusk_CrabField",
+      "nodeId": 938,
+      "name": "BstNode_2529559213",
+      "className": "TerrainBlobGroup",
+      "classIndex": 18,
+      "sourceOffset": 230972,
+      "sourceLength": 59,
+      "sourceSha256": "82454d71b6efa985a0792e1bcc99da1ec0f0a4ad568def79373628e8ec1974e7",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2529559213,
+            "int": -1765408083,
+            "float": -3.1990313906449356e-25
+          },
+          "raw": "ad02c696"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n938/p8",
+          "fieldName": "blobs",
+          "target": "Dusk_CrabField:n47",
+          "targetNodeId": 47,
+          "offset": 231015
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n958",
+      "level": "Dusk_CrabField",
+      "nodeId": 958,
+      "name": "BstNode_2529559375",
+      "className": "TerrainBlobGroup",
+      "classIndex": 18,
+      "sourceOffset": 234384,
+      "sourceLength": 59,
+      "sourceSha256": "fb6691a68c401dbd224639cdf7527c8b6e9dd6812e352505fe38c47fe9a2d9d8",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2529559375,
+            "int": -1765407921,
+            "float": -3.1990713267282624e-25
+          },
+          "raw": "4f03c696"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n958/p8",
+          "fieldName": "blobs",
+          "target": "Dusk_CrabField:n998",
+          "targetNodeId": 998,
+          "offset": 234427
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n48",
+      "level": "HubReveal",
+      "nodeId": 48,
+      "name": "BstNode_1301",
+      "className": "TerrainBlobGroup",
+      "classIndex": 22,
+      "sourceOffset": 36301,
+      "sourceLength": 53,
+      "sourceSha256": "27a677eaef5de0a0f3c8b7ad260c7ecd5cb6bbbd446ad822062688e55f14aeda",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 1301,
+            "int": 1301,
+            "float": 1.823089302086587e-42
+          },
+          "raw": "15050000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n48/p8",
+          "fieldName": "blobs",
+          "target": "HubReveal:n823",
+          "targetNodeId": 823,
+          "offset": 36338
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n368",
+      "level": "HubReveal",
+      "nodeId": 368,
+      "name": "BstNode_1312",
+      "className": "TerrainBlobGroup",
+      "classIndex": 22,
+      "sourceOffset": 92540,
+      "sourceLength": 53,
+      "sourceSha256": "22ea6bf29f269f4cff1e2041b1e6778d24b95c6fe38d786799f872c3a3a3e432",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 1312,
+            "int": 1312,
+            "float": 1.83850358519416e-42
+          },
+          "raw": "20050000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n368/p8",
+          "fieldName": "blobs",
+          "target": "HubReveal:n1182",
+          "targetNodeId": 1182,
+          "offset": 92577
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n607",
+      "level": "HubReveal",
+      "nodeId": 607,
+      "name": "BstNode_1567",
+      "className": "TerrainBlobGroup",
+      "classIndex": 22,
+      "sourceOffset": 132625,
+      "sourceLength": 53,
+      "sourceSha256": "91d34067b5afc5b17ccfcad8913d6bbc54d9d916686aa1c1983aa497b2f63013",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 1567,
+            "int": 1567,
+            "float": 2.1958346935969884e-42
+          },
+          "raw": "1f060000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n607/p5",
+          "fieldName": "blobPrefabs",
+          "target": "HubReveal:n222",
+          "targetNodeId": 222,
+          "offset": 132653
+        },
+        {
+          "fieldId": "n607/p8",
+          "fieldName": "blobs",
+          "target": "HubReveal:n8",
+          "targetNodeId": 8,
+          "offset": 132662
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n713",
+      "level": "HubReveal",
+      "nodeId": 713,
+      "name": "BstNode_5303",
+      "className": "TerrainBlobGroup",
+      "classIndex": 22,
+      "sourceOffset": 148417,
+      "sourceLength": 53,
+      "sourceSha256": "12099de156e4228f515626a29e6b5e93a2aa5d8d2c1bbc36a5b592d3a3c81e21",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 5303,
+            "int": 5303,
+            "float": 7.431085756314505e-42
+          },
+          "raw": "b7140000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n713/p8",
+          "fieldName": "blobs",
+          "target": "HubReveal:n959",
+          "targetNodeId": 959,
+          "offset": 148454
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n1425",
+      "level": "HubReveal",
+      "nodeId": 1425,
+      "name": "BstNode_612",
+      "className": "TerrainBlobGroup",
+      "classIndex": 22,
+      "sourceOffset": 270107,
+      "sourceLength": 52,
+      "sourceSha256": "a9207e992238f234582cb0eb1293a36358583843961c6ee0f234bcca38a7537b",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 612,
+            "int": 612,
+            "float": 8.57594660166788e-43
+          },
+          "raw": "64020000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1425/p8",
+          "fieldName": "blobs",
+          "target": "HubReveal:n485",
+          "targetNodeId": 485,
+          "offset": 270143
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1550",
+      "level": "Night",
+      "nodeId": 1550,
+      "name": "BstNode_5",
+      "className": "TerrainBlobGroup",
+      "classIndex": 63,
+      "sourceOffset": 244521,
+      "sourceLength": 50,
+      "sourceSha256": "973dc7c339de632e921943722635d8971f9cec881fb439647cc0cb83500f32ed",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 5,
+            "int": 5,
+            "float": 7.006492321624085e-45
+          },
+          "raw": "05000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1550/p8",
+          "fieldName": "blobs",
+          "target": "Night:n1021",
+          "targetNodeId": 1021,
+          "offset": 244555
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "NightEnd:n237",
+      "level": "NightEnd",
+      "nodeId": 237,
+      "name": "BstNode_5",
+      "className": "TerrainBlobGroup",
+      "classIndex": 35,
+      "sourceOffset": 61429,
+      "sourceLength": 50,
+      "sourceSha256": "8a6224ec58413440165f664e02a275db78a5c9358ec4ba62c23ff91bd2bb8f43",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 5,
+            "int": 5,
+            "float": 7.006492321624085e-45
+          },
+          "raw": "05000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n237/p8",
+          "fieldName": "blobs",
+          "target": "NightEnd:n463",
+          "targetNodeId": 463,
+          "offset": 61463
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "NightEntrance:n170",
+      "level": "NightEntrance",
+      "nodeId": 170,
+      "name": "BstNode_5",
+      "className": "TerrainBlobGroup",
+      "classIndex": 25,
+      "sourceOffset": 41815,
+      "sourceLength": 50,
+      "sourceSha256": "ba25268aae4db85d9f2ff8698bec11da9e91c57f5659b6e5024538c1aa05bfd7",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 5,
+            "int": 5,
+            "float": 7.006492321624085e-45
+          },
+          "raw": "05000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n170/p5",
+          "fieldName": "blobPrefabs",
+          "target": "NightEntrance:n319",
+          "targetNodeId": 319,
+          "offset": 41840
+        },
+        {
+          "fieldId": "n170/p8",
+          "fieldName": "blobs",
+          "target": "NightEntrance:n286",
+          "targetNodeId": 286,
+          "offset": 41849
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n214",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 214,
+      "name": "BstNode_2529558805",
+      "className": "TerrainBlobGroup",
+      "classIndex": 34,
+      "sourceOffset": 68259,
+      "sourceLength": 59,
+      "sourceSha256": "d341ff21c45718ac549efc7e39511b67842cc1be4e92872329a119942b2bb261",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2529558805,
+            "int": -1765408491,
+            "float": -3.19893081087952e-25
+          },
+          "raw": "1501c696"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n214/p8",
+          "fieldName": "blobs",
+          "target": "Prairie_ButterflyFields:n28",
+          "targetNodeId": 28,
+          "offset": 68302
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n227",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 227,
+      "name": "BstNode_1293287451",
+      "className": "TerrainBlobGroup",
+      "classIndex": 34,
+      "sourceOffset": 72796,
+      "sourceLength": 59,
+      "sourceSha256": "f183e90ee7560e94d2015e930e82c23bf400ee392b3dc05810a68f46d01ef798",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 1293287451,
+            "int": 1293287451,
+            "float": 157286832
+          },
+          "raw": "1b00164d"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n227/p5",
+          "fieldName": "blobPrefabs",
+          "target": "Prairie_ButterflyFields:n1155",
+          "targetNodeId": 1155,
+          "offset": 72830
+        },
+        {
+          "fieldId": "n227/p8",
+          "fieldName": "blobs",
+          "target": "Prairie_ButterflyFields:n283",
+          "targetNodeId": 283,
+          "offset": 72839
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n284",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 284,
+      "name": "BstNode_2279669794",
+      "className": "TerrainBlobGroup",
+      "classIndex": 34,
+      "sourceOffset": 86816,
+      "sourceLength": 59,
+      "sourceSha256": "efa8d3a9627869be557683dc0feb3e75411041a0d2b35876ace7c841f68cb0ca",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2279669794,
+            "int": -2015297502,
+            "float": -3.3854315363853615e-34
+          },
+          "raw": "2200e187"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n284/p8",
+          "fieldName": "blobs",
+          "target": "Prairie_ButterflyFields:n951",
+          "targetNodeId": 951,
+          "offset": 86859
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n894",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 894,
+      "name": "BstNode_5303",
+      "className": "TerrainBlobGroup",
+      "classIndex": 34,
+      "sourceOffset": 194806,
+      "sourceLength": 53,
+      "sourceSha256": "086db50d8fb28c6e1cc9a2538a42918a9aeca85978cffde4f44424b4ceb00a67",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 5303,
+            "int": 5303,
+            "float": 7.431085756314505e-42
+          },
+          "raw": "b7140000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n894/p8",
+          "fieldName": "blobs",
+          "target": "Prairie_ButterflyFields:n565",
+          "targetNodeId": 565,
+          "offset": 194843
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n1073",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 1073,
+      "name": "BstNode_1842806926",
+      "className": "TerrainBlobGroup",
+      "classIndex": 34,
+      "sourceOffset": 233116,
+      "sourceLength": 59,
+      "sourceSha256": "54b35f575d0530adf383afc22bc412c42849eb119f0ed9389a39d1acdd706133",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 1842806926,
+            "int": 1842806926,
+            "float": 8.31749346095372e+27
+          },
+          "raw": "8e00d76d"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1073/p8",
+          "fieldName": "blobs",
+          "target": "Prairie_ButterflyFields:n867",
+          "targetNodeId": 867,
+          "offset": 233159
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n1184",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 1184,
+      "name": "BstNode_2529558796",
+      "className": "TerrainBlobGroup",
+      "classIndex": 34,
+      "sourceOffset": 256074,
+      "sourceLength": 59,
+      "sourceSha256": "8dae2188f247dd8dc1c282cc3e756dd43bb8f07bcae92aff901008cccec0683f",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2529558796,
+            "int": -1765408500,
+            "float": -3.198928592208224e-25
+          },
+          "raw": "0c01c696"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1184/p8",
+          "fieldName": "blobs",
+          "target": "Prairie_ButterflyFields:n1273",
+          "targetNodeId": 1273,
+          "offset": 256117
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n1228",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 1228,
+      "name": "BstNode_2279669793",
+      "className": "TerrainBlobGroup",
+      "classIndex": 34,
+      "sourceOffset": 266240,
+      "sourceLength": 59,
+      "sourceSha256": "cf0f41052a003f5049446e7594a894417a4b1b0c7ec52c17130ccb496ae8d540",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2279669793,
+            "int": -2015297503,
+            "float": -3.385431306796621e-34
+          },
+          "raw": "2100e187"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1228/p5",
+          "fieldName": "blobPrefabs",
+          "target": "Prairie_ButterflyFields:n1116",
+          "targetNodeId": 1116,
+          "offset": 266274
+        },
+        {
+          "fieldId": "n1228/p8",
+          "fieldName": "blobs",
+          "target": "Prairie_ButterflyFields:n1325",
+          "targetNodeId": 1325,
+          "offset": 266283
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n241",
+      "level": "Prairie_Cave",
+      "nodeId": 241,
+      "name": "BstNode_5303",
+      "className": "TerrainBlobGroup",
+      "classIndex": 34,
+      "sourceOffset": 79618,
+      "sourceLength": 53,
+      "sourceSha256": "b2acaac694d9db360e16fcff70b067d867eb7790d91623b67bd308f46b55bcfd",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 5303,
+            "int": 5303,
+            "float": 7.431085756314505e-42
+          },
+          "raw": "b7140000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n241/p8",
+          "fieldName": "blobs",
+          "target": "Prairie_Cave:n619",
+          "targetNodeId": 619,
+          "offset": 79655
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n344",
+      "level": "Prairie_Cave",
+      "nodeId": 344,
+      "name": "BstNode_1293287451",
+      "className": "TerrainBlobGroup",
+      "classIndex": 34,
+      "sourceOffset": 102428,
+      "sourceLength": 59,
+      "sourceSha256": "bb3fcc5436dc949776857d20c8f215933816b2d1cba8b9dff5c70eb4994dcbab",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 1293287451,
+            "int": 1293287451,
+            "float": 157286832
+          },
+          "raw": "1b00164d"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n344/p8",
+          "fieldName": "blobs",
+          "target": "Prairie_Cave:n448",
+          "targetNodeId": 448,
+          "offset": 102471
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n1466",
+      "level": "Prairie_Cave",
+      "nodeId": 1466,
+      "name": "BstNode_2753888632",
+      "className": "TerrainBlobGroup",
+      "classIndex": 34,
+      "sourceOffset": 368912,
+      "sourceLength": 59,
+      "sourceSha256": "b03d7565ada5b278f0901e17e7176d41bbc765d122c014b275051a7211100fa8",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2753888632,
+            "int": -1541078664,
+            "float": -3.5779915771662926e-17
+          },
+          "raw": "780125a4"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1466/p5",
+          "fieldName": "blobPrefabs",
+          "target": "Prairie_Cave:n1557",
+          "targetNodeId": 1557,
+          "offset": 368946
+        },
+        {
+          "fieldId": "n1466/p8",
+          "fieldName": "blobs",
+          "target": "Prairie_Cave:n917",
+          "targetNodeId": 917,
+          "offset": 368955
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n1550",
+      "level": "Prairie_Cave",
+      "nodeId": 1550,
+      "name": "BstNode_2753888305",
+      "className": "TerrainBlobGroup",
+      "classIndex": 34,
+      "sourceOffset": 394303,
+      "sourceLength": 59,
+      "sourceSha256": "31ef5071f133cce3246061a61083c1cb17c44ab7c0539acd07f7d6092ca8f00e",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2753888305,
+            "int": -1541078991,
+            "float": -3.5778833819421707e-17
+          },
+          "raw": "310025a4"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1550/p8",
+          "fieldName": "blobs",
+          "target": "Prairie_Cave:n826",
+          "targetNodeId": 826,
+          "offset": 394346
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n1669",
+      "level": "Prairie_Cave",
+      "nodeId": 1669,
+      "name": "BstNode_1842806928",
+      "className": "TerrainBlobGroup",
+      "classIndex": 34,
+      "sourceOffset": 425680,
+      "sourceLength": 59,
+      "sourceSha256": "1e564da2917b05d5800e4765d167b6cd49d3ccc31cd08a57cae7476d6ff894d6",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 1842806928,
+            "int": 1842806928,
+            "float": 8.31749464154534e+27
+          },
+          "raw": "9000d76d"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1669/p5",
+          "fieldName": "blobPrefabs",
+          "target": "Prairie_Cave:n1585",
+          "targetNodeId": 1585,
+          "offset": 425714
+        },
+        {
+          "fieldId": "n1669/p8",
+          "fieldName": "blobs",
+          "target": "Prairie_Cave:n1529",
+          "targetNodeId": 1529,
+          "offset": 425723
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n1778",
+      "level": "Prairie_Cave",
+      "nodeId": 1778,
+      "name": "BstNode_1567",
+      "className": "TerrainBlobGroup",
+      "classIndex": 34,
+      "sourceOffset": 456714,
+      "sourceLength": 53,
+      "sourceSha256": "5bd9f120e4ab557bf46fa9b670fd9a9c61eb119fc2c44f116ce5f008e093b072",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 1567,
+            "int": 1567,
+            "float": 2.1958346935969884e-42
+          },
+          "raw": "1f060000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1778/p8",
+          "fieldName": "blobs",
+          "target": "Prairie_Cave:n12",
+          "targetNodeId": 12,
+          "offset": 456751
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n56",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 56,
+      "name": "BstNode_2279669773",
+      "className": "TerrainBlobGroup",
+      "classIndex": 17,
+      "sourceOffset": 34547,
+      "sourceLength": 59,
+      "sourceSha256": "abf5e9288428b4a90d65590ad426ed08699e3a3d65453d6e72958070cbc99724",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2279669773,
+            "int": -2015297523,
+            "float": -3.385426715021813e-34
+          },
+          "raw": "0d00e187"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n56/p8",
+          "fieldName": "blobs",
+          "target": "Prairie_NestAndKeeper:n492",
+          "targetNodeId": 492,
+          "offset": 34590
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n113",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 113,
+      "name": "BstNode_2279669913",
+      "className": "TerrainBlobGroup",
+      "classIndex": 17,
+      "sourceOffset": 46096,
+      "sourceLength": 59,
+      "sourceSha256": "8de17760debb23ace510a4f9bb7f84ace29c0e8505a79e1d04fb994bf140c3b9",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2279669913,
+            "int": -2015297383,
+            "float": -3.3854588574454685e-34
+          },
+          "raw": "9900e187"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n113/p8",
+          "fieldName": "blobs",
+          "target": "Prairie_NestAndKeeper:n841",
+          "targetNodeId": 841,
+          "offset": 46139
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n124",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 124,
+      "name": "BstNode_5303",
+      "className": "TerrainBlobGroup",
+      "classIndex": 17,
+      "sourceOffset": 48627,
+      "sourceLength": 53,
+      "sourceSha256": "bf44dc85eac29abb2dc5956a811c822708106de654396ae667fbfcad2397bc29",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 5303,
+            "int": 5303,
+            "float": 7.431085756314505e-42
+          },
+          "raw": "b7140000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n124/p8",
+          "fieldName": "blobs",
+          "target": "Prairie_NestAndKeeper:n403",
+          "targetNodeId": 403,
+          "offset": 48664
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n170",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 170,
+      "name": "BstNode_1293287451",
+      "className": "TerrainBlobGroup",
+      "classIndex": 17,
+      "sourceOffset": 61329,
+      "sourceLength": 59,
+      "sourceSha256": "60e6c051dd0a3e33dc74ca7df3728974e23224aff4da0db3e89d8f647d09556a",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 1293287451,
+            "int": 1293287451,
+            "float": 157286832
+          },
+          "raw": "1b00164d"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n170/p8",
+          "fieldName": "blobs",
+          "target": "Prairie_NestAndKeeper:n213",
+          "targetNodeId": 213,
+          "offset": 61372
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n270",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 270,
+      "name": "BstNode_34603353",
+      "className": "TerrainBlobGroup",
+      "classIndex": 17,
+      "sourceOffset": 83667,
+      "sourceLength": 57,
+      "sourceSha256": "93af020af4b6115cc4f4f05b1df3d0eff1a35d57ff1bdc37ee41f488b9fd5170",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 34603353,
+            "int": 34603353,
+            "float": 1.0579835915776741e-37
+          },
+          "raw": "59011002"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n270/p8",
+          "fieldName": "blobs",
+          "target": "Prairie_NestAndKeeper:n744",
+          "targetNodeId": 744,
+          "offset": 83708
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n307",
+      "level": "Prairie_Village",
+      "nodeId": 307,
+      "name": "BstNode_2279669794",
+      "className": "TerrainBlobGroup",
+      "classIndex": 48,
+      "sourceOffset": 79029,
+      "sourceLength": 59,
+      "sourceSha256": "419100dcf93f2fc907de6eb5ba5ee4c18cf72cca84b9f4a09d49f40f6d2f5358",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2279669794,
+            "int": -2015297502,
+            "float": -3.3854315363853615e-34
+          },
+          "raw": "2200e187"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n307/p5",
+          "fieldName": "blobPrefabs",
+          "target": "Prairie_Village:n182",
+          "targetNodeId": 182,
+          "offset": 79063
+        },
+        {
+          "fieldId": "n307/p8",
+          "fieldName": "blobs",
+          "target": "Prairie_Village:n496",
+          "targetNodeId": 496,
+          "offset": 79072
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1233",
+      "level": "Prairie_Village",
+      "nodeId": 1233,
+      "name": "BstNode_1567",
+      "className": "TerrainBlobGroup",
+      "classIndex": 48,
+      "sourceOffset": 229667,
+      "sourceLength": 53,
+      "sourceSha256": "39d628796bb7d9a3911bda26cc70a48de768dfbd6f565563e82ffe38ad5b364f",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 1567,
+            "int": 1567,
+            "float": 2.1958346935969884e-42
+          },
+          "raw": "1f060000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1233/p8",
+          "fieldName": "blobs",
+          "target": "Prairie_Village:n1875",
+          "targetNodeId": 1875,
+          "offset": 229704
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1687",
+      "level": "Prairie_Village",
+      "nodeId": 1687,
+      "name": "BstNode_1293287451",
+      "className": "TerrainBlobGroup",
+      "classIndex": 48,
+      "sourceOffset": 299229,
+      "sourceLength": 59,
+      "sourceSha256": "73838e51f69f5d86fb38edabe9f6ea5f42721727b9599977f79a38810adcd6c1",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 1293287451,
+            "int": 1293287451,
+            "float": 157286832
+          },
+          "raw": "1b00164d"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1687/p8",
+          "fieldName": "blobs",
+          "target": "Prairie_Village:n2865",
+          "targetNodeId": 2865,
+          "offset": 299272
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1811",
+      "level": "Prairie_Village",
+      "nodeId": 1811,
+      "name": "BstNode_2753888276",
+      "className": "TerrainBlobGroup",
+      "classIndex": 48,
+      "sourceOffset": 322348,
+      "sourceLength": 59,
+      "sourceSha256": "c2ab3b7a16b3c05f5187c28e6e21d390105de6dfe738d06c57fbec614fe30b25",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2753888276,
+            "int": -1541079020,
+            "float": -3.577873786647065e-17
+          },
+          "raw": "140025a4"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1811/p8",
+          "fieldName": "blobs",
+          "target": "Prairie_Village:n2163",
+          "targetNodeId": 2163,
+          "offset": 322391
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2618",
+      "level": "Prairie_Village",
+      "nodeId": 2618,
+      "name": "BstNode_312",
+      "className": "TerrainBlobGroup",
+      "classIndex": 48,
+      "sourceOffset": 443964,
+      "sourceLength": 52,
+      "sourceSha256": "9f1b210f6f203b810cbdc81357848e809726f841f3e1d276e11556fdbe827a37",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 312,
+            "int": 312,
+            "float": 4.372051208693429e-43
+          },
+          "raw": "38010000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n2618/p8",
+          "fieldName": "blobs",
+          "target": "Prairie_Village:n303",
+          "targetNodeId": 303,
+          "offset": 444000
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n258",
+      "level": "Rain",
+      "nodeId": 258,
+      "name": "BstNode_3",
+      "className": "TerrainBlobGroup",
+      "classIndex": 38,
+      "sourceOffset": 85748,
+      "sourceLength": 50,
+      "sourceSha256": "b3baf04a3f942fd6d86a7f2eecfd68e1574f7145cd5a6bb72bb52ea450f2c955",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3,
+            "int": 3,
+            "float": 4.203895392974451e-45
+          },
+          "raw": "03000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n258/p5",
+          "fieldName": "blobPrefabs",
+          "target": "Rain:n1320",
+          "targetNodeId": 1320,
+          "offset": 85773
+        },
+        {
+          "fieldId": "n258/p8",
+          "fieldName": "blobs",
+          "target": "Rain:n927",
+          "targetNodeId": 927,
+          "offset": 85782
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n739",
+      "level": "Rain",
+      "nodeId": 739,
+      "name": "BstNode_804",
+      "className": "TerrainBlobGroup",
+      "classIndex": 38,
+      "sourceOffset": 196701,
+      "sourceLength": 52,
+      "sourceSha256": "1b66a3387c036ee7488444c7611d3305e0f608fb2288f650ec2e1ae8544f1cef",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 804,
+            "int": 804,
+            "float": 1.126643965317153e-42
+          },
+          "raw": "24030000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n739/p5",
+          "fieldName": "blobPrefabs",
+          "target": "Rain:n1185",
+          "targetNodeId": 1185,
+          "offset": 196728
+        },
+        {
+          "fieldId": "n739/p8",
+          "fieldName": "blobs",
+          "target": "Rain:n1172",
+          "targetNodeId": 1172,
+          "offset": 196737
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n1541",
+      "level": "Rain",
+      "nodeId": 1541,
+      "name": "BstNode_6",
+      "className": "TerrainBlobGroup",
+      "classIndex": 38,
+      "sourceOffset": 371827,
+      "sourceLength": 50,
+      "sourceSha256": "d42e377fdae1818e46987bce1490d06a6462ed8f92a08311b3dccbc7ecf7af10",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 6,
+            "int": 6,
+            "float": 8.407790785948902e-45
+          },
+          "raw": "06000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1541/p8",
+          "fieldName": "blobs",
+          "target": "Rain:n350",
+          "targetNodeId": 350,
+          "offset": 371861
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n228",
+      "level": "RainEnd",
+      "nodeId": 228,
+      "name": "BstNode_16",
+      "className": "TerrainBlobGroup",
+      "classIndex": 38,
+      "sourceOffset": 83435,
+      "sourceLength": 51,
+      "sourceSha256": "f714884af4c5fa311ab708678635e13723bee77444cf3d6cb351d2b47c9cbc34",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 16,
+            "int": 16,
+            "float": 2.2420775429197073e-44
+          },
+          "raw": "10000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n228/p5",
+          "fieldName": "blobPrefabs",
+          "target": "RainEnd:n1383",
+          "targetNodeId": 1383,
+          "offset": 83461
+        },
+        {
+          "fieldId": "n228/p8",
+          "fieldName": "blobs",
+          "target": "RainEnd:n1460",
+          "targetNodeId": 1460,
+          "offset": 83470
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n745",
+      "level": "RainEnd",
+      "nodeId": 745,
+      "name": "BstNode_479",
+      "className": "TerrainBlobGroup",
+      "classIndex": 38,
+      "sourceOffset": 209824,
+      "sourceLength": 52,
+      "sourceSha256": "69bd0743f054ebf0886dacb04b7e9f746ff09a5d928812902901a45d68943d13",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 479,
+            "int": 479,
+            "float": 6.712219644115874e-43
+          },
+          "raw": "df010000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n745/p8",
+          "fieldName": "blobs",
+          "target": "RainEnd:n1421",
+          "targetNodeId": 1421,
+          "offset": 209860
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n791",
+      "level": "RainEnd",
+      "nodeId": 791,
+      "name": "BstNode_887",
+      "className": "TerrainBlobGroup",
+      "classIndex": 38,
+      "sourceOffset": 217755,
+      "sourceLength": 52,
+      "sourceSha256": "2b218d2b3ba7310dcc788daf37600cb4be1c72c682416cba85f717fdb332c69b",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 887,
+            "int": 887,
+            "float": 1.2429517378561127e-42
+          },
+          "raw": "77030000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n791/p8",
+          "fieldName": "blobs",
+          "target": "RainEnd:n1027",
+          "targetNodeId": 1027,
+          "offset": 217791
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n795",
+      "level": "RainEnd",
+      "nodeId": 795,
+      "name": "BstNode_243",
+      "className": "TerrainBlobGroup",
+      "classIndex": 38,
+      "sourceOffset": 218683,
+      "sourceLength": 52,
+      "sourceSha256": "b3862a8b7e6f43c625421f4718185f9641b73225d7bbb6cb78faf2bca67909be",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 243,
+            "int": 243,
+            "float": 3.4051552683093055e-43
+          },
+          "raw": "f3000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n795/p8",
+          "fieldName": "blobs",
+          "target": "RainEnd:n277",
+          "targetNodeId": 277,
+          "offset": 218719
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n1312",
+      "level": "RainEnd",
+      "nodeId": 1312,
+      "name": "BstNode_64",
+      "className": "TerrainBlobGroup",
+      "classIndex": 38,
+      "sourceOffset": 343052,
+      "sourceLength": 51,
+      "sourceSha256": "1c0876c5848065c8eefc20a55b6f3a281904613d87b32f64311dedfbfee7025d",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 64,
+            "int": 64,
+            "float": 8.96831017167883e-44
+          },
+          "raw": "40000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1312/p8",
+          "fieldName": "blobs",
+          "target": "RainEnd:n479",
+          "targetNodeId": 479,
+          "offset": 343087
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n285",
+      "level": "RainForest",
+      "nodeId": 285,
+      "name": "BstNode_3",
+      "className": "TerrainBlobGroup",
+      "classIndex": 39,
+      "sourceOffset": 76153,
+      "sourceLength": 50,
+      "sourceSha256": "c4c4c60a5e5fbfc54b4f75837b0826f13e4c53d594c73ad1c3e5c46d00767470",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3,
+            "int": 3,
+            "float": 4.203895392974451e-45
+          },
+          "raw": "03000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n285/p5",
+          "fieldName": "blobPrefabs",
+          "target": "RainForest:n1046",
+          "targetNodeId": 1046,
+          "offset": 76178
+        },
+        {
+          "fieldId": "n285/p8",
+          "fieldName": "blobs",
+          "target": "RainForest:n1162",
+          "targetNodeId": 1162,
+          "offset": 76187
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n981",
+      "level": "RainForest",
+      "nodeId": 981,
+      "name": "BstNode_6",
+      "className": "TerrainBlobGroup",
+      "classIndex": 39,
+      "sourceOffset": 226364,
+      "sourceLength": 50,
+      "sourceSha256": "593a990dbb3cc489370e41841b075abe433b5bd253bfb64e14db06ee2654be52",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 6,
+            "int": 6,
+            "float": 8.407790785948902e-45
+          },
+          "raw": "06000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n981/p8",
+          "fieldName": "blobs",
+          "target": "RainForest:n432",
+          "targetNodeId": 432,
+          "offset": 226398
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n1211",
+      "level": "RainForest",
+      "nodeId": 1211,
+      "name": "BstNode_804",
+      "className": "TerrainBlobGroup",
+      "classIndex": 39,
+      "sourceOffset": 267511,
+      "sourceLength": 52,
+      "sourceSha256": "043753d5d1ecb98f007483ae029e3f14dafad5c39fb26f35b6917255c65cd8bd",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 804,
+            "int": 804,
+            "float": 1.126643965317153e-42
+          },
+          "raw": "24030000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1211/p5",
+          "fieldName": "blobPrefabs",
+          "target": "RainForest:n344",
+          "targetNodeId": 344,
+          "offset": 267538
+        },
+        {
+          "fieldId": "n1211/p8",
+          "fieldName": "blobs",
+          "target": "RainForest:n623",
+          "targetNodeId": 623,
+          "offset": 267547
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n1073",
+      "level": "RainMid",
+      "nodeId": 1073,
+      "name": "BstNode_5",
+      "className": "TerrainBlobGroup",
+      "classIndex": 63,
+      "sourceOffset": 222840,
+      "sourceLength": 50,
+      "sourceSha256": "8089b637b82f9ca984149bbf044dfebda4ae1a2db25562e2be433f34d8afa58b",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 5,
+            "int": 5,
+            "float": 7.006492321624085e-45
+          },
+          "raw": "05000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1073/p5",
+          "fieldName": "blobPrefabs",
+          "target": "RainMid:n1326",
+          "targetNodeId": 1326,
+          "offset": 222865
+        },
+        {
+          "fieldId": "n1073/p8",
+          "fieldName": "blobs",
+          "target": "RainMid:n273",
+          "targetNodeId": 273,
+          "offset": 222874
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n1095",
+      "level": "RainMid",
+      "nodeId": 1095,
+      "name": "BstNode_1049165970",
+      "className": "TerrainBlobGroup",
+      "classIndex": 63,
+      "sourceOffset": 226306,
+      "sourceLength": 59,
+      "sourceSha256": "1f5c3f3dce36211019583734526fdb3074159b9d5ce2f2169af47606f6bcff50",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 1049165970,
+            "int": 1049165970,
+            "float": 0.2675824761390686
+          },
+          "raw": "9200893e"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1095/p8",
+          "fieldName": "blobs",
+          "target": "RainMid:n662",
+          "targetNodeId": 662,
+          "offset": 226349
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n1912",
+      "level": "RainMid",
+      "nodeId": 1912,
+      "name": "BstNode_6",
+      "className": "TerrainBlobGroup",
+      "classIndex": 63,
+      "sourceOffset": 372468,
+      "sourceLength": 50,
+      "sourceSha256": "2d6ade6811ba57102b2ae037e54ea59566de84f6b0701a450fde6f77d06504f1",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 6,
+            "int": 6,
+            "float": 8.407790785948902e-45
+          },
+          "raw": "06000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1912/p8",
+          "fieldName": "blobs",
+          "target": "RainMid:n366",
+          "targetNodeId": 366,
+          "offset": 372502
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n217",
+      "level": "SkyHub2",
+      "nodeId": 217,
+      "name": "BstNode_1049166076",
+      "className": "TerrainBlobGroup",
+      "classIndex": 42,
+      "sourceOffset": 72263,
+      "sourceLength": 59,
+      "sourceSha256": "fe8a10be31c0879b66337c9c84c8e3c18315b3e10f955b336c17a9d8bbc60f6c",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 1049166076,
+            "int": 1049166076,
+            "float": 0.2675856351852417
+          },
+          "raw": "fc00893e"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n217/p8",
+          "fieldName": "blobs",
+          "target": "SkyHub2:n2144",
+          "targetNodeId": 2144,
+          "offset": 72306
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n562",
+      "level": "SkyHub2",
+      "nodeId": 562,
+      "name": "BstNode_2279669949",
+      "className": "TerrainBlobGroup",
+      "classIndex": 42,
+      "sourceOffset": 137422,
+      "sourceLength": 59,
+      "sourceSha256": "3c716f1c6d2cfcdcefb609ed8bbf89e0cba0b059d3e866a265d65b8d02190c51",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2279669949,
+            "int": -2015297347,
+            "float": -3.3854671226401227e-34
+          },
+          "raw": "bd00e187"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n562/p8",
+          "fieldName": "blobs",
+          "target": "SkyHub2:n1816",
+          "targetNodeId": 1816,
+          "offset": 137465
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1869",
+      "level": "SkyHub2",
+      "nodeId": 1869,
+      "name": "BstNode_1167523862",
+      "className": "TerrainBlobGroup",
+      "classIndex": 42,
+      "sourceOffset": 352498,
+      "sourceLength": 59,
+      "sourceSha256": "6e07f0a4e5b19d9584a0fc2fde366efc391c72d9a5afb116e1787908b0e7c76b",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 1167523862,
+            "int": 1167523862,
+            "float": 4832.0107421875
+          },
+          "raw": "16009745"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1869/p8",
+          "fieldName": "blobs",
+          "target": "SkyHub2:n2407",
+          "targetNodeId": 2407,
+          "offset": 352541
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n2031",
+      "level": "SkyHub2",
+      "nodeId": 2031,
+      "name": "BstNode_5",
+      "className": "TerrainBlobGroup",
+      "classIndex": 42,
+      "sourceOffset": 382665,
+      "sourceLength": 50,
+      "sourceSha256": "2a8f9eb013a836e74607f86e8caec6786e94575d5d84143f176798ceb0c5bc79",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 5,
+            "int": 5,
+            "float": 7.006492321624085e-45
+          },
+          "raw": "05000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n2031/p5",
+          "fieldName": "blobPrefabs",
+          "target": "SkyHub2:n1370",
+          "targetNodeId": 1370,
+          "offset": 382690
+        },
+        {
+          "fieldId": "n2031/p8",
+          "fieldName": "blobs",
+          "target": "SkyHub2:n286",
+          "targetNodeId": 286,
+          "offset": 382699
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n421",
+      "level": "Storm",
+      "nodeId": 421,
+      "name": "BstNode_134",
+      "className": "TerrainBlobGroup",
+      "classIndex": 36,
+      "sourceOffset": 98675,
+      "sourceLength": 52,
+      "sourceSha256": "8ecb03b1120cc4ccdc5cb9be06d899b9cae4548ca3cec7ac8a85e8ac6c6e88eb",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 134,
+            "int": 134,
+            "float": 1.877739942195255e-43
+          },
+          "raw": "86000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n421/p8",
+          "fieldName": "blobs",
+          "target": "Storm:n24",
+          "targetNodeId": 24,
+          "offset": 98711
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n643",
+      "level": "Storm",
+      "nodeId": 643,
+      "name": "BstNode_2529559694",
+      "className": "TerrainBlobGroup",
+      "classIndex": 36,
+      "sourceOffset": 137314,
+      "sourceLength": 59,
+      "sourceSha256": "7829ed3c9421439a328d97c300ce11d69159fd40d8226df326bf752adfbd7c2b",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2529559694,
+            "int": -1765407602,
+            "float": -3.1991499662997516e-25
+          },
+          "raw": "8e04c696"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n643/p8",
+          "fieldName": "blobs",
+          "target": "Storm:n1624",
+          "targetNodeId": 1624,
+          "offset": 137357
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n1371",
+      "level": "Storm",
+      "nodeId": 1371,
+      "name": "BstNode_15",
+      "className": "TerrainBlobGroup",
+      "classIndex": 36,
+      "sourceOffset": 266049,
+      "sourceLength": 51,
+      "sourceSha256": "d0ecb7871d92391897bb291569f4707b63c6e9a9f34b94103a916b9739319a19",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 15,
+            "int": 15,
+            "float": 2.1019476964872256e-44
+          },
+          "raw": "0f000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1371/p8",
+          "fieldName": "blobs",
+          "target": "Storm:n571",
+          "targetNodeId": 571,
+          "offset": 266084
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n30",
+      "level": "StormEnd",
+      "nodeId": 30,
+      "name": "BstNode_15",
+      "className": "TerrainBlobGroup",
+      "classIndex": 10,
+      "sourceOffset": 27897,
+      "sourceLength": 51,
+      "sourceSha256": "55fa95f6ad31184248d134c655698ed2a920475b7f108b63cd4cca748b08c117",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 15,
+            "int": 15,
+            "float": 2.1019476964872256e-44
+          },
+          "raw": "0f000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n30/p8",
+          "fieldName": "blobs",
+          "target": "StormEnd:n296",
+          "targetNodeId": 296,
+          "offset": 27932
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n222",
+      "level": "StormEnd",
+      "nodeId": 222,
+      "name": "BstNode_134",
+      "className": "TerrainBlobGroup",
+      "classIndex": 10,
+      "sourceOffset": 58414,
+      "sourceLength": 52,
+      "sourceSha256": "b2cb5baf9ed9426ac5b74e8ab1d461ea5dfd2824030be07f5e32cd4d6905ef9e",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 134,
+            "int": 134,
+            "float": 1.877739942195255e-43
+          },
+          "raw": "86000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n222/p8",
+          "fieldName": "blobs",
+          "target": "StormEnd:n19",
+          "targetNodeId": 19,
+          "offset": 58450
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n535",
+      "level": "StormEnd",
+      "nodeId": 535,
+      "name": "BstNode_2345992725",
+      "className": "TerrainBlobGroup",
+      "classIndex": 10,
+      "sourceOffset": 118884,
+      "sourceLength": 59,
+      "sourceSha256": "c554b67bd5057c3d6cb16319f94e9d009fb1a6e8aa422f24d0b809cc79ee4156",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2345992725,
+            "int": -1948974571,
+            "float": -8.204774832334119e-32
+          },
+          "raw": "1502d58b"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n535/p8",
+          "fieldName": "blobs",
+          "target": "StormEnd:n4",
+          "targetNodeId": 4,
+          "offset": 118927
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n158",
+      "level": "Sunset",
+      "nodeId": 158,
+      "name": "BstNode_3501195407",
+      "className": "TerrainBlobGroup",
+      "classIndex": 25,
+      "sourceOffset": 53741,
+      "sourceLength": 59,
+      "sourceSha256": "f8c8325869c5791e63def43e6380ac9e4394801a99d3c164c6d2dda5f7c8aa7c",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3501195407,
+            "int": -793771889,
+            "float": -23622612992
+          },
+          "raw": "8f00b0d0"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n158/p8",
+          "fieldName": "blobs",
+          "target": "Sunset:n1056",
+          "targetNodeId": 1056,
+          "offset": 53784
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n240",
+      "level": "Sunset",
+      "nodeId": 240,
+      "name": "BstNode_5",
+      "className": "TerrainBlobGroup",
+      "classIndex": 25,
+      "sourceOffset": 72062,
+      "sourceLength": 50,
+      "sourceSha256": "7b2d859836b458b9be1575456278e121aaf1c53b8de07f8e449667b74719f2e3",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 5,
+            "int": 5,
+            "float": 7.006492321624085e-45
+          },
+          "raw": "05000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n240/p8",
+          "fieldName": "blobs",
+          "target": "Sunset:n492",
+          "targetNodeId": 492,
+          "offset": 72096
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n295",
+      "level": "Sunset",
+      "nodeId": 295,
+      "name": "BstNode_1049165890",
+      "className": "TerrainBlobGroup",
+      "classIndex": 25,
+      "sourceOffset": 83674,
+      "sourceLength": 59,
+      "sourceSha256": "53bee3dd2e651a24219ae935edb70b68febadced51cd3b36d3f82b431c65aa6b",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 1049165890,
+            "int": 1049165890,
+            "float": 0.2675800919532776
+          },
+          "raw": "4200893e"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n295/p8",
+          "fieldName": "blobs",
+          "target": "Sunset:n706",
+          "targetNodeId": 706,
+          "offset": 83717
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n366",
+      "level": "Sunset",
+      "nodeId": 366,
+      "name": "BstNode_1049166164",
+      "className": "TerrainBlobGroup",
+      "classIndex": 25,
+      "sourceOffset": 96985,
+      "sourceLength": 59,
+      "sourceSha256": "b74c5de930b44d2c8cf1f577539e6da5a0024dab28de97771445764ff85af0ab",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 1049166164,
+            "int": 1049166164,
+            "float": 0.2675882577896118
+          },
+          "raw": "5401893e"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n366/p5",
+          "fieldName": "blobPrefabs",
+          "target": "Sunset:n159",
+          "targetNodeId": 159,
+          "offset": 97019
+        },
+        {
+          "fieldId": "n366/p8",
+          "fieldName": "blobs",
+          "target": "Sunset:n1489",
+          "targetNodeId": 1489,
+          "offset": 97028
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n1421",
+      "level": "Sunset",
+      "nodeId": 1421,
+      "name": "BstNode_6",
+      "className": "TerrainBlobGroup",
+      "classIndex": 25,
+      "sourceOffset": 264758,
+      "sourceLength": 50,
+      "sourceSha256": "723d452e0df2a5a54839ad415dbd0aa4a0b606d95ba010d8c299992a89751957",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 6,
+            "int": 6,
+            "float": 8.407790785948902e-45
+          },
+          "raw": "06000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1421/p8",
+          "fieldName": "blobs",
+          "target": "Sunset:n724",
+          "targetNodeId": 724,
+          "offset": 264792
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n46",
+      "level": "SunsetEnd",
+      "nodeId": 46,
+      "name": "BstNode_15",
+      "className": "TerrainBlobGroup",
+      "classIndex": 16,
+      "sourceOffset": 34157,
+      "sourceLength": 51,
+      "sourceSha256": "1f3045360c02fbfbf8c4236458e2cc0ccc0e2dece083c23f1616949df381289a",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 15,
+            "int": 15,
+            "float": 2.1019476964872256e-44
+          },
+          "raw": "0f000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n46/p8",
+          "fieldName": "blobs",
+          "target": "SunsetEnd:n1680",
+          "targetNodeId": 1680,
+          "offset": 34192
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n422",
+      "level": "SunsetEnd",
+      "nodeId": 422,
+      "name": "BstNode_1482555522",
+      "className": "TerrainBlobGroup",
+      "classIndex": 16,
+      "sourceOffset": 101810,
+      "sourceLength": 59,
+      "sourceSha256": "5e55126f2653200a8c4bd644573af21141de74cdf61d376af41e4af3be98ea35",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 1482555522,
+            "int": 1482555522,
+            "float": 976375049617408
+          },
+          "raw": "82005e58"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n422/p8",
+          "fieldName": "blobs",
+          "target": "SunsetEnd:n1205",
+          "targetNodeId": 1205,
+          "offset": 101853
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n749",
+      "level": "SunsetEnd",
+      "nodeId": 749,
+      "name": "BstNode_3501195346",
+      "className": "TerrainBlobGroup",
+      "classIndex": 16,
+      "sourceOffset": 151724,
+      "sourceLength": 59,
+      "sourceSha256": "f9cab39f79abe82a6e19a09a174abc9670032f4df0f81e3e706ae204fd20ea50",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3501195346,
+            "int": -793771950,
+            "float": -23622488064
+          },
+          "raw": "5200b0d0"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n749/p8",
+          "fieldName": "blobs",
+          "target": "SunsetEnd:n1529",
+          "targetNodeId": 1529,
+          "offset": 151767
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n1155",
+      "level": "SunsetEnd",
+      "nodeId": 1155,
+      "name": "BstNode_840695810",
+      "className": "TerrainBlobGroup",
+      "classIndex": 16,
+      "sourceOffset": 216351,
+      "sourceLength": 58,
+      "sourceSha256": "0939be7992103d11a60513e91f3a7192e5a983512b5230f4e486c45efbe4cdba",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 840695810,
+            "int": 840695810,
+            "float": 9.080396878857755e-9
+          },
+          "raw": "02001c32"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1155/p8",
+          "fieldName": "blobs",
+          "target": "SunsetEnd:n1456",
+          "targetNodeId": 1456,
+          "offset": 216393
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n1621",
+      "level": "SunsetEnd",
+      "nodeId": 1621,
+      "name": "BstNode_840696059",
+      "className": "TerrainBlobGroup",
+      "classIndex": 16,
+      "sourceOffset": 303534,
+      "sourceLength": 58,
+      "sourceSha256": "9e2e06f52ee32996652add265b95b288eef7170543c72664436b50f0787537cb",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 840696059,
+            "int": 840696059,
+            "float": 9.08061803528426e-9
+          },
+          "raw": "fb001c32"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1621/p8",
+          "fieldName": "blobs",
+          "target": "SunsetEnd:n656",
+          "targetNodeId": 656,
+          "offset": 303576
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n1821",
+      "level": "SunsetEnd",
+      "nodeId": 1821,
+      "name": "BstNode_840696141",
+      "className": "TerrainBlobGroup",
+      "classIndex": 16,
+      "sourceOffset": 344225,
+      "sourceLength": 58,
+      "sourceSha256": "5fce68a1160ef3d8bfd24274d0d673cb97794f58a11759f32a701dccb1d7e498",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 840696141,
+            "int": 840696141,
+            "float": 9.080690865914676e-9
+          },
+          "raw": "4d011c32"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1821/p8",
+          "fieldName": "blobs",
+          "target": "SunsetEnd:n1491",
+          "targetNodeId": 1491,
+          "offset": 344267
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd2:n23",
+      "level": "SunsetEnd2",
+      "nodeId": 23,
+      "name": "BstNode_1167523884",
+      "className": "TerrainBlobGroup",
+      "classIndex": 11,
+      "sourceOffset": 26239,
+      "sourceLength": 59,
+      "sourceSha256": "c82947f7e5dd9b5e6c182d32e50ff397da8de5d6cb4ad3a7cb26f816ebf82449",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 1167523884,
+            "int": 1167523884,
+            "float": 4832.021484375
+          },
+          "raw": "2c009745"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n23/p8",
+          "fieldName": "blobs",
+          "target": "SunsetEnd2:n243",
+          "targetNodeId": 243,
+          "offset": 26282
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd2:n169",
+      "level": "SunsetEnd2",
+      "nodeId": 169,
+      "name": "BstNode_840695810",
+      "className": "TerrainBlobGroup",
+      "classIndex": 11,
+      "sourceOffset": 56153,
+      "sourceLength": 58,
+      "sourceSha256": "cf12b391213663078d34b2dd44c0c29fd90e820ecab5b06cf93f16814a2ebe7c",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 840695810,
+            "int": 840695810,
+            "float": 9.080396878857755e-9
+          },
+          "raw": "02001c32"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n169/p8",
+          "fieldName": "blobs",
+          "target": "SunsetEnd2:n134",
+          "targetNodeId": 134,
+          "offset": 56195
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd2:n357",
+      "level": "SunsetEnd2",
+      "nodeId": 357,
+      "name": "BstNode_1167524541",
+      "className": "TerrainBlobGroup",
+      "classIndex": 11,
+      "sourceOffset": 96695,
+      "sourceLength": 59,
+      "sourceSha256": "0cfa59b88a45eda80a1e72ac772c212970c2df78a0a584f01c227d164a126e0f",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 1167524541,
+            "int": 1167524541,
+            "float": 4832.34228515625
+          },
+          "raw": "bd029745"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n357/p8",
+          "fieldName": "blobs",
+          "target": "SunsetEnd2:n144",
+          "targetNodeId": 144,
+          "offset": 96738
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd2:n758",
+      "level": "SunsetEnd2",
+      "nodeId": 758,
+      "name": "BstNode_15",
+      "className": "TerrainBlobGroup",
+      "classIndex": 11,
+      "sourceOffset": 185684,
+      "sourceLength": 51,
+      "sourceSha256": "dec5521211e0eaa1c1cf6e122812cf2e0566da3111b82de4b0bcfb3d252f75e0",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 15,
+            "int": 15,
+            "float": 2.1019476964872256e-44
+          },
+          "raw": "0f000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n758/p8",
+          "fieldName": "blobs",
+          "target": "SunsetEnd2:n699",
+          "targetNodeId": 699,
+          "offset": 185719
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetRace:n236",
+      "level": "SunsetRace",
+      "nodeId": 236,
+      "name": "BstNode_840696036",
+      "className": "TerrainBlobGroup",
+      "classIndex": 28,
+      "sourceOffset": 65590,
+      "sourceLength": 58,
+      "sourceSha256": "3d4033de4b24791f1c889bae1b037af05a00efed52da70b74b279a6facee121e",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 840696036,
+            "int": 840696036,
+            "float": 9.080597607180607e-9
+          },
+          "raw": "e4001c32"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n236/p8",
+          "fieldName": "blobs",
+          "target": "SunsetRace:n1375",
+          "targetNodeId": 1375,
+          "offset": 65632
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetRace:n284",
+      "level": "SunsetRace",
+      "nodeId": 284,
+      "name": "BstNode_3501195354",
+      "className": "TerrainBlobGroup",
+      "classIndex": 28,
+      "sourceOffset": 75992,
+      "sourceLength": 59,
+      "sourceSha256": "380ea0859fdb4ea792095f617741d688a9029272ea22662e56cc32a40eb05fdb",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3501195354,
+            "int": -793771942,
+            "float": -23622504448
+          },
+          "raw": "5a00b0d0"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n284/p8",
+          "fieldName": "blobs",
+          "target": "SunsetRace:n187",
+          "targetNodeId": 187,
+          "offset": 76035
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetRace:n388",
+      "level": "SunsetRace",
+      "nodeId": 388,
+      "name": "BstNode_840696039",
+      "className": "TerrainBlobGroup",
+      "classIndex": 28,
+      "sourceOffset": 99798,
+      "sourceLength": 58,
+      "sourceSha256": "91006a8786febbbef8c24b8b5b40e7b42e09a4b84827994e901db9fe55403dac",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 840696039,
+            "int": 840696039,
+            "float": 9.080600271715866e-9
+          },
+          "raw": "e7001c32"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n388/p8",
+          "fieldName": "blobs",
+          "target": "SunsetRace:n148",
+          "targetNodeId": 148,
+          "offset": 99840
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetRace:n564",
+      "level": "SunsetRace",
+      "nodeId": 564,
+      "name": "BstNode_3501195346",
+      "className": "TerrainBlobGroup",
+      "classIndex": 28,
+      "sourceOffset": 136839,
+      "sourceLength": 59,
+      "sourceSha256": "63241d0c71a926493633e2548fa1c8f1bf0ad6315a9619bda0e13cc1fc05de31",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3501195346,
+            "int": -793771950,
+            "float": -23622488064
+          },
+          "raw": "5200b0d0"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n564/p8",
+          "fieldName": "blobs",
+          "target": "SunsetRace:n1314",
+          "targetNodeId": 1314,
+          "offset": 136882
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetRace:n1084",
+      "level": "SunsetRace",
+      "nodeId": 1084,
+      "name": "BstNode_840695921",
+      "className": "TerrainBlobGroup",
+      "classIndex": 28,
+      "sourceOffset": 225682,
+      "sourceLength": 58,
+      "sourceSha256": "cfd36b698098c477bd13becc1b7ecebca518acc0b3f96453fae042ccc3f323cb",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 840695921,
+            "int": 840695921,
+            "float": 9.080495466662342e-9
+          },
+          "raw": "71001c32"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1084/p8",
+          "fieldName": "blobs",
+          "target": "SunsetRace:n1067",
+          "targetNodeId": 1067,
+          "offset": 225724
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetRace:n1279",
+      "level": "SunsetRace",
+      "nodeId": 1279,
+      "name": "BstNode_6",
+      "className": "TerrainBlobGroup",
+      "classIndex": 28,
+      "sourceOffset": 261431,
+      "sourceLength": 50,
+      "sourceSha256": "5987181fc73dac9f1ed6db535fa805aeeb8265b6cfa9275e0d7298adcbbed01f",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 6,
+            "int": 6,
+            "float": 8.407790785948902e-45
+          },
+          "raw": "06000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1279/p8",
+          "fieldName": "blobs",
+          "target": "SunsetRace:n594",
+          "targetNodeId": 594,
+          "offset": 261465
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetRace:n1356",
+      "level": "SunsetRace",
+      "nodeId": 1356,
+      "name": "BstNode_5",
+      "className": "TerrainBlobGroup",
+      "classIndex": 28,
+      "sourceOffset": 276971,
+      "sourceLength": 50,
+      "sourceSha256": "06fa4f82089ceda8013f193b17412f4bf5f073b21cfc5d84d361f52fb37bb43b",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 5,
+            "int": 5,
+            "float": 7.006492321624085e-45
+          },
+          "raw": "05000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1356/p5",
+          "fieldName": "blobPrefabs",
+          "target": "SunsetRace:n1606",
+          "targetNodeId": 1606,
+          "offset": 276996
+        },
+        {
+          "fieldId": "n1356/p8",
+          "fieldName": "blobs",
+          "target": "SunsetRace:n379",
+          "targetNodeId": 379,
+          "offset": 277005
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "TitleWater:n87",
+      "level": "TitleWater",
+      "nodeId": 87,
+      "name": "BstNode_6",
+      "className": "TerrainBlobGroup",
+      "classIndex": 31,
+      "sourceOffset": 28371,
+      "sourceLength": 50,
+      "sourceSha256": "fb071524bb1ba902c21da1d6def3e59739895dc49ee48b0d2184713c333fdcb9",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 6,
+            "int": 6,
+            "float": 8.407790785948902e-45
+          },
+          "raw": "06000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n87/p8",
+          "fieldName": "blobs",
+          "target": "TitleWater:n162",
+          "targetNodeId": 162,
+          "offset": 28405
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "TitleWater:n134",
+      "level": "TitleWater",
+      "nodeId": 134,
+      "name": "BstNode_36",
+      "className": "TerrainBlobGroup",
+      "classIndex": 31,
+      "sourceOffset": 34429,
+      "sourceLength": 51,
+      "sourceSha256": "f2b0dba7335e5ab20955fed48fac3fb13f1a1c29105147633602990d19c7c627",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 36,
+            "int": 36,
+            "float": 5.044674471569341e-44
+          },
+          "raw": "24000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n134/p8",
+          "fieldName": "blobs",
+          "target": "TitleWater:n158",
+          "targetNodeId": 158,
+          "offset": 34464
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "CandleSpace",
+      "path": "Levels/CandleSpace/Objects.level.bin",
+      "sha256": "db7140d2dd5ee9cd2fcdcbb61a898b9facf1683ff21fec83fcbef81b885f56db",
+      "bytes": 92607,
+      "nodes": 564,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/CandleSpace.json",
+      "markdown": "Objects对象清单/CandleSpace.md"
+    },
+    {
+      "level": "CandleSpaceEnd",
+      "path": "Levels/CandleSpaceEnd/Objects.level.bin",
+      "sha256": "d42c3e1f85fb9dcc75d903911a1e91e6e061d017ae47f809caf4375505071352",
+      "bytes": 131707,
+      "nodes": 852,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/CandleSpaceEnd.json",
+      "markdown": "Objects对象清单/CandleSpaceEnd.md"
+    },
+    {
+      "level": "CarryLand",
+      "path": "Levels/CarryLand/Objects.level.bin",
+      "sha256": "05b7ec8214f29c52ae93d689df8bbea764240612425e0524259f3b185907993c",
+      "bytes": 26338,
+      "nodes": 109,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/CarryLand.json",
+      "markdown": "Objects对象清单/CarryLand.md"
+    },
+    {
+      "level": "CarryLand2",
+      "path": "Levels/CarryLand2/Objects.level.bin",
+      "sha256": "e20b1611daee8e87548c3e2902ef3f5d7b5ce43f48c62c2510b08374c9ac55d2",
+      "bytes": 52809,
+      "nodes": 249,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/CarryLand2.json",
+      "markdown": "Objects对象清单/CarryLand2.md"
+    },
+    {
+      "level": "CarryLand3",
+      "path": "Levels/CarryLand3/Objects.level.bin",
+      "sha256": "2a40e8794b6ca7c88d4b6b89a025ca6e9885e11f81c00bae76ca9798b64a674e",
+      "bytes": 11217,
+      "nodes": 40,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/CarryLand3.json",
+      "markdown": "Objects对象清单/CarryLand3.md"
+    },
+    {
+      "level": "Dawn",
+      "path": "Levels/Dawn/Objects.level.bin",
+      "sha256": "16e26aafc7f9d120a548bf5d8bec04fbc18146bc8db531ef75144889b1ff197a",
+      "bytes": 504637,
+      "nodes": 3798,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dawn.json",
+      "markdown": "Objects对象清单/Dawn.md"
+    },
+    {
+      "level": "DayEnd",
+      "path": "Levels/DayEnd/Objects.level.bin",
+      "sha256": "9b5c568cefa987e504a10236c5b61e5de4b748d965d09e42db3602e4e52cc904",
+      "bytes": 268140,
+      "nodes": 1459,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DayEnd.json",
+      "markdown": "Objects对象清单/DayEnd.md"
+    },
+    {
+      "level": "DayHubCave",
+      "path": "Levels/DayHubCave/Objects.level.bin",
+      "sha256": "e4da920cc9f0b1569f14ad1a6d1990db7155dc07ebfc3214c4e385a367872457",
+      "bytes": 202745,
+      "nodes": 1128,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DayHubCave.json",
+      "markdown": "Objects对象清单/DayHubCave.md"
+    },
+    {
+      "level": "Dusk",
+      "path": "Levels/Dusk/Objects.level.bin",
+      "sha256": "9222b248f17fb4122cd4ad9650543ab86aab8b077b6965248c70ac2341bf2d5d",
+      "bytes": 242331,
+      "nodes": 1288,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dusk.json",
+      "markdown": "Objects对象清单/Dusk.md"
+    },
+    {
+      "level": "DuskGraveyard",
+      "path": "Levels/DuskGraveyard/Objects.level.bin",
+      "sha256": "128b30dcbe40b68e68fc25d195b68dc39f897259453c02612049ccd37a90ffb4",
+      "bytes": 424333,
+      "nodes": 1791,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DuskGraveyard.json",
+      "markdown": "Objects对象清单/DuskGraveyard.md"
+    },
+    {
+      "level": "DuskMid",
+      "path": "Levels/DuskMid/Objects.level.bin",
+      "sha256": "899ca33226dabd04afecfe7888750938ff4e460cb586603364e150591e9cbda5",
+      "bytes": 234288,
+      "nodes": 1268,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DuskMid.json",
+      "markdown": "Objects对象清单/DuskMid.md"
+    },
+    {
+      "level": "Dusk_CrabField",
+      "path": "Levels/Dusk_CrabField/Objects.level.bin",
+      "sha256": "718247937eb535034282dbd11473563a2034ec75e1a4a287c057589ca174c8a8",
+      "bytes": 262346,
+      "nodes": 1098,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dusk_CrabField.json",
+      "markdown": "Objects对象清单/Dusk_CrabField.md"
+    },
+    {
+      "level": "HubReveal",
+      "path": "Levels/HubReveal/Objects.level.bin",
+      "sha256": "4b32f12bbe4b246cde9ca1e4ba0982000ff108359865bb4340aba640e609861b",
+      "bytes": 289438,
+      "nodes": 1829,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/HubReveal.json",
+      "markdown": "Objects对象清单/HubReveal.md"
+    },
+    {
+      "level": "Night",
+      "path": "Levels/Night/Objects.level.bin",
+      "sha256": "6ce612c9efb82834d648de81251033b341a44f4d9374d8338d868575aab6a723",
+      "bytes": 499756,
+      "nodes": 3719,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Night.json",
+      "markdown": "Objects对象清单/Night.md"
+    },
+    {
+      "level": "NightEnd",
+      "path": "Levels/NightEnd/Objects.level.bin",
+      "sha256": "0dd8919c4f0ca58e9dc979e211b84dc990e012815929082b1004ed620af32422",
+      "bytes": 156479,
+      "nodes": 1090,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/NightEnd.json",
+      "markdown": "Objects对象清单/NightEnd.md"
+    },
+    {
+      "level": "NightEntrance",
+      "path": "Levels/NightEntrance/Objects.level.bin",
+      "sha256": "d7cc9c4e290e146b459a8ddcddd19be2287fd2cc8ac19f98b688003e05ebb354",
+      "bytes": 98001,
+      "nodes": 594,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/NightEntrance.json",
+      "markdown": "Objects对象清单/NightEntrance.md"
+    },
+    {
+      "level": "Prairie_ButterflyFields",
+      "path": "Levels/Prairie_ButterflyFields/Objects.level.bin",
+      "sha256": "29d8d61a082f3e3414ecfbb501b5f65499deb37ad4a1078ce2e9b88ac0d1e441",
+      "bytes": 297606,
+      "nodes": 1513,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_ButterflyFields.json",
+      "markdown": "Objects对象清单/Prairie_ButterflyFields.md"
+    },
+    {
+      "level": "Prairie_Cave",
+      "path": "Levels/Prairie_Cave/Objects.level.bin",
+      "sha256": "675a2256e24f8c4b16540cee6a5cd2b7647ff2fb495724a8bf596717ca39d944",
+      "bytes": 466340,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Cave.json",
+      "markdown": "Objects对象清单/Prairie_Cave.md"
+    },
+    {
+      "level": "Prairie_NestAndKeeper",
+      "path": "Levels/Prairie_NestAndKeeper/Objects.level.bin",
+      "sha256": "5eabe877e07c84e5f9270035aaab73fa20144c87f6e9136e5285dbaff3f85b7a",
+      "bytes": 239403,
+      "nodes": 1077,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_NestAndKeeper.json",
+      "markdown": "Objects对象清单/Prairie_NestAndKeeper.md"
+    },
+    {
+      "level": "Prairie_Village",
+      "path": "Levels/Prairie_Village/Objects.level.bin",
+      "sha256": "4656296b54402016b59b894b4653fbdc71e106a21e0900294f73f2c7b7112385",
+      "bytes": 549989,
+      "nodes": 3724,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Village.json",
+      "markdown": "Objects对象清单/Prairie_Village.md"
+    },
+    {
+      "level": "Rain",
+      "path": "Levels/Rain/Objects.level.bin",
+      "sha256": "20093bccf3bb1ea0936cb993e66cef0187b40a5a411df3573eb28e4def4f75c6",
+      "bytes": 457732,
+      "nodes": 2079,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Rain.json",
+      "markdown": "Objects对象清单/Rain.md"
+    },
+    {
+      "level": "RainEnd",
+      "path": "Levels/RainEnd/Objects.level.bin",
+      "sha256": "247912ec955153e3df80c16a861eb872573502a285a17943518bdce448a8d5e3",
+      "bytes": 427926,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainEnd.json",
+      "markdown": "Objects对象清单/RainEnd.md"
+    },
+    {
+      "level": "RainForest",
+      "path": "Levels/RainForest/Objects.level.bin",
+      "sha256": "2e69b3314c70c61bd99435f4bb4418fba540f227c83670e1af3b5358c64c3b73",
+      "bytes": 271409,
+      "nodes": 1306,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainForest.json",
+      "markdown": "Objects对象清单/RainForest.md"
+    },
+    {
+      "level": "RainMid",
+      "path": "Levels/RainMid/Objects.level.bin",
+      "sha256": "139b219d9b71a2ab24418b1ec41f2ee8a2ebfdf4c5ea992c35348a758682ed23",
+      "bytes": 430825,
+      "nodes": 2457,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainMid.json",
+      "markdown": "Objects对象清单/RainMid.md"
+    },
+    {
+      "level": "SkyHub2",
+      "path": "Levels/SkyHub2/Objects.level.bin",
+      "sha256": "8b467f9b349d9d4ce0d038528c96e44dff30063149bf5bbf90232a56bb9dd36f",
+      "bytes": 475656,
+      "nodes": 2886,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SkyHub2.json",
+      "markdown": "Objects对象清单/SkyHub2.md"
+    },
+    {
+      "level": "Storm",
+      "path": "Levels/Storm/Objects.level.bin",
+      "sha256": "4be187f31f1ef86611831abeb45ed9c1deff5e925f3bae80a6be49af85fa52bd",
+      "bytes": 324849,
+      "nodes": 1954,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Storm.json",
+      "markdown": "Objects对象清单/Storm.md"
+    },
+    {
+      "level": "StormEnd",
+      "path": "Levels/StormEnd/Objects.level.bin",
+      "sha256": "a9c13b592198ee01ab2922a0c7901f4516ae172d56a22d9b7f806ff7464c9162",
+      "bytes": 224465,
+      "nodes": 1243,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/StormEnd.json",
+      "markdown": "Objects对象清单/StormEnd.md"
+    },
+    {
+      "level": "Sunset",
+      "path": "Levels/Sunset/Objects.level.bin",
+      "sha256": "8126f2db693502576075505797624e0b5e53dc064fe6af82e90f2261ca427f8a",
+      "bytes": 325410,
+      "nodes": 1899,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Sunset.json",
+      "markdown": "Objects对象清单/Sunset.md"
+    },
+    {
+      "level": "SunsetEnd",
+      "path": "Levels/SunsetEnd/Objects.level.bin",
+      "sha256": "9995ebfef7aa72982f6b95073a98a4ef01376bd8ac56c3b79b09729f97f43d6e",
+      "bytes": 352573,
+      "nodes": 1998,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SunsetEnd.json",
+      "markdown": "Objects对象清单/SunsetEnd.md"
+    },
+    {
+      "level": "SunsetEnd2",
+      "path": "Levels/SunsetEnd2/Objects.level.bin",
+      "sha256": "f76249413f9412f3db6d726aacf7425d5da546f8a9b88b9614c8a33fdb87e711",
+      "bytes": 209340,
+      "nodes": 975,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SunsetEnd2.json",
+      "markdown": "Objects对象清单/SunsetEnd2.md"
+    },
+    {
+      "level": "SunsetRace",
+      "path": "Levels/SunsetRace/Objects.level.bin",
+      "sha256": "2ebfc21451d30f976bcafafa0c42f409e322efeeb0f8403a4136899438e0b5dc",
+      "bytes": 333403,
+      "nodes": 1722,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SunsetRace.json",
+      "markdown": "Objects对象清单/SunsetRace.md"
+    },
+    {
+      "level": "TitleWater",
+      "path": "Levels/TitleWater/Objects.level.bin",
+      "sha256": "46841a22d17b360fcc3c7ceb8406d8c7e73441fd59023f64b4bce4057e1b9414",
+      "bytes": 45511,
+      "nodes": 238,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/TitleWater.json",
+      "markdown": "Objects对象清单/TitleWater.md"
+    }
+  ]
+}

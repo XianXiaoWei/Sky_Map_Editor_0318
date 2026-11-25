@@ -1,0 +1,5943 @@
+{
+  "className": "Crab",
+  "functionGroup": "生物、群体与 AI",
+  "functionRole": "螃蟹实例",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "partial",
+      "description": "Crab 的原默认值、继承初始化及 3 个序列化字段变体；原注册字段 3 项。"
+    },
+    {
+      "name": "螃蟹实例",
+      "status": "partial",
+      "description": "原 Load／CrabAi.Initialize、自己的 CrabIdle／GoSit2／UISit 初始化、保存字段与独立骨骼动作预览已有核验。原评分／比较／评分恢复／运动读取408组、群体转向105组、Begin／Seek／End132组均与原机器码零差异。完整 CrabAi.SelectState 新增87组、12,116,664字节、2,531次调用零差异；完整 CrabAi.Update 新增139组、19,358,808字节、827次调用零差异，覆盖各状态目标、探针引导、实际群体转向、连续帧缓存、速度与转向输出，组合入口连接实际选择／比较／评分／更新。数学、metadata和场景查询依赖仍为明确服务；完整 Crab.Update、原地面／世界碰撞、真实 Model 构造／克隆、动画／交互 owner、动态提交和卸载尚未完成。手动动作预览与AI子链核验不作为完整生物验收，完整运行类仍未增加。 本轮CrabBarn归属分配49组、完整Barn.Update18组原对照零差异：指定owner优先、无指定owner按玩家轮转、零玩家除法故障、流收发分支与回调后128字节交互历史／计数复制保持原顺序。本次完整NetState／Receive／Send与实际Barn.Update组合176组、46,303,232字节、853次有序服务调用原对照零差异。保留私有目标引用转换、120字节scratch未写字段、所有权跳过、捕获发送名单、实时解码计数、重叠写回和每蟹计时器；接收计数没有默认输入，必须由解码器输出。真实网络owner、Crab外层运动／碰撞及Model／动画／GPU生命周期仍待接。 本次完整包字段编解码、实际BinaryStream位／字节／整数／量化／布尔／向量与PlayerId上下文和NetPlayerBarn映射已恢复，并接实际Barn收发；432组、113,345,280字节、489次metadata／流查找调用原对照零差异。真实缓冲中的包字节、读回字段、对齐／游标／有效位、越界与NaN断言均核验；上下文2失败读取的原私有字节须显式提供。真实传输／场景、外层运动碰撞、Model／动画／GPU和切图生命周期仍待接。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "CrabParams（140 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "Crab",
+    "category": "生物、群体与 AI",
+    "functionGroupId": "creatures",
+    "functionRole": "螃蟹实例",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "partial",
+        "description": "Crab 的原默认值、继承初始化及 3 个序列化字段变体；原注册字段 3 项。"
+      },
+      {
+        "name": "螃蟹实例",
+        "status": "partial",
+        "description": "原 Load／CrabAi.Initialize、自己的 CrabIdle／GoSit2／UISit 初始化、保存字段与独立骨骼动作预览已有核验。原评分／比较／评分恢复／运动读取408组、群体转向105组、Begin／Seek／End132组均与原机器码零差异。完整 CrabAi.SelectState 新增87组、12,116,664字节、2,531次调用零差异；完整 CrabAi.Update 新增139组、19,358,808字节、827次调用零差异，覆盖各状态目标、探针引导、实际群体转向、连续帧缓存、速度与转向输出，组合入口连接实际选择／比较／评分／更新。数学、metadata和场景查询依赖仍为明确服务；完整 Crab.Update、原地面／世界碰撞、真实 Model 构造／克隆、动画／交互 owner、动态提交和卸载尚未完成。手动动作预览与AI子链核验不作为完整生物验收，完整运行类仍未增加。 本轮CrabBarn归属分配49组、完整Barn.Update18组原对照零差异：指定owner优先、无指定owner按玩家轮转、零玩家除法故障、流收发分支与回调后128字节交互历史／计数复制保持原顺序。本次完整NetState／Receive／Send与实际Barn.Update组合176组、46,303,232字节、853次有序服务调用原对照零差异。保留私有目标引用转换、120字节scratch未写字段、所有权跳过、捕获发送名单、实时解码计数、重叠写回和每蟹计时器；接收计数没有默认输入，必须由解码器输出。真实网络owner、Crab外层运动／碰撞及Model／动画／GPU生命周期仍待接。 本次完整包字段编解码、实际BinaryStream位／字节／整数／量化／布尔／向量与PlayerId上下文和NetPlayerBarn映射已恢复，并接实际Barn收发；432组、113,345,280字节、489次metadata／流查找调用原对照零差异。真实缓冲中的包字节、读回字段、对齐／游标／有效位、越界与NaN断言均核验；上下文2失败读取的原私有字节须显式提供。真实传输／场景、外层运动碰撞、Model／动画／GPU和切图生命周期仍待接。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "CrabParams（140 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "CrabParams",
+        "references": 140
+      }
+    ],
+    "rttiWorkingGroup": "玩家、角色与动画",
+    "role": "对象实例类型",
+    "instances": 140,
+    "nestedInstances": 0,
+    "referenceFields": 140,
+    "declaredLevels": 5,
+    "levels": [
+      {
+        "level": "Dusk",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DuskGraveyard",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Dusk_CrabField",
+        "nodes": 128,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainEnd",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Storm",
+        "nodes": 6,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "enabled",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "params",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "transform",
+        "type": 0,
+        "size": 64,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100c9b260",
+    "nativeRegisteredFields": [
+      {
+        "name": "params",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP10CrabParamsERK8MetaTypev",
+        "nativeOffset": 128,
+        "registrationFunction": "0x100261540",
+        "propertyAddress": "0x100c9ac50"
+      },
+      {
+        "name": "enabled",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 216,
+        "registrationFunction": "0x100261540",
+        "propertyAddress": "0x100c9aca0"
+      },
+      {
+        "name": "transform",
+        "typeGetter": "__Z17GetMetaTypeByTypeIN10Vectormath3Aos7Matrix4EERK8MetaTypev",
+        "nativeOffset": 144,
+        "registrationFunction": "0x100261540",
+        "propertyAddress": "0x100c9acf0"
+      }
+    ],
+    "completedCheckpoints": 4,
+    "partialCheckpoints": 2,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 40,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": true,
+    "implementation": [
+      "src/core/environment-object-state.ts",
+      "src/core/creature-construction-runtime.ts",
+      "src/core/creature-runtime.ts",
+      "src/core/crab-load-runtime.ts",
+      "src/core/creature-ai-initialize-runtime.ts",
+      "src/core/resource-model-animation-preview.ts",
+      "src/renderer/model-animation-preview.ts",
+      "src/core/creature-steering-runtime.ts",
+      "src/core/crab-behavior-runtime.ts",
+      "src/core/creature-motion-state-runtime.ts",
+      "src/core/creature-flocking-runtime.ts",
+      "src/core/crab-state-runtime.ts",
+      "src/core/crab-ai-update-runtime.ts",
+      "src/core/crab-barn-runtime.ts",
+      "src/core/crab-network-runtime.ts",
+      "src/core/binary-stream-runtime.ts",
+      "src/core/crab-codec-runtime.ts"
+    ],
+    "evidence": [
+      "docs/生物骨骼动画续接.md",
+      "docs/creature-construction.json",
+      "docs/creature-construction-oracle.json",
+      "docs/creature-kernel-oracle.json",
+      "docs/objects-nature-audit.json",
+      "docs/黑暗植物与生物加载续接.md",
+      "docs/creature-plant-load-native.json",
+      "docs/crab-load-oracle.json",
+      "docs/自然动画与鸟群引导续接.md",
+      "docs/creature-steering-native.json",
+      "docs/creature-steering-oracle.json",
+      "docs/crab-behavior-native.json",
+      "docs/crab-behavior-oracle.json",
+      "docs/creature-flocking-oracle.json",
+      "docs/螃蟹行为与群体转向续接.md",
+      "docs/crab-state-oracle.json",
+      "docs/crab-ai-update-oracle.json",
+      "docs/crab-ai-verification.json",
+      "docs/creature-lifecycle-native.json",
+      "docs/creature-lifecycle-oracle.json",
+      "docs/crab-network-native.json",
+      "docs/crab-network-oracle.json",
+      "tests/crab-network-runtime.test.ts",
+      "tests/fixtures/crab-network-native.json.gz",
+      "docs/crab-codec-native.json",
+      "docs/crab-codec-oracle.json",
+      "tests/crab-codec-runtime.test.ts",
+      "tests/fixtures/crab-codec-native.json.gz",
+      "docs/螃蟹真实包编解码与打包门槛.md"
+    ],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 3 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "partial",
+        "note": "原 Load／CrabAi.Initialize、自己的 CrabIdle／GoSit2／UISit 初始化、保存字段与独立骨骼动作预览已有核验。原评分／比较／评分恢复／运动读取408组、群体转向105组、Begin／Seek／End132组均与原机器码零差异。完整 CrabAi.SelectState 新增87组、12,116,664字节、2,531次调用零差异；完整 CrabAi.Update 新增139组、19,358,808字节、827次调用零差异，覆盖各状态目标、探针引导、实际群体转向、连续帧缓存、速度与转向输出，组合入口连接实际选择／比较／评分／更新。数学、metadata和场景查询依赖仍为明确服务；完整 Crab.Update、原地面／世界碰撞、真实 Model 构造／克隆、动画／交互 owner、动态提交和卸载尚未完成。手动动作预览与AI子链核验不作为完整生物验收，完整运行类仍未增加。 本轮CrabBarn归属分配49组、完整Barn.Update18组原对照零差异：指定owner优先、无指定owner按玩家轮转、零玩家除法故障、流收发分支与回调后128字节交互历史／计数复制保持原顺序。本次完整NetState／Receive／Send与实际Barn.Update组合176组、46,303,232字节、853次有序服务调用原对照零差异。保留私有目标引用转换、120字节scratch未写字段、所有权跳过、捕获发送名单、实时解码计数、重叠写回和每蟹计时器；接收计数没有默认输入，必须由解码器输出。真实网络owner、Crab外层运动／碰撞及Model／动画／GPU生命周期仍待接。 本次完整包字段编解码、实际BinaryStream位／字节／整数／量化／布尔／向量与PlayerId上下文和NetPlayerBarn映射已恢复，并接实际Barn收发；432组、113,345,280字节、489次metadata／流查找调用原对照零差异。真实缓冲中的包字节、读回字段、对齐／游标／有效位、越界与NaN断言均核验；上下文2失败读取的原私有字节须显式提供。真实传输／场景、外层运动碰撞、Model／动画／GPU和切图生命周期仍待接。",
+        "evidence": [
+          "docs/生物骨骼动画续接.md",
+          "docs/creature-construction.json",
+          "docs/creature-construction-oracle.json",
+          "docs/creature-kernel-oracle.json",
+          "docs/objects-nature-audit.json",
+          "docs/黑暗植物与生物加载续接.md",
+          "docs/creature-plant-load-native.json",
+          "docs/crab-load-oracle.json",
+          "docs/自然动画与鸟群引导续接.md",
+          "docs/creature-steering-native.json",
+          "docs/creature-steering-oracle.json",
+          "docs/crab-behavior-native.json",
+          "docs/crab-behavior-oracle.json",
+          "docs/creature-flocking-oracle.json",
+          "docs/螃蟹行为与群体转向续接.md",
+          "docs/crab-state-oracle.json",
+          "docs/crab-ai-update-oracle.json",
+          "docs/crab-ai-verification.json",
+          "docs/creature-lifecycle-native.json",
+          "docs/creature-lifecycle-oracle.json",
+          "docs/crab-network-native.json",
+          "docs/crab-network-oracle.json",
+          "tests/crab-network-runtime.test.ts",
+          "tests/fixtures/crab-network-native.json.gz",
+          "docs/crab-codec-native.json",
+          "docs/crab-codec-oracle.json",
+          "tests/crab-codec-runtime.test.ts",
+          "tests/fixtures/crab-codec-native.json.gz",
+          "docs/螃蟹真实包编解码与打包门槛.md"
+        ]
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "partial",
+        "note": "原 Load／CrabAi.Initialize、自己的 CrabIdle／GoSit2／UISit 初始化、保存字段与独立骨骼动作预览已有核验。原评分／比较／评分恢复／运动读取408组、群体转向105组、Begin／Seek／End132组均与原机器码零差异。完整 CrabAi.SelectState 新增87组、12,116,664字节、2,531次调用零差异；完整 CrabAi.Update 新增139组、19,358,808字节、827次调用零差异，覆盖各状态目标、探针引导、实际群体转向、连续帧缓存、速度与转向输出，组合入口连接实际选择／比较／评分／更新。数学、metadata和场景查询依赖仍为明确服务；完整 Crab.Update、原地面／世界碰撞、真实 Model 构造／克隆、动画／交互 owner、动态提交和卸载尚未完成。手动动作预览与AI子链核验不作为完整生物验收，完整运行类仍未增加。 本轮CrabBarn归属分配49组、完整Barn.Update18组原对照零差异：指定owner优先、无指定owner按玩家轮转、零玩家除法故障、流收发分支与回调后128字节交互历史／计数复制保持原顺序。本次完整NetState／Receive／Send与实际Barn.Update组合176组、46,303,232字节、853次有序服务调用原对照零差异。保留私有目标引用转换、120字节scratch未写字段、所有权跳过、捕获发送名单、实时解码计数、重叠写回和每蟹计时器；接收计数没有默认输入，必须由解码器输出。真实网络owner、Crab外层运动／碰撞及Model／动画／GPU生命周期仍待接。 本次完整包字段编解码、实际BinaryStream位／字节／整数／量化／布尔／向量与PlayerId上下文和NetPlayerBarn映射已恢复，并接实际Barn收发；432组、113,345,280字节、489次metadata／流查找调用原对照零差异。真实缓冲中的包字节、读回字段、对齐／游标／有效位、越界与NaN断言均核验；上下文2失败读取的原私有字节须显式提供。真实传输／场景、外层运动碰撞、Model／动画／GPU和切图生命周期仍待接。",
+        "evidence": [
+          "docs/生物骨骼动画续接.md",
+          "docs/creature-construction.json",
+          "docs/creature-construction-oracle.json",
+          "docs/creature-kernel-oracle.json",
+          "docs/objects-nature-audit.json",
+          "docs/黑暗植物与生物加载续接.md",
+          "docs/creature-plant-load-native.json",
+          "docs/crab-load-oracle.json",
+          "docs/自然动画与鸟群引导续接.md",
+          "docs/creature-steering-native.json",
+          "docs/creature-steering-oracle.json",
+          "docs/crab-behavior-native.json",
+          "docs/crab-behavior-oracle.json",
+          "docs/creature-flocking-oracle.json",
+          "docs/螃蟹行为与群体转向续接.md",
+          "docs/crab-state-oracle.json",
+          "docs/crab-ai-update-oracle.json",
+          "docs/crab-ai-verification.json",
+          "docs/creature-lifecycle-native.json",
+          "docs/creature-lifecycle-oracle.json",
+          "docs/crab-network-native.json",
+          "docs/crab-network-oracle.json",
+          "tests/crab-network-runtime.test.ts",
+          "tests/fixtures/crab-network-native.json.gz",
+          "docs/crab-codec-native.json",
+          "docs/crab-codec-oracle.json",
+          "tests/crab-codec-runtime.test.ts",
+          "tests/fixtures/crab-codec-native.json.gz",
+          "docs/螃蟹真实包编解码与打包门槛.md"
+        ]
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "verified",
+        "note": "原 Load／CrabAi.Initialize、自己的 CrabIdle／GoSit2／UISit 初始化、保存字段与独立骨骼动作预览已有核验。原评分／比较／评分恢复／运动读取408组、群体转向105组、Begin／Seek／End132组均与原机器码零差异。完整 CrabAi.SelectState 新增87组、12,116,664字节、2,531次调用零差异；完整 CrabAi.Update 新增139组、19,358,808字节、827次调用零差异，覆盖各状态目标、探针引导、实际群体转向、连续帧缓存、速度与转向输出，组合入口连接实际选择／比较／评分／更新。数学、metadata和场景查询依赖仍为明确服务；完整 Crab.Update、原地面／世界碰撞、真实 Model 构造／克隆、动画／交互 owner、动态提交和卸载尚未完成。手动动作预览与AI子链核验不作为完整生物验收，完整运行类仍未增加。 本轮CrabBarn归属分配49组、完整Barn.Update18组原对照零差异：指定owner优先、无指定owner按玩家轮转、零玩家除法故障、流收发分支与回调后128字节交互历史／计数复制保持原顺序。本次完整NetState／Receive／Send与实际Barn.Update组合176组、46,303,232字节、853次有序服务调用原对照零差异。保留私有目标引用转换、120字节scratch未写字段、所有权跳过、捕获发送名单、实时解码计数、重叠写回和每蟹计时器；接收计数没有默认输入，必须由解码器输出。真实网络owner、Crab外层运动／碰撞及Model／动画／GPU生命周期仍待接。 本次完整包字段编解码、实际BinaryStream位／字节／整数／量化／布尔／向量与PlayerId上下文和NetPlayerBarn映射已恢复，并接实际Barn收发；432组、113,345,280字节、489次metadata／流查找调用原对照零差异。真实缓冲中的包字节、读回字段、对齐／游标／有效位、越界与NaN断言均核验；上下文2失败读取的原私有字节须显式提供。真实传输／场景、外层运动碰撞、Model／动画／GPU和切图生命周期仍待接。",
+        "evidence": [
+          "docs/生物骨骼动画续接.md",
+          "docs/creature-construction.json",
+          "docs/creature-construction-oracle.json",
+          "docs/creature-kernel-oracle.json",
+          "docs/objects-nature-audit.json",
+          "docs/黑暗植物与生物加载续接.md",
+          "docs/creature-plant-load-native.json",
+          "docs/crab-load-oracle.json",
+          "docs/自然动画与鸟群引导续接.md",
+          "docs/creature-steering-native.json",
+          "docs/creature-steering-oracle.json",
+          "docs/crab-behavior-native.json",
+          "docs/crab-behavior-oracle.json",
+          "docs/creature-flocking-oracle.json",
+          "docs/螃蟹行为与群体转向续接.md",
+          "docs/crab-state-oracle.json",
+          "docs/crab-ai-update-oracle.json",
+          "docs/crab-ai-verification.json",
+          "docs/creature-lifecycle-native.json",
+          "docs/creature-lifecycle-oracle.json",
+          "docs/crab-network-native.json",
+          "docs/crab-network-oracle.json",
+          "tests/crab-network-runtime.test.ts",
+          "tests/fixtures/crab-network-native.json.gz",
+          "docs/crab-codec-native.json",
+          "docs/crab-codec-oracle.json",
+          "tests/crab-codec-runtime.test.ts",
+          "tests/fixtures/crab-codec-native.json.gz",
+          "docs/螃蟹真实包编解码与打包门槛.md"
+        ]
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "原 Load／CrabAi.Initialize、自己的 CrabIdle／GoSit2／UISit 初始化、保存字段与独立骨骼动作预览已有核验。原评分／比较／评分恢复／运动读取408组、群体转向105组、Begin／Seek／End132组均与原机器码零差异。完整 CrabAi.SelectState 新增87组、12,116,664字节、2,531次调用零差异；完整 CrabAi.Update 新增139组、19,358,808字节、827次调用零差异，覆盖各状态目标、探针引导、实际群体转向、连续帧缓存、速度与转向输出，组合入口连接实际选择／比较／评分／更新。数学、metadata和场景查询依赖仍为明确服务；完整 Crab.Update、原地面／世界碰撞、真实 Model 构造／克隆、动画／交互 owner、动态提交和卸载尚未完成。手动动作预览与AI子链核验不作为完整生物验收，完整运行类仍未增加。 本轮CrabBarn归属分配49组、完整Barn.Update18组原对照零差异：指定owner优先、无指定owner按玩家轮转、零玩家除法故障、流收发分支与回调后128字节交互历史／计数复制保持原顺序。本次完整NetState／Receive／Send与实际Barn.Update组合176组、46,303,232字节、853次有序服务调用原对照零差异。保留私有目标引用转换、120字节scratch未写字段、所有权跳过、捕获发送名单、实时解码计数、重叠写回和每蟹计时器；接收计数没有默认输入，必须由解码器输出。真实网络owner、Crab外层运动／碰撞及Model／动画／GPU生命周期仍待接。 本次完整包字段编解码、实际BinaryStream位／字节／整数／量化／布尔／向量与PlayerId上下文和NetPlayerBarn映射已恢复，并接实际Barn收发；432组、113,345,280字节、489次metadata／流查找调用原对照零差异。真实缓冲中的包字节、读回字段、对齐／游标／有效位、越界与NaN断言均核验；上下文2失败读取的原私有字节须显式提供。真实传输／场景、外层运动碰撞、Model／动画／GPU和切图生命周期仍待接。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "Dusk:n0",
+      "level": "Dusk",
+      "nodeId": 0,
+      "name": "BstNode_206",
+      "className": "Crab",
+      "classIndex": 0,
+      "sourceOffset": 23787,
+      "sourceLength": 85,
+      "sourceSha256": "63b06b8797008c728fca8b969487fe051e7a663dfc62ad6d2aa5322957049adb",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n0/p2",
+          "fieldName": "params",
+          "target": "Dusk:n1145",
+          "targetNodeId": 1145,
+          "offset": 23868
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n282",
+      "level": "Dusk",
+      "nodeId": 282,
+      "name": "BstNode_214",
+      "className": "Crab",
+      "classIndex": 0,
+      "sourceOffset": 75180,
+      "sourceLength": 85,
+      "sourceSha256": "bc90366aa903facb379b3adf94aa52d3cfe91643312290e50afef119de59c69b",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n282/p2",
+          "fieldName": "params",
+          "target": "Dusk:n1145",
+          "targetNodeId": 1145,
+          "offset": 75261
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n10",
+      "level": "DuskGraveyard",
+      "nodeId": 10,
+      "name": "BstNode_274",
+      "className": "Crab",
+      "classIndex": 6,
+      "sourceOffset": 25646,
+      "sourceLength": 85,
+      "sourceSha256": "d7517056a52e1237dad0d38174119b630fccb2007ff8755efcbc95e3b346e774",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n10/p2",
+          "fieldName": "params",
+          "target": "DuskGraveyard:n495",
+          "targetNodeId": 495,
+          "offset": 25727
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n1301",
+      "level": "DuskGraveyard",
+      "nodeId": 1301,
+      "name": "BstNode_196",
+      "className": "Crab",
+      "classIndex": 6,
+      "sourceOffset": 324110,
+      "sourceLength": 85,
+      "sourceSha256": "f03074926e4c74ab3e9e1ed4f648a81e1c7e14747e29009579b2fb86dddcaf0f",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1301/p2",
+          "fieldName": "params",
+          "target": "DuskGraveyard:n495",
+          "targetNodeId": 495,
+          "offset": 324191
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n1",
+      "level": "Dusk_CrabField",
+      "nodeId": 1,
+      "name": "BstNode_206",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 15281,
+      "sourceLength": 85,
+      "sourceSha256": "4be13b79d60d27c0c3e33b39f658a65a730216b416f57de32a4aac9604c3a384",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 15362
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n6",
+      "level": "Dusk_CrabField",
+      "nodeId": 6,
+      "name": "BstNode_2529558544",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 16663,
+      "sourceLength": 92,
+      "sourceSha256": "f723a18ac4363bdbaa3d803ab2d8fc6cb13527f3aa6502b61a49afe20cbd0035",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n6/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 16751
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n18",
+      "level": "Dusk_CrabField",
+      "nodeId": 18,
+      "name": "BstNode_2529558621",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 19416,
+      "sourceLength": 92,
+      "sourceSha256": "20910d4e8e8db2a2af88ba7924ecfb44c03614f4d9dd49325fb4854e638d753c",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n18/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 19504
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n20",
+      "level": "Dusk_CrabField",
+      "nodeId": 20,
+      "name": "BstNode_2529558609",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 19899,
+      "sourceLength": 92,
+      "sourceSha256": "a7295954db1b34ca98b062fda10b01a4e66edcb8f5059e239da75cc1851c0a07",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n20/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 19987
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n24",
+      "level": "Dusk_CrabField",
+      "nodeId": 24,
+      "name": "BstNode_2529558635",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 20529,
+      "sourceLength": 92,
+      "sourceSha256": "6ffa4c8667c82ed558f214340a2fbf2aafd35e068a7b60f69f9da9de02af37dd",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n24/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 20617
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n27",
+      "level": "Dusk_CrabField",
+      "nodeId": 27,
+      "name": "BstNode_2529558547",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 21208,
+      "sourceLength": 92,
+      "sourceSha256": "18399404246eacfc8ebe9920d96b3fe82116edb99e8e5f8d6c0e051ed61392f6",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n27/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 21296
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n34",
+      "level": "Dusk_CrabField",
+      "nodeId": 34,
+      "name": "BstNode_2529558623",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 22106,
+      "sourceLength": 92,
+      "sourceSha256": "16bdf0ce11ce0b5086efcc6310629dd472399784e3aa83713a5d1b1a6230e243",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n34/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 22194
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n36",
+      "level": "Dusk_CrabField",
+      "nodeId": 36,
+      "name": "BstNode_2529558640",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 22364,
+      "sourceLength": 92,
+      "sourceSha256": "34a5b9cf143bfe15030cde652213e3342b8a139fa8914dfcea75d2077dc83a26",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n36/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 22452
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n42",
+      "level": "Dusk_CrabField",
+      "nodeId": 42,
+      "name": "BstNode_2529558571",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 24171,
+      "sourceLength": 92,
+      "sourceSha256": "7ca6d21e0dc5cecaaeb75901a535466c42bf18d7d8c94e38cc9559522786536c",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n42/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 24259
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n51",
+      "level": "Dusk_CrabField",
+      "nodeId": 51,
+      "name": "BstNode_2529558611",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 26136,
+      "sourceLength": 92,
+      "sourceSha256": "59c0b97296b9e1ca57f2be10e9fd7bbd560a0fa0646bc397857315dc2cd7b6f4",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n51/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 26224
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n52",
+      "level": "Dusk_CrabField",
+      "nodeId": 52,
+      "name": "BstNode_2529558591",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 26228,
+      "sourceLength": 92,
+      "sourceSha256": "34bfca561e456e8b18ecc2f3e7b36936dfe9332f3acbf9022fd04f868ac2cd8b",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n52/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 26316
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n59",
+      "level": "Dusk_CrabField",
+      "nodeId": 59,
+      "name": "BstNode_2529558572",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 27268,
+      "sourceLength": 92,
+      "sourceSha256": "37d4e95b15e92f45dac796429ebc0d171061bfc203e5956f5709936f1d46376c",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n59/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 27356
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n66",
+      "level": "Dusk_CrabField",
+      "nodeId": 66,
+      "name": "BstNode_2529558541",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 29440,
+      "sourceLength": 92,
+      "sourceSha256": "ca2f422348448188fe3ed2018541a7574ff014a0fde510d9bc81acdeb08f7e2a",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n66/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 29528
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n68",
+      "level": "Dusk_CrabField",
+      "nodeId": 68,
+      "name": "BstNode_2529558606",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 29958,
+      "sourceLength": 92,
+      "sourceSha256": "b232129af40656627f4c902f117d794bb7e62c76c8f19a17f7e36a65decd2d93",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n68/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 30046
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n73",
+      "level": "Dusk_CrabField",
+      "nodeId": 73,
+      "name": "BstNode_2529558646",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 31230,
+      "sourceLength": 92,
+      "sourceSha256": "c47c67f3e5fa3dbab62c3348490e693bf66718c4a594efc2b87b767e3a5b0600",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n73/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 31318
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n78",
+      "level": "Dusk_CrabField",
+      "nodeId": 78,
+      "name": "BstNode_2529558618",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 32338,
+      "sourceLength": 92,
+      "sourceSha256": "54cb469954defab86b418f5e296ac4bcacc442122331db587097ebfc8d13fb41",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n78/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 32426
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n81",
+      "level": "Dusk_CrabField",
+      "nodeId": 81,
+      "name": "BstNode_2529558662",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 32711,
+      "sourceLength": 92,
+      "sourceSha256": "345c2510d8a1742b8b44d36aaecb819f95220634b84d4f4f8571cfbd6421ec55",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n81/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 32799
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n91",
+      "level": "Dusk_CrabField",
+      "nodeId": 91,
+      "name": "BstNode_2529558564",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 34470,
+      "sourceLength": 92,
+      "sourceSha256": "e1c590592c18e8440505dc3e0af6f76bd99a82adc83356ea931059332d8bbefd",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n91/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 34558
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n92",
+      "level": "Dusk_CrabField",
+      "nodeId": 92,
+      "name": "BstNode_2529558630",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 34562,
+      "sourceLength": 92,
+      "sourceSha256": "5931805f578c631c37cde23cfc6fec5ea5ca65f0ddf8e835c87a3d89e3b62545",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n92/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 34650
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n97",
+      "level": "Dusk_CrabField",
+      "nodeId": 97,
+      "name": "BstNode_2529558550",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 35993,
+      "sourceLength": 92,
+      "sourceSha256": "7c1d7c6e18d918c217e1346870e8c08b62b1b8d9fc90dd4569e374554b880b92",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n97/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 36081
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n101",
+      "level": "Dusk_CrabField",
+      "nodeId": 101,
+      "name": "BstNode_2529558540",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 36808,
+      "sourceLength": 92,
+      "sourceSha256": "2253cd35c44663cccae7c2c01dc02cf69107ccf143706a96057081476eab9eca",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n101/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 36896
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n111",
+      "level": "Dusk_CrabField",
+      "nodeId": 111,
+      "name": "BstNode_2529558532",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 39305,
+      "sourceLength": 92,
+      "sourceSha256": "6841462a732339d754b9e6c7409831bdef45637e52d8658d1be33148f45311c2",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n111/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 39393
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n119",
+      "level": "Dusk_CrabField",
+      "nodeId": 119,
+      "name": "BstNode_2529558556",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 41290,
+      "sourceLength": 92,
+      "sourceSha256": "80a4237f27eac5086f64091011d64805b14fd80e281e192dd28f6087d686131c",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n119/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 41378
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n141",
+      "level": "Dusk_CrabField",
+      "nodeId": 141,
+      "name": "BstNode_2529558565",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 45822,
+      "sourceLength": 92,
+      "sourceSha256": "1ba6056d1f09c8e833d4e1d8acdb6a3ea916f516ad93547a1fad91da4dac4295",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n141/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 45910
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n188",
+      "level": "Dusk_CrabField",
+      "nodeId": 188,
+      "name": "BstNode_2529558629",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 58289,
+      "sourceLength": 92,
+      "sourceSha256": "232f6b94c8d4155e7042eb3c84527d6716399bf01123c4a652452a129d53c92b",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n188/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 58377
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n192",
+      "level": "Dusk_CrabField",
+      "nodeId": 192,
+      "name": "BstNode_2529558652",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 59100,
+      "sourceLength": 92,
+      "sourceSha256": "e8c0f8ab23fd47363790462cd1154183b13a7c96e97401fd19495e10c16bfdc1",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n192/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 59188
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n194",
+      "level": "Dusk_CrabField",
+      "nodeId": 194,
+      "name": "BstNode_2529558656",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 59264,
+      "sourceLength": 92,
+      "sourceSha256": "994b982ffada3d8f6bbc3b88cc99a567d367e4cc83a049dd0c2ef11b72719b9f",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n194/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 59352
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n205",
+      "level": "Dusk_CrabField",
+      "nodeId": 205,
+      "name": "BstNode_2529558631",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 61776,
+      "sourceLength": 92,
+      "sourceSha256": "5194c70ec3aa738d4b274fa81577f7e0c150124c270abf42018db6f1996bbfc4",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n205/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 61864
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n234",
+      "level": "Dusk_CrabField",
+      "nodeId": 234,
+      "name": "BstNode_2529558554",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 68181,
+      "sourceLength": 92,
+      "sourceSha256": "8faf9459304848915680fd14b3780997502a93186d50414fc7d5d1c5c08ccffd",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n234/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 68269
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n236",
+      "level": "Dusk_CrabField",
+      "nodeId": 236,
+      "name": "BstNode_2529558581",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 68332,
+      "sourceLength": 92,
+      "sourceSha256": "b065223579bb0fcdf2298cf519d950a75cbb9d37a6501aad6912bbb272ad6d35",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n236/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 68420
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n238",
+      "level": "Dusk_CrabField",
+      "nodeId": 238,
+      "name": "BstNode_2529558590",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 68586,
+      "sourceLength": 92,
+      "sourceSha256": "8df65a2f1b4fc2df36302e564a64cfebbfff61609a2205a56d8f5d50dae8664a",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n238/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 68674
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n255",
+      "level": "Dusk_CrabField",
+      "nodeId": 255,
+      "name": "BstNode_2529558578",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 72393,
+      "sourceLength": 92,
+      "sourceSha256": "1c4077c2b3f133489bf5275b023b3643acd280ee82591a8eb18a5833087bcd9b",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n255/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 72481
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n256",
+      "level": "Dusk_CrabField",
+      "nodeId": 256,
+      "name": "BstNode_2529558542",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 72485,
+      "sourceLength": 92,
+      "sourceSha256": "92410dbc1c9482f334ed9ead6a56326ae28d852194ba715e7a06568c8771f5f8",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n256/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 72573
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n263",
+      "level": "Dusk_CrabField",
+      "nodeId": 263,
+      "name": "BstNode_2529558622",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 73930,
+      "sourceLength": 92,
+      "sourceSha256": "d72aad7a54d6f8c80bd7edddfc8af307b2f8276c703feb565a21bed147656a6a",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n263/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 74018
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n265",
+      "level": "Dusk_CrabField",
+      "nodeId": 265,
+      "name": "BstNode_2529558620",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 74188,
+      "sourceLength": 92,
+      "sourceSha256": "888fe7716799f96605d8a5086d25cb4c6c1180de5d3ca8dadf716deeecfae2af",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n265/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 74276
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n266",
+      "level": "Dusk_CrabField",
+      "nodeId": 266,
+      "name": "BstNode_2529558636",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 74280,
+      "sourceLength": 92,
+      "sourceSha256": "ac9d139ab4666827f0c8c8af3752b5f737b6482f9093a95d8eb52002bab71239",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n266/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 74368
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n296",
+      "level": "Dusk_CrabField",
+      "nodeId": 296,
+      "name": "BstNode_2529558625",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 81063,
+      "sourceLength": 92,
+      "sourceSha256": "df8c49e78e5eb56a79e850f040bbf1b5a32a695dfacebaf3ddd42c138971a6bd",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n296/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 81151
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n303",
+      "level": "Dusk_CrabField",
+      "nodeId": 303,
+      "name": "BstNode_2529558559",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 81937,
+      "sourceLength": 92,
+      "sourceSha256": "92eb2d1d35595bd9532cad76144b5786a377c6dd3e569a458c385c089933726b",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n303/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 82025
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n310",
+      "level": "Dusk_CrabField",
+      "nodeId": 310,
+      "name": "BstNode_2529558579",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 83675,
+      "sourceLength": 92,
+      "sourceSha256": "3af41bd03d12d4abcd1bcb1ea6aa4fe930bdf0dc393a4f4a073b554ed2295714",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n310/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 83763
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n318",
+      "level": "Dusk_CrabField",
+      "nodeId": 318,
+      "name": "BstNode_2529558619",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 85573,
+      "sourceLength": 92,
+      "sourceSha256": "122e417fad01ec084bbd09a30a08348a701f13298348f17e557c0f6f7c5bf557",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n318/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 85661
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n325",
+      "level": "Dusk_CrabField",
+      "nodeId": 325,
+      "name": "BstNode_2529558649",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 87015,
+      "sourceLength": 92,
+      "sourceSha256": "6a46dbbe9fe18261bfa17341cee2f26ae57a5bff7cc86ac933f89b1ac39d6e57",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n325/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 87103
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n326",
+      "level": "Dusk_CrabField",
+      "nodeId": 326,
+      "name": "BstNode_2529558628",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 87107,
+      "sourceLength": 92,
+      "sourceSha256": "0276af375d8afa56fbf04e16c33427f7561c766b47f5e47c2a4f13392bd41996",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n326/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 87195
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n328",
+      "level": "Dusk_CrabField",
+      "nodeId": 328,
+      "name": "BstNode_2529558585",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 87590,
+      "sourceLength": 92,
+      "sourceSha256": "80ca63520322f21b99c1e91bb43c4a988c20317aed73bdf6d3318f557827f6a2",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n328/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 87678
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n348",
+      "level": "Dusk_CrabField",
+      "nodeId": 348,
+      "name": "BstNode_2529558584",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 92500,
+      "sourceLength": 92,
+      "sourceSha256": "deb997b016f99455635ee549c973ad24ce3a59b1cab57254b59c1a06cc4c5869",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n348/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 92588
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n383",
+      "level": "Dusk_CrabField",
+      "nodeId": 383,
+      "name": "BstNode_2529558634",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 100413,
+      "sourceLength": 92,
+      "sourceSha256": "325bbaf1fb83e46e9e7f9aabd72cf6969676c5339e4556a71c3049896dceb5f7",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n383/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 100501
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n386",
+      "level": "Dusk_CrabField",
+      "nodeId": 386,
+      "name": "BstNode_2529558531",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 101287,
+      "sourceLength": 92,
+      "sourceSha256": "8eb0dcb724c801f0b6c59cea2190780e41c6cad822e8737b08b89987c6081102",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n386/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 101375
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n403",
+      "level": "Dusk_CrabField",
+      "nodeId": 403,
+      "name": "BstNode_2529558558",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 103834,
+      "sourceLength": 92,
+      "sourceSha256": "bda8907ddd2d68308fb9dce9177c1424d36a4cdaa011f2da0ac4c04f2884971d",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n403/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 103922
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n404",
+      "level": "Dusk_CrabField",
+      "nodeId": 404,
+      "name": "BstNode_2529558586",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 103926,
+      "sourceLength": 92,
+      "sourceSha256": "328fd85b89d7adee54934f6d90ccde67c71a69234e0c0145e96e3cb78dbd15f2",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n404/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 104014
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n409",
+      "level": "Dusk_CrabField",
+      "nodeId": 409,
+      "name": "BstNode_2529558613",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 105306,
+      "sourceLength": 92,
+      "sourceSha256": "70d322a113a6bda66e2d8c4bbf8764964aa051703a44fabb52672b1fda4532ab",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n409/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 105394
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n422",
+      "level": "Dusk_CrabField",
+      "nodeId": 422,
+      "name": "BstNode_2529558543",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 108652,
+      "sourceLength": 92,
+      "sourceSha256": "6c6e95ef240b06da18a740646fc70df008b79ba0188b7628da9b8c7f8e8b2e71",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n422/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 108740
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n426",
+      "level": "Dusk_CrabField",
+      "nodeId": 426,
+      "name": "BstNode_2529558605",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 109713,
+      "sourceLength": 92,
+      "sourceSha256": "51212db86cd7e6c3c38af8e5d152ecfa8b2d78ef644104e24a97facd5434fec4",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n426/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 109801
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n431",
+      "level": "Dusk_CrabField",
+      "nodeId": 431,
+      "name": "BstNode_2529558602",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 110296,
+      "sourceLength": 92,
+      "sourceSha256": "7de5630a37cd45fd0e78c4cea4d3a886540b9ccfdae1fe8290d64bbf2e10f487",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n431/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 110384
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n460",
+      "level": "Dusk_CrabField",
+      "nodeId": 460,
+      "name": "BstNode_2529558627",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 116591,
+      "sourceLength": 92,
+      "sourceSha256": "a46f346ee910d7e1636326b53181c7fd2984d37085c892b278efe0e9f357f605",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n460/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 116679
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n468",
+      "level": "Dusk_CrabField",
+      "nodeId": 468,
+      "name": "BstNode_2529558566",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 118307,
+      "sourceLength": 92,
+      "sourceSha256": "57c4c31cef21399e07760d28d1f7dcba9bb84eaa2ae96ae0c0dd5f125b34619d",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n468/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 118395
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n477",
+      "level": "Dusk_CrabField",
+      "nodeId": 477,
+      "name": "BstNode_2529558592",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 121511,
+      "sourceLength": 92,
+      "sourceSha256": "7f9ab95be74ee41047527a9f1baf3625e2bc8828ea4da61fdd8d4fb62b1b378b",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n477/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 121599
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n483",
+      "level": "Dusk_CrabField",
+      "nodeId": 483,
+      "name": "BstNode_2529558659",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 123030,
+      "sourceLength": 92,
+      "sourceSha256": "e68799bed896002197bc624234ecf77109c8eef95b42ad0adb66a7a6e33523c5",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n483/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 123118
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n490",
+      "level": "Dusk_CrabField",
+      "nodeId": 490,
+      "name": "BstNode_214",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 124823,
+      "sourceLength": 85,
+      "sourceSha256": "dd1b6f40f6ef3547a200f0d1e0229ee7aaa2bc0677d4db1f66cb1aa692c46740",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n490/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 124904
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n499",
+      "level": "Dusk_CrabField",
+      "nodeId": 499,
+      "name": "BstNode_2529558638",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 127324,
+      "sourceLength": 92,
+      "sourceSha256": "d500abc8901f480244ebc3e3d67ac6b8c93660169e2d002fbaa6c441ed2afcf3",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n499/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 127412
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n506",
+      "level": "Dusk_CrabField",
+      "nodeId": 506,
+      "name": "BstNode_2529558653",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 129033,
+      "sourceLength": 92,
+      "sourceSha256": "f09f4e007e0194b1aded2d99d464d1be3c688939e1a358af8b5a32800143392f",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n506/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 129121
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n521",
+      "level": "Dusk_CrabField",
+      "nodeId": 521,
+      "name": "BstNode_2529558533",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 133238,
+      "sourceLength": 92,
+      "sourceSha256": "94204d2fb3559ffa27e0024133e358010e7cf4b1c1c32e2ecd71ab1f8f67252a",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n521/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 133326
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n524",
+      "level": "Dusk_CrabField",
+      "nodeId": 524,
+      "name": "BstNode_2529558624",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 133883,
+      "sourceLength": 92,
+      "sourceSha256": "496ac0668ccd24ff298f3e3ec0daf965af696d3131c4141cf188e4b83436fc8c",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n524/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 133971
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n529",
+      "level": "Dusk_CrabField",
+      "nodeId": 529,
+      "name": "BstNode_2529558645",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 135289,
+      "sourceLength": 92,
+      "sourceSha256": "05b3b3a5e6439621c18705857ae34b4be10748f214ba7e76f491722a56f85cb7",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n529/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 135377
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n531",
+      "level": "Dusk_CrabField",
+      "nodeId": 531,
+      "name": "BstNode_2529558654",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 135543,
+      "sourceLength": 92,
+      "sourceSha256": "99b307a54f66d197b23a5417b5b9e50185f2508c42699401f7a4201dfa4af73e",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n531/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 135631
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n535",
+      "level": "Dusk_CrabField",
+      "nodeId": 535,
+      "name": "BstNode_2529558601",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 136306,
+      "sourceLength": 92,
+      "sourceSha256": "81ff315caf71775d11a5d59f264f2d34583cfe38c39e4e1155a1958df38f5e23",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n535/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 136394
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n548",
+      "level": "Dusk_CrabField",
+      "nodeId": 548,
+      "name": "BstNode_2529558661",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 139160,
+      "sourceLength": 92,
+      "sourceSha256": "c87bd1089c3ef287cc5788fd2c13fe3827a864fdacc5d4aae1b8b7b2a17b210e",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n548/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 139248
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n549",
+      "level": "Dusk_CrabField",
+      "nodeId": 549,
+      "name": "BstNode_2529558576",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 139252,
+      "sourceLength": 92,
+      "sourceSha256": "13341b9927e6d87f8e8760be788a7f3516f1df20568889f13024618b2eb819ca",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n549/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 139340
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n551",
+      "level": "Dusk_CrabField",
+      "nodeId": 551,
+      "name": "BstNode_2529558644",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 139502,
+      "sourceLength": 92,
+      "sourceSha256": "5b57a7400506ee0ddb4be6d5b514402844208d2aff5494282feb06b85c7ac918",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n551/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 139590
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n555",
+      "level": "Dusk_CrabField",
+      "nodeId": 555,
+      "name": "BstNode_2529558549",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 140225,
+      "sourceLength": 92,
+      "sourceSha256": "6e81f85a0c3a939d0e9fc16b270076feac2aa6895de838a271424416d64ddc1d",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n555/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 140313
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n561",
+      "level": "Dusk_CrabField",
+      "nodeId": 561,
+      "name": "BstNode_2529558617",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 141544,
+      "sourceLength": 92,
+      "sourceSha256": "86c6396efd742b1e048a8773542d9d0070d3c4e0c963989f5992011945863a7f",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n561/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 141632
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n570",
+      "level": "Dusk_CrabField",
+      "nodeId": 570,
+      "name": "BstNode_2529558626",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 143733,
+      "sourceLength": 92,
+      "sourceSha256": "110b2c3fc7f991f882a3bb8ee2248a29353bf93002fb65349e65b94a69fb2945",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n570/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 143821
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n577",
+      "level": "Dusk_CrabField",
+      "nodeId": 577,
+      "name": "BstNode_2529558583",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 145478,
+      "sourceLength": 92,
+      "sourceSha256": "9b22dfa86bea1886a443071b94e28f10170999a6503e5c77558b7982071bf8bd",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n577/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 145566
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n599",
+      "level": "Dusk_CrabField",
+      "nodeId": 599,
+      "name": "BstNode_2529558603",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 149885,
+      "sourceLength": 92,
+      "sourceSha256": "22e82c58d081b40b40e60cd55c607c332cc12726a74724d46af7efa4e214ef73",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n599/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 149973
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n601",
+      "level": "Dusk_CrabField",
+      "nodeId": 601,
+      "name": "BstNode_2529558567",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 150006,
+      "sourceLength": 92,
+      "sourceSha256": "ceb132ae605a23a0c97d7696f1a298655bbf18aa9680e9b755ff2dd18e1a2a2b",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n601/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 150094
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n614",
+      "level": "Dusk_CrabField",
+      "nodeId": 614,
+      "name": "BstNode_2529558563",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 152913,
+      "sourceLength": 92,
+      "sourceSha256": "a7a9479042c6e8a92617896b8ce761e320f44cf063e50e2a6f2c1650bc07cae5",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n614/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 153001
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n618",
+      "level": "Dusk_CrabField",
+      "nodeId": 618,
+      "name": "BstNode_2529558561",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 153913,
+      "sourceLength": 92,
+      "sourceSha256": "2adb0a85c8684434f3e73effb2074ef254e36b41244a6216ad101e23d2d0eea7",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n618/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 154001
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n630",
+      "level": "Dusk_CrabField",
+      "nodeId": 630,
+      "name": "BstNode_2529558588",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 157192,
+      "sourceLength": 92,
+      "sourceSha256": "77d8624ddadc5e8b919bab49f5cdb392c25259402519ff0a2264380d38cd13e5",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n630/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 157280
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n656",
+      "level": "Dusk_CrabField",
+      "nodeId": 656,
+      "name": "BstNode_2529558632",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 164940,
+      "sourceLength": 92,
+      "sourceSha256": "af0177426bcfcc1ed2e2e267009a8282b8b522bf66622a6c5571d67bd5e7ad6c",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n656/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 165028
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n661",
+      "level": "Dusk_CrabField",
+      "nodeId": 661,
+      "name": "BstNode_2529558648",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 166354,
+      "sourceLength": 92,
+      "sourceSha256": "7a01a2b7a4de2d65a0c651168103dc4207b0efae46138ea35ef98c33d2722363",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n661/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 166442
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n664",
+      "level": "Dusk_CrabField",
+      "nodeId": 664,
+      "name": "BstNode_2529558569",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 166986,
+      "sourceLength": 92,
+      "sourceSha256": "df7dd68db8915485da3cc8dbe30aed347158b92168eb0fc9b3f4fc0bcf2e73b6",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n664/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 167074
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n675",
+      "level": "Dusk_CrabField",
+      "nodeId": 675,
+      "name": "BstNode_2529558551",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 169547,
+      "sourceLength": 92,
+      "sourceSha256": "e1fbca28d82fb5cb04336ddc9dc1f1fa7474417ca2bc7a29767e0bb5be08632e",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n675/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 169635
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n694",
+      "level": "Dusk_CrabField",
+      "nodeId": 694,
+      "name": "BstNode_2529558642",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 174086,
+      "sourceLength": 92,
+      "sourceSha256": "7f4294eaba5f248e1793503a54926ac2883a1d1f9349b56fddbc77d9f14e8f1b",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n694/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 174174
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n698",
+      "level": "Dusk_CrabField",
+      "nodeId": 698,
+      "name": "BstNode_2529558587",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 175089,
+      "sourceLength": 92,
+      "sourceSha256": "0d6458f97fb7dc05a716c8d5fb4b47396e8dc831d812b1f3cdbd3510ba1f1bac",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n698/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 175177
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n713",
+      "level": "Dusk_CrabField",
+      "nodeId": 713,
+      "name": "BstNode_2529558643",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 177545,
+      "sourceLength": 92,
+      "sourceSha256": "4ba8773d246eec1edf1da394b8ef354d0ca0cdb79adb9dd33ca797b4fd53198a",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n713/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 177633
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n720",
+      "level": "Dusk_CrabField",
+      "nodeId": 720,
+      "name": "BstNode_2529558607",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 179276,
+      "sourceLength": 92,
+      "sourceSha256": "e88c52d0207306168e096e91aee36cb42529c44c01cbd04e6de0adb681fe0e1a",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n720/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 179364
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n727",
+      "level": "Dusk_CrabField",
+      "nodeId": 727,
+      "name": "BstNode_2529558595",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 180768,
+      "sourceLength": 92,
+      "sourceSha256": "e6aaee324162ea2cee62634e350591797819e7f83498252505b55889367789b9",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n727/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 180856
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n736",
+      "level": "Dusk_CrabField",
+      "nodeId": 736,
+      "name": "BstNode_2529558596",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 183257,
+      "sourceLength": 92,
+      "sourceSha256": "6c651e7bf00491fa96eb7f01b9504d3bd7ecdd23fee3dd76106afd170b5cd0a1",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n736/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 183345
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n740",
+      "level": "Dusk_CrabField",
+      "nodeId": 740,
+      "name": "BstNode_2529558663",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 184162,
+      "sourceLength": 92,
+      "sourceSha256": "17dfb22b288029019f3d60d505f2d36f0ac6675de6af1431b99098d090f5ac8d",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n740/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 184250
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n763",
+      "level": "Dusk_CrabField",
+      "nodeId": 763,
+      "name": "BstNode_2529558650",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 190383,
+      "sourceLength": 92,
+      "sourceSha256": "45d894a586216c66ce627dc059d446cb12b31302c31becfeec41ab60709850ce",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n763/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 190471
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n788",
+      "level": "Dusk_CrabField",
+      "nodeId": 788,
+      "name": "BstNode_2529558574",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 195928,
+      "sourceLength": 92,
+      "sourceSha256": "8a36490d10735d3a2148c1ec59857444f20737be01526733784f2dc395026f34",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n788/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 196016
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n805",
+      "level": "Dusk_CrabField",
+      "nodeId": 805,
+      "name": "BstNode_2529558546",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 199661,
+      "sourceLength": 92,
+      "sourceSha256": "c0c6ffd5d7e4846a8cf98d3fb1c4ccfd93b5742fb4c603125a3fc84a71bd163d",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n805/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 199749
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n824",
+      "level": "Dusk_CrabField",
+      "nodeId": 824,
+      "name": "BstNode_2529558637",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 204650,
+      "sourceLength": 92,
+      "sourceSha256": "ae7343b0e451c017c7ac6c1940514daf81e2dd18b19b35abae70f0281d5efe10",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n824/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 204738
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n835",
+      "level": "Dusk_CrabField",
+      "nodeId": 835,
+      "name": "BstNode_2529558600",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 206868,
+      "sourceLength": 92,
+      "sourceSha256": "3ec45ef6ee0889a1c2846c04657dd34e1beebcedbc49af02081e3781b8d9baf1",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n835/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 206956
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n840",
+      "level": "Dusk_CrabField",
+      "nodeId": 840,
+      "name": "BstNode_2529558597",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 207722,
+      "sourceLength": 92,
+      "sourceSha256": "5a4f84369762bf74878f0b7cdbf5f0262d861db5dbd5254f837804ae4a7364b4",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n840/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 207810
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n862",
+      "level": "Dusk_CrabField",
+      "nodeId": 862,
+      "name": "BstNode_2529558614",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 213108,
+      "sourceLength": 92,
+      "sourceSha256": "48d1fe13e9b454056bc2b2e2bf06050e33ee4f68861ccc7e6922976e6b0ca080",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n862/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 213196
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n872",
+      "level": "Dusk_CrabField",
+      "nodeId": 872,
+      "name": "BstNode_2529558552",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 216007,
+      "sourceLength": 92,
+      "sourceSha256": "9eda0d8e130e9f4dd72a1ed8e783743bbc3f11044078f6aa080628a3ba233692",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n872/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 216095
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n879",
+      "level": "Dusk_CrabField",
+      "nodeId": 879,
+      "name": "BstNode_2529558536",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 217366,
+      "sourceLength": 92,
+      "sourceSha256": "b93f49000225aff02df908001cf01c082938c6f47c320106b245c9063a9c6338",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n879/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 217454
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n907",
+      "level": "Dusk_CrabField",
+      "nodeId": 907,
+      "name": "BstNode_2529558660",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 224023,
+      "sourceLength": 92,
+      "sourceSha256": "a67035fb3fe8a6f507501442aa23049d3b481adce65716b132f54bc465b0a772",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n907/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 224111
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n915",
+      "level": "Dusk_CrabField",
+      "nodeId": 915,
+      "name": "BstNode_2529558616",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 225813,
+      "sourceLength": 92,
+      "sourceSha256": "ec52b59faf189b83a28b280c8c6f1200d59a9cdc9f45be1051755f20c1ac9e77",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n915/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 225901
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n923",
+      "level": "Dusk_CrabField",
+      "nodeId": 923,
+      "name": "BstNode_2529558539",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 227406,
+      "sourceLength": 92,
+      "sourceSha256": "f633f5bb9506594dcf5a92ebae6cbc68a63e673ed6ab65847f8adb46319d06a6",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n923/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 227494
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n939",
+      "level": "Dusk_CrabField",
+      "nodeId": 939,
+      "name": "BstNode_2529558615",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 231031,
+      "sourceLength": 92,
+      "sourceSha256": "c66e1c15c8d9ece270d8ac534ce3eded13ffe5d69c6365e384ae9418223849ac",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n939/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 231119
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n943",
+      "level": "Dusk_CrabField",
+      "nodeId": 943,
+      "name": "BstNode_2529558555",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 231494,
+      "sourceLength": 92,
+      "sourceSha256": "74624a119e6f85638d00f0318d3ebee054e2373edfc96205fad9b70670f25ef9",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n943/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 231582
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n948",
+      "level": "Dusk_CrabField",
+      "nodeId": 948,
+      "name": "BstNode_2529558545",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 232377,
+      "sourceLength": 92,
+      "sourceSha256": "37fac72515eadabc08e63a966893611160f63f81ec996259b31329514a71bd90",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n948/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 232465
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n965",
+      "level": "Dusk_CrabField",
+      "nodeId": 965,
+      "name": "BstNode_2529558582",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 235663,
+      "sourceLength": 92,
+      "sourceSha256": "3837b52f89efd4670a89128829159c6e9c1553e0d95ebaaec0e3fa93551ee94f",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n965/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 235751
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n970",
+      "level": "Dusk_CrabField",
+      "nodeId": 970,
+      "name": "BstNode_2529558553",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 237422,
+      "sourceLength": 92,
+      "sourceSha256": "5ae99df02ca148c98efb28b87fbea57a6a70cf966d0c29c7095d8f8d3698620f",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n970/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 237510
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n978",
+      "level": "Dusk_CrabField",
+      "nodeId": 978,
+      "name": "BstNode_2529558594",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 239640,
+      "sourceLength": 92,
+      "sourceSha256": "f4ae45c5edc00addbbaed27dec8f8cdf0f4aa423a0214e7276a53650481e3556",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n978/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 239728
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n980",
+      "level": "Dusk_CrabField",
+      "nodeId": 980,
+      "name": "BstNode_2529558580",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 239898,
+      "sourceLength": 92,
+      "sourceSha256": "419933988284d1198e351a5ef368e49106a04fffe5b501063d139559c168d0f2",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n980/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 239986
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n981",
+      "level": "Dusk_CrabField",
+      "nodeId": 981,
+      "name": "BstNode_2529558538",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 239990,
+      "sourceLength": 92,
+      "sourceSha256": "4a36a48af347d22d1582c4d5d27a205db0472f750864f37a73f5966e8fc52a32",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n981/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 240078
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n984",
+      "level": "Dusk_CrabField",
+      "nodeId": 984,
+      "name": "BstNode_2529558557",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 240371,
+      "sourceLength": 92,
+      "sourceSha256": "7b87494e4652687e2fb163357cd81c2d8a69edc7b270089723a10d5ba4774b03",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n984/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 240459
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n985",
+      "level": "Dusk_CrabField",
+      "nodeId": 985,
+      "name": "BstNode_2529558562",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 240463,
+      "sourceLength": 92,
+      "sourceSha256": "76241ad2df23da6e6584c5a5d02e86a70d8d03b8380d3b7d38d619b7612313dd",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n985/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 240551
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n986",
+      "level": "Dusk_CrabField",
+      "nodeId": 986,
+      "name": "BstNode_2529558577",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 240555,
+      "sourceLength": 92,
+      "sourceSha256": "97d3285f2f9dd8c6e6273bd207e2534cc2b1da973a4441ae1896d00b982eaefc",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n986/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 240643
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n990",
+      "level": "Dusk_CrabField",
+      "nodeId": 990,
+      "name": "BstNode_2529558655",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 241645,
+      "sourceLength": 92,
+      "sourceSha256": "13cde6204ebba477ca973ab1db3b3f1df1d503fe61f35c12fad006def77440a5",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n990/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 241733
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n991",
+      "level": "Dusk_CrabField",
+      "nodeId": 991,
+      "name": "BstNode_2529558610",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 241737,
+      "sourceLength": 92,
+      "sourceSha256": "d11aca71e67b1b117002f9ced22a2f3a632d867d6867a1b364e2517c9c24e6e9",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n991/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 241825
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n992",
+      "level": "Dusk_CrabField",
+      "nodeId": 992,
+      "name": "BstNode_2529558560",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 241829,
+      "sourceLength": 92,
+      "sourceSha256": "846531c4048a7ff7e74b030160d76f13b50d4b46206d97518e7666d4988b69e0",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n992/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 241917
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n993",
+      "level": "Dusk_CrabField",
+      "nodeId": 993,
+      "name": "BstNode_2529558612",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 241921,
+      "sourceLength": 92,
+      "sourceSha256": "5a20a4aa68e11a24ded7a0831e7cfb8f0ad3adb1ad89a4f7ea8d495321d99607",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n993/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 242009
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n999",
+      "level": "Dusk_CrabField",
+      "nodeId": 999,
+      "name": "BstNode_2529558633",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 242660,
+      "sourceLength": 92,
+      "sourceSha256": "fc35fc45d2b08076b1f5626b553ceb72db07b39fb1c480952a3857fabb941695",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n999/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 242748
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n1000",
+      "level": "Dusk_CrabField",
+      "nodeId": 1000,
+      "name": "BstNode_2529558657",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 242752,
+      "sourceLength": 92,
+      "sourceSha256": "e847ab650d4f0a6c180d5f6ea4c62c540bf5f5432a93bf52224bfbe7f0341ad1",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1000/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 242840
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n1001",
+      "level": "Dusk_CrabField",
+      "nodeId": 1001,
+      "name": "BstNode_2529558641",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 242844,
+      "sourceLength": 92,
+      "sourceSha256": "5ce7834702c559fd75344495ac446e60b40af07b2f492ee773ed318c84a33780",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1001/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 242932
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n1004",
+      "level": "Dusk_CrabField",
+      "nodeId": 1004,
+      "name": "BstNode_2529558647",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 243743,
+      "sourceLength": 92,
+      "sourceSha256": "01ad2cb2940dbac2ed3d6dd6cd9e91e7ea830612c6b380a135b99078d0b08115",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1004/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 243831
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n1018",
+      "level": "Dusk_CrabField",
+      "nodeId": 1018,
+      "name": "BstNode_2529558608",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 248068,
+      "sourceLength": 92,
+      "sourceSha256": "fcbb0be0df98dd223fc248e1e3eb713de10c685642522f20f1ec09b7847f1d1a",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1018/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 248156
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n1022",
+      "level": "Dusk_CrabField",
+      "nodeId": 1022,
+      "name": "BstNode_2529558570",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 248889,
+      "sourceLength": 92,
+      "sourceSha256": "8da51863cca3ffbf427e30999252d1d5571a3d76e9f19a0cca1e6010e0b9f898",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1022/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 248977
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n1025",
+      "level": "Dusk_CrabField",
+      "nodeId": 1025,
+      "name": "BstNode_2529558598",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 249219,
+      "sourceLength": 92,
+      "sourceSha256": "90464108c9b686d215573732af7606a0f4135f95cd70213bc09d1995664e0746",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1025/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 249307
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n1028",
+      "level": "Dusk_CrabField",
+      "nodeId": 1028,
+      "name": "BstNode_2529558639",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 249626,
+      "sourceLength": 92,
+      "sourceSha256": "52c9c12d609a974a2c3eb8e8086af60d1b9d6fba3a0ae7db2fc68a53181b6547",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1028/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 249714
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n1030",
+      "level": "Dusk_CrabField",
+      "nodeId": 1030,
+      "name": "BstNode_2529558548",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 249836,
+      "sourceLength": 92,
+      "sourceSha256": "4941772995378fda2a1097ea60214296a579012b18406b278bff0d67e06188b0",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1030/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 249924
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n1034",
+      "level": "Dusk_CrabField",
+      "nodeId": 1034,
+      "name": "BstNode_2529558658",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 250453,
+      "sourceLength": 92,
+      "sourceSha256": "02ca7e325141545867d85464e1c12adc589b48523267e74cb88a3ec55bcb37ea",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1034/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 250541
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n1036",
+      "level": "Dusk_CrabField",
+      "nodeId": 1036,
+      "name": "BstNode_2529558651",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 250837,
+      "sourceLength": 92,
+      "sourceSha256": "451aa7fd149fec88a8a807a6eb0634680e0cbafe94e71f5432480c8451532f1b",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1036/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 250925
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n1065",
+      "level": "Dusk_CrabField",
+      "nodeId": 1065,
+      "name": "BstNode_2529558575",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 258437,
+      "sourceLength": 92,
+      "sourceSha256": "82cf0798da2f29bec2f19e246726d8575b194006f370b4449f0ac2679921e5b6",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1065/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 258525
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n1072",
+      "level": "Dusk_CrabField",
+      "nodeId": 1072,
+      "name": "BstNode_2529558573",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 259818,
+      "sourceLength": 92,
+      "sourceSha256": "d80d60f64dc6caec306c94a5d6711b84d585685b1910bf04ae3f1f53ad5cd0aa",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1072/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 259906
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n1078",
+      "level": "Dusk_CrabField",
+      "nodeId": 1078,
+      "name": "BstNode_2529558599",
+      "className": "Crab",
+      "classIndex": 1,
+      "sourceOffset": 260724,
+      "sourceLength": 92,
+      "sourceSha256": "ec388440cf069a4d25d8f01e2b14ce3c63fe1fc88379cbed5f70e5d7835afcc4",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1078/p2",
+          "fieldName": "params",
+          "target": "Dusk_CrabField:n1031",
+          "targetNodeId": 1031,
+          "offset": 260812
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n1162",
+      "level": "RainEnd",
+      "nodeId": 1162,
+      "name": "BstNode_2060386399",
+      "className": "Crab",
+      "classIndex": 75,
+      "sourceOffset": 305635,
+      "sourceLength": 92,
+      "sourceSha256": "f28f51bd2d9676a29ab89aeb39cf7c97674c4c367d1133113aa2bab09efa981d",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1162/p2",
+          "fieldName": "params",
+          "target": "RainEnd:n37",
+          "targetNodeId": 37,
+          "offset": 305723
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n1605",
+      "level": "RainEnd",
+      "nodeId": 1605,
+      "name": "BstNode_2060386405",
+      "className": "Crab",
+      "classIndex": 75,
+      "sourceOffset": 405067,
+      "sourceLength": 92,
+      "sourceSha256": "53ff4e7104878df79236f41a894b6c1816356b0eefd06a020aa3d55e8f7d26b7",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1605/p2",
+          "fieldName": "params",
+          "target": "RainEnd:n37",
+          "targetNodeId": 37,
+          "offset": 405155
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n133",
+      "level": "Storm",
+      "nodeId": 133,
+      "name": "BstNode_2529559754",
+      "className": "Crab",
+      "classIndex": 27,
+      "sourceOffset": 46931,
+      "sourceLength": 92,
+      "sourceSha256": "d728b52ad3b52d2134dd8b81a201e3e2a14d8d131c9ed8b7976466292ebed249",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n133/p2",
+          "fieldName": "params",
+          "target": "Storm:n743",
+          "targetNodeId": 743,
+          "offset": 47019
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n418",
+      "level": "Storm",
+      "nodeId": 418,
+      "name": "BstNode_2529559753",
+      "className": "Crab",
+      "classIndex": 27,
+      "sourceOffset": 98368,
+      "sourceLength": 92,
+      "sourceSha256": "89174bc8f175c958e4bfbb2ed47158da6260088ca985d5fa28e6ea0ea4c26a0a",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n418/p2",
+          "fieldName": "params",
+          "target": "Storm:n743",
+          "targetNodeId": 743,
+          "offset": 98456
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n525",
+      "level": "Storm",
+      "nodeId": 525,
+      "name": "BstNode_214",
+      "className": "Crab",
+      "classIndex": 27,
+      "sourceOffset": 117142,
+      "sourceLength": 85,
+      "sourceSha256": "a6b79bd618561019043c267bbfa5f476e08fe6ab1a04045179dc79c981e6a81b",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n525/p2",
+          "fieldName": "params",
+          "target": "Storm:n743",
+          "targetNodeId": 743,
+          "offset": 117223
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n1235",
+      "level": "Storm",
+      "nodeId": 1235,
+      "name": "BstNode_2529559701",
+      "className": "Crab",
+      "classIndex": 27,
+      "sourceOffset": 244376,
+      "sourceLength": 92,
+      "sourceSha256": "fc2c90229fa0963f16daebfdd2c6976cb56dd79c49c180b51ba3ed22585ddfa5",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1235/p2",
+          "fieldName": "params",
+          "target": "Storm:n743",
+          "targetNodeId": 743,
+          "offset": 244464
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n1262",
+      "level": "Storm",
+      "nodeId": 1262,
+      "name": "BstNode_2529559752",
+      "className": "Crab",
+      "classIndex": 27,
+      "sourceOffset": 249049,
+      "sourceLength": 92,
+      "sourceSha256": "0c1adf1030140957a1880613d74ca6f5b46615f476f4b29351cadc63ae2e8f5a",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1262/p2",
+          "fieldName": "params",
+          "target": "Storm:n743",
+          "targetNodeId": 743,
+          "offset": 249137
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n1567",
+      "level": "Storm",
+      "nodeId": 1567,
+      "name": "BstNode_2529560140",
+      "className": "Crab",
+      "classIndex": 27,
+      "sourceOffset": 298925,
+      "sourceLength": 92,
+      "sourceSha256": "93fdf9c905411c024c8510387e950384ce4a195625a98ee843489c1daced92b4",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1567/p2",
+          "fieldName": "params",
+          "target": "Storm:n743",
+          "targetNodeId": 743,
+          "offset": 299013
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "Dusk",
+      "path": "Levels/Dusk/Objects.level.bin",
+      "sha256": "9222b248f17fb4122cd4ad9650543ab86aab8b077b6965248c70ac2341bf2d5d",
+      "bytes": 242331,
+      "nodes": 1288,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dusk.json",
+      "markdown": "Objects对象清单/Dusk.md"
+    },
+    {
+      "level": "DuskGraveyard",
+      "path": "Levels/DuskGraveyard/Objects.level.bin",
+      "sha256": "128b30dcbe40b68e68fc25d195b68dc39f897259453c02612049ccd37a90ffb4",
+      "bytes": 424333,
+      "nodes": 1791,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DuskGraveyard.json",
+      "markdown": "Objects对象清单/DuskGraveyard.md"
+    },
+    {
+      "level": "Dusk_CrabField",
+      "path": "Levels/Dusk_CrabField/Objects.level.bin",
+      "sha256": "718247937eb535034282dbd11473563a2034ec75e1a4a287c057589ca174c8a8",
+      "bytes": 262346,
+      "nodes": 1098,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dusk_CrabField.json",
+      "markdown": "Objects对象清单/Dusk_CrabField.md"
+    },
+    {
+      "level": "RainEnd",
+      "path": "Levels/RainEnd/Objects.level.bin",
+      "sha256": "247912ec955153e3df80c16a861eb872573502a285a17943518bdce448a8d5e3",
+      "bytes": 427926,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainEnd.json",
+      "markdown": "Objects对象清单/RainEnd.md"
+    },
+    {
+      "level": "Storm",
+      "path": "Levels/Storm/Objects.level.bin",
+      "sha256": "4be187f31f1ef86611831abeb45ed9c1deff5e925f3bae80a6be49af85fa52bd",
+      "bytes": 324849,
+      "nodes": 1954,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Storm.json",
+      "markdown": "Objects对象清单/Storm.md"
+    }
+  ]
+}

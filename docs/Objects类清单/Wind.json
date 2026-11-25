@@ -1,0 +1,4733 @@
+{
+  "className": "Wind",
+  "functionGroup": "云、风场与环境",
+  "functionRole": "区域、轨道与附加标记的风场",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "partial",
+      "description": "Wind 的原默认值、继承初始化及 12 个序列化字段变体；原注册字段 12 项。"
+    },
+    {
+      "name": "区域、轨道与附加标记的风场",
+      "status": "partial",
+      "description": "范围采样、聚合、计时及正常 Rail 调用的明确子链已核验；原启用事件、完整风场和云/玩家来源待闭合。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Rail（26 条引用）、Clump（4 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "Wind",
+    "category": "云、风场与环境",
+    "functionGroupId": "environment",
+    "functionRole": "区域、轨道与附加标记的风场",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "partial",
+        "description": "Wind 的原默认值、继承初始化及 12 个序列化字段变体；原注册字段 12 项。"
+      },
+      {
+        "name": "区域、轨道与附加标记的风场",
+        "status": "partial",
+        "description": "范围采样、聚合、计时及正常 Rail 调用的明确子链已核验；原启用事件、完整风场和云/玩家来源待闭合。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Rail（26 条引用）、Clump（4 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Rail",
+        "references": 26
+      },
+      {
+        "className": "Clump",
+        "references": 4
+      }
+    ],
+    "rttiWorkingGroup": "地形、云、水和环境",
+    "role": "对象实例类型",
+    "instances": 120,
+    "nestedInstances": 0,
+    "referenceFields": 30,
+    "declaredLevels": 23,
+    "levels": [
+      {
+        "level": "Dawn",
+        "nodes": 7,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DayEnd",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Dusk",
+        "nodes": 7,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DuskGraveyard",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DuskMid",
+        "nodes": 17,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Dusk_CrabField",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "HubReveal",
+        "nodes": 8,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "NightEnd",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_ButterflyFields",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Cave",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_NestAndKeeper",
+        "nodes": 5,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Village",
+        "nodes": 9,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Rain",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainEnd",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainForest",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainMid",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SkyHub2",
+        "nodes": 10,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Storm",
+        "nodes": 6,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "StormEnd",
+        "nodes": 7,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Sunset",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SunsetEnd",
+        "nodes": 9,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SunsetEnd2",
+        "nodes": 5,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SunsetRace",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "additionalWindMarkers",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "enabled",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "fadeDist",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "fadeTime",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "intensity",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "maxDist",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "minDist",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "order",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "rail",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "spawnParticle",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "transform",
+        "type": 0,
+        "size": 64,
+        "nestedClass": null
+      },
+      {
+        "name": "windSound",
+        "type": 1,
+        "size": 0,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100cac8f0",
+    "nativeRegisteredFields": [
+      {
+        "name": "transform",
+        "typeGetter": "__Z17GetMetaTypeByTypeIN10Vectormath3Aos7Matrix4EERK8MetaTypev",
+        "nativeOffset": 16,
+        "registrationFunction": "0x10032ca80",
+        "propertyAddress": "0x100cac158"
+      },
+      {
+        "name": "order",
+        "typeGetter": "__Z17GetMetaTypeByTypeIiERK8MetaTypev",
+        "nativeOffset": 96,
+        "registrationFunction": "0x10032ca80",
+        "propertyAddress": "0x100cac1a8"
+      },
+      {
+        "name": "fadeDist",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 84,
+        "registrationFunction": "0x10032ca80",
+        "propertyAddress": "0x100cac1f8"
+      },
+      {
+        "name": "fadeTime",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 88,
+        "registrationFunction": "0x10032ca80",
+        "propertyAddress": "0x100cac248"
+      },
+      {
+        "name": "intensity",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 92,
+        "registrationFunction": "0x10032ca80",
+        "propertyAddress": "0x100cac298"
+      },
+      {
+        "name": "enabled",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 80,
+        "registrationFunction": "0x10032ca80",
+        "propertyAddress": "0x100cac2e8"
+      },
+      {
+        "name": "spawnParticle",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 81,
+        "registrationFunction": "0x10032ca80",
+        "propertyAddress": "0x100cac338"
+      },
+      {
+        "name": "additionalWindMarkers",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 104,
+        "registrationFunction": "0x10032ca80",
+        "propertyAddress": "0x100cac388"
+      },
+      {
+        "name": "rail",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP4RailERK8MetaTypev",
+        "nativeOffset": 112,
+        "registrationFunction": "0x10032ca80",
+        "propertyAddress": "0x100cac3d8"
+      },
+      {
+        "name": "windSound",
+        "typeGetter": "__Z17GetMetaTypeByTypeINSt3__112basic_stringIcNS0_11char_traitsIcEE16StlPoolAllocatorIcEEEERK8MetaTypev",
+        "nativeOffset": 136,
+        "registrationFunction": "0x10032ca80",
+        "propertyAddress": "0x100cac428"
+      },
+      {
+        "name": "minDist",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 160,
+        "registrationFunction": "0x10032ca80",
+        "propertyAddress": "0x100cac478"
+      },
+      {
+        "name": "maxDist",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 164,
+        "registrationFunction": "0x10032ca80",
+        "propertyAddress": "0x100cac4c8"
+      }
+    ],
+    "completedCheckpoints": 4,
+    "partialCheckpoints": 2,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 40,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": true,
+    "implementation": [
+      "src/core/environment-wind.ts",
+      "src/core/rail-level.ts"
+    ],
+    "evidence": [
+      "docs/Wind风场采样逆向.md",
+      "docs/environment-wind-oracle.json",
+      "docs/wind-rail-oracle.json"
+    ],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 12 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "partial",
+        "note": "范围采样、聚合、计时及正常 Rail 调用的明确子链已核验；原启用事件、完整风场和云/玩家来源待闭合。",
+        "evidence": [
+          "docs/Wind风场采样逆向.md",
+          "docs/environment-wind-oracle.json",
+          "docs/wind-rail-oracle.json"
+        ]
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "partial",
+        "note": "范围采样、聚合、计时及正常 Rail 调用的明确子链已核验；原启用事件、完整风场和云/玩家来源待闭合。",
+        "evidence": [
+          "docs/Wind风场采样逆向.md",
+          "docs/environment-wind-oracle.json",
+          "docs/wind-rail-oracle.json"
+        ]
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "verified",
+        "note": "范围采样、聚合、计时及正常 Rail 调用的明确子链已核验；原启用事件、完整风场和云/玩家来源待闭合。",
+        "evidence": [
+          "docs/Wind风场采样逆向.md",
+          "docs/environment-wind-oracle.json",
+          "docs/wind-rail-oracle.json"
+        ]
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "范围采样、聚合、计时及正常 Rail 调用的明确子链已核验；原启用事件、完整风场和云/玩家来源待闭合。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "Dawn:n293",
+      "level": "Dawn",
+      "nodeId": 293,
+      "name": "BstNode_2279669794",
+      "className": "Wind",
+      "classIndex": 52,
+      "sourceOffset": 79353,
+      "sourceLength": 122,
+      "sourceSha256": "7531e61bd605fec4c7e555a39b9b2089e4229444bcb349e0f2949f33956c048b",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n343",
+      "level": "Dawn",
+      "nodeId": 343,
+      "name": "BstNode_3156082693",
+      "className": "Wind",
+      "classIndex": 52,
+      "sourceOffset": 85977,
+      "sourceLength": 122,
+      "sourceSha256": "866503846a94addec2b9b810acf94c5b78211b93d54321e02233b9f733a57f32",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n550",
+      "level": "Dawn",
+      "nodeId": 550,
+      "name": "BstNode_3156082737",
+      "className": "Wind",
+      "classIndex": 52,
+      "sourceOffset": 118325,
+      "sourceLength": 122,
+      "sourceSha256": "1f57b6427c8a405475ba286e0529e1e2cdf69fb3a9b6de12ba31a9a92e0c7b8e",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n550/p11",
+          "fieldName": "rail",
+          "target": "Dawn:n966",
+          "targetNodeId": 966,
+          "offset": 118443
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n998",
+      "level": "Dawn",
+      "nodeId": 998,
+      "name": "BstNode_1293287631",
+      "className": "Wind",
+      "classIndex": 52,
+      "sourceOffset": 188774,
+      "sourceLength": 122,
+      "sourceSha256": "356119c2bea0939875e635dc86c4d82f16ff4bb28782ef85d2f2e797e11a8658",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1334",
+      "level": "Dawn",
+      "nodeId": 1334,
+      "name": "BstNode_3122856883",
+      "className": "Wind",
+      "classIndex": 52,
+      "sourceOffset": 239703,
+      "sourceLength": 122,
+      "sourceSha256": "478c87b5db8e02e9760ede2209501e68c5e0ed88a4b43cfe7dc493c5008d4aba",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1334/p11",
+          "fieldName": "rail",
+          "target": "Dawn:n1382",
+          "targetNodeId": 1382,
+          "offset": 239821
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1521",
+      "level": "Dawn",
+      "nodeId": 1521,
+      "name": "BstNode_1855",
+      "className": "Wind",
+      "classIndex": 52,
+      "sourceOffset": 266418,
+      "sourceLength": 116,
+      "sourceSha256": "bf6f3977eb09351db1a23b5f4b078b6d73dcd78318740ab802061809fff3cac1",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2049",
+      "level": "Dawn",
+      "nodeId": 2049,
+      "name": "BstNode_3122856246",
+      "className": "Wind",
+      "classIndex": 52,
+      "sourceOffset": 335758,
+      "sourceLength": 122,
+      "sourceSha256": "8dcfd16bea0ba8f2241d5f59994bcdb147b9f878fee1a2d402ebe06589d5963d",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n2049/p11",
+          "fieldName": "rail",
+          "target": "Dawn:n1588",
+          "targetNodeId": 1588,
+          "offset": 335876
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n734",
+      "level": "DayEnd",
+      "nodeId": 734,
+      "name": "BstNode_629",
+      "className": "Wind",
+      "classIndex": 64,
+      "sourceOffset": 161017,
+      "sourceLength": 115,
+      "sourceSha256": "93774fe8e9a4ec04e09e109ea90e89c50a04987942f254c63bb3fb21ae559d63",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n764",
+      "level": "DayEnd",
+      "nodeId": 764,
+      "name": "BstNode_840695844",
+      "className": "Wind",
+      "classIndex": 64,
+      "sourceOffset": 168466,
+      "sourceLength": 121,
+      "sourceSha256": "4164585b7e4f8816419af8b5d7845f8c51d8933f3d74fe848bf6007d6cad290c",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n821",
+      "level": "DayEnd",
+      "nodeId": 821,
+      "name": "BstNode_596",
+      "className": "Wind",
+      "classIndex": 64,
+      "sourceOffset": 179494,
+      "sourceLength": 115,
+      "sourceSha256": "8bc89bfd3ae340d775be29ec8ae3696933e37255651567b9a03c0ba307a1dea8",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n27",
+      "level": "Dusk",
+      "nodeId": 27,
+      "name": "BstNode_2345992604",
+      "className": "Wind",
+      "classIndex": 13,
+      "sourceOffset": 28187,
+      "sourceLength": 137,
+      "sourceSha256": "7118c5a6f8c15d652a063d5c838ed0adc271c269777ede0145bcebfd13d7c61e",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n173",
+      "level": "Dusk",
+      "nodeId": 173,
+      "name": "BstNode_2279669785",
+      "className": "Wind",
+      "classIndex": 13,
+      "sourceOffset": 55348,
+      "sourceLength": 122,
+      "sourceSha256": "160e3c10d30a44d37dc319ffa618c440ba9d589d87742c6d5104e6890791249d",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n271",
+      "level": "Dusk",
+      "nodeId": 271,
+      "name": "BstNode_2345992375",
+      "className": "Wind",
+      "classIndex": 13,
+      "sourceOffset": 73602,
+      "sourceLength": 137,
+      "sourceSha256": "a467a6def382f8f433179641e16e4677fc76ff12436485b0793deb2431444b60",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n298",
+      "level": "Dusk",
+      "nodeId": 298,
+      "name": "BstNode_2345992258",
+      "className": "Wind",
+      "classIndex": 13,
+      "sourceOffset": 77452,
+      "sourceLength": 137,
+      "sourceSha256": "75b0d168f426e60f38e2dedd4b0e16939eea6bcdbdca1cbf692bea29233ecf7e",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n831",
+      "level": "Dusk",
+      "nodeId": 831,
+      "name": "BstNode_2345992368",
+      "className": "Wind",
+      "classIndex": 13,
+      "sourceOffset": 174196,
+      "sourceLength": 137,
+      "sourceSha256": "6c3539876a8087afd9c7e8738d40547dfc20d116cb4ab43350fae9a3ff86e89c",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n1060",
+      "level": "Dusk",
+      "nodeId": 1060,
+      "name": "BstNode_2345992590",
+      "className": "Wind",
+      "classIndex": 13,
+      "sourceOffset": 216435,
+      "sourceLength": 137,
+      "sourceSha256": "78e4df57a52e24ffbb2546a1744c368f024a7f6817872bdd8c525b441171fef3",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n1138",
+      "level": "Dusk",
+      "nodeId": 1138,
+      "name": "BstNode_2345992574",
+      "className": "Wind",
+      "classIndex": 13,
+      "sourceOffset": 232829,
+      "sourceLength": 137,
+      "sourceSha256": "2c570c31ac313135df9613b47bb4f7fed03ba2ea2d5869189a5447e797107be0",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n760",
+      "level": "DuskGraveyard",
+      "nodeId": 760,
+      "name": "BstNode_2345992924",
+      "className": "Wind",
+      "classIndex": 51,
+      "sourceOffset": 198775,
+      "sourceLength": 122,
+      "sourceSha256": "702361b2be83af543f6075d0cc01cad0f281bb3108f11938ff3f67953c46afce",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n1335",
+      "level": "DuskGraveyard",
+      "nodeId": 1335,
+      "name": "BstNode_2345992923",
+      "className": "Wind",
+      "classIndex": 51,
+      "sourceOffset": 331144,
+      "sourceLength": 122,
+      "sourceSha256": "254cae5150c77e7457bb4a132b22d762dbce0c5509a95c809cfb91551114a0dd",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n38",
+      "level": "DuskMid",
+      "nodeId": 38,
+      "name": "BstNode_2345992228",
+      "className": "Wind",
+      "classIndex": 12,
+      "sourceOffset": 27330,
+      "sourceLength": 132,
+      "sourceSha256": "1e37d94be27128e552aa5545ac44a3160d36f3d8529b2da07a3a352d8114ce13",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n167",
+      "level": "DuskMid",
+      "nodeId": 167,
+      "name": "BstNode_2345992214",
+      "className": "Wind",
+      "classIndex": 12,
+      "sourceOffset": 49056,
+      "sourceLength": 132,
+      "sourceSha256": "a10816b736ba62921c257bd2bc6a0dd638a91662bab3dd1a7af444a62e68e421",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n173",
+      "level": "DuskMid",
+      "nodeId": 173,
+      "name": "BstNode_2345992223",
+      "className": "Wind",
+      "classIndex": 12,
+      "sourceOffset": 49622,
+      "sourceLength": 132,
+      "sourceSha256": "66c60991b133e40403af8c581c2c26792f8e400f46751770efd6c6f7ddb892cb",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n381",
+      "level": "DuskMid",
+      "nodeId": 381,
+      "name": "BstNode_143",
+      "className": "Wind",
+      "classIndex": 12,
+      "sourceOffset": 87809,
+      "sourceLength": 125,
+      "sourceSha256": "48d2b7e6df5284d8a713801d74e8f3f6cbe56a072a352f0749dcbdb1d4cbc78b",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n381/p7",
+          "fieldName": "additionalWindMarkers",
+          "target": "DuskMid:n599",
+          "targetNodeId": 599,
+          "offset": 87910
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n450",
+      "level": "DuskMid",
+      "nodeId": 450,
+      "name": "BstNode_2345992229",
+      "className": "Wind",
+      "classIndex": 12,
+      "sourceOffset": 100097,
+      "sourceLength": 132,
+      "sourceSha256": "b0e13bd252f8b1f55ea121af200ac3f628a2ba4f78fb03517bbbd30c9d473c75",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n492",
+      "level": "DuskMid",
+      "nodeId": 492,
+      "name": "BstNode_2345992225",
+      "className": "Wind",
+      "classIndex": 12,
+      "sourceOffset": 108816,
+      "sourceLength": 132,
+      "sourceSha256": "b64756d11f1f8464e6e70dede1ea65d3c57cd6382d17b159eab18276f9508787",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n583",
+      "level": "DuskMid",
+      "nodeId": 583,
+      "name": "BstNode_2345992222",
+      "className": "Wind",
+      "classIndex": 12,
+      "sourceOffset": 125854,
+      "sourceLength": 132,
+      "sourceSha256": "c2223c37a411a59fdbdecd6f61ac74acc5adff60675913c4fdc39f628ba84b15",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n649",
+      "level": "DuskMid",
+      "nodeId": 649,
+      "name": "BstNode_2345992215",
+      "className": "Wind",
+      "classIndex": 12,
+      "sourceOffset": 138439,
+      "sourceLength": 132,
+      "sourceSha256": "8693c7e9e928fd17b0c9c86925be990d2e618d64318c79b2613295b7bf60a040",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n652",
+      "level": "DuskMid",
+      "nodeId": 652,
+      "name": "BstNode_2345992226",
+      "className": "Wind",
+      "classIndex": 12,
+      "sourceOffset": 139112,
+      "sourceLength": 132,
+      "sourceSha256": "643cca6ec00169ec262796efcc0c278711a1b092b0a7344aa2dd042e4cf9708e",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n653",
+      "level": "DuskMid",
+      "nodeId": 653,
+      "name": "BstNode_2345992230",
+      "className": "Wind",
+      "classIndex": 12,
+      "sourceOffset": 139244,
+      "sourceLength": 132,
+      "sourceSha256": "1cf1b7c2e274c3fedcabe4b09ae953891ccf6ec327de4cd4be02239a8f99428e",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n655",
+      "level": "DuskMid",
+      "nodeId": 655,
+      "name": "BstNode_2345992224",
+      "className": "Wind",
+      "classIndex": 12,
+      "sourceOffset": 139534,
+      "sourceLength": 132,
+      "sourceSha256": "bc81356e5d876a391bdf0a3c71fd51ed35f346cd398cd6c5fd7a766845981376",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n658",
+      "level": "DuskMid",
+      "nodeId": 658,
+      "name": "BstNode_2345992231",
+      "className": "Wind",
+      "classIndex": 12,
+      "sourceOffset": 140154,
+      "sourceLength": 132,
+      "sourceSha256": "84e55ebdda82bd054adbaec44896d623ea35fdd55fcff13bce460cca7f46c5e7",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n846",
+      "level": "DuskMid",
+      "nodeId": 846,
+      "name": "BstNode_2345992227",
+      "className": "Wind",
+      "classIndex": 12,
+      "sourceOffset": 182244,
+      "sourceLength": 132,
+      "sourceSha256": "511e69b9577493dcc7a3ee1446f3d9c2fed61d6a05c62b31f2f5f0e8954761ee",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n867",
+      "level": "DuskMid",
+      "nodeId": 867,
+      "name": "BstNode_2345992221",
+      "className": "Wind",
+      "classIndex": 12,
+      "sourceOffset": 186302,
+      "sourceLength": 132,
+      "sourceSha256": "bde0f9c68c540885269085eccc468f5494306c86358d7acf2c79a48989dbe43c",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n970",
+      "level": "DuskMid",
+      "nodeId": 970,
+      "name": "BstNode_136",
+      "className": "Wind",
+      "classIndex": 12,
+      "sourceOffset": 206636,
+      "sourceLength": 125,
+      "sourceSha256": "a08c55b2565466ebd4ef6d3c54d720e6ef75b21357816e02b722ac13ba5537fa",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n981",
+      "level": "DuskMid",
+      "nodeId": 981,
+      "name": "BstNode_139",
+      "className": "Wind",
+      "classIndex": 12,
+      "sourceOffset": 209332,
+      "sourceLength": 125,
+      "sourceSha256": "57d0745c969d0f3a37658de38f6262978945611d09769299093a32a95a493926",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n1062",
+      "level": "DuskMid",
+      "nodeId": 1062,
+      "name": "BstNode_142",
+      "className": "Wind",
+      "classIndex": 12,
+      "sourceOffset": 221913,
+      "sourceLength": 125,
+      "sourceSha256": "39b3f8a337dd98239428f3898df67ad16de9e1f9f7035b004ab70424b1be5d4f",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n585",
+      "level": "Dusk_CrabField",
+      "nodeId": 585,
+      "name": "BstNode_2345992590",
+      "className": "Wind",
+      "classIndex": 29,
+      "sourceOffset": 146746,
+      "sourceLength": 137,
+      "sourceSha256": "110af0773133a3388051470f642c265f02d3a33f64a089187390d9632a61c1f0",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n875",
+      "level": "Dusk_CrabField",
+      "nodeId": 875,
+      "name": "BstNode_2345992604",
+      "className": "Wind",
+      "classIndex": 29,
+      "sourceOffset": 216881,
+      "sourceLength": 137,
+      "sourceSha256": "ef391b724ffa6e8f7202d715d601e0146e37418610d5673fb193863de03b0b98",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n1060",
+      "level": "Dusk_CrabField",
+      "nodeId": 1060,
+      "name": "BstNode_2345992258",
+      "className": "Wind",
+      "classIndex": 29,
+      "sourceOffset": 257432,
+      "sourceLength": 137,
+      "sourceSha256": "7401992d6c5ea89b872c23b3b282a330fa313059972e46632bd7eeb814abb675",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n257",
+      "level": "HubReveal",
+      "nodeId": 257,
+      "name": "BstNode_2446917809",
+      "className": "Wind",
+      "classIndex": 53,
+      "sourceOffset": 72898,
+      "sourceLength": 122,
+      "sourceSha256": "76a1639726ab58ded92c1bae414a026e4cc1f7afad4588db6f52b46ad6b94277",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n257/p11",
+          "fieldName": "rail",
+          "target": "HubReveal:n595",
+          "targetNodeId": 595,
+          "offset": 73016
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n457",
+      "level": "HubReveal",
+      "nodeId": 457,
+      "name": "BstNode_2446917739",
+      "className": "Wind",
+      "classIndex": 53,
+      "sourceOffset": 108883,
+      "sourceLength": 122,
+      "sourceSha256": "54ab0295a75a9ac7d5ec811876a9752f9bbac4b272056b2cc9759d1a889217c0",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n600",
+      "level": "HubReveal",
+      "nodeId": 600,
+      "name": "BstNode_3156082717",
+      "className": "Wind",
+      "classIndex": 53,
+      "sourceOffset": 131111,
+      "sourceLength": 122,
+      "sourceSha256": "e671a810d19e3df93294a8a63fe645e16827b3f5d82fad68dd18e36ad540af68",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n784",
+      "level": "HubReveal",
+      "nodeId": 784,
+      "name": "BstNode_2446917786",
+      "className": "Wind",
+      "classIndex": 53,
+      "sourceOffset": 160550,
+      "sourceLength": 122,
+      "sourceSha256": "ad62587ca968cea2c5f436fce43ead3aa2d46c28ef2990bef650516123b03609",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n784/p11",
+          "fieldName": "rail",
+          "target": "HubReveal:n877",
+          "targetNodeId": 877,
+          "offset": 160668
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n1054",
+      "level": "HubReveal",
+      "nodeId": 1054,
+      "name": "BstNode_3156082689",
+      "className": "Wind",
+      "classIndex": 53,
+      "sourceOffset": 206035,
+      "sourceLength": 122,
+      "sourceSha256": "a635662557bde9504c77b2b254941e54cbe49d7356ac8fc39984a18f3ed449f7",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n1268",
+      "level": "HubReveal",
+      "nodeId": 1268,
+      "name": "BstNode_3156082752",
+      "className": "Wind",
+      "classIndex": 53,
+      "sourceOffset": 245300,
+      "sourceLength": 122,
+      "sourceSha256": "04c2753e33733f64ef17e8f11fd2c0c43dbaac5f9915e62eb8e754d64d6e0b88",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n1275",
+      "level": "HubReveal",
+      "nodeId": 1275,
+      "name": "BstNode_3156082720",
+      "className": "Wind",
+      "classIndex": 53,
+      "sourceOffset": 246482,
+      "sourceLength": 122,
+      "sourceSha256": "f08e330421bf95a32525219768f2bda76900108a8b025dabbf993583b06fcea0",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n1372",
+      "level": "HubReveal",
+      "nodeId": 1372,
+      "name": "BstNode_3156082719",
+      "className": "Wind",
+      "classIndex": 53,
+      "sourceOffset": 259983,
+      "sourceLength": 122,
+      "sourceSha256": "c04fff1400e0f2c0cef9d9209027b921279293bb2341a5b87371114bc77439b5",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "NightEnd:n716",
+      "level": "NightEnd",
+      "nodeId": 716,
+      "name": "BstNode_34603107",
+      "className": "Wind",
+      "classIndex": 60,
+      "sourceOffset": 140780,
+      "sourceLength": 120,
+      "sourceSha256": "04dbc9f1c9ca6017953ca2626092439dc8e6a5ac5010e63a707cb30330fab72f",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n426",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 426,
+      "name": "BstNode_1842806848",
+      "className": "Wind",
+      "classIndex": 45,
+      "sourceOffset": 115774,
+      "sourceLength": 122,
+      "sourceSha256": "b819894907c09bac9e3b09a1789cc6466afa89d78f6c3185c44e61f0980cb1ea",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n563",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 563,
+      "name": "BstNode_2446917936",
+      "className": "Wind",
+      "classIndex": 45,
+      "sourceOffset": 144439,
+      "sourceLength": 122,
+      "sourceSha256": "6c827cdf343c3a6340ffb0bba38d905c2681b72a0d6215298c131f66bf053c87",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n1356",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 1356,
+      "name": "BstNode_3122856086",
+      "className": "Wind",
+      "classIndex": 45,
+      "sourceOffset": 291235,
+      "sourceLength": 122,
+      "sourceSha256": "3a495c3dad9245746a1483b5a113ba1502be11c7a9eded2f4120d08ec3bb2149",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n1215",
+      "level": "Prairie_Cave",
+      "nodeId": 1215,
+      "name": "BstNode_3122856154",
+      "className": "Wind",
+      "classIndex": 69,
+      "sourceOffset": 303229,
+      "sourceLength": 122,
+      "sourceSha256": "bf78f9d68179802b75f11241572b63057b780a21fd3c4579d86ff5023cb61ac6",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n1594",
+      "level": "Prairie_Cave",
+      "nodeId": 1594,
+      "name": "BstNode_3122855970",
+      "className": "Wind",
+      "classIndex": 69,
+      "sourceOffset": 404000,
+      "sourceLength": 122,
+      "sourceSha256": "960e28a58e8aefc554ae051efb3180b23c5aee446e546c06e8789b0ba809b890",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n271",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 271,
+      "name": "BstNode_34603058",
+      "className": "Wind",
+      "classIndex": 37,
+      "sourceOffset": 83724,
+      "sourceLength": 120,
+      "sourceSha256": "aedb7a0fa9020fa16e7c7d959a120354a8f940bc6be969c7bf84eabdd0639e5e",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n399",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 399,
+      "name": "BstNode_2446917936",
+      "className": "Wind",
+      "classIndex": 37,
+      "sourceOffset": 113087,
+      "sourceLength": 122,
+      "sourceSha256": "0807327ea1dfc28393d60fa9a5e4d510d0ee403d17bed398a85000c878bb86f0",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n495",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 495,
+      "name": "BstNode_34603052",
+      "className": "Wind",
+      "classIndex": 37,
+      "sourceOffset": 128812,
+      "sourceLength": 120,
+      "sourceSha256": "80d20ff768d94a8b6e066bb3ddd48cb0b7d950313dc805038f72d7bec3c03bdd",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n806",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 806,
+      "name": "BstNode_34603059",
+      "className": "Wind",
+      "classIndex": 37,
+      "sourceOffset": 201277,
+      "sourceLength": 120,
+      "sourceSha256": "69c4ca34ef1c1ebac13e3b1f9883c16e4e8cf17225dbcddcc68de6ce1acc5be3",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n891",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 891,
+      "name": "BstNode_34603099",
+      "className": "Wind",
+      "classIndex": 37,
+      "sourceOffset": 220588,
+      "sourceLength": 120,
+      "sourceSha256": "4d656bd869c7eb2d07731cd172367f944cedcb0245c837ee25c40c7bbe1ba71d",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n124",
+      "level": "Prairie_Village",
+      "nodeId": 124,
+      "name": "BstNode_1167524034",
+      "className": "Wind",
+      "classIndex": 33,
+      "sourceOffset": 52041,
+      "sourceLength": 122,
+      "sourceSha256": "b36ffff5ca41d775198623379a24e7d76389f5c4df3008770ea147c6858eabfb",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n124/p11",
+          "fieldName": "rail",
+          "target": "Prairie_Village:n236",
+          "targetNodeId": 236,
+          "offset": 52159
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1124",
+      "level": "Prairie_Village",
+      "nodeId": 1124,
+      "name": "BstNode_1167524113",
+      "className": "Wind",
+      "classIndex": 33,
+      "sourceOffset": 214618,
+      "sourceLength": 122,
+      "sourceSha256": "66bdaf308543e2fa7bfbd4b3f803b12e111c49bcd662a860a86c421147de3998",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1124/p11",
+          "fieldName": "rail",
+          "target": "Prairie_Village:n1286",
+          "targetNodeId": 1286,
+          "offset": 214736
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1133",
+      "level": "Prairie_Village",
+      "nodeId": 1133,
+      "name": "BstNode_2446917935",
+      "className": "Wind",
+      "classIndex": 33,
+      "sourceOffset": 216094,
+      "sourceLength": 122,
+      "sourceSha256": "e970bf5b311ec27b24516b80a26c848ad9dcb03d5c991b06924068506414fd2a",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1283",
+      "level": "Prairie_Village",
+      "nodeId": 1283,
+      "name": "BstNode_1167524029",
+      "className": "Wind",
+      "classIndex": 33,
+      "sourceOffset": 238014,
+      "sourceLength": 122,
+      "sourceSha256": "d733840e08006463284003bb2ecd22a43f8bf768d8e6595244ff9e2b067e2efb",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1283/p11",
+          "fieldName": "rail",
+          "target": "Prairie_Village:n342",
+          "targetNodeId": 342,
+          "offset": 238132
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1942",
+      "level": "Prairie_Village",
+      "nodeId": 1942,
+      "name": "BstNode_1167524031",
+      "className": "Wind",
+      "classIndex": 33,
+      "sourceOffset": 345910,
+      "sourceLength": 122,
+      "sourceSha256": "795f57c2b06df26a5dd27792d5b6bdbdb990805105ce0d5e58a4107dba05bab6",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1942/p11",
+          "fieldName": "rail",
+          "target": "Prairie_Village:n877",
+          "targetNodeId": 877,
+          "offset": 346028
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1947",
+      "level": "Prairie_Village",
+      "nodeId": 1947,
+      "name": "BstNode_1167524024",
+      "className": "Wind",
+      "classIndex": 33,
+      "sourceOffset": 346645,
+      "sourceLength": 122,
+      "sourceSha256": "41f8cf0ff2636778a85daae4c7d74175a1cd2800bb0408370f959a79bc6e3b11",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1947/p11",
+          "fieldName": "rail",
+          "target": "Prairie_Village:n744",
+          "targetNodeId": 744,
+          "offset": 346763
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2008",
+      "level": "Prairie_Village",
+      "nodeId": 2008,
+      "name": "BstNode_1163",
+      "className": "Wind",
+      "classIndex": 33,
+      "sourceOffset": 356764,
+      "sourceLength": 123,
+      "sourceSha256": "df80c5f7db0dd23511562daaa4dbcb62fd5b1f08d257973809a7a94a4c27b214",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2496",
+      "level": "Prairie_Village",
+      "nodeId": 2496,
+      "name": "BstNode_3156082760",
+      "className": "Wind",
+      "classIndex": 33,
+      "sourceOffset": 426387,
+      "sourceLength": 122,
+      "sourceSha256": "1cba554f6b1f46c159bd63982baf05605ffdc2d86461e7af4b04f5dde0c44438",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n2496/p11",
+          "fieldName": "rail",
+          "target": "Prairie_Village:n2801",
+          "targetNodeId": 2801,
+          "offset": 426505
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2522",
+      "level": "Prairie_Village",
+      "nodeId": 2522,
+      "name": "BstNode_1167524036",
+      "className": "Wind",
+      "classIndex": 33,
+      "sourceOffset": 429476,
+      "sourceLength": 122,
+      "sourceSha256": "395bf597a17b2d25579fb8894561b6d8a2ada7d018392328cc3bc24b120b5b69",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n2522/p11",
+          "fieldName": "rail",
+          "target": "Prairie_Village:n2063",
+          "targetNodeId": 2063,
+          "offset": 429594
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n96",
+      "level": "Rain",
+      "nodeId": 96,
+      "name": "BstNode_840696222",
+      "className": "Wind",
+      "classIndex": 20,
+      "sourceOffset": 50162,
+      "sourceLength": 121,
+      "sourceSha256": "389c288932489814dde0d35523535ff01708a4a5dd4aeb79e95f91acf3b62d97",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n809",
+      "level": "Rain",
+      "nodeId": 809,
+      "name": "BstNode_840696118",
+      "className": "Wind",
+      "classIndex": 20,
+      "sourceOffset": 209697,
+      "sourceLength": 121,
+      "sourceSha256": "134c71eee261403c6a67ae8419eb31c123a043b2911ae6111ae9fe620d02cce5",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n809/p11",
+          "fieldName": "rail",
+          "target": "Rain:n1238",
+          "targetNodeId": 1238,
+          "offset": 209814
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n1541",
+      "level": "RainEnd",
+      "nodeId": 1541,
+      "name": "BstNode_774",
+      "className": "Wind",
+      "classIndex": 83,
+      "sourceOffset": 391995,
+      "sourceLength": 115,
+      "sourceSha256": "a61570a1dddcb4575e048248445a31b8b12afbc80c0bdebb1de0fa05e306437b",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1541/p11",
+          "fieldName": "rail",
+          "target": "RainEnd:n1401",
+          "targetNodeId": 1401,
+          "offset": 392106
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n0",
+      "level": "RainForest",
+      "nodeId": 0,
+      "name": "BstNode_2345992273",
+      "className": "Wind",
+      "classIndex": 0,
+      "sourceOffset": 21235,
+      "sourceLength": 122,
+      "sourceSha256": "e01979356917f48f6d7f76e5e3d41fc42ff642f723c69311256c509c14ec579f",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n0/p11",
+          "fieldName": "rail",
+          "target": "RainForest:n90",
+          "targetNodeId": 90,
+          "offset": 21353
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n696",
+      "level": "RainForest",
+      "nodeId": 696,
+      "name": "BstNode_2345992279",
+      "className": "Wind",
+      "classIndex": 0,
+      "sourceOffset": 159900,
+      "sourceLength": 122,
+      "sourceSha256": "617a0f357080a9d8171064ed4d536a4c429225fa3e573d5ed611bd4419c36dcf",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n696/p11",
+          "fieldName": "rail",
+          "target": "RainForest:n588",
+          "targetNodeId": 588,
+          "offset": 160018
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n491",
+      "level": "RainMid",
+      "nodeId": 491,
+      "name": "BstNode_2345993019",
+      "className": "Wind",
+      "classIndex": 50,
+      "sourceOffset": 118485,
+      "sourceLength": 122,
+      "sourceSha256": "64174eed26bcbda69dcc9d7dcd2cc85fed00b2f4171721cfc9f927422a92d753",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n556",
+      "level": "RainMid",
+      "nodeId": 556,
+      "name": "BstNode_2345993005",
+      "className": "Wind",
+      "classIndex": 50,
+      "sourceOffset": 129773,
+      "sourceLength": 122,
+      "sourceSha256": "1e9eb3de438090a885f54f2f08601adb03e5960211a7174bfc8f9cc2fb0db7c0",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n1251",
+      "level": "RainMid",
+      "nodeId": 1251,
+      "name": "BstNode_2345992983",
+      "className": "Wind",
+      "classIndex": 50,
+      "sourceOffset": 255614,
+      "sourceLength": 122,
+      "sourceSha256": "3a862671f8555352b585b808def761d0be06d2ad459803e0b229238e9edce633",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n1720",
+      "level": "RainMid",
+      "nodeId": 1720,
+      "name": "BstNode_2345993129",
+      "className": "Wind",
+      "classIndex": 50,
+      "sourceOffset": 342328,
+      "sourceLength": 122,
+      "sourceSha256": "14332c34f73f7a97c2b2de090d74e947539ba4912569a5cb420b8b2efe0155c4",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n213",
+      "level": "SkyHub2",
+      "nodeId": 213,
+      "name": "BstNode_2446917798",
+      "className": "Wind",
+      "classIndex": 40,
+      "sourceOffset": 71840,
+      "sourceLength": 122,
+      "sourceSha256": "0ecb32b191b52e58efa7ddedc843d9a8be1825e78ea44728f5fa0ee334811cd9",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n522",
+      "level": "SkyHub2",
+      "nodeId": 522,
+      "name": "BstNode_1167524366",
+      "className": "Wind",
+      "classIndex": 40,
+      "sourceOffset": 131025,
+      "sourceLength": 122,
+      "sourceSha256": "c68676e25338d7580eef5b826eafd4a664c4c70f3c6dd8b4ef86a25f931a26a4",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 4,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n775",
+      "level": "SkyHub2",
+      "nodeId": 775,
+      "name": "BstNode_1167523923",
+      "className": "Wind",
+      "classIndex": 40,
+      "sourceOffset": 174298,
+      "sourceLength": 122,
+      "sourceSha256": "51a9901b2da8a3b7dfe65988d47f2067c7c1544d4c3a32af136efd04893065ed",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n775/p11",
+          "fieldName": "rail",
+          "target": "SkyHub2:n39",
+          "targetNodeId": 39,
+          "offset": 174416
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1225",
+      "level": "SkyHub2",
+      "nodeId": 1225,
+      "name": "BstNode_2446917805",
+      "className": "Wind",
+      "classIndex": 40,
+      "sourceOffset": 255056,
+      "sourceLength": 122,
+      "sourceSha256": "9864cc035e602dcc260e6eeab70b1086621aa8c805e0724f55ca81d9b5490335",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1306",
+      "level": "SkyHub2",
+      "nodeId": 1306,
+      "name": "BstNode_2446917796",
+      "className": "Wind",
+      "classIndex": 40,
+      "sourceOffset": 266257,
+      "sourceLength": 122,
+      "sourceSha256": "cf4a8e3ed9591155433fbf460e5d9e10646cb4d9cdb297a51cc0977fd42baeae",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1361",
+      "level": "SkyHub2",
+      "nodeId": 1361,
+      "name": "BstNode_1167524365",
+      "className": "Wind",
+      "classIndex": 40,
+      "sourceOffset": 272745,
+      "sourceLength": 122,
+      "sourceSha256": "ba6482adc7d3e5c0364899204af0db82e23a4947c5915408304c02ba17071d1f",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 4,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1699",
+      "level": "SkyHub2",
+      "nodeId": 1699,
+      "name": "BstNode_1167523999",
+      "className": "Wind",
+      "classIndex": 40,
+      "sourceOffset": 323107,
+      "sourceLength": 122,
+      "sourceSha256": "9f08ccdeaef7d2258e63bdeb5ece74906de7e882de4bc820b41c57eed166714d",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1760",
+      "level": "SkyHub2",
+      "nodeId": 1760,
+      "name": "BstNode_2279670115",
+      "className": "Wind",
+      "classIndex": 40,
+      "sourceOffset": 333036,
+      "sourceLength": 122,
+      "sourceSha256": "5ee6440cfebe6475ac36010e6a1e8fef49bacaa9750e23153f080288d1a20e96",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n2015",
+      "level": "SkyHub2",
+      "nodeId": 2015,
+      "name": "BstNode_1167524367",
+      "className": "Wind",
+      "classIndex": 40,
+      "sourceOffset": 379818,
+      "sourceLength": 122,
+      "sourceSha256": "26dc85440a9546425cf21747a308daa43c894f9c3607e3bc3a743e00878ef174",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 4,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n2128",
+      "level": "SkyHub2",
+      "nodeId": 2128,
+      "name": "BstNode_2446917648",
+      "className": "Wind",
+      "classIndex": 40,
+      "sourceOffset": 400273,
+      "sourceLength": 122,
+      "sourceSha256": "aaa42a2f3648aff11b3c8bc2f831a56f496ce11197a24578532cf6072ad2ebb9",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n0",
+      "level": "Storm",
+      "nodeId": 0,
+      "name": "BstNode_2529559767",
+      "className": "Wind",
+      "classIndex": 0,
+      "sourceOffset": 23424,
+      "sourceLength": 122,
+      "sourceSha256": "9e0d03e8f8bd26aa08e2b060d3fca989f7992e5b2df5cd4a54e8235bd0638ad2",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n0/p7",
+          "fieldName": "additionalWindMarkers",
+          "target": "Storm:n793",
+          "targetNodeId": 793,
+          "offset": 23532
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n333",
+      "level": "Storm",
+      "nodeId": 333,
+      "name": "BstNode_2529558589",
+      "className": "Wind",
+      "classIndex": 0,
+      "sourceOffset": 82307,
+      "sourceLength": 122,
+      "sourceSha256": "f44fb5820423a8559daf460edf1ab6ff99a74150d5b78868de618a119ad4d346",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n770",
+      "level": "Storm",
+      "nodeId": 770,
+      "name": "BstNode_2529558783",
+      "className": "Wind",
+      "classIndex": 0,
+      "sourceOffset": 161094,
+      "sourceLength": 122,
+      "sourceSha256": "a75814b94e64f281ef0a8de8a05ca569a6a48779b9e954165587d483c0797371",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n770/p7",
+          "fieldName": "additionalWindMarkers",
+          "target": "Storm:n793",
+          "targetNodeId": 793,
+          "offset": 161202
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n1419",
+      "level": "Storm",
+      "nodeId": 1419,
+      "name": "BstNode_304",
+      "className": "Wind",
+      "classIndex": 0,
+      "sourceOffset": 274930,
+      "sourceLength": 115,
+      "sourceSha256": "efa9163e587b5f4098c2022c4504326608aabc3ad39fbeb53e86dedf80439d3c",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n1425",
+      "level": "Storm",
+      "nodeId": 1425,
+      "name": "BstNode_2529559543",
+      "className": "Wind",
+      "classIndex": 0,
+      "sourceOffset": 276023,
+      "sourceLength": 122,
+      "sourceSha256": "b0d6c7879992153f251e2b418d9bedaa6558dc57a84932d1011022bf46c2efbd",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n1547",
+      "level": "Storm",
+      "nodeId": 1547,
+      "name": "BstNode_2529558560",
+      "className": "Wind",
+      "classIndex": 0,
+      "sourceOffset": 295725,
+      "sourceLength": 122,
+      "sourceSha256": "48139fc34cb6d66ece23957aa9df80ef1e251a2a8916f9668cddbe99dbee4d86",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1547/p7",
+          "fieldName": "additionalWindMarkers",
+          "target": "Storm:n793",
+          "targetNodeId": 793,
+          "offset": 295833
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n99",
+      "level": "StormEnd",
+      "nodeId": 99,
+      "name": "BstNode_2345992494",
+      "className": "Wind",
+      "classIndex": 20,
+      "sourceOffset": 38670,
+      "sourceLength": 122,
+      "sourceSha256": "87cce051a55bceee2b3e7721e4a8326f68f58b2ba363892209506b3dd7a09228",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n104",
+      "level": "StormEnd",
+      "nodeId": 104,
+      "name": "BstNode_3156082696",
+      "className": "Wind",
+      "classIndex": 20,
+      "sourceOffset": 39093,
+      "sourceLength": 122,
+      "sourceSha256": "59e3cc8f275330ece90cb46d4fe60fc0066661722f457baeb9dc6eeed9782a02",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n181",
+      "level": "StormEnd",
+      "nodeId": 181,
+      "name": "BstNode_2529558589",
+      "className": "Wind",
+      "classIndex": 20,
+      "sourceOffset": 51913,
+      "sourceLength": 122,
+      "sourceSha256": "f38068a4c8a33939f9e5827ead42d887ef6e04550f977ccc2386a91f61eb4eb6",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n394",
+      "level": "StormEnd",
+      "nodeId": 394,
+      "name": "BstNode_2345992637",
+      "className": "Wind",
+      "classIndex": 20,
+      "sourceOffset": 92135,
+      "sourceLength": 122,
+      "sourceSha256": "fd8ddcde6cd32c27f8a840ae3de32641f400ea3a649cf6c23fa52918da47f594",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n572",
+      "level": "StormEnd",
+      "nodeId": 572,
+      "name": "BstNode_2446917906",
+      "className": "Wind",
+      "classIndex": 20,
+      "sourceOffset": 122897,
+      "sourceLength": 122,
+      "sourceSha256": "59ee10902291d91131bc4029d65984ec92c949a5253417fb60a5b57ca7a3cf61",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n655",
+      "level": "StormEnd",
+      "nodeId": 655,
+      "name": "BstNode_2446917905",
+      "className": "Wind",
+      "classIndex": 20,
+      "sourceOffset": 133778,
+      "sourceLength": 122,
+      "sourceSha256": "6568efbc7205b51961b17589c03b007dacf9a5991763d1856c401b8f27398e46",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n1067",
+      "level": "StormEnd",
+      "nodeId": 1067,
+      "name": "BstNode_3156082695",
+      "className": "Wind",
+      "classIndex": 20,
+      "sourceOffset": 204124,
+      "sourceLength": 122,
+      "sourceSha256": "080c7e7830299f89de695ac5493aa9cd3d8f12a58827797bcee407bfa7416318",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n588",
+      "level": "Sunset",
+      "nodeId": 588,
+      "name": "BstNode_1482555573",
+      "className": "Wind",
+      "classIndex": 49,
+      "sourceOffset": 132057,
+      "sourceLength": 122,
+      "sourceSha256": "dda0b6ff2fa3b87d41ecc0f1b1860451cd112fd4f0bedfd6059777775df84af3",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n1510",
+      "level": "Sunset",
+      "nodeId": 1510,
+      "name": "BstNode_222",
+      "className": "Wind",
+      "classIndex": 49,
+      "sourceOffset": 280182,
+      "sourceLength": 115,
+      "sourceSha256": "b51d8f7d88edc53185f85be182cf6eee4442cbfafd51a33ba57d13e3d34fa071",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1510/p11",
+          "fieldName": "rail",
+          "target": "Sunset:n1471",
+          "targetNodeId": 1471,
+          "offset": 280293
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n1653",
+      "level": "Sunset",
+      "nodeId": 1653,
+      "name": "BstNode_1482555586",
+      "className": "Wind",
+      "classIndex": 49,
+      "sourceOffset": 304059,
+      "sourceLength": 122,
+      "sourceSha256": "979d9ed2dbc8f7b865c0646b664f2f4f7f44f2fb6c7b25a295b63956b8c2def5",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n205",
+      "level": "SunsetEnd",
+      "nodeId": 205,
+      "name": "BstNode_2279669913",
+      "className": "Wind",
+      "classIndex": 27,
+      "sourceOffset": 64377,
+      "sourceLength": 122,
+      "sourceSha256": "44001f90b1173bf2a89e539230c34d3769cc109a6b9373555b55700df57b6690",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n293",
+      "level": "SunsetEnd",
+      "nodeId": 293,
+      "name": "BstNode_2279669895",
+      "className": "Wind",
+      "classIndex": 27,
+      "sourceOffset": 81209,
+      "sourceLength": 122,
+      "sourceSha256": "775c725ae52c43a516588050695bc5f03994be283c85989e90e95cf211c54ac0",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n650",
+      "level": "SunsetEnd",
+      "nodeId": 650,
+      "name": "BstNode_1167523871",
+      "className": "Wind",
+      "classIndex": 27,
+      "sourceOffset": 134351,
+      "sourceLength": 122,
+      "sourceSha256": "c85becfef4df80dcc9052e430c0d346fe89a9bc5b247332dfe30d388af95a99f",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n650/p11",
+          "fieldName": "rail",
+          "target": "SunsetEnd:n483",
+          "targetNodeId": 483,
+          "offset": 134469
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n835",
+      "level": "SunsetEnd",
+      "nodeId": 835,
+      "name": "BstNode_2279669896",
+      "className": "Wind",
+      "classIndex": 27,
+      "sourceOffset": 166232,
+      "sourceLength": 122,
+      "sourceSha256": "b635c11daba8f4126e70716fd2c268b449ee6e04599a966a75299ee446a7e26a",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n869",
+      "level": "SunsetEnd",
+      "nodeId": 869,
+      "name": "BstNode_2345992215",
+      "className": "Wind",
+      "classIndex": 27,
+      "sourceOffset": 171172,
+      "sourceLength": 122,
+      "sourceSha256": "e9bd030ba537f79a6f8bd40105f6b6cb938a0798eeaf142756a40619fcdeda99",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n885",
+      "level": "SunsetEnd",
+      "nodeId": 885,
+      "name": "BstNode_2279669948",
+      "className": "Wind",
+      "classIndex": 27,
+      "sourceOffset": 173763,
+      "sourceLength": 122,
+      "sourceSha256": "8abcb48f4eb386743eb901a7e6122bc4f7683e3cc4390639a34693f464530437",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n959",
+      "level": "SunsetEnd",
+      "nodeId": 959,
+      "name": "BstNode_1167523921",
+      "className": "Wind",
+      "classIndex": 27,
+      "sourceOffset": 186450,
+      "sourceLength": 122,
+      "sourceSha256": "32ef9d4a3c17077c9ab7f13fedeb9b4d9ee66fb55800238c25ddcb9d9db6b0bf",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n959/p11",
+          "fieldName": "rail",
+          "target": "SunsetEnd:n1321",
+          "targetNodeId": 1321,
+          "offset": 186568
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n1662",
+      "level": "SunsetEnd",
+      "nodeId": 1662,
+      "name": "BstNode_1167523989",
+      "className": "Wind",
+      "classIndex": 27,
+      "sourceOffset": 311571,
+      "sourceLength": 122,
+      "sourceSha256": "40d40c73fbc1627df89c06a2c5995a3499c4ea3fc1a58896bdadd83f8c7188ae",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1662/p11",
+          "fieldName": "rail",
+          "target": "SunsetEnd:n12",
+          "targetNodeId": 12,
+          "offset": 311689
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n1833",
+      "level": "SunsetEnd",
+      "nodeId": 1833,
+      "name": "BstNode_1167524168",
+      "className": "Wind",
+      "classIndex": 27,
+      "sourceOffset": 346809,
+      "sourceLength": 122,
+      "sourceSha256": "df2ce3eb0fbdd3f9ea6a7fd83e9b1b136051898f909b774eba844c49f138df53",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1833/p11",
+          "fieldName": "rail",
+          "target": "SunsetEnd:n976",
+          "targetNodeId": 976,
+          "offset": 346927
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd2:n50",
+      "level": "SunsetEnd2",
+      "nodeId": 50,
+      "name": "BstNode_2345992215",
+      "className": "Wind",
+      "classIndex": 17,
+      "sourceOffset": 32111,
+      "sourceLength": 122,
+      "sourceSha256": "c64dfb7e7e77a7f3c76f7ec46652f9dd7eed4abc1c11004f39b4009cbec10ca2",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd2:n78",
+      "level": "SunsetEnd2",
+      "nodeId": 78,
+      "name": "BstNode_2279669948",
+      "className": "Wind",
+      "classIndex": 17,
+      "sourceOffset": 37169,
+      "sourceLength": 122,
+      "sourceSha256": "0b5ca3320fcbdcaddb72841a7bb0aea62d60eebcc4557ff5d53574bb0d8dcf5a",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd2:n183",
+      "level": "SunsetEnd2",
+      "nodeId": 183,
+      "name": "BstNode_2279669913",
+      "className": "Wind",
+      "classIndex": 17,
+      "sourceOffset": 58225,
+      "sourceLength": 122,
+      "sourceSha256": "423c76f1147dcdc3d7756ecaffdb580b01afb5f46ea6c9490ea278e1e32911ea",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd2:n388",
+      "level": "SunsetEnd2",
+      "nodeId": 388,
+      "name": "BstNode_2279669896",
+      "className": "Wind",
+      "classIndex": 17,
+      "sourceOffset": 102054,
+      "sourceLength": 122,
+      "sourceSha256": "8b32d97cae02ab937d39afb45a2c5261e0e9e6c006ea4c77c2b16c9b9ba50db1",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd2:n721",
+      "level": "SunsetEnd2",
+      "nodeId": 721,
+      "name": "BstNode_2279669895",
+      "className": "Wind",
+      "classIndex": 17,
+      "sourceOffset": 178389,
+      "sourceLength": 122,
+      "sourceSha256": "b4c5af3ee9712ed9f0b6ea1d52e27fcf247739289cd0c7cba9ba848a141c9321",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetRace:n143",
+      "level": "SunsetRace",
+      "nodeId": 143,
+      "name": "BstNode_1167523851",
+      "className": "Wind",
+      "classIndex": 25,
+      "sourceOffset": 47840,
+      "sourceLength": 122,
+      "sourceSha256": "4323635e37696ede54139b4034a5dc8c41f19e4b0576395e93b51b3a85860b48",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n143/p11",
+          "fieldName": "rail",
+          "target": "SunsetRace:n1588",
+          "targetNodeId": 1588,
+          "offset": 47958
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetRace:n154",
+      "level": "SunsetRace",
+      "nodeId": 154,
+      "name": "BstNode_1167523852",
+      "className": "Wind",
+      "classIndex": 25,
+      "sourceOffset": 49869,
+      "sourceLength": 122,
+      "sourceSha256": "1750ac72d0ff7dc163508daf7c9ff8406ba04c6381296aa9f3bb622ae22845f3",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n154/p11",
+          "fieldName": "rail",
+          "target": "SunsetRace:n1317",
+          "targetNodeId": 1317,
+          "offset": 49987
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetRace:n385",
+      "level": "SunsetRace",
+      "nodeId": 385,
+      "name": "BstNode_1167523885",
+      "className": "Wind",
+      "classIndex": 25,
+      "sourceOffset": 98895,
+      "sourceLength": 122,
+      "sourceSha256": "43435ed47b34a7a18a7abb9d818dadb0729182fb8af2b8c340984ddddf914b9d",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n385/p11",
+          "fieldName": "rail",
+          "target": "SunsetRace:n1494",
+          "targetNodeId": 1494,
+          "offset": 99013
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetRace:n1371",
+      "level": "SunsetRace",
+      "nodeId": 1371,
+      "name": "BstNode_222",
+      "className": "Wind",
+      "classIndex": 25,
+      "sourceOffset": 280783,
+      "sourceLength": 115,
+      "sourceSha256": "09eca31cb5c4d00c6b25f81d6337bf70f4ef7c53cca16f29f0a7c6639370990f",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1371/p11",
+          "fieldName": "rail",
+          "target": "SunsetRace:n1331",
+          "targetNodeId": 1331,
+          "offset": 280894
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "Dawn",
+      "path": "Levels/Dawn/Objects.level.bin",
+      "sha256": "16e26aafc7f9d120a548bf5d8bec04fbc18146bc8db531ef75144889b1ff197a",
+      "bytes": 504637,
+      "nodes": 3798,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dawn.json",
+      "markdown": "Objects对象清单/Dawn.md"
+    },
+    {
+      "level": "DayEnd",
+      "path": "Levels/DayEnd/Objects.level.bin",
+      "sha256": "9b5c568cefa987e504a10236c5b61e5de4b748d965d09e42db3602e4e52cc904",
+      "bytes": 268140,
+      "nodes": 1459,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DayEnd.json",
+      "markdown": "Objects对象清单/DayEnd.md"
+    },
+    {
+      "level": "Dusk",
+      "path": "Levels/Dusk/Objects.level.bin",
+      "sha256": "9222b248f17fb4122cd4ad9650543ab86aab8b077b6965248c70ac2341bf2d5d",
+      "bytes": 242331,
+      "nodes": 1288,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dusk.json",
+      "markdown": "Objects对象清单/Dusk.md"
+    },
+    {
+      "level": "DuskGraveyard",
+      "path": "Levels/DuskGraveyard/Objects.level.bin",
+      "sha256": "128b30dcbe40b68e68fc25d195b68dc39f897259453c02612049ccd37a90ffb4",
+      "bytes": 424333,
+      "nodes": 1791,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DuskGraveyard.json",
+      "markdown": "Objects对象清单/DuskGraveyard.md"
+    },
+    {
+      "level": "DuskMid",
+      "path": "Levels/DuskMid/Objects.level.bin",
+      "sha256": "899ca33226dabd04afecfe7888750938ff4e460cb586603364e150591e9cbda5",
+      "bytes": 234288,
+      "nodes": 1268,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DuskMid.json",
+      "markdown": "Objects对象清单/DuskMid.md"
+    },
+    {
+      "level": "Dusk_CrabField",
+      "path": "Levels/Dusk_CrabField/Objects.level.bin",
+      "sha256": "718247937eb535034282dbd11473563a2034ec75e1a4a287c057589ca174c8a8",
+      "bytes": 262346,
+      "nodes": 1098,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dusk_CrabField.json",
+      "markdown": "Objects对象清单/Dusk_CrabField.md"
+    },
+    {
+      "level": "HubReveal",
+      "path": "Levels/HubReveal/Objects.level.bin",
+      "sha256": "4b32f12bbe4b246cde9ca1e4ba0982000ff108359865bb4340aba640e609861b",
+      "bytes": 289438,
+      "nodes": 1829,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/HubReveal.json",
+      "markdown": "Objects对象清单/HubReveal.md"
+    },
+    {
+      "level": "NightEnd",
+      "path": "Levels/NightEnd/Objects.level.bin",
+      "sha256": "0dd8919c4f0ca58e9dc979e211b84dc990e012815929082b1004ed620af32422",
+      "bytes": 156479,
+      "nodes": 1090,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/NightEnd.json",
+      "markdown": "Objects对象清单/NightEnd.md"
+    },
+    {
+      "level": "Prairie_ButterflyFields",
+      "path": "Levels/Prairie_ButterflyFields/Objects.level.bin",
+      "sha256": "29d8d61a082f3e3414ecfbb501b5f65499deb37ad4a1078ce2e9b88ac0d1e441",
+      "bytes": 297606,
+      "nodes": 1513,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_ButterflyFields.json",
+      "markdown": "Objects对象清单/Prairie_ButterflyFields.md"
+    },
+    {
+      "level": "Prairie_Cave",
+      "path": "Levels/Prairie_Cave/Objects.level.bin",
+      "sha256": "675a2256e24f8c4b16540cee6a5cd2b7647ff2fb495724a8bf596717ca39d944",
+      "bytes": 466340,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Cave.json",
+      "markdown": "Objects对象清单/Prairie_Cave.md"
+    },
+    {
+      "level": "Prairie_NestAndKeeper",
+      "path": "Levels/Prairie_NestAndKeeper/Objects.level.bin",
+      "sha256": "5eabe877e07c84e5f9270035aaab73fa20144c87f6e9136e5285dbaff3f85b7a",
+      "bytes": 239403,
+      "nodes": 1077,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_NestAndKeeper.json",
+      "markdown": "Objects对象清单/Prairie_NestAndKeeper.md"
+    },
+    {
+      "level": "Prairie_Village",
+      "path": "Levels/Prairie_Village/Objects.level.bin",
+      "sha256": "4656296b54402016b59b894b4653fbdc71e106a21e0900294f73f2c7b7112385",
+      "bytes": 549989,
+      "nodes": 3724,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Village.json",
+      "markdown": "Objects对象清单/Prairie_Village.md"
+    },
+    {
+      "level": "Rain",
+      "path": "Levels/Rain/Objects.level.bin",
+      "sha256": "20093bccf3bb1ea0936cb993e66cef0187b40a5a411df3573eb28e4def4f75c6",
+      "bytes": 457732,
+      "nodes": 2079,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Rain.json",
+      "markdown": "Objects对象清单/Rain.md"
+    },
+    {
+      "level": "RainEnd",
+      "path": "Levels/RainEnd/Objects.level.bin",
+      "sha256": "247912ec955153e3df80c16a861eb872573502a285a17943518bdce448a8d5e3",
+      "bytes": 427926,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainEnd.json",
+      "markdown": "Objects对象清单/RainEnd.md"
+    },
+    {
+      "level": "RainForest",
+      "path": "Levels/RainForest/Objects.level.bin",
+      "sha256": "2e69b3314c70c61bd99435f4bb4418fba540f227c83670e1af3b5358c64c3b73",
+      "bytes": 271409,
+      "nodes": 1306,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainForest.json",
+      "markdown": "Objects对象清单/RainForest.md"
+    },
+    {
+      "level": "RainMid",
+      "path": "Levels/RainMid/Objects.level.bin",
+      "sha256": "139b219d9b71a2ab24418b1ec41f2ee8a2ebfdf4c5ea992c35348a758682ed23",
+      "bytes": 430825,
+      "nodes": 2457,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainMid.json",
+      "markdown": "Objects对象清单/RainMid.md"
+    },
+    {
+      "level": "SkyHub2",
+      "path": "Levels/SkyHub2/Objects.level.bin",
+      "sha256": "8b467f9b349d9d4ce0d038528c96e44dff30063149bf5bbf90232a56bb9dd36f",
+      "bytes": 475656,
+      "nodes": 2886,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SkyHub2.json",
+      "markdown": "Objects对象清单/SkyHub2.md"
+    },
+    {
+      "level": "Storm",
+      "path": "Levels/Storm/Objects.level.bin",
+      "sha256": "4be187f31f1ef86611831abeb45ed9c1deff5e925f3bae80a6be49af85fa52bd",
+      "bytes": 324849,
+      "nodes": 1954,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Storm.json",
+      "markdown": "Objects对象清单/Storm.md"
+    },
+    {
+      "level": "StormEnd",
+      "path": "Levels/StormEnd/Objects.level.bin",
+      "sha256": "a9c13b592198ee01ab2922a0c7901f4516ae172d56a22d9b7f806ff7464c9162",
+      "bytes": 224465,
+      "nodes": 1243,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/StormEnd.json",
+      "markdown": "Objects对象清单/StormEnd.md"
+    },
+    {
+      "level": "Sunset",
+      "path": "Levels/Sunset/Objects.level.bin",
+      "sha256": "8126f2db693502576075505797624e0b5e53dc064fe6af82e90f2261ca427f8a",
+      "bytes": 325410,
+      "nodes": 1899,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Sunset.json",
+      "markdown": "Objects对象清单/Sunset.md"
+    },
+    {
+      "level": "SunsetEnd",
+      "path": "Levels/SunsetEnd/Objects.level.bin",
+      "sha256": "9995ebfef7aa72982f6b95073a98a4ef01376bd8ac56c3b79b09729f97f43d6e",
+      "bytes": 352573,
+      "nodes": 1998,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SunsetEnd.json",
+      "markdown": "Objects对象清单/SunsetEnd.md"
+    },
+    {
+      "level": "SunsetEnd2",
+      "path": "Levels/SunsetEnd2/Objects.level.bin",
+      "sha256": "f76249413f9412f3db6d726aacf7425d5da546f8a9b88b9614c8a33fdb87e711",
+      "bytes": 209340,
+      "nodes": 975,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SunsetEnd2.json",
+      "markdown": "Objects对象清单/SunsetEnd2.md"
+    },
+    {
+      "level": "SunsetRace",
+      "path": "Levels/SunsetRace/Objects.level.bin",
+      "sha256": "2ebfc21451d30f976bcafafa0c42f409e322efeeb0f8403a4136899438e0b5dc",
+      "bytes": 333403,
+      "nodes": 1722,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SunsetRace.json",
+      "markdown": "Objects对象清单/SunsetRace.md"
+    }
+  ]
+}

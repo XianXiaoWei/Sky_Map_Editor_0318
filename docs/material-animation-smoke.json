@@ -1,0 +1,143 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "check": "Static camera advances shader time and original texture drift",
+      "time": 1.2803000211715698,
+      "scrolls": [
+        [
+          0.019254513084888458,
+          0,
+          0,
+          0
+        ],
+        [
+          0.9631256461143494,
+          0,
+          0.9358217716217041,
+          0
+        ],
+        [
+          0.9869733452796936,
+          0,
+          0.022508302703499794,
+          0
+        ]
+      ]
+    },
+    "Pause freezes uniforms and stops redundant static-camera submissions",
+    "Resume advances new frame deltas without adding paused wall time",
+    "Actual TGCL alphaMult, original shared ranges and 28-byte CloudCard stream traverse Electron IPC; duplicate visibility is rejected",
+    "Raw packed attribute inspection stops material animation"
+  ],
+  "scope": "Actual Electron viewport animation, pause/resume without catch-up, map and inspection-mode reset, CloudCard dynamic IPC. Editor static environment and explicit zero sampled wind; not original game images.",
+  "moving": {
+    "scope": "Original terrain/skirt GLSL, real packed geometry/material textures, recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Explicit preview exposure/reciprocal curve/sRGB; original Tonemap/bloom/history, scene probe, point lights/shadows, active water/puddle, startup and foreground fog/cloud composition remain pending.",
+    "draws": 20,
+    "shaders": [
+      "RockFaceSh",
+      "GrassSh",
+      "SandSh",
+      "SandRainSh",
+      "CloudSh",
+      "RockFaceShAlpha",
+      "GrassShAlpha",
+      "SandShAlpha",
+      "CloudShAlpha",
+      "RockFaceShAlphaSkirt",
+      "GrassShAlphaSkirt",
+      "SandShAlphaSkirt"
+    ],
+    "triangles": 242704,
+    "textures": [
+      "CliffSh",
+      "GrassNorTex0",
+      "GrassNorTex1",
+      "GrassMask",
+      "Noise3Ch",
+      "UpNormal"
+    ],
+    "dynamics": {
+      "time": 1.2803000211715698,
+      "scrolls": [
+        [
+          0.019254513084888458,
+          0,
+          0,
+          0
+        ],
+        [
+          0.9631256461143494,
+          0,
+          0.9358217716217041,
+          0
+        ],
+        [
+          0.9869733452796936,
+          0,
+          0.022508302703499794,
+          0
+        ]
+      ]
+    }
+  },
+  "image": "docs/shader-effects/Prairie_ButterflyFields-animation-paused.png",
+  "cloud": {
+    "card": {
+      "nodeId": 205,
+      "meshName": "CloudCard_01",
+      "alphaMult": 0.5,
+      "sphere": [
+        218.65328979492188,
+        177.66177368164062,
+        72.40441131591797,
+        36.303035736083984
+      ],
+      "group": 0,
+      "world": [
+        -13.007865905761719,
+        -0.4915350079536438,
+        7.690206050872803,
+        0,
+        5.701368808746338,
+        0.13863100111484528,
+        9.652640342712402,
+        0,
+        -0.11501900106668472,
+        3.3532519340515137,
+        0.019776999950408936,
+        0,
+        218.65328979492188,
+        177.66177368164062,
+        72.40441131591797,
+        1
+      ],
+      "inverseWorld": [
+        -0.056905921548604965,
+        0.04535757750272751,
+        -0.010216716676950455,
+        0,
+        -0.002150334184989333,
+        0.0011028890730813146,
+        0.2978571951389313,
+        0,
+        0.03364258632063866,
+        0.0767921432852745,
+        0.0017567237373441458,
+        0,
+        10.388829231262207,
+        -15.673615455627441,
+        -50.81111145019531,
+        1.0000001192092896
+      ]
+    },
+    "cards": 18,
+    "vertices": 5208,
+    "stride": 28,
+    "indices": 24,
+    "draws": 1,
+    "format": "half2",
+    "alpha": 72,
+    "invalidRejected": true
+  }
+}

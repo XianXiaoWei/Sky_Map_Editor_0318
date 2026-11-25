@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "maps": [
+    {
+      "level": "RainMid",
+      "width": 128,
+      "height": 100,
+      "visibleModelBindings": 287,
+      "draws": 299,
+      "defaultAnimations": 1,
+      "changedAnimatedNodeIds": [],
+      "fogVolumes": {
+        "objects": 0,
+        "renderedNodeIds": [],
+        "target": "rtFogHalf",
+        "format": "r16f",
+        "scope": "Original saved FogVolume geometry/transform/intensity and shader, native double-sided ONE/ONE Fog Gen state, scene depth/cloud inputs and FogUpsample density binding.",
+        "renderPath": "gpu-resident"
+      },
+      "passes": [
+        "CloudCore",
+        "OpaqueRGBDepth",
+        "WaterSimReset",
+        "OceanMeshWet",
+        "DepthDownsample",
+        "DepthDownsampleGather",
+        "DepthDownsampleQuarter",
+        "CloudFluffySuperCoarse",
+        "CloudFluffyCoarse",
+        "CloudFluffy",
+        "AlphaColorLogDepth",
+        "PreviewLuminance",
+        "FogUpsample",
+        "MotionGen",
+        "MotionDilate",
+        "TemporalAa",
+        "Tonemap"
+      ],
+      "modelBoundaries": [],
+      "screenshot": "docs/model-coverage-RainMid.png",
+      "sourceUnchanged": true
+    }
+  ],
+  "errors": [],
+  "scope": "Actual Electron map loading and full Vulkan compositor, saved visible LevelMesh bindings, default animation startup and per-model packed geometry changes, FogVolume pass, screenshots, map resets and source preservation. File/dependency coverage is separate from this GPU integration check. Desktop hardware performance and original Metal pixel parity are not claimed."
+}

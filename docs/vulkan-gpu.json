@@ -1,0 +1,183 @@
+{
+  "device": {
+    "engine": "Sky Native Vulkan",
+    "backend": "Vulkan",
+    "device": "llvmpipe (LLVM 19.1.7, 128 bits)",
+    "apiVersion": 4210993,
+    "deviceType": 4
+  },
+  "scope": "Production native Vulkan host, actual SPIR-V rasterization and RGBA readback. Explicit diagnostic fixtures. No original-game image parity, original cloud shader execution or Windows GPU validation.",
+  "checks": [
+    {
+      "name": "front-face",
+      "width": 32,
+      "height": 32,
+      "centerRGBA": [
+        255,
+        0,
+        0,
+        255
+      ],
+      "expectedRGBA": [
+        255,
+        0,
+        0,
+        255
+      ],
+      "rgbaSha256": "d30dfb56c2d2dc7b622a68f84ee4b5c327a86972a9f84fd776f132de1a6eb9e5",
+      "passed": true
+    },
+    {
+      "name": "back-face",
+      "width": 32,
+      "height": 32,
+      "centerRGBA": [
+        16,
+        32,
+        48,
+        255
+      ],
+      "expectedRGBA": [
+        16,
+        32,
+        48,
+        255
+      ],
+      "rgbaSha256": "b63d2cf6fbc3d3e595a15e48ab33380da3bc488dda9d1f225aa1957f3a88dffa",
+      "passed": true
+    },
+    {
+      "name": "opaque-depth",
+      "width": 32,
+      "height": 32,
+      "centerRGBA": [
+        255,
+        0,
+        0,
+        255
+      ],
+      "expectedRGBA": [
+        255,
+        0,
+        0,
+        255
+      ],
+      "rgbaSha256": "d30dfb56c2d2dc7b622a68f84ee4b5c327a86972a9f84fd776f132de1a6eb9e5",
+      "passed": true
+    },
+    {
+      "name": "overlay-order-alpha",
+      "width": 32,
+      "height": 32,
+      "centerRGBA": [
+        63,
+        64,
+        128,
+        255
+      ],
+      "expectedRGBA": [
+        64,
+        64,
+        128,
+        255
+      ],
+      "rgbaSha256": "56f89ace2bd0ab8a6408faa0eaf61dd4bc59437dfdfde4e2776f274044a3d0fe",
+      "passed": true
+    },
+    {
+      "name": "overlay-no-depth-write",
+      "width": 32,
+      "height": 32,
+      "centerRGBA": [
+        0,
+        0,
+        255,
+        255
+      ],
+      "expectedRGBA": [
+        0,
+        0,
+        255,
+        255
+      ],
+      "rgbaSha256": "8f075bd022bf247e7ba959b0f21784d442d2cf06f16f34f785196d99f2eab194",
+      "passed": true
+    },
+    {
+      "name": "overlay-depth-test",
+      "width": 32,
+      "height": 32,
+      "centerRGBA": [
+        255,
+        0,
+        0,
+        255
+      ],
+      "expectedRGBA": [
+        255,
+        0,
+        0,
+        255
+      ],
+      "rgbaSha256": "d30dfb56c2d2dc7b622a68f84ee4b5c327a86972a9f84fd776f132de1a6eb9e5",
+      "passed": true
+    },
+    {
+      "name": "ambient-fragment",
+      "width": 32,
+      "height": 32,
+      "centerRGBA": [
+        64,
+        16,
+        4,
+        255
+      ],
+      "expectedRGBA": [
+        64,
+        16,
+        4,
+        255
+      ],
+      "rgbaSha256": "cbb7deca6d043e891d8a4ccedd3cc56cee24028ad07374d1f3542a207cf9a5be",
+      "passed": true
+    },
+    {
+      "name": "coplanar-slope-bias",
+      "width": 32,
+      "height": 32,
+      "centerRGBA": [
+        127,
+        128,
+        0,
+        255
+      ],
+      "expectedRGBA": [
+        128,
+        128,
+        0,
+        255
+      ],
+      "rgbaSha256": "c2bce820bc6b5f869830aa63e75d38c5233553d2b58947ba9eca22f4650614fe",
+      "passed": true
+    },
+    {
+      "name": "resize",
+      "width": 40,
+      "height": 24,
+      "centerRGBA": [
+        255,
+        0,
+        0,
+        255
+      ],
+      "expectedRGBA": [
+        255,
+        0,
+        0,
+        255
+      ],
+      "rgbaSha256": "af23ec477b0a248b99b6391ce4bb784051b2392f82e277f6f6dec247a9545382",
+      "passed": true
+    }
+  ]
+}

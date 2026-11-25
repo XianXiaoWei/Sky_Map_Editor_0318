@@ -1,0 +1,4114 @@
+{
+  "className": "LevelLink",
+  "functionGroup": "地图加载、出生与检查点",
+  "functionRole": "地图连接、锚点与加载事件",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "LevelLink 的原默认值、继承初始化及 12 个序列化字段变体；原注册字段 12 项。"
+    },
+    {
+      "name": "地图连接、锚点与加载事件",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Marker（71 条引用）、Beamo（5 条引用）、Clump（15 条引用）、LevelMesh（5 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "LevelLink",
+    "category": "地图加载、出生与检查点",
+    "functionGroupId": "levels",
+    "functionRole": "地图连接、锚点与加载事件",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "LevelLink 的原默认值、继承初始化及 12 个序列化字段变体；原注册字段 12 项。"
+      },
+      {
+        "name": "地图连接、锚点与加载事件",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Marker（71 条引用）、Beamo（5 条引用）、Clump（15 条引用）、LevelMesh（5 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Marker",
+        "references": 71
+      },
+      {
+        "className": "Clump",
+        "references": 15
+      },
+      {
+        "className": "Beamo",
+        "references": 5
+      },
+      {
+        "className": "LevelMesh",
+        "references": 5
+      }
+    ],
+    "rttiWorkingGroup": "场景与路径基础",
+    "role": "对象实例类型",
+    "instances": 64,
+    "nestedInstances": 0,
+    "referenceFields": 96,
+    "declaredLevels": 23,
+    "levels": [
+      {
+        "level": "Dawn",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DayEnd",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DayHubCave",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Dusk",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DuskGraveyard",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DuskMid",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Dusk_CrabField",
+        "nodes": 5,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "HubReveal",
+        "nodes": 6,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_ButterflyFields",
+        "nodes": 5,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Cave",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_NestAndKeeper",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Village",
+        "nodes": 5,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Rain",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainEnd",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainForest",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainMid",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SkyHub2",
+        "nodes": 7,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Storm",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "StormEnd",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Sunset",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SunsetEnd",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SunsetEnd2",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SunsetRace",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "anchor",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "bstGuid",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "enabled",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "fadeTexture",
+        "type": 1,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "isLevelComplete",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "levelName",
+        "type": 1,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "linkName",
+        "type": 1,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "onLoadEvents",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "placeAvatar",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "placementBoundary",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "sharedObjects",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "transform",
+        "type": 0,
+        "size": 64,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100cc0de0",
+    "nativeRegisteredFields": [
+      {
+        "name": "anchor",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP6ObjectERK8MetaTypev",
+        "nativeOffset": 16,
+        "registrationFunction": "0x1003fee50",
+        "propertyAddress": "0x100cc08a0"
+      },
+      {
+        "name": "sharedObjects",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 24,
+        "registrationFunction": "0x1003fee50",
+        "propertyAddress": "0x100cc08f0"
+      },
+      {
+        "name": "linkName",
+        "typeGetter": "__Z17GetMetaTypeByTypeINSt3__112basic_stringIcNS0_11char_traitsIcEE16StlPoolAllocatorIcEEEERK8MetaTypev",
+        "nativeOffset": 128,
+        "registrationFunction": "0x1003fee50",
+        "propertyAddress": "0x100cc0940"
+      },
+      {
+        "name": "levelName",
+        "typeGetter": "__Z17GetMetaTypeByTypeINSt3__112basic_stringIcNS0_11char_traitsIcEE16StlPoolAllocatorIcEEEERK8MetaTypev",
+        "nativeOffset": 152,
+        "registrationFunction": "0x1003fee50",
+        "propertyAddress": "0x100cc0990"
+      },
+      {
+        "name": "fadeTexture",
+        "typeGetter": "__Z17GetMetaTypeByTypeINSt3__112basic_stringIcNS0_11char_traitsIcEE16StlPoolAllocatorIcEEEERK8MetaTypev",
+        "nativeOffset": 176,
+        "registrationFunction": "0x1003fee50",
+        "propertyAddress": "0x100cc09e0"
+      },
+      {
+        "name": "transform",
+        "typeGetter": "__Z17GetMetaTypeByTypeIN10Vectormath3Aos7Matrix4EERK8MetaTypev",
+        "nativeOffset": 48,
+        "registrationFunction": "0x1003fee50",
+        "propertyAddress": "0x100cc0a30"
+      },
+      {
+        "name": "enabled",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 204,
+        "registrationFunction": "0x1003fee50",
+        "propertyAddress": "0x100cc0a80"
+      },
+      {
+        "name": "bstGuid",
+        "typeGetter": "__Z17GetMetaTypeByTypeIjERK8MetaTypev",
+        "nativeOffset": 200,
+        "registrationFunction": "0x1003fee50",
+        "propertyAddress": "0x100cc0ad0"
+      },
+      {
+        "name": "onLoadEvents",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 32,
+        "registrationFunction": "0x1003fee50",
+        "propertyAddress": "0x100cc0b20"
+      },
+      {
+        "name": "isLevelComplete",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 206,
+        "registrationFunction": "0x1003fee50",
+        "propertyAddress": "0x100cc0b70"
+      },
+      {
+        "name": "placeAvatar",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 112,
+        "registrationFunction": "0x1003fee50",
+        "propertyAddress": "0x100cc0bc0"
+      },
+      {
+        "name": "placementBoundary",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP11WorldObjectERK8MetaTypev",
+        "nativeOffset": 120,
+        "registrationFunction": "0x1003fee50",
+        "propertyAddress": "0x100cc0c10"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 12 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "Dawn:n760",
+      "level": "Dawn",
+      "nodeId": 760,
+      "name": "BstNode_1293287440",
+      "className": "LevelLink",
+      "classIndex": 76,
+      "sourceOffset": 153953,
+      "sourceLength": 129,
+      "sourceSha256": "ab1763565f16cf9e27a9897d867b81424fb1f745b3606891763ad2141da614a6",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 1293287440,
+            "int": 1293287440,
+            "float": 157286656
+          },
+          "raw": "1000164d"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n760/p8",
+          "fieldName": "anchor",
+          "target": "Dawn:n596",
+          "targetNodeId": 596,
+          "offset": 154062
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1411",
+      "level": "Dawn",
+      "nodeId": 1411,
+      "name": "BstNode_3122856912",
+      "className": "LevelLink",
+      "classIndex": 76,
+      "sourceOffset": 247419,
+      "sourceLength": 153,
+      "sourceSha256": "af20231c7aae014ce069c3f485fe61f9732b93f31ce0f3dbf506bd6429ed9ed2",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3122856912,
+            "int": -1172110384,
+            "float": -0.0006218524649739265
+          },
+          "raw": "d00323ba"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2355",
+      "level": "Dawn",
+      "nodeId": 2355,
+      "name": "BstNode_34603079",
+      "className": "LevelLink",
+      "classIndex": 76,
+      "sourceOffset": 391003,
+      "sourceLength": 151,
+      "sourceSha256": "9244d35f9348c4fc027c1bc1d6879a925cce1d4273814d4ea6bdb20516edecad",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 34603079,
+            "int": 34603079,
+            "float": 1.0579528751153361e-37
+          },
+          "raw": "47001002"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n72",
+      "level": "DayEnd",
+      "nodeId": 72,
+      "name": "BstNode_2446917671",
+      "className": "LevelLink",
+      "classIndex": 20,
+      "sourceOffset": 36923,
+      "sourceLength": 135,
+      "sourceSha256": "92262496d570fb2b8112051be3806c78f2dca54598b77edd213f7c4a331a4212",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2446917671,
+            "int": -1848049625,
+            "float": -3.42366571756767e-28
+          },
+          "raw": "2700d991"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n72/p8",
+          "fieldName": "anchor",
+          "target": "DayEnd:n230",
+          "targetNodeId": 230,
+          "offset": 37041
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n106",
+      "level": "DayEnd",
+      "nodeId": 106,
+      "name": "BstNode_34603009",
+      "className": "LevelLink",
+      "classIndex": 20,
+      "sourceOffset": 44708,
+      "sourceLength": 146,
+      "sourceSha256": "f76d511683b9a68c878a09cf99f605ef326e50cc79e098867fdd8b23e3ca9b4d",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 34603009,
+            "int": 34603009,
+            "float": 1.057945027843936e-37
+          },
+          "raw": "01001002"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n106/p6",
+          "fieldName": "placementBoundary",
+          "target": "DayEnd:n1022",
+          "targetNodeId": 1022,
+          "offset": 44821
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayHubCave:n39",
+      "level": "DayHubCave",
+      "nodeId": 39,
+      "name": "BstNode_2345992578",
+      "className": "LevelLink",
+      "classIndex": 16,
+      "sourceOffset": 29171,
+      "sourceLength": 145,
+      "sourceSha256": "7cc2675bf96dd178ede90568211aba69b29b8ac340e03502bfa2d26404627646",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2345992578,
+            "int": -1948974718,
+            "float": -8.204688433499333e-32
+          },
+          "raw": "8201d58b"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n39/p6",
+          "fieldName": "placementBoundary",
+          "target": "DayHubCave:n514",
+          "targetNodeId": 514,
+          "offset": 29283
+        },
+        {
+          "fieldId": "n39/p8",
+          "fieldName": "anchor",
+          "target": "DayHubCave:n908",
+          "targetNodeId": 908,
+          "offset": 29288
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayHubCave:n459",
+      "level": "DayHubCave",
+      "nodeId": 459,
+      "name": "BstNode_2345992574",
+      "className": "LevelLink",
+      "classIndex": 16,
+      "sourceOffset": 109435,
+      "sourceLength": 145,
+      "sourceSha256": "38053bf65e84ec70d7f7122f9ca72da55279b84548d3deda44e9a676c3cbfaa7",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2345992574,
+            "int": -1948974722,
+            "float": -8.204686082510632e-32
+          },
+          "raw": "7e01d58b"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n459/p6",
+          "fieldName": "placementBoundary",
+          "target": "DayHubCave:n455",
+          "targetNodeId": 455,
+          "offset": 109547
+        },
+        {
+          "fieldId": "n459/p8",
+          "fieldName": "anchor",
+          "target": "DayHubCave:n626",
+          "targetNodeId": 626,
+          "offset": 109552
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n239",
+      "level": "Dusk",
+      "nodeId": 239,
+      "name": "BstNode_1167523847",
+      "className": "LevelLink",
+      "classIndex": 40,
+      "sourceOffset": 67770,
+      "sourceLength": 134,
+      "sourceSha256": "e978c37bd7584202eff798a15e8d77dadb927dd60c3bd8c99100fae5002c32e3",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 1167523847,
+            "int": 1167523847,
+            "float": 4832.00341796875
+          },
+          "raw": "07009745"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n239/p6",
+          "fieldName": "placementBoundary",
+          "target": "Dusk:n1124",
+          "targetNodeId": 1124,
+          "offset": 67879
+        },
+        {
+          "fieldId": "n239/p8",
+          "fieldName": "anchor",
+          "target": "Dusk:n677",
+          "targetNodeId": 677,
+          "offset": 67884
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n413",
+      "level": "Dusk",
+      "nodeId": 413,
+      "name": "BstNode_930",
+      "className": "LevelLink",
+      "classIndex": 40,
+      "sourceOffset": 98925,
+      "sourceLength": 141,
+      "sourceSha256": "773167b4d2cb8c868dd6cceb8c7c621715900c972423697f827a8fb3ac3c6181",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 930,
+            "int": 930,
+            "float": 1.3032075718220799e-42
+          },
+          "raw": "a2030000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n413/p6",
+          "fieldName": "placementBoundary",
+          "target": "Dusk:n403",
+          "targetNodeId": 403,
+          "offset": 99035
+        },
+        {
+          "fieldId": "n413/p8",
+          "fieldName": "anchor",
+          "target": "Dusk:n1170",
+          "targetNodeId": 1170,
+          "offset": 99040
+        },
+        {
+          "fieldId": "n413/p10",
+          "fieldName": "onLoadEvents",
+          "target": "Dusk:n1223",
+          "targetNodeId": 1223,
+          "offset": 99048
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n1052",
+      "level": "Dusk",
+      "nodeId": 1052,
+      "name": "BstNode_2279669895",
+      "className": "LevelLink",
+      "classIndex": 40,
+      "sourceOffset": 214598,
+      "sourceLength": 136,
+      "sourceSha256": "f394e06b46ffdedd13303e45400b9f657048d41387698cf1f4c043300fda6384",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2279669895,
+            "int": -2015297401,
+            "float": -3.3854547248481413e-34
+          },
+          "raw": "8700e187"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1052/p6",
+          "fieldName": "placementBoundary",
+          "target": "Dusk:n1124",
+          "targetNodeId": 1124,
+          "offset": 214710
+        },
+        {
+          "fieldId": "n1052/p8",
+          "fieldName": "anchor",
+          "target": "Dusk:n677",
+          "targetNodeId": 677,
+          "offset": 214715
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n584",
+      "level": "DuskGraveyard",
+      "nodeId": 584,
+      "name": "BstNode_929",
+      "className": "LevelLink",
+      "classIndex": 48,
+      "sourceOffset": 158961,
+      "sourceLength": 133,
+      "sourceSha256": "370421e58236b3865db8059c51e0a19011c671940186dbe5fc227b05fa6763de",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 929,
+            "int": 929,
+            "float": 1.301806273357755e-42
+          },
+          "raw": "a1030000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n584/p6",
+          "fieldName": "placementBoundary",
+          "target": "DuskGraveyard:n1654",
+          "targetNodeId": 1654,
+          "offset": 159072
+        },
+        {
+          "fieldId": "n584/p8",
+          "fieldName": "anchor",
+          "target": "DuskGraveyard:n1573",
+          "targetNodeId": 1573,
+          "offset": 159077
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n1610",
+      "level": "DuskGraveyard",
+      "nodeId": 1610,
+      "name": "BstNode_2345992196",
+      "className": "LevelLink",
+      "classIndex": 48,
+      "sourceOffset": 398780,
+      "sourceLength": 136,
+      "sourceSha256": "77891c22b8ee9cbafb0929edd0e616ddafe2ffc13e949b9a28bc11c190fc1fba",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2345992196,
+            "int": -1948975100,
+            "float": -8.204463914078326e-32
+          },
+          "raw": "0400d58b"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1610/p6",
+          "fieldName": "placementBoundary",
+          "target": "DuskGraveyard:n754",
+          "targetNodeId": 754,
+          "offset": 398891
+        },
+        {
+          "fieldId": "n1610/p8",
+          "fieldName": "anchor",
+          "target": "DuskGraveyard:n316",
+          "targetNodeId": 316,
+          "offset": 398896
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n337",
+      "level": "DuskMid",
+      "nodeId": 337,
+      "name": "BstNode_929",
+      "className": "LevelLink",
+      "classIndex": 39,
+      "sourceOffset": 80422,
+      "sourceLength": 134,
+      "sourceSha256": "c40d281b7e2e1ab143f72736d764298da35ec4af0b33648ab7699b1ac544d7d7",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 929,
+            "int": 929,
+            "float": 1.301806273357755e-42
+          },
+          "raw": "a1030000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n337/p6",
+          "fieldName": "placementBoundary",
+          "target": "DuskMid:n998",
+          "targetNodeId": 998,
+          "offset": 80525
+        },
+        {
+          "fieldId": "n337/p8",
+          "fieldName": "anchor",
+          "target": "DuskMid:n76",
+          "targetNodeId": 76,
+          "offset": 80530
+        },
+        {
+          "fieldId": "n337/p10",
+          "fieldName": "onLoadEvents",
+          "target": "DuskMid:n88",
+          "targetNodeId": 88,
+          "offset": 80538
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n90",
+      "level": "Dusk_CrabField",
+      "nodeId": 90,
+      "name": "BstNode_2529559391",
+      "className": "LevelLink",
+      "classIndex": 13,
+      "sourceOffset": 34322,
+      "sourceLength": 148,
+      "sourceSha256": "0f2c19f33b4f767ec3f14e39d6f29aeeaecce52d86fd18e08c850c547175ad1f",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2529559391,
+            "int": -1765407905,
+            "float": -3.1990752710327885e-25
+          },
+          "raw": "5f03c696"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n90/p6",
+          "fieldName": "placementBoundary",
+          "target": "Dusk_CrabField:n430",
+          "targetNodeId": 430,
+          "offset": 34437
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n203",
+      "level": "Dusk_CrabField",
+      "nodeId": 203,
+      "name": "BstNode_2529558986",
+      "className": "LevelLink",
+      "classIndex": 13,
+      "sourceOffset": 61461,
+      "sourceLength": 153,
+      "sourceSha256": "99cf86509e72c57fdeff53d8b54d5306043bc5e2854c4bc15aec58a909eaee05",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2529558986,
+            "int": -1765408310,
+            "float": -3.1989754308244715e-25
+          },
+          "raw": "ca01c696"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n203/p6",
+          "fieldName": "placementBoundary",
+          "target": "Dusk_CrabField:n346",
+          "targetNodeId": 346,
+          "offset": 61581
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n206",
+      "level": "Dusk_CrabField",
+      "nodeId": 206,
+      "name": "BstNode_2529558985",
+      "className": "LevelLink",
+      "classIndex": 13,
+      "sourceOffset": 61868,
+      "sourceLength": 136,
+      "sourceSha256": "a334ff5db81a06bd1e084ce2f00cc182695d5c32b6309b02f7b1d141c0d85b0a",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2529558985,
+            "int": -1765408311,
+            "float": -3.1989751843054386e-25
+          },
+          "raw": "c901c696"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n206/p6",
+          "fieldName": "placementBoundary",
+          "target": "Dusk_CrabField:n994",
+          "targetNodeId": 994,
+          "offset": 61977
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n350",
+      "level": "Dusk_CrabField",
+      "nodeId": 350,
+      "name": "BstNode_2529558995",
+      "className": "LevelLink",
+      "classIndex": 13,
+      "sourceOffset": 92741,
+      "sourceLength": 149,
+      "sourceSha256": "95b645a4b9f90c7b82755791c04dc04bc46617c72b42a0f2112cf146951f8cff",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2529558995,
+            "int": -1765408301,
+            "float": -3.1989776494957674e-25
+          },
+          "raw": "d301c696"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n983",
+      "level": "Dusk_CrabField",
+      "nodeId": 983,
+      "name": "BstNode_2529558990",
+      "className": "LevelLink",
+      "classIndex": 13,
+      "sourceOffset": 240237,
+      "sourceLength": 134,
+      "sourceSha256": "59b09b677332fcf48c9c63edec6eb581b71e4b8acb29975ee656b7635f978b22",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2529558990,
+            "int": -1765408306,
+            "float": -3.198976416900603e-25
+          },
+          "raw": "ce01c696"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n206",
+      "level": "HubReveal",
+      "nodeId": 206,
+      "name": "BstNode_876",
+      "className": "LevelLink",
+      "classIndex": 48,
+      "sourceOffset": 64894,
+      "sourceLength": 130,
+      "sourceSha256": "0e15a8a7300441c3b9edaf406119d916dcd03b65ad6164fef0426379e60c33c0",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 876,
+            "int": 876,
+            "float": 1.2275374547485398e-42
+          },
+          "raw": "6c030000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n206/p6",
+          "fieldName": "placementBoundary",
+          "target": "HubReveal:n1405",
+          "targetNodeId": 1405,
+          "offset": 65002
+        },
+        {
+          "fieldId": "n206/p8",
+          "fieldName": "anchor",
+          "target": "HubReveal:n380",
+          "targetNodeId": 380,
+          "offset": 65007
+        },
+        {
+          "fieldId": "n206/p10",
+          "fieldName": "onLoadEvents",
+          "target": "HubReveal:n1101",
+          "targetNodeId": 1101,
+          "offset": 65015
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n342",
+      "level": "HubReveal",
+      "nodeId": 342,
+      "name": "BstNode_875",
+      "className": "LevelLink",
+      "classIndex": 48,
+      "sourceOffset": 87922,
+      "sourceLength": 130,
+      "sourceSha256": "066561607f5c3771d8d440f3dee33ea7a3b4e4625abe84920024b90aaabde910",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 875,
+            "int": 875,
+            "float": 1.226136156284215e-42
+          },
+          "raw": "6b030000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n342/p6",
+          "fieldName": "placementBoundary",
+          "target": "HubReveal:n874",
+          "targetNodeId": 874,
+          "offset": 88030
+        },
+        {
+          "fieldId": "n342/p8",
+          "fieldName": "anchor",
+          "target": "HubReveal:n942",
+          "targetNodeId": 942,
+          "offset": 88035
+        },
+        {
+          "fieldId": "n342/p10",
+          "fieldName": "onLoadEvents",
+          "target": "HubReveal:n1101",
+          "targetNodeId": 1101,
+          "offset": 88043
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n535",
+      "level": "HubReveal",
+      "nodeId": 535,
+      "name": "BstNode_73",
+      "className": "LevelLink",
+      "classIndex": 48,
+      "sourceOffset": 122008,
+      "sourceLength": 135,
+      "sourceSha256": "9083887ddd65feffb69ea77cbc54bf348382cf857f7b6717ed68da329fb47675",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 73,
+            "int": 73,
+            "float": 1.0229478789571165e-43
+          },
+          "raw": "49000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n535/p8",
+          "fieldName": "anchor",
+          "target": "HubReveal:n151",
+          "targetNodeId": 151,
+          "offset": 122123
+        },
+        {
+          "fieldId": "n535/p10",
+          "fieldName": "onLoadEvents",
+          "target": "HubReveal:n1604",
+          "targetNodeId": 1604,
+          "offset": 122131
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n805",
+      "level": "HubReveal",
+      "nodeId": 805,
+      "name": "BstNode_707",
+      "className": "LevelLink",
+      "classIndex": 48,
+      "sourceOffset": 163329,
+      "sourceLength": 130,
+      "sourceSha256": "6db4ad0e0689809e5452a7b7185ab6ac7c0e34029926e5d9652195c63cb168ce",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 707,
+            "int": 707,
+            "float": 9.907180142776457e-43
+          },
+          "raw": "c3020000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n805/p6",
+          "fieldName": "placementBoundary",
+          "target": "HubReveal:n555",
+          "targetNodeId": 555,
+          "offset": 163437
+        },
+        {
+          "fieldId": "n805/p8",
+          "fieldName": "anchor",
+          "target": "HubReveal:n913",
+          "targetNodeId": 913,
+          "offset": 163442
+        },
+        {
+          "fieldId": "n805/p10",
+          "fieldName": "onLoadEvents",
+          "target": "HubReveal:n1101",
+          "targetNodeId": 1101,
+          "offset": 163450
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n1091",
+      "level": "HubReveal",
+      "nodeId": 1091,
+      "name": "BstNode_897",
+      "className": "LevelLink",
+      "classIndex": 48,
+      "sourceOffset": 212519,
+      "sourceLength": 130,
+      "sourceSha256": "11d136a1272a4c8b315c37f12a31bb870af1111ded28c5422e7523759af9ab95",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 897,
+            "int": 897,
+            "float": 1.2569647224993609e-42
+          },
+          "raw": "81030000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1091/p6",
+          "fieldName": "placementBoundary",
+          "target": "HubReveal:n359",
+          "targetNodeId": 359,
+          "offset": 212627
+        },
+        {
+          "fieldId": "n1091/p8",
+          "fieldName": "anchor",
+          "target": "HubReveal:n586",
+          "targetNodeId": 586,
+          "offset": 212632
+        },
+        {
+          "fieldId": "n1091/p10",
+          "fieldName": "onLoadEvents",
+          "target": "HubReveal:n1101",
+          "targetNodeId": 1101,
+          "offset": 212640
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n1299",
+      "level": "HubReveal",
+      "nodeId": 1299,
+      "name": "BstNode_2446917654",
+      "className": "LevelLink",
+      "classIndex": 48,
+      "sourceOffset": 249537,
+      "sourceLength": 148,
+      "sourceSha256": "81d269ead87b33638e7b890e52de385661760fe79bccd8b710e1272bf8563cc8",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2446917654,
+            "int": -1848049642,
+            "float": -3.4236616249665383e-28
+          },
+          "raw": "1600d991"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1299/p6",
+          "fieldName": "placementBoundary",
+          "target": "HubReveal:n947",
+          "targetNodeId": 947,
+          "offset": 249663
+        },
+        {
+          "fieldId": "n1299/p10",
+          "fieldName": "onLoadEvents",
+          "target": "HubReveal:n1758",
+          "targetNodeId": 1758,
+          "offset": 249676
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n719",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 719,
+      "name": "BstNode_1842806936",
+      "className": "LevelLink",
+      "classIndex": 56,
+      "sourceOffset": 169296,
+      "sourceLength": 151,
+      "sourceSha256": "aaf90b4e8d06f62d1d971f1cd5f5987b059b4f0634913b71881916fb01ed2204",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 1842806936,
+            "int": 1842806936,
+            "float": 8.317499363911823e+27
+          },
+          "raw": "9800d76d"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n719/p6",
+          "fieldName": "placementBoundary",
+          "target": "Prairie_ButterflyFields:n1087",
+          "targetNodeId": 1087,
+          "offset": 169417
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n736",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 736,
+      "name": "BstNode_362938398",
+      "className": "LevelLink",
+      "classIndex": 56,
+      "sourceOffset": 172310,
+      "sourceLength": 156,
+      "sourceSha256": "cfa062063eb1a7eed52bc10e0187e2e3d0b5c4a84c3ecd587434405a89b3bfd2",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 362938398,
+            "int": 362938398,
+            "float": 6.543146381192626e-26
+          },
+          "raw": "1e00a215"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n783",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 783,
+      "name": "BstNode_1167523880",
+      "className": "LevelLink",
+      "classIndex": 56,
+      "sourceOffset": 178002,
+      "sourceLength": 148,
+      "sourceSha256": "214e8a4c74d31158a1d54b3bec8ef39030537fe351c881aa9b365afe53a47cbd",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 1167523880,
+            "int": 1167523880,
+            "float": 4832.01953125
+          },
+          "raw": "28009745"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n783/p6",
+          "fieldName": "placementBoundary",
+          "target": "Prairie_ButterflyFields:n292",
+          "targetNodeId": 292,
+          "offset": 178125
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n1120",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 1120,
+      "name": "BstNode_2529558842",
+      "className": "LevelLink",
+      "classIndex": 56,
+      "sourceOffset": 243100,
+      "sourceLength": 148,
+      "sourceSha256": "598eb199373e6ee67876bd9f44c6e8cedea7d4507815e3e681cf922ed4097c98",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2529558842,
+            "int": -1765408454,
+            "float": -3.1989399320837365e-25
+          },
+          "raw": "3a01c696"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n1232",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 1232,
+      "name": "BstNode_1842806934",
+      "className": "LevelLink",
+      "classIndex": 56,
+      "sourceOffset": 266947,
+      "sourceLength": 169,
+      "sourceSha256": "0edfb9cd38926233d70b9493505a57675bbe7c8b97f953e1b6dd9948bf112a84",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 1842806934,
+            "int": 1842806934,
+            "float": 8.317498183320203e+27
+          },
+          "raw": "9600d76d"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n866",
+      "level": "Prairie_Cave",
+      "nodeId": 866,
+      "name": "BstNode_1842806852",
+      "className": "LevelLink",
+      "classIndex": 62,
+      "sourceOffset": 225403,
+      "sourceLength": 146,
+      "sourceSha256": "fe794a68eff715c6ef02fcba1fd84fe8875e6fa293ad0b4a40c1c1ea53258d3e",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 1842806852,
+            "int": 1842806852,
+            "float": 8.317449779063753e+27
+          },
+          "raw": "4400d76d"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n866/p6",
+          "fieldName": "placementBoundary",
+          "target": "Prairie_Cave:n1565",
+          "targetNodeId": 1565,
+          "offset": 225516
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n1686",
+      "level": "Prairie_Cave",
+      "nodeId": 1686,
+      "name": "BstNode_1842806936",
+      "className": "LevelLink",
+      "classIndex": 62,
+      "sourceOffset": 430049,
+      "sourceLength": 162,
+      "sourceSha256": "6692075d7c32f45da3494ae2506d1419f06c9a4017811c09daa91c0f629b1812",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 1842806936,
+            "int": 1842806936,
+            "float": 8.317499363911823e+27
+          },
+          "raw": "9800d76d"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1686/p6",
+          "fieldName": "placementBoundary",
+          "target": "Prairie_Cave:n143",
+          "targetNodeId": 143,
+          "offset": 430170
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n374",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 374,
+      "name": "BstNode_34603609",
+      "className": "LevelLink",
+      "classIndex": 44,
+      "sourceOffset": 107260,
+      "sourceLength": 144,
+      "sourceSha256": "42052d64160ed04fffdff7979eb2aed38bd578f0f5d0fa887f7aac18b2dbabc7",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 34603609,
+            "int": 34603609,
+            "float": 1.0580122901702235e-37
+          },
+          "raw": "59021002"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n374/p6",
+          "fieldName": "placementBoundary",
+          "target": "Prairie_NestAndKeeper:n921",
+          "targetNodeId": 921,
+          "offset": 107371
+        },
+        {
+          "fieldId": "n374/p8",
+          "fieldName": "anchor",
+          "target": "Prairie_NestAndKeeper:n932",
+          "targetNodeId": 932,
+          "offset": 107376
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n552",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 552,
+      "name": "BstNode_34603615",
+      "className": "LevelLink",
+      "classIndex": 44,
+      "sourceOffset": 139160,
+      "sourceLength": 169,
+      "sourceSha256": "5d4aef8abdb84706664a2b2e6eb1aa2d2e47c85c5b8e67d365d235702b5a9c59",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 34603615,
+            "int": 34603615,
+            "float": 1.0580129627934864e-37
+          },
+          "raw": "5f021002"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n552/p6",
+          "fieldName": "placementBoundary",
+          "target": "Prairie_NestAndKeeper:n554",
+          "targetNodeId": 554,
+          "offset": 139288
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1178",
+      "level": "Prairie_Village",
+      "nodeId": 1178,
+      "name": "BstNode_34603009",
+      "className": "LevelLink",
+      "classIndex": 87,
+      "sourceOffset": 221688,
+      "sourceLength": 137,
+      "sourceSha256": "c5a8c35a4f12a215239c3a01d8fb1d38dc51cffd9af1fe1ade6ad0653b66485b",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 34603009,
+            "int": 34603009,
+            "float": 1.057945027843936e-37
+          },
+          "raw": "01001002"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1178/p6",
+          "fieldName": "placementBoundary",
+          "target": "Prairie_Village:n1159",
+          "targetNodeId": 1159,
+          "offset": 221801
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1551",
+      "level": "Prairie_Village",
+      "nodeId": 1551,
+      "name": "BstNode_362938369",
+      "className": "LevelLink",
+      "classIndex": 87,
+      "sourceOffset": 278376,
+      "sourceLength": 164,
+      "sourceSha256": "ebd9d8ff5e7e838e25f078089bdec01a9d29605c37bcedfe3d9362da5c10c38e",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 362938369,
+            "int": 362938369,
+            "float": 6.543128508562743e-26
+          },
+          "raw": "0100a215"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1551/p6",
+          "fieldName": "placementBoundary",
+          "target": "Prairie_Village:n1588",
+          "targetNodeId": 1588,
+          "offset": 278499
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1609",
+      "level": "Prairie_Village",
+      "nodeId": 1609,
+      "name": "BstNode_2529558530",
+      "className": "LevelLink",
+      "classIndex": 87,
+      "sourceOffset": 288887,
+      "sourceLength": 152,
+      "sourceSha256": "ef91791b934357542e465e9be96ac04f56d08481fdd05ef1b7e80c62ce6daf8d",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2529558530,
+            "int": -1765408766,
+            "float": -3.1988630181454775e-25
+          },
+          "raw": "0200c696"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1609/p6",
+          "fieldName": "placementBoundary",
+          "target": "Prairie_Village:n2222",
+          "targetNodeId": 2222,
+          "offset": 289000
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1682",
+      "level": "Prairie_Village",
+      "nodeId": 1682,
+      "name": "BstNode_1167524192",
+      "className": "LevelLink",
+      "classIndex": 87,
+      "sourceOffset": 298281,
+      "sourceLength": 143,
+      "sourceSha256": "669b593042e5a3fb0aa7001fbed31443ec572cdf48186ca5c24d82abad22d701",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 1167524192,
+            "int": 1167524192,
+            "float": 4832.171875
+          },
+          "raw": "60019745"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1682/p6",
+          "fieldName": "placementBoundary",
+          "target": "Prairie_Village:n2563",
+          "targetNodeId": 2563,
+          "offset": 298394
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1805",
+      "level": "Prairie_Village",
+      "nodeId": 1805,
+      "name": "BstNode_2345992221",
+      "className": "LevelLink",
+      "classIndex": 87,
+      "sourceOffset": 321433,
+      "sourceLength": 140,
+      "sourceSha256": "b225ea011c2f8bda225bad84d5b7a72ac34a963982351fe3476c8552679ac76d",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2345992221,
+            "int": -1948975075,
+            "float": -8.204478607757712e-32
+          },
+          "raw": "1d00d58b"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1805/p6",
+          "fieldName": "placementBoundary",
+          "target": "Prairie_Village:n754",
+          "targetNodeId": 754,
+          "offset": 321545
+        },
+        {
+          "fieldId": "n1805/p8",
+          "fieldName": "anchor",
+          "target": "Prairie_Village:n1009",
+          "targetNodeId": 1009,
+          "offset": 321550
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n285",
+      "level": "Rain",
+      "nodeId": 285,
+      "name": "BstNode_2345992299",
+      "className": "LevelLink",
+      "classIndex": 39,
+      "sourceOffset": 91805,
+      "sourceLength": 142,
+      "sourceSha256": "9b8b82e8f50a66ad76fbe67714f1f5d66cd560857fbae77b28813d5c3146a7eb",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2345992299,
+            "int": -1948974997,
+            "float": -8.204524452037394e-32
+          },
+          "raw": "6b00d58b"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n285/p6",
+          "fieldName": "placementBoundary",
+          "target": "Rain:n1292",
+          "targetNodeId": 1292,
+          "offset": 91919
+        },
+        {
+          "fieldId": "n285/p8",
+          "fieldName": "anchor",
+          "target": "Rain:n1385",
+          "targetNodeId": 1385,
+          "offset": 91924
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n527",
+      "level": "Rain",
+      "nodeId": 527,
+      "name": "BstNode_1167523920",
+      "className": "LevelLink",
+      "classIndex": 39,
+      "sourceOffset": 147198,
+      "sourceLength": 134,
+      "sourceSha256": "5f01958307639c265c33a07def6249f6b1378457e6ad03ee23c508e62c3e7781",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 1167523920,
+            "int": 1167523920,
+            "float": 4832.0390625
+          },
+          "raw": "50009745"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n527/p6",
+          "fieldName": "placementBoundary",
+          "target": "Rain:n1043",
+          "targetNodeId": 1043,
+          "offset": 147307
+        },
+        {
+          "fieldId": "n527/p8",
+          "fieldName": "anchor",
+          "target": "Rain:n985",
+          "targetNodeId": 985,
+          "offset": 147312
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n1344",
+      "level": "Rain",
+      "nodeId": 1344,
+      "name": "BstNode_2446917671",
+      "className": "LevelLink",
+      "classIndex": 39,
+      "sourceOffset": 327509,
+      "sourceLength": 137,
+      "sourceSha256": "3ed85cd8d18f9243e417a6a49c3a7a5e88e7492517af3f282a45b75afe3cbc7a",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2446917671,
+            "int": -1848049625,
+            "float": -3.42366571756767e-28
+          },
+          "raw": "2700d991"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1344/p6",
+          "fieldName": "placementBoundary",
+          "target": "Rain:n1043",
+          "targetNodeId": 1043,
+          "offset": 327622
+        },
+        {
+          "fieldId": "n1344/p8",
+          "fieldName": "anchor",
+          "target": "Rain:n985",
+          "targetNodeId": 985,
+          "offset": 327627
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n784",
+      "level": "RainEnd",
+      "nodeId": 784,
+      "name": "BstNode_2446917645",
+      "className": "LevelLink",
+      "classIndex": 66,
+      "sourceOffset": 216906,
+      "sourceLength": 139,
+      "sourceSha256": "c7c4e4f74cf33f843d906e07b8eb41fb4d8c6c7143e29d30b20e79f2ae3c6849",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2446917645,
+            "int": -1848049651,
+            "float": -3.423659458295351e-28
+          },
+          "raw": "0d00d991"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n784/p8",
+          "fieldName": "anchor",
+          "target": "RainEnd:n1110",
+          "targetNodeId": 1110,
+          "offset": 217026
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n317",
+      "level": "RainForest",
+      "nodeId": 317,
+      "name": "BstNode_2345992299",
+      "className": "LevelLink",
+      "classIndex": 41,
+      "sourceOffset": 81155,
+      "sourceLength": 136,
+      "sourceSha256": "f7d871654394af303a8f3849c61e52feab244ef090f61218ced27ea5512e90d9",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2345992299,
+            "int": -1948974997,
+            "float": -8.204524452037394e-32
+          },
+          "raw": "6b00d58b"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n317/p6",
+          "fieldName": "placementBoundary",
+          "target": "RainForest:n31",
+          "targetNodeId": 31,
+          "offset": 81269
+        },
+        {
+          "fieldId": "n317/p8",
+          "fieldName": "anchor",
+          "target": "RainForest:n617",
+          "targetNodeId": 617,
+          "offset": 81274
+        },
+        {
+          "fieldId": "n317/p10",
+          "fieldName": "onLoadEvents",
+          "target": "RainForest:n297",
+          "targetNodeId": 297,
+          "offset": 81282
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n616",
+      "level": "RainForest",
+      "nodeId": 616,
+      "name": "BstNode_2345992428",
+      "className": "LevelLink",
+      "classIndex": 41,
+      "sourceOffset": 141902,
+      "sourceLength": 140,
+      "sourceSha256": "7cffa39ca80c37d472fb91dc6e808907d370739c51067a1c1767a56b4c79c264",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2345992428,
+            "int": -1948974868,
+            "float": -8.204600271423022e-32
+          },
+          "raw": "ec00d58b"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n616/p6",
+          "fieldName": "placementBoundary",
+          "target": "RainForest:n258",
+          "targetNodeId": 258,
+          "offset": 142017
+        },
+        {
+          "fieldId": "n616/p8",
+          "fieldName": "anchor",
+          "target": "RainForest:n327",
+          "targetNodeId": 327,
+          "offset": 142022
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n1261",
+      "level": "RainMid",
+      "nodeId": 1261,
+      "name": "BstNode_2345992475",
+      "className": "LevelLink",
+      "classIndex": 68,
+      "sourceOffset": 256961,
+      "sourceLength": 143,
+      "sourceSha256": "1078f409018842d628d5d03315363d54d5ccea48a15a645d655f59b7134d3b65",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2345992475,
+            "int": -1948974821,
+            "float": -8.204627895540266e-32
+          },
+          "raw": "1b01d58b"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1261/p6",
+          "fieldName": "placementBoundary",
+          "target": "RainMid:n652",
+          "targetNodeId": 652,
+          "offset": 257076
+        },
+        {
+          "fieldId": "n1261/p8",
+          "fieldName": "anchor",
+          "target": "RainMid:n1339",
+          "targetNodeId": 1339,
+          "offset": 257081
+        },
+        {
+          "fieldId": "n1261/p10",
+          "fieldName": "onLoadEvents",
+          "target": "RainMid:n1569",
+          "targetNodeId": 1569,
+          "offset": 257089
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n209",
+      "level": "SkyHub2",
+      "nodeId": 209,
+      "name": "BstNode_34603020",
+      "className": "LevelLink",
+      "classIndex": 39,
+      "sourceOffset": 71384,
+      "sourceLength": 162,
+      "sourceSha256": "f83d5163b0dde7cea9bb30b67bfaa32b63780e324a5a6e5f59b100730131139e",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 34603020,
+            "int": 34603020,
+            "float": 1.0579462609865845e-37
+          },
+          "raw": "0c001002"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n209/p6",
+          "fieldName": "placementBoundary",
+          "target": "SkyHub2:n1672",
+          "targetNodeId": 1672,
+          "offset": 71505
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n463",
+      "level": "SkyHub2",
+      "nodeId": 463,
+      "name": "BstNode_2446917877",
+      "className": "LevelLink",
+      "classIndex": 39,
+      "sourceOffset": 121978,
+      "sourceLength": 123,
+      "sourceSha256": "45d367c16bd2f345ee4daa14fedc6af88044a46f837c9e0b7d1985e7567fb748",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2446917877,
+            "int": -1848049419,
+            "float": -3.423715310263738e-28
+          },
+          "raw": "f500d991"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n510",
+      "level": "SkyHub2",
+      "nodeId": 510,
+      "name": "BstNode_1167523868",
+      "className": "LevelLink",
+      "classIndex": 39,
+      "sourceOffset": 129221,
+      "sourceLength": 131,
+      "sourceSha256": "c48da86211f97b72078f1a574cb00b84cf84d35e50a80a82852406e9681e31f8",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 1167523868,
+            "int": 1167523868,
+            "float": 4832.013671875
+          },
+          "raw": "1c009745"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n510/p8",
+          "fieldName": "anchor",
+          "target": "SkyHub2:n944",
+          "targetNodeId": 944,
+          "offset": 129335
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n677",
+      "level": "SkyHub2",
+      "nodeId": 677,
+      "name": "BstNode_2446917878",
+      "className": "LevelLink",
+      "classIndex": 39,
+      "sourceOffset": 157364,
+      "sourceLength": 123,
+      "sourceSha256": "3be773b0deb10c32fff3df65e1e0087cf688f51de1695b8a0de27ddabbc61fc0",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2446917878,
+            "int": -1848049418,
+            "float": -3.423715551004981e-28
+          },
+          "raw": "f600d991"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n807",
+      "level": "SkyHub2",
+      "nodeId": 807,
+      "name": "BstNode_73",
+      "className": "LevelLink",
+      "classIndex": 39,
+      "sourceOffset": 182006,
+      "sourceLength": 137,
+      "sourceSha256": "40f8b4f98fe4a3f288b1e4ac2d1110d155c44bd9bb84b746216e6934527f749e",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 73,
+            "int": 73,
+            "float": 1.0229478789571165e-43
+          },
+          "raw": "49000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n807/p6",
+          "fieldName": "placementBoundary",
+          "target": "SkyHub2:n453",
+          "targetNodeId": 453,
+          "offset": 182116
+        },
+        {
+          "fieldId": "n807/p8",
+          "fieldName": "anchor",
+          "target": "SkyHub2:n1352",
+          "targetNodeId": 1352,
+          "offset": 182121
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1681",
+      "level": "SkyHub2",
+      "nodeId": 1681,
+      "name": "BstNode_1167523867",
+      "className": "LevelLink",
+      "classIndex": 39,
+      "sourceOffset": 321666,
+      "sourceLength": 135,
+      "sourceSha256": "94dd448211637b53a2b2a2bfa14b12388e8642d3e1d9a36606153d38224062cd",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 1167523867,
+            "int": 1167523867,
+            "float": 4832.01318359375
+          },
+          "raw": "1b009745"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1681/p8",
+          "fieldName": "anchor",
+          "target": "SkyHub2:n1377",
+          "targetNodeId": 1377,
+          "offset": 321782
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n2350",
+      "level": "SkyHub2",
+      "nodeId": 2350,
+      "name": "BstNode_1167523854",
+      "className": "LevelLink",
+      "classIndex": 39,
+      "sourceOffset": 443191,
+      "sourceLength": 131,
+      "sourceSha256": "82dc0cd0b5e5ba0a04213ec5c501a48c3df0a938689fd3cb9565a1fce888c31f",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 1167523854,
+            "int": 1167523854,
+            "float": 4832.0068359375
+          },
+          "raw": "0e009745"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n2350/p8",
+          "fieldName": "anchor",
+          "target": "SkyHub2:n2282",
+          "targetNodeId": 2282,
+          "offset": 443305
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n299",
+      "level": "Storm",
+      "nodeId": 299,
+      "name": "BstNode_2446917857",
+      "className": "LevelLink",
+      "classIndex": 31,
+      "sourceOffset": 75462,
+      "sourceLength": 137,
+      "sourceSha256": "30b1958a7d6fd35a88b22fc92cabe364fe35a8c4a65c55bc24d154b192eed265",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2446917857,
+            "int": -1848049439,
+            "float": -3.423710495438877e-28
+          },
+          "raw": "e100d991"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n299/p8",
+          "fieldName": "anchor",
+          "target": "Storm:n99",
+          "targetNodeId": 99,
+          "offset": 75575
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n489",
+      "level": "StormEnd",
+      "nodeId": 489,
+      "name": "BstNode_2529559326",
+      "className": "LevelLink",
+      "classIndex": 45,
+      "sourceOffset": 110908,
+      "sourceLength": 138,
+      "sourceSha256": "bd57bb54c926e9c15fbcea4d08fa866f6165539e9fab4de194d7b1db0e5718ff",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2529559326,
+            "int": -1765407970,
+            "float": -3.199059247295651e-25
+          },
+          "raw": "1e03c696"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n489/p8",
+          "fieldName": "anchor",
+          "target": "StormEnd:n468",
+          "targetNodeId": 468,
+          "offset": 111028
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n79",
+      "level": "Sunset",
+      "nodeId": 79,
+      "name": "BstNode_2446917634",
+      "className": "LevelLink",
+      "classIndex": 17,
+      "sourceOffset": 40851,
+      "sourceLength": 140,
+      "sourceSha256": "5e06b8de5b82ec4ec070396b1ba00bc60b434ef08191ad508363f2ff5a97bfe0",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2446917634,
+            "int": -1848049662,
+            "float": -3.4236568101416773e-28
+          },
+          "raw": "0200d991"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n79/p8",
+          "fieldName": "anchor",
+          "target": "Sunset:n991",
+          "targetNodeId": 991,
+          "offset": 40971
+        },
+        {
+          "fieldId": "n79/p10",
+          "fieldName": "onLoadEvents",
+          "target": "Sunset:n987",
+          "targetNodeId": 987,
+          "offset": 40979
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n1644",
+      "level": "Sunset",
+      "nodeId": 1644,
+      "name": "BstNode_1167523848",
+      "className": "LevelLink",
+      "classIndex": 17,
+      "sourceOffset": 302916,
+      "sourceLength": 146,
+      "sourceSha256": "d7d803154f675f91c568f78c6e938d8fa1fc734a706de4fd3f4cff2507434063",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 1167523848,
+            "int": 1167523848,
+            "float": 4832.00390625
+          },
+          "raw": "08009745"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1644/p8",
+          "fieldName": "anchor",
+          "target": "Sunset:n507",
+          "targetNodeId": 507,
+          "offset": 303039
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n1669",
+      "level": "Sunset",
+      "nodeId": 1669,
+      "name": "BstNode_1167523858",
+      "className": "LevelLink",
+      "classIndex": 17,
+      "sourceOffset": 306987,
+      "sourceLength": 136,
+      "sourceSha256": "ee64cf9a97038f0f8080151f52db4f7e2f56c319b16268913a20bde4fa106bf1",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 1167523858,
+            "int": 1167523858,
+            "float": 4832.0087890625
+          },
+          "raw": "12009745"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1669/p8",
+          "fieldName": "anchor",
+          "target": "Sunset:n991",
+          "targetNodeId": 991,
+          "offset": 307103
+        },
+        {
+          "fieldId": "n1669/p10",
+          "fieldName": "onLoadEvents",
+          "target": "Sunset:n987",
+          "targetNodeId": 987,
+          "offset": 307111
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n806",
+      "level": "SunsetEnd",
+      "nodeId": 806,
+      "name": "BstNode_2279669906",
+      "className": "LevelLink",
+      "classIndex": 67,
+      "sourceOffset": 160315,
+      "sourceLength": 149,
+      "sourceSha256": "d1561a6e79bdbbe8fda96c2ad8b79806f74f9d695988460d1d7338ccb0cb46f1",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2279669906,
+            "int": -2015297390,
+            "float": -3.3854572503242857e-34
+          },
+          "raw": "9200e187"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n806/p6",
+          "fieldName": "placementBoundary",
+          "target": "SunsetEnd:n388",
+          "targetNodeId": 388,
+          "offset": 160436
+        },
+        {
+          "fieldId": "n806/p8",
+          "fieldName": "anchor",
+          "target": "SunsetEnd:n877",
+          "targetNodeId": 877,
+          "offset": 160441
+        },
+        {
+          "fieldId": "n806/p10",
+          "fieldName": "onLoadEvents",
+          "target": "SunsetEnd:n321",
+          "targetNodeId": 321,
+          "offset": 160449
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n1677",
+      "level": "SunsetEnd",
+      "nodeId": 1677,
+      "name": "BstNode_1167523853",
+      "className": "LevelLink",
+      "classIndex": 67,
+      "sourceOffset": 313384,
+      "sourceLength": 149,
+      "sourceSha256": "0549064096592ac64f40fa6122c160f561e427ed89cd4099a2c254353f44f57e",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 1167523853,
+            "int": 1167523853,
+            "float": 4832.00634765625
+          },
+          "raw": "0d009745"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1677/p6",
+          "fieldName": "placementBoundary",
+          "target": "SunsetEnd:n18",
+          "targetNodeId": 18,
+          "offset": 313505
+        },
+        {
+          "fieldId": "n1677/p8",
+          "fieldName": "anchor",
+          "target": "SunsetEnd:n1419",
+          "targetNodeId": 1419,
+          "offset": 313510
+        },
+        {
+          "fieldId": "n1677/p10",
+          "fieldName": "onLoadEvents",
+          "target": "SunsetEnd:n1709",
+          "targetNodeId": 1709,
+          "offset": 313518
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd2:n558",
+      "level": "SunsetEnd2",
+      "nodeId": 558,
+      "name": "BstNode_1049165933",
+      "className": "LevelLink",
+      "classIndex": 53,
+      "sourceOffset": 142322,
+      "sourceLength": 138,
+      "sourceSha256": "3f569504b0436aeb9b6faa28215a9637a129360eac25f935dae078b70a60b292",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 1049165933,
+            "int": 1049165933,
+            "float": 0.26758137345314026
+          },
+          "raw": "6d00893e"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n558/p8",
+          "fieldName": "anchor",
+          "target": "SunsetEnd2:n334",
+          "targetNodeId": 334,
+          "offset": 142436
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd2:n661",
+      "level": "SunsetEnd2",
+      "nodeId": 661,
+      "name": "BstNode_1167523908",
+      "className": "LevelLink",
+      "classIndex": 53,
+      "sourceOffset": 166708,
+      "sourceLength": 148,
+      "sourceSha256": "7e289b175b3d35cbd900c7cb89b4b3263a8cce9a4a65c854b3316a4352cf4a5f",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 1167523908,
+            "int": 1167523908,
+            "float": 4832.033203125
+          },
+          "raw": "44009745"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n661/p6",
+          "fieldName": "placementBoundary",
+          "target": "SunsetEnd2:n322",
+          "targetNodeId": 322,
+          "offset": 166829
+        },
+        {
+          "fieldId": "n661/p8",
+          "fieldName": "anchor",
+          "target": "SunsetEnd2:n700",
+          "targetNodeId": 700,
+          "offset": 166834
+        },
+        {
+          "fieldId": "n661/p10",
+          "fieldName": "onLoadEvents",
+          "target": "SunsetEnd2:n317",
+          "targetNodeId": 317,
+          "offset": 166842
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd2:n802",
+      "level": "SunsetEnd2",
+      "nodeId": 802,
+      "name": "BstNode_2279669906",
+      "className": "LevelLink",
+      "classIndex": 53,
+      "sourceOffset": 193525,
+      "sourceLength": 134,
+      "sourceSha256": "b251f5465718e0883fd645efcf49b61c07d82f61bcac9e1e6a6871da6196240a",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2279669906,
+            "int": -2015297390,
+            "float": -3.3854572503242857e-34
+          },
+          "raw": "9200e187"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n802/p6",
+          "fieldName": "placementBoundary",
+          "target": "SunsetEnd2:n391",
+          "targetNodeId": 391,
+          "offset": 193637
+        },
+        {
+          "fieldId": "n802/p8",
+          "fieldName": "anchor",
+          "target": "SunsetEnd2:n816",
+          "targetNodeId": 816,
+          "offset": 193642
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetRace:n509",
+      "level": "SunsetRace",
+      "nodeId": 509,
+      "name": "BstNode_1167523850",
+      "className": "LevelLink",
+      "classIndex": 39,
+      "sourceOffset": 126422,
+      "sourceLength": 142,
+      "sourceSha256": "7d47af4f9103c6edf027a60d894785e6ed1812fa32600174cd01c60e92e70566",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 1167523850,
+            "int": 1167523850,
+            "float": 4832.0048828125
+          },
+          "raw": "0a009745"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n509/p6",
+          "fieldName": "placementBoundary",
+          "target": "SunsetRace:n424",
+          "targetNodeId": 424,
+          "offset": 126540
+        },
+        {
+          "fieldId": "n509/p8",
+          "fieldName": "anchor",
+          "target": "SunsetRace:n1464",
+          "targetNodeId": 1464,
+          "offset": 126545
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetRace:n1044",
+      "level": "SunsetRace",
+      "nodeId": 1044,
+      "name": "BstNode_1167523842",
+      "className": "LevelLink",
+      "classIndex": 39,
+      "sourceOffset": 218888,
+      "sourceLength": 148,
+      "sourceSha256": "4f1db958787db3d42bfbb07a16a92df59572f560e1c1a06ade7927d3e3e06725",
+      "declaredFieldCount": 12,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 1167523842,
+            "int": 1167523842,
+            "float": 4832.0009765625
+          },
+          "raw": "02009745"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1044/p8",
+          "fieldName": "anchor",
+          "target": "SunsetRace:n1240",
+          "targetNodeId": 1240,
+          "offset": 219014
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "Dawn",
+      "path": "Levels/Dawn/Objects.level.bin",
+      "sha256": "16e26aafc7f9d120a548bf5d8bec04fbc18146bc8db531ef75144889b1ff197a",
+      "bytes": 504637,
+      "nodes": 3798,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dawn.json",
+      "markdown": "Objects对象清单/Dawn.md"
+    },
+    {
+      "level": "DayEnd",
+      "path": "Levels/DayEnd/Objects.level.bin",
+      "sha256": "9b5c568cefa987e504a10236c5b61e5de4b748d965d09e42db3602e4e52cc904",
+      "bytes": 268140,
+      "nodes": 1459,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DayEnd.json",
+      "markdown": "Objects对象清单/DayEnd.md"
+    },
+    {
+      "level": "DayHubCave",
+      "path": "Levels/DayHubCave/Objects.level.bin",
+      "sha256": "e4da920cc9f0b1569f14ad1a6d1990db7155dc07ebfc3214c4e385a367872457",
+      "bytes": 202745,
+      "nodes": 1128,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DayHubCave.json",
+      "markdown": "Objects对象清单/DayHubCave.md"
+    },
+    {
+      "level": "Dusk",
+      "path": "Levels/Dusk/Objects.level.bin",
+      "sha256": "9222b248f17fb4122cd4ad9650543ab86aab8b077b6965248c70ac2341bf2d5d",
+      "bytes": 242331,
+      "nodes": 1288,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dusk.json",
+      "markdown": "Objects对象清单/Dusk.md"
+    },
+    {
+      "level": "DuskGraveyard",
+      "path": "Levels/DuskGraveyard/Objects.level.bin",
+      "sha256": "128b30dcbe40b68e68fc25d195b68dc39f897259453c02612049ccd37a90ffb4",
+      "bytes": 424333,
+      "nodes": 1791,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DuskGraveyard.json",
+      "markdown": "Objects对象清单/DuskGraveyard.md"
+    },
+    {
+      "level": "DuskMid",
+      "path": "Levels/DuskMid/Objects.level.bin",
+      "sha256": "899ca33226dabd04afecfe7888750938ff4e460cb586603364e150591e9cbda5",
+      "bytes": 234288,
+      "nodes": 1268,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DuskMid.json",
+      "markdown": "Objects对象清单/DuskMid.md"
+    },
+    {
+      "level": "Dusk_CrabField",
+      "path": "Levels/Dusk_CrabField/Objects.level.bin",
+      "sha256": "718247937eb535034282dbd11473563a2034ec75e1a4a287c057589ca174c8a8",
+      "bytes": 262346,
+      "nodes": 1098,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dusk_CrabField.json",
+      "markdown": "Objects对象清单/Dusk_CrabField.md"
+    },
+    {
+      "level": "HubReveal",
+      "path": "Levels/HubReveal/Objects.level.bin",
+      "sha256": "4b32f12bbe4b246cde9ca1e4ba0982000ff108359865bb4340aba640e609861b",
+      "bytes": 289438,
+      "nodes": 1829,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/HubReveal.json",
+      "markdown": "Objects对象清单/HubReveal.md"
+    },
+    {
+      "level": "Prairie_ButterflyFields",
+      "path": "Levels/Prairie_ButterflyFields/Objects.level.bin",
+      "sha256": "29d8d61a082f3e3414ecfbb501b5f65499deb37ad4a1078ce2e9b88ac0d1e441",
+      "bytes": 297606,
+      "nodes": 1513,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_ButterflyFields.json",
+      "markdown": "Objects对象清单/Prairie_ButterflyFields.md"
+    },
+    {
+      "level": "Prairie_Cave",
+      "path": "Levels/Prairie_Cave/Objects.level.bin",
+      "sha256": "675a2256e24f8c4b16540cee6a5cd2b7647ff2fb495724a8bf596717ca39d944",
+      "bytes": 466340,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Cave.json",
+      "markdown": "Objects对象清单/Prairie_Cave.md"
+    },
+    {
+      "level": "Prairie_NestAndKeeper",
+      "path": "Levels/Prairie_NestAndKeeper/Objects.level.bin",
+      "sha256": "5eabe877e07c84e5f9270035aaab73fa20144c87f6e9136e5285dbaff3f85b7a",
+      "bytes": 239403,
+      "nodes": 1077,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_NestAndKeeper.json",
+      "markdown": "Objects对象清单/Prairie_NestAndKeeper.md"
+    },
+    {
+      "level": "Prairie_Village",
+      "path": "Levels/Prairie_Village/Objects.level.bin",
+      "sha256": "4656296b54402016b59b894b4653fbdc71e106a21e0900294f73f2c7b7112385",
+      "bytes": 549989,
+      "nodes": 3724,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Village.json",
+      "markdown": "Objects对象清单/Prairie_Village.md"
+    },
+    {
+      "level": "Rain",
+      "path": "Levels/Rain/Objects.level.bin",
+      "sha256": "20093bccf3bb1ea0936cb993e66cef0187b40a5a411df3573eb28e4def4f75c6",
+      "bytes": 457732,
+      "nodes": 2079,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Rain.json",
+      "markdown": "Objects对象清单/Rain.md"
+    },
+    {
+      "level": "RainEnd",
+      "path": "Levels/RainEnd/Objects.level.bin",
+      "sha256": "247912ec955153e3df80c16a861eb872573502a285a17943518bdce448a8d5e3",
+      "bytes": 427926,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainEnd.json",
+      "markdown": "Objects对象清单/RainEnd.md"
+    },
+    {
+      "level": "RainForest",
+      "path": "Levels/RainForest/Objects.level.bin",
+      "sha256": "2e69b3314c70c61bd99435f4bb4418fba540f227c83670e1af3b5358c64c3b73",
+      "bytes": 271409,
+      "nodes": 1306,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainForest.json",
+      "markdown": "Objects对象清单/RainForest.md"
+    },
+    {
+      "level": "RainMid",
+      "path": "Levels/RainMid/Objects.level.bin",
+      "sha256": "139b219d9b71a2ab24418b1ec41f2ee8a2ebfdf4c5ea992c35348a758682ed23",
+      "bytes": 430825,
+      "nodes": 2457,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainMid.json",
+      "markdown": "Objects对象清单/RainMid.md"
+    },
+    {
+      "level": "SkyHub2",
+      "path": "Levels/SkyHub2/Objects.level.bin",
+      "sha256": "8b467f9b349d9d4ce0d038528c96e44dff30063149bf5bbf90232a56bb9dd36f",
+      "bytes": 475656,
+      "nodes": 2886,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SkyHub2.json",
+      "markdown": "Objects对象清单/SkyHub2.md"
+    },
+    {
+      "level": "Storm",
+      "path": "Levels/Storm/Objects.level.bin",
+      "sha256": "4be187f31f1ef86611831abeb45ed9c1deff5e925f3bae80a6be49af85fa52bd",
+      "bytes": 324849,
+      "nodes": 1954,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Storm.json",
+      "markdown": "Objects对象清单/Storm.md"
+    },
+    {
+      "level": "StormEnd",
+      "path": "Levels/StormEnd/Objects.level.bin",
+      "sha256": "a9c13b592198ee01ab2922a0c7901f4516ae172d56a22d9b7f806ff7464c9162",
+      "bytes": 224465,
+      "nodes": 1243,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/StormEnd.json",
+      "markdown": "Objects对象清单/StormEnd.md"
+    },
+    {
+      "level": "Sunset",
+      "path": "Levels/Sunset/Objects.level.bin",
+      "sha256": "8126f2db693502576075505797624e0b5e53dc064fe6af82e90f2261ca427f8a",
+      "bytes": 325410,
+      "nodes": 1899,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Sunset.json",
+      "markdown": "Objects对象清单/Sunset.md"
+    },
+    {
+      "level": "SunsetEnd",
+      "path": "Levels/SunsetEnd/Objects.level.bin",
+      "sha256": "9995ebfef7aa72982f6b95073a98a4ef01376bd8ac56c3b79b09729f97f43d6e",
+      "bytes": 352573,
+      "nodes": 1998,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SunsetEnd.json",
+      "markdown": "Objects对象清单/SunsetEnd.md"
+    },
+    {
+      "level": "SunsetEnd2",
+      "path": "Levels/SunsetEnd2/Objects.level.bin",
+      "sha256": "f76249413f9412f3db6d726aacf7425d5da546f8a9b88b9614c8a33fdb87e711",
+      "bytes": 209340,
+      "nodes": 975,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SunsetEnd2.json",
+      "markdown": "Objects对象清单/SunsetEnd2.md"
+    },
+    {
+      "level": "SunsetRace",
+      "path": "Levels/SunsetRace/Objects.level.bin",
+      "sha256": "2ebfc21451d30f976bcafafa0c42f409e322efeeb0f8403a4136899438e0b5dc",
+      "bytes": 333403,
+      "nodes": 1722,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SunsetRace.json",
+      "markdown": "Objects对象清单/SunsetRace.md"
+    }
+  ]
+}

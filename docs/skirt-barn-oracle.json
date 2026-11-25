@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "scope": "Unmodified original SkirtBarn Initialize 0x1005abf50 normal found-resource and pending early-return bodies, Terminate 0x1005aca70 twice and draw driver 0x1005acaf0 execute continuously. Original MaterialDefBarn Initialize 0x10043fb70, lookup 0x100443560 and contiguous draw-chunk append 0x1007f6ae0 execute unmodified. Resource query/ref, allocator/scratch, imported libc, GPU/material/uniform upload and destruction are explicit host callbacks; draw frustum/Camera/distance queries use explicit per-record outcomes, not restored camera mathematics. Full corpus uses all 2533 records in 33 maps, two heap fills; original record positions are not transformed. CPU parity includes three streams (slot 2 never written), all relocated u32 indices including untouched initial-index-count tail, XYZ bounds, index count/material mask, untouched record tail/64-byte guards, stream descriptors, shader/uniform/dependency order, actual native draw chunks and repeated termination. Bounds W lanes inherit ambient SIMD values and are excluded; no W semantics claimed. Empty-queue FFFFFFFF chunk sentinel raw storage is rejected by the adapter and untested. Fallback resource lookup, failed-load assertions, exceptions, actual loader/ownership, GPU behavior, real visibility/distance sources, generated geometry, lighting/collision reconstruction and original hardware/game remain unresolved.",
+  "cases": 83,
+  "compared": 45939862,
+  "failed": 0,
+  "failures": [],
+  "corpusMaps": 33,
+  "corpusRecords": 2533,
+  "corpusVertices": 363788,
+  "corpusIndices": 1339572,
+  "drawChunks": 4415,
+  "loadedGeometryAndDescriptorsVerified": true,
+  "normalTerminationDispatchVerified": true,
+  "drawDriverAndChunkAppendVerified": true,
+  "actualResourceLifecycleRestored": false,
+  "cameraAndVisibilityQueriesRestored": false,
+  "generationRestored": false,
+  "viewportIntegrated": false,
+  "originalHardwareVerified": false,
+  "originalGameVerified": false
+}

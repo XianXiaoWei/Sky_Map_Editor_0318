@@ -1,0 +1,205 @@
+{
+  "passed": true,
+  "scope": "Previously blocked real model materials, original shader/texture/packed geometry and production Vulkan binding. Atmosphere cubemap/SH are explicit editor lighting inputs; original scene intersection lighting and complete native animation/lifecycles remain pending.",
+  "excluded": {
+    "shader": "CreatureSl",
+    "instances": 6,
+    "reason": "Original-input MoteKeyDiamond05 vertex occlusion produced nonfinite GPU fragments in a preliminary check. SH globals remain blocked in production."
+  },
+  "cases": [
+    {
+      "shader": "DirectionalLighting",
+      "level": "Storm",
+      "nodeId": 819,
+      "resource": "GodLight7",
+      "previousBoundary": "Uniform u_averageProbeColor: 0 parameters",
+      "images": [
+        {
+          "uniform": "u_texture",
+          "image": "OrangeL1",
+          "sourceSha256": "b61c8e1fd1552ea4dabdc9b514e7f494ff64792c6afe2c3cbe9f24034d179b10"
+        }
+      ],
+      "probeValues": {
+        "u_averageProbeColor": [
+          57.74563980102539,
+          73.17577362060547,
+          60.9494743347168
+        ]
+      },
+      "coveredPixels": 591,
+      "outputSha256": "769ea803adc03e28a5b4ab0a3a871c658687eaa2cc84e5d9dbe13ea21113bbb9",
+      "screenshot": "docs/model-probe-DirectionalLighting.png",
+      "uploadsAfterTimeUpdate": 1,
+      "sourceUnchanged": true
+    },
+    {
+      "shader": "DirectionalLightingNoUv",
+      "level": "Dawn",
+      "nodeId": 44,
+      "resource": "Cube",
+      "previousBoundary": "Uniform u_averageProbeColor: 0 parameters",
+      "images": [],
+      "probeValues": {
+        "u_averageProbeColor": [
+          5.923141002655029,
+          0.5640926957130432,
+          0.1375926434993744
+        ]
+      },
+      "coveredPixels": 2832,
+      "outputSha256": "5e6ab448b07373411469d27e5732ec7aad84ed1195b9c83540173a7c0404d20f",
+      "screenshot": "docs/model-probe-DirectionalLightingNoUv.png",
+      "uploadsAfterTimeUpdate": 1,
+      "sourceUnchanged": true
+    },
+    {
+      "shader": "LitAlpha",
+      "level": "DayEnd",
+      "nodeId": 155,
+      "resource": "GodLight6",
+      "previousBoundary": "Uniform u_averageProbeColor: 0 parameters",
+      "images": [
+        {
+          "uniform": "u_texture",
+          "image": "OrangeL1",
+          "sourceSha256": "b61c8e1fd1552ea4dabdc9b514e7f494ff64792c6afe2c3cbe9f24034d179b10"
+        }
+      ],
+      "probeValues": {
+        "u_averageProbeColor": [
+          6603.28125,
+          3989.85400390625,
+          1184.9324951171875
+        ]
+      },
+      "coveredPixels": 575,
+      "outputSha256": "bb9687d6d534af42ffe1e925004b096bae885189d1846d138a9be15eb301f497",
+      "screenshot": "docs/model-probe-LitAlpha.png",
+      "uploadsAfterTimeUpdate": 1,
+      "sourceUnchanged": true
+    },
+    {
+      "shader": "LitAlphaColor",
+      "level": "DayEnd",
+      "nodeId": 63,
+      "resource": "StormCardWisp_01",
+      "previousBoundary": "Uniform u_averageProbeColor: 0 parameters",
+      "images": [
+        {
+          "uniform": "u_texture",
+          "image": "CloudFarTex",
+          "sourceSha256": "4ea1cc42bc3df42c5e86d81bb0e030cd721e6a5978828180b7973ba86d2aa0e5"
+        }
+      ],
+      "probeValues": {
+        "u_averageProbeColor": [
+          6618.5732421875,
+          3980.13818359375,
+          1164.4508056640625
+        ]
+      },
+      "coveredPixels": 431,
+      "outputSha256": "d43f3ba0b1b04664113e120989d3efad3bf5074053ed0a98b0db657eded99d33",
+      "screenshot": "docs/model-probe-LitAlphaColor.png",
+      "uploadsAfterTimeUpdate": 1,
+      "sourceUnchanged": true
+    },
+    {
+      "shader": "LitAlphaTest",
+      "level": "DayEnd",
+      "nodeId": 216,
+      "resource": "StormCard_03",
+      "previousBoundary": "Uniform u_averageProbeColor: 0 parameters",
+      "images": [
+        {
+          "uniform": "u_texture",
+          "image": "StormCard",
+          "sourceSha256": "0d2abcbcb8c57079bddea60286e602090398bc7946b50593abed1c587967e1b0"
+        }
+      ],
+      "probeValues": {
+        "u_averageProbeColor": [
+          6594.00341796875,
+          3985.330078125,
+          1186.829833984375
+        ]
+      },
+      "coveredPixels": 830,
+      "outputSha256": "5b4f99f24d784f30ded7b579b8b2b65fb6ef2842f827f4ab3beb0fdd41ac8489",
+      "screenshot": "docs/model-probe-LitAlphaTest.png",
+      "uploadsAfterTimeUpdate": 1,
+      "sourceUnchanged": true
+    },
+    {
+      "shader": "LitAlphaDual",
+      "level": "DayEnd",
+      "nodeId": 746,
+      "resource": "StormCard_04a",
+      "previousBoundary": "Uniform u_averageProbeColor: 0 parameters",
+      "images": [
+        {
+          "uniform": "u_texture",
+          "image": "StormCardScroll",
+          "sourceSha256": "3a9aa98b9acbdbda8fa66a1245a33cffbc05498f3234b43e0432496018466546"
+        },
+        {
+          "uniform": "u_texture2",
+          "image": "StormCardMask",
+          "sourceSha256": "53ed1de076581b139450f3c9b7cf3192da3884efbb9a4e74e219e7841daeaa6b"
+        }
+      ],
+      "probeValues": {
+        "u_averageProbeColor": [
+          6604.78125,
+          3987.96337890625,
+          1184.5743408203125
+        ]
+      },
+      "coveredPixels": 713,
+      "outputSha256": "b29011b0fb4906f79276e9cd1276d59ceaa67d2fbc9ec2c50ca18be5f2e5b239",
+      "screenshot": "docs/model-probe-LitAlphaDual.png",
+      "uploadsAfterTimeUpdate": 1,
+      "sourceUnchanged": true
+    },
+    {
+      "shader": "LitAlphaFading",
+      "level": "SkyHub2",
+      "nodeId": 4,
+      "resource": "LightShaft_02",
+      "previousBoundary": "Uniform u_averageProbeColor: 0 parameters",
+      "images": [
+        {
+          "uniform": "u_texture",
+          "image": "OrangeL2",
+          "sourceSha256": "9b83875c23588b50f85486d6ce04c6f5f0590c8ef440f46c184a23682d557484"
+        }
+      ],
+      "probeValues": {
+        "u_averageProbeColor": [
+          4894.64111328125,
+          972.6636352539062,
+          398.0278625488281
+        ]
+      },
+      "coveredPixels": 621,
+      "outputSha256": "5d30d7f47261ddfb031c9a3aad4826c34a9117ed4d63a0ab4f453ac1a6441054",
+      "screenshot": "docs/model-probe-LitAlphaFading.png",
+      "uploadsAfterTimeUpdate": 1,
+      "sourceUnchanged": true
+    }
+  ],
+  "device": {
+    "engine": "Sky Native Vulkan",
+    "backend": "Vulkan",
+    "device": "llvmpipe (LLVM 19.1.7, 128 bits)",
+    "apiVersion": 4210993,
+    "deviceType": 4,
+    "nativeSurface": false,
+    "shaderFloat16": true,
+    "gpuCanvasPacking": false,
+    "gpuExposureGather": false,
+    "samplerAnisotropyPolicy": "llvmpipe-trilinear",
+    "maxSamplerAnisotropy": 16
+  }
+}

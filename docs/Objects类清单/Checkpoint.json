@@ -1,0 +1,4611 @@
+{
+  "className": "Checkpoint",
+  "functionGroup": "地图加载、出生与检查点",
+  "functionRole": "检查点记录与恢复区域",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "Checkpoint 的原默认值、继承初始化及 3 个序列化字段变体；原注册字段 2 项。"
+    },
+    {
+      "name": "检查点记录与恢复区域",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Marker（126 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "Checkpoint",
+    "category": "地图加载、出生与检查点",
+    "functionGroupId": "levels",
+    "functionRole": "检查点记录与恢复区域",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "Checkpoint 的原默认值、继承初始化及 3 个序列化字段变体；原注册字段 2 项。"
+      },
+      {
+        "name": "检查点记录与恢复区域",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Marker（126 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Marker",
+        "references": 126
+      }
+    ],
+    "rttiWorkingGroup": "交互、事件与任务",
+    "role": "对象实例类型",
+    "instances": 126,
+    "nestedInstances": 0,
+    "referenceFields": 126,
+    "declaredLevels": 20,
+    "levels": [
+      {
+        "level": "Dawn",
+        "nodes": 23,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DayEnd",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DayHubCave",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Dusk",
+        "nodes": 5,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DuskGraveyard",
+        "nodes": 5,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DuskMid",
+        "nodes": 6,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "HubReveal",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Night",
+        "nodes": 9,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "NightEnd",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "NightEntrance",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Village",
+        "nodes": 9,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Rain",
+        "nodes": 7,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainEnd",
+        "nodes": 6,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainForest",
+        "nodes": 6,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainMid",
+        "nodes": 10,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SkyHub2",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Storm",
+        "nodes": 9,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Sunset",
+        "nodes": 6,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SunsetEnd",
+        "nodes": 8,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SunsetEnd2",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "analyticsName",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "resumeRegion",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100c93ed0",
+    "nativeRegisteredFields": [
+      {
+        "name": "resumeRegion",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP6MarkerERK8MetaTypev",
+        "nativeOffset": 64,
+        "registrationFunction": "0x100204020",
+        "propertyAddress": "0x100c93c00"
+      },
+      {
+        "name": "analyticsName",
+        "typeGetter": "__Z17GetMetaTypeByTypeI19AnalyticsCheckpointERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x100204020",
+        "propertyAddress": "0x100c93c50"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 2 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "Dawn:n28",
+      "level": "Dawn",
+      "nodeId": 28,
+      "name": "BstNode_421",
+      "className": "Checkpoint",
+      "classIndex": 14,
+      "sourceOffset": 38066,
+      "sourceLength": 25,
+      "sourceSha256": "ad04b5a6657a66804fee8585a0bdc890e6d16c839658e238b36399a02613da9e",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n28/p1",
+          "fieldName": "resumeRegion",
+          "target": "Dawn:n2379",
+          "targetNodeId": 2379,
+          "offset": 38083
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n189",
+      "level": "Dawn",
+      "nodeId": 189,
+      "name": "BstNode_34603029",
+      "className": "Checkpoint",
+      "classIndex": 14,
+      "sourceOffset": 62477,
+      "sourceLength": 30,
+      "sourceSha256": "873e7cf1126e8098d23fff056eab985e77489027dccf20e6fb81c6bf8ab15a68",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n189/p1",
+          "fieldName": "resumeRegion",
+          "target": "Dawn:n2954",
+          "targetNodeId": 2954,
+          "offset": 62499
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n249",
+      "level": "Dawn",
+      "nodeId": 249,
+      "name": "BstNode_2446917719",
+      "className": "Checkpoint",
+      "classIndex": 14,
+      "sourceOffset": 73517,
+      "sourceLength": 32,
+      "sourceSha256": "87fb0a13f0a58844814c6dda99abc0a9a34612e03e67cdbf865838df307852e9",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n249/p1",
+          "fieldName": "resumeRegion",
+          "target": "Dawn:n1305",
+          "targetNodeId": 1305,
+          "offset": 73541
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n338",
+      "level": "Dawn",
+      "nodeId": 338,
+      "name": "BstNode_1842806786",
+      "className": "Checkpoint",
+      "classIndex": 14,
+      "sourceOffset": 85651,
+      "sourceLength": 32,
+      "sourceSha256": "86eee29f4aadf73a30495ade938b9021c141164ec3ec8189768d008810fa0ee9",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n338/p1",
+          "fieldName": "resumeRegion",
+          "target": "Dawn:n1626",
+          "targetNodeId": 1626,
+          "offset": 85675
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n429",
+      "level": "Dawn",
+      "nodeId": 429,
+      "name": "BstNode_424",
+      "className": "Checkpoint",
+      "classIndex": 14,
+      "sourceOffset": 97755,
+      "sourceLength": 25,
+      "sourceSha256": "a542034469363bc5f44b54848d0850b2c3483797881074cb9a1fefb32e4e18ae",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n429/p1",
+          "fieldName": "resumeRegion",
+          "target": "Dawn:n1106",
+          "targetNodeId": 1106,
+          "offset": 97772
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n530",
+      "level": "Dawn",
+      "nodeId": 530,
+      "name": "BstNode_3156082694",
+      "className": "Checkpoint",
+      "classIndex": 14,
+      "sourceOffset": 115681,
+      "sourceLength": 32,
+      "sourceSha256": "b4b927b097ad6a9b4500af4572f182b34b7ba0071c52dedee9832d0a2baf100c",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n530/p1",
+          "fieldName": "resumeRegion",
+          "target": "Dawn:n398",
+          "targetNodeId": 398,
+          "offset": 115705
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n543",
+      "level": "Dawn",
+      "nodeId": 543,
+      "name": "BstNode_2446917657",
+      "className": "Checkpoint",
+      "classIndex": 14,
+      "sourceOffset": 117445,
+      "sourceLength": 32,
+      "sourceSha256": "048466b04500d103ff24667079bf016e41476bb86357e607de369103b67c7a70",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n543/p1",
+          "fieldName": "resumeRegion",
+          "target": "Dawn:n1671",
+          "targetNodeId": 1671,
+          "offset": 117469
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n703",
+      "level": "Dawn",
+      "nodeId": 703,
+      "name": "BstNode_2446917708",
+      "className": "Checkpoint",
+      "classIndex": 14,
+      "sourceOffset": 143382,
+      "sourceLength": 32,
+      "sourceSha256": "2a40dd1b0581c729f41726ded4e0f8e0b31cea7d9a5b18293ba959d2c744f5f5",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n703/p1",
+          "fieldName": "resumeRegion",
+          "target": "Dawn:n1106",
+          "targetNodeId": 1106,
+          "offset": 143406
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n782",
+      "level": "Dawn",
+      "nodeId": 782,
+      "name": "BstNode_2446917739",
+      "className": "Checkpoint",
+      "classIndex": 14,
+      "sourceOffset": 157093,
+      "sourceLength": 32,
+      "sourceSha256": "2b44dd8e738a87030649ed0a2a078e71bf40650b6748ad3b24aef06a3930b34b",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n782/p1",
+          "fieldName": "resumeRegion",
+          "target": "Dawn:n150",
+          "targetNodeId": 150,
+          "offset": 157117
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1029",
+      "level": "Dawn",
+      "nodeId": 1029,
+      "name": "BstNode_2446917713",
+      "className": "Checkpoint",
+      "classIndex": 14,
+      "sourceOffset": 191885,
+      "sourceLength": 32,
+      "sourceSha256": "1cea66dca5ffa712531d00cf90ce0f1250361e7dc989ab91e752197054d1a0e8",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1029/p1",
+          "fieldName": "resumeRegion",
+          "target": "Dawn:n682",
+          "targetNodeId": 682,
+          "offset": 191909
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1051",
+      "level": "Dawn",
+      "nodeId": 1051,
+      "name": "BstNode_2446917709",
+      "className": "Checkpoint",
+      "classIndex": 14,
+      "sourceOffset": 193759,
+      "sourceLength": 32,
+      "sourceSha256": "0899d7d0862611b4ba6eccab054394478fdb6cf7383ac30717fb3906a7a0d508",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1051/p1",
+          "fieldName": "resumeRegion",
+          "target": "Dawn:n325",
+          "targetNodeId": 325,
+          "offset": 193783
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1188",
+      "level": "Dawn",
+      "nodeId": 1188,
+      "name": "BstNode_3122856203",
+      "className": "Checkpoint",
+      "classIndex": 14,
+      "sourceOffset": 211037,
+      "sourceLength": 32,
+      "sourceSha256": "90b2dfc62760dfb76bc4c92a51c5ac62e7340482aa1b3fdb4fa9a18cdc8233ab",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1188/p1",
+          "fieldName": "resumeRegion",
+          "target": "Dawn:n1699",
+          "targetNodeId": 1699,
+          "offset": 211061
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1302",
+      "level": "Dawn",
+      "nodeId": 1302,
+      "name": "BstNode_3122856135",
+      "className": "Checkpoint",
+      "classIndex": 14,
+      "sourceOffset": 234418,
+      "sourceLength": 32,
+      "sourceSha256": "3c713413e54145b5e8930e750be9ab2bf75a6c32e40acbbd9ab2b8217da8bf2e",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1302/p1",
+          "fieldName": "resumeRegion",
+          "target": "Dawn:n1404",
+          "targetNodeId": 1404,
+          "offset": 234442
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1403",
+      "level": "Dawn",
+      "nodeId": 1403,
+      "name": "BstNode_3122856113",
+      "className": "Checkpoint",
+      "classIndex": 14,
+      "sourceOffset": 246858,
+      "sourceLength": 32,
+      "sourceSha256": "907cdfb3e21ec95997c6e38750fb9d35491d504df17075424b7bab7937a6de1b",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1403/p1",
+          "fieldName": "resumeRegion",
+          "target": "Dawn:n1763",
+          "targetNodeId": 1763,
+          "offset": 246882
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1476",
+      "level": "Dawn",
+      "nodeId": 1476,
+      "name": "BstNode_3122856205",
+      "className": "Checkpoint",
+      "classIndex": 14,
+      "sourceOffset": 260048,
+      "sourceLength": 32,
+      "sourceSha256": "2c7e5f7f5ad06bf647106044d2188fe5b6b42b5783d3ecaf4f21aa995ade8540",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1476/p1",
+          "fieldName": "resumeRegion",
+          "target": "Dawn:n1699",
+          "targetNodeId": 1699,
+          "offset": 260072
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1796",
+      "level": "Dawn",
+      "nodeId": 1796,
+      "name": "BstNode_415",
+      "className": "Checkpoint",
+      "classIndex": 14,
+      "sourceOffset": 302281,
+      "sourceLength": 25,
+      "sourceSha256": "17d818ec868533978007117114cb97a49da9474f90a573e11219d59c07e38b33",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1796/p1",
+          "fieldName": "resumeRegion",
+          "target": "Dawn:n201",
+          "targetNodeId": 201,
+          "offset": 302298
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1908",
+      "level": "Dawn",
+      "nodeId": 1908,
+      "name": "BstNode_1293287872",
+      "className": "Checkpoint",
+      "classIndex": 14,
+      "sourceOffset": 314616,
+      "sourceLength": 32,
+      "sourceSha256": "f131f0b190b3fb62869a1b729558983b1adf9a2a286b35e81e6c58db2ca452fd",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1908/p1",
+          "fieldName": "resumeRegion",
+          "target": "Dawn:n2820",
+          "targetNodeId": 2820,
+          "offset": 314640
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1926",
+      "level": "Dawn",
+      "nodeId": 1926,
+      "name": "BstNode_3122856162",
+      "className": "Checkpoint",
+      "classIndex": 14,
+      "sourceOffset": 316639,
+      "sourceLength": 32,
+      "sourceSha256": "3905fc8fd76b59a3cbb78e728f9357249d65ebd15efa9b66757e903e12ba15a7",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1926/p1",
+          "fieldName": "resumeRegion",
+          "target": "Dawn:n1106",
+          "targetNodeId": 1106,
+          "offset": 316663
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2066",
+      "level": "Dawn",
+      "nodeId": 2066,
+      "name": "BstNode_2279669965",
+      "className": "Checkpoint",
+      "classIndex": 14,
+      "sourceOffset": 339153,
+      "sourceLength": 32,
+      "sourceSha256": "d3fd98ca3aab087ac5aa66c10abfc37623b641b152ba344b917ff75bea9482db",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2066/p1",
+          "fieldName": "resumeRegion",
+          "target": "Dawn:n2932",
+          "targetNodeId": 2932,
+          "offset": 339177
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2211",
+      "level": "Dawn",
+      "nodeId": 2211,
+      "name": "BstNode_2529558566",
+      "className": "Checkpoint",
+      "classIndex": 14,
+      "sourceOffset": 364438,
+      "sourceLength": 32,
+      "sourceSha256": "1b227d06f987143b9e6a61dc7c1eabb0ff556bd1252fff81deeb475271903b06",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2211/p1",
+          "fieldName": "resumeRegion",
+          "target": "Dawn:n2707",
+          "targetNodeId": 2707,
+          "offset": 364462
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2520",
+      "level": "Dawn",
+      "nodeId": 2520,
+      "name": "BstNode_2446917717",
+      "className": "Checkpoint",
+      "classIndex": 14,
+      "sourceOffset": 421518,
+      "sourceLength": 32,
+      "sourceSha256": "b0fe23fb10fc0dd913dbf52f7e2b038a401128814c0e6483fe24bdfc0c3a55a9",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2520/p1",
+          "fieldName": "resumeRegion",
+          "target": "Dawn:n2217",
+          "targetNodeId": 2217,
+          "offset": 421542
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2640",
+      "level": "Dawn",
+      "nodeId": 2640,
+      "name": "BstNode_2446917729",
+      "className": "Checkpoint",
+      "classIndex": 14,
+      "sourceOffset": 438146,
+      "sourceLength": 32,
+      "sourceSha256": "9dba5881a5b40802efea1f23f67149420391436eaf26d1ff6e003c77bd6809be",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2640/p1",
+          "fieldName": "resumeRegion",
+          "target": "Dawn:n1651",
+          "targetNodeId": 1651,
+          "offset": 438170
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2737",
+      "level": "Dawn",
+      "nodeId": 2737,
+      "name": "BstNode_418",
+      "className": "Checkpoint",
+      "classIndex": 14,
+      "sourceOffset": 452847,
+      "sourceLength": 25,
+      "sourceSha256": "c4bff078152d2dd362f6e8ad3888cfd381cef62cf8179964d5b5457399f151b6",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2737/p1",
+          "fieldName": "resumeRegion",
+          "target": "Dawn:n1182",
+          "targetNodeId": 1182,
+          "offset": 452864
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n191",
+      "level": "DayEnd",
+      "nodeId": 191,
+      "name": "BstNode_2345992214",
+      "className": "Checkpoint",
+      "classIndex": 35,
+      "sourceOffset": 62671,
+      "sourceLength": 32,
+      "sourceSha256": "be1b35e2d9846c935480b4366943388f729f153480c73dba7a4976ccbf7da939",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n191/p1",
+          "fieldName": "resumeRegion",
+          "target": "DayEnd:n45",
+          "targetNodeId": 45,
+          "offset": 62695
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n327",
+      "level": "DayEnd",
+      "nodeId": 327,
+      "name": "BstNode_2345992217",
+      "className": "Checkpoint",
+      "classIndex": 35,
+      "sourceOffset": 85727,
+      "sourceLength": 32,
+      "sourceSha256": "d1fb6e18116b5ad26f4e3b43bd615891541bf6887a3daa723f3668ced607435b",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n327/p1",
+          "fieldName": "resumeRegion",
+          "target": "DayEnd:n634",
+          "targetNodeId": 634,
+          "offset": 85751
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n650",
+      "level": "DayEnd",
+      "nodeId": 650,
+      "name": "BstNode_2345992222",
+      "className": "Checkpoint",
+      "classIndex": 35,
+      "sourceOffset": 148459,
+      "sourceLength": 32,
+      "sourceSha256": "773f3b4fd73b2fe1bf2e5bb7924e5a2a75a3effd7cf1e2002bb0a8c31f90e4f6",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n650/p1",
+          "fieldName": "resumeRegion",
+          "target": "DayEnd:n634",
+          "targetNodeId": 634,
+          "offset": 148483
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayHubCave:n771",
+      "level": "DayHubCave",
+      "nodeId": 771,
+      "name": "BstNode_2446917706",
+      "className": "Checkpoint",
+      "classIndex": 64,
+      "sourceOffset": 167433,
+      "sourceLength": 32,
+      "sourceSha256": "ea425d22b9be3a3f69f3a91b2e10fdd1d238bdb9105e2353acb2a66c6d13fdc1",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n771/p1",
+          "fieldName": "resumeRegion",
+          "target": "DayHubCave:n64",
+          "targetNodeId": 64,
+          "offset": 167457
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n586",
+      "level": "Dusk",
+      "nodeId": 586,
+      "name": "BstNode_2345992281",
+      "className": "Checkpoint",
+      "classIndex": 55,
+      "sourceOffset": 132497,
+      "sourceLength": 32,
+      "sourceSha256": "d67311be76cedc95b20da6dd1e52052bbb1f8cf39ba8958a188f878ac25a1833",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n586/p1",
+          "fieldName": "resumeRegion",
+          "target": "Dusk:n395",
+          "targetNodeId": 395,
+          "offset": 132521
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n663",
+      "level": "Dusk",
+      "nodeId": 663,
+      "name": "BstNode_2345992698",
+      "className": "Checkpoint",
+      "classIndex": 55,
+      "sourceOffset": 143250,
+      "sourceLength": 32,
+      "sourceSha256": "98219adaf92fab7dfc32255dd0403ff922d8aa51382d241f067760e60038995e",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n663/p1",
+          "fieldName": "resumeRegion",
+          "target": "Dusk:n756",
+          "targetNodeId": 756,
+          "offset": 143274
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n727",
+      "level": "Dusk",
+      "nodeId": 727,
+      "name": "BstNode_2446917663",
+      "className": "Checkpoint",
+      "classIndex": 55,
+      "sourceOffset": 153449,
+      "sourceLength": 32,
+      "sourceSha256": "3f2a4ddf385006ae80eb537992478c1141fec8d7335e43f4e3999632e5a8b9c4",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n727/p1",
+          "fieldName": "resumeRegion",
+          "target": "Dusk:n610",
+          "targetNodeId": 610,
+          "offset": 153473
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n1120",
+      "level": "Dusk",
+      "nodeId": 1120,
+      "name": "BstNode_2345992303",
+      "className": "Checkpoint",
+      "classIndex": 55,
+      "sourceOffset": 228898,
+      "sourceLength": 32,
+      "sourceSha256": "75f3990b1ba61a6a2837cdec8d2b6dbc49cdd73646f065b76a50feb6812e01af",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1120/p1",
+          "fieldName": "resumeRegion",
+          "target": "Dusk:n798",
+          "targetNodeId": 798,
+          "offset": 228922
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n1166",
+      "level": "Dusk",
+      "nodeId": 1166,
+      "name": "BstNode_2345992652",
+      "className": "Checkpoint",
+      "classIndex": 55,
+      "sourceOffset": 237556,
+      "sourceLength": 32,
+      "sourceSha256": "b97deb987a78e75dac8733238d7eef5e46956183fce3715c2515ed17f4f63bfe",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1166/p1",
+          "fieldName": "resumeRegion",
+          "target": "Dusk:n289",
+          "targetNodeId": 289,
+          "offset": 237580
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n522",
+      "level": "DuskGraveyard",
+      "nodeId": 522,
+      "name": "BstNode_2345992548",
+      "className": "Checkpoint",
+      "classIndex": 43,
+      "sourceOffset": 146078,
+      "sourceLength": 32,
+      "sourceSha256": "2b85a530a1be3fe19dcce06e6d132f06283a1ad17e6108ea232a5217b5c9795d",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n522/p1",
+          "fieldName": "resumeRegion",
+          "target": "DuskGraveyard:n1354",
+          "targetNodeId": 1354,
+          "offset": 146102
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n693",
+      "level": "DuskGraveyard",
+      "nodeId": 693,
+      "name": "BstNode_2446917645",
+      "className": "Checkpoint",
+      "classIndex": 43,
+      "sourceOffset": 183778,
+      "sourceLength": 32,
+      "sourceSha256": "dac79a2eebe13f407851bf4e41ac5f0ab534a575210a78a91d0d835a9f37ff39",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n693/p1",
+          "fieldName": "resumeRegion",
+          "target": "DuskGraveyard:n1432",
+          "targetNodeId": 1432,
+          "offset": 183802
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n700",
+      "level": "DuskGraveyard",
+      "nodeId": 700,
+      "name": "BstNode_2345993018",
+      "className": "Checkpoint",
+      "classIndex": 43,
+      "sourceOffset": 184871,
+      "sourceLength": 32,
+      "sourceSha256": "374141499af15dae61597ce19f63a4d5522594a5e2380582586e3f2d245aedee",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n700/p1",
+          "fieldName": "resumeRegion",
+          "target": "DuskGraveyard:n1654",
+          "targetNodeId": 1654,
+          "offset": 184895
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n1153",
+      "level": "DuskGraveyard",
+      "nodeId": 1153,
+      "name": "BstNode_2345992767",
+      "className": "Checkpoint",
+      "classIndex": 43,
+      "sourceOffset": 295395,
+      "sourceLength": 32,
+      "sourceSha256": "bfb25bcc61b31d847590998ee5fd44c9a2338e1b59b73d787886f7441130fab5",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1153/p1",
+          "fieldName": "resumeRegion",
+          "target": "DuskGraveyard:n549",
+          "targetNodeId": 549,
+          "offset": 295419
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n1385",
+      "level": "DuskGraveyard",
+      "nodeId": 1385,
+      "name": "BstNode_2446917657",
+      "className": "Checkpoint",
+      "classIndex": 43,
+      "sourceOffset": 342345,
+      "sourceLength": 32,
+      "sourceSha256": "145bab816bf6537f7aa6346ba4ba9cce962219f2a45e1dbe8c668c6f86126529",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1385/p1",
+          "fieldName": "resumeRegion",
+          "target": "DuskGraveyard:n143",
+          "targetNodeId": 143,
+          "offset": 342369
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n135",
+      "level": "DuskMid",
+      "nodeId": 135,
+      "name": "BstNode_2446917865",
+      "className": "Checkpoint",
+      "classIndex": 28,
+      "sourceOffset": 43803,
+      "sourceLength": 32,
+      "sourceSha256": "6342f8249add149677c8c4bb1ffcc9855c8b34abb84776ebe18b2c8912a1d562",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n135/p1",
+          "fieldName": "resumeRegion",
+          "target": "DuskMid:n201",
+          "targetNodeId": 201,
+          "offset": 43827
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n214",
+      "level": "DuskMid",
+      "nodeId": 214,
+      "name": "BstNode_2345992387",
+      "className": "Checkpoint",
+      "classIndex": 28,
+      "sourceOffset": 59319,
+      "sourceLength": 32,
+      "sourceSha256": "ef96bffef8dee52b4207b7152ec54b05ccc9136ae70daa595f88b85251df9671",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n214/p1",
+          "fieldName": "resumeRegion",
+          "target": "DuskMid:n1051",
+          "targetNodeId": 1051,
+          "offset": 59343
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n959",
+      "level": "DuskMid",
+      "nodeId": 959,
+      "name": "BstNode_2345992378",
+      "className": "Checkpoint",
+      "classIndex": 28,
+      "sourceOffset": 204424,
+      "sourceLength": 32,
+      "sourceSha256": "5072df227b4c918d3be977c1bb67543077ba48162f1795479d63f39016e9afb2",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n959/p1",
+          "fieldName": "resumeRegion",
+          "target": "DuskMid:n892",
+          "targetNodeId": 892,
+          "offset": 204448
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n1058",
+      "level": "DuskMid",
+      "nodeId": 1058,
+      "name": "BstNode_2345992539",
+      "className": "Checkpoint",
+      "classIndex": 28,
+      "sourceOffset": 221635,
+      "sourceLength": 32,
+      "sourceSha256": "f6cf77c86e96c3ec27a4cb34b2d1ebaa3a6a922a9c48411d79cc4bcc10c7abf0",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1058/p1",
+          "fieldName": "resumeRegion",
+          "target": "DuskMid:n634",
+          "targetNodeId": 634,
+          "offset": 221659
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n1085",
+      "level": "DuskMid",
+      "nodeId": 1085,
+      "name": "BstNode_2345992800",
+      "className": "Checkpoint",
+      "classIndex": 28,
+      "sourceOffset": 226104,
+      "sourceLength": 32,
+      "sourceSha256": "ee9b3d983164ffaa56a1352fdb2befbe5dbc4b8a70781feffd79f787c128c261",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1085/p1",
+          "fieldName": "resumeRegion",
+          "target": "DuskMid:n634",
+          "targetNodeId": 634,
+          "offset": 226128
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n1108",
+      "level": "DuskMid",
+      "nodeId": 1108,
+      "name": "BstNode_2345992797",
+      "className": "Checkpoint",
+      "classIndex": 28,
+      "sourceOffset": 229457,
+      "sourceLength": 32,
+      "sourceSha256": "041c90c24ca9360bcb42c63fd7d9d2758f0fe07646258fc4d7a7d83d815c2280",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1108/p1",
+          "fieldName": "resumeRegion",
+          "target": "DuskMid:n1037",
+          "targetNodeId": 1037,
+          "offset": 229481
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n85",
+      "level": "HubReveal",
+      "nodeId": 85,
+      "name": "BstNode_1495",
+      "className": "Checkpoint",
+      "classIndex": 30,
+      "sourceOffset": 43443,
+      "sourceLength": 26,
+      "sourceSha256": "09a9dbe4afa5d070490606073b7054f40e7548a0647ef99f24d19ae00ffd24d1",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n85/p1",
+          "fieldName": "resumeRegion",
+          "target": "HubReveal:n1151",
+          "targetNodeId": 1151,
+          "offset": 43461
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n567",
+      "level": "HubReveal",
+      "nodeId": 567,
+      "name": "BstNode_1497",
+      "className": "Checkpoint",
+      "classIndex": 30,
+      "sourceOffset": 126477,
+      "sourceLength": 26,
+      "sourceSha256": "5841aa05d7634fdc546efba401f9fb24da29cb58d8dbe63a33902a82522b2e53",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n567/p1",
+          "fieldName": "resumeRegion",
+          "target": "HubReveal:n331",
+          "targetNodeId": 331,
+          "offset": 126495
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n1013",
+      "level": "HubReveal",
+      "nodeId": 1013,
+      "name": "BstNode_2446917659",
+      "className": "Checkpoint",
+      "classIndex": 30,
+      "sourceOffset": 198485,
+      "sourceLength": 32,
+      "sourceSha256": "a84a4b4350fbaf650da48d32b5738233d8f9a8561aeecf682dbd1b516d1ffe9c",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1013/p1",
+          "fieldName": "resumeRegion",
+          "target": "HubReveal:n331",
+          "targetNodeId": 331,
+          "offset": 198509
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n1250",
+      "level": "HubReveal",
+      "nodeId": 1250,
+      "name": "BstNode_2504654892",
+      "className": "Checkpoint",
+      "classIndex": 30,
+      "sourceOffset": 241890,
+      "sourceLength": 32,
+      "sourceSha256": "11ea0317e8c17e3f0290870c7ada91774d5d4c506bf0296dd435390ad62150c0",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1250/p1",
+          "fieldName": "resumeRegion",
+          "target": "HubReveal:n1145",
+          "targetNodeId": 1145,
+          "offset": 241914
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n144",
+      "level": "Night",
+      "nodeId": 144,
+      "name": "BstNode_34603577",
+      "className": "Checkpoint",
+      "classIndex": 31,
+      "sourceOffset": 44129,
+      "sourceLength": 30,
+      "sourceSha256": "2d818b8980264efdcfd63832ce02b992c105c1cd334cde72cfe091c8c072f1f1",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n144/p1",
+          "fieldName": "resumeRegion",
+          "target": "Night:n1290",
+          "targetNodeId": 1290,
+          "offset": 44151
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n168",
+      "level": "Night",
+      "nodeId": 168,
+      "name": "BstNode_34603995",
+      "className": "Checkpoint",
+      "classIndex": 31,
+      "sourceOffset": 47404,
+      "sourceLength": 30,
+      "sourceSha256": "8405174abb1502680c45cfc25c5c60d88e52ebde0437e93d4e4bdbbadcb66483",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n168/p1",
+          "fieldName": "resumeRegion",
+          "target": "Night:n1457",
+          "targetNodeId": 1457,
+          "offset": 47426
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n251",
+      "level": "Night",
+      "nodeId": 251,
+      "name": "BstNode_1342",
+      "className": "Checkpoint",
+      "classIndex": 31,
+      "sourceOffset": 59124,
+      "sourceLength": 26,
+      "sourceSha256": "4fbf0acaf3167139d3b44241a351012e30ebcaf9b13e217cbd20288841380526",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n251/p1",
+          "fieldName": "resumeRegion",
+          "target": "Night:n1849",
+          "targetNodeId": 1849,
+          "offset": 59142
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1136",
+      "level": "Night",
+      "nodeId": 1136,
+      "name": "BstNode_34603451",
+      "className": "Checkpoint",
+      "classIndex": 31,
+      "sourceOffset": 190207,
+      "sourceLength": 30,
+      "sourceSha256": "40737f84d51c2a9af75d0c1e2af33c0eabe9bb38b2467866482310262a389bda",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1136/p1",
+          "fieldName": "resumeRegion",
+          "target": "Night:n708",
+          "targetNodeId": 708,
+          "offset": 190229
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1303",
+      "level": "Night",
+      "nodeId": 1303,
+      "name": "BstNode_1343",
+      "className": "Checkpoint",
+      "classIndex": 31,
+      "sourceOffset": 214207,
+      "sourceLength": 26,
+      "sourceSha256": "2cd0cce95578f44215537de19332b7f62940c7281e99433a0056ca8430c4fed4",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1303/p1",
+          "fieldName": "resumeRegion",
+          "target": "Night:n1632",
+          "targetNodeId": 1632,
+          "offset": 214225
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1320",
+      "level": "Night",
+      "nodeId": 1320,
+      "name": "BstNode_1339",
+      "className": "Checkpoint",
+      "classIndex": 31,
+      "sourceOffset": 216901,
+      "sourceLength": 26,
+      "sourceSha256": "08597244d659c5c67383b05383067063dda36593747da0c26e6b33cfe64e7aa7",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1320/p1",
+          "fieldName": "resumeRegion",
+          "target": "Night:n771",
+          "targetNodeId": 771,
+          "offset": 216919
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2188",
+      "level": "Night",
+      "nodeId": 2188,
+      "name": "BstNode_1344",
+      "className": "Checkpoint",
+      "classIndex": 31,
+      "sourceOffset": 346711,
+      "sourceLength": 26,
+      "sourceSha256": "bac9b6e925089b239cd85bd6d4dc9af32fbe92451e10e5e1d19dd7daf817d4a0",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2188/p1",
+          "fieldName": "resumeRegion",
+          "target": "Night:n237",
+          "targetNodeId": 237,
+          "offset": 346729
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2369",
+      "level": "Night",
+      "nodeId": 2369,
+      "name": "BstNode_1345",
+      "className": "Checkpoint",
+      "classIndex": 31,
+      "sourceOffset": 371729,
+      "sourceLength": 26,
+      "sourceSha256": "3fdcade43f308476a2ec67152916ea56c8b918a4e6a2af5df2a1046f453b8784",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2369/p1",
+          "fieldName": "resumeRegion",
+          "target": "Night:n237",
+          "targetNodeId": 237,
+          "offset": 371747
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n3042",
+      "level": "Night",
+      "nodeId": 3042,
+      "name": "BstNode_2345992303",
+      "className": "Checkpoint",
+      "classIndex": 31,
+      "sourceOffset": 473287,
+      "sourceLength": 32,
+      "sourceSha256": "cf7f5717b8200d1234c01cafebd375046c720efbbe6abcddc37b289ab5b2c7b2",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n3042/p1",
+          "fieldName": "resumeRegion",
+          "target": "Night:n2155",
+          "targetNodeId": 2155,
+          "offset": 473311
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "NightEnd:n504",
+      "level": "NightEnd",
+      "nodeId": 504,
+      "name": "BstNode_2446917636",
+      "className": "Checkpoint",
+      "classIndex": 50,
+      "sourceOffset": 106768,
+      "sourceLength": 32,
+      "sourceSha256": "86896ef6cf35d4fd627c74ca4e093152013abd402daef9626cc140aca5e2a53b",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n504/p1",
+          "fieldName": "resumeRegion",
+          "target": "NightEnd:n643",
+          "targetNodeId": 643,
+          "offset": 106792
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "NightEntrance:n497",
+      "level": "NightEntrance",
+      "nodeId": 497,
+      "name": "BstNode_2446917636",
+      "className": "Checkpoint",
+      "classIndex": 38,
+      "sourceOffset": 90793,
+      "sourceLength": 32,
+      "sourceSha256": "b95e2feddd9d2745a3614bbdb0c345bc7ffc00457b160da19866045cdb878607",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n497/p1",
+          "fieldName": "resumeRegion",
+          "target": "NightEntrance:n505",
+          "targetNodeId": 505,
+          "offset": 90817
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n77",
+      "level": "Prairie_Village",
+      "nodeId": 77,
+      "name": "BstNode_2345992232",
+      "className": "Checkpoint",
+      "classIndex": 23,
+      "sourceOffset": 43289,
+      "sourceLength": 32,
+      "sourceSha256": "c1cf388751c9079f0da09d6c8e755a1f46dad686d422f3f219be37466e2e160d",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n77/p1",
+          "fieldName": "resumeRegion",
+          "target": "Prairie_Village:n2542",
+          "targetNodeId": 2542,
+          "offset": 43313
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n520",
+      "level": "Prairie_Village",
+      "nodeId": 520,
+      "name": "BstNode_2345992226",
+      "className": "Checkpoint",
+      "classIndex": 23,
+      "sourceOffset": 115021,
+      "sourceLength": 32,
+      "sourceSha256": "3703f491768d2455b71ec7c44fded51b939ec0fa7cfbb17cd788eea6ee6edfdc",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n520/p1",
+          "fieldName": "resumeRegion",
+          "target": "Prairie_Village:n2784",
+          "targetNodeId": 2784,
+          "offset": 115045
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n594",
+      "level": "Prairie_Village",
+      "nodeId": 594,
+      "name": "BstNode_949",
+      "className": "Checkpoint",
+      "classIndex": 23,
+      "sourceOffset": 126028,
+      "sourceLength": 25,
+      "sourceSha256": "76007477fa386c1ca552e9ab0053715cd964c36741c03875792d30b6e44d17d5",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n594/p1",
+          "fieldName": "resumeRegion",
+          "target": "Prairie_Village:n402",
+          "targetNodeId": 402,
+          "offset": 126045
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1413",
+      "level": "Prairie_Village",
+      "nodeId": 1413,
+      "name": "BstNode_3122855965",
+      "className": "Checkpoint",
+      "classIndex": 23,
+      "sourceOffset": 258391,
+      "sourceLength": 32,
+      "sourceSha256": "64b9c9c590ce5c87ddeaa672d47e6d4754227fe7af8f59d74717427d026b57bd",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1413/p1",
+          "fieldName": "resumeRegion",
+          "target": "Prairie_Village:n178",
+          "targetNodeId": 178,
+          "offset": 258415
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1543",
+      "level": "Prairie_Village",
+      "nodeId": 1543,
+      "name": "BstNode_3122855946",
+      "className": "Checkpoint",
+      "classIndex": 23,
+      "sourceOffset": 277149,
+      "sourceLength": 32,
+      "sourceSha256": "4f9686f32bf4c7a7e25efcb17fab3ca8e31d5d9862e13904a74c7195cef0f197",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1543/p1",
+          "fieldName": "resumeRegion",
+          "target": "Prairie_Village:n1065",
+          "targetNodeId": 1065,
+          "offset": 277173
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1674",
+      "level": "Prairie_Village",
+      "nodeId": 1674,
+      "name": "BstNode_960",
+      "className": "Checkpoint",
+      "classIndex": 23,
+      "sourceOffset": 297331,
+      "sourceLength": 25,
+      "sourceSha256": "e78e08c4c403f744c5e2976774d2839ec39bffabdb77bca9cb80c2979ea90ece",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1674/p1",
+          "fieldName": "resumeRegion",
+          "target": "Prairie_Village:n868",
+          "targetNodeId": 868,
+          "offset": 297348
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1916",
+      "level": "Prairie_Village",
+      "nodeId": 1916,
+      "name": "BstNode_2345992227",
+      "className": "Checkpoint",
+      "classIndex": 23,
+      "sourceOffset": 342512,
+      "sourceLength": 32,
+      "sourceSha256": "17721a39c166bb4d49f5471219684629f6bf2610fd3c41233224d826cdfd32f2",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1916/p1",
+          "fieldName": "resumeRegion",
+          "target": "Prairie_Village:n2784",
+          "targetNodeId": 2784,
+          "offset": 342536
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2678",
+      "level": "Prairie_Village",
+      "nodeId": 2678,
+      "name": "BstNode_959",
+      "className": "Checkpoint",
+      "classIndex": 23,
+      "sourceOffset": 453356,
+      "sourceLength": 25,
+      "sourceSha256": "44d756d61088affbed6361a5d39e4451b138611f56f400e838243716f89c78b1",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2678/p1",
+          "fieldName": "resumeRegion",
+          "target": "Prairie_Village:n1074",
+          "targetNodeId": 1074,
+          "offset": 453373
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2787",
+      "level": "Prairie_Village",
+      "nodeId": 2787,
+      "name": "BstNode_2345992228",
+      "className": "Checkpoint",
+      "classIndex": 23,
+      "sourceOffset": 473382,
+      "sourceLength": 32,
+      "sourceSha256": "d2de3297abd7471738b8271b7e8781038b1fa224baa741cde0b352c43a525785",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2787/p1",
+          "fieldName": "resumeRegion",
+          "target": "Prairie_Village:n2784",
+          "targetNodeId": 2784,
+          "offset": 473406
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n329",
+      "level": "Rain",
+      "nodeId": 329,
+      "name": "BstNode_2345993013",
+      "className": "Checkpoint",
+      "classIndex": 42,
+      "sourceOffset": 102022,
+      "sourceLength": 32,
+      "sourceSha256": "041e708d17f41845dbba66574e59e99276a2aae81fef41598331765817eaa358",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n329/p1",
+          "fieldName": "resumeRegion",
+          "target": "Rain:n1115",
+          "targetNodeId": 1115,
+          "offset": 102046
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n614",
+      "level": "Rain",
+      "nodeId": 614,
+      "name": "BstNode_585",
+      "className": "Checkpoint",
+      "classIndex": 42,
+      "sourceOffset": 167229,
+      "sourceLength": 25,
+      "sourceSha256": "22843f59bbae46f12b2804d54e6818f2b384a5027e2a39092e0a8c54ad81fce2",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n614/p1",
+          "fieldName": "resumeRegion",
+          "target": "Rain:n1107",
+          "targetNodeId": 1107,
+          "offset": 167246
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n765",
+      "level": "Rain",
+      "nodeId": 765,
+      "name": "BstNode_2345992578",
+      "className": "Checkpoint",
+      "classIndex": 42,
+      "sourceOffset": 201197,
+      "sourceLength": 32,
+      "sourceSha256": "f10c2d170d731d2e22f6a954431735f3669483a25050c07541bf1048346c3caf",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n765/p1",
+          "fieldName": "resumeRegion",
+          "target": "Rain:n1512",
+          "targetNodeId": 1512,
+          "offset": 201221
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n870",
+      "level": "Rain",
+      "nodeId": 870,
+      "name": "BstNode_2446917866",
+      "className": "Checkpoint",
+      "classIndex": 42,
+      "sourceOffset": 226515,
+      "sourceLength": 32,
+      "sourceSha256": "5676d567653ed487cfbbdbef111107d3499591c9f1ac9458d8e3b4656ef22539",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n870/p1",
+          "fieldName": "resumeRegion",
+          "target": "Rain:n919",
+          "targetNodeId": 919,
+          "offset": 226539
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n1059",
+      "level": "Rain",
+      "nodeId": 1059,
+      "name": "BstNode_2345992528",
+      "className": "Checkpoint",
+      "classIndex": 42,
+      "sourceOffset": 267647,
+      "sourceLength": 32,
+      "sourceSha256": "15841df5548401fb40cf076e5cd3e29124631f2a8e7b6a48b58294e32f0c4972",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1059/p1",
+          "fieldName": "resumeRegion",
+          "target": "Rain:n141",
+          "targetNodeId": 141,
+          "offset": 267671
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n1099",
+      "level": "Rain",
+      "nodeId": 1099,
+      "name": "BstNode_600",
+      "className": "Checkpoint",
+      "classIndex": 42,
+      "sourceOffset": 275955,
+      "sourceLength": 25,
+      "sourceSha256": "12bb8c50ca695d9597d7501884954a2ca12a50e6feff24677ba4449fe8d744ac",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1099/p1",
+          "fieldName": "resumeRegion",
+          "target": "Rain:n1377",
+          "targetNodeId": 1377,
+          "offset": 275972
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n1537",
+      "level": "Rain",
+      "nodeId": 1537,
+      "name": "BstNode_2345992547",
+      "className": "Checkpoint",
+      "classIndex": 42,
+      "sourceOffset": 371312,
+      "sourceLength": 32,
+      "sourceSha256": "1c91d4a476df05225b8ff764f8fde30b82bcdf81464ffab0c7834b6262815a6c",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1537/p1",
+          "fieldName": "resumeRegion",
+          "target": "Rain:n750",
+          "targetNodeId": 750,
+          "offset": 371336
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n590",
+      "level": "RainEnd",
+      "nodeId": 590,
+      "name": "BstNode_2345992972",
+      "className": "Checkpoint",
+      "classIndex": 54,
+      "sourceOffset": 171723,
+      "sourceLength": 32,
+      "sourceSha256": "94df96e55fbed48b0617f94cbfb332022754e3f99529e3039f728132768572f0",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n590/p1",
+          "fieldName": "resumeRegion",
+          "target": "RainEnd:n1282",
+          "targetNodeId": 1282,
+          "offset": 171747
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n746",
+      "level": "RainEnd",
+      "nodeId": 746,
+      "name": "BstNode_2446917867",
+      "className": "Checkpoint",
+      "classIndex": 54,
+      "sourceOffset": 209876,
+      "sourceLength": 32,
+      "sourceSha256": "071be69d9dd7b6975af746c1d0483020e13cff46bda799dd72257b1c110718d8",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n746/p1",
+          "fieldName": "resumeRegion",
+          "target": "RainEnd:n670",
+          "targetNodeId": 670,
+          "offset": 209900
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n926",
+      "level": "RainEnd",
+      "nodeId": 926,
+      "name": "BstNode_2446917641",
+      "className": "Checkpoint",
+      "classIndex": 54,
+      "sourceOffset": 248581,
+      "sourceLength": 32,
+      "sourceSha256": "47b6966323937565a0d7bc94a594f9cfa3cc1e2eaf68ff1ba12d00900782adde",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n926/p1",
+          "fieldName": "resumeRegion",
+          "target": "RainEnd:n388",
+          "targetNodeId": 388,
+          "offset": 248605
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n974",
+      "level": "RainEnd",
+      "nodeId": 974,
+      "name": "BstNode_2345992974",
+      "className": "Checkpoint",
+      "classIndex": 54,
+      "sourceOffset": 259890,
+      "sourceLength": 32,
+      "sourceSha256": "62675ff604da1dc83660cf55f9239bbd08a77da7188ee55aaa6708854e5c5648",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n974/p1",
+          "fieldName": "resumeRegion",
+          "target": "RainEnd:n388",
+          "targetNodeId": 388,
+          "offset": 259914
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n1228",
+      "level": "RainEnd",
+      "nodeId": 1228,
+      "name": "BstNode_2345992939",
+      "className": "Checkpoint",
+      "classIndex": 54,
+      "sourceOffset": 323611,
+      "sourceLength": 32,
+      "sourceSha256": "f28ead96583630c112bb264c0e7ddebccbaba1fedca4aaed7d65abddee8f0403",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1228/p1",
+          "fieldName": "resumeRegion",
+          "target": "RainEnd:n1364",
+          "targetNodeId": 1364,
+          "offset": 323635
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n1251",
+      "level": "RainEnd",
+      "nodeId": 1251,
+      "name": "BstNode_2345992963",
+      "className": "Checkpoint",
+      "classIndex": 54,
+      "sourceOffset": 328294,
+      "sourceLength": 32,
+      "sourceSha256": "3820ed9198f0cdbe05bce30bd3a22aa0de4d58f1da40d84e6133835cbbb7a2db",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1251/p1",
+          "fieldName": "resumeRegion",
+          "target": "RainEnd:n64",
+          "targetNodeId": 64,
+          "offset": 328318
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n143",
+      "level": "RainForest",
+      "nodeId": 143,
+      "name": "BstNode_2446917865",
+      "className": "Checkpoint",
+      "classIndex": 22,
+      "sourceOffset": 49863,
+      "sourceLength": 32,
+      "sourceSha256": "9722b6921eeee35643e78bbfe3e5297ddecf369fd3d5e1c30a8ae434f536c630",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n143/p1",
+          "fieldName": "resumeRegion",
+          "target": "RainForest:n210",
+          "targetNodeId": 210,
+          "offset": 49887
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n153",
+      "level": "RainForest",
+      "nodeId": 153,
+      "name": "BstNode_34603155",
+      "className": "Checkpoint",
+      "classIndex": 22,
+      "sourceOffset": 51669,
+      "sourceLength": 30,
+      "sourceSha256": "0309824b309632a9d177c57bb145e17597091ed9ed6b42f0d2d0bd7eba8b56dc",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n153/p1",
+          "fieldName": "resumeRegion",
+          "target": "RainForest:n20",
+          "targetNodeId": 20,
+          "offset": 51691
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n354",
+      "level": "RainForest",
+      "nodeId": 354,
+      "name": "BstNode_2345992264",
+      "className": "Checkpoint",
+      "classIndex": 22,
+      "sourceOffset": 87387,
+      "sourceLength": 32,
+      "sourceSha256": "11232086b7d761301d015ebddc9fac11ece863ba91d4725357f77da9965a2ffc",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n354/p1",
+          "fieldName": "resumeRegion",
+          "target": "RainForest:n1189",
+          "targetNodeId": 1189,
+          "offset": 87411
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n445",
+      "level": "RainForest",
+      "nodeId": 445,
+      "name": "BstNode_2345992257",
+      "className": "Checkpoint",
+      "classIndex": 22,
+      "sourceOffset": 100442,
+      "sourceLength": 32,
+      "sourceSha256": "247deac45091ef85b232b9806c6f2c50b9394bc3daafe3015fc81fe41d00836c",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n445/p1",
+          "fieldName": "resumeRegion",
+          "target": "RainForest:n1119",
+          "targetNodeId": 1119,
+          "offset": 100466
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n869",
+      "level": "RainForest",
+      "nodeId": 869,
+      "name": "BstNode_2345992262",
+      "className": "Checkpoint",
+      "classIndex": 22,
+      "sourceOffset": 199810,
+      "sourceLength": 32,
+      "sourceSha256": "b3bc74ae7fd4dd8624c64c5aafc1cb0dd5e482fbdd2c7cf6c294737cfca6ee39",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n869/p1",
+          "fieldName": "resumeRegion",
+          "target": "RainForest:n367",
+          "targetNodeId": 367,
+          "offset": 199834
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n1109",
+      "level": "RainForest",
+      "nodeId": 1109,
+      "name": "BstNode_2446917867",
+      "className": "Checkpoint",
+      "classIndex": 22,
+      "sourceOffset": 249452,
+      "sourceLength": 32,
+      "sourceSha256": "c4f7c7dce6744002b572e54a5d2ddf1a40c68d5fc38537c5fec3d74f779728c1",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1109/p1",
+          "fieldName": "resumeRegion",
+          "target": "RainForest:n56",
+          "targetNodeId": 56,
+          "offset": 249476
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n236",
+      "level": "RainMid",
+      "nodeId": 236,
+      "name": "BstNode_2345992879",
+      "className": "Checkpoint",
+      "classIndex": 38,
+      "sourceOffset": 72274,
+      "sourceLength": 32,
+      "sourceSha256": "f6f353d1ae43501e1fee697456c9913c09ecf3eba328574107312a08e3220a9d",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n236/p1",
+          "fieldName": "resumeRegion",
+          "target": "RainMid:n1765",
+          "targetNodeId": 1765,
+          "offset": 72298
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n476",
+      "level": "RainMid",
+      "nodeId": 476,
+      "name": "BstNode_2345992855",
+      "className": "Checkpoint",
+      "classIndex": 38,
+      "sourceOffset": 115927,
+      "sourceLength": 32,
+      "sourceSha256": "3a345cd0bd5663d972e148e8939cf71500ee73fff15b0e55c2ec420f1ddbf501",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n476/p1",
+          "fieldName": "resumeRegion",
+          "target": "RainMid:n549",
+          "targetNodeId": 549,
+          "offset": 115951
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n708",
+      "level": "RainMid",
+      "nodeId": 708,
+      "name": "BstNode_2345992430",
+      "className": "Checkpoint",
+      "classIndex": 38,
+      "sourceOffset": 160563,
+      "sourceLength": 32,
+      "sourceSha256": "3939b747324cca56e0c4e0a4ca10614428d7e9c7f66dd169f5c758328a0ddd8a",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n708/p1",
+          "fieldName": "resumeRegion",
+          "target": "RainMid:n1608",
+          "targetNodeId": 1608,
+          "offset": 160587
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n1231",
+      "level": "RainMid",
+      "nodeId": 1231,
+      "name": "BstNode_2345992867",
+      "className": "Checkpoint",
+      "classIndex": 38,
+      "sourceOffset": 252604,
+      "sourceLength": 32,
+      "sourceSha256": "c6ce7bc0d0968bcbd78d8d40237663b32731a6696c206806acb998184463f715",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1231/p1",
+          "fieldName": "resumeRegion",
+          "target": "RainMid:n549",
+          "targetNodeId": 549,
+          "offset": 252628
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n1525",
+      "level": "RainMid",
+      "nodeId": 1525,
+      "name": "BstNode_2345992869",
+      "className": "Checkpoint",
+      "classIndex": 38,
+      "sourceOffset": 305914,
+      "sourceLength": 32,
+      "sourceSha256": "0b66d7dfe68d9b29909e6c8128a9d0386456cfca1b7254cb506f0285f5696119",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1525/p1",
+          "fieldName": "resumeRegion",
+          "target": "RainMid:n549",
+          "targetNodeId": 549,
+          "offset": 305938
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n1728",
+      "level": "RainMid",
+      "nodeId": 1728,
+      "name": "BstNode_2446917905",
+      "className": "Checkpoint",
+      "classIndex": 38,
+      "sourceOffset": 343558,
+      "sourceLength": 32,
+      "sourceSha256": "f3a01a178913c4da32238ec3c5b1c4740ca8193fb96af991d23da6e96ed0796b",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1728/p1",
+          "fieldName": "resumeRegion",
+          "target": "RainMid:n659",
+          "targetNodeId": 659,
+          "offset": 343582
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n2070",
+      "level": "RainMid",
+      "nodeId": 2070,
+      "name": "BstNode_2345992436",
+      "className": "Checkpoint",
+      "classIndex": 38,
+      "sourceOffset": 398740,
+      "sourceLength": 32,
+      "sourceSha256": "7c8a0435f33a50fa4e34d13308c8a1843aa6d1bf2def110efe22905bc6b4dae7",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2070/p1",
+          "fieldName": "resumeRegion",
+          "target": "RainMid:n1604",
+          "targetNodeId": 1604,
+          "offset": 398764
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n2135",
+      "level": "RainMid",
+      "nodeId": 2135,
+      "name": "BstNode_2446917909",
+      "className": "Checkpoint",
+      "classIndex": 38,
+      "sourceOffset": 413729,
+      "sourceLength": 32,
+      "sourceSha256": "366680ac6b29a3f197c32f4194a9bfe699e35be258b540b51842552b21c7c72c",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2135/p1",
+          "fieldName": "resumeRegion",
+          "target": "RainMid:n622",
+          "targetNodeId": 622,
+          "offset": 413753
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n2139",
+      "level": "RainMid",
+      "nodeId": 2139,
+      "name": "BstNode_2446917906",
+      "className": "Checkpoint",
+      "classIndex": 38,
+      "sourceOffset": 414115,
+      "sourceLength": 32,
+      "sourceSha256": "842532f112c544e8a8423375913b6f8e351bff1f63b78cf06963959c9234c80c",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2139/p1",
+          "fieldName": "resumeRegion",
+          "target": "RainMid:n1042",
+          "targetNodeId": 1042,
+          "offset": 414139
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n2166",
+      "level": "RainMid",
+      "nodeId": 2166,
+      "name": "BstNode_2345992696",
+      "className": "Checkpoint",
+      "classIndex": 38,
+      "sourceOffset": 419995,
+      "sourceLength": 32,
+      "sourceSha256": "7157eba1e7c487e597f1bd92efb481d6d5b0cf1eb4525c3a2a3c1d63d3d7f26e",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2166/p1",
+          "fieldName": "resumeRegion",
+          "target": "RainMid:n1824",
+          "targetNodeId": 1824,
+          "offset": 420019
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n738",
+      "level": "SkyHub2",
+      "nodeId": 738,
+      "name": "BstNode_1167524193",
+      "className": "Checkpoint",
+      "classIndex": 73,
+      "sourceOffset": 168495,
+      "sourceLength": 32,
+      "sourceSha256": "1ec00ca87d54bf1d4914b41f116498b74bbf28609c85d249af21596e60f9610a",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n738/p1",
+          "fieldName": "resumeRegion",
+          "target": "SkyHub2:n1521",
+          "targetNodeId": 1521,
+          "offset": 168519
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1021",
+      "level": "SkyHub2",
+      "nodeId": 1021,
+      "name": "BstNode_1167523950",
+      "className": "Checkpoint",
+      "classIndex": 73,
+      "sourceOffset": 219278,
+      "sourceLength": 32,
+      "sourceSha256": "dde20e7660ca50c578e3a8575b908eaabd47abe6bed9fed369c501f8b1cb7f57",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1021/p1",
+          "fieldName": "resumeRegion",
+          "target": "SkyHub2:n1521",
+          "targetNodeId": 1521,
+          "offset": 219302
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1887",
+      "level": "SkyHub2",
+      "nodeId": 1887,
+      "name": "BstNode_2345992560",
+      "className": "Checkpoint",
+      "classIndex": 73,
+      "sourceOffset": 356283,
+      "sourceLength": 32,
+      "sourceSha256": "8242e9beb8bc86f232b2a11a947758398da8d901d0b016456b7f5f4f2085cdb9",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1887/p1",
+          "fieldName": "resumeRegion",
+          "target": "SkyHub2:n578",
+          "targetNodeId": 578,
+          "offset": 356307
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n531",
+      "level": "Storm",
+      "nodeId": 531,
+      "name": "BstNode_2529560021",
+      "className": "Checkpoint",
+      "classIndex": 45,
+      "sourceOffset": 117826,
+      "sourceLength": 32,
+      "sourceSha256": "98fe2461c32c495bd84d3262e7d420fd83f709a035266aa139cfb7dd25c75828",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n531/p1",
+          "fieldName": "resumeRegion",
+          "target": "Storm:n1304",
+          "targetNodeId": 1304,
+          "offset": 117850
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n1272",
+      "level": "Storm",
+      "nodeId": 1272,
+      "name": "BstNode_2529560020",
+      "className": "Checkpoint",
+      "classIndex": 45,
+      "sourceOffset": 250256,
+      "sourceLength": 32,
+      "sourceSha256": "44c11b448e18dfff0a49d3094b879b18a795726169ca7a24ccfbdc5b64bab44d",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1272/p1",
+          "fieldName": "resumeRegion",
+          "target": "Storm:n51",
+          "targetNodeId": 51,
+          "offset": 250280
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n1273",
+      "level": "Storm",
+      "nodeId": 1273,
+      "name": "BstNode_2529560008",
+      "className": "Checkpoint",
+      "classIndex": 45,
+      "sourceOffset": 250288,
+      "sourceLength": 32,
+      "sourceSha256": "592e0fd3670237c16cd3737a8ade68513f093e497da93152b7246502123c1183",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1273/p1",
+          "fieldName": "resumeRegion",
+          "target": "Storm:n676",
+          "targetNodeId": 676,
+          "offset": 250312
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n1277",
+      "level": "Storm",
+      "nodeId": 1277,
+      "name": "BstNode_2529560016",
+      "className": "Checkpoint",
+      "classIndex": 45,
+      "sourceOffset": 250946,
+      "sourceLength": 32,
+      "sourceSha256": "329d0b60f105bfae71846a24d24c9b2809bef2d5b5639e10bf04678a140280ee",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1277/p1",
+          "fieldName": "resumeRegion",
+          "target": "Storm:n1279",
+          "targetNodeId": 1279,
+          "offset": 250970
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n1301",
+      "level": "Storm",
+      "nodeId": 1301,
+      "name": "BstNode_2529560010",
+      "className": "Checkpoint",
+      "classIndex": 45,
+      "sourceOffset": 254106,
+      "sourceLength": 32,
+      "sourceSha256": "b4e85f027cbf31e8d51dabcf6ea6c51aa7ab1149edb36a14530046e500f5f50c",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1301/p1",
+          "fieldName": "resumeRegion",
+          "target": "Storm:n1317",
+          "targetNodeId": 1317,
+          "offset": 254130
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n1329",
+      "level": "Storm",
+      "nodeId": 1329,
+      "name": "BstNode_2529560004",
+      "className": "Checkpoint",
+      "classIndex": 45,
+      "sourceOffset": 258203,
+      "sourceLength": 32,
+      "sourceSha256": "952ee12fa3c33753a51a04bf4952ab8bd6dea7e9024e8dfb4ca1e78477c42709",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1329/p1",
+          "fieldName": "resumeRegion",
+          "target": "Storm:n1189",
+          "targetNodeId": 1189,
+          "offset": 258227
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n1340",
+      "level": "Storm",
+      "nodeId": 1340,
+      "name": "BstNode_2529560000",
+      "className": "Checkpoint",
+      "classIndex": 45,
+      "sourceOffset": 259441,
+      "sourceLength": 32,
+      "sourceSha256": "16b0e7019067bd4a47b114f5f9307e4a0afc2e4ab01ff1c54c2548acd4ebbbc0",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1340/p1",
+          "fieldName": "resumeRegion",
+          "target": "Storm:n1499",
+          "targetNodeId": 1499,
+          "offset": 259465
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n1575",
+      "level": "Storm",
+      "nodeId": 1575,
+      "name": "BstNode_2529560025",
+      "className": "Checkpoint",
+      "classIndex": 45,
+      "sourceOffset": 300131,
+      "sourceLength": 32,
+      "sourceSha256": "e258eb897d2a4c0436d884587c08d036b59dada8f5782e7d1fd9947d4d1c342d",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1575/p1",
+          "fieldName": "resumeRegion",
+          "target": "Storm:n19",
+          "targetNodeId": 19,
+          "offset": 300155
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n1609",
+      "level": "Storm",
+      "nodeId": 1609,
+      "name": "BstNode_2529559998",
+      "className": "Checkpoint",
+      "classIndex": 45,
+      "sourceOffset": 306818,
+      "sourceLength": 32,
+      "sourceSha256": "d79192bafa1b8a1fb94b60f57c3abba3623c21f6332a6e7fd67dcde7f77f0760",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1609/p1",
+          "fieldName": "resumeRegion",
+          "target": "Storm:n917",
+          "targetNodeId": 917,
+          "offset": 306842
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n367",
+      "level": "Sunset",
+      "nodeId": 367,
+      "name": "BstNode_1167524227",
+      "className": "Checkpoint",
+      "classIndex": 41,
+      "sourceOffset": 97044,
+      "sourceLength": 32,
+      "sourceSha256": "721ab523e60e53a1eba64699885d4f20fd77d51454ec1913e22bb405f46ab135",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n367/p1",
+          "fieldName": "resumeRegion",
+          "target": "Sunset:n1278",
+          "targetNodeId": 1278,
+          "offset": 97068
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n906",
+      "level": "Sunset",
+      "nodeId": 906,
+      "name": "BstNode_2446917865",
+      "className": "Checkpoint",
+      "classIndex": 41,
+      "sourceOffset": 184461,
+      "sourceLength": 32,
+      "sourceSha256": "ca7bb3ca468ef9d0542dde9dfbd018ea8a6d59bad6ae885bf44e312df833d6aa",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n906/p1",
+          "fieldName": "resumeRegion",
+          "target": "Sunset:n147",
+          "targetNodeId": 147,
+          "offset": 184485
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n1117",
+      "level": "Sunset",
+      "nodeId": 1117,
+      "name": "BstNode_2446917638",
+      "className": "Checkpoint",
+      "classIndex": 41,
+      "sourceOffset": 216420,
+      "sourceLength": 32,
+      "sourceSha256": "1a9bbe7c8972797eb039a824fa7341f04665f684156d0e708ae86b5bb6166547",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1117/p1",
+          "fieldName": "resumeRegion",
+          "target": "Sunset:n991",
+          "targetNodeId": 991,
+          "offset": 216444
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n1368",
+      "level": "Sunset",
+      "nodeId": 1368,
+      "name": "BstNode_2446917696",
+      "className": "Checkpoint",
+      "classIndex": 41,
+      "sourceOffset": 257105,
+      "sourceLength": 32,
+      "sourceSha256": "937ed9941c1af6d5d17b5f2ff52e091ed148d0f8844f2c16f6e765d1162301ff",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1368/p1",
+          "fieldName": "resumeRegion",
+          "target": "Sunset:n360",
+          "targetNodeId": 360,
+          "offset": 257129
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n1554",
+      "level": "Sunset",
+      "nodeId": 1554,
+      "name": "BstNode_2446917676",
+      "className": "Checkpoint",
+      "classIndex": 41,
+      "sourceOffset": 287459,
+      "sourceLength": 32,
+      "sourceSha256": "4e6e85649c78db4e8640a6abbfeedd20a2f8d0de09c4e680365294fe521dfbd6",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1554/p1",
+          "fieldName": "resumeRegion",
+          "target": "Sunset:n484",
+          "targetNodeId": 484,
+          "offset": 287483
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n1732",
+      "level": "Sunset",
+      "nodeId": 1732,
+      "name": "BstNode_2446917684",
+      "className": "Checkpoint",
+      "classIndex": 41,
+      "sourceOffset": 318222,
+      "sourceLength": 32,
+      "sourceSha256": "3274419564881a2c801cf4792f372f8452a52d9b1a08168ed7e6fea99a09ac39",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1732/p1",
+          "fieldName": "resumeRegion",
+          "target": "Sunset:n864",
+          "targetNodeId": 864,
+          "offset": 318246
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n972",
+      "level": "SunsetEnd",
+      "nodeId": 972,
+      "name": "BstNode_2345992194",
+      "className": "Checkpoint",
+      "classIndex": 71,
+      "sourceOffset": 188399,
+      "sourceLength": 32,
+      "sourceSha256": "dd69b46357a9876acf1b17af6d6b959ed6f00c2be9c674b643a919ba20f64b16",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n972/p1",
+          "fieldName": "resumeRegion",
+          "target": "SunsetEnd:n640",
+          "targetNodeId": 640,
+          "offset": 188423
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n1045",
+      "level": "SunsetEnd",
+      "nodeId": 1045,
+      "name": "BstNode_1167524215",
+      "className": "Checkpoint",
+      "classIndex": 71,
+      "sourceOffset": 201470,
+      "sourceLength": 32,
+      "sourceSha256": "11e48476347a3ed183e3d5a8b02f123c65e432271e15380315de84be6b86a5c7",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1045/p1",
+          "fieldName": "resumeRegion",
+          "target": "SunsetEnd:n1130",
+          "targetNodeId": 1130,
+          "offset": 201494
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n1097",
+      "level": "SunsetEnd",
+      "nodeId": 1097,
+      "name": "BstNode_2446917643",
+      "className": "Checkpoint",
+      "classIndex": 71,
+      "sourceOffset": 208639,
+      "sourceLength": 32,
+      "sourceSha256": "f6e2cd4cf85d9d76daf12fed8292b1542dda1ed1790f57d46bf55b6f7a4e5303",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1097/p1",
+          "fieldName": "resumeRegion",
+          "target": "SunsetEnd:n1710",
+          "targetNodeId": 1710,
+          "offset": 208663
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n1119",
+      "level": "SunsetEnd",
+      "nodeId": 1119,
+      "name": "BstNode_2446917865",
+      "className": "Checkpoint",
+      "classIndex": 71,
+      "sourceOffset": 211301,
+      "sourceLength": 32,
+      "sourceSha256": "37d97814afb61b1513aa19ffcbe65959bcd41b5c19a84ee1a407045f939d5ea3",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1119/p1",
+          "fieldName": "resumeRegion",
+          "target": "SunsetEnd:n405",
+          "targetNodeId": 405,
+          "offset": 211325
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n1134",
+      "level": "SunsetEnd",
+      "nodeId": 1134,
+      "name": "BstNode_2446917704",
+      "className": "Checkpoint",
+      "classIndex": 71,
+      "sourceOffset": 212790,
+      "sourceLength": 32,
+      "sourceSha256": "44c93908a087e170261f2e59080d3edabb6e6c229e528c81fa438d61b3c2a539",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1134/p1",
+          "fieldName": "resumeRegion",
+          "target": "SunsetEnd:n673",
+          "targetNodeId": 673,
+          "offset": 212814
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n1159",
+      "level": "SunsetEnd",
+      "nodeId": 1159,
+      "name": "BstNode_1167524483",
+      "className": "Checkpoint",
+      "classIndex": 71,
+      "sourceOffset": 217158,
+      "sourceLength": 32,
+      "sourceSha256": "1e7d4da0b6ef6c9bf3cf927ea26d81574a5bd113e73e0592683b481ec2095d76",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1159/p1",
+          "fieldName": "resumeRegion",
+          "target": "SunsetEnd:n673",
+          "targetNodeId": 673,
+          "offset": 217182
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n1191",
+      "level": "SunsetEnd",
+      "nodeId": 1191,
+      "name": "BstNode_1167524446",
+      "className": "Checkpoint",
+      "classIndex": 71,
+      "sourceOffset": 223168,
+      "sourceLength": 32,
+      "sourceSha256": "6314ee3875dcbb6015473b1cde1de1ebb54b374c3e6297b806f64c4cbddd7d54",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1191/p1",
+          "fieldName": "resumeRegion",
+          "target": "SunsetEnd:n673",
+          "targetNodeId": 673,
+          "offset": 223192
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n1569",
+      "level": "SunsetEnd",
+      "nodeId": 1569,
+      "name": "BstNode_2446917636",
+      "className": "Checkpoint",
+      "classIndex": 71,
+      "sourceOffset": 293315,
+      "sourceLength": 32,
+      "sourceSha256": "bac4d3b43500ec0bc5524b1ea2d05e2b967072f646f312e245f7116936000bdc",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1569/p1",
+          "fieldName": "resumeRegion",
+          "target": "SunsetEnd:n427",
+          "targetNodeId": 427,
+          "offset": 293339
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd2:n121",
+      "level": "SunsetEnd2",
+      "nodeId": 121,
+      "name": "BstNode_2446917646",
+      "className": "Checkpoint",
+      "classIndex": 28,
+      "sourceOffset": 47410,
+      "sourceLength": 32,
+      "sourceSha256": "70cea56ea62f218ae3999e415e900c26682fd12139a7e8325d2633f507c0440d",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n121/p1",
+          "fieldName": "resumeRegion",
+          "target": "SunsetEnd2:n176",
+          "targetNodeId": 176,
+          "offset": 47434
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd2:n302",
+      "level": "SunsetEnd2",
+      "nodeId": 302,
+      "name": "BstNode_2345992218",
+      "className": "Checkpoint",
+      "classIndex": 28,
+      "sourceOffset": 85444,
+      "sourceLength": 32,
+      "sourceSha256": "eece11e04e402ac21198bf70a332b3c3f35847f77c7020ba43b698c59e58d565",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n302/p1",
+          "fieldName": "resumeRegion",
+          "target": "SunsetEnd2:n64",
+          "targetNodeId": 64,
+          "offset": 85468
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd2:n623",
+      "level": "SunsetEnd2",
+      "nodeId": 623,
+      "name": "BstNode_2345992221",
+      "className": "Checkpoint",
+      "classIndex": 28,
+      "sourceOffset": 157599,
+      "sourceLength": 32,
+      "sourceSha256": "b50fb1f14b826a8a40b1bb3f619e348eba6f569d1d1cff32bf5094344fbe8cca",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n623/p1",
+          "fieldName": "resumeRegion",
+          "target": "SunsetEnd2:n783",
+          "targetNodeId": 783,
+          "offset": 157623
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd2:n683",
+      "level": "SunsetEnd2",
+      "nodeId": 683,
+      "name": "BstNode_1049165925",
+      "className": "Checkpoint",
+      "classIndex": 28,
+      "sourceOffset": 171632,
+      "sourceLength": 32,
+      "sourceSha256": "14762aa4be27ee94364868f60c1a62aa649fe65d56441ad44e495de23249171c",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n683/p1",
+          "fieldName": "resumeRegion",
+          "target": "SunsetEnd2:n783",
+          "targetNodeId": 783,
+          "offset": 171656
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "Dawn",
+      "path": "Levels/Dawn/Objects.level.bin",
+      "sha256": "16e26aafc7f9d120a548bf5d8bec04fbc18146bc8db531ef75144889b1ff197a",
+      "bytes": 504637,
+      "nodes": 3798,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dawn.json",
+      "markdown": "Objects对象清单/Dawn.md"
+    },
+    {
+      "level": "DayEnd",
+      "path": "Levels/DayEnd/Objects.level.bin",
+      "sha256": "9b5c568cefa987e504a10236c5b61e5de4b748d965d09e42db3602e4e52cc904",
+      "bytes": 268140,
+      "nodes": 1459,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DayEnd.json",
+      "markdown": "Objects对象清单/DayEnd.md"
+    },
+    {
+      "level": "DayHubCave",
+      "path": "Levels/DayHubCave/Objects.level.bin",
+      "sha256": "e4da920cc9f0b1569f14ad1a6d1990db7155dc07ebfc3214c4e385a367872457",
+      "bytes": 202745,
+      "nodes": 1128,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DayHubCave.json",
+      "markdown": "Objects对象清单/DayHubCave.md"
+    },
+    {
+      "level": "Dusk",
+      "path": "Levels/Dusk/Objects.level.bin",
+      "sha256": "9222b248f17fb4122cd4ad9650543ab86aab8b077b6965248c70ac2341bf2d5d",
+      "bytes": 242331,
+      "nodes": 1288,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dusk.json",
+      "markdown": "Objects对象清单/Dusk.md"
+    },
+    {
+      "level": "DuskGraveyard",
+      "path": "Levels/DuskGraveyard/Objects.level.bin",
+      "sha256": "128b30dcbe40b68e68fc25d195b68dc39f897259453c02612049ccd37a90ffb4",
+      "bytes": 424333,
+      "nodes": 1791,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DuskGraveyard.json",
+      "markdown": "Objects对象清单/DuskGraveyard.md"
+    },
+    {
+      "level": "DuskMid",
+      "path": "Levels/DuskMid/Objects.level.bin",
+      "sha256": "899ca33226dabd04afecfe7888750938ff4e460cb586603364e150591e9cbda5",
+      "bytes": 234288,
+      "nodes": 1268,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DuskMid.json",
+      "markdown": "Objects对象清单/DuskMid.md"
+    },
+    {
+      "level": "HubReveal",
+      "path": "Levels/HubReveal/Objects.level.bin",
+      "sha256": "4b32f12bbe4b246cde9ca1e4ba0982000ff108359865bb4340aba640e609861b",
+      "bytes": 289438,
+      "nodes": 1829,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/HubReveal.json",
+      "markdown": "Objects对象清单/HubReveal.md"
+    },
+    {
+      "level": "Night",
+      "path": "Levels/Night/Objects.level.bin",
+      "sha256": "6ce612c9efb82834d648de81251033b341a44f4d9374d8338d868575aab6a723",
+      "bytes": 499756,
+      "nodes": 3719,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Night.json",
+      "markdown": "Objects对象清单/Night.md"
+    },
+    {
+      "level": "NightEnd",
+      "path": "Levels/NightEnd/Objects.level.bin",
+      "sha256": "0dd8919c4f0ca58e9dc979e211b84dc990e012815929082b1004ed620af32422",
+      "bytes": 156479,
+      "nodes": 1090,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/NightEnd.json",
+      "markdown": "Objects对象清单/NightEnd.md"
+    },
+    {
+      "level": "NightEntrance",
+      "path": "Levels/NightEntrance/Objects.level.bin",
+      "sha256": "d7cc9c4e290e146b459a8ddcddd19be2287fd2cc8ac19f98b688003e05ebb354",
+      "bytes": 98001,
+      "nodes": 594,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/NightEntrance.json",
+      "markdown": "Objects对象清单/NightEntrance.md"
+    },
+    {
+      "level": "Prairie_Village",
+      "path": "Levels/Prairie_Village/Objects.level.bin",
+      "sha256": "4656296b54402016b59b894b4653fbdc71e106a21e0900294f73f2c7b7112385",
+      "bytes": 549989,
+      "nodes": 3724,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Village.json",
+      "markdown": "Objects对象清单/Prairie_Village.md"
+    },
+    {
+      "level": "Rain",
+      "path": "Levels/Rain/Objects.level.bin",
+      "sha256": "20093bccf3bb1ea0936cb993e66cef0187b40a5a411df3573eb28e4def4f75c6",
+      "bytes": 457732,
+      "nodes": 2079,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Rain.json",
+      "markdown": "Objects对象清单/Rain.md"
+    },
+    {
+      "level": "RainEnd",
+      "path": "Levels/RainEnd/Objects.level.bin",
+      "sha256": "247912ec955153e3df80c16a861eb872573502a285a17943518bdce448a8d5e3",
+      "bytes": 427926,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainEnd.json",
+      "markdown": "Objects对象清单/RainEnd.md"
+    },
+    {
+      "level": "RainForest",
+      "path": "Levels/RainForest/Objects.level.bin",
+      "sha256": "2e69b3314c70c61bd99435f4bb4418fba540f227c83670e1af3b5358c64c3b73",
+      "bytes": 271409,
+      "nodes": 1306,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainForest.json",
+      "markdown": "Objects对象清单/RainForest.md"
+    },
+    {
+      "level": "RainMid",
+      "path": "Levels/RainMid/Objects.level.bin",
+      "sha256": "139b219d9b71a2ab24418b1ec41f2ee8a2ebfdf4c5ea992c35348a758682ed23",
+      "bytes": 430825,
+      "nodes": 2457,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainMid.json",
+      "markdown": "Objects对象清单/RainMid.md"
+    },
+    {
+      "level": "SkyHub2",
+      "path": "Levels/SkyHub2/Objects.level.bin",
+      "sha256": "8b467f9b349d9d4ce0d038528c96e44dff30063149bf5bbf90232a56bb9dd36f",
+      "bytes": 475656,
+      "nodes": 2886,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SkyHub2.json",
+      "markdown": "Objects对象清单/SkyHub2.md"
+    },
+    {
+      "level": "Storm",
+      "path": "Levels/Storm/Objects.level.bin",
+      "sha256": "4be187f31f1ef86611831abeb45ed9c1deff5e925f3bae80a6be49af85fa52bd",
+      "bytes": 324849,
+      "nodes": 1954,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Storm.json",
+      "markdown": "Objects对象清单/Storm.md"
+    },
+    {
+      "level": "Sunset",
+      "path": "Levels/Sunset/Objects.level.bin",
+      "sha256": "8126f2db693502576075505797624e0b5e53dc064fe6af82e90f2261ca427f8a",
+      "bytes": 325410,
+      "nodes": 1899,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Sunset.json",
+      "markdown": "Objects对象清单/Sunset.md"
+    },
+    {
+      "level": "SunsetEnd",
+      "path": "Levels/SunsetEnd/Objects.level.bin",
+      "sha256": "9995ebfef7aa72982f6b95073a98a4ef01376bd8ac56c3b79b09729f97f43d6e",
+      "bytes": 352573,
+      "nodes": 1998,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SunsetEnd.json",
+      "markdown": "Objects对象清单/SunsetEnd.md"
+    },
+    {
+      "level": "SunsetEnd2",
+      "path": "Levels/SunsetEnd2/Objects.level.bin",
+      "sha256": "f76249413f9412f3db6d726aacf7425d5da546f8a9b88b9614c8a33fdb87e711",
+      "bytes": 209340,
+      "nodes": 975,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SunsetEnd2.json",
+      "markdown": "Objects对象清单/SunsetEnd2.md"
+    }
+  ]
+}

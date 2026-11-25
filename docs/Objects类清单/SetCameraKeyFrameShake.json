@@ -1,0 +1,747 @@
+{
+  "className": "SetCameraKeyFrameShake",
+  "functionGroup": "摄像机与镜头",
+  "functionRole": "关键帧震动参数与过渡",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "SetCameraKeyFrameShake 的原默认值、继承初始化及 8 个序列化字段变体；原注册字段 7 项。"
+    },
+    {
+      "name": "关键帧震动参数与过渡",
+      "status": "partial",
+      "description": "原 OnStart/Update 与 CameraSystem 相机句柄、metadata getter、Event Start 已联合核验；220组、1,540帧、3,642,016字节零差异，含两类全部20条真实字段/Clump引用配置。先推进计时，再逐个反射解析并写入关键帧idle/moving/speed；保留未夹紧的淡出与成员变更后的重读，结束使用大于等于。Avatar面板显式运行实际地图事件并隔离预览状态；时钟、类型解析和结束分发为服务。缺字段构造默认值、自动场景事件、完整相机震动采样/绘制及完整运行仍待恢复。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "partial",
+      "description": "Clump（10 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "partial",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "SetCameraKeyFrameShake",
+    "category": "摄像机与镜头",
+    "functionGroupId": "camera",
+    "functionRole": "关键帧震动参数与过渡",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "SetCameraKeyFrameShake 的原默认值、继承初始化及 8 个序列化字段变体；原注册字段 7 项。"
+      },
+      {
+        "name": "关键帧震动参数与过渡",
+        "status": "partial",
+        "description": "原 OnStart/Update 与 CameraSystem 相机句柄、metadata getter、Event Start 已联合核验；220组、1,540帧、3,642,016字节零差异，含两类全部20条真实字段/Clump引用配置。先推进计时，再逐个反射解析并写入关键帧idle/moving/speed；保留未夹紧的淡出与成员变更后的重读，结束使用大于等于。Avatar面板显式运行实际地图事件并隔离预览状态；时钟、类型解析和结束分发为服务。缺字段构造默认值、自动场景事件、完整相机震动采样/绘制及完整运行仍待恢复。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "partial",
+        "description": "Clump（10 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "partial",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Clump",
+        "references": 10
+      }
+    ],
+    "rttiWorkingGroup": "模型、资源与渲染",
+    "role": "对象实例类型",
+    "instances": 10,
+    "nestedInstances": 0,
+    "referenceFields": 10,
+    "declaredLevels": 5,
+    "levels": [
+      {
+        "level": "Dawn",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DayEnd",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Cave",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Rain",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainEnd",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "cameraKeyFrames",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "duration",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "fadeInTime",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "fadeOutTime",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "idleShakeForce",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "movingShakeForce",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "shakeSpeedMult",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100cf1500",
+    "nativeRegisteredFields": [
+      {
+        "name": "cameraKeyFrames",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x100591f90",
+        "propertyAddress": "0x100cf11d0"
+      },
+      {
+        "name": "idleShakeForce",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 64,
+        "registrationFunction": "0x100591f90",
+        "propertyAddress": "0x100cf1220"
+      },
+      {
+        "name": "movingShakeForce",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 68,
+        "registrationFunction": "0x100591f90",
+        "propertyAddress": "0x100cf1270"
+      },
+      {
+        "name": "shakeSpeedMult",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 72,
+        "registrationFunction": "0x100591f90",
+        "propertyAddress": "0x100cf12c0"
+      },
+      {
+        "name": "fadeInTime",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 76,
+        "registrationFunction": "0x100591f90",
+        "propertyAddress": "0x100cf1310"
+      },
+      {
+        "name": "duration",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 80,
+        "registrationFunction": "0x100591f90",
+        "propertyAddress": "0x100cf1360"
+      },
+      {
+        "name": "fadeOutTime",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 84,
+        "registrationFunction": "0x100591f90",
+        "propertyAddress": "0x100cf13b0"
+      }
+    ],
+    "completedCheckpoints": 4,
+    "partialCheckpoints": 2,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 40,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": true,
+    "implementation": [
+      "src/core/camera-events.ts",
+      "src/core/camera-event-preview.ts",
+      "src/renderer/avatar-camera-controller.ts"
+    ],
+    "evidence": [
+      "docs/camera-events-native.json",
+      "docs/camera-events-oracle.json",
+      "docs/camera-events-smoke.json",
+      "docs/Objects相机事件与Avatar推进.md"
+    ],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 7 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "verified",
+        "note": "原 OnStart/Update 与 CameraSystem 相机句柄、metadata getter、Event Start 已联合核验；220组、1,540帧、3,642,016字节零差异，含两类全部20条真实字段/Clump引用配置。先推进计时，再逐个反射解析并写入关键帧idle/moving/speed；保留未夹紧的淡出与成员变更后的重读，结束使用大于等于。Avatar面板显式运行实际地图事件并隔离预览状态；时钟、类型解析和结束分发为服务。缺字段构造默认值、自动场景事件、完整相机震动采样/绘制及完整运行仍待恢复。",
+        "evidence": [
+          "docs/camera-events-native.json",
+          "docs/camera-events-oracle.json",
+          "docs/camera-events-smoke.json",
+          "docs/Objects相机事件与Avatar推进.md"
+        ]
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "partial",
+        "note": "原 OnStart/Update 与 CameraSystem 相机句柄、metadata getter、Event Start 已联合核验；220组、1,540帧、3,642,016字节零差异，含两类全部20条真实字段/Clump引用配置。先推进计时，再逐个反射解析并写入关键帧idle/moving/speed；保留未夹紧的淡出与成员变更后的重读，结束使用大于等于。Avatar面板显式运行实际地图事件并隔离预览状态；时钟、类型解析和结束分发为服务。缺字段构造默认值、自动场景事件、完整相机震动采样/绘制及完整运行仍待恢复。",
+        "evidence": [
+          "docs/camera-events-native.json",
+          "docs/camera-events-oracle.json",
+          "docs/camera-events-smoke.json",
+          "docs/Objects相机事件与Avatar推进.md"
+        ]
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "partial",
+        "note": "原 OnStart/Update 与 CameraSystem 相机句柄、metadata getter、Event Start 已联合核验；220组、1,540帧、3,642,016字节零差异，含两类全部20条真实字段/Clump引用配置。先推进计时，再逐个反射解析并写入关键帧idle/moving/speed；保留未夹紧的淡出与成员变更后的重读，结束使用大于等于。Avatar面板显式运行实际地图事件并隔离预览状态；时钟、类型解析和结束分发为服务。缺字段构造默认值、自动场景事件、完整相机震动采样/绘制及完整运行仍待恢复。",
+        "evidence": [
+          "docs/camera-events-native.json",
+          "docs/camera-events-oracle.json",
+          "docs/camera-events-smoke.json",
+          "docs/Objects相机事件与Avatar推进.md"
+        ]
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "原 OnStart/Update 与 CameraSystem 相机句柄、metadata getter、Event Start 已联合核验；220组、1,540帧、3,642,016字节零差异，含两类全部20条真实字段/Clump引用配置。先推进计时，再逐个反射解析并写入关键帧idle/moving/speed；保留未夹紧的淡出与成员变更后的重读，结束使用大于等于。Avatar面板显式运行实际地图事件并隔离预览状态；时钟、类型解析和结束分发为服务。缺字段构造默认值、自动场景事件、完整相机震动采样/绘制及完整运行仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "Dawn:n394",
+      "level": "Dawn",
+      "nodeId": 394,
+      "name": "BstNode_1293287700",
+      "className": "SetCameraKeyFrameShake",
+      "classIndex": 61,
+      "sourceOffset": 93101,
+      "sourceLength": 52,
+      "sourceSha256": "116daabadd7b559c75737ae41f599aaf148f90fd302566465cf273946ed2acf9",
+      "declaredFieldCount": 8,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n394/p5",
+          "fieldName": "cameraKeyFrames",
+          "target": "Dawn:n3081",
+          "targetNodeId": 3081,
+          "offset": 93141
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n800",
+      "level": "Dawn",
+      "nodeId": 800,
+      "name": "BstNode_1293287730",
+      "className": "SetCameraKeyFrameShake",
+      "classIndex": 61,
+      "sourceOffset": 160200,
+      "sourceLength": 52,
+      "sourceSha256": "5ad75fef638b7353f001f56c9b03b6f126c39906c6ee7a12c65322060cfe31c5",
+      "declaredFieldCount": 8,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n800/p5",
+          "fieldName": "cameraKeyFrames",
+          "target": "Dawn:n3180",
+          "targetNodeId": 3180,
+          "offset": 160240
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2830",
+      "level": "Dawn",
+      "nodeId": 2830,
+      "name": "BstNode_2504654975",
+      "className": "SetCameraKeyFrameShake",
+      "classIndex": 61,
+      "sourceOffset": 463810,
+      "sourceLength": 52,
+      "sourceSha256": "67823ac8481479136242a6cbb41b8cb4432e400c73cffd6806ef06684568ca50",
+      "declaredFieldCount": 8,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2830/p5",
+          "fieldName": "cameraKeyFrames",
+          "target": "Dawn:n3760",
+          "targetNodeId": 3760,
+          "offset": 463850
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n524",
+      "level": "DayEnd",
+      "nodeId": 524,
+      "name": "BstNode_2446917655",
+      "className": "SetCameraKeyFrameShake",
+      "classIndex": 59,
+      "sourceOffset": 124315,
+      "sourceLength": 52,
+      "sourceSha256": "627688c6cbb94784e792016736e715d2ded80d1c53dabce1469aa181420d8cab",
+      "declaredFieldCount": 8,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n524/p5",
+          "fieldName": "cameraKeyFrames",
+          "target": "DayEnd:n1332",
+          "targetNodeId": 1332,
+          "offset": 124355
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n943",
+      "level": "DayEnd",
+      "nodeId": 943,
+      "name": "BstNode_2446917654",
+      "className": "SetCameraKeyFrameShake",
+      "classIndex": 59,
+      "sourceOffset": 201667,
+      "sourceLength": 52,
+      "sourceSha256": "ce07f2ae30c9e0d8bfcd20e075a9fca7dc8d148e463fd737338e81c35d1fdf7c",
+      "declaredFieldCount": 8,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n943/p5",
+          "fieldName": "cameraKeyFrames",
+          "target": "DayEnd:n1403",
+          "targetNodeId": 1403,
+          "offset": 201707
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n192",
+      "level": "Prairie_Cave",
+      "nodeId": 192,
+      "name": "BstNode_3122856073",
+      "className": "SetCameraKeyFrameShake",
+      "classIndex": 28,
+      "sourceOffset": 66696,
+      "sourceLength": 52,
+      "sourceSha256": "a3485852d85624f189b4ad14e080b904aa3fc2a02f19df91180cbfd5e328a7a7",
+      "declaredFieldCount": 8,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n192/p5",
+          "fieldName": "cameraKeyFrames",
+          "target": "Prairie_Cave:n1819",
+          "targetNodeId": 1819,
+          "offset": 66736
+        }
+      ],
+      "incomingReferenceCount": 4,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n312",
+      "level": "Prairie_Cave",
+      "nodeId": 312,
+      "name": "BstNode_2504654886",
+      "className": "SetCameraKeyFrameShake",
+      "classIndex": 28,
+      "sourceOffset": 95772,
+      "sourceLength": 52,
+      "sourceSha256": "73ed69fbe0889d3c7e2569d5f7ee61c1c54085bf86c3fbccf8c4e4c80fbfc59f",
+      "declaredFieldCount": 8,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n312/p5",
+          "fieldName": "cameraKeyFrames",
+          "target": "Prairie_Cave:n1836",
+          "targetNodeId": 1836,
+          "offset": 95812
+        }
+      ],
+      "incomingReferenceCount": 4,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n1053",
+      "level": "Prairie_Cave",
+      "nodeId": 1053,
+      "name": "BstNode_3122856110",
+      "className": "SetCameraKeyFrameShake",
+      "classIndex": 28,
+      "sourceOffset": 266909,
+      "sourceLength": 52,
+      "sourceSha256": "b5997d85cc209774a68499b53f234bcb933429eb2a837ce25d756485c9fa61fb",
+      "declaredFieldCount": 8,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1053/p5",
+          "fieldName": "cameraKeyFrames",
+          "target": "Prairie_Cave:n1908",
+          "targetNodeId": 1908,
+          "offset": 266949
+        }
+      ],
+      "incomingReferenceCount": 4,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n1148",
+      "level": "Rain",
+      "nodeId": 1148,
+      "name": "BstNode_2446917695",
+      "className": "SetCameraKeyFrameShake",
+      "classIndex": 76,
+      "sourceOffset": 286927,
+      "sourceLength": 52,
+      "sourceSha256": "50fb6ca40eb0210aa05b0d3edbee8ab89c50889d30dc7577c17712b068b30af6",
+      "declaredFieldCount": 8,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1148/p5",
+          "fieldName": "cameraKeyFrames",
+          "target": "Rain:n1988",
+          "targetNodeId": 1988,
+          "offset": 286967
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n785",
+      "level": "RainEnd",
+      "nodeId": 785,
+      "name": "BstNode_840695927",
+      "className": "SetCameraKeyFrameShake",
+      "classIndex": 67,
+      "sourceOffset": 217045,
+      "sourceLength": 51,
+      "sourceSha256": "7d1553394c1b1080059749b3d27abdb10b4ac98be053dbf7d213e9615eb87b5a",
+      "declaredFieldCount": 8,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n785/p5",
+          "fieldName": "cameraKeyFrames",
+          "target": "RainEnd:n1574",
+          "targetNodeId": 1574,
+          "offset": 217084
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "Dawn",
+      "path": "Levels/Dawn/Objects.level.bin",
+      "sha256": "16e26aafc7f9d120a548bf5d8bec04fbc18146bc8db531ef75144889b1ff197a",
+      "bytes": 504637,
+      "nodes": 3798,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dawn.json",
+      "markdown": "Objects对象清单/Dawn.md"
+    },
+    {
+      "level": "DayEnd",
+      "path": "Levels/DayEnd/Objects.level.bin",
+      "sha256": "9b5c568cefa987e504a10236c5b61e5de4b748d965d09e42db3602e4e52cc904",
+      "bytes": 268140,
+      "nodes": 1459,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DayEnd.json",
+      "markdown": "Objects对象清单/DayEnd.md"
+    },
+    {
+      "level": "Prairie_Cave",
+      "path": "Levels/Prairie_Cave/Objects.level.bin",
+      "sha256": "675a2256e24f8c4b16540cee6a5cd2b7647ff2fb495724a8bf596717ca39d944",
+      "bytes": 466340,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Cave.json",
+      "markdown": "Objects对象清单/Prairie_Cave.md"
+    },
+    {
+      "level": "Rain",
+      "path": "Levels/Rain/Objects.level.bin",
+      "sha256": "20093bccf3bb1ea0936cb993e66cef0187b40a5a411df3573eb28e4def4f75c6",
+      "bytes": 457732,
+      "nodes": 2079,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Rain.json",
+      "markdown": "Objects对象清单/Rain.md"
+    },
+    {
+      "level": "RainEnd",
+      "path": "Levels/RainEnd/Objects.level.bin",
+      "sha256": "247912ec955153e3df80c16a861eb872573502a285a17943518bdce448a8d5e3",
+      "bytes": 427926,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainEnd.json",
+      "markdown": "Objects对象清单/RainEnd.md"
+    }
+  ]
+}

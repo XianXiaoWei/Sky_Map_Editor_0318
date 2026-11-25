@@ -1,0 +1,108 @@
+0x100225cc0: push rbp
+0x100225cc1: mov rbp, rsp
+0x100225cc4: push r15
+0x100225cc6: push r14
+0x100225cc8: push r12
+0x100225cca: push rbx
+0x100225ccb: sub rsp, 0x70
+0x100225ccf: mov rbx, rcx
+0x100225cd2: mov r12, rdx
+0x100225cd5: mov r14, rsi
+0x100225cd8: mov r15, rdi
+0x100225cdb: mov rax, qword ptr [rip + 0x9e7bf6] ; 0x100c0d8d8
+0x100225ce2: mov rax, qword ptr [rax]
+0x100225ce5: mov qword ptr [rbp - 0x28], rax
+0x100225ce9: vmovaps xmm0, xmmword ptr [rip + 0x88c03f] ; 0x100ab1d30
+0x100225cf1: vmovaps xmmword ptr [rbp - 0x70], xmm0
+0x100225cf6: movabs rax, 0x2000200010000
+0x100225d00: mov qword ptr [rbp - 0x34], rax
+0x100225d04: mov dword ptr [rbp - 0x2c], 3
+0x100225d0b: lea rdi, [rbp - 0x58]
+0x100225d0f: call 0x1007c2530 ; 0x1007c2530
+0x100225d14: call 0x10079cb20 ; 0x10079cb20
+0x100225d19: lea rdx, [rip + 0x954e4f] ; 0x100b7ab6f CloudAnimR
+0x100225d20: mov rdi, rbx
+0x100225d23: mov rsi, rax
+0x100225d26: call 0x1007c4360 ; 0x1007c4360
+0x100225d2b: test rax, rax
+0x100225d2e: je 0x100225d3e
+0x100225d30: lea rsi, [rbp - 0x58]
+0x100225d34: mov rdi, rax
+0x100225d37: call 0x1007c2310 ; 0x1007c2310
+0x100225d3c: jmp 0x100225d56 ; 0x100225d56
+0x100225d3e: call 0x10079cb20 ; 0x10079cb20
+0x100225d43: mov rsi, qword ptr [rax + 8]
+0x100225d47: lea rdx, [rip + 0x954e21] ; 0x100b7ab6f CloudAnimR
+0x100225d4e: mov rdi, rbx
+0x100225d51: call 0x1007c4640 ; 0x1007c4640
+0x100225d56: mov dword ptr [rsp + 0x10], 1
+0x100225d5e: mov dword ptr [rsp + 8], 0x400
+0x100225d66: mov dword ptr [rsp], 6
+0x100225d6d: lea rsi, [rip + 0x954e06] ; 0x100b7ab7a CloudQuadFluffy
+0x100225d74: lea rcx, [rbp - 0x70]
+0x100225d78: lea r9, [rbp - 0x34]
+0x100225d7c: mov edx, 5
+0x100225d81: mov r8d, 4
+0x100225d87: mov rdi, r12
+0x100225d8a: call 0x100228630 ; 0x100228630
+0x100225d8f: mov qword ptr [r15 + 0x10], rax
+0x100225d93: test rax, rax
+0x100225d96: je 0x100225e21
+0x100225d9c: xor esi, esi
+0x100225d9e: mov rdi, rax
+0x100225da1: call 0x100474020 ; 0x100474020
+0x100225da6: mov rbx, rax
+0x100225da9: mov rax, qword ptr [rbp - 0x58]
+0x100225dad: test rax, rax
+0x100225db0: je 0x100225e4c
+0x100225db6: mov rax, qword ptr [rax + 0x10]
+0x100225dba: test rax, rax
+0x100225dbd: je 0x100225e4c
+0x100225dc3: mov rdx, qword ptr [rax + 0xa0]
+0x100225dca: lea rsi, [rip + 0x93f0d8] ; 0x100b64ea9 u_texture
+0x100225dd1: xor ecx, ecx
+0x100225dd3: mov rdi, rbx
+0x100225dd6: call 0x1007be8b0 ; 0x1007be8b0
+0x100225ddb: add r14, 0x10
+0x100225ddf: lea rsi, [rip + 0x954da4] ; 0x100b7ab8a u_probeTexture
+0x100225de6: xor ecx, ecx
+0x100225de8: mov rdi, rbx
+0x100225deb: mov rdx, r14
+0x100225dee: call 0x1007be8b0 ; 0x1007be8b0
+0x100225df3: lea rsi, [rip + 0x954d9f] ; 0x100b7ab99 u_animCellsX
+0x100225dfa: vmovss xmm0, dword ptr [rip + 0x88386e] ; 0x100aa9670
+0x100225e02: mov rdi, rbx
+0x100225e05: call 0x1007be530 ; 0x1007be530
+0x100225e0a: lea rsi, [rip + 0x954d95] ; 0x100b7aba6 u_animCellsY
+0x100225e11: vmovss xmm0, dword ptr [rip + 0x883857] ; 0x100aa9670
+0x100225e19: mov rdi, rbx
+0x100225e1c: call 0x1007be530 ; 0x1007be530
+0x100225e21: lea rdi, [rbp - 0x58]
+0x100225e25: call 0x1007c2570 ; 0x1007c2570
+0x100225e2a: mov rax, qword ptr [rip + 0x9e7aa7] ; 0x100c0d8d8
+0x100225e31: mov rax, qword ptr [rax]
+0x100225e34: cmp rax, qword ptr [rbp - 0x28]
+0x100225e38: jne 0x100225e47
+0x100225e3a: add rsp, 0x70
+0x100225e3e: pop rbx
+0x100225e3f: pop r12
+0x100225e41: pop r14
+0x100225e43: pop r15
+0x100225e45: pop rbp
+0x100225e46: ret 
+0x100225e47: call 0x100aa251c ; 0x100aa251c ___stack_chk_fail
+0x100225e4c: lea rdi, [rip + 0x940012] ; 0x100b65e65 Observed()
+0x100225e53: lea rsi, [rip + 0x950ea0] ; 0x100b76cfa ../../../Code/Base/ImageRegion.h
+0x100225e5a: mov edx, 0x33
+0x100225e5f: mov ecx, 3
+0x100225e64: call 0x1007e5f70 ; 0x1007e5f70
+0x100225e69: ud2 
+0x100225e6b: jmp 0x100225e71 ; 0x100225e71
+0x100225e6d: jmp 0x100225e71 ; 0x100225e71
+0x100225e6f: jmp 0x100225e71 ; 0x100225e71
+0x100225e71: mov rbx, rax
+0x100225e74: lea rdi, [rbp - 0x58]
+0x100225e78: call 0x1007c2570 ; 0x1007c2570
+0x100225e7d: mov rdi, rbx
+0x100225e80: call 0x100aa2192 ; 0x100aa2192 __Unwind_Resume
+0x100225e85: nop word ptr cs:[rax + rax]

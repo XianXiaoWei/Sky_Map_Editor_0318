@@ -1,0 +1,48 @@
+{
+  "updatedAtUTC": "2026-11-24T17:02:09.241716+00:00",
+  "passed": true,
+  "status": "Original-code oracles, full project regression, TypeScript and desktop build passed. Creature runtime remains incomplete.",
+  "nativeOracles": {
+    "state": {
+      "report": "docs/crab-state-oracle.json",
+      "passed": true,
+      "cases": 87
+    },
+    "update": {
+      "report": "docs/crab-ai-update-oracle.json",
+      "passed": true,
+      "cases": 139
+    }
+  },
+  "completeCreatureRuntime": false,
+  "packageCreated": false,
+  "scope": "Original Crab state-selection and per-frame AI functions; actual Crab.Update, Model/animation owners and viewport lifecycle remain pending.",
+  "projectTests": {
+    "passed": 593,
+    "failed": 0,
+    "log": "/root/sky-research/crab-ai-project-test-20261124.log",
+    "sha256": "edecb5353b02f5a8b650ddac90e849791bb0f8b28ce3b95227185c83950a9bc8"
+  },
+  "typescript": {
+    "command": "npx tsc --noEmit",
+    "exitCode": 0
+  },
+  "desktopBuild": {
+    "command": "npm run build:desktop",
+    "exitCode": 0
+  },
+  "files": {
+    "src/core/crab-state-runtime.ts": "8375d3cfd2b3efe2e8d9c9a5af77524bc2535f3058db0d13b0af4d25f85d76e1",
+    "src/core/crab-ai-update-runtime.ts": "b4d32bbde31bae266ebcb3485cd186df42fa7f89989bb3a54f8410c89b574cc1",
+    "tools/crab-behavior-cases.ts": "d83636e9d174b107a33707f5f5b7d84492729148349bd24c6739422faa37094f",
+    "tools/crab-behavior-oracle.ts": "2afa3da294e213fb1b07170dceab2cab0d0ee7fa0724d0dabd006d733ee3c9d7",
+    "tools/native-crab-behavior-oracle.c": "8f650e44ab78e48138cbd9bce36a7fed0a22c4703f27dc14cb2727930c8508b6",
+    "tools/reverse-crab-behavior.py": "cd29374cc83e68315b5d1cb7c9c66a146572b32540bb7bf0ab77007e56d7f9a7",
+    "tests/crab-state-runtime.test.ts": "037a6129de756ff6e4db59117ddaccdd1367e64b95fb1be35051d4800b23b0fb",
+    "tests/crab-ai-update-runtime.test.ts": "fa166cfdb0edc7c6fd4d95791eff61274fce5ecd0fe47c11f0e8c578f1cfca63",
+    "tests/fixtures/crab-state-native.json.gz": "ef0fd0e4d7745295081e2e497c2e4934d6940702e7e9a1bee749d3c84d693c73",
+    "tests/fixtures/crab-ai-update-native.json.gz": "43715f20fc39aa23d90574b2f568c2cd438070f0e4d2d5b77867650b536cb849",
+    "docs/crab-state-oracle.json": "b144abb4e7937bf6a61779aa28cc54a913365503720c64189c992c12dc3f7020",
+    "docs/crab-ai-update-oracle.json": "b2b7204ccff894dbb75b90e7132b6c45f1590d3c0415bd395e4cd1015f044e23"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "functions": {
+    "Darkstone.BuildHierarchy": "0x10027ae30",
+    "Obb.Distance": "0x10078ce10"
+  },
+  "cases": 81,
+  "comparedCases": 81,
+  "comparedBytes": 32089932,
+  "serviceCalls": 7452,
+  "scope": "Original hierarchy CFG and original Obb distance arithmetic under QEMU. Four hierarchy call targets are redirected to an observer which executes the unchanged original distance leaf. Prepared mesh virtual transforms/OBBs and assertions are explicit services. All caller memory, pointer permutation, cursor, parent/child indices, capacity failures and call order/float32 distance bits are compared. Includes rotated/anisotropic/tiny/zero OBBs, overlap chains, separate sibling groups, disconnected suffixes, ties, ancestor traversal and callback mutations. SoulTrap loader has a composition entry using this actual hierarchy. Real Model initialization, native scene ownership, burning/propagation/reward/network/render/unload and complete classes remain pending.",
+  "failures": []
+}

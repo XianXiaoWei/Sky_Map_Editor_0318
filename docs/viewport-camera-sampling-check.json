@@ -1,0 +1,1349 @@
+{
+  "passed": true,
+  "scope": "Production native viewport cloud chain on real BstBaked.meshes. Vulkan preview, not original Metal/game visual equivalence.",
+  "maps": [
+    {
+      "level": "Dawn",
+      "colors": 2277,
+      "eye": [
+        113.48152160644531,
+        90.05788993835449,
+        310.37013244628906
+      ],
+      "samplingFrames": [
+        {
+          "frame": 0,
+          "phase": 0,
+          "halfPhase": 0,
+          "pixelOffset": [
+            0.0625,
+            -0.1875
+          ],
+          "jitter": [
+            -0.00032552084303461015,
+            0.0017361111240461469
+          ],
+          "jitterHalf": [
+            -0.0026041667442768812,
+            -0.004629629664123058
+          ],
+          "clockScope": "Editor completed-frame counter; native sampling sequence, not original process frame timing"
+        },
+        {
+          "frame": 1,
+          "phase": 1,
+          "halfPhase": 1,
+          "pixelOffset": [
+            -0.1875,
+            0.1875
+          ],
+          "jitter": [
+            0.0009765625,
+            -0.0017361111240461469
+          ],
+          "jitterHalf": [
+            0.0026041667442768812,
+            -0.004629629664123058
+          ],
+          "clockScope": "Editor completed-frame counter; native sampling sequence, not original process frame timing"
+        },
+        {
+          "frame": 2,
+          "phase": 2,
+          "halfPhase": 2,
+          "pixelOffset": [
+            0.3125,
+            -0.4375
+          ],
+          "jitter": [
+            -0.0016276041278615594,
+            0.004050925839692354
+          ],
+          "jitterHalf": [
+            -0.0026041667442768812,
+            0.004629629664123058
+          ],
+          "clockScope": "Editor completed-frame counter; native sampling sequence, not original process frame timing"
+        },
+        {
+          "frame": 3,
+          "phase": 3,
+          "halfPhase": 3,
+          "pixelOffset": [
+            -0.3125,
+            -0.0625
+          ],
+          "jitter": [
+            0.0016276041278615594,
+            0.0005787037080153823
+          ],
+          "jitterHalf": [
+            0.0026041667442768812,
+            0.004629629664123058
+          ],
+          "clockScope": "Editor completed-frame counter; native sampling sequence, not original process frame timing"
+        },
+        {
+          "frame": 4,
+          "phase": 4,
+          "halfPhase": 0,
+          "pixelOffset": [
+            0.1875,
+            0.3125
+          ],
+          "jitter": [
+            -0.0009765625,
+            -0.0028935184236615896
+          ],
+          "jitterHalf": [
+            -0.0026041667442768812,
+            -0.004629629664123058
+          ],
+          "clockScope": "Editor completed-frame counter; native sampling sequence, not original process frame timing"
+        },
+        {
+          "frame": 5,
+          "phase": 5,
+          "halfPhase": 2,
+          "pixelOffset": [
+            -0.0625,
+            -0.3125
+          ],
+          "jitter": [
+            0.00032552084303461015,
+            0.0028935184236615896
+          ],
+          "jitterHalf": [
+            -0.0026041667442768812,
+            0.004629629664123058
+          ],
+          "clockScope": "Editor completed-frame counter; native sampling sequence, not original process frame timing"
+        },
+        {
+          "frame": 6,
+          "phase": 6,
+          "halfPhase": 1,
+          "pixelOffset": [
+            0.4375,
+            0.0625
+          ],
+          "jitter": [
+            -0.0022786457557231188,
+            -0.0005787037080153823
+          ],
+          "jitterHalf": [
+            0.0026041667442768812,
+            -0.004629629664123058
+          ],
+          "clockScope": "Editor completed-frame counter; native sampling sequence, not original process frame timing"
+        },
+        {
+          "frame": 7,
+          "phase": 7,
+          "halfPhase": 3,
+          "pixelOffset": [
+            -0.4375,
+            0.4375
+          ],
+          "jitter": [
+            0.0022786457557231188,
+            -0.004050925839692354
+          ],
+          "jitterHalf": [
+            0.0026041667442768812,
+            0.004629629664123058
+          ],
+          "clockScope": "Editor completed-frame counter; native sampling sequence, not original process frame timing"
+        }
+      ],
+      "scope": "Original sparse cloud fields and CloudFluffy.vol; CloudCore history/signed depth, three depth passes, 1/8 and 1/4 R16F coarse passes, half-resolution dual RGBA16F CloudFluffy plus dynamic CloudCard, original FogUpsample, MotionGen/MotionDilate/TemporalAa and Tonemap GLSL. Native eight-phase scene and 32-phase half jitter, Gaussian taps and current-jitter correction of previous projection; editor frame clock. Stage-sized viewport uniforms; native top-row depth for AIR FragCoord and explicit lower-left storage for projected Coarse/Fog UV. Preview: zero sampled EnvironmentForces wind, static map-start environments, camera used for local avatar, neutral unbaked card lighting, no Visibility occlusion, water/fog-volume/transparent-list/bloom/motion-blur inputs zero, static opaque motion with original temporal resolve; deterministic editor rand31 stream with native conversion, explicit preview composed-HDR geometric-mean exposure and sRGB display transfer. Native opaque RGBA32F converted once to half RTE; original per-draw Metal half rounding/game image parity remain unverified.",
+      "enabled": true,
+      "frames": 8,
+      "volumeBlocks": 6361,
+      "proxyTriangles": 24781,
+      "visibleCards": 74,
+      "passes": [
+        "CloudCore",
+        "OpaqueRGBDepth",
+        "DepthDownsample",
+        "DepthDownsampleGather",
+        "DepthDownsampleQuarter",
+        "CloudFluffySuperCoarse",
+        "CloudFluffyCoarse",
+        "CloudFluffy",
+        "CloudCard",
+        "PreviewLuminance",
+        "FogUpsample",
+        "MotionGen",
+        "MotionDilate",
+        "TemporalAa",
+        "Tonemap"
+      ],
+      "noise": "Tex3D/CloudFluffy.vol",
+      "screenNoiseImages": [
+        "NoiseBlue3Ch",
+        "HeatTex"
+      ],
+      "randomOffset": [
+        0.06703031063079834,
+        0.7690919041633606,
+        0.007876011542975903
+      ],
+      "sampling": {
+        "frame": 7,
+        "phase": 7,
+        "halfPhase": 3,
+        "pixelOffset": [
+          -0.4375,
+          0.4375
+        ],
+        "jitter": [
+          0.0022786457557231188,
+          -0.004050925839692354
+        ],
+        "jitterHalf": [
+          0.0026041667442768812,
+          0.004629629664123058
+        ],
+        "clockScope": "Editor completed-frame counter; native sampling sequence, not original process frame timing"
+      },
+      "randomStreamScope": "Deterministic editor 31-bit sequence with original Compositor conversion; process-wide Darwin rand stream not reproduced",
+      "wind": {
+        "move": [
+          0.40000003576278687,
+          0,
+          0,
+          0
+        ],
+        "scroll": [
+          3.200000524520874,
+          0,
+          0,
+          0
+        ],
+        "time": 0.8000000715255737
+      },
+      "undulationScale": 1,
+      "cloudMat": [
+        0.4562634229660034,
+        0.4562634229660034,
+        0.4562634229660034,
+        0.10000000149011612
+      ],
+      "cloudNoiseTweaks": [
+        2.5,
+        0.5,
+        0.5,
+        0.15000000596046448
+      ],
+      "lastMilliseconds": 1421.6553639999984,
+      "averageLum": 0.0014958920965638276,
+      "exposureScope": "Editor composed-HDR geometric mean and sRGB display transfer; original luminance feedback pending",
+      "statistics": {
+        "Opaque": {
+          "min": [
+            0,
+            0,
+            0,
+            -47.03125
+          ],
+          "max": [
+            0.17772945761680603,
+            0.18465562164783478,
+            0.12934665381908417,
+            35.95110321044922
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CloudFluffySuperCoarse": {
+          "min": [
+            2.5,
+            0,
+            0,
+            1
+          ],
+          "max": [
+            428.75,
+            0,
+            0,
+            1
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CloudFluffyCoarse": {
+          "min": [
+            2.5,
+            0,
+            0,
+            1
+          ],
+          "max": [
+            448,
+            0,
+            0,
+            1
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CloudA": {
+          "min": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "max": [
+            0.09637451171875,
+            0.0289154052734375,
+            0.01267242431640625,
+            1.0166015625
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CloudB": {
+          "min": [
+            0,
+            -0.007598876953125,
+            -0.1673583984375,
+            0
+          ],
+          "max": [
+            2226,
+            0.9833984375,
+            1.09765625,
+            1.0166015625
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "FogUpsample": {
+          "min": [
+            0.046966552734375,
+            0.042938232421875,
+            0.08319091796875,
+            0
+          ],
+          "max": [
+            0.9853515625,
+            0.99169921875,
+            0.99560546875,
+            0
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "MotionGen": {
+          "min": [
+            -0.11578369140625,
+            -8.546875,
+            112.625,
+            0.00019991397857666016
+          ],
+          "max": [
+            0.9833984375,
+            16.71875,
+            65504,
+            0.0079803466796875
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "MotionDilate": {
+          "min": [
+            -0.11578369140625,
+            -8.546875,
+            -0.180908203125,
+            -1.7626953125
+          ],
+          "max": [
+            0.9833984375,
+            16.71875,
+            -0.00009995698928833008,
+            -0.00009995698928833008
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "TemporalAa": {
+          "min": [
+            0.059539794921875,
+            0.053741455078125,
+            0.09637451171875,
+            0
+          ],
+          "max": [
+            0.93408203125,
+            0.93359375,
+            0.9580078125,
+            0
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "temporal": {
+          "cameraCut": false,
+          "frames": 8,
+          "scope": "Original GLES motion and temporal fragments, supplied native camera Gaussian taps, previous composed color. Static opaque motion; moving model Motion list and original Metal quantization pending."
+        },
+        "Tonemap": {
+          "min": [
+            0.0015499177388846874,
+            0.00157362746540457,
+            0.000616201723460108,
+            0
+          ],
+          "max": [
+            0.868273913860321,
+            0.8765648007392883,
+            0.8000907301902771,
+            0
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "level": "Prairie_ButterflyFields",
+      "colors": 3265,
+      "eye": [
+        84.15138244628906,
+        239.79040336608887,
+        489.219448852539
+      ],
+      "samplingFrames": [
+        {
+          "frame": 0,
+          "phase": 0,
+          "halfPhase": 0,
+          "pixelOffset": [
+            0.0625,
+            -0.1875
+          ],
+          "jitter": [
+            -0.00032552084303461015,
+            0.0017361111240461469
+          ],
+          "jitterHalf": [
+            -0.0026041667442768812,
+            -0.004629629664123058
+          ],
+          "clockScope": "Editor completed-frame counter; native sampling sequence, not original process frame timing"
+        },
+        {
+          "frame": 1,
+          "phase": 1,
+          "halfPhase": 1,
+          "pixelOffset": [
+            -0.1875,
+            0.1875
+          ],
+          "jitter": [
+            0.0009765625,
+            -0.0017361111240461469
+          ],
+          "jitterHalf": [
+            0.0026041667442768812,
+            -0.004629629664123058
+          ],
+          "clockScope": "Editor completed-frame counter; native sampling sequence, not original process frame timing"
+        },
+        {
+          "frame": 2,
+          "phase": 2,
+          "halfPhase": 2,
+          "pixelOffset": [
+            0.3125,
+            -0.4375
+          ],
+          "jitter": [
+            -0.0016276041278615594,
+            0.004050925839692354
+          ],
+          "jitterHalf": [
+            -0.0026041667442768812,
+            0.004629629664123058
+          ],
+          "clockScope": "Editor completed-frame counter; native sampling sequence, not original process frame timing"
+        },
+        {
+          "frame": 3,
+          "phase": 3,
+          "halfPhase": 3,
+          "pixelOffset": [
+            -0.3125,
+            -0.0625
+          ],
+          "jitter": [
+            0.0016276041278615594,
+            0.0005787037080153823
+          ],
+          "jitterHalf": [
+            0.0026041667442768812,
+            0.004629629664123058
+          ],
+          "clockScope": "Editor completed-frame counter; native sampling sequence, not original process frame timing"
+        },
+        {
+          "frame": 4,
+          "phase": 4,
+          "halfPhase": 0,
+          "pixelOffset": [
+            0.1875,
+            0.3125
+          ],
+          "jitter": [
+            -0.0009765625,
+            -0.0028935184236615896
+          ],
+          "jitterHalf": [
+            -0.0026041667442768812,
+            -0.004629629664123058
+          ],
+          "clockScope": "Editor completed-frame counter; native sampling sequence, not original process frame timing"
+        },
+        {
+          "frame": 5,
+          "phase": 5,
+          "halfPhase": 2,
+          "pixelOffset": [
+            -0.0625,
+            -0.3125
+          ],
+          "jitter": [
+            0.00032552084303461015,
+            0.0028935184236615896
+          ],
+          "jitterHalf": [
+            -0.0026041667442768812,
+            0.004629629664123058
+          ],
+          "clockScope": "Editor completed-frame counter; native sampling sequence, not original process frame timing"
+        },
+        {
+          "frame": 6,
+          "phase": 6,
+          "halfPhase": 1,
+          "pixelOffset": [
+            0.4375,
+            0.0625
+          ],
+          "jitter": [
+            -0.0022786457557231188,
+            -0.0005787037080153823
+          ],
+          "jitterHalf": [
+            0.0026041667442768812,
+            -0.004629629664123058
+          ],
+          "clockScope": "Editor completed-frame counter; native sampling sequence, not original process frame timing"
+        },
+        {
+          "frame": 7,
+          "phase": 7,
+          "halfPhase": 3,
+          "pixelOffset": [
+            -0.4375,
+            0.4375
+          ],
+          "jitter": [
+            0.0022786457557231188,
+            -0.004050925839692354
+          ],
+          "jitterHalf": [
+            0.0026041667442768812,
+            0.004629629664123058
+          ],
+          "clockScope": "Editor completed-frame counter; native sampling sequence, not original process frame timing"
+        }
+      ],
+      "scope": "Original sparse cloud fields and CloudFluffy.vol; CloudCore history/signed depth, three depth passes, 1/8 and 1/4 R16F coarse passes, half-resolution dual RGBA16F CloudFluffy plus dynamic CloudCard, original FogUpsample, MotionGen/MotionDilate/TemporalAa and Tonemap GLSL. Native eight-phase scene and 32-phase half jitter, Gaussian taps and current-jitter correction of previous projection; editor frame clock. Stage-sized viewport uniforms; native top-row depth for AIR FragCoord and explicit lower-left storage for projected Coarse/Fog UV. Preview: zero sampled EnvironmentForces wind, static map-start environments, camera used for local avatar, neutral unbaked card lighting, no Visibility occlusion, water/fog-volume/transparent-list/bloom/motion-blur inputs zero, static opaque motion with original temporal resolve; deterministic editor rand31 stream with native conversion, explicit preview composed-HDR geometric-mean exposure and sRGB display transfer. Native opaque RGBA32F converted once to half RTE; original per-draw Metal half rounding/game image parity remain unverified.",
+      "enabled": true,
+      "frames": 8,
+      "volumeBlocks": 26623,
+      "proxyTriangles": 24934,
+      "visibleCards": 14,
+      "passes": [
+        "CloudCore",
+        "OpaqueRGBDepth",
+        "DepthDownsample",
+        "DepthDownsampleGather",
+        "DepthDownsampleQuarter",
+        "CloudFluffySuperCoarse",
+        "CloudFluffyCoarse",
+        "CloudFluffy",
+        "CloudCard",
+        "PreviewLuminance",
+        "FogUpsample",
+        "MotionGen",
+        "MotionDilate",
+        "TemporalAa",
+        "Tonemap"
+      ],
+      "noise": "Tex3D/CloudFluffy.vol",
+      "screenNoiseImages": [
+        "NoiseBlue3Ch",
+        "HeatTex"
+      ],
+      "randomOffset": [
+        0.06703031063079834,
+        0.7690919041633606,
+        0.007876011542975903
+      ],
+      "sampling": {
+        "frame": 7,
+        "phase": 7,
+        "halfPhase": 3,
+        "pixelOffset": [
+          -0.4375,
+          0.4375
+        ],
+        "jitter": [
+          0.0022786457557231188,
+          -0.004050925839692354
+        ],
+        "jitterHalf": [
+          0.0026041667442768812,
+          0.004629629664123058
+        ],
+        "clockScope": "Editor completed-frame counter; native sampling sequence, not original process frame timing"
+      },
+      "randomStreamScope": "Deterministic editor 31-bit sequence with original Compositor conversion; process-wide Darwin rand stream not reproduced",
+      "wind": {
+        "move": [
+          0.40000003576278687,
+          0,
+          0,
+          0
+        ],
+        "scroll": [
+          3.200000524520874,
+          0,
+          0,
+          0
+        ],
+        "time": 0.8000000715255737
+      },
+      "undulationScale": 1,
+      "cloudMat": [
+        0.4562634229660034,
+        0.4562634229660034,
+        0.4562634229660034,
+        0.10000000149011612
+      ],
+      "cloudNoiseTweaks": [
+        2.5,
+        0.5,
+        0.5,
+        0.15000000596046448
+      ],
+      "lastMilliseconds": 1971.7306760000065,
+      "averageLum": 0.1671993799809746,
+      "exposureScope": "Editor composed-HDR geometric mean and sRGB display transfer; original luminance feedback pending",
+      "statistics": {
+        "Opaque": {
+          "min": [
+            0.0022094675805419683,
+            0.003732908982783556,
+            0.006315093021839857,
+            -101.9375
+          ],
+          "max": [
+            1.0380859375,
+            1.0869140625,
+            2.626338481903076,
+            122.41710662841797
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CloudFluffySuperCoarse": {
+          "min": [
+            2.5,
+            0,
+            0,
+            1
+          ],
+          "max": [
+            815,
+            0,
+            0,
+            1
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CloudFluffyCoarse": {
+          "min": [
+            2.5,
+            0,
+            0,
+            1
+          ],
+          "max": [
+            865,
+            0,
+            0,
+            1
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CloudA": {
+          "min": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "max": [
+            1.0556640625,
+            1.1025390625,
+            1.361328125,
+            1.0048828125
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CloudB": {
+          "min": [
+            0,
+            -0.00012385845184326172,
+            -0.0037326812744140625,
+            0
+          ],
+          "max": [
+            2544,
+            1.953125,
+            0.00013780593872070312,
+            1.0048828125
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "FogUpsample": {
+          "min": [
+            0.1365966796875,
+            0.1314697265625,
+            0.01971435546875,
+            0
+          ],
+          "max": [
+            0.99951171875,
+            0.99658203125,
+            0.93017578125,
+            0
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "MotionGen": {
+          "min": [
+            -0.023406982421875,
+            -0.705078125,
+            126.9375,
+            0.00019991397857666016
+          ],
+          "max": [
+            1.953125,
+            0.0001678466796875,
+            65504,
+            0.0005350112915039062
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "MotionDilate": {
+          "min": [
+            -0.023406982421875,
+            -0.705078125,
+            -0.363037109375,
+            -0.3662109375
+          ],
+          "max": [
+            1.953125,
+            0.0001678466796875,
+            -0.00009995698928833008,
+            -0.00009995698928833008
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "TemporalAa": {
+          "min": [
+            0.1427001953125,
+            0.1351318359375,
+            0.020660400390625,
+            0
+          ],
+          "max": [
+            0.99951171875,
+            0.99658203125,
+            0.9296875,
+            0
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "temporal": {
+          "cameraCut": false,
+          "frames": 8,
+          "scope": "Original GLES motion and temporal fragments, supplied native camera Gaussian taps, previous composed color. Static opaque motion; moving model Motion list and original Metal quantization pending."
+        },
+        "Tonemap": {
+          "min": [
+            8.044071364565752e-8,
+            0.0000039512083276349586,
+            0.0017701680772006512,
+            0
+          ],
+          "max": [
+            0.7009856700897217,
+            0.7121648192405701,
+            0.951093852519989,
+            0
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "level": "Sunset",
+      "colors": 3006,
+      "eye": [
+        8.036483764648438,
+        248.06513595581055,
+        -14.807305908203148
+      ],
+      "samplingFrames": [
+        {
+          "frame": 0,
+          "phase": 0,
+          "halfPhase": 0,
+          "pixelOffset": [
+            0.0625,
+            -0.1875
+          ],
+          "jitter": [
+            -0.00032552084303461015,
+            0.0017361111240461469
+          ],
+          "jitterHalf": [
+            -0.0026041667442768812,
+            -0.004629629664123058
+          ],
+          "clockScope": "Editor completed-frame counter; native sampling sequence, not original process frame timing"
+        },
+        {
+          "frame": 1,
+          "phase": 1,
+          "halfPhase": 1,
+          "pixelOffset": [
+            -0.1875,
+            0.1875
+          ],
+          "jitter": [
+            0.0009765625,
+            -0.0017361111240461469
+          ],
+          "jitterHalf": [
+            0.0026041667442768812,
+            -0.004629629664123058
+          ],
+          "clockScope": "Editor completed-frame counter; native sampling sequence, not original process frame timing"
+        },
+        {
+          "frame": 2,
+          "phase": 2,
+          "halfPhase": 2,
+          "pixelOffset": [
+            0.3125,
+            -0.4375
+          ],
+          "jitter": [
+            -0.0016276041278615594,
+            0.004050925839692354
+          ],
+          "jitterHalf": [
+            -0.0026041667442768812,
+            0.004629629664123058
+          ],
+          "clockScope": "Editor completed-frame counter; native sampling sequence, not original process frame timing"
+        },
+        {
+          "frame": 3,
+          "phase": 3,
+          "halfPhase": 3,
+          "pixelOffset": [
+            -0.3125,
+            -0.0625
+          ],
+          "jitter": [
+            0.0016276041278615594,
+            0.0005787037080153823
+          ],
+          "jitterHalf": [
+            0.0026041667442768812,
+            0.004629629664123058
+          ],
+          "clockScope": "Editor completed-frame counter; native sampling sequence, not original process frame timing"
+        },
+        {
+          "frame": 4,
+          "phase": 4,
+          "halfPhase": 0,
+          "pixelOffset": [
+            0.1875,
+            0.3125
+          ],
+          "jitter": [
+            -0.0009765625,
+            -0.0028935184236615896
+          ],
+          "jitterHalf": [
+            -0.0026041667442768812,
+            -0.004629629664123058
+          ],
+          "clockScope": "Editor completed-frame counter; native sampling sequence, not original process frame timing"
+        },
+        {
+          "frame": 5,
+          "phase": 5,
+          "halfPhase": 2,
+          "pixelOffset": [
+            -0.0625,
+            -0.3125
+          ],
+          "jitter": [
+            0.00032552084303461015,
+            0.0028935184236615896
+          ],
+          "jitterHalf": [
+            -0.0026041667442768812,
+            0.004629629664123058
+          ],
+          "clockScope": "Editor completed-frame counter; native sampling sequence, not original process frame timing"
+        },
+        {
+          "frame": 6,
+          "phase": 6,
+          "halfPhase": 1,
+          "pixelOffset": [
+            0.4375,
+            0.0625
+          ],
+          "jitter": [
+            -0.0022786457557231188,
+            -0.0005787037080153823
+          ],
+          "jitterHalf": [
+            0.0026041667442768812,
+            -0.004629629664123058
+          ],
+          "clockScope": "Editor completed-frame counter; native sampling sequence, not original process frame timing"
+        },
+        {
+          "frame": 7,
+          "phase": 7,
+          "halfPhase": 3,
+          "pixelOffset": [
+            -0.4375,
+            0.4375
+          ],
+          "jitter": [
+            0.0022786457557231188,
+            -0.004050925839692354
+          ],
+          "jitterHalf": [
+            0.0026041667442768812,
+            0.004629629664123058
+          ],
+          "clockScope": "Editor completed-frame counter; native sampling sequence, not original process frame timing"
+        }
+      ],
+      "scope": "Original sparse cloud fields and CloudFluffy.vol; CloudCore history/signed depth, three depth passes, 1/8 and 1/4 R16F coarse passes, half-resolution dual RGBA16F CloudFluffy plus dynamic CloudCard, original FogUpsample, MotionGen/MotionDilate/TemporalAa and Tonemap GLSL. Native eight-phase scene and 32-phase half jitter, Gaussian taps and current-jitter correction of previous projection; editor frame clock. Stage-sized viewport uniforms; native top-row depth for AIR FragCoord and explicit lower-left storage for projected Coarse/Fog UV. Preview: zero sampled EnvironmentForces wind, static map-start environments, camera used for local avatar, neutral unbaked card lighting, no Visibility occlusion, water/fog-volume/transparent-list/bloom/motion-blur inputs zero, static opaque motion with original temporal resolve; deterministic editor rand31 stream with native conversion, explicit preview composed-HDR geometric-mean exposure and sRGB display transfer. Native opaque RGBA32F converted once to half RTE; original per-draw Metal half rounding/game image parity remain unverified.",
+      "enabled": true,
+      "frames": 8,
+      "volumeBlocks": 19843,
+      "proxyTriangles": 16871,
+      "visibleCards": 15,
+      "passes": [
+        "CloudCore",
+        "OpaqueRGBDepth",
+        "DepthDownsample",
+        "DepthDownsampleGather",
+        "DepthDownsampleQuarter",
+        "CloudFluffySuperCoarse",
+        "CloudFluffyCoarse",
+        "CloudFluffy",
+        "CloudCard",
+        "PreviewLuminance",
+        "FogUpsample",
+        "MotionGen",
+        "MotionDilate",
+        "TemporalAa",
+        "Tonemap"
+      ],
+      "noise": "Tex3D/CloudFluffy.vol",
+      "screenNoiseImages": [
+        "NoiseBlue3Ch",
+        "HeatTex"
+      ],
+      "randomOffset": [
+        0.06703031063079834,
+        0.7690919041633606,
+        0.007876011542975903
+      ],
+      "sampling": {
+        "frame": 7,
+        "phase": 7,
+        "halfPhase": 3,
+        "pixelOffset": [
+          -0.4375,
+          0.4375
+        ],
+        "jitter": [
+          0.0022786457557231188,
+          -0.004050925839692354
+        ],
+        "jitterHalf": [
+          0.0026041667442768812,
+          0.004629629664123058
+        ],
+        "clockScope": "Editor completed-frame counter; native sampling sequence, not original process frame timing"
+      },
+      "randomStreamScope": "Deterministic editor 31-bit sequence with original Compositor conversion; process-wide Darwin rand stream not reproduced",
+      "wind": {
+        "move": [
+          0.40000003576278687,
+          0,
+          0,
+          0
+        ],
+        "scroll": [
+          3.200000524520874,
+          0,
+          0,
+          0
+        ],
+        "time": 0.8000000715255737
+      },
+      "undulationScale": 0,
+      "cloudMat": [
+        0.4562634229660034,
+        0.4562634229660034,
+        0.4562634229660034,
+        0.20000000298023224
+      ],
+      "cloudNoiseTweaks": [
+        2.5,
+        9.18466567993164,
+        0.5,
+        0.15000000596046448
+      ],
+      "lastMilliseconds": 1932.030936999996,
+      "averageLum": 0.015183064339160942,
+      "exposureScope": "Editor composed-HDR geometric mean and sRGB display transfer; original luminance feedback pending",
+      "statistics": {
+        "Opaque": {
+          "min": [
+            -0.03885556757450104,
+            -0.04557643458247185,
+            -0.06854826956987381,
+            -52.65625
+          ],
+          "max": [
+            3.3932037353515625,
+            2.3816351890563965,
+            2.6048099994659424,
+            57.17361068725586
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CloudFluffySuperCoarse": {
+          "min": [
+            2.5,
+            0,
+            0,
+            1
+          ],
+          "max": [
+            8.015625,
+            0,
+            0,
+            1
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CloudFluffyCoarse": {
+          "min": [
+            2.5,
+            0,
+            0,
+            1
+          ],
+          "max": [
+            8.140625,
+            0,
+            0,
+            1
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CloudA": {
+          "min": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "max": [
+            0.0199127197265625,
+            0.02764892578125,
+            0.057861328125,
+            1
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CloudB": {
+          "min": [
+            0,
+            0,
+            -0.01361083984375,
+            0
+          ],
+          "max": [
+            784.5,
+            46.84375,
+            0,
+            1
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "FogUpsample": {
+          "min": [
+            0.0006585121154785156,
+            0.0013322830200195312,
+            0.0011148452758789062,
+            0
+          ],
+          "max": [
+            0.9970703125,
+            0.9951171875,
+            0.99072265625,
+            0
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "MotionGen": {
+          "min": [
+            -0.0001220703125,
+            -0.01361083984375,
+            5.38671875,
+            0.00019991397857666016
+          ],
+          "max": [
+            46.84375,
+            0.0001678466796875,
+            65504,
+            0.1929931640625
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "MotionDilate": {
+          "min": [
+            -0.0001220703125,
+            -0.0135040283203125,
+            -8.671875,
+            -8.78125
+          ],
+          "max": [
+            46.84375,
+            0.0001678466796875,
+            -0.00009995698928833008,
+            -0.00009995698928833008
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "TemporalAa": {
+          "min": [
+            0.0006723403930664062,
+            0.0013456344604492188,
+            0.0011224746704101562,
+            0
+          ],
+          "max": [
+            0.982421875,
+            0.95654296875,
+            0.88916015625,
+            0
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "temporal": {
+          "cameraCut": false,
+          "frames": 8,
+          "scope": "Original GLES motion and temporal fragments, supplied native camera Gaussian taps, previous composed color. Static opaque motion; moving model Motion list and original Metal quantization pending."
+        },
+        "Tonemap": {
+          "min": [
+            0.00010576119530014694,
+            0.0006607703980989754,
+            0.004557035863399506,
+            0
+          ],
+          "max": [
+            0.9980140328407288,
+            0.9960132241249084,
+            0.9966655373573303,
+            0
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    }
+  ],
+  "device": {
+    "engine": "Sky Native Vulkan",
+    "backend": "Vulkan",
+    "device": "llvmpipe (LLVM 19.1.7, 128 bits)",
+    "apiVersion": 4210993,
+    "deviceType": 4,
+    "shaderFloat16": true
+  }
+}

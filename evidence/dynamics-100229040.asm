@@ -1,0 +1,5 @@
+0x100229040: push rbp
+0x100229041: mov rbp, rsp
+0x100229044: pop rbp
+0x100229045: jmp 0x100229060 ; 0x100229060
+0x10022904a: nop word ptr [rax + rax]

@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "checks": [
+    "Actual StormEnd #512 starts its saved five-second transform with both shared events registered",
+    "Original completion request enables zero-duration #433 and returns to #512; scene Marker transforms change",
+    "Pausing a cycle freezes every event and every affected Marker matrix",
+    "Stopping clears the entire cycle and leaves saved Objects/meshes clean",
+    "Mode/map cleanup stops both events without renderer errors"
+  ],
+  "scope": "Real StormEnd #512/#433 TransformObject completion cycle displayed in Electron/Vulkan with Marker helper frames. Original recovered EventBarn update drives editor matrices; this is editor visualization, not full original game rendering.",
+  "windowsTested": false,
+  "moving": {
+    "id": 512,
+    "running": true,
+    "paused": false,
+    "progress": 0.07579999417066574,
+    "elapsed": 0.3789999783039093,
+    "events": [
+      {
+        "id": 433,
+        "running": false,
+        "pending": false,
+        "progress": 1,
+        "elapsed": 0,
+        "starts": 1
+      },
+      {
+        "id": 512,
+        "running": true,
+        "pending": false,
+        "progress": 0.07579999417066574,
+        "elapsed": 0.3789999783039093,
+        "starts": 2
+      }
+    ],
+    "objects": [
+      {
+        "id": 759,
+        "matrix": [
+          -8.744043350219727,
+          0,
+          -30.14836883544922,
+          0,
+          0,
+          25.880008697509766,
+          0,
+          0,
+          9.5382719039917,
+          0,
+          -2.766420364379883,
+          0,
+          -3.6014204025268555,
+          91.4937973022461,
+          43.22079849243164,
+          1
+        ]
+      }
+    ],
+    "error": null
+  },
+  "screenshot": "docs/transform-sequence-map-preview.png"
+}

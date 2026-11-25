@@ -1,0 +1,542 @@
+{
+  "className": "StarFallShower",
+  "functionGroup": "粒子、灯光与场景效果",
+  "functionRole": "流星发射、颜色、轨道与范围",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "StarFallShower 的原默认值、继承初始化及 13 个序列化字段变体；原注册字段 12 项。"
+    },
+    {
+      "name": "流星发射、颜色、轨道与范围",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Clump（3 条引用）、Rail（3 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "StarFallShower",
+    "category": "粒子、灯光与场景效果",
+    "functionGroupId": "effects",
+    "functionRole": "流星发射、颜色、轨道与范围",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "StarFallShower 的原默认值、继承初始化及 13 个序列化字段变体；原注册字段 12 项。"
+      },
+      {
+        "name": "流星发射、颜色、轨道与范围",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Clump（3 条引用）、Rail（3 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Clump",
+        "references": 3
+      },
+      {
+        "className": "Rail",
+        "references": 3
+      }
+    ],
+    "rttiWorkingGroup": "系统和其余类型",
+    "role": "对象实例类型",
+    "instances": 3,
+    "nestedInstances": 0,
+    "referenceFields": 6,
+    "declaredLevels": 2,
+    "levels": [
+      {
+        "level": "Dawn",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_ButterflyFields",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "color",
+        "type": 0,
+        "size": 16,
+        "nestedClass": null
+      },
+      {
+        "name": "cooldown",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "cooldownRandRange",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "dirRandRange",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "flareSize",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "intensity",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "killY",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "rail",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "randomSeed",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "speed",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "speedRandRange",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "startPositions",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100cc9510",
+    "nativeRegisteredFields": [
+      {
+        "name": "cooldown",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 64,
+        "registrationFunction": "0x100463050",
+        "propertyAddress": "0x100cc9050"
+      },
+      {
+        "name": "cooldownRandRange",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 68,
+        "registrationFunction": "0x100463050",
+        "propertyAddress": "0x100cc90a0"
+      },
+      {
+        "name": "speed",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 76,
+        "registrationFunction": "0x100463050",
+        "propertyAddress": "0x100cc90f0"
+      },
+      {
+        "name": "speedRandRange",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 80,
+        "registrationFunction": "0x100463050",
+        "propertyAddress": "0x100cc9140"
+      },
+      {
+        "name": "startPositions",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x100463050",
+        "propertyAddress": "0x100cc9190"
+      },
+      {
+        "name": "killY",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 72,
+        "registrationFunction": "0x100463050",
+        "propertyAddress": "0x100cc91e0"
+      },
+      {
+        "name": "rail",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP4RailERK8MetaTypev",
+        "nativeOffset": 88,
+        "registrationFunction": "0x100463050",
+        "propertyAddress": "0x100cc9230"
+      },
+      {
+        "name": "dirRandRange",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 84,
+        "registrationFunction": "0x100463050",
+        "propertyAddress": "0x100cc9280"
+      },
+      {
+        "name": "color",
+        "typeGetter": "__Z17GetMetaTypeByTypeIN10Vectormath3Aos7Vector3EERK8MetaTypev",
+        "nativeOffset": 112,
+        "registrationFunction": "0x100463050",
+        "propertyAddress": "0x100cc92d0"
+      },
+      {
+        "name": "intensity",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 96,
+        "registrationFunction": "0x100463050",
+        "propertyAddress": "0x100cc9320"
+      },
+      {
+        "name": "flareSize",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 128,
+        "registrationFunction": "0x100463050",
+        "propertyAddress": "0x100cc9370"
+      },
+      {
+        "name": "randomSeed",
+        "typeGetter": "__Z17GetMetaTypeByTypeIiERK8MetaTypev",
+        "nativeOffset": 132,
+        "registrationFunction": "0x100463050",
+        "propertyAddress": "0x100cc93c0"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 12 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "Dawn:n663",
+      "level": "Dawn",
+      "nodeId": 663,
+      "name": "BstNode_1842806830",
+      "className": "StarFallShower",
+      "classIndex": 71,
+      "sourceOffset": 137736,
+      "sourceLength": 84,
+      "sourceSha256": "0b893a5868fc45f18d40aba7b01f9123a016c2823d286104d9a6efe344e3b623",
+      "declaredFieldCount": 13,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n663/p1",
+          "fieldName": "startPositions",
+          "target": "Dawn:n3145",
+          "targetNodeId": 3145,
+          "offset": 137760
+        },
+        {
+          "fieldId": "n663/p3",
+          "fieldName": "rail",
+          "target": "Dawn:n239",
+          "targetNodeId": 239,
+          "offset": 137768
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n873",
+      "level": "Dawn",
+      "nodeId": 873,
+      "name": "BstNode_1842806915",
+      "className": "StarFallShower",
+      "classIndex": 71,
+      "sourceOffset": 171875,
+      "sourceLength": 84,
+      "sourceSha256": "ebec7d61545fc158000261497193ff622d032577b958e9cdbac4ca4d5fa47452",
+      "declaredFieldCount": 13,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n873/p1",
+          "fieldName": "startPositions",
+          "target": "Dawn:n3195",
+          "targetNodeId": 3195,
+          "offset": 171899
+        },
+        {
+          "fieldId": "n873/p3",
+          "fieldName": "rail",
+          "target": "Dawn:n239",
+          "targetNodeId": 239,
+          "offset": 171907
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n706",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 706,
+      "name": "BstNode_1842806830",
+      "className": "StarFallShower",
+      "classIndex": 55,
+      "sourceOffset": 166894,
+      "sourceLength": 84,
+      "sourceSha256": "f8ca996b98584b0b209d8545e78f932b45ca256f10038a3c6ad2a6f39d81c145",
+      "declaredFieldCount": 13,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n706/p1",
+          "fieldName": "startPositions",
+          "target": "Prairie_ButterflyFields:n1433",
+          "targetNodeId": 1433,
+          "offset": 166918
+        },
+        {
+          "fieldId": "n706/p3",
+          "fieldName": "rail",
+          "target": "Prairie_ButterflyFields:n1291",
+          "targetNodeId": 1291,
+          "offset": 166926
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "Dawn",
+      "path": "Levels/Dawn/Objects.level.bin",
+      "sha256": "16e26aafc7f9d120a548bf5d8bec04fbc18146bc8db531ef75144889b1ff197a",
+      "bytes": 504637,
+      "nodes": 3798,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dawn.json",
+      "markdown": "Objects对象清单/Dawn.md"
+    },
+    {
+      "level": "Prairie_ButterflyFields",
+      "path": "Levels/Prairie_ButterflyFields/Objects.level.bin",
+      "sha256": "29d8d61a082f3e3414ecfbb501b5f65499deb37ad4a1078ce2e9b88ac0d1e441",
+      "bytes": 297606,
+      "nodes": 1513,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_ButterflyFields.json",
+      "markdown": "Objects对象清单/Prairie_ButterflyFields.md"
+    }
+  ]
+}

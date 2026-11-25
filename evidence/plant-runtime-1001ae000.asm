@@ -1,0 +1,33 @@
+0x1001ae000: push rbp
+0x1001ae001: mov rbp, rsp
+0x1001ae004: lea rdx, [rdi + 0x3d8]
+0x1001ae00b: xor eax, eax
+0x1001ae00d: xor ecx, ecx
+0x1001ae00f: nop 
+0x1001ae010: mov r8d, ecx
+0x1001ae013: cmp dword ptr [rdx - 0x360], esi
+0x1001ae019: je 0x1001ae057
+0x1001ae01b: cmp dword ptr [rdx - 0x240], esi
+0x1001ae021: je 0x1001ae044
+0x1001ae023: cmp dword ptr [rdx - 0x120], esi
+0x1001ae029: je 0x1001ae04a
+0x1001ae02b: cmp dword ptr [rdx], esi
+0x1001ae02d: je 0x1001ae050
+0x1001ae02f: add rcx, 4
+0x1001ae033: add rdx, 0x480
+0x1001ae03a: cmp ecx, 0x100
+0x1001ae040: jb 0x1001ae010
+0x1001ae042: pop rbp
+0x1001ae043: ret 
+0x1001ae044: or r8d, 1
+0x1001ae048: jmp 0x1001ae057 ; 0x1001ae057
+0x1001ae04a: or r8d, 2
+0x1001ae04e: jmp 0x1001ae057 ; 0x1001ae057
+0x1001ae050: add rcx, 3
+0x1001ae054: mov r8, rcx
+0x1001ae057: lea rax, [r8 + r8*8]
+0x1001ae05b: shl rax, 5
+0x1001ae05f: lea rax, [rdi + rax + 0x10]
+0x1001ae064: pop rbp
+0x1001ae065: ret 
+0x1001ae066: nop word ptr cs:[rax + rax]

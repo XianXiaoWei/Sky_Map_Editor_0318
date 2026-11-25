@@ -1,0 +1,88 @@
+{
+  "passed": true,
+  "scope": "Real Electron and production Vulkan: three resolution controls, full effects, retained canvas during changes, DPI and persisted selection. Software Vulkan; no Windows hardware FPS acceptance.",
+  "modes": [
+    {
+      "mode": "smooth",
+      "width": 128,
+      "height": 105,
+      "displayWidth": 220,
+      "displayHeight": 180,
+      "ratio": 1,
+      "quality": "full",
+      "scale": 58,
+      "opaqueFraction": 1,
+      "whiteFraction": 0,
+      "min": 4,
+      "max": 254,
+      "hud": "FPS 2 · 769.2 ms · 128×105 · 58% 流畅 · 完整"
+    },
+    {
+      "mode": "balanced",
+      "width": 148,
+      "height": 121,
+      "displayWidth": 220,
+      "displayHeight": 180,
+      "ratio": 1,
+      "quality": "full",
+      "scale": 67,
+      "opaqueFraction": 1,
+      "whiteFraction": 0,
+      "min": 4,
+      "max": 254,
+      "hud": "FPS 1 · 630.1 ms · 148×121 · 67% 均衡 · 完整"
+    },
+    {
+      "mode": "native",
+      "width": 220,
+      "height": 180,
+      "displayWidth": 220,
+      "displayHeight": 180,
+      "ratio": 1,
+      "quality": "full",
+      "scale": 100,
+      "opaqueFraction": 1,
+      "whiteFraction": 0,
+      "min": 4,
+      "max": 254,
+      "hud": "FPS 1 · 765.9 ms · 220×180 · 100% 清晰 · 完整"
+    }
+  ],
+  "errors": [],
+  "dpi": {
+    "ratio": 1.5,
+    "width": 330,
+    "height": 270
+  },
+  "fullEffectsAndSkirts": {
+    "passes": [
+      "CloudCore",
+      "OpaqueRGBDepth",
+      "DepthDownsample",
+      "DepthDownsampleGather",
+      "DepthDownsampleQuarter",
+      "CloudFluffySuperCoarse",
+      "CloudFluffyCoarse",
+      "CloudFluffy",
+      "CloudCard",
+      "AlphaColorLogDepth",
+      "PreviewLuminance",
+      "FogUpsample",
+      "MotionGen",
+      "MotionDilate",
+      "TemporalAa",
+      "Tonemap"
+    ],
+    "shaders": [
+      "RockFaceShAlphaSkirt",
+      "SandShAlphaSkirt",
+      "GrassShAlphaSkirt"
+    ]
+  },
+  "staticAntialiasing": {
+    "additionalFrames": 9,
+    "pending": 0,
+    "settlesAndStops": true
+  },
+  "selectionPersisted": true
+}

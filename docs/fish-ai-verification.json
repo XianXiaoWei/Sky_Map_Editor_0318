@@ -1,0 +1,137 @@
+{
+  "passed": true,
+  "updatedUtc": "2026-11-25T05:26:36.272550+00:00",
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "nativeReport": "docs/fish-ai-oracle.json",
+  "nativeCases": 1460,
+  "nativeCaseBreakdown": {
+    "wholeAIWithObservedServices": 859,
+    "wholePursuit": 58,
+    "wholeAccumulatingAvoidance": 63,
+    "wholeNeighborPredicate": 8,
+    "wholeFlockPredicate": 8,
+    "productionUpdateWithAIAndMovement": 140,
+    "productionAIWithSteering": 294,
+    "productionUpdateWithAIAndMovementAndSteering": 30
+  },
+  "nativeComparedBytes": 223247120,
+  "nativeServiceCalls": 49770,
+  "nativeCodeHashesBoundariesAndAssemblyVerified": true,
+  "implementedWholeFunctionCount": 5,
+  "wholeFishV2AiVerified": true,
+  "productionUpdateWithActualAIAndSteeringVerified": true,
+  "nativeScope": "Whole original FishV2.AI with all five switch branches and explicit caller/private Marker velocity W. Full caller arena and ordered world, metadata, rail, Mote, particle/audio, animation and player/resource boundaries compared. Original asinf/sincos and movement libm results are recorded/replayed. Whole Pursuit, accumulating Avoidance and both Fish predicates are separately compared. Production Update with actual AI/TurnDirection/Bank/MotionTransform, production AI with actual Begin/Avoidance/Flee/Seek/Pursuit/Wander/Flocking/End, and combined Update/AI/movement/steering are compared with unmodified native bodies. Flock integration covers empty and Actor neighborhoods with the original eight-call cache. Raw world avoidance/collision, metadata, Avatar/OBB/rail geometry and resource owners remain explicit services; real scene and complete creature acceptance remain pending.",
+  "baselineRegression": {
+    "passed": true,
+    "tests": 687,
+    "command": "./node_modules/.bin/tsx --test tests/*.test.ts",
+    "log": "/root/sky-research/fish-update-final-tests.log"
+  },
+  "focusedRegression": {
+    "passed": true,
+    "tests": 16,
+    "command": "./node_modules/.bin/tsx --test tests/fish-ai-runtime.test.ts tests/fish-update-runtime.test.ts tests/creature-force-runtime.test.ts",
+    "log": "/root/sky-research/fish-ai-focused.log"
+  },
+  "projectRegression": {
+    "passed": true,
+    "tests": 695,
+    "command": "./node_modules/.bin/tsx --test tests/*.test.ts",
+    "log": "/root/sky-research/fish-ai-final-tests.log"
+  },
+  "typecheck": {
+    "passed": true,
+    "command": "./node_modules/.bin/tsc --noEmit",
+    "log": "/root/sky-research/fish-ai-final-types.log"
+  },
+  "windowsBuild": {
+    "passed": true,
+    "command": "node tools/build.mjs --windows",
+    "log": "/root/sky-research/fish-ai-windows-build.log",
+    "windowsMachineRuntimeTested": false,
+    "machine": "AMD64",
+    "binarySha256": "0dc479835a11df27ec8781f471974b13b5d14a7008d831bb0540777e16f6adab"
+  },
+  "windowsSourcePlan": {
+    "passed": true,
+    "command": "python3 tools/package-windows-source.py --plan",
+    "report": "docs/windows-source-plan.json",
+    "log": "/root/sky-research/fish-ai-windows-source-plan.log",
+    "includesNewRuntimeAndNativeFixtures": true,
+    "androidHostIncluded": false,
+    "buildOutputsIncluded": false,
+    "nodeModulesIncluded": false,
+    "cacheIncluded": false
+  },
+  "inventory": {
+    "passed": true,
+    "maps": 33,
+    "declaredClasses": 283,
+    "objects": 49824,
+    "references": 60016,
+    "brokenReferences": 0,
+    "completeRuntimeClasses": 0,
+    "allMapsRoundTripUnchanged": true,
+    "coreSubchainVerifiedClasses": 53,
+    "log": "/root/sky-research/fish-ai-class-progress.log"
+  },
+  "categoryCensus": {
+    "passed": true,
+    "command": "python3 tools/objects-category-census.py",
+    "log": "/root/sky-research/fish-ai-category-census.log",
+    "nativeCreatureFamilies": 52,
+    "mapDeclaredCreatureFamilies": 18,
+    "completeCreatureClasses": 0
+  },
+  "fishGroupMapAudit": {
+    "passed": true,
+    "report": "docs/fish-group-map-audit.json",
+    "summary": {
+      "maps": 33,
+      "fishGroups": 5,
+      "regionTriggers": 5,
+      "playAnimationEvents": 10,
+      "movementEvents": 5,
+      "restartDelays": 5,
+      "fishV2Instances": 0,
+      "completeCreatureClasses": 0
+    },
+    "scope": "Read-only audit of actual ObjectsDocument fields and exact saved references, including fish LevelMesh targets, OnRegion local-avatar entry, PlayAnimation sequence names, four-second Delay re-enables, looping Rail point references and mesh action ranges. Passing validates the saved graph and source round trips only; sequence registry binding, trigger/rail/EventBarn composition and autonomous viewport behavior remain pending.",
+    "sequenceRegistryBindingVerified": false,
+    "autonomousViewportBehaviorVerified": false
+  },
+  "completeCreatureClasses": 0,
+  "autonomousViewportCreatureAcceptancePassed": false,
+  "newWindowsArchiveCreated": false,
+  "newSourceArchiveCreated": false,
+  "androidWorkPerformed": false,
+  "packagingReadiness": "Windows build passes. Whole FishV2 AI and actual Update/movement/steering compositions compare against original code. User requires completed creatures before packaging; CharFishGroupAnim scene chain, DarkCreature/Crab outer updates, real world/resource/lifecycle and Windows hardware acceptance remain pending. No packaging date is established.",
+  "remaining": [
+    "CharFishGroupAnim OnRegion/Delay/PlayAnimation/MoveObjectAlongRail EventBarn and scene composition, actual sequence registry binding and autonomous viewport behavior",
+    "DarkCreature outer Update remainder 0x10026e7da..0x10026ffc0, including look direction/material/lighting/audio/interactions",
+    "Crab whole outer Update 0x10025bc10 and original ground/world/interaction/resource owners",
+    "FishV2 real world avoidance/collision, metadata/Avatar/OBB/rail geometry, Model/animation/light/surface/audio/particle/player/interaction and Barn lifecycle owners",
+    "Autonomous viewport creature behavior, stopping, level switches, repeated loading/unload and Windows hardware acceptance"
+  ],
+  "artifactSha256": {
+    "src/core/fish-ai-runtime.ts": "26a7f0b8a6b4b8b9457e2c947b4a4767fc6dcce65b3eee8b0f95810461cdbf49",
+    "src/core/creature-force-runtime.ts": "33924d7ae7553ae83a8124e6be165585f3eda001b62b473470d4d71c10e618b0",
+    "tools/fish-ai-cases.ts": "e792e4127ddf8f492ea9e0183164bee2777b7b4baf991b4374b07e1714f907f4",
+    "tools/fish-ai-oracle.ts": "949113b6c4dca5ed8b95361b03a4348151284e4a76c964f5ba3e07a4c5510b20",
+    "tools/native-fish-ai-oracle.c": "ad96cb638e29c5b25836a5f47068ed4177b0ffccbe11ddc46a4d6ba2bc281382",
+    "tools/reverse-fish-ai.py": "a2ce4b022cddf90dc1e30855e7129bfffff7911ff346f77f3ff810f4bbac3b65",
+    "tools/verify-fish-ai.py": "20dc0214650d4ea8fccbcd3b209e141710de7a26a8daba0df73615fe6b0fd23f",
+    "tests/fish-ai-runtime.test.ts": "b1f952b1aa8bcc496a1ad99289171fc10109fe2115be04e47f54703c9695358a",
+    "tests/fixtures/fish-ai-native.json.gz": "065ca280e0ab35613000c267d67e24e5d8422e58668c6d36193990fea3bb1399",
+    "docs/fish-ai-native.json": "025a03c1e6250aa79149b7bbae013fe2579d18dc4c7decb1fc0b55e1adce50d2",
+    "docs/fish-ai-oracle.json": "3b5d7daf64407ae79a89c037682b12c2f577e325b630850ff27b5004081584b8",
+    "docs/FishV2-AI与转向力组合验证.md": "1a21588f4776c7fd1dbba228943662103e56c7526fb19eb14940bcc9a2701330",
+    "docs/鱼群触发链与FishV2更新续接.md": "dbd9058a30ffe0b4d526aba67e6de83837e32dc36cee6a98cbb4be53036be2cd",
+    "tools/objects-class-progress-spec.json": "ca823b176b9ba949dce7392a5e9897c1e1a7e4bf6b3558e8b73baa96630f58c6",
+    "evidence/fishv2-ai.asm": "48279dfd3cc095c6219b018bbe7e5e91f9095bedd0f6fdbe63a62be2ea080d72",
+    "evidence/steering-pursuit.asm": "851387ee1a67c27b406fc009d0b7dbf200366be866fb246e405ba1675a5137d5",
+    "evidence/steering-avoidance.asm": "e127b743dd9d6493693998c5841a00b967097966e8e12db3f179f562dae57fd0",
+    "evidence/fishv2-neighborfilter.asm": "75822ceaebf7bbc513b10bbaf42b9b320323bd1f122e8ae74a41e34050e50d74",
+    "evidence/fishv2-flockfilter.asm": "c265da4e0863d30680c047636491c1ebe3b35f273941cac873c73b7dee8d4516"
+  }
+}

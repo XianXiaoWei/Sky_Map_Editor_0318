@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "functions": {
+    "BirdV2Ai.SelectRail": {
+      "start": "0x1001a06a0",
+      "end": "0x1001a08e0",
+      "codeSha256": "3d41a177466754cd9404eb70073db6f9871fe42cd5c00dfb6d309ece59b381e0",
+      "assembly": "evidence/birdv2ai-selectrail.asm"
+    },
+    "Steering.FollowRail": {
+      "start": "0x100630020",
+      "end": "0x100630190",
+      "codeSha256": "e2fe1bd272017fbdd1c114e3dbb603004f319cea1c448c20e5ee2e2287d42580",
+      "assembly": "evidence/steering-followrail.asm"
+    },
+    "Rail.GetPoint": {
+      "start": "0x100560300",
+      "end": "0x100560370",
+      "codeSha256": "d18fc87843303babeedf63e9e7ecc5f89dbe34cf7846b1823c9d177f05123a0c",
+      "assembly": "evidence/rail-getpoint.asm"
+    }
+  },
+  "cases": 198,
+  "comparedCases": 198,
+  "comparedBytes": 13045576,
+  "serviceCalls": 524,
+  "nativeArithmeticProbes": 16,
+  "scope": "Whole original bird/manta rail selection and shared accumulating FollowRail. Original Rail.GetPoint reads the live initialized point cache. Metadata casts, nearest-point/arc/sample services and real world/resource ownership retain explicit boundaries. Complete arenas and ordered services compare signed random conversion/overflow, unsigned candidate/index bounds, exact corridor and heading thresholds, direction, prediction, W lanes, zero/negative/NaN weights, list/callback mutations, repeated calls and original assertions. Shared Rail nearest/arc/sample bodies are explicit services in this report.",
+  "failures": []
+}

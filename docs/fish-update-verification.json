@@ -1,0 +1,135 @@
+{
+  "passed": true,
+  "updatedUtc": "2026-11-25T05:01:33.164331+00:00",
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "nativeReport": "docs/fish-update-oracle.json",
+  "nativeCases": 493,
+  "nativeCaseBreakdown": {
+    "wholeUpdateWithObservedServices": 347,
+    "wholeTurnDirection": 64,
+    "wholeBank": 30,
+    "wholeMotionTransform": 3,
+    "wholeUpdateWithUnmodifiedProductionMovementComposition": 49
+  },
+  "nativeComparedBytes": 67319568,
+  "nativeServiceCalls": 14027,
+  "nativeCodeHashesBoundariesAndAssemblyVerified": true,
+  "implementedWholeFunctionCount": 4,
+  "wholeFishV2UpdateVerified": true,
+  "wholeFishV2AiVerified": false,
+  "nativeScope": "Whole original FishV2.Update, MotionTransform, TurnDirection and Bank. AI boundary and embedded switch table are inspected; AI implementation and real world/collision/animation/light/interaction/resource owners remain pending. Packed sincos upper lanes are explicit input context; original libm results are recorded/replayed. Complete caller arena and ordered calls compare original movement helpers, callbacks, disabled/deferred Models, velocity/collision thresholds, full transform NaN assertion, animation weights, surface material flags/ripple requests and player alert/interaction/follow-up timers. Whole AI remains a recorded external service in this comparison.",
+  "fishGroupMapAudit": {
+    "passed": true,
+    "report": "docs/fish-group-map-audit.json",
+    "summary": {
+      "maps": 33,
+      "fishGroups": 5,
+      "regionTriggers": 5,
+      "playAnimationEvents": 10,
+      "movementEvents": 5,
+      "restartDelays": 5,
+      "fishV2Instances": 0,
+      "completeCreatureClasses": 0
+    },
+    "scope": "Read-only audit of actual ObjectsDocument fields and exact saved references, including fish LevelMesh targets, OnRegion local-avatar entry, PlayAnimation sequence names, four-second Delay re-enables, looping Rail point references and mesh action ranges. Passing validates the saved graph and source round trips only; sequence registry binding, trigger/rail/EventBarn composition and autonomous viewport behavior remain pending.",
+    "sequenceRegistryBindingVerified": false,
+    "autonomousViewportBehaviorVerified": false
+  },
+  "baselineRegression": {
+    "passed": true,
+    "tests": 682,
+    "command": "./node_modules/.bin/tsx --test tests/*.test.ts",
+    "log": "/root/sky-research/dark-creature-combat-final-tests.log"
+  },
+  "focusedRegression": {
+    "passed": true,
+    "tests": 13,
+    "command": "./node_modules/.bin/tsx --test tests/fish-update-runtime.test.ts tests/creature-lifecycle-runtime.test.ts tests/play-animation-runtime.test.ts",
+    "log": "/root/sky-research/fish-update-focused.log"
+  },
+  "projectRegression": {
+    "passed": true,
+    "tests": 687,
+    "command": "./node_modules/.bin/tsx --test tests/*.test.ts",
+    "log": "/root/sky-research/fish-update-final-tests.log"
+  },
+  "typecheck": {
+    "passed": true,
+    "command": "./node_modules/.bin/tsc --noEmit",
+    "log": "/root/sky-research/fish-update-final-types.log"
+  },
+  "windowsBuild": {
+    "passed": true,
+    "command": "node tools/build.mjs --windows",
+    "log": "/root/sky-research/fish-update-windows-build.log",
+    "windowsMachineRuntimeTested": false,
+    "machine": "AMD64",
+    "binarySha256": "715d5b5e7fa94b80af6ef3e1a27a93d4a1c42ee6f0c30c5c5ab8fb6e8cbe1315"
+  },
+  "windowsSourcePlan": {
+    "passed": true,
+    "command": "python3 tools/package-windows-source.py --plan",
+    "report": "docs/windows-source-plan.json",
+    "log": "/root/sky-research/fish-update-windows-source-plan.log",
+    "includesNewRuntimeAndNativeFixtures": true,
+    "androidHostIncluded": false,
+    "buildOutputsIncluded": false,
+    "nodeModulesIncluded": false,
+    "cacheIncluded": false
+  },
+  "inventory": {
+    "passed": true,
+    "maps": 33,
+    "declaredClasses": 283,
+    "objects": 49824,
+    "references": 60016,
+    "brokenReferences": 0,
+    "completeRuntimeClasses": 0,
+    "allMapsRoundTripUnchanged": true,
+    "coreSubchainVerifiedClasses": 53,
+    "log": "/root/sky-research/fish-update-class-progress.log"
+  },
+  "categoryCensus": {
+    "passed": true,
+    "command": "python3 tools/objects-category-census.py",
+    "log": "/root/sky-research/fish-update-category-census.log",
+    "nativeCreatureFamilies": 52,
+    "mapDeclaredCreatureFamilies": 18,
+    "completeCreatureClasses": 0
+  },
+  "completeCreatureClasses": 0,
+  "autonomousViewportCreatureAcceptancePassed": false,
+  "newWindowsArchiveCreated": false,
+  "newSourceArchiveCreated": false,
+  "androidWorkPerformed": false,
+  "packagingReadiness": "Windows build passes. User requires completed creatures before packaging. Whole FishV2.Update and original movement consumers are compared; FishV2 AI and CharFishGroupAnim region/animation/delay/rail scene composition remain pending alongside DarkCreature/Crab outer updates and real scene/resource/lifecycle/Windows hardware acceptance. No reliable packaging date is available.",
+  "remaining": [
+    "FishV2 whole AI 0x100335a40..0x1003370c0, including original neighbor/target/steering and state consumers",
+    "CharFishGroupAnim OnRegion/Delay/PlayAnimation/MoveObjectAlongRail EventBarn and scene composition, actual sequence registry binding and autonomous viewport behavior",
+    "DarkCreature outer Update remainder 0x10026e7da..0x10026ffc0, including look direction/material/lighting/audio/interactions",
+    "Crab whole outer Update 0x10025bc10 and original ground/world/interaction/resource owners",
+    "Real scene/Bird hit/Avatar/rail geometry/audio/interaction/particle/network/Barn lifecycle and Model/animation/GPU owners",
+    "Autonomous viewport behavior, stopping, level switches, repeated loading/unload and Windows hardware acceptance"
+  ],
+  "artifactSha256": {
+    "src/core/fish-update-runtime.ts": "49d61b2d842dc1c3e70a1743ea3955d1157b02b775e5faf92db16aafe6968a34",
+    "tools/fish-update-cases.ts": "0b01753221c511ae8ace02edf0e477e6e19f2b2a5307baaad8f9c8b5a7b52539",
+    "tools/fish-update-oracle.ts": "77cb5bd6ac79417504271f497f05d31db3c78ac2d749b089ac9e2b8976480b15",
+    "tools/native-fish-update-oracle.c": "f07e4a049675173ccad34456ac289f8e1df57598385a504fc61d640b4871d753",
+    "tools/reverse-fish-update.py": "f1cd58a391d000204de08c76a9a40932a7137d4423e02c721d6ba43755f7d8c6",
+    "tools/verify-fish-update.py": "aa7e8befc3325156ac62527b9df85e9983b2fccef23a523ae3a44bf7fd0c1e07",
+    "tools/fish-group-map-audit.ts": "846512236a4876dae08117a2636dd1f920814131d8a27d0895e9e9db7046b78a",
+    "tests/fish-update-runtime.test.ts": "c83568d44f267d20c81d464ba60ce5c310e0d1c908a8fbb51315f4dae908b955",
+    "tests/fixtures/fish-update-native.json.gz": "98ba3cfb8b6e80441d132c0dd4ab1f40313cc3457416b45c1b1653a4ad1e44ad",
+    "docs/fish-update-native.json": "224e195df8fa6b5f1e7b2147b63e690f45d07883191e298317e2bfc0bb28dfa3",
+    "docs/fish-update-oracle.json": "5f5162ba9270166c70818d6f970b34551c3c861883cf9d62715ea40d2efcabda",
+    "docs/fish-group-map-audit.json": "12d57fae6d245822ea9600e339c9b8d7fa5553b80ba04230901cfd092ec7f95e",
+    "docs/鱼群触发链与FishV2更新续接.md": "da6f2712a702d713660805b2f5cb3e93550e85652df7b8ca86c5484bafce7b41",
+    "tools/objects-class-progress-spec.json": "ae1c9a3f76de3d047f75da1a329e3f5d73c60ae88eaa5b09af73dc753fd2bbec",
+    "evidence/fishv2-update.asm": "17ead8e26b6a2627d0472f1107770be5fdf781c650056d0b517968757b8d86da",
+    "evidence/creature-motiontransform.asm": "81f33b8e58ebc881d55711008bb9572db3a5443b4917fb296a5738b54e84f522",
+    "evidence/creature-turndirection.asm": "826732901394b4172788cddd91e0f22d61680b32d504bded8542bc322e2200d8",
+    "evidence/creature-bank.asm": "3f4d4aba8865dfa857fd15798098aa805260cdc2bce1f7e2ddf0537951c7c4e3",
+    "evidence/fishv2-ai.asm": "48279dfd3cc095c6219b018bbe7e5e91f9095bedd0f6fdbe63a62be2ea080d72"
+  }
+}

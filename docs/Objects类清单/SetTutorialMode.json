@@ -1,0 +1,913 @@
+{
+  "className": "SetTutorialMode",
+  "functionGroup": "教程、平台门控与统计",
+  "functionRole": "教程状态设置",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "SetTutorialMode 的原默认值、继承初始化及 2 个序列化字段变体；原注册字段 1 项。"
+    },
+    {
+      "name": "教程状态设置",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "当前无非空序列化依赖；原虚方法、资源或全局调用仍需恢复。"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "SetTutorialMode",
+    "category": "教程、平台门控与统计",
+    "functionGroupId": "tutorial",
+    "functionRole": "教程状态设置",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "SetTutorialMode 的原默认值、继承初始化及 2 个序列化字段变体；原注册字段 1 项。"
+      },
+      {
+        "name": "教程状态设置",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "当前无非空序列化依赖；原虚方法、资源或全局调用仍需恢复。"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [],
+    "rttiWorkingGroup": "交互、事件与任务",
+    "role": "对象实例类型",
+    "instances": 24,
+    "nestedInstances": 0,
+    "referenceFields": 0,
+    "declaredLevels": 6,
+    "levels": [
+      {
+        "level": "CandleSpace",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Dawn",
+        "nodes": 8,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "HubReveal",
+        "nodes": 7,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Cave",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SkyHub2",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "TitleWater",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "tutorialState",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100c25f90",
+    "nativeRegisteredFields": [
+      {
+        "name": "tutorialState",
+        "typeGetter": "__Z17GetMetaTypeByTypeI13TutorialStateERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x1006ecd10",
+        "propertyAddress": "0x100d08ba0"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 1 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "CandleSpace:n13",
+      "level": "CandleSpace",
+      "nodeId": 13,
+      "name": "BstNode_2645622814",
+      "className": "SetTutorialMode",
+      "classIndex": 9,
+      "sourceOffset": 25534,
+      "sourceLength": 28,
+      "sourceSha256": "58a4934642f2dbcb09b82195949655137c1d17a2a7abedfffaff0affd47f0f46",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CandleSpace:n111",
+      "level": "CandleSpace",
+      "nodeId": 111,
+      "name": "BstNode_2529558723",
+      "className": "SetTutorialMode",
+      "classIndex": 9,
+      "sourceOffset": 37588,
+      "sourceLength": 28,
+      "sourceSha256": "1d055522f75b29f86e7095bb3ab360cb6d310df0b85a08a1fd07138332cf3637",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CandleSpace:n429",
+      "level": "CandleSpace",
+      "nodeId": 429,
+      "name": "BstNode_2529558725",
+      "className": "SetTutorialMode",
+      "classIndex": 9,
+      "sourceOffset": 86918,
+      "sourceLength": 28,
+      "sourceSha256": "46f7dfb809748e502ac4928714fb67e179be28052fc23866dcd2d45112e2d8e9",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CandleSpace:n465",
+      "level": "CandleSpace",
+      "nodeId": 465,
+      "name": "BstNode_2645622812",
+      "className": "SetTutorialMode",
+      "classIndex": 9,
+      "sourceOffset": 90129,
+      "sourceLength": 28,
+      "sourceSha256": "7167f77aa11d23a9aabe81ea192e1d29cadb83d0fb2c1f31a2654556ab7aa018",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n656",
+      "level": "Dawn",
+      "nodeId": 656,
+      "name": "BstNode_2645622793",
+      "className": "SetTutorialMode",
+      "classIndex": 70,
+      "sourceOffset": 136121,
+      "sourceLength": 28,
+      "sourceSha256": "c954dd2bbe186c776deb800b669b806f7ebaa556993b7d45c080a56eaeeb7180",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n766",
+      "level": "Dawn",
+      "nodeId": 766,
+      "name": "BstNode_2645622794",
+      "className": "SetTutorialMode",
+      "classIndex": 70,
+      "sourceOffset": 155251,
+      "sourceLength": 28,
+      "sourceSha256": "18a8a25a043437fe494a8455cd056c29344e43ba3901783fde130b8f0ef31891",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n916",
+      "level": "Dawn",
+      "nodeId": 916,
+      "name": "BstNode_2279670026",
+      "className": "SetTutorialMode",
+      "classIndex": 70,
+      "sourceOffset": 177140,
+      "sourceLength": 28,
+      "sourceSha256": "fe034e9894b91a2388e219c63c72a053587fb745d4cd31904ae508b0a3bb042f",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1241",
+      "level": "Dawn",
+      "nodeId": 1241,
+      "name": "BstNode_2645622798",
+      "className": "SetTutorialMode",
+      "classIndex": 70,
+      "sourceOffset": 222162,
+      "sourceLength": 28,
+      "sourceSha256": "58f3e554af8fcdc784473b6c1b183febd716069d4de4fea00173d7c1085ac5a2",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1622",
+      "level": "Dawn",
+      "nodeId": 1622,
+      "name": "BstNode_2645622827",
+      "className": "SetTutorialMode",
+      "classIndex": 70,
+      "sourceOffset": 278159,
+      "sourceLength": 28,
+      "sourceSha256": "482cd3c2d5c8651f480105ebac35570f7c870447f4507bb81bc5d4e688bb2568",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2263",
+      "level": "Dawn",
+      "nodeId": 2263,
+      "name": "BstNode_2645622828",
+      "className": "SetTutorialMode",
+      "classIndex": 70,
+      "sourceOffset": 374330,
+      "sourceLength": 28,
+      "sourceSha256": "277c26ada89cda96a03751142cf6b8b61a4bde3c95a1d19def0932d3ac39a6d1",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2267",
+      "level": "Dawn",
+      "nodeId": 2267,
+      "name": "BstNode_2645622808",
+      "className": "SetTutorialMode",
+      "classIndex": 70,
+      "sourceOffset": 374955,
+      "sourceLength": 28,
+      "sourceSha256": "16fa0f52851ba58f84c00db6737b5916de6836375fa166baaea7f6812ab3fdfe",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2705",
+      "level": "Dawn",
+      "nodeId": 2705,
+      "name": "BstNode_2645622836",
+      "className": "SetTutorialMode",
+      "classIndex": 70,
+      "sourceOffset": 448640,
+      "sourceLength": 28,
+      "sourceSha256": "63f262bc2747a9ebae99ad610fe4525b3d9512e280265201c3b844c3ad9afdc4",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n447",
+      "level": "HubReveal",
+      "nodeId": 447,
+      "name": "BstNode_2645622794",
+      "className": "SetTutorialMode",
+      "classIndex": 71,
+      "sourceOffset": 106292,
+      "sourceLength": 28,
+      "sourceSha256": "70a6ffe8aacd4fca855f2e85c92d7158945a4fec3987b37da72fd28597e1d14a",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n528",
+      "level": "HubReveal",
+      "nodeId": 528,
+      "name": "BstNode_2446917636",
+      "className": "SetTutorialMode",
+      "classIndex": 71,
+      "sourceOffset": 120099,
+      "sourceLength": 28,
+      "sourceSha256": "16e525381794192fd8c32d894f03dd8d369d6a16a644876ed4581e6666aa9f6d",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n873",
+      "level": "HubReveal",
+      "nodeId": 873,
+      "name": "BstNode_2529558701",
+      "className": "SetTutorialMode",
+      "classIndex": 71,
+      "sourceOffset": 175705,
+      "sourceLength": 28,
+      "sourceSha256": "9b65d601adbc18c6bded83b6a1246de7ade7259b388b6cf49d5ad9e6a006f05d",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n893",
+      "level": "HubReveal",
+      "nodeId": 893,
+      "name": "BstNode_2645622803",
+      "className": "SetTutorialMode",
+      "classIndex": 71,
+      "sourceOffset": 179089,
+      "sourceLength": 28,
+      "sourceSha256": "e3b0e8b2db4555d7b04f1e0e7e15794f702ec97062fb915b5d889ac08aa390f2",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n1219",
+      "level": "HubReveal",
+      "nodeId": 1219,
+      "name": "BstNode_2645622795",
+      "className": "SetTutorialMode",
+      "classIndex": 71,
+      "sourceOffset": 236585,
+      "sourceLength": 28,
+      "sourceSha256": "e8d405ce73758c864fd040a7230832541e08145870726b161bf7dc96d60bf1c2",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n1229",
+      "level": "HubReveal",
+      "nodeId": 1229,
+      "name": "BstNode_2645622796",
+      "className": "SetTutorialMode",
+      "classIndex": 71,
+      "sourceOffset": 238690,
+      "sourceLength": 28,
+      "sourceSha256": "a7051242269d5e7f6d8796cf8285334441703be6200da517a9fef282d7603155",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n1492",
+      "level": "HubReveal",
+      "nodeId": 1492,
+      "name": "BstNode_2645622798",
+      "className": "SetTutorialMode",
+      "classIndex": 71,
+      "sourceOffset": 279126,
+      "sourceLength": 28,
+      "sourceSha256": "927cad2d1b9fc47bd1e8bf0f3bcd58792040c6a1e02ebeda5f5a13f253c400a4",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n757",
+      "level": "Prairie_Cave",
+      "nodeId": 757,
+      "name": "BstNode_2645622795",
+      "className": "SetTutorialMode",
+      "classIndex": 58,
+      "sourceOffset": 200340,
+      "sourceLength": 28,
+      "sourceSha256": "0b8277238b1245824b745258c269d3fb917b8db163110a949d4fa4864ee05c73",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n305",
+      "level": "SkyHub2",
+      "nodeId": 305,
+      "name": "BstNode_1167523949",
+      "className": "SetTutorialMode",
+      "classIndex": 52,
+      "sourceOffset": 91163,
+      "sourceLength": 28,
+      "sourceSha256": "1f04edcdda8d06a10b454f2a210a0434804371cfe1c9db7c2e9bf9d24ada83fb",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1315",
+      "level": "SkyHub2",
+      "nodeId": 1315,
+      "name": "BstNode_1167524370",
+      "className": "SetTutorialMode",
+      "classIndex": 52,
+      "sourceOffset": 267631,
+      "sourceLength": 28,
+      "sourceSha256": "20d72c12878957c674bfdac5ec4df476769d9ab8572fb763933ba0c71a65cefd",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1327",
+      "level": "SkyHub2",
+      "nodeId": 1327,
+      "name": "BstNode_1167524466",
+      "className": "SetTutorialMode",
+      "classIndex": 52,
+      "sourceOffset": 269435,
+      "sourceLength": 28,
+      "sourceSha256": "377cf7fe63a948f9cb917c5f73773d9a777214d1e4920aa7f4b775cbcf216ec7",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "TitleWater:n173",
+      "level": "TitleWater",
+      "nodeId": 173,
+      "name": "BstNode_2645622791",
+      "className": "SetTutorialMode",
+      "classIndex": 46,
+      "sourceOffset": 40572,
+      "sourceLength": 28,
+      "sourceSha256": "7cb73d2d98044ef838334e11236cdaba46fc224bab542a2d6dc78704f008fd26",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "CandleSpace",
+      "path": "Levels/CandleSpace/Objects.level.bin",
+      "sha256": "db7140d2dd5ee9cd2fcdcbb61a898b9facf1683ff21fec83fcbef81b885f56db",
+      "bytes": 92607,
+      "nodes": 564,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/CandleSpace.json",
+      "markdown": "Objects对象清单/CandleSpace.md"
+    },
+    {
+      "level": "Dawn",
+      "path": "Levels/Dawn/Objects.level.bin",
+      "sha256": "16e26aafc7f9d120a548bf5d8bec04fbc18146bc8db531ef75144889b1ff197a",
+      "bytes": 504637,
+      "nodes": 3798,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dawn.json",
+      "markdown": "Objects对象清单/Dawn.md"
+    },
+    {
+      "level": "HubReveal",
+      "path": "Levels/HubReveal/Objects.level.bin",
+      "sha256": "4b32f12bbe4b246cde9ca1e4ba0982000ff108359865bb4340aba640e609861b",
+      "bytes": 289438,
+      "nodes": 1829,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/HubReveal.json",
+      "markdown": "Objects对象清单/HubReveal.md"
+    },
+    {
+      "level": "Prairie_Cave",
+      "path": "Levels/Prairie_Cave/Objects.level.bin",
+      "sha256": "675a2256e24f8c4b16540cee6a5cd2b7647ff2fb495724a8bf596717ca39d944",
+      "bytes": 466340,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Cave.json",
+      "markdown": "Objects对象清单/Prairie_Cave.md"
+    },
+    {
+      "level": "SkyHub2",
+      "path": "Levels/SkyHub2/Objects.level.bin",
+      "sha256": "8b467f9b349d9d4ce0d038528c96e44dff30063149bf5bbf90232a56bb9dd36f",
+      "bytes": 475656,
+      "nodes": 2886,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SkyHub2.json",
+      "markdown": "Objects对象清单/SkyHub2.md"
+    },
+    {
+      "level": "TitleWater",
+      "path": "Levels/TitleWater/Objects.level.bin",
+      "sha256": "46841a22d17b360fcc3c7ceb8406d8c7e73441fd59023f64b4bce4057e1b9414",
+      "bytes": 45511,
+      "nodes": 238,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/TitleWater.json",
+      "markdown": "Objects对象清单/TitleWater.md"
+    }
+  ]
+}

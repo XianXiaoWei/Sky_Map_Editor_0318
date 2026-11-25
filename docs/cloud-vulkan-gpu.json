@@ -1,0 +1,247 @@
+{
+  "passed": false,
+  "device": {
+    "engine": "Sky Native Vulkan",
+    "backend": "Vulkan",
+    "device": "llvmpipe (LLVM 19.1.7, 128 bits)",
+    "apiVersion": 4210993,
+    "deviceType": 4,
+    "shaderFloat16": true
+  },
+  "referenceGLES": "llvmpipe (LLVM 19.1.7, 128 bits)",
+  "scope": "Real Dawn sparse/distance/ambience upload fields and original Tex3D/CloudFluffy.vol normalization/transpose. Explicit test camera, lighting, depth/water/blue-noise inputs. Native super-coarse output feeds coarse, coarse feeds fine, fine feeds proxy composition. Not recovered Compositor scheduling or game image parity. Independent unchanged original GLSL ES GPU reference; compares declared outputs only. Relaxed-precision cross-driver tolerance: 0.025 + 1% of reference magnitude. No original Compositor, temporal history, game screenshot or Windows validation.",
+  "level": "Dawn",
+  "blocks": 6361,
+  "programs": [
+    {
+      "name": "CloudFluffySuperCoarse",
+      "cameraCase": "outside",
+      "attachments": [
+        {
+          "location": 0,
+          "components": 1,
+          "comparedComponents": 256,
+          "maxAbsoluteDifference": 0.0,
+          "nonzeroPixels": 256,
+          "failedComponents": 0,
+          "firstFailures": [],
+          "nativeSha256": "2f23e6c24baa458acebeb7940ba07207f3f3eabdba4ec7b2a83d05a83a3fbc80",
+          "glesSha256": "2f23e6c24baa458acebeb7940ba07207f3f3eabdba4ec7b2a83d05a83a3fbc80",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "name": "CloudFluffyCoarse",
+      "cameraCase": "outside",
+      "attachments": [
+        {
+          "location": 0,
+          "components": 1,
+          "comparedComponents": 256,
+          "maxAbsoluteDifference": 0.01551055908203125,
+          "nonzeroPixels": 256,
+          "failedComponents": 0,
+          "firstFailures": [],
+          "nativeSha256": "2f23e6c24baa458acebeb7940ba07207f3f3eabdba4ec7b2a83d05a83a3fbc80",
+          "glesSha256": "64f2dbaa1e41e777c10faa708ddf3e77d8ecd55759856d18716a5b43a79cfd4f",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "name": "CloudFluffy",
+      "cameraCase": "outside",
+      "attachments": [
+        {
+          "location": 0,
+          "components": 4,
+          "comparedComponents": 1024,
+          "maxAbsoluteDifference": 0.51123046875,
+          "nonzeroPixels": 256,
+          "failedComponents": 48,
+          "firstFailures": [
+            [
+              3,
+              0,
+              0.705078125,
+              0.79248046875
+            ],
+            [
+              3,
+              1,
+              0.79248046875,
+              0.8876953125
+            ],
+            [
+              3,
+              2,
+              0.8701171875,
+              0.96875
+            ],
+            [
+              10,
+              0,
+              0.440185546875,
+              0.86865234375
+            ],
+            [
+              10,
+              1,
+              0.51171875,
+              0.97021484375
+            ]
+          ],
+          "nativeSha256": "7e47b794fb2b7ffdb7b6dbdc7a448908532e437d3406f5b051c066410edb3894",
+          "glesSha256": "e63a769bc40bb262bf568c81156ec2a70641eccdeb4f227278a9cbcb34d1a900",
+          "passed": false
+        },
+        {
+          "location": 1,
+          "components": 4,
+          "comparedComponents": 1024,
+          "maxAbsoluteDifference": 41.6026611328125,
+          "nonzeroPixels": 256,
+          "failedComponents": 15,
+          "firstFailures": [
+            [
+              10,
+              0,
+              1232.0,
+              1194.1060791015625
+            ],
+            [
+              11,
+              0,
+              1191.0,
+              1229.340087890625
+            ],
+            [
+              12,
+              0,
+              1189.0,
+              1227.36962890625
+            ],
+            [
+              23,
+              0,
+              1197.0,
+              1235.4417724609375
+            ],
+            [
+              64,
+              0,
+              1205.0,
+              1238.899658203125
+            ]
+          ],
+          "nativeSha256": "de00902b420fe1a285fc4c1cb10dc70510a74a0e4b7e5bf4d37f90f7d1c72587",
+          "glesSha256": "81f9b2aeb7a812b439cd20857ca07e3cea5cbb0a666698dc10fd85c8f51d4363",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "name": "CloudCore",
+      "cameraCase": "outside",
+      "attachments": [
+        {
+          "location": 0,
+          "components": 4,
+          "comparedComponents": 1024,
+          "maxAbsoluteDifference": 2.4415552616119385e-05,
+          "nonzeroPixels": 256,
+          "failedComponents": 0,
+          "firstFailures": [],
+          "nativeSha256": "1fea2fcfec3b89b641c8ee6c7b6071cbbfc774ea9988bef8694606ba0ee1d712",
+          "glesSha256": "57daacf0f4e1c7f7c76f5ddbea30ce8a7fefe7c9dc6d8186006d2049aed103a7",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "name": "CloudFluffySuperCoarse",
+      "cameraCase": "inside",
+      "attachments": [
+        {
+          "location": 0,
+          "components": 1,
+          "comparedComponents": 256,
+          "maxAbsoluteDifference": 0.0,
+          "nonzeroPixels": 0,
+          "failedComponents": 0,
+          "firstFailures": [],
+          "nativeSha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7",
+          "glesSha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "name": "CloudFluffyCoarse",
+      "cameraCase": "inside",
+      "attachments": [
+        {
+          "location": 0,
+          "components": 1,
+          "comparedComponents": 256,
+          "maxAbsoluteDifference": 0.0,
+          "nonzeroPixels": 0,
+          "failedComponents": 0,
+          "firstFailures": [],
+          "nativeSha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7",
+          "glesSha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "name": "CloudFluffy",
+      "cameraCase": "inside",
+      "attachments": [
+        {
+          "location": 0,
+          "components": 4,
+          "comparedComponents": 1024,
+          "maxAbsoluteDifference": 0.00146484375,
+          "nonzeroPixels": 256,
+          "failedComponents": 0,
+          "firstFailures": [],
+          "nativeSha256": "c97d4f1971893611e82a4e5f39c24a5d6a230a22c6fbde43a0621123c9e7661f",
+          "glesSha256": "637d1268f584f9028d71ebb093018b5bd187b39e4ccb4fde9b72be5ec6bbfce4",
+          "passed": true
+        },
+        {
+          "location": 1,
+          "components": 4,
+          "comparedComponents": 1024,
+          "maxAbsoluteDifference": 7.1484375,
+          "nonzeroPixels": 256,
+          "failedComponents": 0,
+          "firstFailures": [],
+          "nativeSha256": "6081a1139bd0a9ab947feeb4e288fe3d05d4e0694cf03b22e87dd2ee07c3776b",
+          "glesSha256": "30c6b2ce2161f0961f96e33ce3ce3adeb81487e49ab184d5bde69b3e8bf5cead",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "name": "CloudCore",
+      "cameraCase": "inside",
+      "attachments": [
+        {
+          "location": 0,
+          "components": 4,
+          "comparedComponents": 1024,
+          "maxAbsoluteDifference": 2.4415552616119385e-05,
+          "nonzeroPixels": 256,
+          "failedComponents": 0,
+          "firstFailures": [],
+          "nativeSha256": "5869d0cd38ff99b74539b75964a74ab1acbb864754bdb5c28b711215744d8022",
+          "glesSha256": "f6d58a866622bc801ebf63fd67803b6ee14e8fdcb3e4d858a04256935885f481",
+          "passed": true
+        }
+      ]
+    }
+  ]
+}

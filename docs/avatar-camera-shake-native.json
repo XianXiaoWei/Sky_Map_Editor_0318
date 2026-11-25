@@ -1,0 +1,154 @@
+{
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "functions": [
+    {
+      "name": "WhiskerCamera.shakeAndBasisHelper",
+      "address": "0x10073afd0",
+      "end": "0x10073bcb0",
+      "instructions": 604,
+      "sha256": "b4a6edcadde3d0225887c246b333e9bc24bd2924ad079403623eb3fb3e888989",
+      "evidence": "evidence/avatar-camera-10073afd0.asm",
+      "wholeBodyOracleVerified": true
+    },
+    {
+      "name": "WhiskerCamera.continuousUpdateCaller",
+      "address": "0x10073e320",
+      "end": "0x1007413a0",
+      "instructions": 2260,
+      "sha256": "d4bea718d7ea07b59d90f6c2cdd4f5b391b9854dcdf2339b57b5fea71cb54929",
+      "evidence": "evidence/avatar-camera-10073e320.asm",
+      "wholeBodyOracleVerified": false
+    }
+  ],
+  "constants": [
+    {
+      "address": "0x100aa89cc",
+      "hex": "0000c841",
+      "float32": 25.0
+    },
+    {
+      "address": "0x100ac183c",
+      "hex": "cdcc4c3f",
+      "float32": 0.800000011920929
+    },
+    {
+      "address": "0x100aaaf4c",
+      "hex": "0000e040",
+      "float32": 7.0
+    },
+    {
+      "address": "0x100aa7cb4",
+      "hex": "00007041",
+      "float32": 15.0
+    },
+    {
+      "address": "0x100aa70f4",
+      "hex": "0000803e",
+      "float32": 0.25
+    },
+    {
+      "address": "0x100ada264",
+      "hex": "17b75139",
+      "float32": 0.00019999999494757503
+    },
+    {
+      "address": "0x100aa8634",
+      "hex": "9a99993e",
+      "float32": 0.30000001192092896
+    },
+    {
+      "address": "0x100aa8608",
+      "hex": "cdcc4c3d",
+      "float32": 0.05000000074505806
+    },
+    {
+      "address": "0x100aa86a8",
+      "hex": "0ad7a33b",
+      "float32": 0.004999999888241291
+    },
+    {
+      "address": "0x100aa9670",
+      "hex": "00000041",
+      "float32": 8.0
+    },
+    {
+      "address": "0x100aa91c8",
+      "hex": "00006040",
+      "float32": 3.5
+    },
+    {
+      "address": "0x100aa89b0",
+      "hex": "d14a4ac0",
+      "float32": -3.1608164310455322
+    },
+    {
+      "address": "0x100aa6aa4",
+      "hex": "0000c040",
+      "float32": 6.0
+    },
+    {
+      "address": "0x100aa6aa8",
+      "hex": "0000a040",
+      "float32": 5.0
+    },
+    {
+      "address": "0x100aaf6c8",
+      "hex": "00005442",
+      "float32": 53.0
+    },
+    {
+      "address": "0x100aaf6cc",
+      "hex": "00007442",
+      "float32": 61.0
+    },
+    {
+      "address": "0x100aaf6d0",
+      "hex": "00004442",
+      "float32": 49.0
+    },
+    {
+      "address": "0x100aaabb8",
+      "hex": "00008030",
+      "float32": 9.313225746154785e-10
+    },
+    {
+      "address": "0x100aa45b8",
+      "hex": "0000003f",
+      "float32": 0.5
+    },
+    {
+      "address": "0x100aa8600",
+      "hex": "db0f4940",
+      "float32": 3.1415927410125732
+    },
+    {
+      "address": "0x100aa8658",
+      "hex": "fa7eaa3e",
+      "float32": 0.3330000042915344
+    },
+    {
+      "address": "0x100aa78bc",
+      "hex": "00008040",
+      "float32": 4.0
+    },
+    {
+      "address": "0x100aaf6d4",
+      "hex": "c619e33d",
+      "float32": 0.1108890026807785
+    },
+    {
+      "address": "0x100aa70e4",
+      "hex": "00000000",
+      "float32": 0.0
+    }
+  ],
+  "caller": {
+    "callSite": "0x100740e9d",
+    "addOffsetToEye": "0x100740eab",
+    "avoidanceCall": "0x100740ed2",
+    "basisStores": "0x100740f32..0x100740f44",
+    "scope": "Evidence only for surrounding caller. Only the complete helper, not this complete Update, is executed/compared by the new oracle."
+  },
+  "oracle": "docs/avatar-camera-shake-oracle.json",
+  "scope": "Complete shake helper with supplied physical/Wind/ray/sound and captured native math services. Noise offset is positional; orientation scratch uses value*0. Original continuous Update, avoidance, key-frame/lens mixing and final projection remain unresolved."
+}

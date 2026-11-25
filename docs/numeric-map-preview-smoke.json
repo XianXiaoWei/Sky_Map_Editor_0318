@@ -1,0 +1,179 @@
+{
+  "passed": true,
+  "checks": [
+    "Saved CandleSpace FloatAdd #449 writes output #336 = -0.15 and preserves separate input #110",
+    "Saved CandleSpace FloatMult #128 resolves its three Float cells and runs in the same isolated playback state",
+    "Original Prairie_Village #1812 stays running while its -0.1 update is clamped at the saved minimum 0",
+    "Original one-shot #89 completes at 0.2; Stop/Restart rebuilds the saved zero input",
+    "Prepared initial 0.9 becomes 0.8 on dispatch, freezes on Pause, decreases on Resume to the native zero clamp and resets to 0.8 on Restart",
+    "Mode change clears paused state; map change clears an active session; source Objects/meshes and prepared saved input hashes remain unchanged, with no renderer errors"
+  ],
+  "scope": "Original CandleSpace FloatAdd #449 / FloatMult #128 and Prairie_Village FloatAdd #1812 / #89 run in Electron/Vulkan. Original #1812 clamps its zero input at zero. A separate temporary map changes only Float #765 initial value to 0.9 to check repeated updates, pause/resume, reset and cleanup. Prepared inputs are not additional original-map coverage. Playback leaves source files and loaded saved documents unchanged. Full automatic scene startup, Model/material/GPU and Avatar lifecycle remain unverified.",
+  "windowsTested": false,
+  "preparedInput": {
+    "map": "Prepared_Prairie_Numeric",
+    "sourceMap": "Prairie_Village",
+    "sourceSha256": "4656296b54402016b59b894b4653fbdc71e106a21e0900294f73f2c7b7112385",
+    "changedField": "Float #765.value",
+    "savedInitial": 0,
+    "preparedInitial": 0.8999999761581421,
+    "sha256": "8e64e6b475118ae0429ccabeed4cf87ad571ef358a8ce0cd80bb86cc173dfb71"
+  },
+  "add": {
+    "id": 449,
+    "kind": "FloatAdd",
+    "running": true,
+    "paused": false,
+    "progress": 0,
+    "elapsed": 0,
+    "events": [
+      {
+        "id": 449,
+        "kind": "FloatAdd",
+        "running": true,
+        "pending": false,
+        "progress": 0,
+        "elapsed": 0,
+        "starts": 1
+      }
+    ],
+    "objects": [],
+    "values": [
+      {
+        "id": 110,
+        "value": 0,
+        "bits": 0
+      },
+      {
+        "id": 336,
+        "value": -0.15000000596046448,
+        "bits": 3189348762
+      }
+    ],
+    "error": null
+  },
+  "mult": {
+    "id": 128,
+    "kind": "FloatMult",
+    "running": true,
+    "paused": false,
+    "progress": 0,
+    "elapsed": 0,
+    "events": [
+      {
+        "id": 128,
+        "kind": "FloatMult",
+        "running": true,
+        "pending": false,
+        "progress": 0,
+        "elapsed": 0,
+        "starts": 1
+      }
+    ],
+    "objects": [],
+    "values": [
+      {
+        "id": 88,
+        "value": 0,
+        "bits": 0
+      },
+      {
+        "id": 290,
+        "value": 2.5199999809265137,
+        "bits": 1075922862
+      },
+      {
+        "id": 110,
+        "value": 0,
+        "bits": 0
+      }
+    ],
+    "error": null
+  },
+  "clamped": {
+    "id": 1812,
+    "kind": "FloatAdd",
+    "running": true,
+    "paused": false,
+    "progress": 0,
+    "elapsed": 0,
+    "events": [
+      {
+        "id": 1812,
+        "kind": "FloatAdd",
+        "running": true,
+        "pending": false,
+        "progress": 0,
+        "elapsed": 0,
+        "starts": 1
+      }
+    ],
+    "objects": [],
+    "values": [
+      {
+        "id": 765,
+        "value": 0,
+        "bits": 0
+      }
+    ],
+    "error": null
+  },
+  "originalScreenshot": "docs/numeric-map-preview-original.png",
+  "continuous": {
+    "id": 1812,
+    "kind": "FloatAdd",
+    "running": true,
+    "paused": true,
+    "progress": 0,
+    "elapsed": 0,
+    "events": [
+      {
+        "id": 1812,
+        "kind": "FloatAdd",
+        "running": true,
+        "pending": false,
+        "progress": 0,
+        "elapsed": 0,
+        "starts": 1
+      }
+    ],
+    "objects": [],
+    "values": [
+      {
+        "id": 765,
+        "value": 0.7999999523162842,
+        "bits": 1061997772
+      }
+    ],
+    "error": null
+  },
+  "preparedScreenshot": "docs/numeric-map-preview-paused.png",
+  "resumed": {
+    "id": 1812,
+    "kind": "FloatAdd",
+    "running": true,
+    "paused": false,
+    "progress": 0,
+    "elapsed": 0,
+    "events": [
+      {
+        "id": 1812,
+        "kind": "FloatAdd",
+        "running": true,
+        "pending": false,
+        "progress": 0,
+        "elapsed": 0,
+        "starts": 1
+      }
+    ],
+    "objects": [],
+    "values": [
+      {
+        "id": 765,
+        "value": 0,
+        "bits": 0
+      }
+    ],
+    "error": null
+  }
+}

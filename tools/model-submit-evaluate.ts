@@ -1,0 +1,5 @@
+import {OriginalLevelMeshModelEndpoint} from '../src/core/model-submit-runtime';
+export interface ModelSubmitCase{name:string;memory:string;actions:number[][];}
+export function evaluateModelSubmit(input:ModelSubmitCase){const b=Buffer.from(input.memory,'hex'),base=0x300000000n,d=new DataView(b.buffer,b.byteOffset,b.length);
+ const m={bytes:(a:bigint,n:number)=>b.subarray(Number(a-base),Number(a-base)+n),read8:(a:bigint)=>b[Number(a-base)],write8:(a:bigint,n:number)=>{b[Number(a-base)]=n;},read32:(a:bigint)=>d.getUint32(Number(a-base),true),read64:(a:bigint)=>d.getBigUint64(Number(a-base),true)};
+ const endpoint=new OriginalLevelMeshModelEndpoint(339,base+0x1000n,m);return input.actions.map(([op,value])=>{const queues:number[]=[];if(op===0)endpoint.submit({queue:a=>queues.push(Number(a-base)),debugEnabled:()=>false});else if(op===1)endpoint.setEnabled(value);else if(op===2)b[0x227]=value;else if(op===3)endpoint.setTransform(b.subarray(0x1900,0x1940));else throw new Error('unknown action');return {queues,memory:b.toString('hex')};});}

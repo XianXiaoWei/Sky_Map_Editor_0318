@@ -1,0 +1,1416 @@
+{
+  "className": "Water",
+  "functionGroup": "水、雾与天气",
+  "functionRole": "水面空间与阴影配置",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "Water 的原默认值、继承初始化及 2 个序列化字段变体；原注册字段 2 项。"
+    },
+    {
+      "name": "水面空间与阴影配置",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "当前无非空序列化依赖；原虚方法、资源或全局调用仍需恢复。"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "Water",
+    "category": "水、雾与天气",
+    "functionGroupId": "weather",
+    "functionRole": "水面空间与阴影配置",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "Water 的原默认值、继承初始化及 2 个序列化字段变体；原注册字段 2 项。"
+      },
+      {
+        "name": "水面空间与阴影配置",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "当前无非空序列化依赖；原虚方法、资源或全局调用仍需恢复。"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [],
+    "rttiWorkingGroup": "地形、云、水和环境",
+    "role": "对象实例类型",
+    "instances": 38,
+    "nestedInstances": 0,
+    "referenceFields": 0,
+    "declaredLevels": 16,
+    "levels": [
+      {
+        "level": "Dawn",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Dusk",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DuskGraveyard",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DuskMid",
+        "nodes": 5,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "HubReveal",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Night",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "NightEntrance",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Cave",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Village",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Rain",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainEnd",
+        "nodes": 5,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainForest",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainMid",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SkyHub2",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Storm",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "StormEnd",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "sunShadowed",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "transform",
+        "type": 0,
+        "size": 64,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100cd3670",
+    "nativeRegisteredFields": [
+      {
+        "name": "transform",
+        "typeGetter": "__Z17GetMetaTypeByTypeIN10Vectormath3Aos7Matrix4EERK8MetaTypev",
+        "nativeOffset": 16,
+        "registrationFunction": "0x1004d82c0",
+        "propertyAddress": "0x100cd3420"
+      },
+      {
+        "name": "sunShadowed",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 80,
+        "registrationFunction": "0x1004d82c0",
+        "propertyAddress": "0x100cd3470"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 2 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "Dawn:n365",
+      "level": "Dawn",
+      "nodeId": 365,
+      "name": "BstNode_2279669986",
+      "className": "Water",
+      "classIndex": 58,
+      "sourceOffset": 88854,
+      "sourceLength": 88,
+      "sourceSha256": "4fc2776be4a3aa34bebb9c0c38a496ed61628234b5a7ee463d90f724c26742b5",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n1103",
+      "level": "Dusk",
+      "nodeId": 1103,
+      "name": "BstNode_885",
+      "className": "Water",
+      "classIndex": 75,
+      "sourceOffset": 225387,
+      "sourceLength": 81,
+      "sourceSha256": "dc5c854652b2cbd7c50c0b2b74982ef1388cb79607f138189962ad25bcb609a5",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n281",
+      "level": "DuskGraveyard",
+      "nodeId": 281,
+      "name": "BstNode_885",
+      "className": "Water",
+      "classIndex": 35,
+      "sourceOffset": 90729,
+      "sourceLength": 81,
+      "sourceSha256": "037ead2518b264810d167ef53145ce90bfb30a59c777b1d7eaefc1c4a4dd324b",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n417",
+      "level": "DuskGraveyard",
+      "nodeId": 417,
+      "name": "BstNode_2345992326",
+      "className": "Water",
+      "classIndex": 35,
+      "sourceOffset": 122546,
+      "sourceLength": 88,
+      "sourceSha256": "a34993f4c21566141cf9eb5c5e59835ca8a2e145810a34a2a9fa07b315abbd8a",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n807",
+      "level": "DuskGraveyard",
+      "nodeId": 807,
+      "name": "BstNode_2345992208",
+      "className": "Water",
+      "classIndex": 35,
+      "sourceOffset": 211585,
+      "sourceLength": 88,
+      "sourceSha256": "6333b7f3121aa73e65787e31b37f5f1afb7036b09c3940a1b4d243ac4d44eb48",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n116",
+      "level": "DuskMid",
+      "nodeId": 116,
+      "name": "BstNode_2345992422",
+      "className": "Water",
+      "classIndex": 25,
+      "sourceOffset": 40009,
+      "sourceLength": 88,
+      "sourceSha256": "794f825a1c491404cbdca622befbd2e6160781b6169af5b3f6af08b6ba7447d6",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n202",
+      "level": "DuskMid",
+      "nodeId": 202,
+      "name": "BstNode_2345992421",
+      "className": "Water",
+      "classIndex": 25,
+      "sourceOffset": 56383,
+      "sourceLength": 88,
+      "sourceSha256": "1cc70996f6a4cd14c1710857b894b94ea67766fcd970ea69d97c69e366ded531",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n535",
+      "level": "DuskMid",
+      "nodeId": 535,
+      "name": "BstNode_2345992468",
+      "className": "Water",
+      "classIndex": 25,
+      "sourceOffset": 118140,
+      "sourceLength": 88,
+      "sourceSha256": "74460448dcfd02d76316835df916233cb9b718a6b4bdc3ac7fa6a568ac030742",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n741",
+      "level": "DuskMid",
+      "nodeId": 741,
+      "name": "BstNode_2345992340",
+      "className": "Water",
+      "classIndex": 25,
+      "sourceOffset": 159123,
+      "sourceLength": 88,
+      "sourceSha256": "858c57a9f0afc3ffc33386b17f267a17f4e21d180e09417913f340283d0707a8",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n794",
+      "level": "DuskMid",
+      "nodeId": 794,
+      "name": "BstNode_2345992469",
+      "className": "Water",
+      "classIndex": 25,
+      "sourceOffset": 169620,
+      "sourceLength": 88,
+      "sourceSha256": "d8c4d1996997b672c68e560081f0222b32cf1e10ab6f6157bd0a7412190f40d5",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n432",
+      "level": "HubReveal",
+      "nodeId": 432,
+      "name": "BstNode_544",
+      "className": "Water",
+      "classIndex": 69,
+      "sourceOffset": 103677,
+      "sourceLength": 81,
+      "sourceSha256": "55f46964379058cf0d91691cb6fae747aec7e803a2e8c8f2d577bfc8943f9f28",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n485",
+      "level": "Night",
+      "nodeId": 485,
+      "name": "BstNode_34603591",
+      "className": "Water",
+      "classIndex": 44,
+      "sourceOffset": 95920,
+      "sourceLength": 86,
+      "sourceSha256": "3673bab6b28d9beaebf0d7790d68aee18d21da7928d8b0b452ea14f3a1533473",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "NightEntrance:n460",
+      "level": "NightEntrance",
+      "nodeId": 460,
+      "name": "BstNode_233",
+      "className": "Water",
+      "classIndex": 36,
+      "sourceOffset": 85494,
+      "sourceLength": 81,
+      "sourceSha256": "2e8efc40803d1b40a1e8415864a2c041435f30f168cdf22021db2c3ce4b643c3",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n173",
+      "level": "Prairie_Cave",
+      "nodeId": 173,
+      "name": "BstNode_1482555503",
+      "className": "Water",
+      "classIndex": 27,
+      "sourceOffset": 62482,
+      "sourceLength": 88,
+      "sourceSha256": "383fb187bf531173728a7b8780b948f60749eecd332f522fc7023e5e4fc198e1",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n209",
+      "level": "Prairie_Cave",
+      "nodeId": 209,
+      "name": "BstNode_2753888413",
+      "className": "Water",
+      "classIndex": 27,
+      "sourceOffset": 71001,
+      "sourceLength": 88,
+      "sourceSha256": "0d07350ad08d93899c5b9a6b7c268fe74e2db909e569b38cb4b58fc13cb353d9",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n459",
+      "level": "Prairie_Cave",
+      "nodeId": 459,
+      "name": "BstNode_2753888429",
+      "className": "Water",
+      "classIndex": 27,
+      "sourceOffset": 130534,
+      "sourceLength": 88,
+      "sourceSha256": "256d2d112e3864a512b296673b7ee7ebc61fa1a73a45eb1c3389b2e624c897b6",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n1432",
+      "level": "Prairie_Cave",
+      "nodeId": 1432,
+      "name": "BstNode_2753888433",
+      "className": "Water",
+      "classIndex": 27,
+      "sourceOffset": 358619,
+      "sourceLength": 88,
+      "sourceSha256": "fc4d1a5c3dd760d8c0b4b4c46d22bd068bba8da0623d616881aa7c40ee4d89c5",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n542",
+      "level": "Prairie_Village",
+      "nodeId": 542,
+      "name": "BstNode_1803",
+      "className": "Water",
+      "classIndex": 64,
+      "sourceOffset": 118533,
+      "sourceLength": 82,
+      "sourceSha256": "73cafa1491cca113c42252588e8a6ad9faffff9d25598aa56205f07025505b60",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n146",
+      "level": "Rain",
+      "nodeId": 146,
+      "name": "BstNode_211",
+      "className": "Water",
+      "classIndex": 26,
+      "sourceOffset": 61290,
+      "sourceLength": 81,
+      "sourceSha256": "399b1638810b4214a55a6f3560d61dea1338865bda9aea973d6d990c48dca7e4",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n582",
+      "level": "Rain",
+      "nodeId": 582,
+      "name": "BstNode_1164",
+      "className": "Water",
+      "classIndex": 26,
+      "sourceOffset": 160394,
+      "sourceLength": 82,
+      "sourceSha256": "d5ddd5c91cf2fa93e541cf80e0c69293892e0f89c38e30501e8ca61b98219918",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n1350",
+      "level": "Rain",
+      "nodeId": 1350,
+      "name": "BstNode_1165",
+      "className": "Water",
+      "classIndex": 26,
+      "sourceOffset": 329287,
+      "sourceLength": 82,
+      "sourceSha256": "c2954588fd8ab4a6728a4588702f243c3378955feaefe3d280ce2033985c2a83",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n191",
+      "level": "RainEnd",
+      "nodeId": 191,
+      "name": "BstNode_1138",
+      "className": "Water",
+      "classIndex": 32,
+      "sourceOffset": 75398,
+      "sourceLength": 82,
+      "sourceSha256": "0eb651eec2fad304b0dbafccef0e9f65a1c84d78f210de87d2293e70b436b811",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n362",
+      "level": "RainEnd",
+      "nodeId": 362,
+      "name": "BstNode_743",
+      "className": "Water",
+      "classIndex": 32,
+      "sourceOffset": 115650,
+      "sourceLength": 81,
+      "sourceSha256": "4de0a7a2e10aa78751bd284eae284debbbecd72ab7b670bb05d47c365571b38c",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n931",
+      "level": "RainEnd",
+      "nodeId": 931,
+      "name": "BstNode_676",
+      "className": "Water",
+      "classIndex": 32,
+      "sourceOffset": 249559,
+      "sourceLength": 81,
+      "sourceSha256": "aee7f7274d81771d9625f3cedfc32b91cfc4757b910b7778868cb4142de833f6",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n1071",
+      "level": "RainEnd",
+      "nodeId": 1071,
+      "name": "BstNode_803",
+      "className": "Water",
+      "classIndex": 32,
+      "sourceOffset": 285120,
+      "sourceLength": 81,
+      "sourceSha256": "0aa556507fb4e4727c8033d6c90dbd22493aec227723c5bd28e7a4d14d86e478",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n1140",
+      "level": "RainEnd",
+      "nodeId": 1140,
+      "name": "BstNode_105",
+      "className": "Water",
+      "classIndex": 32,
+      "sourceOffset": 301148,
+      "sourceLength": 81,
+      "sourceSha256": "2784b7a2de194fb4fd3ee4ac33dc988e0194ae1723e00d22ccd243799aaf6ff9",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n506",
+      "level": "RainForest",
+      "nodeId": 506,
+      "name": "BstNode_2345992699",
+      "className": "Water",
+      "classIndex": 50,
+      "sourceOffset": 116291,
+      "sourceLength": 88,
+      "sourceSha256": "6f6ea0a45b4cc76819f27f01fa64fadd854880c4ff83923a083a09dc0e222bc5",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n726",
+      "level": "RainForest",
+      "nodeId": 726,
+      "name": "BstNode_2345992760",
+      "className": "Water",
+      "classIndex": 50,
+      "sourceOffset": 167522,
+      "sourceLength": 88,
+      "sourceSha256": "904352ea1729212e809b01b6d9f392bab6d8dfcf332bbd44140a96786ce977b6",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n835",
+      "level": "RainMid",
+      "nodeId": 835,
+      "name": "BstNode_882",
+      "className": "Water",
+      "classIndex": 59,
+      "sourceOffset": 182226,
+      "sourceLength": 81,
+      "sourceSha256": "05bbac37b27151a23ca18c6a73c21988cedaaec359e68be2c76b28279c8336f6",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n989",
+      "level": "RainMid",
+      "nodeId": 989,
+      "name": "BstNode_2345992764",
+      "className": "Water",
+      "classIndex": 59,
+      "sourceOffset": 206762,
+      "sourceLength": 88,
+      "sourceSha256": "320866ebcf83109f86f7592df08df4033e7e019a7534c741c04f07dda1e1f9f3",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n1661",
+      "level": "RainMid",
+      "nodeId": 1661,
+      "name": "BstNode_2345992760",
+      "className": "Water",
+      "classIndex": 59,
+      "sourceOffset": 333748,
+      "sourceLength": 88,
+      "sourceSha256": "50ea88481d70fe14193b041d6ca66955b33965f011bb7442c510f1ddca6b0096",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n692",
+      "level": "SkyHub2",
+      "nodeId": 692,
+      "name": "BstNode_2753888322",
+      "className": "Water",
+      "classIndex": 69,
+      "sourceOffset": 160924,
+      "sourceLength": 88,
+      "sourceSha256": "911ae5c4db59d318f390d3f1fbf3e1133f2c0587c7df0618cca44782d6065787",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1917",
+      "level": "SkyHub2",
+      "nodeId": 1917,
+      "name": "BstNode_1167525152",
+      "className": "Water",
+      "classIndex": 69,
+      "sourceOffset": 363972,
+      "sourceLength": 88,
+      "sourceSha256": "9851bfeaa32e33e10b3de9254f3d7fc37e2427fc03b5ef613b1084e4ed7045da",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n778",
+      "level": "Storm",
+      "nodeId": 778,
+      "name": "BstNode_2529559698",
+      "className": "Water",
+      "classIndex": 49,
+      "sourceOffset": 162090,
+      "sourceLength": 88,
+      "sourceSha256": "74fcb396a4bb9393bbc4642205277b9bf852562449ab4fd9708451847d716e4b",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n949",
+      "level": "Storm",
+      "nodeId": 949,
+      "name": "BstNode_2529559085",
+      "className": "Water",
+      "classIndex": 49,
+      "sourceOffset": 191639,
+      "sourceLength": 88,
+      "sourceSha256": "e2ccb3b6fb275d2eb92f74c18b0f855e1082231f32fd39bc512c6f0c22818006",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n1062",
+      "level": "Storm",
+      "nodeId": 1062,
+      "name": "BstNode_2529559659",
+      "className": "Water",
+      "classIndex": 49,
+      "sourceOffset": 211187,
+      "sourceLength": 88,
+      "sourceSha256": "8d55bc9a7ddf68666a7d9e2dc2ffa840fcc25ae5f2eb5e5d56fbaec0f737fc8b",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n1549",
+      "level": "Storm",
+      "nodeId": 1549,
+      "name": "BstNode_2529559735",
+      "className": "Water",
+      "classIndex": 49,
+      "sourceOffset": 296238,
+      "sourceLength": 88,
+      "sourceSha256": "b4b1f7a898f47a108f233a2287270fc534759aa8ea56e673796bfd1a56aabb1b",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n899",
+      "level": "StormEnd",
+      "nodeId": 899,
+      "name": "BstNode_2529558663",
+      "className": "Water",
+      "classIndex": 61,
+      "sourceOffset": 172618,
+      "sourceLength": 88,
+      "sourceSha256": "0e503714f12fcc6c7ac9b8adbefb37aea45fa2857fb6e3d80d959424b2af6db6",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "Dawn",
+      "path": "Levels/Dawn/Objects.level.bin",
+      "sha256": "16e26aafc7f9d120a548bf5d8bec04fbc18146bc8db531ef75144889b1ff197a",
+      "bytes": 504637,
+      "nodes": 3798,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dawn.json",
+      "markdown": "Objects对象清单/Dawn.md"
+    },
+    {
+      "level": "Dusk",
+      "path": "Levels/Dusk/Objects.level.bin",
+      "sha256": "9222b248f17fb4122cd4ad9650543ab86aab8b077b6965248c70ac2341bf2d5d",
+      "bytes": 242331,
+      "nodes": 1288,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dusk.json",
+      "markdown": "Objects对象清单/Dusk.md"
+    },
+    {
+      "level": "DuskGraveyard",
+      "path": "Levels/DuskGraveyard/Objects.level.bin",
+      "sha256": "128b30dcbe40b68e68fc25d195b68dc39f897259453c02612049ccd37a90ffb4",
+      "bytes": 424333,
+      "nodes": 1791,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DuskGraveyard.json",
+      "markdown": "Objects对象清单/DuskGraveyard.md"
+    },
+    {
+      "level": "DuskMid",
+      "path": "Levels/DuskMid/Objects.level.bin",
+      "sha256": "899ca33226dabd04afecfe7888750938ff4e460cb586603364e150591e9cbda5",
+      "bytes": 234288,
+      "nodes": 1268,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DuskMid.json",
+      "markdown": "Objects对象清单/DuskMid.md"
+    },
+    {
+      "level": "HubReveal",
+      "path": "Levels/HubReveal/Objects.level.bin",
+      "sha256": "4b32f12bbe4b246cde9ca1e4ba0982000ff108359865bb4340aba640e609861b",
+      "bytes": 289438,
+      "nodes": 1829,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/HubReveal.json",
+      "markdown": "Objects对象清单/HubReveal.md"
+    },
+    {
+      "level": "Night",
+      "path": "Levels/Night/Objects.level.bin",
+      "sha256": "6ce612c9efb82834d648de81251033b341a44f4d9374d8338d868575aab6a723",
+      "bytes": 499756,
+      "nodes": 3719,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Night.json",
+      "markdown": "Objects对象清单/Night.md"
+    },
+    {
+      "level": "NightEntrance",
+      "path": "Levels/NightEntrance/Objects.level.bin",
+      "sha256": "d7cc9c4e290e146b459a8ddcddd19be2287fd2cc8ac19f98b688003e05ebb354",
+      "bytes": 98001,
+      "nodes": 594,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/NightEntrance.json",
+      "markdown": "Objects对象清单/NightEntrance.md"
+    },
+    {
+      "level": "Prairie_Cave",
+      "path": "Levels/Prairie_Cave/Objects.level.bin",
+      "sha256": "675a2256e24f8c4b16540cee6a5cd2b7647ff2fb495724a8bf596717ca39d944",
+      "bytes": 466340,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Cave.json",
+      "markdown": "Objects对象清单/Prairie_Cave.md"
+    },
+    {
+      "level": "Prairie_Village",
+      "path": "Levels/Prairie_Village/Objects.level.bin",
+      "sha256": "4656296b54402016b59b894b4653fbdc71e106a21e0900294f73f2c7b7112385",
+      "bytes": 549989,
+      "nodes": 3724,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Village.json",
+      "markdown": "Objects对象清单/Prairie_Village.md"
+    },
+    {
+      "level": "Rain",
+      "path": "Levels/Rain/Objects.level.bin",
+      "sha256": "20093bccf3bb1ea0936cb993e66cef0187b40a5a411df3573eb28e4def4f75c6",
+      "bytes": 457732,
+      "nodes": 2079,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Rain.json",
+      "markdown": "Objects对象清单/Rain.md"
+    },
+    {
+      "level": "RainEnd",
+      "path": "Levels/RainEnd/Objects.level.bin",
+      "sha256": "247912ec955153e3df80c16a861eb872573502a285a17943518bdce448a8d5e3",
+      "bytes": 427926,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainEnd.json",
+      "markdown": "Objects对象清单/RainEnd.md"
+    },
+    {
+      "level": "RainForest",
+      "path": "Levels/RainForest/Objects.level.bin",
+      "sha256": "2e69b3314c70c61bd99435f4bb4418fba540f227c83670e1af3b5358c64c3b73",
+      "bytes": 271409,
+      "nodes": 1306,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainForest.json",
+      "markdown": "Objects对象清单/RainForest.md"
+    },
+    {
+      "level": "RainMid",
+      "path": "Levels/RainMid/Objects.level.bin",
+      "sha256": "139b219d9b71a2ab24418b1ec41f2ee8a2ebfdf4c5ea992c35348a758682ed23",
+      "bytes": 430825,
+      "nodes": 2457,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainMid.json",
+      "markdown": "Objects对象清单/RainMid.md"
+    },
+    {
+      "level": "SkyHub2",
+      "path": "Levels/SkyHub2/Objects.level.bin",
+      "sha256": "8b467f9b349d9d4ce0d038528c96e44dff30063149bf5bbf90232a56bb9dd36f",
+      "bytes": 475656,
+      "nodes": 2886,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SkyHub2.json",
+      "markdown": "Objects对象清单/SkyHub2.md"
+    },
+    {
+      "level": "Storm",
+      "path": "Levels/Storm/Objects.level.bin",
+      "sha256": "4be187f31f1ef86611831abeb45ed9c1deff5e925f3bae80a6be49af85fa52bd",
+      "bytes": 324849,
+      "nodes": 1954,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Storm.json",
+      "markdown": "Objects对象清单/Storm.md"
+    },
+    {
+      "level": "StormEnd",
+      "path": "Levels/StormEnd/Objects.level.bin",
+      "sha256": "a9c13b592198ee01ab2922a0c7901f4516ae172d56a22d9b7f806ff7464c9162",
+      "bytes": 224465,
+      "nodes": 1243,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/StormEnd.json",
+      "markdown": "Objects对象清单/StormEnd.md"
+    }
+  ]
+}

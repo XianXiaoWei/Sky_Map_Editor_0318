@@ -1,0 +1,413 @@
+{
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "functionBoundarySource": "Mach-O LC_FUNCTION_STARTS",
+  "nativeFunctionCount": 54121,
+  "interpolation": {
+    "function": "0x10031a230",
+    "tableAddress": "0x10031a420",
+    "types": [
+      {
+        "tag": 0,
+        "name": "int8",
+        "target": "0x10031a25a"
+      },
+      {
+        "tag": 1,
+        "name": "uint8",
+        "target": "0x10031a28a"
+      },
+      {
+        "tag": 2,
+        "name": "int16",
+        "target": "0x10031a2bb"
+      },
+      {
+        "tag": 3,
+        "name": "uint16",
+        "target": "0x10031a2ec"
+      },
+      {
+        "tag": 4,
+        "name": "int32",
+        "target": "0x10031a31e"
+      },
+      {
+        "tag": 5,
+        "name": "uint32",
+        "target": "0x10031a348"
+      },
+      {
+        "tag": 6,
+        "name": "float32",
+        "target": "0x10031a379"
+      },
+      {
+        "tag": 7,
+        "name": "float64",
+        "target": "0x10031a399"
+      },
+      {
+        "tag": 8,
+        "name": "Vector3",
+        "target": "0x10031a3c1"
+      },
+      {
+        "tag": 9,
+        "name": "Vector4",
+        "target": "0x10031a3e9"
+      },
+      {
+        "tag": 10,
+        "name": "Color",
+        "target": "0x10031a3d5"
+      },
+      {
+        "tag": 11,
+        "name": "bool",
+        "target": "0x10031a40b"
+      }
+    ],
+    "float32": "round32((round32(1-t)*a) + (t*b)), round each multiply separately",
+    "Vector3": "a+(b-a)*[t,t,t,0], round each float32 instruction",
+    "Vector4": "a+(b-a)*t, round each float32 instruction",
+    "Color": "Vector4 interpolation with t clamped to [0,1]",
+    "bool": "pick a when t<0.5 or unordered, otherwise pick b"
+  },
+  "layerMix": {
+    "function": "0x10031aec0",
+    "layers": 4,
+    "order": "ascending",
+    "minimumWeight": 9.999999747378752e-05,
+    "rule": "per-layer incremental weighted mean using weight/cumulativeWeight; blend output with mean using min(1,cumulativeWeight)",
+    "unresolved": [
+      "exact registration/node traversal order",
+      "full event and fade lifecycle",
+      "all spatial/hull weight dependencies"
+    ]
+  },
+  "uniformStorage": {
+    "function": "0x100793f30",
+    "maxUniforms": 128,
+    "recordStride": 56,
+    "nameCapacityBytes": 28,
+    "sourcePointerOffset": 32,
+    "auxOffset": 40,
+    "kindOffset": 48,
+    "componentCountOffset": 52,
+    "duplicateRule": "same name replaces source pointer and metadata in its existing slot"
+  },
+  "ambienceUniforms": [
+    {
+      "name": "u_sunDir",
+      "kind": "numeric",
+      "components": 3,
+      "source": {
+        "owner": "Ambience",
+        "nativeOffset": 656
+      },
+      "registrationCall": "0x10005a440",
+      "valueStatus": "runtime computation not yet fully reproduced"
+    },
+    {
+      "name": "u_sunColor",
+      "kind": "numeric",
+      "components": 3,
+      "source": {
+        "owner": "Ambience",
+        "nativeOffset": 32
+      },
+      "registrationCall": "0x10005a45e",
+      "valueStatus": "runtime computation not yet fully reproduced"
+    },
+    {
+      "name": "u_sunSizeIntMoonPhase",
+      "kind": "numeric",
+      "components": 4,
+      "source": {
+        "owner": "Ambience",
+        "nativeOffset": 56
+      },
+      "registrationCall": "0x10005a47c",
+      "valueStatus": "runtime computation not yet fully reproduced"
+    },
+    {
+      "name": "u_atmosphereDensity",
+      "kind": "numeric",
+      "components": 1,
+      "source": {
+        "owner": "Ambience",
+        "nativeOffset": 176
+      },
+      "registrationCall": "0x10005a49a",
+      "valueStatus": "runtime computation not yet fully reproduced"
+    },
+    {
+      "name": "u_fogDensityHeightDist",
+      "kind": "numeric",
+      "components": 3,
+      "source": {
+        "owner": "Ambience",
+        "nativeOffset": 500
+      },
+      "registrationCall": "0x10005a4b8",
+      "valueStatus": "runtime computation not yet fully reproduced"
+    },
+    {
+      "name": "u_cheapFog",
+      "kind": "numeric",
+      "components": 4,
+      "source": {
+        "owner": "Ambience",
+        "nativeOffset": 512
+      },
+      "registrationCall": "0x10005a4d6",
+      "valueStatus": "runtime computation not yet fully reproduced"
+    },
+    {
+      "name": "u_cheapFog2",
+      "kind": "numeric",
+      "components": 2,
+      "source": {
+        "owner": "Ambience",
+        "nativeOffset": 528
+      },
+      "registrationCall": "0x10005a4f4",
+      "valueStatus": "runtime computation not yet fully reproduced"
+    },
+    {
+      "name": "u_averageSkyColor",
+      "kind": "numeric",
+      "components": 3,
+      "source": {
+        "owner": "Ambience",
+        "nativeOffset": 3136
+      },
+      "registrationCall": "0x10005a514",
+      "valueStatus": "runtime computation not yet fully reproduced"
+    },
+    {
+      "name": "u_averageSkyOcclusion",
+      "kind": "numeric",
+      "components": 1,
+      "source": {
+        "owner": "Ambience",
+        "nativeOffset": 3152
+      },
+      "registrationCall": "0x10005a534",
+      "valueStatus": "runtime computation not yet fully reproduced"
+    },
+    {
+      "name": "u_averageSkyboxColor",
+      "kind": "numeric",
+      "components": 3,
+      "source": {
+        "owner": "Ambience",
+        "nativeOffset": 3120
+      },
+      "registrationCall": "0x10005a554",
+      "valueStatus": "runtime computation not yet fully reproduced"
+    },
+    {
+      "name": "u_atmosphereSunColor",
+      "kind": "numeric",
+      "components": 3,
+      "source": {
+        "owner": "Ambience",
+        "nativeOffset": 3168
+      },
+      "registrationCall": "0x10005a574",
+      "valueStatus": "runtime computation not yet fully reproduced"
+    },
+    {
+      "name": "u_atmosphereSample",
+      "kind": "numeric",
+      "components": 1,
+      "source": {
+        "owner": "Ambience",
+        "nativeOffset": 3184
+      },
+      "registrationCall": "0x10005a594",
+      "valueStatus": "runtime computation not yet fully reproduced"
+    },
+    {
+      "name": "u_atmosphereTex",
+      "kind": "texture",
+      "components": 1,
+      "source": null,
+      "registrationCall": "0x10005a5af",
+      "valueStatus": "runtime computation not yet fully reproduced"
+    },
+    {
+      "name": "u_pointLight",
+      "kind": "numeric",
+      "components": 3,
+      "source": {
+        "owner": "Ambience",
+        "nativeOffset": 672
+      },
+      "registrationCall": "0x10005a5cf",
+      "valueStatus": "runtime computation not yet fully reproduced"
+    },
+    {
+      "name": "u_probeCenter",
+      "kind": "numeric",
+      "components": 3,
+      "source": {
+        "owner": "Ambience",
+        "nativeOffset": 415088
+      },
+      "registrationCall": "0x10005a5f6",
+      "valueStatus": "runtime computation not yet fully reproduced"
+    },
+    {
+      "name": "u_averageProbeColor",
+      "kind": "numeric",
+      "components": 3,
+      "source": {
+        "owner": "Ambience",
+        "nativeOffset": 415104
+      },
+      "registrationCall": "0x10005a616",
+      "valueStatus": "runtime computation not yet fully reproduced"
+    },
+    {
+      "name": "u_probeShR0",
+      "kind": "numeric",
+      "components": 4,
+      "source": {
+        "owner": "Ambience",
+        "nativeOffset": 415120
+      },
+      "registrationCall": "0x10005a636",
+      "valueStatus": "runtime computation not yet fully reproduced"
+    },
+    {
+      "name": "u_probeShR1",
+      "kind": "numeric",
+      "components": 4,
+      "source": {
+        "owner": "Ambience",
+        "nativeOffset": 415136
+      },
+      "registrationCall": "0x10005a656",
+      "valueStatus": "runtime computation not yet fully reproduced"
+    },
+    {
+      "name": "u_probeShG0",
+      "kind": "numeric",
+      "components": 4,
+      "source": {
+        "owner": "Ambience",
+        "nativeOffset": 415156
+      },
+      "registrationCall": "0x10005a676",
+      "valueStatus": "runtime computation not yet fully reproduced"
+    },
+    {
+      "name": "u_probeShG1",
+      "kind": "numeric",
+      "components": 4,
+      "source": {
+        "owner": "Ambience",
+        "nativeOffset": 415172
+      },
+      "registrationCall": "0x10005a696",
+      "valueStatus": "runtime computation not yet fully reproduced"
+    },
+    {
+      "name": "u_probeShB0",
+      "kind": "numeric",
+      "components": 4,
+      "source": {
+        "owner": "Ambience",
+        "nativeOffset": 415192
+      },
+      "registrationCall": "0x10005a6b6",
+      "valueStatus": "runtime computation not yet fully reproduced"
+    },
+    {
+      "name": "u_probeShB1",
+      "kind": "numeric",
+      "components": 4,
+      "source": {
+        "owner": "Ambience",
+        "nativeOffset": 415208
+      },
+      "registrationCall": "0x10005a6d6",
+      "valueStatus": "runtime computation not yet fully reproduced"
+    },
+    {
+      "name": "u_probeShRGB2",
+      "kind": "numeric",
+      "components": 3,
+      "source": {
+        "owner": "Ambience",
+        "nativeOffset": 415228
+      },
+      "registrationCall": "0x10005a6f6",
+      "valueStatus": "runtime computation not yet fully reproduced"
+    },
+    {
+      "name": "u_probeCube",
+      "kind": "texture",
+      "components": 1,
+      "source": null,
+      "registrationCall": "0x10005a70f",
+      "valueStatus": "runtime computation not yet fully reproduced"
+    },
+    {
+      "name": "u_caustics",
+      "kind": "texture",
+      "components": 1,
+      "source": null,
+      "registrationCall": "0x10005a796",
+      "valueStatus": "runtime computation not yet fully reproduced"
+    },
+    {
+      "name": "u_puff",
+      "kind": "texture",
+      "components": 1,
+      "source": null,
+      "registrationCall": "0x10005a7b1",
+      "valueStatus": "runtime computation not yet fully reproduced"
+    },
+    {
+      "name": "u_earthPosRad",
+      "kind": "numeric",
+      "components": 4,
+      "source": {
+        "owner": "Ambience",
+        "nativeOffset": 618624
+      },
+      "registrationCall": "0x10005a7d1",
+      "valueStatus": "runtime computation not yet fully reproduced"
+    },
+    {
+      "name": "u_beaconPosEnable",
+      "kind": "numeric",
+      "components": 4,
+      "source": {
+        "owner": "Ambience",
+        "nativeOffset": 749728
+      },
+      "registrationCall": "0x10005a7f1",
+      "valueStatus": "runtime computation not yet fully reproduced"
+    },
+    {
+      "name": "u_beaconColor",
+      "kind": "numeric",
+      "components": 3,
+      "source": {
+        "owner": "Ambience",
+        "nativeOffset": 749744
+      },
+      "registrationCall": "0x10005a811",
+      "valueStatus": "runtime computation not yet fully reproduced"
+    }
+  ],
+  "incomplete": [
+    "complete environment evaluation for a camera",
+    "atmosphere/probe generation",
+    "GPU upload and original rendered output"
+  ]
+}

@@ -1,0 +1,1511 @@
+{
+  "className": "ScheduledEvent",
+  "functionGroup": "事件调度与逻辑条件",
+  "functionRole": "命名计划事件与对象集合",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "ScheduledEvent 的原默认值、继承初始化及 3 个序列化字段变体；原注册字段 2 项。"
+    },
+    {
+      "name": "命名计划事件与对象集合",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Clump（13 条引用）、SoulTrap（8 条引用）、Marker（1 条引用）、AncestorEngine（5 条引用）、ClockTower（1 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "ScheduledEvent",
+    "category": "事件调度与逻辑条件",
+    "functionGroupId": "flow",
+    "functionRole": "命名计划事件与对象集合",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "ScheduledEvent 的原默认值、继承初始化及 3 个序列化字段变体；原注册字段 2 项。"
+      },
+      {
+        "name": "命名计划事件与对象集合",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Clump（13 条引用）、SoulTrap（8 条引用）、Marker（1 条引用）、AncestorEngine（5 条引用）、ClockTower（1 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Clump",
+        "references": 13
+      },
+      {
+        "className": "SoulTrap",
+        "references": 8
+      },
+      {
+        "className": "AncestorEngine",
+        "references": 5
+      },
+      {
+        "className": "ClockTower",
+        "references": 1
+      },
+      {
+        "className": "Marker",
+        "references": 1
+      }
+    ],
+    "rttiWorkingGroup": "交互、事件与任务",
+    "role": "对象实例类型",
+    "instances": 28,
+    "nestedInstances": 0,
+    "referenceFields": 28,
+    "declaredLevels": 9,
+    "levels": [
+      {
+        "level": "Dusk",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DuskGraveyard",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DuskMid",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Village",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Rain",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainEnd",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainForest",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainMid",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SkyHub2",
+        "nodes": 10,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "clump",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "name",
+        "type": 1,
+        "size": 0,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100cf1090",
+    "nativeRegisteredFields": [
+      {
+        "name": "name",
+        "typeGetter": "__Z17GetMetaTypeByTypeINSt3__112basic_stringIcNS0_11char_traitsIcEE16StlPoolAllocatorIcEEEERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x100591660",
+        "propertyAddress": "0x100cf0eb8"
+      },
+      {
+        "name": "clump",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP6ObjectERK8MetaTypev",
+        "nativeOffset": 80,
+        "registrationFunction": "0x100591660",
+        "propertyAddress": "0x100cf0f08"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 2 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "Dusk:n450",
+      "level": "Dusk",
+      "nodeId": 450,
+      "name": "BstNode_2060386322",
+      "className": "ScheduledEvent",
+      "classIndex": 50,
+      "sourceOffset": 106433,
+      "sourceLength": 45,
+      "sourceSha256": "baef32e18bf34d835e2bd911b2ba4a50590979c767ebea77f054f257a1ab8584",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "dusk_darkstone_0",
+          "raw": "6475736b5f6461726b73746f6e655f3000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n450/p2",
+          "fieldName": "clump",
+          "target": "Dusk:n1097",
+          "targetNodeId": 1097,
+          "offset": 106474
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n1015",
+      "level": "Dusk",
+      "nodeId": 1015,
+      "name": "BstNode_2060386344",
+      "className": "ScheduledEvent",
+      "classIndex": 50,
+      "sourceOffset": 207471,
+      "sourceLength": 45,
+      "sourceSha256": "83081ed4892d0f72658f6a1903f211ce9f85cda05bd92db52fd735b5b719f25c",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "dusk_darkstone_1",
+          "raw": "6475736b5f6461726b73746f6e655f3100"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1015/p2",
+          "fieldName": "clump",
+          "target": "Dusk:n146",
+          "targetNodeId": 146,
+          "offset": 207512
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n1470",
+      "level": "DuskGraveyard",
+      "nodeId": 1470,
+      "name": "BstNode_2060386321",
+      "className": "ScheduledEvent",
+      "classIndex": 67,
+      "sourceOffset": 362245,
+      "sourceLength": 45,
+      "sourceSha256": "55bd1d1630911d09c1710e5f2c32e1f558f76ce307e1a1b9bcaefb466df9bd07",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "dusk_darkstone_1",
+          "raw": "6475736b5f6461726b73746f6e655f3100"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1470/p2",
+          "fieldName": "clump",
+          "target": "DuskGraveyard:n710",
+          "targetNodeId": 710,
+          "offset": 362286
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n1541",
+      "level": "DuskGraveyard",
+      "nodeId": 1541,
+      "name": "BstNode_2060386320",
+      "className": "ScheduledEvent",
+      "classIndex": 67,
+      "sourceOffset": 380597,
+      "sourceLength": 45,
+      "sourceSha256": "9b62e7e656e4a116e5adba2cc0720c08c83f05080ba514d55009d06d01f6132e",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "dusk_darkstone_0",
+          "raw": "6475736b5f6461726b73746f6e655f3000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1541/p2",
+          "fieldName": "clump",
+          "target": "DuskGraveyard:n257",
+          "targetNodeId": 257,
+          "offset": 380638
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n499",
+      "level": "DuskMid",
+      "nodeId": 499,
+      "name": "BstNode_2060386321",
+      "className": "ScheduledEvent",
+      "classIndex": 50,
+      "sourceOffset": 110257,
+      "sourceLength": 45,
+      "sourceSha256": "5506105ddd3140bd36b5f0416031d3aa66fc0d88ea361fc984f243b8e0b563b4",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "dusk_darkstone_0",
+          "raw": "6475736b5f6461726b73746f6e655f3000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n499/p2",
+          "fieldName": "clump",
+          "target": "DuskMid:n389",
+          "targetNodeId": 389,
+          "offset": 110298
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n941",
+      "level": "DuskMid",
+      "nodeId": 941,
+      "name": "BstNode_2060386320",
+      "className": "ScheduledEvent",
+      "classIndex": 50,
+      "sourceOffset": 201345,
+      "sourceLength": 45,
+      "sourceSha256": "7620c3234d0d96e7730222859fcec4ac6b8cf214a524094d122ddeb058949824",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "dusk_darkstone_1",
+          "raw": "6475736b5f6461726b73746f6e655f3100"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n941/p2",
+          "fieldName": "clump",
+          "target": "DuskMid:n997",
+          "targetNodeId": 997,
+          "offset": 201386
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n211",
+      "level": "Prairie_Village",
+      "nodeId": 211,
+      "name": "BstNode_2529558565",
+      "className": "ScheduledEvent",
+      "classIndex": 41,
+      "sourceOffset": 64799,
+      "sourceLength": 37,
+      "sourceSha256": "e10cb071ba8ddc5169cadb29cd0ea90123c34967cd4aa41d55d9e37489549d84",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "day_boat",
+          "raw": "6461795f626f617400"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n211/p2",
+          "fieldName": "clump",
+          "target": "Prairie_Village:n2877",
+          "targetNodeId": 2877,
+          "offset": 64832
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n478",
+      "level": "Prairie_Village",
+      "nodeId": 478,
+      "name": "BstNode_1475018779",
+      "className": "ScheduledEvent",
+      "classIndex": 41,
+      "sourceOffset": 110248,
+      "sourceLength": 42,
+      "sourceSha256": "75b69adfdbece1551929f21143ec2aec14e4e4c6dbfb1950676570f52fa5b2cc",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "day_fairyring",
+          "raw": "6461795f666169727972696e6700"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n478/p2",
+          "fieldName": "clump",
+          "target": "Prairie_Village:n205",
+          "targetNodeId": 205,
+          "offset": 110286
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n406",
+      "level": "Rain",
+      "nodeId": 406,
+      "name": "BstNode_2060386415",
+      "className": "ScheduledEvent",
+      "classIndex": 45,
+      "sourceOffset": 118561,
+      "sourceLength": 45,
+      "sourceSha256": "e75760a4bc0d2616dadc8887246e051e1f8825b5f63155dd906ff43462f5df2b",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "rain_darkstone_0",
+          "raw": "7261696e5f6461726b73746f6e655f3000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n406/p2",
+          "fieldName": "clump",
+          "target": "Rain:n1665",
+          "targetNodeId": 1665,
+          "offset": 118602
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n482",
+      "level": "Rain",
+      "nodeId": 482,
+      "name": "BstNode_2060386416",
+      "className": "ScheduledEvent",
+      "classIndex": 45,
+      "sourceOffset": 137075,
+      "sourceLength": 45,
+      "sourceSha256": "836d5cce990bdfad4db55b4a57ddbc6112b9aa6d5cc8a9ff620c4322fa8ab414",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "rain_darkstone_1",
+          "raw": "7261696e5f6461726b73746f6e655f3100"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n482/p2",
+          "fieldName": "clump",
+          "target": "Rain:n1234",
+          "targetNodeId": 1234,
+          "offset": 137116
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n217",
+      "level": "RainEnd",
+      "nodeId": 217,
+      "name": "BstNode_2060386349",
+      "className": "ScheduledEvent",
+      "classIndex": 36,
+      "sourceOffset": 81070,
+      "sourceLength": 45,
+      "sourceSha256": "64fbb3222042213c1dac3f304f00bcd4f503544249b7fd3da23e483de6e9fd5e",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "rain_darkstone_1",
+          "raw": "7261696e5f6461726b73746f6e655f3100"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n217/p2",
+          "fieldName": "clump",
+          "target": "RainEnd:n203",
+          "targetNodeId": 203,
+          "offset": 81111
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n1328",
+      "level": "RainEnd",
+      "nodeId": 1328,
+      "name": "BstNode_2060386331",
+      "className": "ScheduledEvent",
+      "classIndex": 36,
+      "sourceOffset": 347660,
+      "sourceLength": 45,
+      "sourceSha256": "c60328f7b95fbf4ada7d82fa0dba46aa9d9ac72a843319208b2d1c25b343de2c",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "rain_darkstone_0",
+          "raw": "7261696e5f6461726b73746f6e655f3000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1328/p2",
+          "fieldName": "clump",
+          "target": "RainEnd:n1297",
+          "targetNodeId": 1297,
+          "offset": 347701
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n455",
+      "level": "RainForest",
+      "nodeId": 455,
+      "name": "BstNode_2060386401",
+      "className": "ScheduledEvent",
+      "classIndex": 48,
+      "sourceOffset": 102799,
+      "sourceLength": 45,
+      "sourceSha256": "775d7c2cf751aa682dd9f6656e8cd230b5686d43f9be2bdb89f6ebde6e92ac00",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "rain_darkstone_1",
+          "raw": "7261696e5f6461726b73746f6e655f3100"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n455/p2",
+          "fieldName": "clump",
+          "target": "RainForest:n1139",
+          "targetNodeId": 1139,
+          "offset": 102840
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n480",
+      "level": "RainForest",
+      "nodeId": 480,
+      "name": "BstNode_1475018810",
+      "className": "ScheduledEvent",
+      "classIndex": 48,
+      "sourceOffset": 109126,
+      "sourceLength": 41,
+      "sourceSha256": "b22505e0b669323fb4f8ed254801f57ef794be60b1facc1c6f02393d75bccbeb",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "rain_rainbow",
+          "raw": "7261696e5f7261696e626f7700"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n480/p2",
+          "fieldName": "clump",
+          "target": "RainForest:n333",
+          "targetNodeId": 333,
+          "offset": 109163
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n1142",
+      "level": "RainForest",
+      "nodeId": 1142,
+      "name": "BstNode_2060386400",
+      "className": "ScheduledEvent",
+      "classIndex": 48,
+      "sourceOffset": 256063,
+      "sourceLength": 45,
+      "sourceSha256": "ece5607c2f1dd0a47da60c121dc6a27f6830496199c044d255daa03cb9760d78",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "rain_darkstone_0",
+          "raw": "7261696e5f6461726b73746f6e655f3000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1142/p2",
+          "fieldName": "clump",
+          "target": "RainForest:n717",
+          "targetNodeId": 717,
+          "offset": 256104
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n412",
+      "level": "RainMid",
+      "nodeId": 412,
+      "name": "BstNode_2529558614",
+      "className": "ScheduledEvent",
+      "classIndex": 47,
+      "sourceOffset": 103330,
+      "sourceLength": 39,
+      "sourceSha256": "550ecf057de74ae216021416ef4652a03e011eab9e7ab795f3bdb2d35297cf73",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "rain_manta",
+          "raw": "7261696e5f6d616e746100"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n412/p2",
+          "fieldName": "clump",
+          "target": "RainMid:n1516",
+          "targetNodeId": 1516,
+          "offset": 103365
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n1885",
+      "level": "RainMid",
+      "nodeId": 1885,
+      "name": "BstNode_2060386510",
+      "className": "ScheduledEvent",
+      "classIndex": 47,
+      "sourceOffset": 368407,
+      "sourceLength": 45,
+      "sourceSha256": "d51227b20d5cbab7c4b82e1d3d1a09ff46c16a9c8374e00540b9b7a4ccfc35e0",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "rain_darkstone_1",
+          "raw": "7261696e5f6461726b73746f6e655f3100"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1885/p2",
+          "fieldName": "clump",
+          "target": "RainMid:n2089",
+          "targetNodeId": 2089,
+          "offset": 368448
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n2120",
+      "level": "RainMid",
+      "nodeId": 2120,
+      "name": "BstNode_2060386513",
+      "className": "ScheduledEvent",
+      "classIndex": 47,
+      "sourceOffset": 410716,
+      "sourceLength": 45,
+      "sourceSha256": "4c37b7ba08875485c2621601054edfc9659de31f2c1fd89b88740a7a62bc80b5",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "rain_darkstone_0",
+          "raw": "7261696e5f6461726b73746f6e655f3000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n2120/p2",
+          "fieldName": "clump",
+          "target": "RainMid:n592",
+          "targetNodeId": 592,
+          "offset": 410757
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n322",
+      "level": "SkyHub2",
+      "nodeId": 322,
+      "name": "BstNode_2446917849",
+      "className": "ScheduledEvent",
+      "classIndex": 53,
+      "sourceOffset": 94572,
+      "sourceLength": 38,
+      "sourceSha256": "90ab3964730103ac01fe6d475967758367e5eb0e098cbe609ceff47e7ef2da1f",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "hub_door6",
+          "raw": "6875625f646f6f723600"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n322/p2",
+          "fieldName": "clump",
+          "target": "SkyHub2:n2229",
+          "targetNodeId": 2229,
+          "offset": 94606
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1104",
+      "level": "SkyHub2",
+      "nodeId": 1104,
+      "name": "BstNode_2446917862",
+      "className": "ScheduledEvent",
+      "classIndex": 53,
+      "sourceOffset": 234588,
+      "sourceLength": 38,
+      "sourceSha256": "e8a2c2bde739a93d8a68d0b5d3a5c421daf346c6af76408beee094b2a17604bb",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "hub_door4",
+          "raw": "6875625f646f6f723400"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1104/p2",
+          "fieldName": "clump",
+          "target": "SkyHub2:n1762",
+          "targetNodeId": 1762,
+          "offset": 234622
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1245",
+      "level": "SkyHub2",
+      "nodeId": 1245,
+      "name": "BstNode_1528233997",
+      "className": "ScheduledEvent",
+      "classIndex": 53,
+      "sourceOffset": 259033,
+      "sourceLength": 43,
+      "sourceSha256": "f901b7c68f7d1ae6fb11d6dad966b4ca385ef270b4b269513a7227e80af44325",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "hub_clocktower",
+          "raw": "6875625f636c6f636b746f77657200"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1245/p2",
+          "fieldName": "clump",
+          "target": "SkyHub2:n1302",
+          "targetNodeId": 1302,
+          "offset": 259072
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1671",
+      "level": "SkyHub2",
+      "nodeId": 1671,
+      "name": "BstNode_2446917860",
+      "className": "ScheduledEvent",
+      "classIndex": 53,
+      "sourceOffset": 320691,
+      "sourceLength": 38,
+      "sourceSha256": "16cd31cbe927dbc206e33b0f4c21860cd5d02c581ec7ee88b5c4b1e550ec9baf",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "hub_door2",
+          "raw": "6875625f646f6f723200"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1671/p2",
+          "fieldName": "clump",
+          "target": "SkyHub2:n709",
+          "targetNodeId": 709,
+          "offset": 320725
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1697",
+      "level": "SkyHub2",
+      "nodeId": 1697,
+      "name": "BstNode_2446917861",
+      "className": "ScheduledEvent",
+      "classIndex": 53,
+      "sourceOffset": 322986,
+      "sourceLength": 38,
+      "sourceSha256": "e98e43417d6eef0fe845c8f1c32caff38a12dfd0efa3ffc27eda5c949abf41d9",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "hub_door3",
+          "raw": "6875625f646f6f723300"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1697/p2",
+          "fieldName": "clump",
+          "target": "SkyHub2:n366",
+          "targetNodeId": 366,
+          "offset": 323020
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1700",
+      "level": "SkyHub2",
+      "nodeId": 1700,
+      "name": "BstNode_2446917864",
+      "className": "ScheduledEvent",
+      "classIndex": 53,
+      "sourceOffset": 323229,
+      "sourceLength": 38,
+      "sourceSha256": "2ec55172e93b453a1774745d732ece43d4bac4adfbab8bbc8ad2700043c43284",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "hub_door6",
+          "raw": "6875625f646f6f723600"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1700/p2",
+          "fieldName": "clump",
+          "target": "SkyHub2:n912",
+          "targetNodeId": 912,
+          "offset": 323263
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1987",
+      "level": "SkyHub2",
+      "nodeId": 1987,
+      "name": "BstNode_2446917863",
+      "className": "ScheduledEvent",
+      "classIndex": 53,
+      "sourceOffset": 376393,
+      "sourceLength": 38,
+      "sourceSha256": "159daa7a06687cb7f4fec67cee564c6b8d32c8b25e3c3e59a5d7e56ed04fe7d4",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "hub_door5",
+          "raw": "6875625f646f6f723500"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1987/p2",
+          "fieldName": "clump",
+          "target": "SkyHub2:n1893",
+          "targetNodeId": 1893,
+          "offset": 376427
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n2313",
+      "level": "SkyHub2",
+      "nodeId": 2313,
+      "name": "BstNode_2446917633",
+      "className": "ScheduledEvent",
+      "classIndex": 53,
+      "sourceOffset": 435203,
+      "sourceLength": 42,
+      "sourceSha256": "201baf1970bcde2f09e9a91f02db217ee9544a7f6692087a95a03def62c8f5b9",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "hub_fireworks",
+          "raw": "6875625f66697265776f726b7300"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n2313/p2",
+          "fieldName": "clump",
+          "target": "SkyHub2:n1278",
+          "targetNodeId": 1278,
+          "offset": 435241
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n2387",
+      "level": "SkyHub2",
+      "nodeId": 2387,
+      "name": "BstNode_2060386426",
+      "className": "ScheduledEvent",
+      "classIndex": 53,
+      "sourceOffset": 451080,
+      "sourceLength": 44,
+      "sourceSha256": "e7d7600d193b7fcca4e4b40c56d247673d2b031e17f8464b4464ebedb2fdaa0c",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "hub_darkstone_1",
+          "raw": "6875625f6461726b73746f6e655f3100"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n2387/p2",
+          "fieldName": "clump",
+          "target": "SkyHub2:n2057",
+          "targetNodeId": 2057,
+          "offset": 451120
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n2398",
+      "level": "SkyHub2",
+      "nodeId": 2398,
+      "name": "BstNode_2060386420",
+      "className": "ScheduledEvent",
+      "classIndex": 53,
+      "sourceOffset": 452909,
+      "sourceLength": 44,
+      "sourceSha256": "16cba52fde8b1cdd0eb79ee3c6b1ca68995b18ff079eeedc3e822043fe1f4684",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "hub_darkstone_0",
+          "raw": "6875625f6461726b73746f6e655f3000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n2398/p2",
+          "fieldName": "clump",
+          "target": "SkyHub2:n490",
+          "targetNodeId": 490,
+          "offset": 452949
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "Dusk",
+      "path": "Levels/Dusk/Objects.level.bin",
+      "sha256": "9222b248f17fb4122cd4ad9650543ab86aab8b077b6965248c70ac2341bf2d5d",
+      "bytes": 242331,
+      "nodes": 1288,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dusk.json",
+      "markdown": "Objects对象清单/Dusk.md"
+    },
+    {
+      "level": "DuskGraveyard",
+      "path": "Levels/DuskGraveyard/Objects.level.bin",
+      "sha256": "128b30dcbe40b68e68fc25d195b68dc39f897259453c02612049ccd37a90ffb4",
+      "bytes": 424333,
+      "nodes": 1791,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DuskGraveyard.json",
+      "markdown": "Objects对象清单/DuskGraveyard.md"
+    },
+    {
+      "level": "DuskMid",
+      "path": "Levels/DuskMid/Objects.level.bin",
+      "sha256": "899ca33226dabd04afecfe7888750938ff4e460cb586603364e150591e9cbda5",
+      "bytes": 234288,
+      "nodes": 1268,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DuskMid.json",
+      "markdown": "Objects对象清单/DuskMid.md"
+    },
+    {
+      "level": "Prairie_Village",
+      "path": "Levels/Prairie_Village/Objects.level.bin",
+      "sha256": "4656296b54402016b59b894b4653fbdc71e106a21e0900294f73f2c7b7112385",
+      "bytes": 549989,
+      "nodes": 3724,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Village.json",
+      "markdown": "Objects对象清单/Prairie_Village.md"
+    },
+    {
+      "level": "Rain",
+      "path": "Levels/Rain/Objects.level.bin",
+      "sha256": "20093bccf3bb1ea0936cb993e66cef0187b40a5a411df3573eb28e4def4f75c6",
+      "bytes": 457732,
+      "nodes": 2079,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Rain.json",
+      "markdown": "Objects对象清单/Rain.md"
+    },
+    {
+      "level": "RainEnd",
+      "path": "Levels/RainEnd/Objects.level.bin",
+      "sha256": "247912ec955153e3df80c16a861eb872573502a285a17943518bdce448a8d5e3",
+      "bytes": 427926,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainEnd.json",
+      "markdown": "Objects对象清单/RainEnd.md"
+    },
+    {
+      "level": "RainForest",
+      "path": "Levels/RainForest/Objects.level.bin",
+      "sha256": "2e69b3314c70c61bd99435f4bb4418fba540f227c83670e1af3b5358c64c3b73",
+      "bytes": 271409,
+      "nodes": 1306,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainForest.json",
+      "markdown": "Objects对象清单/RainForest.md"
+    },
+    {
+      "level": "RainMid",
+      "path": "Levels/RainMid/Objects.level.bin",
+      "sha256": "139b219d9b71a2ab24418b1ec41f2ee8a2ebfdf4c5ea992c35348a758682ed23",
+      "bytes": 430825,
+      "nodes": 2457,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainMid.json",
+      "markdown": "Objects对象清单/RainMid.md"
+    },
+    {
+      "level": "SkyHub2",
+      "path": "Levels/SkyHub2/Objects.level.bin",
+      "sha256": "8b467f9b349d9d4ce0d038528c96e44dff30063149bf5bbf90232a56bb9dd36f",
+      "bytes": 475656,
+      "nodes": 2886,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SkyHub2.json",
+      "markdown": "Objects对象清单/SkyHub2.md"
+    }
+  ]
+}

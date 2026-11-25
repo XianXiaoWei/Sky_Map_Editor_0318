@@ -1,0 +1,94 @@
+0x100400ed0: push rbp
+0x100400ed1: mov rbp, rsp
+0x100400ed4: push r15
+0x100400ed6: push r14
+0x100400ed8: push r13
+0x100400eda: push r12
+0x100400edc: push rbx
+0x100400edd: sub rsp, 0x38
+0x100400ee1: mov qword ptr [rbp - 0x38], r8
+0x100400ee5: mov r13d, ecx
+0x100400ee8: mov rbx, rdx
+0x100400eeb: mov qword ptr [rbp - 0x30], rsi
+0x100400eef: mov r14, rdi
+0x100400ef2: mov word ptr [r14 + 0xa30], 0
+0x100400efc: lea rdi, [rbp - 0x58]
+0x100400f00: call 0x1007c2530 ; 0x1007c2530
+0x100400f05: lea r15, [r14 + 0x58]
+0x100400f09: test byte ptr [r14 + 0x58], 1
+0x100400f0e: jne 0x100400f16
+0x100400f10: lea r12, [r15 + 1]
+0x100400f14: jmp 0x100400f1a ; 0x100400f1a
+0x100400f16: mov r12, qword ptr [r14 + 0x68]
+0x100400f1a: call 0x1004559d0 ; 0x1004559d0
+0x100400f1f: mov rdi, rbx
+0x100400f22: mov rsi, rax
+0x100400f25: mov rdx, r12
+0x100400f28: call 0x1007c4360 ; 0x1007c4360
+0x100400f2d: test rax, rax
+0x100400f30: je 0x100400fe7
+0x100400f36: lea rsi, [rbp - 0x58]
+0x100400f3a: mov rdi, rax
+0x100400f3d: call 0x1007c2310 ; 0x1007c2310
+0x100400f42: nop word ptr cs:[rax + rax]
+0x100400f50: mov rax, qword ptr [rbp - 0x58]
+0x100400f54: test rax, rax
+0x100400f57: je 0x100400fc8
+0x100400f59: mov rax, qword ptr [rax + 0x10]
+0x100400f5d: test rax, rax
+0x100400f60: je 0x100400fc8
+0x100400f62: cmp byte ptr [rax + 0x108], 0
+0x100400f69: jne 0x100400f7f
+0x100400f6b: mov rdi, rbx
+0x100400f6e: call 0x1007c3010 ; 0x1007c3010
+0x100400f73: mov edi, 0xa
+0x100400f78: call 0x1007e8570 ; 0x1007e8570
+0x100400f7d: jmp 0x100400f50 ; 0x100400f50
+0x100400f7f: mov qword ptr [r14 + 0x228], 0
+0x100400f8a: movzx ecx, r13b
+0x100400f8e: mov rdi, r14
+0x100400f91: mov rsi, qword ptr [rbp - 0x30]
+0x100400f95: mov rdx, rbx
+0x100400f98: mov r8, qword ptr [rbp - 0x38]
+0x100400f9c: call 0x100401040 ; 0x100401040
+0x100400fa1: vxorps xmm0, xmm0, xmm0
+0x100400fa5: mov rdi, r14
+0x100400fa8: mov rsi, rbx
+0x100400fab: call 0x100402060 ; 0x100402060
+0x100400fb0: lea rdi, [rbp - 0x58]
+0x100400fb4: call 0x1007c2570 ; 0x1007c2570
+0x100400fb9: add rsp, 0x38
+0x100400fbd: pop rbx
+0x100400fbe: pop r12
+0x100400fc0: pop r13
+0x100400fc2: pop r14
+0x100400fc4: pop r15
+0x100400fc6: pop rbp
+0x100400fc7: ret 
+0x100400fc8: lea rdi, [rip + 0x764e96] ; 0x100b65e65 Observed()
+0x100400fcf: lea rsi, [rip + 0x764e9a] ; 0x100b65e70 ./Mesh.h
+0x100400fd6: mov edx, 0x6d
+0x100400fdb: mov ecx, 3
+0x100400fe0: call 0x1007e5f70 ; 0x1007e5f70
+0x100400fe5: ud2 
+0x100400fe7: test byte ptr [r15], 1
+0x100400feb: jne 0x100400ff2
+0x100400fed: inc r15
+0x100400ff0: jmp 0x100400ff6 ; 0x100400ff6
+0x100400ff2: mov r15, qword ptr [r14 + 0x68]
+0x100400ff6: lea rdi, [rip + 0x786484] ; 0x100b87481 meshFound
+0x100400ffd: lea rsi, [rip + 0x786431] ; 0x100b87435 LevelMesh.cpp
+0x100401004: lea r8, [rip + 0x786480] ; 0x100b8748b LevelMesh attempted to observe mesh %s which is not loaded
+0x10040100b: mov edx, 0x177
+0x100401010: mov ecx, 4
+0x100401015: xor eax, eax
+0x100401017: mov r9, r15
+0x10040101a: call 0x1007e6030 ; 0x1007e6030
+0x10040101f: jmp 0x100400fe5 ; 0x100400fe5
+0x100401021: jmp 0x100401023 ; 0x100401023
+0x100401023: mov rbx, rax
+0x100401026: lea rdi, [rbp - 0x58]
+0x10040102a: call 0x1007c2570 ; 0x1007c2570
+0x10040102f: mov rdi, rbx
+0x100401032: call 0x100aa2192 ; 0x100aa2192 __Unwind_Resume
+0x100401037: nop word ptr [rax + rax]

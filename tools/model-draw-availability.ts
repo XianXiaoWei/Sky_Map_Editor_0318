@@ -1,0 +1,26 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';import {ObjectsDocument} from '../src/core/objects';import {MeshesDocument} from '../src/core/meshes';import {readResourceMesh,type ResourceMesh} from '../src/core/resources';import {bindBake} from '../src/core/baking';import {effectiveLevelMeshMaterial,modelDrawBoundary} from '../src/core/model-draw';import {AssetCatalog} from '../src/main/assets';
+import {MODEL_NATIVE_TEXTURE_GLOBALS} from '../src/core/model-global-textures';
+const data=process.env.SKY_DATA??'/root/sky-research/original-runtime-corpus',hash=(b:string|Uint8Array)=>crypto.createHash('sha256').update(b).digest('hex'),resources=new Map<string,ResourceMesh>(),programs=new Map<string,unknown>();
+const report:any={passed:false,scope:'Static LevelMesh draw dependency preflight over every supplied map, saved flags and actual assets/bake compatibility. Available means current shader upload dependencies satisfied, not full Model/visibility/animation/interaction/game runtime. Prepared Beamo/BeamoDecal LOD0 drawing is tracked separately in beamo-draw-verification.json; complete class lifecycles remain pending.',maps:[],shaderSources:[],classes:{},total:0,available:0,initiallyVisibleAvailable:0,boundaries:{}};
+for(const level of fs.readdirSync(path.join(data,'Levels')).filter(l=>fs.existsSync(path.join(data,'Levels',l,'Objects.level.bin')))){
+ const original=fs.readFileSync(path.join(data,'Levels',level,'Objects.level.bin')),nodes=new ObjectsDocument(original).nodes,catalog=new AssetCatalog(data,level),bakedFile=path.join(data,'Levels',level,'BstBaked.meshes'),baked=fs.existsSync(bakedFile)?new MeshesDocument(fs.readFileSync(bakedFile)):null;
+ const row:any={level,objectsSha256:hash(original),total:0,available:0,initiallyVisibleAvailable:0,boundaries:{},models:[]};
+ for(const node of nodes){report.classes[node.className]=(report.classes[node.className]??0)+1;if(node.className!=='LevelMesh')continue;
+  const field=(name:string)=>node.fields.find(f=>f.name===name)?.value,resourceName=String(field('resourceName')??''),record:any={nodeId:node.id,resourceName,render:field('render'),enabled:field('enabled')};let boundary:string|null=null;
+  try{let mesh=resources.get(resourceName);if(!mesh){mesh=readResourceMesh(fs.readFileSync(path.join(data,'Meshes','Bin',resourceName+'.mesh')));resources.set(resourceName,mesh);}record.animated=mesh.animated;
+   const rawGuid=field('bstGuid') as any,guid=typeof rawGuid==='object'?rawGuid.uint:Number(rawGuid),matches=baked?.bakes.filter(b=>b.guid===guid)??[];let compatible=false;
+   if(matches.length===1){try{bindBake(mesh,baked!.bakeData(matches[0].id,0));compatible=true;}catch{}}
+   record.baked=compatible;const material=effectiveLevelMeshMaterial(node,level),program=catalog.program(material.shaderName);record.shader=material.shaderName;record.group=program.definition.group;
+   const key=hash(program.vertexSource)+hash(program.fragmentSource);if(!programs.has(key)){programs.set(key,true);report.shaderSources.push({shader:material.shaderName,defines:program.definition.defines,group:program.definition.group,vertexFile:program.definition.vertex,fragmentFile:program.definition.fragment,vertexSha256:hash(program.vertexSource),fragmentSha256:hash(program.fragmentSource),uvOutputs:program.vertexSource.split('\n').filter(l=>/v_uv\w*\s*=/.test(l)),textureSamples:program.fragmentSource.split('\n').filter(l=>/texture(?:Lod)?\s*\(/.test(l))});}
+   boundary=modelDrawBoundary(node,level,program,compatible,mesh.animated);
+   if(!boundary){const missing=material.parameters.find(p=>p.texture&&program.variables.some(v=>v.storage==='uniform'&&v.name===p.name)&&!catalog.image(p.texture).exists);if(missing)boundary='Texture unavailable: '+missing.texture;}
+   if(!boundary){const missing=Object.entries(MODEL_NATIVE_TEXTURE_GLOBALS).find(([name,texture])=>program.variables.some(v=>v.storage==='uniform'&&v.name===name)&&!catalog.image(texture).exists);if(missing)boundary='Global texture unavailable: '+missing[1];}
+  }catch(e){const x=e as NodeJS.ErrnoException;boundary=x.code==='ENOENT'?'Resource asset unavailable: '+resourceName:x.message;}
+  record.boundary=boundary;row.total++;report.total++;
+  if(!boundary){row.available++;report.available++;if(record.render!==0&&record.enabled!==0){row.initiallyVisibleAvailable++;report.initiallyVisibleAvailable++;}}
+  else {row.boundaries[boundary]=(row.boundaries[boundary]??0)+1;report.boundaries[boundary]=(report.boundaries[boundary]??0)+1;}
+  row.models.push(record);
+ }
+ report.maps.push(row);console.log(JSON.stringify({level,total:row.total,available:row.available,initiallyVisibleAvailable:row.initiallyVisibleAvailable}));
+}
+report.classes=Object.fromEntries(Object.entries(report.classes).filter(([k])=>['LevelMesh','Beamo','BeamoDecal','LevelMaterial','SetMeshShaderParam','PlayAnimation','Parent','Timeline'].includes(k)));report.passed=report.total===4133&&report.maps.length===33;fs.writeFileSync('docs/model-draw-availability.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({passed:report.passed,maps:report.maps.length,total:report.total,available:report.available,initiallyVisibleAvailable:report.initiallyVisibleAvailable,boundaries:report.boundaries}));if(!report.passed)process.exitCode=1;

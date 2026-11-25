@@ -1,0 +1,145 @@
+{
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "functions": {
+    "visibility-registration": "0x1007236a0",
+    "visibility-initialize": "0x10071d660",
+    "visibility-terminate": "0x10071d9b0",
+    "visibility-resize": "0x10071d9f0",
+    "visibility-update": "0x10071e020",
+    "visibility-render-flush": "0x10071e7e0",
+    "visibility-geometry-submit": "0x100720250",
+    "visibility-transform-vertices": "0x10071e7f0",
+    "visibility-triangle-depth": "0x10071ee60",
+    "visibility-selected-triangles": "0x10071f790",
+    "visibility-depth-mips": "0x100720560",
+    "visibility-spheres": "0x100720dd0",
+    "visibility-aabbs": "0x100721ce0",
+    "visibility-depth-debug-upload": "0x100720a40"
+  },
+  "scope": "Complete bounded disassembly of registered Visibility methods and direct geometry/depth dependencies; runtime evidence records explicit original numeric and lifecycle snapshots, not actual loaders/game/GPU restoration.",
+  "registration": {
+    "Initialize": "0x10071d660",
+    "Terminate": "0x10071d9b0",
+    "Resize": "0x10071d9f0",
+    "Update": "0x10071e020",
+    "RenderFlush": "0x10071e7e0"
+  },
+  "levelData": {
+    "countOffset": 220,
+    "recordsPointerOffset": 256,
+    "record": {
+      "vertexCount": 0,
+      "indexCount": 4,
+      "vertices": 8,
+      "indices": 16
+    },
+    "entry": "0x10071e418..0x10071e453 checks count and submits first record"
+  },
+  "vertex": {
+    "stride": 16,
+    "position": {
+      "offset": 0,
+      "float32Components": 3
+    },
+    "signedNormalBytes": {
+      "offset": 12,
+      "components": 3,
+      "scalarReads": [
+        "0x10071ecd0",
+        "0x10071ecdd",
+        "0x10071ecea"
+      ],
+      "selectedTriangleReads": [
+        "0x10071f8d2",
+        "0x10071f8e1",
+        "0x10071f8f0"
+      ]
+    },
+    "normalUse": "raw signed integers multiplied by clip-depth-dependent bias before transformation; diagnostic /127 view is not the CPU algorithm",
+    "fourthByte": {
+      "offset": 15,
+      "semantic": null,
+      "preserved": true
+    }
+  },
+  "biasConstant": {
+    "address": "0x100abcce0",
+    "float32": 0.0078125
+  },
+  "floatEnvironment": {
+    "mxcsrOrMask": "0xe040",
+    "rounding": "toward zero",
+    "ftz": true,
+    "daz": true,
+    "clearDepthPattern": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "runtimeEvidence": {
+    "floatTransformMip": {
+      "report": "visibility-oracle.json",
+      "passed": true,
+      "scope": "Full unmodified transform 0x10071e7f0 and mip reducer 0x100720560 executed under QEMU x86_64 -cpu max with original Update MXCSR |= 0xe040. Transform xyz includes counts <4, SIMD/scalar summation, last-four scalar overwrite, raw signed normals and 512 batching; W scratch lane and arithmetic NaN payloads excluded. Mips compare every raw word, padding, signed zeros, operand payload forwarding, neighboring mip alias reads and explicit guard memory. Resize layout loop 0x10071db19..0x10071dbae uses a return trampoline before allocation/GPU lifecycle; viewport-to-logical conversion is not included in that slice. SSE probe covers RTZ/FTZ/DAZ; QEMU RCPPS and MAX raw denormal forwarding are explicit capabilities, actual Intel/Mac hardware remains unverified. No rasterization, classification or GPU/game runtime claimed."
+    },
+    "triangleRaster": {
+      "report": "visibility-raster-oracle.json",
+      "passed": true,
+      "scope": "Complete unmodified 0x10071ee60 body with original MXCSR |= 0xe040 under QEMU -cpu max. Original stack cookie points to fixed oracle cookie; no function instructions patched. Explicit float4 screen vertices, uint16 indices, depth+guard snapshots and nullable selected list/count/capacity. All output words, four-triangle batch truncation, winding/int32 overflow, bounding boxes, mixed/nonpositive depth diversion, tiled 2x2 edge tests and depth interpolation compared. Map cases use first 120 indices per map and synthetic screen matrix, not full real-camera geometry submission. RCPPS and MIN behavior are emulator capabilities; clipping/selected-triangle expansion, full submission, queries, GPU and real game excluded."
+    },
+    "triangleClip": {
+      "report": "visibility-clip-oracle.json",
+      "passed": true,
+      "scope": "Unmodified complete numeric path of 0x10071f790 under original RTZ/FTZ/DAZ MXCSR and QEMU -cpu max. Original stack cookie is an explicit fixed oracle cookie. Original diagnostic/render switch 0x10203c2f8 disabled; logging and debug geometry calls excluded. Raw signed-normal bias, homogeneous summation, z>=0 clipping with original edge order, signed perspective divide, large-triangle product filter, emitted triangle/quad indices, count reset and dummy vertex/index padding included. Every output slot and untouched sentinel compared; arithmetic NaN payloads excluded. No full loaded resource/geometry submit, hardware/game/GPU execution or real queries claimed."
+    },
+    "geometrySubmit": {
+      "report": "visibility-submit-oracle.json",
+      "passed": true,
+      "scope": "Original complete numeric geometry submission 0x100720250, original matrix multiply 0x100076df0, transform 0x10071e7f0, both triangle depth calls 0x10071ee60 and clipping 0x10071f790 execute continuously. Only external scratch getter/allocation/free are callbacks with explicit 0xef initial snapshots; debug diagnostic flag disabled and stack cookie supplied. Depth including guard, allocation sizes, selected list, clipping buffer slots and release counts compared; transformed scratch W and arithmetic NaN payloads excluded. All 33 maps use every occluder vertex/index with explicit synthetic orthographic projection. Original camera/resource/loading, real heap lifetime, diagnostic rendering, full Visibility Update/Resize, mip queries, hardware/GPU/game runtime remain unverified. QEMU reciprocal/MIN capabilities are explicit."
+    },
+    "sphereQuery": {
+      "report": "visibility-spheres-oracle.json",
+      "passed": true,
+      "scope": "Original unmodified numeric Visibility sphere query 0x100720dd0 executes including four-lane SIMD, paired VPADDQ mip selection, exact inclusive tiled depth scans, early disabled/no-camera/no-mip initialization, recursive last-sphere tail padding and MXCSR control restoration. Only imported memcpy/memset are host callbacks and stack cookie is supplied; diagnostic drawing disabled. Original stored camera matrices, depth and statuses are explicit snapshots, with synthetic projections for all 33 maps and their real CloudCard world spheres. Original camera preparation, resource/lifecycle, scratch allocator, Intel/Mac reciprocal/MAX behavior, actual game/GPU culling and diagnostic drawing remain unverified."
+    },
+    "aabbQuery": {
+      "report": "visibility-aabbs-oracle.json",
+      "passed": true,
+      "scope": "Original unmodified numeric Visibility AABB query 0x100721ce0 executes including four-lane SIMD, paired VPADDQ mip selection, exact inclusive tiled depth scans, early disabled/no-camera/no-mip initialization, recursive last-volume tail padding and MXCSR control restoration. Only imported memcpy/memset are host callbacks and stack cookie is supplied; diagnostic drawing disabled. Original stored camera matrices, depth and statuses are explicit snapshots, with synthetic projections for all 33 maps and their real CloudCard world sphere-derived boxes plus all geometry vertex bounds. Original camera preparation, resource/lifecycle, scratch allocator, Intel/Mac reciprocal/MAX behavior, actual game/GPU culling and diagnostic drawing remain unverified."
+    },
+    "lifecycle": {
+      "report": "visibility-lifecycle-oracle.json",
+      "passed": true,
+      "scope": "Original complete Visibility Initialize/Resize/Update/Terminate methods, original camera constructor, loaded-resource name RB-tree/type lookup, metadata-ID dispatch and reference observe/release execute unmodified, followed by original geometry submission, clipping, mip generation and sphere/AABB queries. Two equal-name resource nodes have different explicit metadata types. External heap/scratch initial bytes plus 128 guard bytes, imported memcpy/memset/memset_pattern16/strcmp, resource virtual retain/release and stack cookie are explicit host services. Default Update executes original disabled debug-frustum branch without modifying the camera; explicit camera-copy flag and visibility/occlusion-disable paths included. Full raw state and camera padding, allocation IDs/offsets, depth guards, allocation/free/reference events and statuses checked. Inputs include all 33 real map occluder records with explicit stored camera matrices. Native class default state, global module scheduling, actual loaded resource loader/virtual implementations, original camera producer, enabled debug drawing, original hardware and game/GPU culling remain unverified."
+    },
+    "terrainFrustum": {
+      "report": "terrain-frustum-oracle.json",
+      "passed": true,
+      "scope": "Complete unmodified original 0x10015e420 oriented-box/six-plane test, with explicit RTE or RTZ/FTZ/DAZ ambient MXCSR. Half-axis normalization, ordered radius/center dot products, strict tangent rejection, degenerate axes and unordered comparisons checked. 77 serialized terrain bounds across 31 maps supply explicit OBB snapshots. Original TerrainBarn plane production, enabled object transforms, distance sorting, per-bin AABB/LOD/job dispatch, loaders and viewport culling remain unverified."
+    },
+    "terrainBinLod": {
+      "report": "terrain-lod-oracle.json",
+      "passed": true,
+      "scope": "Original TerrainBarn numeric spans 0x1006a3118..0x1006a3217 (constant LOD from AABB statuses, including 32-item SIMD and scalar tail) and 0x1006a3274..0x1006a331f (distance-squared minus sphere-radius-squared, three squared thresholds, CVTTSS2SI minimum and signed-16 clamp). Only entry/return trampolines delimit those instruction spans; no imports/callbacks. RTE and RTZ/FTZ/DAZ ambient controls, guard words, tangent thresholds, exceptional floats and uint32 statuses checked; zero-count harness preserves output without entering a numeric span. 77 terrain bounds in 31 maps provide explicit derived sphere snapshots, not original loaded bins. AABB query itself is separately verified; full TerrainBarn camera/OBB gathering, bin production, LOD transitions, allocation/resource jobs, collision and viewport scheduling remain incomplete."
+    },
+    "terrainBinDraw": {
+      "report": "terrain-bin-draw-oracle.json",
+      "passed": true,
+      "scope": "Complete unmodified TerrainBarn bin draw preparation 0x1006a7b50 executes under QEMU x86_64 -cpu max without patches, imports or callbacks. Explicit model, 0x3e0 draw blocks, 128-byte packets, 59 index pointer tokens, vertex pointer token and LOD/pending arrays. Every block byte, all other bins, 64-byte trailing guards, input packets/model (normalized only for harness pointers) and repeated calls are compared. Tests include selectors 0/58, ordered duplicate overwrite including zero counts, unsigned uint32 offsets and uint64 address wrap, and null draw storage bypassing invalid selectors. The native body trusts packet producers; JS rejects unsupported selectors/storage before mutation. No original packet/index-base/bounds producer, resource allocation, actual LOD transitions, jobs, rendering, original hardware/game or viewport integration claimed. No packets fabricated from map surfaces."
+    },
+    "terrainBinGeometry": {
+      "report": "terrain-bin-geometry-oracle.json",
+      "passed": true,
+      "scope": "Complete original TerrainBarn creation normal body 0x1006a9000 and original GetScale 0x100789e80, bounds-to-OBB 0x10078c950, matrix multiply 0x100076df0 and global/per-bin scatter 0x1006a7280 execute continuously under ambient RTE. CPU heap/scratch getter/allocate/release and imported memory/string/powf use explicit host services. Explicit terrain+0xc1=1 suppresses CollisionGeoBarn registration; loaded terrain fields/material definition pointers, free-list model and Barn capacity are harness snapshots. JS parity covers produced bin sphere xyz/radius, all four minima/maxima lanes (arithmetic NaN payload excluded), LOD FFFF, untouched pending bytes, every packet byte including untouched empty slots, 59 surface populations/counts and complete index streams plus 64-byte guards. All 77 serialized terrain records and original patch partitions/grid metadata in 31 maps use identity and explicit unit-scale yaw transforms; these are not original object transforms or proof of actual loader state. Packet overflow above 16 nonempty surfaces is rejected; uint16 count truncation, ignored NaN positions, signed zeros and empty bins covered. Allocation policy, other model fields, collision, LOD jobs/transitions, actual loaded object/resource registration, RTZ creation, viewport/GPU/hardware/game remain unverified."
+    }
+  },
+  "unresolved": [
+    "original hardware RCPPS and MIN/MAX denormal/payload behavior",
+    "actual Visibility loaded-resource loader/virtual services, Camera producer/defaults/module scheduling and query inputs/callers",
+    "diagnostic logging/rendering branches and actual scratch/heap lifetime",
+    "fourth normal-slot byte semantics, full LevelData loaded state and object DropOcclusion dependencies",
+    "real model/terrain/cloud culling, geometry generation and game validation"
+  ]
+}

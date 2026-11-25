@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "functions": {
+    "SoulTrap.Load": "0x10027a370",
+    "DarkstoneBarn.CreateSoulTrap": "0x10027f6a0",
+    "DarkstoneBarn.CreateDarkstone": "0x10027a760",
+    "Darkstone.AddChild": "0x10027ecb0"
+  },
+  "cases": 120,
+  "comparedCases": 120,
+  "comparedBytes": 47511840,
+  "serviceCalls": 5055,
+  "scope": "Whole ordinary SoulTrap.Load, SoulTrap/Darkstone pool factories and AddChild. Includes 49 saved SoulTrap configurations, allocation/contiguity/cast/Clump failures, hierarchy GUID/root fields, per-stone collectible and depth fade. Metadata cast, full Darkstone.Initialize/Model/OBB/material and geometry hierarchy builder remain explicit services; prepared hierarchy is a deterministic test input. Complete native factory constructor startup, per-stone burning/update/effects/reward/network/GPU remain pending.",
+  "failures": []
+}

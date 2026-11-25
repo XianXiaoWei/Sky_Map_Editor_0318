@@ -1,0 +1,21 @@
+{
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "functionRange": "0x10040cc78..0x10040cec3",
+  "cases": 12,
+  "vectors": {
+    "(1.0, 1.0, 1.0)": "0000803f0000803f0000803f00000000",
+    "(0.0707403, 0.250495, 1.0)": "4ae0903de140803e0000803f00000000",
+    "(0.0707403, 0.654936, 1.0)": "4ae0903de3a9273f0000803f00000000",
+    "(1.0, 1.0, 0.0707403)": "0000803f0000803f4ae0903d00000000",
+    "(1.0, 0.387623, 0.0707403)": "0000803f8676c63e4ae0903d00000000",
+    "(1.0, 0.0707403, 0.0707403)": "0000803f4ae0903d4ae0903d00000000",
+    "( 1.1, 1.0, 0.9 )": "cdcc8c3f0000803f6666663f00000000",
+    "(1.0, 0.48, 0.2825)": "0000803f8fc2f53ed7a3903e00000000",
+    "( 0.1975164314, 0.008373117745, 0.008373117745 )": "bf414a3e672f093c672f093c00000000",
+    "( 0.6592239918, 0.07176144885, 0.07176144885 )": "e7c2283fabf7923dabf7923d00000000",
+    "(1.0, 0.5, 0.2)": "0000803f0000003fcdcc4c3e00000000",
+    "(0.1, 0.7, 1.0)": "cdcccc3d3333333f0000803f00000000"
+  },
+  "runtime": "QEMU x86_64 -cpu max; unmodified original vector default parsing instructions",
+  "dependencies": "original macOS strncpy/strlen/strtof imports bound to Linux libc; synthetic metadata size and parser escape callbacks; no complete TGCL load"
+}

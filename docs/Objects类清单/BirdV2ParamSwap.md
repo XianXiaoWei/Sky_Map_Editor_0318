@@ -1,0 +1,54 @@
+# BirdV2ParamSwap 单独类功能实现清单
+
+功能分类：生物、群体与 AI。
+
+此类职责：**替换鸟类实例参数**。
+
+类清单进度 40%（4/10），15 个实例；完整原类运行未验收。分类依据实际声明/字段与所列原函数证据，不把名字或字段当作完整行为证明。
+
+## 此类功能实施项
+
+- [ ] 原输入与构造（部分完成）：BirdV2ParamSwap 的原默认值、继承初始化及 3 个序列化字段变体；原注册字段 2 项。
+- [ ] 替换鸟类实例参数（部分完成）：原普通构造、共享保存字段和已定位的池式创建／启用子链已有实现与核验；实际资源装载、AI、骨骼动画、碰撞／效果和动态绘制及完整生命周期继续待接。 此类原事件调用体已独立核验，部分真实事件接共享 EventBarn；缺失转换／玩家／声音／Model 消费者的分支保留明确依赖，不能计为完整类。
+- [ ] 依赖调用与事件：BirdV2（15 条引用）、BirdV2Params（15 条引用）
+- [ ] 实际场景与功能接入：按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。
+- [ ] 注销、恢复与真机行为：逐类闭合原销毁/切图状态及原游戏真机行为。
+
+## 原类完整验收
+
+- [x] 实际类声明、实例与引用清点：所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。
+- [x] 全地图解析和无修改逐字节回写：所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。
+- [x] 此类原字段注册证据已提取：已提取 2 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。
+- [ ] 完整原构造与缺字段默认值（部分完成，未计分）：原普通构造、共享保存字段和已定位的池式创建／启用子链已有实现与核验；实际资源装载、AI、骨骼动画、碰撞／效果和动态绘制及完整生命周期继续待接。 此类原事件调用体已独立核验，部分真实事件接共享 EventBarn；缺失转换／玩家／声音／Model 消费者的分支保留明确依赖，不能计为完整类。
+- [ ] 完整加载、注册与启用传播（部分完成，未计分）：原普通构造、共享保存字段和已定位的池式创建／启用子链已有实现与核验；实际资源装载、AI、骨骼动画、碰撞／效果和动态绘制及完整生命周期继续待接。 此类原事件调用体已独立核验，部分真实事件接共享 EventBarn；缺失转换／玩家／声音／Model 消费者的分支保留明确依赖，不能计为完整类。
+- [x] 明确范围的原核心子链已独立核验：原普通构造、共享保存字段和已定位的池式创建／启用子链已有实现与核验；实际资源装载、AI、骨骼动画、碰撞／效果和动态绘制及完整生命周期继续待接。 此类原事件调用体已独立核验，部分真实事件接共享 EventBarn；缺失转换／玩家／声音／Model 消费者的分支保留明确依赖，不能计为完整类。
+- [ ] 完整类行为、事件及依赖调用
+- [ ] 实际场景、绘制或游戏 UI 接入
+- [ ] 切图、注销、销毁及状态恢复
+- [ ] Windows 真机与原游戏验收
+
+原普通构造、共享保存字段和已定位的池式创建／启用子链已有实现与核验；实际资源装载、AI、骨骼动画、碰撞／效果和动态绘制及完整生命周期继续待接。 此类原事件调用体已独立核验，部分真实事件接共享 EventBarn；缺失转换／玩家／声音／Model 消费者的分支保留明确依赖，不能计为完整类。
+
+[此类全部实例与依赖详情](../Objects.level.bin对象实现清单.html#class=BirdV2ParamSwap) · [原字段、进度与全部实例 JSON](BirdV2ParamSwap.json) · [全部功能类目录](../Objects.level.bin全部实现清单.md)
+
+## 该类全部实例
+
+每个实例另外验收完整构造、加载、启动、事件、更新、实际接入、销毁和真机行为；共享原类子链不自动计入实例验收。地图在各行作为原始来源保留。
+
+| 实例 | 对象名 | 实例自身检查 | 出引用 / 入引用 | 来源 |
+| --- | --- | --- | ---: | --- |
+| [n9](../Objects.level.bin对象实现清单.html#Prairie_Village%3An9) | BstNode_2783838238 | 20%（2/10），运行待验 | 2 / 2 | Prairie_Village · 32936 + 32 bytes |
+| [n23](../Objects.level.bin对象实现清单.html#Prairie_Village%3An23) | BstNode_343 | 20%（2/10），运行待验 | 2 / 1 | Prairie_Village · 35225 + 25 bytes |
+| [n906](../Objects.level.bin对象实现清单.html#Prairie_Village%3An906) | BstNode_2783838251 | 20%（2/10），运行待验 | 2 / 4 | Prairie_Village · 179476 + 32 bytes |
+| [n1522](../Objects.level.bin对象实现清单.html#Prairie_Village%3An1522) | BstNode_2783838261 | 20%（2/10），运行待验 | 2 / 2 | Prairie_Village · 273196 + 32 bytes |
+| [n1546](../Objects.level.bin对象实现清单.html#Prairie_Village%3An1546) | BstNode_2783838260 | 20%（2/10），运行待验 | 2 / 2 | Prairie_Village · 277328 + 32 bytes |
+| [n1896](../Objects.level.bin对象实现清单.html#Prairie_Village%3An1896) | BstNode_2783838246 | 20%（2/10），运行待验 | 2 / 2 | Prairie_Village · 338063 + 32 bytes |
+| [n2004](../Objects.level.bin对象实现清单.html#Prairie_Village%3An2004) | BstNode_2783838253 | 20%（2/10），运行待验 | 2 / 2 | Prairie_Village · 356492 + 32 bytes |
+| [n2089](../Objects.level.bin对象实现清单.html#Prairie_Village%3An2089) | BstNode_2783838242 | 20%（2/10），运行待验 | 2 / 2 | Prairie_Village · 368913 + 32 bytes |
+| [n2107](../Objects.level.bin对象实现清单.html#Prairie_Village%3An2107) | BstNode_2783838258 | 20%（2/10），运行待验 | 2 / 2 | Prairie_Village · 370800 + 32 bytes |
+| [n2180](../Objects.level.bin对象实现清单.html#Prairie_Village%3An2180) | BstNode_2783838244 | 20%（2/10），运行待验 | 2 / 2 | Prairie_Village · 380796 + 32 bytes |
+| [n2189](../Objects.level.bin对象实现清单.html#Prairie_Village%3An2189) | BstNode_2783838259 | 20%（2/10），运行待验 | 2 / 4 | Prairie_Village · 382420 + 32 bytes |
+| [n2220](../Objects.level.bin对象实现清单.html#Prairie_Village%3An2220) | BstNode_344 | 20%（2/10），运行待验 | 2 / 1 | Prairie_Village · 386427 + 25 bytes |
+| [n2246](../Objects.level.bin对象实现清单.html#Prairie_Village%3An2246) | BstNode_340 | 20%（2/10），运行待验 | 2 / 1 | Prairie_Village · 390028 + 25 bytes |
+| [n2532](../Objects.level.bin对象实现清单.html#Prairie_Village%3An2532) | BstNode_2783838252 | 20%（2/10），运行待验 | 2 / 2 | Prairie_Village · 430760 + 32 bytes |
+| [n2652](../Objects.level.bin对象实现清单.html#Prairie_Village%3An2652) | BstNode_2783838241 | 20%（2/10），运行待验 | 2 / 4 | Prairie_Village · 449094 + 32 bytes |

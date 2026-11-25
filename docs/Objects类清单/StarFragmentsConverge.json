@@ -1,0 +1,887 @@
+{
+  "className": "StarFragmentsConverge",
+  "functionGroup": "光点、碎片与灵魂",
+  "functionRole": "碎片汇聚、传送与完成事件",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "StarFragmentsConverge 的原默认值、继承初始化及 7 个序列化字段变体；原注册字段 6 项。"
+    },
+    {
+      "name": "碎片汇聚、传送与完成事件",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Clump（12 条引用）、CameraKeyFrame（7 条引用）、WorldQuest（9 条引用）、LevelMesh（9 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "StarFragmentsConverge",
+    "category": "光点、碎片与灵魂",
+    "functionGroupId": "fragments",
+    "functionRole": "碎片汇聚、传送与完成事件",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "StarFragmentsConverge 的原默认值、继承初始化及 7 个序列化字段变体；原注册字段 6 项。"
+      },
+      {
+        "name": "碎片汇聚、传送与完成事件",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Clump（12 条引用）、CameraKeyFrame（7 条引用）、WorldQuest（9 条引用）、LevelMesh（9 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Clump",
+        "references": 12
+      },
+      {
+        "className": "LevelMesh",
+        "references": 9
+      },
+      {
+        "className": "WorldQuest",
+        "references": 9
+      },
+      {
+        "className": "CameraKeyFrame",
+        "references": 7
+      }
+    ],
+    "rttiWorkingGroup": "交互、事件与任务",
+    "role": "对象实例类型",
+    "instances": 9,
+    "nestedInstances": 0,
+    "referenceFields": 37,
+    "declaredLevels": 5,
+    "levels": [
+      {
+        "level": "Dawn",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_ButterflyFields",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Cave",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_NestAndKeeper",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Village",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "fragments",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "manualCamera",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "onFinishEvent",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "quest",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "starCreatureMesh",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "teleportToConvergePos",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100cfc180",
+    "nativeRegisteredFields": [
+      {
+        "name": "fragments",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x10062aaa0",
+        "propertyAddress": "0x100cfb210"
+      },
+      {
+        "name": "onFinishEvent",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 80,
+        "registrationFunction": "0x10062aaa0",
+        "propertyAddress": "0x100cfb260"
+      },
+      {
+        "name": "quest",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP10WorldQuestERK8MetaTypev",
+        "nativeOffset": 64,
+        "registrationFunction": "0x10062aaa0",
+        "propertyAddress": "0x100cfb2b0"
+      },
+      {
+        "name": "teleportToConvergePos",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 72,
+        "registrationFunction": "0x10062aaa0",
+        "propertyAddress": "0x100cfb300"
+      },
+      {
+        "name": "manualCamera",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP14CameraKeyFrameERK8MetaTypev",
+        "nativeOffset": 88,
+        "registrationFunction": "0x10062aaa0",
+        "propertyAddress": "0x100cfb350"
+      },
+      {
+        "name": "starCreatureMesh",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP9LevelMeshERK8MetaTypev",
+        "nativeOffset": 104,
+        "registrationFunction": "0x10062aaa0",
+        "propertyAddress": "0x100cfb3a0"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 6 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "Dawn:n2238",
+      "level": "Dawn",
+      "nodeId": 2238,
+      "name": "BstNode_3707305986",
+      "className": "StarFragmentsConverge",
+      "classIndex": 114,
+      "sourceOffset": 369564,
+      "sourceLength": 45,
+      "sourceSha256": "431619c87e8cce3bc9bc181fff566dd3954032829d16a3e45974e2524f1490f4",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2238/p1",
+          "fieldName": "fragments",
+          "target": "Dawn:n2001",
+          "targetNodeId": 2001,
+          "offset": 369588
+        },
+        {
+          "fieldId": "n2238/p3",
+          "fieldName": "onFinishEvent",
+          "target": "Dawn:n1658",
+          "targetNodeId": 1658,
+          "offset": 369593
+        },
+        {
+          "fieldId": "n2238/p4",
+          "fieldName": "manualCamera",
+          "target": "Dawn:n1461",
+          "targetNodeId": 1461,
+          "offset": 369597
+        },
+        {
+          "fieldId": "n2238/p5",
+          "fieldName": "quest",
+          "target": "Dawn:n880",
+          "targetNodeId": 880,
+          "offset": 369601
+        },
+        {
+          "fieldId": "n2238/p6",
+          "fieldName": "starCreatureMesh",
+          "target": "Dawn:n854",
+          "targetNodeId": 854,
+          "offset": 369605
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n885",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 885,
+      "name": "BstNode_3707305986",
+      "className": "StarFragmentsConverge",
+      "classIndex": 61,
+      "sourceOffset": 193320,
+      "sourceLength": 45,
+      "sourceSha256": "8278735ae070c025d0fc702044ad577a3b2bb9a10165d459313ef174fb832ac8",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n885/p1",
+          "fieldName": "fragments",
+          "target": "Prairie_ButterflyFields:n895",
+          "targetNodeId": 895,
+          "offset": 193344
+        },
+        {
+          "fieldId": "n885/p4",
+          "fieldName": "manualCamera",
+          "target": "Prairie_ButterflyFields:n45",
+          "targetNodeId": 45,
+          "offset": 193353
+        },
+        {
+          "fieldId": "n885/p5",
+          "fieldName": "quest",
+          "target": "Prairie_ButterflyFields:n558",
+          "targetNodeId": 558,
+          "offset": 193357
+        },
+        {
+          "fieldId": "n885/p6",
+          "fieldName": "starCreatureMesh",
+          "target": "Prairie_ButterflyFields:n1006",
+          "targetNodeId": 1006,
+          "offset": 193361
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n949",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 949,
+      "name": "BstNode_1167523854",
+      "className": "StarFragmentsConverge",
+      "classIndex": 61,
+      "sourceOffset": 203528,
+      "sourceLength": 45,
+      "sourceSha256": "1c07c80f36ec94c3826e2e8b5f976bf600956fa80b7e4dd6ef3f665d7e1d8c49",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n949/p1",
+          "fieldName": "fragments",
+          "target": "Prairie_ButterflyFields:n772",
+          "targetNodeId": 772,
+          "offset": 203552
+        },
+        {
+          "fieldId": "n949/p4",
+          "fieldName": "manualCamera",
+          "target": "Prairie_ButterflyFields:n45",
+          "targetNodeId": 45,
+          "offset": 203561
+        },
+        {
+          "fieldId": "n949/p5",
+          "fieldName": "quest",
+          "target": "Prairie_ButterflyFields:n427",
+          "targetNodeId": 427,
+          "offset": 203565
+        },
+        {
+          "fieldId": "n949/p6",
+          "fieldName": "starCreatureMesh",
+          "target": "Prairie_ButterflyFields:n1006",
+          "targetNodeId": 1006,
+          "offset": 203569
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n515",
+      "level": "Prairie_Cave",
+      "nodeId": 515,
+      "name": "BstNode_1475018773",
+      "className": "StarFragmentsConverge",
+      "classIndex": 49,
+      "sourceOffset": 144010,
+      "sourceLength": 45,
+      "sourceSha256": "41a4861cb16fd5a171edc8fb8f700b03262c194dfc7df5f1e34fc01f9d464432",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n515/p1",
+          "fieldName": "fragments",
+          "target": "Prairie_Cave:n1192",
+          "targetNodeId": 1192,
+          "offset": 144034
+        },
+        {
+          "fieldId": "n515/p5",
+          "fieldName": "quest",
+          "target": "Prairie_Cave:n747",
+          "targetNodeId": 747,
+          "offset": 144047
+        },
+        {
+          "fieldId": "n515/p6",
+          "fieldName": "starCreatureMesh",
+          "target": "Prairie_Cave:n1431",
+          "targetNodeId": 1431,
+          "offset": 144051
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n1025",
+      "level": "Prairie_Cave",
+      "nodeId": 1025,
+      "name": "BstNode_3707305986",
+      "className": "StarFragmentsConverge",
+      "classIndex": 49,
+      "sourceOffset": 260424,
+      "sourceLength": 45,
+      "sourceSha256": "247cca4bf4cd6998a2af3a7970f1abaef08347885dd2deece13c52a16bc159f7",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1025/p1",
+          "fieldName": "fragments",
+          "target": "Prairie_Cave:n745",
+          "targetNodeId": 745,
+          "offset": 260448
+        },
+        {
+          "fieldId": "n1025/p5",
+          "fieldName": "quest",
+          "target": "Prairie_Cave:n932",
+          "targetNodeId": 932,
+          "offset": 260461
+        },
+        {
+          "fieldId": "n1025/p6",
+          "fieldName": "starCreatureMesh",
+          "target": "Prairie_Cave:n1431",
+          "targetNodeId": 1431,
+          "offset": 260465
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n452",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 452,
+      "name": "BstNode_34603045",
+      "className": "StarFragmentsConverge",
+      "classIndex": 50,
+      "sourceOffset": 122629,
+      "sourceLength": 43,
+      "sourceSha256": "c05cb3b868c5ce429ce0a148bd134aa21481a9aa03cb2c54260a62a09c3c9e88",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n452/p1",
+          "fieldName": "fragments",
+          "target": "Prairie_NestAndKeeper:n519",
+          "targetNodeId": 519,
+          "offset": 122651
+        },
+        {
+          "fieldId": "n452/p3",
+          "fieldName": "onFinishEvent",
+          "target": "Prairie_NestAndKeeper:n1022",
+          "targetNodeId": 1022,
+          "offset": 122656
+        },
+        {
+          "fieldId": "n452/p4",
+          "fieldName": "manualCamera",
+          "target": "Prairie_NestAndKeeper:n577",
+          "targetNodeId": 577,
+          "offset": 122660
+        },
+        {
+          "fieldId": "n452/p5",
+          "fieldName": "quest",
+          "target": "Prairie_NestAndKeeper:n512",
+          "targetNodeId": 512,
+          "offset": 122664
+        },
+        {
+          "fieldId": "n452/p6",
+          "fieldName": "starCreatureMesh",
+          "target": "Prairie_NestAndKeeper:n685",
+          "targetNodeId": 685,
+          "offset": 122668
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n489",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 489,
+      "name": "BstNode_34603021",
+      "className": "StarFragmentsConverge",
+      "classIndex": 50,
+      "sourceOffset": 128370,
+      "sourceLength": 43,
+      "sourceSha256": "1708f6b8423e996769096ab93408c9c7e80a76740c7378b1a6d263f6fc5213df",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n489/p1",
+          "fieldName": "fragments",
+          "target": "Prairie_NestAndKeeper:n366",
+          "targetNodeId": 366,
+          "offset": 128392
+        },
+        {
+          "fieldId": "n489/p3",
+          "fieldName": "onFinishEvent",
+          "target": "Prairie_NestAndKeeper:n1026",
+          "targetNodeId": 1026,
+          "offset": 128397
+        },
+        {
+          "fieldId": "n489/p4",
+          "fieldName": "manualCamera",
+          "target": "Prairie_NestAndKeeper:n577",
+          "targetNodeId": 577,
+          "offset": 128401
+        },
+        {
+          "fieldId": "n489/p5",
+          "fieldName": "quest",
+          "target": "Prairie_NestAndKeeper:n524",
+          "targetNodeId": 524,
+          "offset": 128405
+        },
+        {
+          "fieldId": "n489/p6",
+          "fieldName": "starCreatureMesh",
+          "target": "Prairie_NestAndKeeper:n685",
+          "targetNodeId": 685,
+          "offset": 128409
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1180",
+      "level": "Prairie_Village",
+      "nodeId": 1180,
+      "name": "BstNode_3707305986",
+      "className": "StarFragmentsConverge",
+      "classIndex": 88,
+      "sourceOffset": 221986,
+      "sourceLength": 45,
+      "sourceSha256": "6e39e5b7828e48fa5c8c7206516931c9c1619bd8669a59dfc806e8ad456be59d",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1180/p1",
+          "fieldName": "fragments",
+          "target": "Prairie_Village:n2080",
+          "targetNodeId": 2080,
+          "offset": 222010
+        },
+        {
+          "fieldId": "n1180/p4",
+          "fieldName": "manualCamera",
+          "target": "Prairie_Village:n1169",
+          "targetNodeId": 1169,
+          "offset": 222019
+        },
+        {
+          "fieldId": "n1180/p5",
+          "fieldName": "quest",
+          "target": "Prairie_Village:n617",
+          "targetNodeId": 617,
+          "offset": 222023
+        },
+        {
+          "fieldId": "n1180/p6",
+          "fieldName": "starCreatureMesh",
+          "target": "Prairie_Village:n1459",
+          "targetNodeId": 1459,
+          "offset": 222027
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2577",
+      "level": "Prairie_Village",
+      "nodeId": 2577,
+      "name": "BstNode_1528234034",
+      "className": "StarFragmentsConverge",
+      "classIndex": 88,
+      "sourceOffset": 437153,
+      "sourceLength": 45,
+      "sourceSha256": "5343ca9561adba9b7204dbb136c0404332f50d0939e1f4d657d989bae9c19daa",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2577/p1",
+          "fieldName": "fragments",
+          "target": "Prairie_Village:n3147",
+          "targetNodeId": 3147,
+          "offset": 437177
+        },
+        {
+          "fieldId": "n2577/p4",
+          "fieldName": "manualCamera",
+          "target": "Prairie_Village:n910",
+          "targetNodeId": 910,
+          "offset": 437186
+        },
+        {
+          "fieldId": "n2577/p5",
+          "fieldName": "quest",
+          "target": "Prairie_Village:n1331",
+          "targetNodeId": 1331,
+          "offset": 437190
+        },
+        {
+          "fieldId": "n2577/p6",
+          "fieldName": "starCreatureMesh",
+          "target": "Prairie_Village:n2770",
+          "targetNodeId": 2770,
+          "offset": 437194
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "Dawn",
+      "path": "Levels/Dawn/Objects.level.bin",
+      "sha256": "16e26aafc7f9d120a548bf5d8bec04fbc18146bc8db531ef75144889b1ff197a",
+      "bytes": 504637,
+      "nodes": 3798,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dawn.json",
+      "markdown": "Objects对象清单/Dawn.md"
+    },
+    {
+      "level": "Prairie_ButterflyFields",
+      "path": "Levels/Prairie_ButterflyFields/Objects.level.bin",
+      "sha256": "29d8d61a082f3e3414ecfbb501b5f65499deb37ad4a1078ce2e9b88ac0d1e441",
+      "bytes": 297606,
+      "nodes": 1513,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_ButterflyFields.json",
+      "markdown": "Objects对象清单/Prairie_ButterflyFields.md"
+    },
+    {
+      "level": "Prairie_Cave",
+      "path": "Levels/Prairie_Cave/Objects.level.bin",
+      "sha256": "675a2256e24f8c4b16540cee6a5cd2b7647ff2fb495724a8bf596717ca39d944",
+      "bytes": 466340,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Cave.json",
+      "markdown": "Objects对象清单/Prairie_Cave.md"
+    },
+    {
+      "level": "Prairie_NestAndKeeper",
+      "path": "Levels/Prairie_NestAndKeeper/Objects.level.bin",
+      "sha256": "5eabe877e07c84e5f9270035aaab73fa20144c87f6e9136e5285dbaff3f85b7a",
+      "bytes": 239403,
+      "nodes": 1077,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_NestAndKeeper.json",
+      "markdown": "Objects对象清单/Prairie_NestAndKeeper.md"
+    },
+    {
+      "level": "Prairie_Village",
+      "path": "Levels/Prairie_Village/Objects.level.bin",
+      "sha256": "4656296b54402016b59b894b4653fbdc71e106a21e0900294f73f2c7b7112385",
+      "bytes": 549989,
+      "nodes": 3724,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Village.json",
+      "markdown": "Objects对象清单/Prairie_Village.md"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "measuredAtUTC": "2026-11-25T14:28:28.582Z",
+  "scope": "CPU only. Identical mesh BVH geometry/closest-hit semantics; additional scene broad phase. Static original crab idle clock retained, single-frame skin result reused. These ratios are not whole-map FPS.",
+  "terrain": {
+    "sceneMeshes": 1200,
+    "raysPerFrame": 256,
+    "before": {
+      "medianMs": 322.94104199999947,
+      "p95Ms": 336.29197900000054
+    },
+    "after": {
+      "medianMs": 6.237552000000505,
+      "p95Ms": 10.574009999999362
+    },
+    "speedup": 51.773683329609646,
+    "stats": {
+      "rays": 4352,
+      "candidateMeshes": 4352,
+      "sceneMeshes": 1200,
+      "rebuilds": 1
+    }
+  },
+  "staticAnimation": {
+    "instances": 128,
+    "before": {
+      "medianMs": 3.4691669999992882,
+      "p95Ms": 8.905885000000126
+    },
+    "after": {
+      "medianMs": 3.908280999999988,
+      "p95Ms": 6.968801999999414
+    },
+    "speedup": 0.8876452332878058
+  }
+}

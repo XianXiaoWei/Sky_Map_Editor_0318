@@ -1,0 +1,471 @@
+{
+  "renderer": "llvmpipe (LLVM 19.1.7, 128 bits)",
+  "version": "OpenGL ES 3.2 Mesa 25.0.7-2+deb13u1",
+  "scope": "Independent Mesa ES3 shader/raster verification on ARM PRoot.\nAll environment uniforms/textures below are explicit synthetic TEST inputs,\nnot game defaults. Original fragment bodies remain unchanged. This is neither\nan Electron WebGL test nor a screenshot comparison against the original game.\n",
+  "fixture": {
+    "u_eyePos": [
+      0,
+      2,
+      5
+    ],
+    "u_sunDir": [
+      0,
+      -1,
+      0
+    ],
+    "u_sunColor": [
+      1,
+      1,
+      1
+    ],
+    "u_averageSkyColor": [
+      0.25,
+      0.25,
+      0.25
+    ],
+    "u_pointLight": [
+      0,
+      0,
+      0
+    ],
+    "u_viewportSize": [
+      32,
+      32
+    ],
+    "u_lightShadowConsts": [
+      0,
+      -1,
+      0,
+      0.01
+    ],
+    "u_skirtDRange": [
+      5
+    ]
+  },
+  "textureFixture": "Explicit 1x1 RGBA8 [128,128,255,255], zero RGBA32UI 32x16 light grid; no native game textures/environment assumed. Other test-only scalar uniforms are zero and matrices identity.",
+  "programs": [
+    {
+      "name": "RockFaceSh",
+      "compiled": true,
+      "linked": true,
+      "glError": 0,
+      "drawnPixels": 338,
+      "centerRGBA": [
+        255,
+        3,
+        60,
+        26
+      ],
+      "rgbaSha256": "1ad84b8c9baf185861a90bada0982ac90e2bbcdaf1851d4f5fc30daed00e9680"
+    },
+    {
+      "name": "RockFaceShAlpha",
+      "compiled": true,
+      "linked": true,
+      "glError": 0,
+      "drawnPixels": 338,
+      "centerRGBA": [
+        255,
+        3,
+        60,
+        255
+      ],
+      "rgbaSha256": "2899e210f6c961b59172149c214ddd6f88c8fe47e17be49added5f228fd4bf77"
+    },
+    {
+      "name": "RockFaceShAlphaSkirt",
+      "compiled": true,
+      "linked": true,
+      "glError": 0,
+      "drawnPixels": 0,
+      "centerRGBA": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "rgbaSha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+    },
+    {
+      "name": "RockFaceRainSh",
+      "compiled": true,
+      "linked": true,
+      "glError": 0,
+      "drawnPixels": 338,
+      "centerRGBA": [
+        3,
+        3,
+        3,
+        26
+      ],
+      "rgbaSha256": "7df3c8bc74779cf289b498754cfa407670b2805763e858c6191b54ba6a1c73de"
+    },
+    {
+      "name": "RockFaceRainShAlpha",
+      "compiled": true,
+      "linked": true,
+      "glError": 0,
+      "drawnPixels": 338,
+      "centerRGBA": [
+        3,
+        3,
+        3,
+        255
+      ],
+      "rgbaSha256": "d8d617fc34e06ac7dc651ba1124c34f91eab0cfe88b8c32b64685ebc6246b797"
+    },
+    {
+      "name": "RockFaceRainShAlphaSkirt",
+      "compiled": true,
+      "linked": true,
+      "glError": 0,
+      "drawnPixels": 0,
+      "centerRGBA": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "rgbaSha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+    },
+    {
+      "name": "SandSh",
+      "compiled": true,
+      "linked": true,
+      "glError": 0,
+      "drawnPixels": 338,
+      "centerRGBA": [
+        28,
+        23,
+        20,
+        26
+      ],
+      "rgbaSha256": "1c08e43a6b8ee68067248b744ba736a5359c798e30321b78c3f70ee77fea1439"
+    },
+    {
+      "name": "SandShAlpha",
+      "compiled": true,
+      "linked": true,
+      "glError": 0,
+      "drawnPixels": 338,
+      "centerRGBA": [
+        28,
+        23,
+        20,
+        255
+      ],
+      "rgbaSha256": "76799a90c68ff414ebc2152fb5ac79925bbb86aeeb1a25f23d491ec8b09e52b7"
+    },
+    {
+      "name": "SandShAlphaSkirt",
+      "compiled": true,
+      "linked": true,
+      "glError": 0,
+      "drawnPixels": 338,
+      "centerRGBA": [
+        28,
+        23,
+        20,
+        0
+      ],
+      "rgbaSha256": "4a84f7964b5ea6afb693bb5479ee1f97d8825669455ac2299ad2bcd15098ec6d"
+    },
+    {
+      "name": "SandRainSh",
+      "compiled": true,
+      "linked": true,
+      "glError": 0,
+      "drawnPixels": 338,
+      "centerRGBA": [
+        5,
+        4,
+        4,
+        26
+      ],
+      "rgbaSha256": "23c97c2537efb4edf171d7cb3c6f80f7a901ff8d01bc4bbcc26eb945f3b88a7e"
+    },
+    {
+      "name": "SandRainShAlpha",
+      "compiled": true,
+      "linked": true,
+      "glError": 0,
+      "drawnPixels": 338,
+      "centerRGBA": [
+        5,
+        4,
+        4,
+        255
+      ],
+      "rgbaSha256": "439922cd372560c367b12e844d1d9c6c1fbaea4f4a5c6c4e2466b839eefe36ae"
+    },
+    {
+      "name": "SandRainShAlphaSkirt",
+      "compiled": true,
+      "linked": true,
+      "glError": 0,
+      "drawnPixels": 338,
+      "centerRGBA": [
+        6,
+        5,
+        4,
+        0
+      ],
+      "rgbaSha256": "b193b8865c8fcbbc5ed9f95262f34cdb52a728770bc7a13f35d52ea7af895513"
+    },
+    {
+      "name": "GrassSh",
+      "compiled": true,
+      "linked": true,
+      "glError": 0,
+      "drawnPixels": 338,
+      "centerRGBA": [
+        44,
+        31,
+        25,
+        26
+      ],
+      "rgbaSha256": "c16c5a59b9f2ecd90d8dcb1d958e9aa16c2fdf7e310a51602922e6c67636466b"
+    },
+    {
+      "name": "GrassShAlpha",
+      "compiled": true,
+      "linked": true,
+      "glError": 0,
+      "drawnPixels": 338,
+      "centerRGBA": [
+        44,
+        31,
+        25,
+        255
+      ],
+      "rgbaSha256": "1294c454a62afc885b6741cfe62e90439c2079454dc3a7c75ba3e8e4d717232e"
+    },
+    {
+      "name": "GrassShAlphaSkirt",
+      "compiled": true,
+      "linked": true,
+      "glError": 0,
+      "drawnPixels": 0,
+      "centerRGBA": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "rgbaSha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+    },
+    {
+      "name": "CloudSh",
+      "compiled": true,
+      "linked": true,
+      "glError": 0,
+      "drawnPixels": 0,
+      "centerRGBA": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "rgbaSha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+    },
+    {
+      "name": "CloudShAlpha",
+      "compiled": true,
+      "linked": true,
+      "glError": 0,
+      "drawnPixels": 0,
+      "centerRGBA": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "rgbaSha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+    },
+    {
+      "name": "CloudShAlphaSkirt",
+      "compiled": true,
+      "linked": true,
+      "glError": 0,
+      "drawnPixels": 0,
+      "centerRGBA": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "rgbaSha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+    },
+    {
+      "name": "MeshesAttributeDiagnostic",
+      "compiled": true,
+      "linked": true,
+      "glError": 0,
+      "drawnPixels": 338,
+      "centerRGBA": [
+        128,
+        64,
+        32,
+        255
+      ],
+      "rgbaSha256": "08b32f40b6a52dce3338d8b9f003d8a15998a587c00a064108fa1a63d142270d"
+    }
+  ],
+  "missingShaderDeclarations": [],
+  "bakedRenderStates": [
+    {
+      "group": "Opaque",
+      "depthTest": true,
+      "depthWrite": true,
+      "depthFunc": "lessEqual",
+      "cull": "back",
+      "blend": false,
+      "colorWrite": true,
+      "sourceRGB": "sourceAlpha",
+      "destinationRGB": "oneMinusSourceAlpha",
+      "sourceAlpha": "zero",
+      "destinationAlpha": "one",
+      "polygonOffset": false,
+      "polygonOffsetFactor": 0,
+      "polygonOffsetUnits": 0
+    },
+    {
+      "group": "Decal",
+      "depthTest": true,
+      "depthWrite": false,
+      "depthFunc": "lessEqual",
+      "cull": "back",
+      "blend": true,
+      "colorWrite": true,
+      "sourceRGB": "sourceAlpha",
+      "destinationRGB": "oneMinusSourceAlpha",
+      "sourceAlpha": "zero",
+      "destinationAlpha": "one",
+      "polygonOffset": true,
+      "polygonOffsetFactor": -2,
+      "polygonOffsetUnits": 0
+    },
+    {
+      "group": "Skirts",
+      "depthTest": true,
+      "depthWrite": false,
+      "depthFunc": "lessEqual",
+      "cull": "back",
+      "blend": true,
+      "colorWrite": true,
+      "sourceRGB": "sourceAlpha",
+      "destinationRGB": "oneMinusSourceAlpha",
+      "sourceAlpha": "zero",
+      "destinationAlpha": "one",
+      "polygonOffset": true,
+      "polygonOffsetFactor": -2,
+      "polygonOffsetUnits": 0
+    }
+  ],
+  "stateChecks": [
+    {
+      "name": "decalThenSkirtBlendPreservesOpaqueAlpha",
+      "actualRGBA": [
+        63,
+        64,
+        128,
+        64
+      ],
+      "expectedRGBA": [
+        64,
+        64,
+        128,
+        64
+      ],
+      "tolerance": 1,
+      "glError": 0
+    },
+    {
+      "name": "overlaysDoNotWriteDepth",
+      "actualRGBA": [
+        63,
+        64,
+        128,
+        64
+      ],
+      "expectedRGBA": [
+        64,
+        64,
+        128,
+        64
+      ],
+      "tolerance": 1,
+      "glError": 0
+    },
+    {
+      "name": "overlayBehindOpaqueFailsDepthTest",
+      "actualRGBA": [
+        255,
+        0,
+        0,
+        64
+      ],
+      "expectedRGBA": [
+        255,
+        0,
+        0,
+        64
+      ],
+      "tolerance": 1,
+      "glError": 0
+    },
+    {
+      "name": "opaqueWritesDepth",
+      "actualRGBA": [
+        255,
+        0,
+        0,
+        64
+      ],
+      "expectedRGBA": [
+        255,
+        0,
+        0,
+        64
+      ],
+      "tolerance": 1,
+      "glError": 0
+    },
+    {
+      "name": "backFaceCulled",
+      "actualRGBA": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "expectedRGBA": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "tolerance": 1,
+      "glError": 0
+    },
+    {
+      "name": "slopedCoplanarDecalWithNativeBias",
+      "actualRGBA": [
+        127,
+        128,
+        0,
+        64
+      ],
+      "expectedRGBA": [
+        128,
+        128,
+        0,
+        64
+      ],
+      "tolerance": 1,
+      "glError": 0
+    }
+  ],
+  "depthBits": 24,
+  "stateCheckScope": "Production Three state adapter translated to GLES; explicit color shader and synthetic triangles. Native mask disabling alpha is represented by ZERO/ONE alpha blend factors. Editor OpenGL CCW front convention. No original game screenshot comparison."
+}

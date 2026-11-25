@@ -1,0 +1,78 @@
+{
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "functions": {
+    "initialize": "0x10045f880",
+    "consumer": "0x10045fa00",
+    "lookup": "0x1003f68d0",
+    "resourceLodReader": "0x100455e90",
+    "LevelMeshBarn.Load": "0x100400180",
+    "LevelMesh.Load": "0x100400ed0",
+    "LevelMesh.Create": "0x100401040",
+    "ModelBarn.CreateBaked": "0x10046ca30",
+    "ModelBarn.CreateUnbaked": "0x10046c700",
+    "Model.constructor": "0x100467330"
+  },
+  "directCalls": [
+    {
+      "function": "0x10045f770",
+      "site": "0x10045f7f5",
+      "target": "0x10045f880"
+    },
+    {
+      "function": "0x10045fa00",
+      "site": "0x10045fb5e",
+      "target": "0x10045f880"
+    },
+    {
+      "function": "0x10045fa00",
+      "site": "0x10045fb77",
+      "target": "0x10045f880"
+    },
+    {
+      "function": "0x10045fa00",
+      "site": "0x10045fcbb",
+      "target": "0x10045f880"
+    },
+    {
+      "function": "0x100467330",
+      "site": "0x1004679c4",
+      "target": "0x10045fa00"
+    }
+  ],
+  "constants": {
+    "0x100aa7670": "0000003f0000003f0000003f00000000",
+    "0x100aa96a0": "00000040000000400000004000000000",
+    "0x100aa80a0": "000000000000803f0000000000000000",
+    "0x100aa8a30": "00000000000000000000803f00000000",
+    "0x100aa50c0": "0000803f",
+    "0x100aa45b8": "0000003f"
+  },
+  "meshInstance": {
+    "requiredOutputBytes": 176,
+    "data": 0,
+    "bakedRecord": 8,
+    "lodIndex": 16,
+    "initialized": 20,
+    "sphereRadius": 24,
+    "sphereCenter": 32,
+    "firstObb": 48,
+    "secondaryObb": 112
+  },
+  "resourceLod": {
+    "stride": 184,
+    "firstMin": 4,
+    "firstMax": 16,
+    "secondaryMin": 28,
+    "secondaryMax": 40,
+    "renderVertexCount": 52,
+    "tableCountInData": 64,
+    "tablePointerInData": 72
+  },
+  "levelMeshBinding": {
+    "load": "0x100400ed0 waits on Mesh resource +0x108; missing lookup asserts, not silent loading success",
+    "create": "0x100401040 selects baked 0x10046ca30 or unbaked 0x10046c700; stores returned Model pointer at 0x100401d40 into LevelMesh +0x228",
+    "modelPool": "0x10046ca30 reserves from ModelBarn+0x10, stride0x3e0, limit0x400, then calls 0x100467330",
+    "scope": "These load/create/constructor functions are investigation evidence only; they are not newly restored or executed by this oracle."
+  },
+  "executionScope": "Complete initialize/consumer/lookup bodies, with explicit ResourceRef/manager/diagnostic services; original machine code is unchanged. LOD reader and LevelMesh/Model allocation/lifecycle remain evidence, not full execution acceptance."
+}

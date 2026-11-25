@@ -1,0 +1,627 @@
+{
+  "className": "SetFloat",
+  "functionGroup": "数值变量与运算",
+  "functionRole": "浮点目标值与时间过渡",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "partial",
+      "description": "SetFloat 的原默认值、继承初始化及 5 个序列化字段变体；原注册字段 4 项。"
+    },
+    {
+      "name": "浮点目标值与时间过渡",
+      "status": "partial",
+      "description": "原88-byte placement构造已恢复并保留未写字段；OnLevelLoad清零初值/进度，enable/resume捕获当前target，Update按原GameTime顺序平滑并当帧结束。全部4个真实配置接通创建→字段/引用→触发登记→原加载/逐帧调度→释放；41组自动子链、462对Linux logf/expf服务输出核验，基础2278组0差异。原macOS libm、metadata/default缓存、堆内部、对象名字及完整场景反馈仍待闭合。 2026-11-20数值地图播放续接：FloatAdd/FloatMult/SetFloat与原EventBarn、对象组/延迟/条件、共享Float和后续TransformObject同链运行；362组、9146帧、307419512比较字节原机器码0差异，含342真实根与20组准备输入，全部31/14/4真实数值配置。33图七类589配置满足依赖预检。停止恢复保存值/矩阵，暂停及编辑/模式/切图清理；原Model仍prepared null，logf/expf为核验服务、JS Math仅预览，完整原类/实例保持0。 2026-11-20条件地图续接：OnFloat/FloatSplit加入统一播放，保留原比较/双侧嵌套求值、短字符串、原始反转字节、BODY条件指针/Object分支指针、独立结束请求及共享Float分段别名写序。396组、9676帧、323130696比较字节0差异，349真实根和47准备输入分列；新增3 OnFloat、全部2 FloatSplit及2 Delay真实根。33图九类596配置通过依赖预检。准备DayHubCave数值达到0.35后触发0.5秒Delay再变换原平台，15字段修改记录；相机矩阵与渲染对象帧对齐截图、暂停/还原/模式切图检查通过。debug输出/长字符串池/同步条件求值循环显式阻断。原材质非有限RGB错误未修复，Model/GPU/Avatar/完整场景及Windows验收仍缺，完整类/实例0不变。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "partial",
+      "description": "Float（4 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "SetFloat",
+    "category": "数值变量与运算",
+    "functionGroupId": "floats",
+    "functionRole": "浮点目标值与时间过渡",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "partial",
+        "description": "SetFloat 的原默认值、继承初始化及 5 个序列化字段变体；原注册字段 4 项。"
+      },
+      {
+        "name": "浮点目标值与时间过渡",
+        "status": "partial",
+        "description": "原88-byte placement构造已恢复并保留未写字段；OnLevelLoad清零初值/进度，enable/resume捕获当前target，Update按原GameTime顺序平滑并当帧结束。全部4个真实配置接通创建→字段/引用→触发登记→原加载/逐帧调度→释放；41组自动子链、462对Linux logf/expf服务输出核验，基础2278组0差异。原macOS libm、metadata/default缓存、堆内部、对象名字及完整场景反馈仍待闭合。 2026-11-20数值地图播放续接：FloatAdd/FloatMult/SetFloat与原EventBarn、对象组/延迟/条件、共享Float和后续TransformObject同链运行；362组、9146帧、307419512比较字节原机器码0差异，含342真实根与20组准备输入，全部31/14/4真实数值配置。33图七类589配置满足依赖预检。停止恢复保存值/矩阵，暂停及编辑/模式/切图清理；原Model仍prepared null，logf/expf为核验服务、JS Math仅预览，完整原类/实例保持0。 2026-11-20条件地图续接：OnFloat/FloatSplit加入统一播放，保留原比较/双侧嵌套求值、短字符串、原始反转字节、BODY条件指针/Object分支指针、独立结束请求及共享Float分段别名写序。396组、9676帧、323130696比较字节0差异，349真实根和47准备输入分列；新增3 OnFloat、全部2 FloatSplit及2 Delay真实根。33图九类596配置通过依赖预检。准备DayHubCave数值达到0.35后触发0.5秒Delay再变换原平台，15字段修改记录；相机矩阵与渲染对象帧对齐截图、暂停/还原/模式切图检查通过。debug输出/长字符串池/同步条件求值循环显式阻断。原材质非有限RGB错误未修复，Model/GPU/Avatar/完整场景及Windows验收仍缺，完整类/实例0不变。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "partial",
+        "description": "Float（4 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Float",
+        "references": 4
+      }
+    ],
+    "rttiWorkingGroup": "交互、事件与任务",
+    "role": "对象实例类型",
+    "instances": 4,
+    "nestedInstances": 0,
+    "referenceFields": 4,
+    "declaredLevels": 3,
+    "levels": [
+      {
+        "level": "DayHubCave",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Rain",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainEnd",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "snappiness",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "target",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "targetValue",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "time",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100d0c090",
+    "nativeRegisteredFields": [
+      {
+        "name": "targetValue",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x10071a7e0",
+        "propertyAddress": "0x100d0a770"
+      },
+      {
+        "name": "target",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5FloatERK8MetaTypev",
+        "nativeOffset": 64,
+        "registrationFunction": "0x10071a7e0",
+        "propertyAddress": "0x100d0a7c0"
+      },
+      {
+        "name": "time",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 60,
+        "registrationFunction": "0x10071a7e0",
+        "propertyAddress": "0x100d0a810"
+      },
+      {
+        "name": "snappiness",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 72,
+        "registrationFunction": "0x10071a7e0",
+        "propertyAddress": "0x100d0a860"
+      }
+    ],
+    "completedCheckpoints": 4,
+    "partialCheckpoints": 4,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 40,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": true,
+    "implementation": [
+      "src/core/set-float-runtime.ts",
+      "src/core/event-foundation-runtime.ts",
+      "src/core/native-event-barn-runtime.ts",
+      "src/core/native-event-barn-view.ts",
+      "src/core/object-field-load-runtime.ts",
+      "src/core/tgcl-field-runtime.ts",
+      "src/core/event-barn-runtime.ts",
+      "src/core/numeric-event-runtime.ts",
+      "src/core/object-playback-plan.ts",
+      "src/core/transform-object-preview.ts"
+    ],
+    "evidence": [
+      "docs/数值类事件与依赖音效逆向.md",
+      "docs/object-runtime-native.json",
+      "docs/FloatAdd与SetFloat创建装载自动调度逆向.md",
+      "docs/numeric-event-chain-evidence.json",
+      "docs/object-foundation-oracle.json",
+      "docs/Objects数值与平滑控制地图播放.md",
+      "docs/numeric-map-preview-oracle.json",
+      "docs/numeric-map-preview-smoke.json",
+      "docs/set-float-map-preview-oracle.json",
+      "docs/set-float-map-preview-availability.json",
+      "tests/fixtures/set-float-map-preview-native.json.gz",
+      "docs/set-float-map-preview-smoke.json",
+      "docs/set-float-map-preview-material-boundary.json",
+      "docs/set-float-map-preview-before.png",
+      "docs/set-float-map-preview-moving.png",
+      "docs/Objects条件与分段数值地图播放.md",
+      "docs/float-condition-map-preview-oracle.json",
+      "docs/float-condition-map-preview-availability.json",
+      "docs/float-condition-map-preview-smoke.json",
+      "docs/float-condition-map-preview-screenshot-check.json",
+      "docs/float-condition-map-preview-verification.json",
+      "tests/fixtures/float-condition-map-preview-native.json.gz",
+      "docs/float-condition-map-preview-before.png",
+      "docs/float-condition-map-preview-moving.png",
+      "docs/object-batch-oracle.json"
+    ],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 4 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "partial",
+        "note": "原88-byte placement构造已恢复并保留未写字段；OnLevelLoad清零初值/进度，enable/resume捕获当前target，Update按原GameTime顺序平滑并当帧结束。全部4个真实配置接通创建→字段/引用→触发登记→原加载/逐帧调度→释放；41组自动子链、462对Linux logf/expf服务输出核验，基础2278组0差异。原macOS libm、metadata/default缓存、堆内部、对象名字及完整场景反馈仍待闭合。 2026-11-20数值地图播放续接：FloatAdd/FloatMult/SetFloat与原EventBarn、对象组/延迟/条件、共享Float和后续TransformObject同链运行；362组、9146帧、307419512比较字节原机器码0差异，含342真实根与20组准备输入，全部31/14/4真实数值配置。33图七类589配置满足依赖预检。停止恢复保存值/矩阵，暂停及编辑/模式/切图清理；原Model仍prepared null，logf/expf为核验服务、JS Math仅预览，完整原类/实例保持0。 2026-11-20条件地图续接：OnFloat/FloatSplit加入统一播放，保留原比较/双侧嵌套求值、短字符串、原始反转字节、BODY条件指针/Object分支指针、独立结束请求及共享Float分段别名写序。396组、9676帧、323130696比较字节0差异，349真实根和47准备输入分列；新增3 OnFloat、全部2 FloatSplit及2 Delay真实根。33图九类596配置通过依赖预检。准备DayHubCave数值达到0.35后触发0.5秒Delay再变换原平台，15字段修改记录；相机矩阵与渲染对象帧对齐截图、暂停/还原/模式切图检查通过。debug输出/长字符串池/同步条件求值循环显式阻断。原材质非有限RGB错误未修复，Model/GPU/Avatar/完整场景及Windows验收仍缺，完整类/实例0不变。",
+        "evidence": [
+          "docs/数值类事件与依赖音效逆向.md",
+          "docs/object-runtime-native.json",
+          "docs/FloatAdd与SetFloat创建装载自动调度逆向.md",
+          "docs/numeric-event-chain-evidence.json",
+          "docs/object-foundation-oracle.json",
+          "docs/Objects数值与平滑控制地图播放.md",
+          "docs/numeric-map-preview-oracle.json",
+          "docs/numeric-map-preview-smoke.json",
+          "docs/set-float-map-preview-oracle.json",
+          "docs/set-float-map-preview-availability.json",
+          "tests/fixtures/set-float-map-preview-native.json.gz",
+          "docs/set-float-map-preview-smoke.json",
+          "docs/set-float-map-preview-material-boundary.json",
+          "docs/set-float-map-preview-before.png",
+          "docs/set-float-map-preview-moving.png",
+          "docs/Objects条件与分段数值地图播放.md",
+          "docs/float-condition-map-preview-oracle.json",
+          "docs/float-condition-map-preview-availability.json",
+          "docs/float-condition-map-preview-smoke.json",
+          "docs/float-condition-map-preview-screenshot-check.json",
+          "docs/float-condition-map-preview-verification.json",
+          "tests/fixtures/float-condition-map-preview-native.json.gz",
+          "docs/float-condition-map-preview-before.png",
+          "docs/float-condition-map-preview-moving.png",
+          "docs/object-batch-oracle.json"
+        ]
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "partial",
+        "note": "原88-byte placement构造已恢复并保留未写字段；OnLevelLoad清零初值/进度，enable/resume捕获当前target，Update按原GameTime顺序平滑并当帧结束。全部4个真实配置接通创建→字段/引用→触发登记→原加载/逐帧调度→释放；41组自动子链、462对Linux logf/expf服务输出核验，基础2278组0差异。原macOS libm、metadata/default缓存、堆内部、对象名字及完整场景反馈仍待闭合。 2026-11-20数值地图播放续接：FloatAdd/FloatMult/SetFloat与原EventBarn、对象组/延迟/条件、共享Float和后续TransformObject同链运行；362组、9146帧、307419512比较字节原机器码0差异，含342真实根与20组准备输入，全部31/14/4真实数值配置。33图七类589配置满足依赖预检。停止恢复保存值/矩阵，暂停及编辑/模式/切图清理；原Model仍prepared null，logf/expf为核验服务、JS Math仅预览，完整原类/实例保持0。 2026-11-20条件地图续接：OnFloat/FloatSplit加入统一播放，保留原比较/双侧嵌套求值、短字符串、原始反转字节、BODY条件指针/Object分支指针、独立结束请求及共享Float分段别名写序。396组、9676帧、323130696比较字节0差异，349真实根和47准备输入分列；新增3 OnFloat、全部2 FloatSplit及2 Delay真实根。33图九类596配置通过依赖预检。准备DayHubCave数值达到0.35后触发0.5秒Delay再变换原平台，15字段修改记录；相机矩阵与渲染对象帧对齐截图、暂停/还原/模式切图检查通过。debug输出/长字符串池/同步条件求值循环显式阻断。原材质非有限RGB错误未修复，Model/GPU/Avatar/完整场景及Windows验收仍缺，完整类/实例0不变。",
+        "evidence": [
+          "docs/数值类事件与依赖音效逆向.md",
+          "docs/object-runtime-native.json",
+          "docs/FloatAdd与SetFloat创建装载自动调度逆向.md",
+          "docs/numeric-event-chain-evidence.json",
+          "docs/object-foundation-oracle.json",
+          "docs/Objects数值与平滑控制地图播放.md",
+          "docs/numeric-map-preview-oracle.json",
+          "docs/numeric-map-preview-smoke.json",
+          "docs/set-float-map-preview-oracle.json",
+          "docs/set-float-map-preview-availability.json",
+          "tests/fixtures/set-float-map-preview-native.json.gz",
+          "docs/set-float-map-preview-smoke.json",
+          "docs/set-float-map-preview-material-boundary.json",
+          "docs/set-float-map-preview-before.png",
+          "docs/set-float-map-preview-moving.png",
+          "docs/Objects条件与分段数值地图播放.md",
+          "docs/float-condition-map-preview-oracle.json",
+          "docs/float-condition-map-preview-availability.json",
+          "docs/float-condition-map-preview-smoke.json",
+          "docs/float-condition-map-preview-screenshot-check.json",
+          "docs/float-condition-map-preview-verification.json",
+          "tests/fixtures/float-condition-map-preview-native.json.gz",
+          "docs/float-condition-map-preview-before.png",
+          "docs/float-condition-map-preview-moving.png",
+          "docs/object-batch-oracle.json"
+        ]
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "verified",
+        "note": "原88-byte placement构造已恢复并保留未写字段；OnLevelLoad清零初值/进度，enable/resume捕获当前target，Update按原GameTime顺序平滑并当帧结束。全部4个真实配置接通创建→字段/引用→触发登记→原加载/逐帧调度→释放；41组自动子链、462对Linux logf/expf服务输出核验，基础2278组0差异。原macOS libm、metadata/default缓存、堆内部、对象名字及完整场景反馈仍待闭合。 2026-11-20数值地图播放续接：FloatAdd/FloatMult/SetFloat与原EventBarn、对象组/延迟/条件、共享Float和后续TransformObject同链运行；362组、9146帧、307419512比较字节原机器码0差异，含342真实根与20组准备输入，全部31/14/4真实数值配置。33图七类589配置满足依赖预检。停止恢复保存值/矩阵，暂停及编辑/模式/切图清理；原Model仍prepared null，logf/expf为核验服务、JS Math仅预览，完整原类/实例保持0。 2026-11-20条件地图续接：OnFloat/FloatSplit加入统一播放，保留原比较/双侧嵌套求值、短字符串、原始反转字节、BODY条件指针/Object分支指针、独立结束请求及共享Float分段别名写序。396组、9676帧、323130696比较字节0差异，349真实根和47准备输入分列；新增3 OnFloat、全部2 FloatSplit及2 Delay真实根。33图九类596配置通过依赖预检。准备DayHubCave数值达到0.35后触发0.5秒Delay再变换原平台，15字段修改记录；相机矩阵与渲染对象帧对齐截图、暂停/还原/模式切图检查通过。debug输出/长字符串池/同步条件求值循环显式阻断。原材质非有限RGB错误未修复，Model/GPU/Avatar/完整场景及Windows验收仍缺，完整类/实例0不变。",
+        "evidence": [
+          "docs/数值类事件与依赖音效逆向.md",
+          "docs/object-runtime-native.json",
+          "docs/FloatAdd与SetFloat创建装载自动调度逆向.md",
+          "docs/numeric-event-chain-evidence.json",
+          "docs/object-foundation-oracle.json",
+          "docs/Objects数值与平滑控制地图播放.md",
+          "docs/numeric-map-preview-oracle.json",
+          "docs/numeric-map-preview-smoke.json",
+          "docs/set-float-map-preview-oracle.json",
+          "docs/set-float-map-preview-availability.json",
+          "tests/fixtures/set-float-map-preview-native.json.gz",
+          "docs/set-float-map-preview-smoke.json",
+          "docs/set-float-map-preview-material-boundary.json",
+          "docs/set-float-map-preview-before.png",
+          "docs/set-float-map-preview-moving.png",
+          "docs/Objects条件与分段数值地图播放.md",
+          "docs/float-condition-map-preview-oracle.json",
+          "docs/float-condition-map-preview-availability.json",
+          "docs/float-condition-map-preview-smoke.json",
+          "docs/float-condition-map-preview-screenshot-check.json",
+          "docs/float-condition-map-preview-verification.json",
+          "tests/fixtures/float-condition-map-preview-native.json.gz",
+          "docs/float-condition-map-preview-before.png",
+          "docs/float-condition-map-preview-moving.png",
+          "docs/object-batch-oracle.json"
+        ]
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "partial",
+        "note": "原88-byte placement构造已恢复并保留未写字段；OnLevelLoad清零初值/进度，enable/resume捕获当前target，Update按原GameTime顺序平滑并当帧结束。全部4个真实配置接通创建→字段/引用→触发登记→原加载/逐帧调度→释放；41组自动子链、462对Linux logf/expf服务输出核验，基础2278组0差异。原macOS libm、metadata/default缓存、堆内部、对象名字及完整场景反馈仍待闭合。 2026-11-20数值地图播放续接：FloatAdd/FloatMult/SetFloat与原EventBarn、对象组/延迟/条件、共享Float和后续TransformObject同链运行；362组、9146帧、307419512比较字节原机器码0差异，含342真实根与20组准备输入，全部31/14/4真实数值配置。33图七类589配置满足依赖预检。停止恢复保存值/矩阵，暂停及编辑/模式/切图清理；原Model仍prepared null，logf/expf为核验服务、JS Math仅预览，完整原类/实例保持0。 2026-11-20条件地图续接：OnFloat/FloatSplit加入统一播放，保留原比较/双侧嵌套求值、短字符串、原始反转字节、BODY条件指针/Object分支指针、独立结束请求及共享Float分段别名写序。396组、9676帧、323130696比较字节0差异，349真实根和47准备输入分列；新增3 OnFloat、全部2 FloatSplit及2 Delay真实根。33图九类596配置通过依赖预检。准备DayHubCave数值达到0.35后触发0.5秒Delay再变换原平台，15字段修改记录；相机矩阵与渲染对象帧对齐截图、暂停/还原/模式切图检查通过。debug输出/长字符串池/同步条件求值循环显式阻断。原材质非有限RGB错误未修复，Model/GPU/Avatar/完整场景及Windows验收仍缺，完整类/实例0不变。",
+        "evidence": [
+          "docs/数值类事件与依赖音效逆向.md",
+          "docs/object-runtime-native.json",
+          "docs/FloatAdd与SetFloat创建装载自动调度逆向.md",
+          "docs/numeric-event-chain-evidence.json",
+          "docs/object-foundation-oracle.json",
+          "docs/Objects数值与平滑控制地图播放.md",
+          "docs/numeric-map-preview-oracle.json",
+          "docs/numeric-map-preview-smoke.json",
+          "docs/set-float-map-preview-oracle.json",
+          "docs/set-float-map-preview-availability.json",
+          "tests/fixtures/set-float-map-preview-native.json.gz",
+          "docs/set-float-map-preview-smoke.json",
+          "docs/set-float-map-preview-material-boundary.json",
+          "docs/set-float-map-preview-before.png",
+          "docs/set-float-map-preview-moving.png",
+          "docs/Objects条件与分段数值地图播放.md",
+          "docs/float-condition-map-preview-oracle.json",
+          "docs/float-condition-map-preview-availability.json",
+          "docs/float-condition-map-preview-smoke.json",
+          "docs/float-condition-map-preview-screenshot-check.json",
+          "docs/float-condition-map-preview-verification.json",
+          "tests/fixtures/float-condition-map-preview-native.json.gz",
+          "docs/float-condition-map-preview-before.png",
+          "docs/float-condition-map-preview-moving.png",
+          "docs/object-batch-oracle.json"
+        ]
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "partial",
+        "note": "原88-byte placement构造已恢复并保留未写字段；OnLevelLoad清零初值/进度，enable/resume捕获当前target，Update按原GameTime顺序平滑并当帧结束。全部4个真实配置接通创建→字段/引用→触发登记→原加载/逐帧调度→释放；41组自动子链、462对Linux logf/expf服务输出核验，基础2278组0差异。原macOS libm、metadata/default缓存、堆内部、对象名字及完整场景反馈仍待闭合。 2026-11-20数值地图播放续接：FloatAdd/FloatMult/SetFloat与原EventBarn、对象组/延迟/条件、共享Float和后续TransformObject同链运行；362组、9146帧、307419512比较字节原机器码0差异，含342真实根与20组准备输入，全部31/14/4真实数值配置。33图七类589配置满足依赖预检。停止恢复保存值/矩阵，暂停及编辑/模式/切图清理；原Model仍prepared null，logf/expf为核验服务、JS Math仅预览，完整原类/实例保持0。 2026-11-20条件地图续接：OnFloat/FloatSplit加入统一播放，保留原比较/双侧嵌套求值、短字符串、原始反转字节、BODY条件指针/Object分支指针、独立结束请求及共享Float分段别名写序。396组、9676帧、323130696比较字节0差异，349真实根和47准备输入分列；新增3 OnFloat、全部2 FloatSplit及2 Delay真实根。33图九类596配置通过依赖预检。准备DayHubCave数值达到0.35后触发0.5秒Delay再变换原平台，15字段修改记录；相机矩阵与渲染对象帧对齐截图、暂停/还原/模式切图检查通过。debug输出/长字符串池/同步条件求值循环显式阻断。原材质非有限RGB错误未修复，Model/GPU/Avatar/完整场景及Windows验收仍缺，完整类/实例0不变。",
+        "evidence": [
+          "docs/数值类事件与依赖音效逆向.md",
+          "docs/object-runtime-native.json",
+          "docs/FloatAdd与SetFloat创建装载自动调度逆向.md",
+          "docs/numeric-event-chain-evidence.json",
+          "docs/object-foundation-oracle.json",
+          "docs/Objects数值与平滑控制地图播放.md",
+          "docs/numeric-map-preview-oracle.json",
+          "docs/numeric-map-preview-smoke.json",
+          "docs/set-float-map-preview-oracle.json",
+          "docs/set-float-map-preview-availability.json",
+          "tests/fixtures/set-float-map-preview-native.json.gz",
+          "docs/set-float-map-preview-smoke.json",
+          "docs/set-float-map-preview-material-boundary.json",
+          "docs/set-float-map-preview-before.png",
+          "docs/set-float-map-preview-moving.png",
+          "docs/Objects条件与分段数值地图播放.md",
+          "docs/float-condition-map-preview-oracle.json",
+          "docs/float-condition-map-preview-availability.json",
+          "docs/float-condition-map-preview-smoke.json",
+          "docs/float-condition-map-preview-screenshot-check.json",
+          "docs/float-condition-map-preview-verification.json",
+          "tests/fixtures/float-condition-map-preview-native.json.gz",
+          "docs/float-condition-map-preview-before.png",
+          "docs/float-condition-map-preview-moving.png",
+          "docs/object-batch-oracle.json"
+        ]
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "原88-byte placement构造已恢复并保留未写字段；OnLevelLoad清零初值/进度，enable/resume捕获当前target，Update按原GameTime顺序平滑并当帧结束。全部4个真实配置接通创建→字段/引用→触发登记→原加载/逐帧调度→释放；41组自动子链、462对Linux logf/expf服务输出核验，基础2278组0差异。原macOS libm、metadata/default缓存、堆内部、对象名字及完整场景反馈仍待闭合。 2026-11-20数值地图播放续接：FloatAdd/FloatMult/SetFloat与原EventBarn、对象组/延迟/条件、共享Float和后续TransformObject同链运行；362组、9146帧、307419512比较字节原机器码0差异，含342真实根与20组准备输入，全部31/14/4真实数值配置。33图七类589配置满足依赖预检。停止恢复保存值/矩阵，暂停及编辑/模式/切图清理；原Model仍prepared null，logf/expf为核验服务、JS Math仅预览，完整原类/实例保持0。 2026-11-20条件地图续接：OnFloat/FloatSplit加入统一播放，保留原比较/双侧嵌套求值、短字符串、原始反转字节、BODY条件指针/Object分支指针、独立结束请求及共享Float分段别名写序。396组、9676帧、323130696比较字节0差异，349真实根和47准备输入分列；新增3 OnFloat、全部2 FloatSplit及2 Delay真实根。33图九类596配置通过依赖预检。准备DayHubCave数值达到0.35后触发0.5秒Delay再变换原平台，15字段修改记录；相机矩阵与渲染对象帧对齐截图、暂停/还原/模式切图检查通过。debug输出/长字符串池/同步条件求值循环显式阻断。原材质非有限RGB错误未修复，Model/GPU/Avatar/完整场景及Windows验收仍缺，完整类/实例0不变。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "DayHubCave:n43",
+      "level": "DayHubCave",
+      "nodeId": 43,
+      "name": "BstNode_2345992695",
+      "className": "SetFloat",
+      "classIndex": 18,
+      "sourceOffset": 30007,
+      "sourceLength": 40,
+      "sourceSha256": "951d970f1b1c94414900a1f24ec39325490f818a5492290ba38cb886d0e63993",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n43/p1",
+          "fieldName": "target",
+          "target": "DayHubCave:n874",
+          "targetNodeId": 874,
+          "offset": 30031
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n979",
+      "level": "Rain",
+      "nodeId": 979,
+      "name": "BstNode_2345992294",
+      "className": "SetFloat",
+      "classIndex": 71,
+      "sourceOffset": 251635,
+      "sourceLength": 40,
+      "sourceSha256": "a46ab40d7dba5fedaf3418fd3783375d902149743d382096e22f770e24d4b2d3",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n979/p1",
+          "fieldName": "target",
+          "target": "Rain:n923",
+          "targetNodeId": 923,
+          "offset": 251659
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n1353",
+      "level": "Rain",
+      "nodeId": 1353,
+      "name": "BstNode_2345992295",
+      "className": "SetFloat",
+      "classIndex": 71,
+      "sourceOffset": 329490,
+      "sourceLength": 40,
+      "sourceSha256": "dd789194d0a955399320c0872fe81f10a4843ba7587f0dde30217a01fbe2e841",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1353/p1",
+          "fieldName": "target",
+          "target": "Rain:n1538",
+          "targetNodeId": 1538,
+          "offset": 329514
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n1591",
+      "level": "RainEnd",
+      "nodeId": 1591,
+      "name": "BstNode_2345992961",
+      "className": "SetFloat",
+      "classIndex": 85,
+      "sourceOffset": 401745,
+      "sourceLength": 40,
+      "sourceSha256": "daf5ee31c9d53ceae5db0166b265178dde1efc06a7074dff80ba946534c655bd",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1591/p1",
+          "fieldName": "target",
+          "target": "RainEnd:n1660",
+          "targetNodeId": 1660,
+          "offset": 401769
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "DayHubCave",
+      "path": "Levels/DayHubCave/Objects.level.bin",
+      "sha256": "e4da920cc9f0b1569f14ad1a6d1990db7155dc07ebfc3214c4e385a367872457",
+      "bytes": 202745,
+      "nodes": 1128,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DayHubCave.json",
+      "markdown": "Objects对象清单/DayHubCave.md"
+    },
+    {
+      "level": "Rain",
+      "path": "Levels/Rain/Objects.level.bin",
+      "sha256": "20093bccf3bb1ea0936cb993e66cef0187b40a5a411df3573eb28e4def4f75c6",
+      "bytes": 457732,
+      "nodes": 2079,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Rain.json",
+      "markdown": "Objects对象清单/Rain.md"
+    },
+    {
+      "level": "RainEnd",
+      "path": "Levels/RainEnd/Objects.level.bin",
+      "sha256": "247912ec955153e3df80c16a861eb872573502a285a17943518bdce448a8d5e3",
+      "bytes": 427926,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainEnd.json",
+      "markdown": "Objects对象清单/RainEnd.md"
+    }
+  ]
+}

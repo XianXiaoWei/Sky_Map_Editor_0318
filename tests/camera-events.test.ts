@@ -1,0 +1,4 @@
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import {gunzipSync} from 'node:zlib';
+import {evaluateCameraEventCase,type CameraEventOracleCase,type CameraEventOracleFrame} from '../tools/camera-events-evaluate';
+const fixture=JSON.parse(gunzipSync(fs.readFileSync(new URL('./fixtures/camera-events-native.json.gz',import.meta.url))).toString()) as {cases:(CameraEventOracleCase&{expected:CameraEventOracleFrame[]})[]};
+for(const [kind,title] of [[0,'SetCameraShake timers, native handle lookup and paired Whisker field writes'],[1,'SetCameraKeyFrameShake timer phases, reflected member mutations and assertions']] as const)test(title,()=>{for(const row of fixture.cases.filter(c=>c.h[0]===kind))assert.deepEqual(evaluateCameraEventCase(row),row.expected,row.name);});

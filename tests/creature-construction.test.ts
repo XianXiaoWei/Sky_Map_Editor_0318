@@ -1,0 +1,6 @@
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import crypto from 'node:crypto';import {gunzipSync} from 'node:zlib';import {evaluateCreatureConstruction} from '../tools/creature-construction-cases';
+test('Creature normal constructors retain native whole-memory, return and metadata call order',()=>{
+ const fixture=JSON.parse(gunzipSync(fs.readFileSync('tests/fixtures/creature-construction-native.json.gz')).toString());assert.equal(fixture.executableSha256,'3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20');assert.equal(new Set(fixture.cases.map((r:any)=>r.input.className)).size,31);
+ for(const row of fixture.cases)assert.equal(crypto.createHash('sha256').update(evaluateCreatureConstruction(row.input)).digest('hex'),row.nativeSha256,JSON.stringify(row.input));
+});
+test('Flame, its three events and CandleObject parent constructors match original native memory and call order',()=>{const fixture=JSON.parse(gunzipSync(fs.readFileSync('tests/fixtures/object-item-construction-native.json.gz')).toString());assert.equal(new Set(fixture.cases.map((r:any)=>r.input.className)).size,5);for(const row of fixture.cases)assert.equal(crypto.createHash('sha256').update(evaluateCreatureConstruction(row.input)).digest('hex'),row.nativeSha256,JSON.stringify(row.input));});

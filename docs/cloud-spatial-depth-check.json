@@ -1,0 +1,147 @@
+{
+  "passed": true,
+  "scope": "Asymmetric screen occlusion through production depth chain and cloud stage bindings. Original AIR stages, real Dawn atlases/noise, explicit synthetic camera/quad/light/depth. GPU uniform-near/far references at corresponding pixels, all four occluder quadrants, even and odd dimensions. Controlled incorrect bindings must produce spatial mismatches. Original Metal/game parity excluded.",
+  "cases": [
+    {
+      "width": 128,
+      "height": 96,
+      "shader": "CloudFluffySuperCoarse",
+      "stage": [
+        16,
+        12
+      ],
+      "different": 120,
+      "compared": 1920,
+      "mismatches": 0
+    },
+    {
+      "width": 128,
+      "height": 96,
+      "shader": "CloudFluffyCoarse",
+      "stage": [
+        32,
+        24
+      ],
+      "different": 432,
+      "compared": 6912,
+      "mismatches": 0
+    },
+    {
+      "width": 128,
+      "height": 96,
+      "shader": "CloudFluffy",
+      "stage": [
+        64,
+        48
+      ],
+      "different": 13824,
+      "compared": 55296,
+      "mismatches": 0
+    },
+    {
+      "width": 128,
+      "height": 96,
+      "shader": "CloudCard",
+      "stage": [
+        64,
+        48
+      ],
+      "different": 12096,
+      "compared": 55296,
+      "mismatches": 0
+    },
+    {
+      "width": 127,
+      "height": 95,
+      "shader": "CloudFluffySuperCoarse",
+      "stage": [
+        15,
+        11
+      ],
+      "different": 96,
+      "compared": 1536,
+      "mismatches": 0
+    },
+    {
+      "width": 127,
+      "height": 95,
+      "shader": "CloudFluffyCoarse",
+      "stage": [
+        31,
+        23
+      ],
+      "different": 432,
+      "compared": 6912,
+      "mismatches": 0
+    },
+    {
+      "width": 127,
+      "height": 95,
+      "shader": "CloudFluffy",
+      "stage": [
+        63,
+        47
+      ],
+      "different": 13824,
+      "compared": 55296,
+      "mismatches": 0
+    },
+    {
+      "width": 127,
+      "height": 95,
+      "shader": "CloudCard",
+      "stage": [
+        63,
+        47
+      ],
+      "different": 13212,
+      "compared": 55296,
+      "mismatches": 0
+    }
+  ],
+  "controlledMutations": [
+    {
+      "shader": "CloudFluffySuperCoarse",
+      "mutation": "incorrect-depth-row-order",
+      "mismatches": 60
+    },
+    {
+      "shader": "CloudFluffySuperCoarse",
+      "mutation": "incorrect-full-size-viewport",
+      "mismatches": 90
+    },
+    {
+      "shader": "CloudFluffyCoarse",
+      "mutation": "incorrect-depth-row-order",
+      "mismatches": 216
+    },
+    {
+      "shader": "CloudFluffy",
+      "mutation": "incorrect-depth-row-order",
+      "mismatches": 6912
+    },
+    {
+      "shader": "CloudFluffy",
+      "mutation": "incorrect-full-size-viewport",
+      "mismatches": 10368
+    },
+    {
+      "shader": "CloudCard",
+      "mutation": "incorrect-depth-row-order",
+      "mismatches": 6048
+    },
+    {
+      "shader": "CloudCard",
+      "mutation": "incorrect-full-size-viewport",
+      "mismatches": 9072
+    }
+  ],
+  "device": {
+    "engine": "Sky Native Vulkan",
+    "backend": "Vulkan",
+    "device": "llvmpipe (LLVM 19.1.7, 128 bits)",
+    "apiVersion": 4210993,
+    "deviceType": 4,
+    "shaderFloat16": true
+  }
+}

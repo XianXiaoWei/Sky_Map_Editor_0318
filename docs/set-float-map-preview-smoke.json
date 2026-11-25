@@ -1,0 +1,322 @@
+{
+  "passed": true,
+  "checks": [
+    "Actual DayHubCave #43 writes saved targetValue 1 and finishes during initial dispatch because its saved time is 0",
+    "Prepared shared Float #874 increases and changes original LevelMesh #339 matrix in the map; Pause freezes the complete event/value/object state",
+    "Resume reaches exact target 1; Stop/Restart restores the saved Float input and model transform",
+    "Mode/map cleanup clears live controllers and targets, without renderer errors or source/prepared file changes"
+  ],
+  "scope": "Actual DayHubCave SetFloat #43 runs its saved time=0 endpoint. A separate prepared map links SetFloat #43 to TransformObject #270 and original PlatformRain_01 LevelMesh #339 through Enable #444; its changed controls are recorded. Electron/Vulkan editor visualization and JS Math fallback, not complete original Model/GPU, automatic scene startup, collision or Avatar. Source Objects/meshes and prepared saved documents remain unchanged.",
+  "windowsTested": false,
+  "prepared": {
+    "sourceSha256": "e4da920cc9f0b1569f14ad1a6d1990db7155dc07ebfc3214c4e385a367872457",
+    "changes": [
+      {
+        "node": 43,
+        "field": "time",
+        "before": {
+          "uint": 0,
+          "int": 0,
+          "float": 0
+        },
+        "after": 1
+      },
+      {
+        "node": 43,
+        "field": "snappiness",
+        "before": {
+          "uint": 1065353216,
+          "int": 1065353216,
+          "float": 1
+        },
+        "after": 0.3
+      },
+      {
+        "node": 270,
+        "field": "progress01",
+        "before": 4294967295,
+        "after": 874
+      },
+      {
+        "node": 270,
+        "field": "completeAtEnd",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "node": 444,
+        "field": "enable",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "node": 444,
+        "field": "objects",
+        "before": 1042,
+        "after": 84
+      },
+      {
+        "node": 84,
+        "field": "[0]",
+        "before": 479,
+        "after": 43
+      },
+      {
+        "node": 84,
+        "field": "[1]",
+        "before": 910,
+        "after": 270
+      }
+    ],
+    "root": 444,
+    "events": [
+      43,
+      270,
+      444
+    ],
+    "objects": [
+      339
+    ],
+    "map": "Prepared_SetFloat_Platform",
+    "sha256": "d1d6df6de51f1250160698f7c598b00520aa133c4c303d62b77b1fbebfcbc7c0"
+  },
+  "actual": {
+    "id": 43,
+    "kind": "SetFloat",
+    "running": false,
+    "paused": false,
+    "progress": 0,
+    "elapsed": 0,
+    "events": [
+      {
+        "id": 43,
+        "kind": "SetFloat",
+        "running": false,
+        "pending": false,
+        "progress": 0,
+        "elapsed": 0,
+        "starts": 1
+      }
+    ],
+    "objects": [],
+    "values": [
+      {
+        "id": 874,
+        "value": 1,
+        "bits": 1065353216
+      }
+    ],
+    "error": null
+  },
+  "initial": {
+    "id": 444,
+    "kind": "Enable",
+    "running": true,
+    "paused": true,
+    "progress": 1,
+    "elapsed": 0,
+    "events": [
+      {
+        "id": 43,
+        "kind": "SetFloat",
+        "running": false,
+        "pending": true,
+        "progress": 0,
+        "elapsed": 0,
+        "starts": 0
+      },
+      {
+        "id": 270,
+        "kind": "TransformObject",
+        "running": false,
+        "pending": true,
+        "progress": 0,
+        "elapsed": 0,
+        "starts": 0
+      },
+      {
+        "id": 444,
+        "kind": "Enable",
+        "running": false,
+        "pending": false,
+        "progress": 1,
+        "elapsed": 0,
+        "starts": 1
+      }
+    ],
+    "objects": [
+      {
+        "id": 339,
+        "matrix": [
+          2.309699058532715,
+          0,
+          -0.9567090272903442,
+          0,
+          0,
+          2.5,
+          0,
+          0,
+          0.9567090272903442,
+          0,
+          2.309699058532715,
+          0,
+          0,
+          38,
+          0.011985000222921371,
+          1
+        ],
+        "enabled": true
+      }
+    ],
+    "values": [
+      {
+        "id": 874,
+        "value": 0,
+        "bits": 0
+      }
+    ],
+    "error": null
+  },
+  "moving": {
+    "id": 444,
+    "kind": "Enable",
+    "running": true,
+    "paused": true,
+    "progress": 1,
+    "elapsed": 0,
+    "events": [
+      {
+        "id": 43,
+        "kind": "SetFloat",
+        "running": true,
+        "pending": false,
+        "progress": 0.4496166408061981,
+        "elapsed": 0,
+        "starts": 1
+      },
+      {
+        "id": 270,
+        "kind": "TransformObject",
+        "running": true,
+        "pending": false,
+        "progress": 0.4496166408061981,
+        "elapsed": 0,
+        "starts": 1
+      },
+      {
+        "id": 444,
+        "kind": "Enable",
+        "running": false,
+        "pending": false,
+        "progress": 1,
+        "elapsed": 0,
+        "starts": 1
+      }
+    ],
+    "objects": [
+      {
+        "id": 339,
+        "matrix": [
+          2.309699296951294,
+          0,
+          -0.9567115902900696,
+          0,
+          0,
+          2.5,
+          0,
+          0,
+          0.9567115902900696,
+          0,
+          2.309699296951294,
+          0,
+          0,
+          28.78285789489746,
+          0.011985000222921371,
+          1
+        ],
+        "enabled": true
+      }
+    ],
+    "values": [
+      {
+        "id": 874,
+        "value": 0.4496166408061981,
+        "bits": 1055274023
+      }
+    ],
+    "error": null
+  },
+  "screenshots": [
+    "docs/set-float-map-preview-before.png",
+    "docs/set-float-map-preview-moving.png"
+  ],
+  "complete": {
+    "id": 444,
+    "kind": "Enable",
+    "running": true,
+    "paused": false,
+    "progress": 1,
+    "elapsed": 0,
+    "events": [
+      {
+        "id": 43,
+        "kind": "SetFloat",
+        "running": false,
+        "pending": false,
+        "progress": 0.9900084137916565,
+        "elapsed": 0,
+        "starts": 1
+      },
+      {
+        "id": 270,
+        "kind": "TransformObject",
+        "running": true,
+        "pending": false,
+        "progress": 1,
+        "elapsed": 0,
+        "starts": 1
+      },
+      {
+        "id": 444,
+        "kind": "Enable",
+        "running": false,
+        "pending": false,
+        "progress": 1,
+        "elapsed": 0,
+        "starts": 1
+      }
+    ],
+    "objects": [
+      {
+        "id": 339,
+        "matrix": [
+          2.309699296951294,
+          0,
+          -0.9567115902900696,
+          0,
+          0,
+          2.5,
+          0,
+          0,
+          0.9567115902900696,
+          0,
+          2.309699296951294,
+          0,
+          0,
+          17.5,
+          0.011985000222921371,
+          1
+        ],
+        "enabled": true
+      }
+    ],
+    "values": [
+      {
+        "id": 874,
+        "value": 1,
+        "bits": 1065353216
+      }
+    ],
+    "error": null
+  }
+}

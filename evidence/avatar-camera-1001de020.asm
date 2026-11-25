@@ -1,0 +1,316 @@
+0x1001de020: push rbp
+0x1001de021: mov rbp, rsp
+0x1001de024: push r15
+0x1001de026: push r14
+0x1001de028: push r13
+0x1001de02a: push r12
+0x1001de02c: push rbx
+0x1001de02d: sub rsp, 0x28
+0x1001de031: mov qword ptr [rbp - 0x38], rcx
+0x1001de035: mov qword ptr [rbp - 0x40], rdx
+0x1001de039: mov qword ptr [rbp - 0x30], rsi
+0x1001de03d: mov rbx, rdi
+0x1001de040: vxorps ymm0, ymm0, ymm0
+0x1001de044: vmovups ymmword ptr [rbx + 0xf0], ymm0
+0x1001de04c: vmovups ymmword ptr [rbx + 0xd0], ymm0
+0x1001de054: vmovups ymmword ptr [rbx + 0xb0], ymm0
+0x1001de05c: vmovups ymmword ptr [rbx + 0x90], ymm0
+0x1001de064: vmovups ymmword ptr [rbx + 0x70], ymm0
+0x1001de069: vmovups ymmword ptr [rbx + 0x50], ymm0
+0x1001de06e: vmovups ymmword ptr [rbx + 0x30], ymm0
+0x1001de073: vmovups ymmword ptr [rbx + 0x10], ymm0
+0x1001de078: lea rdi, [rbx + 0x270]
+0x1001de07f: mov qword ptr [rbp - 0x48], rdi
+0x1001de083: vzeroupper 
+0x1001de086: call 0x100795650 ; 0x100795650
+0x1001de08b: mov r15d, 5
+0x1001de091: mov r12, qword ptr [rip + 0xa2ed68] ; 0x100c0ce00
+0x1001de098: add r12, 0x10
+0x1001de09c: jmp 0x1001de1b4 ; 0x1001de1b4
+0x1001de0a1: nop word ptr cs:[rax + rax]
+0x1001de0b0: cmp r13, 0x20
+0x1001de0b4: jae 0x1001de670
+0x1001de0ba: mov rdx, qword ptr [rip + 0x1c004b7] ; 0x101dde578
+0x1001de0c1: mov esi, 0x110
+0x1001de0c6: mov ecx, 0x10
+0x1001de0cb: mov rdi, qword ptr [rbp - 0x48]
+0x1001de0cf: call 0x100795530 ; 0x100795530
+0x1001de0d4: mov r14, rax
+0x1001de0d7: vxorps ymm0, ymm0, ymm0
+0x1001de0db: vmovups ymmword ptr [r14 + 0xf0], ymm0
+0x1001de0e4: vmovups ymmword ptr [r14 + 0xe0], ymm0
+0x1001de0ed: vmovups ymmword ptr [r14 + 0xc0], ymm0
+0x1001de0f6: vmovups ymmword ptr [r14 + 0xa0], ymm0
+0x1001de0ff: vmovups ymmword ptr [r14 + 0x80], ymm0
+0x1001de108: vmovups ymmword ptr [r14 + 0x60], ymm0
+0x1001de10e: vmovups ymmword ptr [r14 + 0x40], ymm0
+0x1001de114: vmovups ymmword ptr [r14 + 0x20], ymm0
+0x1001de11a: vmovups ymmword ptr [r14], ymm0
+0x1001de11f: mov rdi, r14
+0x1001de122: vzeroupper 
+0x1001de125: call 0x1001e46a0 ; 0x1001e46a0
+0x1001de12a: mov rax, qword ptr [rip + 0x1c00477] ; 0x101dde5a8
+0x1001de131: mov eax, dword ptr [rax + 0x38]
+0x1001de134: mov dword ptr [r14 + 8], eax
+0x1001de138: mov qword ptr [r14], r12
+0x1001de13b: mov qword ptr [rbx + r13*8 + 0x10], r14
+0x1001de140: mov byte ptr [r14 + 0x100], r15b
+0x1001de147: mov byte ptr [r14 + 0xe0], 1
+0x1001de14f: mov qword ptr [rbx + r15*8 + 0x110], r14
+0x1001de157: cmp r15, 4
+0x1001de15b: ja 0x1001de1b1
+0x1001de15d: mov rax, r14
+0x1001de160: mov rcx, qword ptr [rbx + r15*8 + 0x118]
+0x1001de168: mov rdx, qword ptr [rax + 0x10]
+0x1001de16c: test rdx, rdx
+0x1001de16f: je 0x1001de179
+0x1001de171: mov rsi, qword ptr [rax + 0x18]
+0x1001de175: mov qword ptr [rdx + 0x18], rsi
+0x1001de179: add r14, 0x10
+0x1001de17d: mov rsi, qword ptr [rax + 0x18]
+0x1001de181: test rsi, rsi
+0x1001de184: je 0x1001de18a
+0x1001de186: mov qword ptr [rsi + 0x10], rdx
+0x1001de18a: vxorps xmm0, xmm0, xmm0
+0x1001de18e: vmovups xmmword ptr [r14], xmm0
+0x1001de193: mov rdx, qword ptr [rcx + 0x10]
+0x1001de197: test rdx, rdx
+0x1001de19a: je 0x1001de1a0
+0x1001de19c: mov qword ptr [rdx + 0x18], rax
+0x1001de1a0: mov qword ptr [rax + 0x10], rdx
+0x1001de1a4: mov qword ptr [rax + 0x18], rcx
+0x1001de1a8: mov qword ptr [rcx + 0x10], rax
+0x1001de1ac: test r15, r15
+0x1001de1af: je 0x1001de1e0
+0x1001de1b1: dec r15
+0x1001de1b4: xor eax, eax
+0x1001de1b6: nop word ptr cs:[rax + rax]
+0x1001de1c0: mov r13, rax
+0x1001de1c3: cmp r13, 0x1f
+0x1001de1c7: ja 0x1001de0b0
+0x1001de1cd: mov rcx, qword ptr [rbx + r13*8 + 0x10]
+0x1001de1d2: lea rax, [r13 + 1]
+0x1001de1d6: test rcx, rcx
+0x1001de1d9: jne 0x1001de1c0
+0x1001de1db: jmp 0x1001de0b0 ; 0x1001de0b0
+0x1001de1e0: mov rax, qword ptr [rbp - 0x30]
+0x1001de1e4: mov qword ptr [rbx + 0x140], rax
+0x1001de1eb: mov dword ptr [rax + 8], 0x3fe38e39
+0x1001de1f2: call 0x1007abc10 ; 0x1007abc10
+0x1001de1f7: mov rax, qword ptr [rip + 0x1bffbf2] ; 0x101ddddf0
+0x1001de1fe: mov eax, dword ptr [rax + 0x38]
+0x1001de201: mov dword ptr [rbx + 0x150], eax
+0x1001de207: mov dword ptr [rbx + 0x154], 0x3f860a92
+0x1001de211: vmovss xmm0, dword ptr [rip + 0x8c6ea7] ; 0x100aa50c0
+0x1001de219: vmovaps xmmword ptr [rbx + 0x160], xmm0
+0x1001de221: vmovaps xmm0, xmmword ptr [rip + 0x8c9e77] ; 0x100aa80a0
+0x1001de229: vmovaps xmmword ptr [rbx + 0x170], xmm0
+0x1001de231: vmovaps xmm0, xmmword ptr [rip + 0x8ca7f7] ; 0x100aa8a30
+0x1001de239: vmovaps xmmword ptr [rbx + 0x180], xmm0
+0x1001de241: vmovaps xmm0, xmmword ptr [rip + 0x8ca7b7] ; 0x100aa8a00
+0x1001de249: vmovaps xmmword ptr [rbx + 0x190], xmm0
+0x1001de251: mov qword ptr [rbx + 0x1a0], 0
+0x1001de25c: call 0x1007abc10 ; 0x1007abc10
+0x1001de261: mov rax, qword ptr [rip + 0x1bffb88] ; 0x101ddddf0
+0x1001de268: mov eax, dword ptr [rax + 0x38]
+0x1001de26b: mov dword ptr [rbx + 0x1b0], eax
+0x1001de271: mov dword ptr [rbx + 0x1b4], 0x3f860a92
+0x1001de27b: vmovss xmm0, dword ptr [rip + 0x8c6e3d] ; 0x100aa50c0
+0x1001de283: vmovaps xmmword ptr [rbx + 0x1c0], xmm0
+0x1001de28b: vmovaps xmm0, xmmword ptr [rip + 0x8c9e0d] ; 0x100aa80a0
+0x1001de293: vmovaps xmmword ptr [rbx + 0x1d0], xmm0
+0x1001de29b: vmovaps xmm0, xmmword ptr [rip + 0x8ca78d] ; 0x100aa8a30
+0x1001de2a3: vmovaps xmmword ptr [rbx + 0x1e0], xmm0
+0x1001de2ab: vmovaps xmm0, xmmword ptr [rip + 0x8ca74d] ; 0x100aa8a00
+0x1001de2b3: vmovaps xmmword ptr [rbx + 0x1f0], xmm0
+0x1001de2bb: mov qword ptr [rbx + 0x200], 0
+0x1001de2c6: movabs rax, 0x3f8000003f800000
+0x1001de2d0: mov qword ptr [rbx + 0x210], rax
+0x1001de2d7: mov dword ptr [rbx + 0x264], 0x3f800000
+0x1001de2e1: mov byte ptr [rbx + 0x26c], 0
+0x1001de2e8: lea rdi, [rbx + 0x42d0]
+0x1001de2ef: mov esi, 0x4804
+0x1001de2f4: call 0x100aa24aa ; 0x100aa24aa ___bzero
+0x1001de2f9: mov rax, qword ptr [rbp - 0x38]
+0x1001de2fd: mov qword ptr [rbx + 0x42c8], rax
+0x1001de304: call 0x1007945e0 ; 0x1007945e0
+0x1001de309: test rax, rax
+0x1001de30c: je 0x1001de620
+0x1001de312: lea r12, [rbx + 0x210]
+0x1001de319: lea r15, [rbx + 0x214]
+0x1001de320: call 0x1007945e0 ; 0x1007945e0
+0x1001de325: mov rdx, qword ptr [rbx + 0x140]
+0x1001de32c: add rdx, 0xc
+0x1001de330: lea rsi, [rip + 0x99adad] ; 0x100b790e4 u_zNear
+0x1001de337: mov ecx, 1
+0x1001de33c: mov rdi, rax
+0x1001de33f: call 0x100793f20 ; 0x100793f20
+0x1001de344: call 0x1007945e0 ; 0x1007945e0
+0x1001de349: mov rdx, qword ptr [rbx + 0x140]
+0x1001de350: add rdx, 0x10
+0x1001de354: lea rsi, [rip + 0x99ad91] ; 0x100b790ec u_zFar
+0x1001de35b: mov ecx, 1
+0x1001de360: mov rdi, rax
+0x1001de363: call 0x100793f20 ; 0x100793f20
+0x1001de368: call 0x1007945e0 ; 0x1007945e0
+0x1001de36d: mov rdx, qword ptr [rbx + 0x140]
+0x1001de374: add rdx, 0x20
+0x1001de378: lea rsi, [rip + 0x99ad74] ; 0x100b790f3 u_jitter
+0x1001de37f: mov ecx, 2
+0x1001de384: mov rdi, rax
+0x1001de387: call 0x100793f20 ; 0x100793f20
+0x1001de38c: call 0x1007945e0 ; 0x1007945e0
+0x1001de391: mov rdx, qword ptr [rbx + 0x140]
+0x1001de398: add rdx, 0x30
+0x1001de39c: lea rsi, [rip + 0x99ad59] ; 0x100b790fc u_jitterHalf
+0x1001de3a3: mov ecx, 2
+0x1001de3a8: mov rdi, rax
+0x1001de3ab: call 0x100793f20 ; 0x100793f20
+0x1001de3b0: call 0x1007945e0 ; 0x1007945e0
+0x1001de3b5: mov rdx, qword ptr [rbx + 0x140]
+0x1001de3bc: add rdx, 0x40
+0x1001de3c0: lea rsi, [rip + 0x99ad42] ; 0x100b79109 u_jitterOld
+0x1001de3c7: mov ecx, 2
+0x1001de3cc: mov rdi, rax
+0x1001de3cf: call 0x100793f20 ; 0x100793f20
+0x1001de3d4: call 0x1007945e0 ; 0x1007945e0
+0x1001de3d9: mov rdx, qword ptr [rbx + 0x140]
+0x1001de3e0: add rdx, 0x50
+0x1001de3e4: lea rsi, [rip + 0x99ad2a] ; 0x100b79115 u_jitterHalfOld
+0x1001de3eb: mov ecx, 2
+0x1001de3f0: mov rdi, rax
+0x1001de3f3: call 0x100793f20 ; 0x100793f20
+0x1001de3f8: call 0x1007945e0 ; 0x1007945e0
+0x1001de3fd: mov rdx, qword ptr [rbx + 0x140]
+0x1001de404: add rdx, 0x60
+0x1001de408: lea rsi, [rip + 0x99ad16] ; 0x100b79125 u_projPlaneU
+0x1001de40f: mov ecx, 3
+0x1001de414: mov rdi, rax
+0x1001de417: call 0x100793f20 ; 0x100793f20
+0x1001de41c: call 0x1007945e0 ; 0x1007945e0
+0x1001de421: mov rdx, qword ptr [rbx + 0x140]
+0x1001de428: add rdx, 0x70
+0x1001de42c: lea rsi, [rip + 0x99acff] ; 0x100b79132 u_projPlaneV
+0x1001de433: mov ecx, 3
+0x1001de438: mov rdi, rax
+0x1001de43b: call 0x100793f20 ; 0x100793f20
+0x1001de440: call 0x1007945e0 ; 0x1007945e0
+0x1001de445: mov edx, 0x80
+0x1001de44a: add rdx, qword ptr [rbx + 0x140]
+0x1001de451: lea rsi, [rip + 0x99ace7] ; 0x100b7913f u_projPlaneOrigin
+0x1001de458: mov ecx, 3
+0x1001de45d: mov rdi, rax
+0x1001de460: call 0x100793f20 ; 0x100793f20
+0x1001de465: call 0x1007945e0 ; 0x1007945e0
+0x1001de46a: lea rsi, [rip + 0x99ace0] ; 0x100b79151 u_cameraCut
+0x1001de471: mov ecx, 1
+0x1001de476: mov rdi, rax
+0x1001de479: mov rdx, r12
+0x1001de47c: call 0x100793f20 ; 0x100793f20
+0x1001de481: call 0x1007945e0 ; 0x1007945e0
+0x1001de486: lea rsi, [rip + 0x99acd0] ; 0x100b7915d u_unitHeightFrac
+0x1001de48d: mov ecx, 1
+0x1001de492: mov rdi, rax
+0x1001de495: mov rdx, r15
+0x1001de498: call 0x100793f20 ; 0x100793f20
+0x1001de49d: call 0x1007945e0 ; 0x1007945e0
+0x1001de4a2: lea rdx, [rbx + 0x220]
+0x1001de4a9: lea rsi, [rip + 0x99acbe] ; 0x100b7916e u_aaCornerUvs0
+0x1001de4b0: mov ecx, 4
+0x1001de4b5: mov rdi, rax
+0x1001de4b8: call 0x100793f20 ; 0x100793f20
+0x1001de4bd: call 0x1007945e0 ; 0x1007945e0
+0x1001de4c2: lea rdx, [rbx + 0x230]
+0x1001de4c9: lea rsi, [rip + 0x99acad] ; 0x100b7917d u_aaCornerUvs1
+0x1001de4d0: mov ecx, 4
+0x1001de4d5: mov rdi, rax
+0x1001de4d8: call 0x100793f20 ; 0x100793f20
+0x1001de4dd: call 0x1007945e0 ; 0x1007945e0
+0x1001de4e2: lea rdx, [rbx + 0x240]
+0x1001de4e9: lea rsi, [rip + 0x99ac9c] ; 0x100b7918c u_aaCornerWeights
+0x1001de4f0: mov ecx, 4
+0x1001de4f5: mov rdi, rax
+0x1001de4f8: call 0x100793f20 ; 0x100793f20
+0x1001de4fd: call 0x1007945e0 ; 0x1007945e0
+0x1001de502: lea rdx, [rbx + 0x250]
+0x1001de509: lea rsi, [rip + 0x99ac8e] ; 0x100b7919e u_aaCenterWeight
+0x1001de510: mov ecx, 1
+0x1001de515: mov rdi, rax
+0x1001de518: call 0x100793f20 ; 0x100793f20
+0x1001de51d: call 0x1007945e0 ; 0x1007945e0
+0x1001de522: mov edx, 0xf0
+0x1001de527: add rdx, qword ptr [rbx + 0x140]
+0x1001de52e: lea rsi, [rip + 0x99ac7a] ; 0x100b791af u_eyePos
+0x1001de535: mov ecx, 3
+0x1001de53a: mov rdi, rax
+0x1001de53d: call 0x100793f20 ; 0x100793f20
+0x1001de542: call 0x1007945e0 ; 0x1007945e0
+0x1001de547: mov edx, 0x140
+0x1001de54c: add rdx, qword ptr [rbx + 0x140]
+0x1001de553: lea rsi, [rip + 0x99ac5e] ; 0x100b791b8 u_view
+0x1001de55a: mov ecx, 0x10
+0x1001de55f: mov rdi, rax
+0x1001de562: call 0x100793f20 ; 0x100793f20
+0x1001de567: call 0x1007945e0 ; 0x1007945e0
+0x1001de56c: mov edx, 0xc0
+0x1001de571: add rdx, qword ptr [rbx + 0x140]
+0x1001de578: lea rsi, [rip + 0x99ac40] ; 0x100b791bf u_camMat
+0x1001de57f: mov ecx, 0x10
+0x1001de584: mov rdi, rax
+0x1001de587: call 0x100793f20 ; 0x100793f20
+0x1001de58c: call 0x1007945e0 ; 0x1007945e0
+0x1001de591: mov edx, 0x180
+0x1001de596: add rdx, qword ptr [rbx + 0x140]
+0x1001de59d: lea rsi, [rip + 0x99ac24] ; 0x100b791c8 u_proj
+0x1001de5a4: mov ecx, 0x10
+0x1001de5a9: mov rdi, rax
+0x1001de5ac: call 0x100793f20 ; 0x100793f20
+0x1001de5b1: call 0x1007945e0 ; 0x1007945e0
+0x1001de5b6: mov edx, 0x1c0
+0x1001de5bb: add rdx, qword ptr [rbx + 0x140]
+0x1001de5c2: lea rsi, [rip + 0x99ac06] ; 0x100b791cf u_viewProj
+0x1001de5c9: mov ecx, 0x10
+0x1001de5ce: mov rdi, rax
+0x1001de5d1: call 0x100793f20 ; 0x100793f20
+0x1001de5d6: call 0x1007945e0 ; 0x1007945e0
+0x1001de5db: mov edx, 0x200
+0x1001de5e0: add rdx, qword ptr [rbx + 0x140]
+0x1001de5e7: lea rsi, [rip + 0x99abec] ; 0x100b791da u_viewProjInv
+0x1001de5ee: mov ecx, 0x10
+0x1001de5f3: mov rdi, rax
+0x1001de5f6: call 0x100793f20 ; 0x100793f20
+0x1001de5fb: call 0x1007945e0 ; 0x1007945e0
+0x1001de600: mov edx, 0x280
+0x1001de605: add rdx, qword ptr [rbx + 0x140]
+0x1001de60c: lea rsi, [rip + 0x99abd5] ; 0x100b791e8 u_viewProjOld
+0x1001de613: mov ecx, 0x10
+0x1001de618: mov rdi, rax
+0x1001de61b: call 0x100793f20 ; 0x100793f20
+0x1001de620: lea rsi, [rip + 0x99abcf] ; 0x100b791f6 GSU::CameraProj
+0x1001de627: mov edx, 1
+0x1001de62c: mov ecx, 0x20
+0x1001de631: mov r14, qword ptr [rbp - 0x40]
+0x1001de635: mov rdi, r14
+0x1001de638: call 0x100596550 ; 0x100596550
+0x1001de63d: mov qword ptr [rbx + 0x254], rax
+0x1001de644: lea rsi, [rip + 0x99abbb] ; 0x100b79206 GSU::Camera
+0x1001de64b: xor edx, edx
+0x1001de64d: mov ecx, 0x70
+0x1001de652: mov rdi, r14
+0x1001de655: call 0x100596550 ; 0x100596550
+0x1001de65a: mov qword ptr [rbx + 0x25c], rax
+0x1001de661: add rsp, 0x28
+0x1001de665: pop rbx
+0x1001de666: pop r12
+0x1001de668: pop r13
+0x1001de66a: pop r14
+0x1001de66c: pop r15
+0x1001de66e: pop rbp
+0x1001de66f: ret 
+0x1001de670: lea rdi, [rip + 0x99ad34] ; 0x100b793ab idx < kMaxCameras
+0x1001de677: lea rsi, [rip + 0x99ad3f] ; 0x100b793bd ./CameraSystem.h
+0x1001de67e: mov edx, 0x10f
+0x1001de683: mov ecx, 3
+0x1001de688: call 0x1007e5f70 ; 0x1007e5f70
+0x1001de68d: ud2 
+0x1001de68f: nop 

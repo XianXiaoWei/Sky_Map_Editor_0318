@@ -1,0 +1,41 @@
+0x100097c80: cmp esi, 0x97
+0x100097c86: ja 0x100097cb2
+0x100097c88: movsxd rax, esi
+0x100097c8b: imul rax, rax, 0x70
+0x100097c8f: lea rax, [rdi + rax + 0x18]
+0x100097c94: vucomiss xmm0, xmm0
+0x100097c98: jp 0x100097cb1
+0x100097c9a: vandps xmm1, xmm0, xmmword ptr [rip + 0xa0fc6e] ; 0x100aa7910
+0x100097ca2: vucomiss xmm1, dword ptr [rip + 0xa10982] ; 0x100aa862c
+0x100097caa: jae 0x100097cb1
+0x100097cac: vmovss dword ptr [rax + 0x20], xmm0
+0x100097cb1: ret 
+0x100097cb2: cmp esi, 0xa7
+0x100097cb8: jg 0x100097cd7
+0x100097cba: add esi, 0xffffff68
+0x100097cc0: movsxd rax, esi
+0x100097cc3: imul rax, rax, 0x70
+0x100097cc7: lea rax, [rdi + rax + 0x4298]
+0x100097ccf: vucomiss xmm0, xmm0
+0x100097cd3: jnp 0x100097c9a
+0x100097cd5: jmp 0x100097cb1 ; 0x100097cb1
+0x100097cd7: cmp esi, 0xc0
+0x100097cdd: jg 0x100097cfc
+0x100097cdf: add esi, 0xffffff58
+0x100097ce5: movsxd rax, esi
+0x100097ce8: imul rax, rax, 0x70
+0x100097cec: lea rax, [rdi + rax + 0x4998]
+0x100097cf4: vucomiss xmm0, xmm0
+0x100097cf8: jnp 0x100097c9a
+0x100097cfa: jmp 0x100097cb1 ; 0x100097cb1
+0x100097cfc: push rbp
+0x100097cfd: mov rbp, rsp
+0x100097d00: lea rdi, [rip + 0xb0b325] ; 0x100ba302c false
+0x100097d07: lea rsi, [rip + 0xacd8e6] ; 0x100b655f4 AnimationInstance.cpp
+0x100097d0e: lea r8, [rip + 0xacdf19] ; 0x100b65c2e playheadIndex out of bounds
+0x100097d15: mov edx, 0x8b3
+0x100097d1a: mov ecx, 4
+0x100097d1f: xor eax, eax
+0x100097d21: call 0x1007e6030 ; 0x1007e6030
+0x100097d26: ud2 
+0x100097d28: nop dword ptr [rax + rax]

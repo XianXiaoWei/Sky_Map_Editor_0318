@@ -1,0 +1,3190 @@
+{
+  "className": "AvatarSetPos",
+  "functionGroup": "地图加载、出生与检查点",
+  "functionRole": "玩家定位、相对标记与出生入口",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "AvatarSetPos 的原默认值、继承初始化及 8 个序列化字段变体；原注册字段 7 项。"
+    },
+    {
+      "name": "玩家定位、相对标记与出生入口",
+      "status": "partial",
+      "description": "59 个候选及入向引用已清点。AvatarSetPos 原 Update→本地选择→位置写入→Euler→Event Start 接原两个底层物理 setter、Euler→forward、就绪门控与完整 Whisker 初始化/重置局部链：487组、8,317,116字节、零差异，含59条真实flag/Marker快照。运行向量/e4/tick/BSS、矩阵、碰撞材质通道0x50、随机源、牵手/leader及libm仍为明确服务输入。面板接入原状态写入、静态角色和独立Avatar相机；默认入口、完整物理/账户/Avatar生命周期、动画、原连续相机和最终投影仍待恢复。 Marker矩阵输入现共用已核验的原字节内核；全部6538保存Marker的GetTransform/SetTransform经13784组、6440572字节0差异，原矩阵逆/额外乘积服务及完整场景行为仍独立保留。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "partial",
+      "description": "Marker（59 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "partial",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "AvatarSetPos",
+    "category": "地图加载、出生与检查点",
+    "functionGroupId": "levels",
+    "functionRole": "玩家定位、相对标记与出生入口",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "AvatarSetPos 的原默认值、继承初始化及 8 个序列化字段变体；原注册字段 7 项。"
+      },
+      {
+        "name": "玩家定位、相对标记与出生入口",
+        "status": "partial",
+        "description": "59 个候选及入向引用已清点。AvatarSetPos 原 Update→本地选择→位置写入→Euler→Event Start 接原两个底层物理 setter、Euler→forward、就绪门控与完整 Whisker 初始化/重置局部链：487组、8,317,116字节、零差异，含59条真实flag/Marker快照。运行向量/e4/tick/BSS、矩阵、碰撞材质通道0x50、随机源、牵手/leader及libm仍为明确服务输入。面板接入原状态写入、静态角色和独立Avatar相机；默认入口、完整物理/账户/Avatar生命周期、动画、原连续相机和最终投影仍待恢复。 Marker矩阵输入现共用已核验的原字节内核；全部6538保存Marker的GetTransform/SetTransform经13784组、6440572字节0差异，原矩阵逆/额外乘积服务及完整场景行为仍独立保留。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "partial",
+        "description": "Marker（59 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "partial",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Marker",
+        "references": 59
+      }
+    ],
+    "rttiWorkingGroup": "交互、事件与任务",
+    "role": "对象实例类型",
+    "instances": 59,
+    "nestedInstances": 0,
+    "referenceFields": 59,
+    "declaredLevels": 32,
+    "levels": [
+      {
+        "level": "CandleSpace",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "CandleSpaceEnd",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "CarryLand",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "CarryLand2",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "CarryLand3",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Dawn",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DayEnd",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DayHubCave",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Dusk",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DuskGraveyard",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DuskMid",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Dusk_CrabField",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "HubReveal",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Night",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "NightEnd",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "NightEntrance",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_ButterflyFields",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Cave",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_NestAndKeeper",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Village",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Rain",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainEnd",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainForest",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainMid",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SkyHub2",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Storm",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "StormEnd",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Sunset",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SunsetEnd",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SunsetEnd2",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SunsetRace",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "TitleWater",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "breakHandHold",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "killMomentum",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "marker",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "onGround",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "randomGroundInMarker",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "relMarker",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "setLevelStartPosition",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100c84f40",
+    "nativeRegisteredFields": [
+      {
+        "name": "marker",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP6MarkerERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x10014f2b0",
+        "propertyAddress": "0x100c83c00"
+      },
+      {
+        "name": "setLevelStartPosition",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 72,
+        "registrationFunction": "0x10014f2b0",
+        "propertyAddress": "0x100c83c50"
+      },
+      {
+        "name": "relMarker",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP6MarkerERK8MetaTypev",
+        "nativeOffset": 64,
+        "registrationFunction": "0x10014f2b0",
+        "propertyAddress": "0x100c83ca0"
+      },
+      {
+        "name": "randomGroundInMarker",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 73,
+        "registrationFunction": "0x10014f2b0",
+        "propertyAddress": "0x100c83cf0"
+      },
+      {
+        "name": "breakHandHold",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 74,
+        "registrationFunction": "0x10014f2b0",
+        "propertyAddress": "0x100c83d40"
+      },
+      {
+        "name": "killMomentum",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 75,
+        "registrationFunction": "0x10014f2b0",
+        "propertyAddress": "0x100c83d90"
+      },
+      {
+        "name": "onGround",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 76,
+        "registrationFunction": "0x10014f2b0",
+        "propertyAddress": "0x100c83de0"
+      }
+    ],
+    "completedCheckpoints": 4,
+    "partialCheckpoints": 3,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 40,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": true,
+    "implementation": [
+      "src/core/avatar-set-pos.ts",
+      "src/core/avatar-preview.ts",
+      "src/core/avatar-camera.ts",
+      "src/renderer/avatar-camera-controller.ts",
+      "src/main/avatar-preview.ts",
+      "src/renderer/avatar-preview-controller.ts",
+      "src/core/avatar-physical-state.ts",
+      "src/core/marker-transform-runtime.ts"
+    ],
+    "evidence": [
+      "docs/avatar-set-pos-oracle.json",
+      "docs/avatar-camera-oracle.json",
+      "docs/avatar-mode-smoke.json",
+      "docs/Avatar出生定位与独立相机逆向.md",
+      "docs/avatar-physical-oracle.json",
+      "docs/avatar-physical-native.json",
+      "docs/Marker空间变换与对象反射逆向.md",
+      "docs/marker-transform-oracle.json"
+    ],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 7 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "verified",
+        "note": "59 个候选及入向引用已清点。AvatarSetPos 原 Update→本地选择→位置写入→Euler→Event Start 接原两个底层物理 setter、Euler→forward、就绪门控与完整 Whisker 初始化/重置局部链：487组、8,317,116字节、零差异，含59条真实flag/Marker快照。运行向量/e4/tick/BSS、矩阵、碰撞材质通道0x50、随机源、牵手/leader及libm仍为明确服务输入。面板接入原状态写入、静态角色和独立Avatar相机；默认入口、完整物理/账户/Avatar生命周期、动画、原连续相机和最终投影仍待恢复。 Marker矩阵输入现共用已核验的原字节内核；全部6538保存Marker的GetTransform/SetTransform经13784组、6440572字节0差异，原矩阵逆/额外乘积服务及完整场景行为仍独立保留。",
+        "evidence": [
+          "docs/avatar-set-pos-oracle.json",
+          "docs/avatar-camera-oracle.json",
+          "docs/avatar-mode-smoke.json",
+          "docs/Avatar出生定位与独立相机逆向.md",
+          "docs/avatar-physical-oracle.json",
+          "docs/avatar-physical-native.json",
+          "docs/Marker空间变换与对象反射逆向.md",
+          "docs/marker-transform-oracle.json"
+        ]
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "partial",
+        "note": "59 个候选及入向引用已清点。AvatarSetPos 原 Update→本地选择→位置写入→Euler→Event Start 接原两个底层物理 setter、Euler→forward、就绪门控与完整 Whisker 初始化/重置局部链：487组、8,317,116字节、零差异，含59条真实flag/Marker快照。运行向量/e4/tick/BSS、矩阵、碰撞材质通道0x50、随机源、牵手/leader及libm仍为明确服务输入。面板接入原状态写入、静态角色和独立Avatar相机；默认入口、完整物理/账户/Avatar生命周期、动画、原连续相机和最终投影仍待恢复。 Marker矩阵输入现共用已核验的原字节内核；全部6538保存Marker的GetTransform/SetTransform经13784组、6440572字节0差异，原矩阵逆/额外乘积服务及完整场景行为仍独立保留。",
+        "evidence": [
+          "docs/avatar-set-pos-oracle.json",
+          "docs/avatar-camera-oracle.json",
+          "docs/avatar-mode-smoke.json",
+          "docs/Avatar出生定位与独立相机逆向.md",
+          "docs/avatar-physical-oracle.json",
+          "docs/avatar-physical-native.json",
+          "docs/Marker空间变换与对象反射逆向.md",
+          "docs/marker-transform-oracle.json"
+        ]
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "partial",
+        "note": "59 个候选及入向引用已清点。AvatarSetPos 原 Update→本地选择→位置写入→Euler→Event Start 接原两个底层物理 setter、Euler→forward、就绪门控与完整 Whisker 初始化/重置局部链：487组、8,317,116字节、零差异，含59条真实flag/Marker快照。运行向量/e4/tick/BSS、矩阵、碰撞材质通道0x50、随机源、牵手/leader及libm仍为明确服务输入。面板接入原状态写入、静态角色和独立Avatar相机；默认入口、完整物理/账户/Avatar生命周期、动画、原连续相机和最终投影仍待恢复。 Marker矩阵输入现共用已核验的原字节内核；全部6538保存Marker的GetTransform/SetTransform经13784组、6440572字节0差异，原矩阵逆/额外乘积服务及完整场景行为仍独立保留。",
+        "evidence": [
+          "docs/avatar-set-pos-oracle.json",
+          "docs/avatar-camera-oracle.json",
+          "docs/avatar-mode-smoke.json",
+          "docs/Avatar出生定位与独立相机逆向.md",
+          "docs/avatar-physical-oracle.json",
+          "docs/avatar-physical-native.json",
+          "docs/Marker空间变换与对象反射逆向.md",
+          "docs/marker-transform-oracle.json"
+        ]
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "partial",
+        "note": "59 个候选及入向引用已清点。AvatarSetPos 原 Update→本地选择→位置写入→Euler→Event Start 接原两个底层物理 setter、Euler→forward、就绪门控与完整 Whisker 初始化/重置局部链：487组、8,317,116字节、零差异，含59条真实flag/Marker快照。运行向量/e4/tick/BSS、矩阵、碰撞材质通道0x50、随机源、牵手/leader及libm仍为明确服务输入。面板接入原状态写入、静态角色和独立Avatar相机；默认入口、完整物理/账户/Avatar生命周期、动画、原连续相机和最终投影仍待恢复。 Marker矩阵输入现共用已核验的原字节内核；全部6538保存Marker的GetTransform/SetTransform经13784组、6440572字节0差异，原矩阵逆/额外乘积服务及完整场景行为仍独立保留。",
+        "evidence": [
+          "docs/avatar-set-pos-oracle.json",
+          "docs/avatar-camera-oracle.json",
+          "docs/avatar-mode-smoke.json",
+          "docs/Avatar出生定位与独立相机逆向.md",
+          "docs/avatar-physical-oracle.json",
+          "docs/avatar-physical-native.json",
+          "docs/Marker空间变换与对象反射逆向.md",
+          "docs/marker-transform-oracle.json"
+        ]
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "59 个候选及入向引用已清点。AvatarSetPos 原 Update→本地选择→位置写入→Euler→Event Start 接原两个底层物理 setter、Euler→forward、就绪门控与完整 Whisker 初始化/重置局部链：487组、8,317,116字节、零差异，含59条真实flag/Marker快照。运行向量/e4/tick/BSS、矩阵、碰撞材质通道0x50、随机源、牵手/leader及libm仍为明确服务输入。面板接入原状态写入、静态角色和独立Avatar相机；默认入口、完整物理/账户/Avatar生命周期、动画、原连续相机和最终投影仍待恢复。 Marker矩阵输入现共用已核验的原字节内核；全部6538保存Marker的GetTransform/SetTransform经13784组、6440572字节0差异，原矩阵逆/额外乘积服务及完整场景行为仍独立保留。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "CandleSpace:n368",
+      "level": "CandleSpace",
+      "nodeId": 368,
+      "name": "BstNode_2529558623",
+      "className": "AvatarSetPos",
+      "classIndex": 67,
+      "sourceOffset": 77297,
+      "sourceLength": 37,
+      "sourceSha256": "02c29224d1289a40bfc2842ad48765101be72628189f344f0a584f0e4dad80f7",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n368/p4",
+          "fieldName": "marker",
+          "target": "CandleSpace:n343",
+          "targetNodeId": 343,
+          "offset": 77327
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CandleSpaceEnd:n39",
+      "level": "CandleSpaceEnd",
+      "nodeId": 39,
+      "name": "BstNode_2504654850",
+      "className": "AvatarSetPos",
+      "classIndex": 13,
+      "sourceOffset": 22928,
+      "sourceLength": 37,
+      "sourceSha256": "d6369f9af8ab750c65a4f0290c6e1d484d6a72c20af4d99219df47f379b436a9",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n39/p4",
+          "fieldName": "marker",
+          "target": "CandleSpaceEnd:n81",
+          "targetNodeId": 81,
+          "offset": 22958
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CandleSpaceEnd:n50",
+      "level": "CandleSpaceEnd",
+      "nodeId": 50,
+      "name": "BstNode_2529558623",
+      "className": "AvatarSetPos",
+      "classIndex": 13,
+      "sourceOffset": 23875,
+      "sourceLength": 37,
+      "sourceSha256": "d67d6b2654aea2b0985cf877be7b7550c1b0fd6b7aec826a178df87043f120f1",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n50/p4",
+          "fieldName": "marker",
+          "target": "CandleSpaceEnd:n364",
+          "targetNodeId": 364,
+          "offset": 23905
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CandleSpaceEnd:n399",
+      "level": "CandleSpaceEnd",
+      "nodeId": 399,
+      "name": "BstNode_2504655001",
+      "className": "AvatarSetPos",
+      "classIndex": 13,
+      "sourceOffset": 91499,
+      "sourceLength": 37,
+      "sourceSha256": "a9f03d3f46a5f38aec797139b8cd567145705dc5d90880432515bdc302fde743",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n399/p4",
+          "fieldName": "marker",
+          "target": "CandleSpaceEnd:n317",
+          "targetNodeId": 317,
+          "offset": 91529
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n51",
+      "level": "CarryLand",
+      "nodeId": 51,
+      "name": "BstNode_11",
+      "className": "AvatarSetPos",
+      "classIndex": 17,
+      "sourceOffset": 15583,
+      "sourceLength": 29,
+      "sourceSha256": "65613a109d89cd63f7da535f11c7100a463c6ef5ab0912ed659f2c8c82179dad",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n51/p4",
+          "fieldName": "marker",
+          "target": "CarryLand:n31",
+          "targetNodeId": 31,
+          "offset": 15605
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand2:n56",
+      "level": "CarryLand2",
+      "nodeId": 56,
+      "name": "BstNode_11",
+      "className": "AvatarSetPos",
+      "classIndex": 14,
+      "sourceOffset": 21645,
+      "sourceLength": 29,
+      "sourceSha256": "1ef245c864402add4642ccedaa7f94af25a9c7788aef4cb158f70a4caca71fab",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n56/p4",
+          "fieldName": "marker",
+          "target": "CarryLand2:n161",
+          "targetNodeId": 161,
+          "offset": 21667
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand3:n25",
+      "level": "CarryLand3",
+      "nodeId": 25,
+      "name": "BstNode_11",
+      "className": "AvatarSetPos",
+      "classIndex": 9,
+      "sourceOffset": 8917,
+      "sourceLength": 29,
+      "sourceSha256": "9ae898b6d61c0c20149fafc5c31777349c5d687d18e2606e7105f071fd92ec4f",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n25/p4",
+          "fieldName": "marker",
+          "target": "CarryLand3:n26",
+          "targetNodeId": 26,
+          "offset": 8939
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n290",
+      "level": "Dawn",
+      "nodeId": 290,
+      "name": "BstNode_851",
+      "className": "AvatarSetPos",
+      "classIndex": 51,
+      "sourceOffset": 79107,
+      "sourceLength": 30,
+      "sourceSha256": "06ce2c5a9e40052ba57692207766326e1d7dd280a686f515a35603e347cfcd30",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n290/p4",
+          "fieldName": "marker",
+          "target": "Dawn:n524",
+          "targetNodeId": 524,
+          "offset": 79130
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1028",
+      "level": "Dawn",
+      "nodeId": 1028,
+      "name": "BstNode_570",
+      "className": "AvatarSetPos",
+      "classIndex": 51,
+      "sourceOffset": 191855,
+      "sourceLength": 30,
+      "sourceSha256": "fbb88d559cdc5ba6995cf7bdd059c343a7e4eaa5b418c6f26c559260f1e9b0a9",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1028/p4",
+          "fieldName": "marker",
+          "target": "Dawn:n2551",
+          "targetNodeId": 2551,
+          "offset": 191878
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1294",
+      "level": "Dawn",
+      "nodeId": 1294,
+      "name": "BstNode_2279670005",
+      "className": "AvatarSetPos",
+      "classIndex": 51,
+      "sourceOffset": 233105,
+      "sourceLength": 37,
+      "sourceSha256": "eeda6a980f00bdaee31ff3f36b5fafc93b0583039848ec0a550b2ed4891cdbfa",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1294/p4",
+          "fieldName": "marker",
+          "target": "Dawn:n2877",
+          "targetNodeId": 2877,
+          "offset": 233135
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1515",
+      "level": "Dawn",
+      "nodeId": 1515,
+      "name": "BstNode_1221",
+      "className": "AvatarSetPos",
+      "classIndex": 51,
+      "sourceOffset": 265431,
+      "sourceLength": 31,
+      "sourceSha256": "ea82bbf9cc734445c0f1404811d1e75c5263f968a68e6127d59cf7b97ed092d7",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1515/p4",
+          "fieldName": "marker",
+          "target": "Dawn:n1106",
+          "targetNodeId": 1106,
+          "offset": 265455
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n42",
+      "level": "DayEnd",
+      "nodeId": 42,
+      "name": "BstNode_742",
+      "className": "AvatarSetPos",
+      "classIndex": 17,
+      "sourceOffset": 30433,
+      "sourceLength": 30,
+      "sourceSha256": "a38718c02a17fbdc343fadcd30a624b689259953c9b7844e5c3876170306fe7b",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n42/p4",
+          "fieldName": "marker",
+          "target": "DayEnd:n510",
+          "targetNodeId": 510,
+          "offset": 30456
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n275",
+      "level": "DayEnd",
+      "nodeId": 275,
+      "name": "BstNode_309",
+      "className": "AvatarSetPos",
+      "classIndex": 17,
+      "sourceOffset": 77661,
+      "sourceLength": 30,
+      "sourceSha256": "b51abfe85ccf5864d4c8bc85017bb98c70fdb02d227c2c5e024ebb9d24002658",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n275/p4",
+          "fieldName": "marker",
+          "target": "DayEnd:n841",
+          "targetNodeId": 841,
+          "offset": 77684
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n608",
+      "level": "DayEnd",
+      "nodeId": 608,
+      "name": "BstNode_11",
+      "className": "AvatarSetPos",
+      "classIndex": 17,
+      "sourceOffset": 140498,
+      "sourceLength": 29,
+      "sourceSha256": "c4afc050dfa60c18f623e0adffe247f013dc857055e68ed7ecc73cf396a742a4",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n608/p4",
+          "fieldName": "marker",
+          "target": "DayEnd:n1184",
+          "targetNodeId": 1184,
+          "offset": 140520
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayHubCave:n293",
+      "level": "DayHubCave",
+      "nodeId": 293,
+      "name": "BstNode_11",
+      "className": "AvatarSetPos",
+      "classIndex": 40,
+      "sourceOffset": 75231,
+      "sourceLength": 29,
+      "sourceSha256": "ca21f41bdbd8f5ef46608736145ede9d6a77aa0b85860dba667e98c0ddaae2e6",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n293/p4",
+          "fieldName": "marker",
+          "target": "DayHubCave:n886",
+          "targetNodeId": 886,
+          "offset": 75253
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n589",
+      "level": "Dusk",
+      "nodeId": 589,
+      "name": "BstNode_11",
+      "className": "AvatarSetPos",
+      "classIndex": 57,
+      "sourceOffset": 132766,
+      "sourceLength": 29,
+      "sourceSha256": "81d898b6984ff8c61971de9e8199ed5a3284c6ccd7da9725918a7a29a2fd38f0",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n589/p4",
+          "fieldName": "marker",
+          "target": "Dusk:n1110",
+          "targetNodeId": 1110,
+          "offset": 132788
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n832",
+      "level": "DuskGraveyard",
+      "nodeId": 832,
+      "name": "BstNode_34603869",
+      "className": "AvatarSetPos",
+      "classIndex": 53,
+      "sourceOffset": 218073,
+      "sourceLength": 35,
+      "sourceSha256": "81b144c17ba04bc5ee27047a8236f4a5d2068d38861c051e8d70c04d104bbf9e",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n832/p4",
+          "fieldName": "marker",
+          "target": "DuskGraveyard:n504",
+          "targetNodeId": 504,
+          "offset": 218101
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n1076",
+      "level": "DuskGraveyard",
+      "nodeId": 1076,
+      "name": "BstNode_11",
+      "className": "AvatarSetPos",
+      "classIndex": 53,
+      "sourceOffset": 280288,
+      "sourceLength": 29,
+      "sourceSha256": "a52dacf6cae37103b76d9f409d5f7425606f2bd80dce0b47e9ba3c539e7be108",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1076/p4",
+          "fieldName": "marker",
+          "target": "DuskGraveyard:n1654",
+          "targetNodeId": 1654,
+          "offset": 280310
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n139",
+      "level": "DuskMid",
+      "nodeId": 139,
+      "name": "BstNode_2345992617",
+      "className": "AvatarSetPos",
+      "classIndex": 29,
+      "sourceOffset": 44075,
+      "sourceLength": 37,
+      "sourceSha256": "69c3529cff90788b9f19a0e61a811797c65dbf9df86f115998523c162f9115ad",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n139/p4",
+          "fieldName": "marker",
+          "target": "DuskMid:n837",
+          "targetNodeId": 837,
+          "offset": 44105
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n556",
+      "level": "DuskMid",
+      "nodeId": 556,
+      "name": "BstNode_11",
+      "className": "AvatarSetPos",
+      "classIndex": 29,
+      "sourceOffset": 121396,
+      "sourceLength": 29,
+      "sourceSha256": "fd814755e6d14f4ac8fb16229edeb6af7126f47a07886d4f76882a3fdd5ddcc8",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n556/p4",
+          "fieldName": "marker",
+          "target": "DuskMid:n1037",
+          "targetNodeId": 1037,
+          "offset": 121418
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk_CrabField:n600",
+      "level": "Dusk_CrabField",
+      "nodeId": 600,
+      "name": "BstNode_11",
+      "className": "AvatarSetPos",
+      "classIndex": 30,
+      "sourceOffset": 149977,
+      "sourceLength": 29,
+      "sourceSha256": "e6118fbe2c35d25ce3baabc8846530439e577a30e2eec6f609b383dc1232644e",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n600/p4",
+          "fieldName": "marker",
+          "target": "Dusk_CrabField:n84",
+          "targetNodeId": 84,
+          "offset": 149999
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n240",
+      "level": "HubReveal",
+      "nodeId": 240,
+      "name": "BstNode_784",
+      "className": "AvatarSetPos",
+      "classIndex": 50,
+      "sourceOffset": 71335,
+      "sourceLength": 30,
+      "sourceSha256": "bcf14f464f93475ed1d7a032fc3bf60ecbfbb2a1ae6a69caa28a2b5dfb32c3ba",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n240/p4",
+          "fieldName": "marker",
+          "target": "HubReveal:n540",
+          "targetNodeId": 540,
+          "offset": 71358
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n242",
+      "level": "HubReveal",
+      "nodeId": 242,
+      "name": "BstNode_2529558542",
+      "className": "AvatarSetPos",
+      "classIndex": 50,
+      "sourceOffset": 71507,
+      "sourceLength": 37,
+      "sourceSha256": "96cfb779c5355ace4a5e6660fef4444b98c1b2c1e7b53db3c4c2d5fab9cf81be",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n242/p4",
+          "fieldName": "marker",
+          "target": "HubReveal:n1187",
+          "targetNodeId": 1187,
+          "offset": 71537
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n1150",
+      "level": "HubReveal",
+      "nodeId": 1150,
+      "name": "BstNode_2504654858",
+      "className": "AvatarSetPos",
+      "classIndex": 50,
+      "sourceOffset": 224327,
+      "sourceLength": 37,
+      "sourceSha256": "492e9d14f378f5daf0f4518ebf63c4dc55fe5d29cc4322487ac77857bbbc45ac",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1150/p4",
+          "fieldName": "marker",
+          "target": "HubReveal:n814",
+          "targetNodeId": 814,
+          "offset": 224357
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1109",
+      "level": "Night",
+      "nodeId": 1109,
+      "name": "BstNode_34603374",
+      "className": "AvatarSetPos",
+      "classIndex": 57,
+      "sourceOffset": 184717,
+      "sourceLength": 35,
+      "sourceSha256": "071a50066a0d5897f33601eb7c0546c2e36b4187684cffe8c4332fbaadb1f267",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1109/p4",
+          "fieldName": "marker",
+          "target": "Night:n2956",
+          "targetNodeId": 2956,
+          "offset": 184745
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1482",
+      "level": "Night",
+      "nodeId": 1482,
+      "name": "BstNode_11",
+      "className": "AvatarSetPos",
+      "classIndex": 57,
+      "sourceOffset": 236109,
+      "sourceLength": 29,
+      "sourceSha256": "6bf26f0cec81ed2028364e6c0846993adf27ffefe8f2e88e6d9d63c6fd08413b",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1482/p4",
+          "fieldName": "marker",
+          "target": "Night:n1098",
+          "targetNodeId": 1098,
+          "offset": 236131
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1809",
+      "level": "Night",
+      "nodeId": 1809,
+      "name": "BstNode_707",
+      "className": "AvatarSetPos",
+      "classIndex": 57,
+      "sourceOffset": 282326,
+      "sourceLength": 30,
+      "sourceSha256": "22893e9ab0e8e63b830540b48521fe1c35a5e8c5d6cb6015282a2156483d6197",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1809/p4",
+          "fieldName": "marker",
+          "target": "Night:n2845",
+          "targetNodeId": 2845,
+          "offset": 282349
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "NightEnd:n101",
+      "level": "NightEnd",
+      "nodeId": 101,
+      "name": "BstNode_34603096",
+      "className": "AvatarSetPos",
+      "classIndex": 27,
+      "sourceOffset": 38559,
+      "sourceLength": 35,
+      "sourceSha256": "fbc990a4943805990630a9ab6ac1a45f9c01b648c9d66866cc7cf10f2df1e41f",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n101/p4",
+          "fieldName": "marker",
+          "target": "NightEnd:n761",
+          "targetNodeId": 761,
+          "offset": 38587
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "NightEnd:n262",
+      "level": "NightEnd",
+      "nodeId": 262,
+      "name": "BstNode_2504654851",
+      "className": "AvatarSetPos",
+      "classIndex": 27,
+      "sourceOffset": 65520,
+      "sourceLength": 37,
+      "sourceSha256": "eca63f5310579e8de58991beb2037b515a981fa6688e922092b27f8d7ccb2b79",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n262/p4",
+          "fieldName": "marker",
+          "target": "NightEnd:n761",
+          "targetNodeId": 761,
+          "offset": 65550
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "NightEnd:n628",
+      "level": "NightEnd",
+      "nodeId": 628,
+      "name": "BstNode_34603092",
+      "className": "AvatarSetPos",
+      "classIndex": 27,
+      "sourceOffset": 125801,
+      "sourceLength": 35,
+      "sourceSha256": "ddd27d4511359ace6b9c0e317cf906021044f3ba10ad735286478736246ef066",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n628/p4",
+          "fieldName": "marker",
+          "target": "NightEnd:n643",
+          "targetNodeId": 643,
+          "offset": 125829
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "NightEntrance:n130",
+      "level": "NightEntrance",
+      "nodeId": 130,
+      "name": "BstNode_11",
+      "className": "AvatarSetPos",
+      "classIndex": 21,
+      "sourceOffset": 36489,
+      "sourceLength": 28,
+      "sourceSha256": "07f396de03ea259a3f5ebdef34fbc8cfc0eb993c9f186208f6f3aaa66db42b29",
+      "declaredFieldCount": 7,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n130/p3",
+          "fieldName": "marker",
+          "target": "NightEntrance:n466",
+          "targetNodeId": 466,
+          "offset": 36510
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n1344",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 1344,
+      "name": "BstNode_99",
+      "className": "AvatarSetPos",
+      "classIndex": 70,
+      "sourceOffset": 289168,
+      "sourceLength": 29,
+      "sourceSha256": "ace1ea46a4960d98c1cd3752e388154b02caae77a28a7748366737e51b077bfd",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1344/p4",
+          "fieldName": "marker",
+          "target": "Prairie_ButterflyFields:n22",
+          "targetNodeId": 22,
+          "offset": 289190
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n10",
+      "level": "Prairie_Cave",
+      "nodeId": 10,
+      "name": "BstNode_2504654987",
+      "className": "AvatarSetPos",
+      "classIndex": 5,
+      "sourceOffset": 25259,
+      "sourceLength": 37,
+      "sourceSha256": "890483bd79fd26ca053209f9d42d9552e58f140689bba2b77587d3ee4fec70f4",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n10/p4",
+          "fieldName": "marker",
+          "target": "Prairie_Cave:n83",
+          "targetNodeId": 83,
+          "offset": 25289
+        }
+      ],
+      "incomingReferenceCount": 4,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n883",
+      "level": "Prairie_Cave",
+      "nodeId": 883,
+      "name": "BstNode_1293287676",
+      "className": "AvatarSetPos",
+      "classIndex": 5,
+      "sourceOffset": 229298,
+      "sourceLength": 37,
+      "sourceSha256": "fb0ae48e000d9682f0717d5c327782801cc8892b957c138d4a6d64408f755986",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n883/p4",
+          "fieldName": "marker",
+          "target": "Prairie_Cave:n1337",
+          "targetNodeId": 1337,
+          "offset": 229328
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n969",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 969,
+      "name": "BstNode_99",
+      "className": "AvatarSetPos",
+      "classIndex": 65,
+      "sourceOffset": 236394,
+      "sourceLength": 29,
+      "sourceSha256": "8abcd54edacb714ef8569d8f636a8f4e2ae1ea8c0d63e37a4b15345e99608851",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n969/p4",
+          "fieldName": "marker",
+          "target": "Prairie_NestAndKeeper:n18",
+          "targetNodeId": 18,
+          "offset": 236416
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n481",
+      "level": "Prairie_Village",
+      "nodeId": 481,
+      "name": "BstNode_99",
+      "className": "AvatarSetPos",
+      "classIndex": 59,
+      "sourceOffset": 110386,
+      "sourceLength": 29,
+      "sourceSha256": "32b5a2ae52af01c22a5e5bae1eb7646934880abd40d7c76c20277dc121f2540f",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n481/p4",
+          "fieldName": "marker",
+          "target": "Prairie_Village:n2542",
+          "targetNodeId": 2542,
+          "offset": 110408
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n1",
+      "level": "Rain",
+      "nodeId": 1,
+      "name": "BstNode_2345992273",
+      "className": "AvatarSetPos",
+      "classIndex": 1,
+      "sourceOffset": 28598,
+      "sourceLength": 37,
+      "sourceSha256": "b64eb31ff36b3f55d1090bd4b2aeecb980aa6f69f4edffde8f5adbb5947a47dd",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1/p4",
+          "fieldName": "marker",
+          "target": "Rain:n800",
+          "targetNodeId": 800,
+          "offset": 28628
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n474",
+      "level": "Rain",
+      "nodeId": 474,
+      "name": "BstNode_2345992328",
+      "className": "AvatarSetPos",
+      "classIndex": 1,
+      "sourceOffset": 134759,
+      "sourceLength": 37,
+      "sourceSha256": "7f669362a3cc50aa1410dd2eea083d4be05c5b5a92e7977b0bf01cc8abd1101c",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n474/p4",
+          "fieldName": "marker",
+          "target": "Rain:n800",
+          "targetNodeId": 800,
+          "offset": 134789
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n1801",
+      "level": "Rain",
+      "nodeId": 1801,
+      "name": "BstNode_11",
+      "className": "AvatarSetPos",
+      "classIndex": 1,
+      "sourceOffset": 435254,
+      "sourceLength": 29,
+      "sourceSha256": "f872a238da0ab9e808ff27b327bbe8026bee527f0a804c0d594503d6f8dfc7a6",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1801/p4",
+          "fieldName": "marker",
+          "target": "Rain:n1869",
+          "targetNodeId": 1869,
+          "offset": 435276
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n152",
+      "level": "RainEnd",
+      "nodeId": 152,
+      "name": "BstNode_925",
+      "className": "AvatarSetPos",
+      "classIndex": 29,
+      "sourceOffset": 65806,
+      "sourceLength": 30,
+      "sourceSha256": "5b1118d6b13e5e11f3b214f7a6abc5dd4da865e60a6929aaa3b3a9f0c4c7e40b",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n152/p4",
+          "fieldName": "marker",
+          "target": "RainEnd:n612",
+          "targetNodeId": 612,
+          "offset": 65829
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n1009",
+      "level": "RainEnd",
+      "nodeId": 1009,
+      "name": "BstNode_72",
+      "className": "AvatarSetPos",
+      "classIndex": 29,
+      "sourceOffset": 268356,
+      "sourceLength": 29,
+      "sourceSha256": "829079e5c41279b030b2fcd645288fa0accd3dbf9de67026442367f87abf5f7f",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1009/p4",
+          "fieldName": "marker",
+          "target": "RainEnd:n561",
+          "targetNodeId": 561,
+          "offset": 268378
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n1114",
+      "level": "RainForest",
+      "nodeId": 1114,
+      "name": "BstNode_11",
+      "className": "AvatarSetPos",
+      "classIndex": 64,
+      "sourceOffset": 250220,
+      "sourceLength": 29,
+      "sourceSha256": "6b49edd93b0fd2894b6b0c8acc20f6ebf61e9e06600756550f65f5d9b873132f",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1114/p4",
+          "fieldName": "marker",
+          "target": "RainForest:n1119",
+          "targetNodeId": 1119,
+          "offset": 250242
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n321",
+      "level": "RainMid",
+      "nodeId": 321,
+      "name": "BstNode_1167523978",
+      "className": "AvatarSetPos",
+      "classIndex": 42,
+      "sourceOffset": 87751,
+      "sourceLength": 37,
+      "sourceSha256": "96bf50ea1806b574b108a854609188a7685acc17a077ddc89f409f42e6e07271",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n321/p4",
+          "fieldName": "marker",
+          "target": "RainMid:n142",
+          "targetNodeId": 142,
+          "offset": 87781
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n1655",
+      "level": "RainMid",
+      "nodeId": 1655,
+      "name": "BstNode_1167523980",
+      "className": "AvatarSetPos",
+      "classIndex": 42,
+      "sourceOffset": 332765,
+      "sourceLength": 37,
+      "sourceSha256": "fe9e4876d9ec00ff70669d53bc4a411c0c5668607e41361a259718b59214a074",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1655/p4",
+          "fieldName": "marker",
+          "target": "RainMid:n2041",
+          "targetNodeId": 2041,
+          "offset": 332795
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n1934",
+      "level": "RainMid",
+      "nodeId": 1934,
+      "name": "BstNode_213",
+      "className": "AvatarSetPos",
+      "classIndex": 42,
+      "sourceOffset": 375972,
+      "sourceLength": 30,
+      "sourceSha256": "fb895657423f4d92ddb956a570d19be58779a0854278280046086f305d6c25b4",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1934/p4",
+          "fieldName": "marker",
+          "target": "RainMid:n1608",
+          "targetNodeId": 1608,
+          "offset": 375995
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n611",
+      "level": "SkyHub2",
+      "nodeId": 611,
+      "name": "BstNode_11",
+      "className": "AvatarSetPos",
+      "classIndex": 66,
+      "sourceOffset": 146604,
+      "sourceLength": 29,
+      "sourceSha256": "f53c122ddff3e16076ea52cbb11d713f8e3f32d5043e367699d8ba4cb77e8656",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n611/p4",
+          "fieldName": "marker",
+          "target": "SkyHub2:n886",
+          "targetNodeId": 886,
+          "offset": 146626
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n1316",
+      "level": "Storm",
+      "nodeId": 1316,
+      "name": "BstNode_11",
+      "className": "AvatarSetPos",
+      "classIndex": 62,
+      "sourceOffset": 256759,
+      "sourceLength": 29,
+      "sourceSha256": "41b8739f94ff2f804e6d6edf7b82501b1e9bb931da7a9b48be665d7c629090ed",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1316/p4",
+          "fieldName": "marker",
+          "target": "Storm:n917",
+          "targetNodeId": 917,
+          "offset": 256781
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n139",
+      "level": "StormEnd",
+      "nodeId": 139,
+      "name": "BstNode_2446917733",
+      "className": "AvatarSetPos",
+      "classIndex": 23,
+      "sourceOffset": 45478,
+      "sourceLength": 37,
+      "sourceSha256": "c6c8b731952adcad103bdbd641583859c5a256135b832a8f0797f79c89ae14d8",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n139/p4",
+          "fieldName": "marker",
+          "target": "StormEnd:n562",
+          "targetNodeId": 562,
+          "offset": 45508
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n580",
+      "level": "StormEnd",
+      "nodeId": 580,
+      "name": "BstNode_11",
+      "className": "AvatarSetPos",
+      "classIndex": 23,
+      "sourceOffset": 123674,
+      "sourceLength": 29,
+      "sourceSha256": "697746db274c38a40a332f3d6a5cb447793018a97df566c2af630efac095f3c4",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n580/p4",
+          "fieldName": "marker",
+          "target": "StormEnd:n468",
+          "targetNodeId": 468,
+          "offset": 123696
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n1079",
+      "level": "Sunset",
+      "nodeId": 1079,
+      "name": "BstNode_123",
+      "className": "AvatarSetPos",
+      "classIndex": 68,
+      "sourceOffset": 210755,
+      "sourceLength": 30,
+      "sourceSha256": "bd9af02edb7c27b1bca906a8475b3d00a9a1f8a9409c66125c94af1ae77123f2",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1079/p4",
+          "fieldName": "marker",
+          "target": "Sunset:n1067",
+          "targetNodeId": 1067,
+          "offset": 210778
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n1496",
+      "level": "Sunset",
+      "nodeId": 1496,
+      "name": "BstNode_2446917636",
+      "className": "AvatarSetPos",
+      "classIndex": 68,
+      "sourceOffset": 278315,
+      "sourceLength": 37,
+      "sourceSha256": "c88c33f977ea55a654c23c948c96f1db392db6918d4caca048a97e8c0233c0af",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1496/p4",
+          "fieldName": "marker",
+          "target": "Sunset:n991",
+          "targetNodeId": 991,
+          "offset": 278345
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n444",
+      "level": "SunsetEnd",
+      "nodeId": 444,
+      "name": "BstNode_1167524201",
+      "className": "AvatarSetPos",
+      "classIndex": 53,
+      "sourceOffset": 103958,
+      "sourceLength": 37,
+      "sourceSha256": "17e6a8840409a8f6a4d3a99ca8c4a2c776701ce6fed8aafc8f622d206ee4f746",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n444/p4",
+          "fieldName": "marker",
+          "target": "SunsetEnd:n466",
+          "targetNodeId": 466,
+          "offset": 103988
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n942",
+      "level": "SunsetEnd",
+      "nodeId": 942,
+      "name": "BstNode_1",
+      "className": "AvatarSetPos",
+      "classIndex": 53,
+      "sourceOffset": 184032,
+      "sourceLength": 28,
+      "sourceSha256": "f86c3ea320724d47f4df75fccd0cb5b720be789d777df7ebef436c5951578cfb",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n942/p4",
+          "fieldName": "marker",
+          "target": "SunsetEnd:n640",
+          "targetNodeId": 640,
+          "offset": 184053
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd2:n463",
+      "level": "SunsetEnd2",
+      "nodeId": 463,
+      "name": "BstNode_1167523843",
+      "className": "AvatarSetPos",
+      "classIndex": 46,
+      "sourceOffset": 117407,
+      "sourceLength": 37,
+      "sourceSha256": "c5c431b2ca80a9dfaee551d224a7d4561441cc2d06c238fd4d710cf24646795a",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n463/p4",
+          "fieldName": "marker",
+          "target": "SunsetEnd2:n64",
+          "targetNodeId": 64,
+          "offset": 117437
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd2:n515",
+      "level": "SunsetEnd2",
+      "nodeId": 515,
+      "name": "BstNode_656801803",
+      "className": "AvatarSetPos",
+      "classIndex": 46,
+      "sourceOffset": 131549,
+      "sourceLength": 36,
+      "sourceSha256": "81b8b1d989e9f8bf0fe9234b9fe53cdd6078465c921c894490eb85481a29a6bc",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n515/p4",
+          "fieldName": "marker",
+          "target": "SunsetEnd2:n222",
+          "targetNodeId": 222,
+          "offset": 131578
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetRace:n102",
+      "level": "SunsetRace",
+      "nodeId": 102,
+      "name": "BstNode_123",
+      "className": "AvatarSetPos",
+      "classIndex": 18,
+      "sourceOffset": 41229,
+      "sourceLength": 30,
+      "sourceSha256": "3744e1ec0a1e22038093f49ae74e98a54216fc1758d7be94692d0575928b0b01",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n102/p4",
+          "fieldName": "marker",
+          "target": "SunsetRace:n683",
+          "targetNodeId": 683,
+          "offset": 41252
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "TitleWater:n9",
+      "level": "TitleWater",
+      "nodeId": 9,
+      "name": "BstNode_2470641665",
+      "className": "AvatarSetPos",
+      "classIndex": 7,
+      "sourceOffset": 17811,
+      "sourceLength": 37,
+      "sourceSha256": "e8bd8588d894aa2d027963d7671d17e42bcd4a20ccb11dacc525e39ff1646beb",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n9/p4",
+          "fieldName": "marker",
+          "target": "TitleWater:n26",
+          "targetNodeId": 26,
+          "offset": 17841
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "TitleWater:n100",
+      "level": "TitleWater",
+      "nodeId": 100,
+      "name": "BstNode_1528234052",
+      "className": "AvatarSetPos",
+      "classIndex": 7,
+      "sourceOffset": 29291,
+      "sourceLength": 37,
+      "sourceSha256": "d2211836199b603c17167fcbb6e636bc262198366b0692e47f5e3e83ac45260a",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n100/p4",
+          "fieldName": "marker",
+          "target": "TitleWater:n107",
+          "targetNodeId": 107,
+          "offset": 29321
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "TitleWater:n114",
+      "level": "TitleWater",
+      "nodeId": 114,
+      "name": "BstNode_1",
+      "className": "AvatarSetPos",
+      "classIndex": 7,
+      "sourceOffset": 31066,
+      "sourceLength": 28,
+      "sourceSha256": "f30fcf7e9a8d31df13cc65b491686cb530d275e2392634e3886c18505ad104ca",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n114/p4",
+          "fieldName": "marker",
+          "target": "TitleWater:n26",
+          "targetNodeId": 26,
+          "offset": 31087
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "CandleSpace",
+      "path": "Levels/CandleSpace/Objects.level.bin",
+      "sha256": "db7140d2dd5ee9cd2fcdcbb61a898b9facf1683ff21fec83fcbef81b885f56db",
+      "bytes": 92607,
+      "nodes": 564,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/CandleSpace.json",
+      "markdown": "Objects对象清单/CandleSpace.md"
+    },
+    {
+      "level": "CandleSpaceEnd",
+      "path": "Levels/CandleSpaceEnd/Objects.level.bin",
+      "sha256": "d42c3e1f85fb9dcc75d903911a1e91e6e061d017ae47f809caf4375505071352",
+      "bytes": 131707,
+      "nodes": 852,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/CandleSpaceEnd.json",
+      "markdown": "Objects对象清单/CandleSpaceEnd.md"
+    },
+    {
+      "level": "CarryLand",
+      "path": "Levels/CarryLand/Objects.level.bin",
+      "sha256": "05b7ec8214f29c52ae93d689df8bbea764240612425e0524259f3b185907993c",
+      "bytes": 26338,
+      "nodes": 109,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/CarryLand.json",
+      "markdown": "Objects对象清单/CarryLand.md"
+    },
+    {
+      "level": "CarryLand2",
+      "path": "Levels/CarryLand2/Objects.level.bin",
+      "sha256": "e20b1611daee8e87548c3e2902ef3f5d7b5ce43f48c62c2510b08374c9ac55d2",
+      "bytes": 52809,
+      "nodes": 249,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/CarryLand2.json",
+      "markdown": "Objects对象清单/CarryLand2.md"
+    },
+    {
+      "level": "CarryLand3",
+      "path": "Levels/CarryLand3/Objects.level.bin",
+      "sha256": "2a40e8794b6ca7c88d4b6b89a025ca6e9885e11f81c00bae76ca9798b64a674e",
+      "bytes": 11217,
+      "nodes": 40,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/CarryLand3.json",
+      "markdown": "Objects对象清单/CarryLand3.md"
+    },
+    {
+      "level": "Dawn",
+      "path": "Levels/Dawn/Objects.level.bin",
+      "sha256": "16e26aafc7f9d120a548bf5d8bec04fbc18146bc8db531ef75144889b1ff197a",
+      "bytes": 504637,
+      "nodes": 3798,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dawn.json",
+      "markdown": "Objects对象清单/Dawn.md"
+    },
+    {
+      "level": "DayEnd",
+      "path": "Levels/DayEnd/Objects.level.bin",
+      "sha256": "9b5c568cefa987e504a10236c5b61e5de4b748d965d09e42db3602e4e52cc904",
+      "bytes": 268140,
+      "nodes": 1459,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DayEnd.json",
+      "markdown": "Objects对象清单/DayEnd.md"
+    },
+    {
+      "level": "DayHubCave",
+      "path": "Levels/DayHubCave/Objects.level.bin",
+      "sha256": "e4da920cc9f0b1569f14ad1a6d1990db7155dc07ebfc3214c4e385a367872457",
+      "bytes": 202745,
+      "nodes": 1128,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DayHubCave.json",
+      "markdown": "Objects对象清单/DayHubCave.md"
+    },
+    {
+      "level": "Dusk",
+      "path": "Levels/Dusk/Objects.level.bin",
+      "sha256": "9222b248f17fb4122cd4ad9650543ab86aab8b077b6965248c70ac2341bf2d5d",
+      "bytes": 242331,
+      "nodes": 1288,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dusk.json",
+      "markdown": "Objects对象清单/Dusk.md"
+    },
+    {
+      "level": "DuskGraveyard",
+      "path": "Levels/DuskGraveyard/Objects.level.bin",
+      "sha256": "128b30dcbe40b68e68fc25d195b68dc39f897259453c02612049ccd37a90ffb4",
+      "bytes": 424333,
+      "nodes": 1791,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DuskGraveyard.json",
+      "markdown": "Objects对象清单/DuskGraveyard.md"
+    },
+    {
+      "level": "DuskMid",
+      "path": "Levels/DuskMid/Objects.level.bin",
+      "sha256": "899ca33226dabd04afecfe7888750938ff4e460cb586603364e150591e9cbda5",
+      "bytes": 234288,
+      "nodes": 1268,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DuskMid.json",
+      "markdown": "Objects对象清单/DuskMid.md"
+    },
+    {
+      "level": "Dusk_CrabField",
+      "path": "Levels/Dusk_CrabField/Objects.level.bin",
+      "sha256": "718247937eb535034282dbd11473563a2034ec75e1a4a287c057589ca174c8a8",
+      "bytes": 262346,
+      "nodes": 1098,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dusk_CrabField.json",
+      "markdown": "Objects对象清单/Dusk_CrabField.md"
+    },
+    {
+      "level": "HubReveal",
+      "path": "Levels/HubReveal/Objects.level.bin",
+      "sha256": "4b32f12bbe4b246cde9ca1e4ba0982000ff108359865bb4340aba640e609861b",
+      "bytes": 289438,
+      "nodes": 1829,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/HubReveal.json",
+      "markdown": "Objects对象清单/HubReveal.md"
+    },
+    {
+      "level": "Night",
+      "path": "Levels/Night/Objects.level.bin",
+      "sha256": "6ce612c9efb82834d648de81251033b341a44f4d9374d8338d868575aab6a723",
+      "bytes": 499756,
+      "nodes": 3719,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Night.json",
+      "markdown": "Objects对象清单/Night.md"
+    },
+    {
+      "level": "NightEnd",
+      "path": "Levels/NightEnd/Objects.level.bin",
+      "sha256": "0dd8919c4f0ca58e9dc979e211b84dc990e012815929082b1004ed620af32422",
+      "bytes": 156479,
+      "nodes": 1090,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/NightEnd.json",
+      "markdown": "Objects对象清单/NightEnd.md"
+    },
+    {
+      "level": "NightEntrance",
+      "path": "Levels/NightEntrance/Objects.level.bin",
+      "sha256": "d7cc9c4e290e146b459a8ddcddd19be2287fd2cc8ac19f98b688003e05ebb354",
+      "bytes": 98001,
+      "nodes": 594,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/NightEntrance.json",
+      "markdown": "Objects对象清单/NightEntrance.md"
+    },
+    {
+      "level": "Prairie_ButterflyFields",
+      "path": "Levels/Prairie_ButterflyFields/Objects.level.bin",
+      "sha256": "29d8d61a082f3e3414ecfbb501b5f65499deb37ad4a1078ce2e9b88ac0d1e441",
+      "bytes": 297606,
+      "nodes": 1513,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_ButterflyFields.json",
+      "markdown": "Objects对象清单/Prairie_ButterflyFields.md"
+    },
+    {
+      "level": "Prairie_Cave",
+      "path": "Levels/Prairie_Cave/Objects.level.bin",
+      "sha256": "675a2256e24f8c4b16540cee6a5cd2b7647ff2fb495724a8bf596717ca39d944",
+      "bytes": 466340,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Cave.json",
+      "markdown": "Objects对象清单/Prairie_Cave.md"
+    },
+    {
+      "level": "Prairie_NestAndKeeper",
+      "path": "Levels/Prairie_NestAndKeeper/Objects.level.bin",
+      "sha256": "5eabe877e07c84e5f9270035aaab73fa20144c87f6e9136e5285dbaff3f85b7a",
+      "bytes": 239403,
+      "nodes": 1077,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_NestAndKeeper.json",
+      "markdown": "Objects对象清单/Prairie_NestAndKeeper.md"
+    },
+    {
+      "level": "Prairie_Village",
+      "path": "Levels/Prairie_Village/Objects.level.bin",
+      "sha256": "4656296b54402016b59b894b4653fbdc71e106a21e0900294f73f2c7b7112385",
+      "bytes": 549989,
+      "nodes": 3724,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Village.json",
+      "markdown": "Objects对象清单/Prairie_Village.md"
+    },
+    {
+      "level": "Rain",
+      "path": "Levels/Rain/Objects.level.bin",
+      "sha256": "20093bccf3bb1ea0936cb993e66cef0187b40a5a411df3573eb28e4def4f75c6",
+      "bytes": 457732,
+      "nodes": 2079,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Rain.json",
+      "markdown": "Objects对象清单/Rain.md"
+    },
+    {
+      "level": "RainEnd",
+      "path": "Levels/RainEnd/Objects.level.bin",
+      "sha256": "247912ec955153e3df80c16a861eb872573502a285a17943518bdce448a8d5e3",
+      "bytes": 427926,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainEnd.json",
+      "markdown": "Objects对象清单/RainEnd.md"
+    },
+    {
+      "level": "RainForest",
+      "path": "Levels/RainForest/Objects.level.bin",
+      "sha256": "2e69b3314c70c61bd99435f4bb4418fba540f227c83670e1af3b5358c64c3b73",
+      "bytes": 271409,
+      "nodes": 1306,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainForest.json",
+      "markdown": "Objects对象清单/RainForest.md"
+    },
+    {
+      "level": "RainMid",
+      "path": "Levels/RainMid/Objects.level.bin",
+      "sha256": "139b219d9b71a2ab24418b1ec41f2ee8a2ebfdf4c5ea992c35348a758682ed23",
+      "bytes": 430825,
+      "nodes": 2457,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainMid.json",
+      "markdown": "Objects对象清单/RainMid.md"
+    },
+    {
+      "level": "SkyHub2",
+      "path": "Levels/SkyHub2/Objects.level.bin",
+      "sha256": "8b467f9b349d9d4ce0d038528c96e44dff30063149bf5bbf90232a56bb9dd36f",
+      "bytes": 475656,
+      "nodes": 2886,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SkyHub2.json",
+      "markdown": "Objects对象清单/SkyHub2.md"
+    },
+    {
+      "level": "Storm",
+      "path": "Levels/Storm/Objects.level.bin",
+      "sha256": "4be187f31f1ef86611831abeb45ed9c1deff5e925f3bae80a6be49af85fa52bd",
+      "bytes": 324849,
+      "nodes": 1954,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Storm.json",
+      "markdown": "Objects对象清单/Storm.md"
+    },
+    {
+      "level": "StormEnd",
+      "path": "Levels/StormEnd/Objects.level.bin",
+      "sha256": "a9c13b592198ee01ab2922a0c7901f4516ae172d56a22d9b7f806ff7464c9162",
+      "bytes": 224465,
+      "nodes": 1243,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/StormEnd.json",
+      "markdown": "Objects对象清单/StormEnd.md"
+    },
+    {
+      "level": "Sunset",
+      "path": "Levels/Sunset/Objects.level.bin",
+      "sha256": "8126f2db693502576075505797624e0b5e53dc064fe6af82e90f2261ca427f8a",
+      "bytes": 325410,
+      "nodes": 1899,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Sunset.json",
+      "markdown": "Objects对象清单/Sunset.md"
+    },
+    {
+      "level": "SunsetEnd",
+      "path": "Levels/SunsetEnd/Objects.level.bin",
+      "sha256": "9995ebfef7aa72982f6b95073a98a4ef01376bd8ac56c3b79b09729f97f43d6e",
+      "bytes": 352573,
+      "nodes": 1998,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SunsetEnd.json",
+      "markdown": "Objects对象清单/SunsetEnd.md"
+    },
+    {
+      "level": "SunsetEnd2",
+      "path": "Levels/SunsetEnd2/Objects.level.bin",
+      "sha256": "f76249413f9412f3db6d726aacf7425d5da546f8a9b88b9614c8a33fdb87e711",
+      "bytes": 209340,
+      "nodes": 975,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SunsetEnd2.json",
+      "markdown": "Objects对象清单/SunsetEnd2.md"
+    },
+    {
+      "level": "SunsetRace",
+      "path": "Levels/SunsetRace/Objects.level.bin",
+      "sha256": "2ebfc21451d30f976bcafafa0c42f409e322efeeb0f8403a4136899438e0b5dc",
+      "bytes": 333403,
+      "nodes": 1722,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SunsetRace.json",
+      "markdown": "Objects对象清单/SunsetRace.md"
+    },
+    {
+      "level": "TitleWater",
+      "path": "Levels/TitleWater/Objects.level.bin",
+      "sha256": "46841a22d17b360fcc3c7ceb8406d8c7e73441fd59023f64b4bce4057e1b9414",
+      "bytes": 45511,
+      "nodes": 238,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/TitleWater.json",
+      "markdown": "Objects对象清单/TitleWater.md"
+    }
+  ]
+}

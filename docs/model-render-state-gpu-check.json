@@ -1,0 +1,866 @@
+{
+  "passed": true,
+  "scope": "Production Vulkan material pipelines: transparent RGB/alpha, first-two-attachment blend, later attachment overwrite, backface culling, depth test/write and no decal bias. Synthetic shaders isolate descriptor state; original Metal/GPU and Scene sorting remain unverified.",
+  "checks": [
+    {
+      "name": "skybox-rgb-preserves-distance",
+      "colors": [
+        [
+          0.5,
+          0.5,
+          0,
+          0.25
+        ],
+        [
+          0,
+          1,
+          0,
+          0.5
+        ],
+        [
+          0,
+          1,
+          0,
+          0.5
+        ]
+      ],
+      "expected": [
+        [
+          0.5,
+          0.5,
+          0,
+          0.25
+        ],
+        [
+          0,
+          1,
+          0,
+          0.5
+        ],
+        [
+          0,
+          1,
+          0,
+          0.5
+        ]
+      ]
+    },
+    {
+      "name": "skybox-no-depth-write",
+      "colors": [
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "name": "skybox-depth-test",
+      "colors": [
+        [
+          1,
+          0,
+          0,
+          0.25
+        ],
+        [
+          1,
+          0,
+          0,
+          0.25
+        ],
+        [
+          1,
+          0,
+          0,
+          0.25
+        ]
+      ],
+      "expected": [
+        [
+          1,
+          0,
+          0,
+          0.25
+        ],
+        [
+          1,
+          0,
+          0,
+          0.25
+        ],
+        [
+          1,
+          0,
+          0,
+          0.25
+        ]
+      ]
+    },
+    {
+      "name": "skybox-backfaces",
+      "colors": [
+        [
+          1,
+          0,
+          0,
+          0.25
+        ],
+        [
+          1,
+          0,
+          0,
+          0.25
+        ],
+        [
+          1,
+          0,
+          0,
+          0.25
+        ]
+      ],
+      "expected": [
+        [
+          1,
+          0,
+          0,
+          0.25
+        ],
+        [
+          1,
+          0,
+          0,
+          0.25
+        ],
+        [
+          1,
+          0,
+          0,
+          0.25
+        ]
+      ]
+    },
+    {
+      "name": "transparent-9",
+      "colors": [
+        [
+          0.5,
+          0.5,
+          0,
+          0.625
+        ],
+        [
+          0.5,
+          0.5,
+          0,
+          0.625
+        ],
+        [
+          0,
+          1,
+          0,
+          0.5
+        ]
+      ],
+      "expected": [
+        [
+          0.5,
+          0.5,
+          0,
+          0.625
+        ],
+        [
+          0.5,
+          0.5,
+          0,
+          0.625
+        ],
+        [
+          0,
+          1,
+          0,
+          0.5
+        ]
+      ]
+    },
+    {
+      "name": "depth-test-9",
+      "colors": [
+        [
+          1,
+          0,
+          0,
+          0.25
+        ],
+        [
+          1,
+          0,
+          0,
+          0.25
+        ],
+        [
+          1,
+          0,
+          0,
+          0.25
+        ]
+      ],
+      "expected": [
+        [
+          1,
+          0,
+          0,
+          0.25
+        ],
+        [
+          1,
+          0,
+          0,
+          0.25
+        ],
+        [
+          1,
+          0,
+          0,
+          0.25
+        ]
+      ]
+    },
+    {
+      "name": "no-depth-write-9",
+      "colors": [
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "name": "backfaces-9",
+      "colors": [
+        [
+          1,
+          0,
+          0,
+          0.25
+        ],
+        [
+          1,
+          0,
+          0,
+          0.25
+        ],
+        [
+          1,
+          0,
+          0,
+          0.25
+        ]
+      ],
+      "expected": [
+        [
+          1,
+          0,
+          0,
+          0.25
+        ],
+        [
+          1,
+          0,
+          0,
+          0.25
+        ],
+        [
+          1,
+          0,
+          0,
+          0.25
+        ]
+      ]
+    },
+    {
+      "name": "transparent-10",
+      "colors": [
+        [
+          0.5,
+          0.5,
+          0,
+          0.625
+        ],
+        [
+          0.5,
+          0.5,
+          0,
+          0.625
+        ],
+        [
+          0,
+          1,
+          0,
+          0.5
+        ]
+      ],
+      "expected": [
+        [
+          0.5,
+          0.5,
+          0,
+          0.625
+        ],
+        [
+          0.5,
+          0.5,
+          0,
+          0.625
+        ],
+        [
+          0,
+          1,
+          0,
+          0.5
+        ]
+      ]
+    },
+    {
+      "name": "depth-test-10",
+      "colors": [
+        [
+          1,
+          0,
+          0,
+          0.25
+        ],
+        [
+          1,
+          0,
+          0,
+          0.25
+        ],
+        [
+          1,
+          0,
+          0,
+          0.25
+        ]
+      ],
+      "expected": [
+        [
+          1,
+          0,
+          0,
+          0.25
+        ],
+        [
+          1,
+          0,
+          0,
+          0.25
+        ],
+        [
+          1,
+          0,
+          0,
+          0.25
+        ]
+      ]
+    },
+    {
+      "name": "no-depth-write-10",
+      "colors": [
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "name": "backfaces-10",
+      "colors": [
+        [
+          0.5,
+          0.5,
+          0,
+          0.625
+        ],
+        [
+          0.5,
+          0.5,
+          0,
+          0.625
+        ],
+        [
+          0,
+          1,
+          0,
+          0.5
+        ]
+      ],
+      "expected": [
+        [
+          0.5,
+          0.5,
+          0,
+          0.625
+        ],
+        [
+          0.5,
+          0.5,
+          0,
+          0.625
+        ],
+        [
+          0,
+          1,
+          0,
+          0.5
+        ]
+      ]
+    },
+    {
+      "name": "alpha-test-opaque-depth-write",
+      "colors": [
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "name": "separate-alpha-occluded",
+      "colors": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "opaqueRGBDepth": [
+        1,
+        0,
+        0,
+        7
+      ]
+    },
+    {
+      "name": "separate-alpha-visible",
+      "colors": [
+        [
+          0,
+          0.5,
+          0,
+          0.5
+        ],
+        [
+          128,
+          0,
+          0,
+          0.5
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          0.5,
+          0,
+          0.5
+        ],
+        [
+          128,
+          0,
+          0,
+          0.5
+        ]
+      ],
+      "opaqueRGBDepth": [
+        1,
+        0,
+        0,
+        7
+      ]
+    },
+    {
+      "name": "separate-alpha-retains-opaque-depth",
+      "colors": [
+        [
+          0.25,
+          0.5,
+          0,
+          0.75
+        ],
+        [
+          192,
+          0,
+          0,
+          0.75
+        ]
+      ],
+      "expected": [
+        [
+          0.25,
+          0.5,
+          0,
+          0.75
+        ],
+        [
+          192,
+          0,
+          0,
+          0.75
+        ]
+      ],
+      "opaqueRGBDepth": [
+        1,
+        0,
+        0,
+        7
+      ]
+    },
+    {
+      "name": "separate-alpha-resize",
+      "colors": [
+        [
+          0,
+          0.5,
+          0,
+          0.5
+        ],
+        [
+          128,
+          0,
+          0,
+          0.5
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          0.5,
+          0,
+          0.5
+        ],
+        [
+          128,
+          0,
+          0,
+          0.5
+        ]
+      ],
+      "opaqueRGBDepth": [
+        1,
+        0,
+        0,
+        7
+      ]
+    },
+    {
+      "name": "separate-alpha-clear",
+      "colors": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "opaqueRGBDepth": [
+        1,
+        0,
+        0,
+        7
+      ]
+    },
+    {
+      "name": "alpha-order-without-geometry-or-texture-upload",
+      "reversed": [
+        0.5,
+        0.25,
+        0,
+        0.75
+      ],
+      "restored": [
+        0.25,
+        0.5,
+        0,
+        0.75
+      ]
+    },
+    {
+      "name": "GPU-resident-opaque-alpha-composition-48",
+      "pixel": [
+        188,
+        188,
+        0,
+        255
+      ]
+    },
+    {
+      "name": "GPU-resident-opaque-alpha-composition-32",
+      "pixel": [
+        188,
+        188,
+        0,
+        255
+      ]
+    },
+    {
+      "name": "GPU-resident-opaque-alpha-composition-64",
+      "pixel": [
+        188,
+        188,
+        0,
+        255
+      ]
+    },
+    {
+      "name": "GPU-composition-clears-alpha-borrowed-target",
+      "pixel": [
+        255,
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      "name": "graphics-visibility-reuses-geometry-and-restores-target",
+      "hidden": [
+        71,
+        99,
+        120,
+        255
+      ],
+      "shown": [
+        255,
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      "name": "basic-packed-terrain-opaque",
+      "pixel": [
+        1,
+        1,
+        1
+      ],
+      "textureAllocations": 0
+    },
+    {
+      "name": "basic-packed-terrain-alpha",
+      "pixel": [
+        1,
+        1,
+        1
+      ],
+      "textureAllocations": 0
+    },
+    {
+      "name": "basic-packed-model-opaque",
+      "pixel": [
+        1,
+        0.501960813999176,
+        0.250980406999588
+      ],
+      "textureAllocations": 0
+    },
+    {
+      "name": "basic-packed-model-alpha",
+      "pixel": [
+        1,
+        0.501960813999176,
+        0.250980406999588
+      ],
+      "textureAllocations": 0
+    }
+  ],
+  "device": {
+    "engine": "Sky Native Vulkan",
+    "backend": "Vulkan",
+    "device": "llvmpipe (LLVM 19.1.7, 128 bits)",
+    "apiVersion": 4210993,
+    "deviceType": 4,
+    "nativeSurface": false,
+    "dynamicGeometry": true,
+    "shaderFloat16": true,
+    "gpuCanvasPacking": false,
+    "gpuExposureGather": false,
+    "samplerAnisotropyPolicy": "llvmpipe-trilinear",
+    "maxSamplerAnisotropy": 16
+  }
+}

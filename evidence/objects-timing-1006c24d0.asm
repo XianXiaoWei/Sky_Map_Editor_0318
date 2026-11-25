@@ -1,0 +1,6 @@
+0x1006c24d0: push rbp
+0x1006c24d1: mov rbp, rsp
+0x1006c24d4: add rdi, 0x30
+0x1006c24d8: xor esi, esi
+0x1006c24da: pop rbp
+0x1006c24db: jmp 0x100614ea0 ; 0x100614ea0

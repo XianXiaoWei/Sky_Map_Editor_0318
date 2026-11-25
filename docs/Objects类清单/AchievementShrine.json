@@ -1,0 +1,797 @@
+{
+  "className": "AchievementShrine",
+  "functionGroup": "任务、先祖与场景机制",
+  "functionRole": "成就机关、奖励与相机反馈",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "AchievementShrine 的原默认值、继承初始化及 29 个序列化字段变体；原注册字段 28 项。"
+    },
+    {
+      "name": "成就机关、奖励与相机反馈",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "CameraKeyFrame（5 条引用）、LevelMesh（4 条引用）、Clump（10 条引用）、Marker（2 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "AchievementShrine",
+    "category": "任务、先祖与场景机制",
+    "functionGroupId": "quests",
+    "functionRole": "成就机关、奖励与相机反馈",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "AchievementShrine 的原默认值、继承初始化及 29 个序列化字段变体；原注册字段 28 项。"
+      },
+      {
+        "name": "成就机关、奖励与相机反馈",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "CameraKeyFrame（5 条引用）、LevelMesh（4 条引用）、Clump（10 条引用）、Marker（2 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Clump",
+        "references": 10
+      },
+      {
+        "className": "CameraKeyFrame",
+        "references": 5
+      },
+      {
+        "className": "LevelMesh",
+        "references": 4
+      },
+      {
+        "className": "Marker",
+        "references": 2
+      }
+    ],
+    "rttiWorkingGroup": "系统和其余类型",
+    "role": "对象实例类型",
+    "instances": 1,
+    "nestedInstances": 0,
+    "referenceFields": 21,
+    "declaredLevels": 1,
+    "levels": [
+      {
+        "level": "SkyHub2",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "achievementServerId",
+        "type": 1,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "activator1Visuals",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "activator2Visuals",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "activator3Visuals",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "activator4Visuals",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "activatorCam",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "bigRewardCam",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "bigRewardSpawnArea",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "completionDiamond1",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "completionDiamond2",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "completionDiamond3",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "completionDiamond4",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "constellation1Mesh",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "constellation2Mesh",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "constellation3Mesh",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "constellation4Mesh",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "dailyQuestsInteractionLight",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "fillCam",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "rewardAlterVisuals",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "rewardCam",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "rewardSpawnArea",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "tierComplete1Visuals",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "tierComplete2Visuals",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "tierComplete3Visuals",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "tierComplete4Visuals",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "tierCompletedCam",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "tierCompletedEffect",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "useForDailyQuests",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100c77c40",
+    "nativeRegisteredFields": [
+      {
+        "name": "achievementServerId",
+        "typeGetter": "__Z17GetMetaTypeByTypeINSt3__112basic_stringIcNS0_11char_traitsIcEE16StlPoolAllocatorIcEEEERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x100052300",
+        "propertyAddress": "0x100c77240"
+      },
+      {
+        "name": "activator1Visuals",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 80,
+        "registrationFunction": "0x100052300",
+        "propertyAddress": "0x100c77290"
+      },
+      {
+        "name": "constellation1Mesh",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP9LevelMeshERK8MetaTypev",
+        "nativeOffset": 120,
+        "registrationFunction": "0x100052300",
+        "propertyAddress": "0x100c772e0"
+      },
+      {
+        "name": "tierComplete1Visuals",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 152,
+        "registrationFunction": "0x100052300",
+        "propertyAddress": "0x100c77330"
+      },
+      {
+        "name": "activator2Visuals",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 88,
+        "registrationFunction": "0x100052300",
+        "propertyAddress": "0x100c77380"
+      },
+      {
+        "name": "constellation2Mesh",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP9LevelMeshERK8MetaTypev",
+        "nativeOffset": 128,
+        "registrationFunction": "0x100052300",
+        "propertyAddress": "0x100c773d0"
+      },
+      {
+        "name": "tierComplete2Visuals",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 160,
+        "registrationFunction": "0x100052300",
+        "propertyAddress": "0x100c77420"
+      },
+      {
+        "name": "activator3Visuals",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 96,
+        "registrationFunction": "0x100052300",
+        "propertyAddress": "0x100c77470"
+      },
+      {
+        "name": "constellation3Mesh",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP9LevelMeshERK8MetaTypev",
+        "nativeOffset": 136,
+        "registrationFunction": "0x100052300",
+        "propertyAddress": "0x100c774c0"
+      },
+      {
+        "name": "tierComplete3Visuals",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 168,
+        "registrationFunction": "0x100052300",
+        "propertyAddress": "0x100c77510"
+      },
+      {
+        "name": "activator4Visuals",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 104,
+        "registrationFunction": "0x100052300",
+        "propertyAddress": "0x100c77560"
+      },
+      {
+        "name": "constellation4Mesh",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP9LevelMeshERK8MetaTypev",
+        "nativeOffset": 144,
+        "registrationFunction": "0x100052300",
+        "propertyAddress": "0x100c775b0"
+      },
+      {
+        "name": "tierComplete4Visuals",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 176,
+        "registrationFunction": "0x100052300",
+        "propertyAddress": "0x100c77600"
+      },
+      {
+        "name": "tierCompletedEffect",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 112,
+        "registrationFunction": "0x100052300",
+        "propertyAddress": "0x100c77650"
+      },
+      {
+        "name": "rewardAlterVisuals",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 184,
+        "registrationFunction": "0x100052300",
+        "propertyAddress": "0x100c776a0"
+      },
+      {
+        "name": "rewardSpawnArea",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP6MarkerERK8MetaTypev",
+        "nativeOffset": 192,
+        "registrationFunction": "0x100052300",
+        "propertyAddress": "0x100c776f0"
+      },
+      {
+        "name": "bigRewardSpawnArea",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP6MarkerERK8MetaTypev",
+        "nativeOffset": 200,
+        "registrationFunction": "0x100052300",
+        "propertyAddress": "0x100c77740"
+      },
+      {
+        "name": "fillCam",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP14CameraKeyFrameERK8MetaTypev",
+        "nativeOffset": 208,
+        "registrationFunction": "0x100052300",
+        "propertyAddress": "0x100c77790"
+      },
+      {
+        "name": "activatorCam",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP14CameraKeyFrameERK8MetaTypev",
+        "nativeOffset": 216,
+        "registrationFunction": "0x100052300",
+        "propertyAddress": "0x100c777e0"
+      },
+      {
+        "name": "rewardCam",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP14CameraKeyFrameERK8MetaTypev",
+        "nativeOffset": 224,
+        "registrationFunction": "0x100052300",
+        "propertyAddress": "0x100c77830"
+      },
+      {
+        "name": "bigRewardCam",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP14CameraKeyFrameERK8MetaTypev",
+        "nativeOffset": 232,
+        "registrationFunction": "0x100052300",
+        "propertyAddress": "0x100c77880"
+      },
+      {
+        "name": "tierCompletedCam",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP14CameraKeyFrameERK8MetaTypev",
+        "nativeOffset": 240,
+        "registrationFunction": "0x100052300",
+        "propertyAddress": "0x100c778d0"
+      },
+      {
+        "name": "dailyQuestsInteractionLight",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP9LevelMeshERK8MetaTypev",
+        "nativeOffset": 248,
+        "registrationFunction": "0x100052300",
+        "propertyAddress": "0x100c77920"
+      },
+      {
+        "name": "completionDiamond1",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP9LevelMeshERK8MetaTypev",
+        "nativeOffset": 256,
+        "registrationFunction": "0x100052300",
+        "propertyAddress": "0x100c77970"
+      },
+      {
+        "name": "completionDiamond2",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP9LevelMeshERK8MetaTypev",
+        "nativeOffset": 264,
+        "registrationFunction": "0x100052300",
+        "propertyAddress": "0x100c779c0"
+      },
+      {
+        "name": "completionDiamond3",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP9LevelMeshERK8MetaTypev",
+        "nativeOffset": 272,
+        "registrationFunction": "0x100052300",
+        "propertyAddress": "0x100c77a10"
+      },
+      {
+        "name": "completionDiamond4",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP9LevelMeshERK8MetaTypev",
+        "nativeOffset": 280,
+        "registrationFunction": "0x100052300",
+        "propertyAddress": "0x100c77a60"
+      },
+      {
+        "name": "useForDailyQuests",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 288,
+        "registrationFunction": "0x100052300",
+        "propertyAddress": "0x100c77ab0"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 28 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "SkyHub2:n1857",
+      "level": "SkyHub2",
+      "nodeId": 1857,
+      "name": "BstNode_2753888305",
+      "className": "AchievementShrine",
+      "classIndex": 116,
+      "sourceOffset": 350263,
+      "sourceLength": 148,
+      "sourceSha256": "5002e011fe4912c038ef3f5d926539196789923c8d1a1d007acd47ca4362ce5b",
+      "declaredFieldCount": 29,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1857/p1",
+          "fieldName": "rewardCam",
+          "target": "SkyHub2:n965",
+          "targetNodeId": 965,
+          "offset": 350287
+        },
+        {
+          "fieldId": "n1857/p3",
+          "fieldName": "constellation4Mesh",
+          "target": "SkyHub2:n271",
+          "targetNodeId": 271,
+          "offset": 350292
+        },
+        {
+          "fieldId": "n1857/p4",
+          "fieldName": "tierCompletedEffect",
+          "target": "SkyHub2:n2047",
+          "targetNodeId": 2047,
+          "offset": 350296
+        },
+        {
+          "fieldId": "n1857/p5",
+          "fieldName": "activatorCam",
+          "target": "SkyHub2:n2290",
+          "targetNodeId": 2290,
+          "offset": 350300
+        },
+        {
+          "fieldId": "n1857/p7",
+          "fieldName": "activator2Visuals",
+          "target": "SkyHub2:n976",
+          "targetNodeId": 976,
+          "offset": 350323
+        },
+        {
+          "fieldId": "n1857/p9",
+          "fieldName": "activator3Visuals",
+          "target": "SkyHub2:n885",
+          "targetNodeId": 885,
+          "offset": 350331
+        },
+        {
+          "fieldId": "n1857/p12",
+          "fieldName": "tierCompletedCam",
+          "target": "SkyHub2:n1049",
+          "targetNodeId": 1049,
+          "offset": 350343
+        },
+        {
+          "fieldId": "n1857/p13",
+          "fieldName": "rewardAlterVisuals",
+          "target": "SkyHub2:n2785",
+          "targetNodeId": 2785,
+          "offset": 350347
+        },
+        {
+          "fieldId": "n1857/p14",
+          "fieldName": "tierComplete4Visuals",
+          "target": "SkyHub2:n2786",
+          "targetNodeId": 2786,
+          "offset": 350351
+        },
+        {
+          "fieldId": "n1857/p15",
+          "fieldName": "tierComplete3Visuals",
+          "target": "SkyHub2:n2787",
+          "targetNodeId": 2787,
+          "offset": 350355
+        },
+        {
+          "fieldId": "n1857/p16",
+          "fieldName": "activator4Visuals",
+          "target": "SkyHub2:n548",
+          "targetNodeId": 548,
+          "offset": 350359
+        },
+        {
+          "fieldId": "n1857/p17",
+          "fieldName": "activator1Visuals",
+          "target": "SkyHub2:n2269",
+          "targetNodeId": 2269,
+          "offset": 350363
+        },
+        {
+          "fieldId": "n1857/p18",
+          "fieldName": "constellation3Mesh",
+          "target": "SkyHub2:n2021",
+          "targetNodeId": 2021,
+          "offset": 350367
+        },
+        {
+          "fieldId": "n1857/p19",
+          "fieldName": "constellation2Mesh",
+          "target": "SkyHub2:n993",
+          "targetNodeId": 993,
+          "offset": 350371
+        },
+        {
+          "fieldId": "n1857/p20",
+          "fieldName": "tierComplete2Visuals",
+          "target": "SkyHub2:n2788",
+          "targetNodeId": 2788,
+          "offset": 350375
+        },
+        {
+          "fieldId": "n1857/p22",
+          "fieldName": "rewardSpawnArea",
+          "target": "SkyHub2:n922",
+          "targetNodeId": 922,
+          "offset": 350383
+        },
+        {
+          "fieldId": "n1857/p23",
+          "fieldName": "fillCam",
+          "target": "SkyHub2:n654",
+          "targetNodeId": 654,
+          "offset": 350387
+        },
+        {
+          "fieldId": "n1857/p24",
+          "fieldName": "bigRewardCam",
+          "target": "SkyHub2:n965",
+          "targetNodeId": 965,
+          "offset": 350391
+        },
+        {
+          "fieldId": "n1857/p26",
+          "fieldName": "constellation1Mesh",
+          "target": "SkyHub2:n585",
+          "targetNodeId": 585,
+          "offset": 350399
+        },
+        {
+          "fieldId": "n1857/p27",
+          "fieldName": "tierComplete1Visuals",
+          "target": "SkyHub2:n2789",
+          "targetNodeId": 2789,
+          "offset": 350403
+        },
+        {
+          "fieldId": "n1857/p28",
+          "fieldName": "bigRewardSpawnArea",
+          "target": "SkyHub2:n922",
+          "targetNodeId": 922,
+          "offset": 350407
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "SkyHub2",
+      "path": "Levels/SkyHub2/Objects.level.bin",
+      "sha256": "8b467f9b349d9d4ce0d038528c96e44dff30063149bf5bbf90232a56bb9dd36f",
+      "bytes": 475656,
+      "nodes": 2886,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SkyHub2.json",
+      "markdown": "Objects对象清单/SkyHub2.md"
+    }
+  ]
+}

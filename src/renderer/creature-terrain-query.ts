@@ -1,0 +1,17 @@
+import * as THREE from 'three';
+import {prepareInteractionMesh} from './interaction-index';
+const positionVersion=(g:THREE.BufferGeometry)=>{const a=g.getAttribute('position');return a instanceof THREE.InterleavedBufferAttribute?a.data.version:a.version;};
+type Item={mesh:THREE.Mesh;bounds:THREE.Box3;matrix:number[];geometry:THREE.BufferGeometry;version:number};
+type Branch={bounds:THREE.Box3;left?:Branch;right?:Branch;items?:Item[]};
+/** Broad-phase tree above the existing indirect mesh BVHs. Queries retain
+ * original geometry, face IDs, transforms and closest-hit semantics. */
+export class CreatureTerrainQuery {
+ private items:Item[]=[];private root?:Branch;private ray=new THREE.Raycaster();private point=new THREE.Vector3();
+ readonly stats={rays:0,candidateMeshes:0,sceneMeshes:0,rebuilds:0};
+ constructor(meshes:THREE.Mesh[]){for(const mesh of meshes){mesh.updateMatrixWorld(true);mesh.geometry.computeBoundingBox();if(!mesh.geometry.boundingBox||mesh.geometry.boundingBox.isEmpty())continue;prepareInteractionMesh(mesh);this.items.push({mesh,bounds:mesh.geometry.boundingBox.clone().applyMatrix4(mesh.matrixWorld),matrix:mesh.matrixWorld.toArray(),geometry:mesh.geometry,version:positionVersion(mesh.geometry)});}this.stats.sceneMeshes=this.items.length;this.rebuild();this.ray.firstHitOnly=true;}
+ private rebuild(){const build=(items:Item[]):Branch=>{const bounds=new THREE.Box3();items.forEach(i=>bounds.union(i.bounds));if(items.length<=8)return {bounds,items};const size=bounds.getSize(new THREE.Vector3()),axis=size.x>=size.y&&size.x>=size.z?'x':size.y>=size.z?'y':'z';items.sort((a,b)=>(a.bounds.min[axis]+a.bounds.max[axis])-(b.bounds.min[axis]+b.bounds.max[axis]));const half=items.length>>>1;return {bounds,left:build(items.slice(0,half)),right:build(items.slice(half))};};this.root=this.items.length?build(this.items.slice()):undefined;this.stats.rebuilds++;}
+ beginFrame(){let changed=false;const parents=new Set(this.items.map(i=>i.mesh.parent).filter((p):p is THREE.Object3D=>!!p));for(const p of parents)p.updateWorldMatrix(true,true);for(const i of this.items){if(!i.mesh.parent)i.mesh.updateMatrixWorld();const current=i.mesh.matrixWorld.elements,geometry=i.mesh.geometry,version=positionVersion(geometry),edited=geometry!==i.geometry||version!==i.version;if(edited){geometry.computeBoundingBox();i.geometry=geometry;i.version=version;}if(edited||current.some((n,k)=>n!==i.matrix[k])){i.matrix=[...current];i.bounds.copy(i.mesh.geometry.boundingBox!).applyMatrix4(i.mesh.matrixWorld);changed=true;}}if(changed)this.rebuild();}
+ cast(origin:THREE.Vector3,direction:THREE.Vector3,maximum:number){this.stats.rays++;if(!this.root||maximum<=0||direction.lengthSq()<1e-12)return;this.ray.set(origin,direction);this.ray.near=0;this.ray.far=maximum;let best:THREE.Intersection|undefined;
+  const visit=(node:Branch)=>{if(!this.ray.ray.intersectBox(node.bounds,this.point)||(!node.bounds.containsPoint(origin)&&this.point.distanceTo(origin)>this.ray.far))return;if(node.items){for(const i of node.items){if(!i.mesh.visible||!this.ray.ray.intersectBox(i.bounds,this.point)||(!i.bounds.containsPoint(origin)&&this.point.distanceTo(origin)>this.ray.far))continue;this.stats.candidateMeshes++;const hit=this.ray.intersectObject(i.mesh,false)[0];if(hit&&(!best||hit.distance<best.distance)){best=hit;this.ray.far=hit.distance;}}}else{if(node.left)visit(node.left);if(node.right)visit(node.right);}};visit(this.root);return best;
+ }
+}

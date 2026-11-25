@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "resources": 208,
+  "comparedCases": 3145,
+  "comparedBytes": 1236664320,
+  "scope": "Unmodified InitializeSkeleton/InitializeMasks, uint16 name sort and helpers, Transform constructor/SetParent/MarkDirty and AnimationPack.MirrorRotation. RegisterPack also invokes the original InitializeSkeleton child without hooking it; pack finalization uses an absent animation library and does not claim map generation. All retained arena bytes, two global weight arrays, allocation order/size/alignment and assertion partial writes compared. Includes original stripped packs, duplicate names, byte prefixes, 0..256 bone limits, human masks, missing-name lower_bound and forward-parent descendant propagation, detach/reparent/sibling failures and dirty gates. Mirror rotation uses explicitly prepared map records to exercise additive, basis-corrected and reflection branches with original quaternion inputs; map generation/finalization remains separate. Allocation storage/tag, imported libc and diagnostic escape are explicit services; no shared Model/creature owner or dynamic viewport is claimed.",
+  "failures": []
+}

@@ -1,0 +1,974 @@
+{
+  "className": "SetEnvHull",
+  "functionGroup": "云、风场与环境",
+  "functionRole": "设置区域环境参数",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "partial",
+      "description": "SetEnvHull 的原默认值、继承初始化及 44 个序列化字段变体；原注册字段 43 项。"
+    },
+    {
+      "name": "设置区域环境参数",
+      "status": "partial",
+      "description": "原存储转换和 Clump 环境范围子链已核验；自动激活/事件及动态生命周期待恢复。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "partial",
+      "description": "Clump（4 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "SetEnvHull",
+    "category": "云、风场与环境",
+    "functionGroupId": "environment",
+    "functionRole": "设置区域环境参数",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "partial",
+        "description": "SetEnvHull 的原默认值、继承初始化及 44 个序列化字段变体；原注册字段 43 项。"
+      },
+      {
+        "name": "设置区域环境参数",
+        "status": "partial",
+        "description": "原存储转换和 Clump 环境范围子链已核验；自动激活/事件及动态生命周期待恢复。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "partial",
+        "description": "Clump（4 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Clump",
+        "references": 4
+      }
+    ],
+    "rttiWorkingGroup": "地形、云、水和环境",
+    "role": "对象实例类型",
+    "instances": 4,
+    "nestedInstances": 0,
+    "referenceFields": 4,
+    "declaredLevels": 2,
+    "levels": [
+      {
+        "level": "Storm",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "StormEnd",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "atmosphereDensity",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "bloomFalloff",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "bloomGhost",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "bloomIntensity",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "bloomOverbright",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "bloomTint",
+        "type": 0,
+        "size": 16,
+        "nestedClass": null
+      },
+      {
+        "name": "cheapFogEnabled",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "cheapFogFar",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "cheapFogHeight",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "cheapFogHeightDensity",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "cheapFogLumReduction",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "cheapFogNear",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "cheapFogTintBot",
+        "type": 0,
+        "size": 16,
+        "nestedClass": null
+      },
+      {
+        "name": "cheapFogTintMidBot",
+        "type": 0,
+        "size": 16,
+        "nestedClass": null
+      },
+      {
+        "name": "cheapFogTintMidMid",
+        "type": 0,
+        "size": 16,
+        "nestedClass": null
+      },
+      {
+        "name": "cheapFogTintMidTop",
+        "type": 0,
+        "size": 16,
+        "nestedClass": null
+      },
+      {
+        "name": "cheapFogTintTop",
+        "type": 0,
+        "size": 16,
+        "nestedClass": null
+      },
+      {
+        "name": "drawDistance",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "duration",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "exposure",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "fadeInTime",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "fadeOutTime",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "falloff",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "fogDensity",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "fogHeight",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "fogVolumeIntensity",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "hull",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "layer",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "moonPhase",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "pointColor",
+        "type": 0,
+        "size": 16,
+        "nestedClass": null
+      },
+      {
+        "name": "pointIntensity",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "sunAngleXZ",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "sunAngleY",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "sunColor",
+        "type": 0,
+        "size": 16,
+        "nestedClass": null
+      },
+      {
+        "name": "sunInt",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "sunSize",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "sunToMoon",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "tintBot",
+        "type": 0,
+        "size": 16,
+        "nestedClass": null
+      },
+      {
+        "name": "tintMidBot",
+        "type": 0,
+        "size": 16,
+        "nestedClass": null
+      },
+      {
+        "name": "tintMidMid",
+        "type": 0,
+        "size": 16,
+        "nestedClass": null
+      },
+      {
+        "name": "tintMidTop",
+        "type": 0,
+        "size": 16,
+        "nestedClass": null
+      },
+      {
+        "name": "tintTop",
+        "type": 0,
+        "size": 16,
+        "nestedClass": null
+      },
+      {
+        "name": "undulationScale",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100cabf30",
+    "nativeRegisteredFields": [
+      {
+        "name": "hull",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 64,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100ca9b40"
+      },
+      {
+        "name": "falloff",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 72,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100ca9b90"
+      },
+      {
+        "name": "layer",
+        "typeGetter": "__Z17GetMetaTypeByTypeIjERK8MetaTypev",
+        "nativeOffset": 76,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100ca9be0"
+      },
+      {
+        "name": "fadeInTime",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 80,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100ca9c30"
+      },
+      {
+        "name": "fadeOutTime",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 84,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100ca9c80"
+      },
+      {
+        "name": "duration",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 88,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100ca9cd0"
+      },
+      {
+        "name": "sunAngleY",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 92,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100ca9d20"
+      },
+      {
+        "name": "sunAngleXZ",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 96,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100ca9d70"
+      },
+      {
+        "name": "sunColor",
+        "typeGetter": "__Z17GetMetaTypeByTypeI5ColorERK8MetaTypev",
+        "nativeOffset": 112,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100ca9dc0"
+      },
+      {
+        "name": "sunSize",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 128,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100ca9e10"
+      },
+      {
+        "name": "sunInt",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 136,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100ca9e60"
+      },
+      {
+        "name": "sunToMoon",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 140,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100ca9eb0"
+      },
+      {
+        "name": "moonPhase",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 144,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100ca9f00"
+      },
+      {
+        "name": "tintTop",
+        "typeGetter": "__Z17GetMetaTypeByTypeI5ColorERK8MetaTypev",
+        "nativeOffset": 160,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100ca9f50"
+      },
+      {
+        "name": "tintMidTop",
+        "typeGetter": "__Z17GetMetaTypeByTypeI5ColorERK8MetaTypev",
+        "nativeOffset": 176,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100ca9fa0"
+      },
+      {
+        "name": "tintMidMid",
+        "typeGetter": "__Z17GetMetaTypeByTypeI5ColorERK8MetaTypev",
+        "nativeOffset": 192,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100ca9ff0"
+      },
+      {
+        "name": "tintMidBot",
+        "typeGetter": "__Z17GetMetaTypeByTypeI5ColorERK8MetaTypev",
+        "nativeOffset": 208,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100caa040"
+      },
+      {
+        "name": "tintBot",
+        "typeGetter": "__Z17GetMetaTypeByTypeI5ColorERK8MetaTypev",
+        "nativeOffset": 224,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100caa090"
+      },
+      {
+        "name": "atmosphereDensity",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 240,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100caa0e0"
+      },
+      {
+        "name": "cheapFogEnabled",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 244,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100caa130"
+      },
+      {
+        "name": "cheapFogNear",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 248,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100caa180"
+      },
+      {
+        "name": "cheapFogFar",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 252,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100caa1d0"
+      },
+      {
+        "name": "cheapFogLumReduction",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 256,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100caa220"
+      },
+      {
+        "name": "cheapFogHeight",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 260,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100caa270"
+      },
+      {
+        "name": "cheapFogHeightDensity",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 264,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100caa2c0"
+      },
+      {
+        "name": "cheapFogTintTop",
+        "typeGetter": "__Z17GetMetaTypeByTypeI5ColorERK8MetaTypev",
+        "nativeOffset": 272,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100caa310"
+      },
+      {
+        "name": "cheapFogTintMidTop",
+        "typeGetter": "__Z17GetMetaTypeByTypeI5ColorERK8MetaTypev",
+        "nativeOffset": 288,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100caa360"
+      },
+      {
+        "name": "cheapFogTintMidMid",
+        "typeGetter": "__Z17GetMetaTypeByTypeI5ColorERK8MetaTypev",
+        "nativeOffset": 304,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100caa3b0"
+      },
+      {
+        "name": "cheapFogTintMidBot",
+        "typeGetter": "__Z17GetMetaTypeByTypeI5ColorERK8MetaTypev",
+        "nativeOffset": 320,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100caa400"
+      },
+      {
+        "name": "cheapFogTintBot",
+        "typeGetter": "__Z17GetMetaTypeByTypeI5ColorERK8MetaTypev",
+        "nativeOffset": 336,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100caa450"
+      },
+      {
+        "name": "fogDensity",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 352,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100caa4a0"
+      },
+      {
+        "name": "fogHeight",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 356,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100caa4f0"
+      },
+      {
+        "name": "drawDistance",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 360,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100caa540"
+      },
+      {
+        "name": "bloomTint",
+        "typeGetter": "__Z17GetMetaTypeByTypeIN10Vectormath3Aos7Vector3EERK8MetaTypev",
+        "nativeOffset": 368,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100caa590"
+      },
+      {
+        "name": "bloomIntensity",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 384,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100caa5e0"
+      },
+      {
+        "name": "bloomOverbright",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 388,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100caa630"
+      },
+      {
+        "name": "bloomGhost",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 392,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100caa680"
+      },
+      {
+        "name": "bloomFalloff",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 396,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100caa6d0"
+      },
+      {
+        "name": "exposure",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 400,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100caa720"
+      },
+      {
+        "name": "pointColor",
+        "typeGetter": "__Z17GetMetaTypeByTypeIN10Vectormath3Aos7Vector3EERK8MetaTypev",
+        "nativeOffset": 416,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100caa770"
+      },
+      {
+        "name": "pointIntensity",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 432,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100caa7c0"
+      },
+      {
+        "name": "undulationScale",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 436,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100caa810"
+      },
+      {
+        "name": "fogVolumeIntensity",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 440,
+        "registrationFunction": "0x10031e7c0",
+        "propertyAddress": "0x100caa860"
+      }
+    ],
+    "completedCheckpoints": 4,
+    "partialCheckpoints": 2,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 40,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": true,
+    "implementation": [
+      "src/core/environment-storage.ts",
+      "src/core/environment-regions.ts"
+    ],
+    "evidence": [
+      "docs/environment-oracle.json",
+      "docs/environment-clump-oracle.json",
+      "docs/烘焙与环境逆向进展.md",
+      "tests/fixtures/env-vars-native.json"
+    ],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 43 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "partial",
+        "note": "原存储转换和 Clump 环境范围子链已核验；自动激活/事件及动态生命周期待恢复。",
+        "evidence": [
+          "docs/environment-oracle.json",
+          "docs/environment-clump-oracle.json",
+          "docs/烘焙与环境逆向进展.md",
+          "tests/fixtures/env-vars-native.json"
+        ]
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "verified",
+        "note": "原存储转换和 Clump 环境范围子链已核验；自动激活/事件及动态生命周期待恢复。",
+        "evidence": [
+          "docs/environment-oracle.json",
+          "docs/environment-clump-oracle.json",
+          "docs/烘焙与环境逆向进展.md",
+          "tests/fixtures/env-vars-native.json"
+        ]
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "partial",
+        "note": "原存储转换和 Clump 环境范围子链已核验；自动激活/事件及动态生命周期待恢复。",
+        "evidence": [
+          "docs/environment-oracle.json",
+          "docs/environment-clump-oracle.json",
+          "docs/烘焙与环境逆向进展.md",
+          "tests/fixtures/env-vars-native.json"
+        ]
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "原存储转换和 Clump 环境范围子链已核验；自动激活/事件及动态生命周期待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "Storm:n29",
+      "level": "Storm",
+      "nodeId": 29,
+      "name": "BstNode_2529559640",
+      "className": "SetEnvHull",
+      "classIndex": 13,
+      "sourceOffset": 28505,
+      "sourceLength": 224,
+      "sourceSha256": "7de23c71ec72b147d60aba62e1459138f02ddebbb47a680528d7ffc692fc63b5",
+      "declaredFieldCount": 30,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n29/p10",
+          "fieldName": "hull",
+          "target": "Storm:n1670",
+          "targetNodeId": 1670,
+          "offset": 28577
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n52",
+      "level": "Storm",
+      "nodeId": 52,
+      "name": "BstNode_107",
+      "className": "SetEnvHull",
+      "classIndex": 13,
+      "sourceOffset": 32686,
+      "sourceLength": 217,
+      "sourceSha256": "c41d80e34c46bb3adc4111f7885a989e7248cc2a2f397341f467f49ce1323583",
+      "declaredFieldCount": 30,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n52/p10",
+          "fieldName": "hull",
+          "target": "Storm:n1676",
+          "targetNodeId": 1676,
+          "offset": 32751
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n390",
+      "level": "Storm",
+      "nodeId": 390,
+      "name": "BstNode_504",
+      "className": "SetEnvHull",
+      "classIndex": 13,
+      "sourceOffset": 93786,
+      "sourceLength": 217,
+      "sourceSha256": "65758468036a1ce913fdb64a03e512b152afc7c0567b87e35b1d3238e6c12a0f",
+      "declaredFieldCount": 30,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n390/p10",
+          "fieldName": "hull",
+          "target": "Storm:n1740",
+          "targetNodeId": 1740,
+          "offset": 93851
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n326",
+      "level": "StormEnd",
+      "nodeId": 326,
+      "name": "BstNode_2529558673",
+      "className": "SetEnvHull",
+      "classIndex": 37,
+      "sourceOffset": 79746,
+      "sourceLength": 349,
+      "sourceSha256": "373000f676ba5593ed9d0cf07b644458904542b3c139f665e3e0d62bd2aab2b7",
+      "declaredFieldCount": 44,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n326/p17",
+          "fieldName": "hull",
+          "target": "StormEnd:n1168",
+          "targetNodeId": 1168,
+          "offset": 79867
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "Storm",
+      "path": "Levels/Storm/Objects.level.bin",
+      "sha256": "4be187f31f1ef86611831abeb45ed9c1deff5e925f3bae80a6be49af85fa52bd",
+      "bytes": 324849,
+      "nodes": 1954,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Storm.json",
+      "markdown": "Objects对象清单/Storm.md"
+    },
+    {
+      "level": "StormEnd",
+      "path": "Levels/StormEnd/Objects.level.bin",
+      "sha256": "a9c13b592198ee01ab2922a0c7901f4516ae172d56a22d9b7f806ff7464c9162",
+      "bytes": 224465,
+      "nodes": 1243,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/StormEnd.json",
+      "markdown": "Objects对象清单/StormEnd.md"
+    }
+  ]
+}

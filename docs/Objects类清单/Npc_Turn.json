@@ -1,0 +1,615 @@
+{
+  "className": "Npc_Turn",
+  "functionGroup": "NPC 行为与社交",
+  "functionRole": "NPC 朝向过渡与完成事件",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "Npc_Turn 的原默认值、继承初始化及 5 个序列化字段变体；原注册字段 4 项。"
+    },
+    {
+      "name": "NPC 朝向过渡与完成事件",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Clump（10 条引用）、Marker（7 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "Npc_Turn",
+    "category": "NPC 行为与社交",
+    "functionGroupId": "npc",
+    "functionRole": "NPC 朝向过渡与完成事件",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "Npc_Turn 的原默认值、继承初始化及 5 个序列化字段变体；原注册字段 4 项。"
+      },
+      {
+        "name": "NPC 朝向过渡与完成事件",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Clump（10 条引用）、Marker（7 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Clump",
+        "references": 10
+      },
+      {
+        "className": "Marker",
+        "references": 7
+      }
+    ],
+    "rttiWorkingGroup": "系统和其余类型",
+    "role": "对象实例类型",
+    "instances": 7,
+    "nestedInstances": 0,
+    "referenceFields": 17,
+    "declaredLevels": 2,
+    "levels": [
+      {
+        "level": "DayEnd",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SkyHub2",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "direction",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "duration",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "npcs",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "onFinish",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100cd1310",
+    "nativeRegisteredFields": [
+      {
+        "name": "npcs",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x1004c99f0",
+        "propertyAddress": "0x100ccf220"
+      },
+      {
+        "name": "onFinish",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 80,
+        "registrationFunction": "0x1004c99f0",
+        "propertyAddress": "0x100ccf270"
+      },
+      {
+        "name": "direction",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP6MarkerERK8MetaTypev",
+        "nativeOffset": 64,
+        "registrationFunction": "0x1004c99f0",
+        "propertyAddress": "0x100ccf2c0"
+      },
+      {
+        "name": "duration",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 72,
+        "registrationFunction": "0x1004c99f0",
+        "propertyAddress": "0x100ccf310"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 4 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "DayEnd:n817",
+      "level": "DayEnd",
+      "nodeId": 817,
+      "name": "BstNode_795",
+      "className": "Npc_Turn",
+      "classIndex": 66,
+      "sourceOffset": 179093,
+      "sourceLength": 33,
+      "sourceSha256": "fcaa2c7db7f1f6c8d95b2fd296330b2cb4aec1ee203a804f8de634ea5c967e94",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n817/p1",
+          "fieldName": "onFinish",
+          "target": "DayEnd:n1386",
+          "targetNodeId": 1386,
+          "offset": 179110
+        },
+        {
+          "fieldId": "n817/p2",
+          "fieldName": "direction",
+          "target": "DayEnd:n1143",
+          "targetNodeId": 1143,
+          "offset": 179114
+        },
+        {
+          "fieldId": "n817/p4",
+          "fieldName": "npcs",
+          "target": "DayEnd:n1387",
+          "targetNodeId": 1387,
+          "offset": 179122
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n946",
+      "level": "DayEnd",
+      "nodeId": 946,
+      "name": "BstNode_807",
+      "className": "Npc_Turn",
+      "classIndex": 66,
+      "sourceOffset": 201889,
+      "sourceLength": 33,
+      "sourceSha256": "bff0ed9ee6de13073ae239cfa0bb0f44e07b161b8ba43ffffd89206a718eeba7",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n946/p1",
+          "fieldName": "onFinish",
+          "target": "DayEnd:n1404",
+          "targetNodeId": 1404,
+          "offset": 201906
+        },
+        {
+          "fieldId": "n946/p2",
+          "fieldName": "direction",
+          "target": "DayEnd:n626",
+          "targetNodeId": 626,
+          "offset": 201910
+        },
+        {
+          "fieldId": "n946/p4",
+          "fieldName": "npcs",
+          "target": "DayEnd:n196",
+          "targetNodeId": 196,
+          "offset": 201918
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n975",
+      "level": "DayEnd",
+      "nodeId": 975,
+      "name": "BstNode_796",
+      "className": "Npc_Turn",
+      "classIndex": 66,
+      "sourceOffset": 206870,
+      "sourceLength": 33,
+      "sourceSha256": "b41a8ec139b49ff5d2cdeb2a946d7f32838084fb2421f845ccbb1bc78e270286",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n975/p1",
+          "fieldName": "onFinish",
+          "target": "DayEnd:n1411",
+          "targetNodeId": 1411,
+          "offset": 206887
+        },
+        {
+          "fieldId": "n975/p2",
+          "fieldName": "direction",
+          "target": "DayEnd:n1143",
+          "targetNodeId": 1143,
+          "offset": 206891
+        },
+        {
+          "fieldId": "n975/p4",
+          "fieldName": "npcs",
+          "target": "DayEnd:n1412",
+          "targetNodeId": 1412,
+          "offset": 206899
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n389",
+      "level": "SkyHub2",
+      "nodeId": 389,
+      "name": "BstNode_1167524404",
+      "className": "Npc_Turn",
+      "classIndex": 57,
+      "sourceOffset": 107524,
+      "sourceLength": 40,
+      "sourceSha256": "d2b0e2c259d4d889cef7e8abb8035b753783b113895efa2ffda10841f49d9251",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n389/p2",
+          "fieldName": "direction",
+          "target": "SkyHub2:n961",
+          "targetNodeId": 961,
+          "offset": 107552
+        },
+        {
+          "fieldId": "n389/p4",
+          "fieldName": "npcs",
+          "target": "SkyHub2:n2521",
+          "targetNodeId": 2521,
+          "offset": 107560
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n871",
+      "level": "SkyHub2",
+      "nodeId": 871,
+      "name": "BstNode_2529558686",
+      "className": "Npc_Turn",
+      "classIndex": 57,
+      "sourceOffset": 192161,
+      "sourceLength": 40,
+      "sourceSha256": "d701ca2db3696abbe398a859f8e0175ccd441bbdf34b7eac7c1280effff87235",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n871/p2",
+          "fieldName": "direction",
+          "target": "SkyHub2:n1595",
+          "targetNodeId": 1595,
+          "offset": 192189
+        },
+        {
+          "fieldId": "n871/p4",
+          "fieldName": "npcs",
+          "target": "SkyHub2:n2598",
+          "targetNodeId": 2598,
+          "offset": 192197
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1356",
+      "level": "SkyHub2",
+      "nodeId": 1356,
+      "name": "BstNode_2529558592",
+      "className": "Npc_Turn",
+      "classIndex": 57,
+      "sourceOffset": 272516,
+      "sourceLength": 40,
+      "sourceSha256": "1c61c581b06eab2d3bb0d616faa6f8afeda390fdb4266740de0dc88e9f6f7d8e",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1356/p2",
+          "fieldName": "direction",
+          "target": "SkyHub2:n1259",
+          "targetNodeId": 1259,
+          "offset": 272544
+        },
+        {
+          "fieldId": "n1356/p4",
+          "fieldName": "npcs",
+          "target": "SkyHub2:n2678",
+          "targetNodeId": 2678,
+          "offset": 272552
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n2220",
+      "level": "SkyHub2",
+      "nodeId": 2220,
+      "name": "BstNode_2529558701",
+      "className": "Npc_Turn",
+      "classIndex": 57,
+      "sourceOffset": 419324,
+      "sourceLength": 40,
+      "sourceSha256": "a89548c4cdcc1d8a84f6d1fa5ef545b02a9ceade1bc61c2f8fb6daed4545df03",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2220/p2",
+          "fieldName": "direction",
+          "target": "SkyHub2:n819",
+          "targetNodeId": 819,
+          "offset": 419352
+        },
+        {
+          "fieldId": "n2220/p4",
+          "fieldName": "npcs",
+          "target": "SkyHub2:n2851",
+          "targetNodeId": 2851,
+          "offset": 419360
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "DayEnd",
+      "path": "Levels/DayEnd/Objects.level.bin",
+      "sha256": "9b5c568cefa987e504a10236c5b61e5de4b748d965d09e42db3602e4e52cc904",
+      "bytes": 268140,
+      "nodes": 1459,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DayEnd.json",
+      "markdown": "Objects对象清单/DayEnd.md"
+    },
+    {
+      "level": "SkyHub2",
+      "path": "Levels/SkyHub2/Objects.level.bin",
+      "sha256": "8b467f9b349d9d4ce0d038528c96e44dff30063149bf5bbf90232a56bb9dd36f",
+      "bytes": 475656,
+      "nodes": 2886,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SkyHub2.json",
+      "markdown": "Objects对象清单/SkyHub2.md"
+    }
+  ]
+}

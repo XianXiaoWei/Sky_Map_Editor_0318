@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "functions": {
+    "BirdV2.Load": "0x1001a1840",
+    "BirdV2.Unload": "0x1001a20f0",
+    "BirdV2Ai.Initialize": "0x10019ff50",
+    "NormalizeColumns": "0x10078a070",
+    "BirdMovement.Initialize": "0x100192520"
+  },
+  "cases": 82,
+  "comparedBytes": 3010040,
+  "serviceCalls": 2013,
+  "scope": "Whole BirdV2.Load/Unload and composed whole AI.Initialize/NormalizeColumns/movement initialization. Actual params, region/saved transform, model OBB scale, critterMove/Idle/pause/Struggle requests, ten optional bone slots/head fallback, wing effects/emitters/wind, random interval and Barn assertions, effect release, emitter retirement, model disable and original Barn removal stores. Reflection/resource/animation/effect/motion services and prepared pointers remain explicit. Full original Model/animation owner, live AI/GPU and native lifecycle remain pending; null cloned Model with struggle enabled is an original invalid dereference outside valid input cases.",
+  "failures": []
+}

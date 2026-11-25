@@ -1,0 +1,57 @@
+{
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "functions": {
+    "FloppySpine.Initialize": {
+      "start": "0x10034d0d0",
+      "end": "0x10034d300",
+      "codeSha256": "8823d712fd05180e3930b3f8c8a5bf29f37404cc3bb4766c4f53d1980a53f67b",
+      "assembly": "evidence/floppyspine-initialize.asm"
+    },
+    "FloppySpine.Update": {
+      "start": "0x10034d360",
+      "end": "0x10034e1b0",
+      "codeSha256": "a6472e4d2528906e394fe2105195c6754f15bdf3bdece16c8c4ca9194ba9f10a",
+      "assembly": "evidence/floppyspine-update.asm"
+    },
+    "DarkCreature.ModelCallback": {
+      "start": "0x100272160",
+      "end": "0x100272190",
+      "codeSha256": "18ae48488fc6d098dc333f289f0eb9cfcdf74ef442256984a568cd32bc2477a5",
+      "assembly": "evidence/darkcreature-modelcallback.asm"
+    },
+    "Model.UpdateSkeleton": {
+      "start": "0x10046a690",
+      "end": "0x10046b460",
+      "codeSha256": "c1343779123f650411ad55e64070b0a0199804cd56b105be1fdd2117f46bcff3",
+      "assembly": "evidence/model-updateskeleton.asm"
+    },
+    "Transform.Aim": {
+      "start": "0x1007f3180",
+      "end": "0x1007f3440",
+      "codeSha256": "07c23fd79611373f0f6a2444a1649d9b285961d94778659364894312e1b0fde5",
+      "assembly": "evidence/transform-aim.asm"
+    }
+  },
+  "constants": {
+    "retainedPositionWeight": 0.699999988079071,
+    "historyTargetWeight": 0.30000001192092896,
+    "constraintSplit": 0.5,
+    "spacingMultiplier": 1.2000000476837158,
+    "historyFraction": 0.0078125,
+    "scaleChangeTolerance": 0.009999999776482582
+  },
+  "historyCapacity": 128,
+  "constraintPasses": 10,
+  "ownerOrder": [
+    "primary animation",
+    "secondary animation",
+    "additive animation",
+    "palette flush",
+    "head callback",
+    "palette flush",
+    "FloppySpine.Update",
+    "palette flush",
+    "skinning"
+  ],
+  "scope": "Original supplied Sky 0.3.18 executable inspection. Original FloppySpine body is confirmed through source assertions, the _Sim name search, Model creation/enable and Model.Update calls. Native numerical comparison scope is separately recorded in floppy-spine-oracle.json."
+}

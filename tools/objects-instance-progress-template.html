@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Objects.level.bin · 全部对象实现清单</title>
+<style>
+:root{color-scheme:light;--ink:#18303f;--muted:#526976;--line:#d7e3e7;--accent:#146b64}*{box-sizing:border-box}body{margin:0;background:#f3f6f6;color:var(--ink);font:15px/1.65 system-ui,"Noto Sans CJK SC",sans-serif}main{max-width:1450px;margin:auto;padding:32px 26px}h1{margin:4px 0 12px;font-size:30px;line-height:1.35}h2{font-size:23px;margin:0}.eyebrow,a{color:var(--accent)}.intro,.small{color:var(--muted);font-size:13px}.goal{background:#e4f1ee;border-left:4px solid var(--accent);padding:13px 16px;margin:20px 0}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.metric{background:white;border:1px solid var(--line);padding:16px;border-radius:9px}.metric strong{display:block;font-size:26px}.metric span{font-size:12px;color:var(--muted)}.filters{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0 14px;align-items:end}label{display:flex;flex-direction:column;font-size:12px;color:var(--muted);gap:5px}.search{flex:1;min-width:220px}input,select,button{font:inherit}input,select{color:var(--ink);background:#fff;border:1px solid #b7cbd1;border-radius:6px;padding:10px 12px;min-height:44px}button{cursor:pointer;min-height:36px;border:1px solid #b7cbd1;border-radius:6px;padding:6px 12px;color:var(--ink);background:#fff}button:disabled{opacity:.45;cursor:default}button:focus-visible,input:focus,select:focus{outline:3px solid #8bcbc1;outline-offset:2px}.results,.pages{display:flex;justify-content:space-between;gap:14px;align-items:center;margin:12px 0;font-size:13px;color:var(--muted)}.pages{justify-content:flex-end}.table-wrap{overflow:auto;border:1px solid var(--line);background:#fff;border-radius:9px}table{width:100%;border-collapse:collapse;text-align:left}th,td{padding:12px 14px;border-bottom:1px solid #e3ecee;vertical-align:top}th{font-size:12px;background:#edf3f4;white-space:nowrap}td{font-size:13px}tbody tr:hover{background:#f4faf8}.object-button,.dependency{border:0;background:none;padding:0;color:var(--accent);text-align:left;min-height:0;overflow-wrap:anywhere;font-weight:600}.object-button:hover,.dependency:hover{text-decoration:underline}.sub{display:block;font-size:11px;color:var(--muted);margin-top:3px}.name{min-width:230px;max-width:420px}.num{font-variant-numeric:tabular-nums;white-space:nowrap}.empty{text-align:center;padding:35px}.checklist{padding:0;list-style:none}.checkpoint{padding:10px 0;border-bottom:1px solid var(--line)}.status{font-size:12px;color:var(--muted);display:inline-block;min-width:65px}.status.verified{color:var(--accent)}dialog{color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:0;width:min(1000px,95vw);max-height:90vh;box-shadow:0 24px 100px #16342e40}dialog::backdrop{background:#18303f88}.dialog-head{position:sticky;top:0;background:white;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 22px;border-bottom:1px solid var(--line)}.dialog-body{padding:20px 22px;overflow-wrap:anywhere}details{margin:18px 0}summary{cursor:pointer;font-weight:600}.references{display:flex;flex-direction:column;gap:10px;margin:12px 0}.section-title{font-weight:650;margin-top:20px}pre{font-size:12px;white-space:pre-wrap;overflow-wrap:anywhere;background:#eef4f5;padding:12px}footer{margin:24px 0;font-size:12px;color:var(--muted)}@media(max-width:800px){main{padding:22px 14px}h1{font-size:25px}.metrics{grid-template-columns:repeat(2,1fr)}.results{align-items:start;flex-direction:column}th,td{padding:10px}.dialog-head,.dialog-body{padding:16px}}@media(max-width:480px){label{min-width:140px;flex:1}.metric strong{font-size:22px}}
+</style></head><body><main><div class="eyebrow">Sky 0.3.18 · 全部真实地图对象</div><h1>Objects.level.bin 按单独类功能的实现清单</h1>
+<p class="intro">功能分类 → 单独类 → 该类全部实例。每类集中显示原功能、实施项、进度与依赖；音效、音乐和混音独立归类。地图只在实例中作为来源保留。</p>
+<div class="goal">最终目标：100% 还原原游戏逻辑。BstBaked 五段的 90% 是真机校验前的阶段目标。当前对象自身仅完成格式和引用验证，完整运行仍待验。</div>
+<div id="metrics" class="metrics"></div><div class="filters"><label class="search">搜索对象、类、节点或依赖<input id="search" type="search" placeholder="例如 LevelMesh、OnRegion、Dawn:n0" autocomplete="off"></label><label>功能分类<select id="category"><option value="">全部功能</option></select></label><label>单独类<select id="class"><option value="">按单独类功能查看</option></select></label><label>实例范围<select id="scope"><option value="all">全部对象</option><option value="referenced">有入引用</option><option value="dependencies">有出引用</option><option value="complete">实例完整运行已验收</option></select></label></div>
+<div class="results"><span id="result-count" role="status" aria-live="polite">正在读取离线清单…</span><span id="coverage"></span></div>
+<div class="results"><strong id="view-title">按单独类功能查看</strong><button id="back-classes" type="button" hidden>返回功能类目录</button></div><div class="table-wrap"><table><thead><tr id="headings"></tr></thead><tbody id="rows"></tbody></table></div>
+<div class="pages"><button id="previous" type="button" disabled>上一页</button><span id="page-number"></span><button id="next" type="button" disabled>下一页</button></div>
+<footer><a href="Objects.level.bin全部实现清单.md">全部实现清单</a> · <a href="Objects.level.bin类进度.html">逐类清单</a> · <a href="Objects.level.bin对象实现清单.json">完整对象 JSON</a> · <span id="updated"></span></footer></main>
+<dialog id="detail"><div class="dialog-head"><h2 id="detail-name"></h2><button id="close" type="button" aria-label="关闭对象详情">关闭</button></div><div id="detail-body" class="dialog-body"></div></dialog>
+<script>
+'use strict';
+const PAYLOAD='__OBJECTS_INSTANCE_PROGRESS_GZIP__';
+const byId=id=>document.getElementById(id),el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;},number=n=>n.toLocaleString('zh-CN');
+let REPORT,byKey,byClass,incoming,filtered=[],mode='classes',pageIndex=0;const pageSize=100;
+const link=(label,href)=>{const a=el('a',label);a.href=href;return a;};
+const status=p=>p==='verified'?'已验证':p==='partial'?'部分完成':'待恢复';
+function checklist(items,verifiedIds){const list=el('ol',undefined,'checklist');for(const [i,p] of items.entries()){const item=el('li',undefined,'checkpoint'),state=verifiedIds?(verifiedIds.includes(p.id)?'verified':'pending'):p.status;item.append(el('span',status(state),'status '+(state==='verified'?'verified':'')),el('strong',(i+1)+'. '+p.name));if(p.note)item.append(el('span',p.note,'sub'));list.append(item);}return list;}
+function openClass(c){
+ const body=byId('detail-body');body.replaceChildren();byId('detail-name').textContent=c.name;
+ body.append(el('p',c.category+' · '+c.functionRole),el('p','类清单 '+c.checkpointProgressPercent+'% · '+number(c.instances)+' 个实例；完整类运行待验。','small'),el('p',c.note));
+ const button=el('button','查看 '+number(c.instances)+' 个全部实例');button.id='show-instances';button.type='button';button.addEventListener('click',()=>{byId('detail').close();byId('class').value=c.name;byId('search').value='';byId('scope').value='all';filter();});body.append(button,link('单独类功能与全部实例清单',c.markdown));
+ body.append(el('p','此类功能实施项','section-title'));const tasks=el('ul');for(const p of c.functionalTasks)tasks.append(el('li',status(p.status)+' · '+p.name+'：'+p.description));body.append(tasks,el('p','原类完整验收清单','section-title'),checklist(c.checkpoints));
+ body.append(link('原类完整字段与证据','Objects.level.bin类进度.html#'+encodeURIComponent(c.name)));
+ const dialog=byId('detail');delete dialog.dataset.key;dialog.dataset.class=c.name;if(!dialog.open)dialog.showModal();
+}
+function openObject(o){
+ const body=byId('detail-body');body.replaceChildren();byId('detail-name').textContent=o.name||'（空名对象）';const c=byClass.get(o.className);
+ body.append(el('p',c.category+' · '+o.className+' · '+c.functionRole),el('p',o.key+' · 源字节 '+o.sourceOffset+' + '+o.sourceLength,'small'),el('p','实例自身 '+o.checkpointProgressPercent+'%（'+o.completedCheckpoints+'/10），只有格式与引用通过；完整运行待验。'),checklist(REPORT.checkpoints,o.verifiedCheckpoints));
+ const shared=el('details');shared.append(el('summary','单独类功能与实现 · '+c.name+' · '+c.checkpointProgressPercent+'%'),el('p',c.note,'small'));
+ for(const p of c.functionalTasks)shared.append(el('div',status(p.status)+' · '+p.name,'small'));const inspect=el('button','查看此类功能实施清单');inspect.type='button';inspect.addEventListener('click',()=>openClass(c));shared.append(inspect);body.append(shared);
+ const state=el('details');state.append(el('summary','原文件配置与来源身份'));state.append(el('p',o.level+' · SHA256 '+o.sourceSha256,'small'),el('p','原声明字段 '+o.declaredFieldCount+' 项；配置不证明启动后的状态。','small'),el('pre',JSON.stringify(o.serializedState,null,2)),link('该类原字段与全部实例 JSON',c.json));body.append(state);
+ for(const [label,refs] of [['出引用（序列化依赖）',o.references],['入引用（引用此对象）',incoming.get(o.key)||[]]]){
+  const d=el('details');d.append(el('summary',label+' · '+refs.length));const list=el('div',undefined,'references');for(const r of refs){const target=byKey.get(r.target),row=el('div'),button=el('button',target.className+' · '+(target.name||'（空名）'),'dependency');button.type='button';button.addEventListener('click',()=>{openObject(target);byId('detail').scrollTop=0;});row.append(button,el('span',target.key+' · '+r.fieldId+' · '+r.fieldName+'；原调用顺序待恢复','sub'));list.append(row);}d.append(list);body.append(d);
+ }
+ const dialog=byId('detail');delete dialog.dataset.class;dialog.dataset.key=o.key;if(!dialog.open)dialog.showModal();
+}
+function showPage(){
+ const fragment=document.createDocumentFragment(),start=pageIndex*pageSize;
+ const labels=mode==='classes'?['单独类 / 功能分类','此类原功能','全部实例','已验证类清单','完整类运行','实施缺口']:['对象 / 原节点','单独类功能','实例自身清单','共享类清单','出引用 / 入引用','来源'];
+ byId('headings').replaceChildren(...labels.map(t=>el('th',t)));byId('view-title').textContent=mode==='classes'?'按单独类功能查看':'该类全部实例';byId('back-classes').hidden=mode==='classes';
+ let group='';for(const entry of filtered.slice(start,start+pageSize)){
+  if(mode==='classes'){
+   const c=entry;if(group!==c.category){const row=el('tr'),cell=el('th',c.category);cell.colSpan=6;row.dataset.group=c.functionGroupId;row.append(cell);fragment.append(row);group=c.category;}
+   const row=el('tr');row.dataset.class=c.name;const name=el('td',undefined,'name'),button=el('button',c.name,'class-button object-button');button.type='button';button.addEventListener('click',()=>openClass(c));name.append(button);row.append(name,el('td',c.functionRole),el('td',number(c.instances),'num'),el('td',c.checkpointProgressPercent+'% · 子链/字段清单','num'),el('td',c.completeClassRuntimeVerified?'已验收':'待验收'),el('td',c.note));fragment.append(row);
+  }else{
+   const o=entry,c=byClass.get(o.className),row=el('tr');row.dataset.key=o.key;const name=el('td',undefined,'name'),button=el('button',o.name||'（空名对象）','object-button');button.type='button';button.addEventListener('click',()=>openObject(o));name.append(button,el('span','n'+o.nodeId,'sub'));row.append(name,el('td',c.name+' · '+c.functionRole));const own=el('td',o.checkpointProgressPercent+'% · '+o.completedCheckpoints+'/10','num');own.append(el('span','格式与引用通过，运行待验','sub'));row.append(own,el('td',c.checkpointProgressPercent+'%','num'),el('td',o.references.length+' / '+o.incomingReferenceCount,'num'),el('td',o.level,'small'));fragment.append(row);
+  }
+ }
+ if(!filtered.length){const row=el('tr'),cell=el('td',mode==='classes'?'没有匹配的功能类。':'此类没有匹配实例；仅声明类保留在功能清单中。','empty');cell.colSpan=6;row.append(cell);fragment.append(row);}byId('rows').replaceChildren(fragment);
+ byId('result-count').textContent='匹配 '+number(filtered.length)+(mode==='classes'?' 个单独类':' 个实例')+' · 本页 '+(filtered.length?start+1:0)+'–'+Math.min(start+pageSize,filtered.length);
+ byId('page-number').textContent=(pageIndex+1)+' / '+Math.max(1,Math.ceil(filtered.length/pageSize));byId('previous').disabled=pageIndex===0;byId('next').disabled=(pageIndex+1)*pageSize>=filtered.length;
+}
+function filter(){
+ const query=byId('search').value.trim().toLowerCase(),category=byId('category').value,cls=byId('class').value,scope=byId('scope').value,exact=query?REPORT.objects.find(o=>o.key.toLowerCase()===query):null;
+ mode=cls||exact||scope!=='all'?'objects':'classes';
+ if(mode==='classes'){filtered=REPORT.classes.filter(c=>(!category||c.functionGroupId===category)&&(!query||c.searchText.includes(query)));const order=new Map(REPORT.groups.map((g,i)=>[g.id,i]));filtered.sort((a,b)=>order.get(a.functionGroupId)-order.get(b.functionGroupId)||a.name.localeCompare(b.name));}
+ else filtered=REPORT.objects.filter(o=>{const c=byClass.get(o.className);return (!category||c.functionGroupId===category)&&(!cls||o.className===cls)&&(!query||(exact?o.key===exact.key:o.searchText.includes(query)))&&(scope==='all'||scope==='referenced'&&o.incomingReferenceCount>0||scope==='dependencies'&&o.references.length>0||scope==='complete'&&o.completeInstanceRuntimeVerified);});
+ pageIndex=0;showPage();
+}
+byId('close').addEventListener('click',()=>byId('detail').close());byId('previous').addEventListener('click',()=>{pageIndex--;showPage();});byId('next').addEventListener('click',()=>{pageIndex++;showPage();});byId('back-classes').addEventListener('click',()=>{byId('class').value='';byId('search').value='';byId('scope').value='all';filter();});
+async function initialize(){
+ const binary=atob(PAYLOAD),bytes=Uint8Array.from(binary,c=>c.charCodeAt(0));REPORT=JSON.parse(await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).text());
+ byKey=new Map(REPORT.objects.map(o=>[o.key,o]));byClass=new Map(REPORT.classes.map(c=>[c.name,c]));incoming=new Map();
+ for(const c of REPORT.classes)c.searchText=[c.name,c.category,c.functionRole,c.note].join(' ').toLowerCase();
+ for(const o of REPORT.objects){const c=byClass.get(o.className);o.searchText=[o.key,o.name,o.className,c.functionRole,...o.references.map(r=>r.target),JSON.stringify(o.serializedState)].join(' ').toLowerCase();for(const r of o.references){if(!incoming.has(r.target))incoming.set(r.target,[]);incoming.get(r.target).push({...r,target:o.key});}}
+ for(const [value,label] of [[REPORT.groups.length,'功能分类'],[REPORT.classes.length,'单独声明类'],[REPORT.objects.length,'全部对象实例'],[REPORT.classes.filter(c=>c.completeClassRuntimeVerified).length,'完整类运行已验收']]){const card=el('div',undefined,'metric');card.append(el('strong',number(value)),el('span',label));byId('metrics').append(card);}
+ for(const g of REPORT.groups){const option=el('option',g.name+'（'+g.classCount+' 类）');option.value=g.id;byId('category').append(option);}for(const c of REPORT.classes){const option=el('option',c.name+' · '+c.functionRole);option.value=c.name;byId('class').append(option);}
+ byId('coverage').textContent='全部 '+REPORT.classes.length+' 类 · '+number(REPORT.objects.length)+' 个实例 · 地图仅作来源';byId('updated').textContent='更新 '+REPORT.updatedAtUTC.slice(0,16).replace('T',' ')+' UTC';
+ for(const id of ['search','category','class','scope'])byId(id).addEventListener(id==='search'?'input':'change',filter);
+ if(location.hash){const hash=decodeURIComponent(location.hash.slice(1));if(hash.startsWith('class=')){const name=hash.slice(6);if(byClass.has(name))byId('class').value=name;}else{const selected=byKey.get(hash);if(selected){byId('class').value=selected.className;byId('search').value=selected.key;openObject(selected);}}}
+ filter();document.body.dataset.ready='true';
+}
+initialize().catch(error=>{byId('result-count').textContent='读取清单失败：'+error.message;document.body.dataset.error=error.message;});
+
+</script></body></html>

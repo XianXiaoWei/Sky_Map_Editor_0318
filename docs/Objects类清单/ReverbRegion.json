@@ -1,0 +1,1967 @@
+{
+  "className": "ReverbRegion",
+  "functionGroup": "声音、音乐与混音",
+  "functionRole": "区域混响与参数过渡",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "ReverbRegion 的原默认值、继承初始化及 28 个序列化字段变体；原注册字段 28 项。"
+    },
+    {
+      "name": "区域混响与参数过渡",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Clump（33 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "ReverbRegion",
+    "category": "声音、音乐与混音",
+    "functionGroupId": "sound",
+    "functionRole": "区域混响与参数过渡",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "ReverbRegion 的原默认值、继承初始化及 28 个序列化字段变体；原注册字段 28 项。"
+      },
+      {
+        "name": "区域混响与参数过渡",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Clump（33 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Clump",
+        "references": 33
+      }
+    ],
+    "rttiWorkingGroup": "交互、事件与任务",
+    "role": "对象实例类型",
+    "instances": 33,
+    "nestedInstances": 0,
+    "referenceFields": 33,
+    "declaredLevels": 20,
+    "levels": [
+      {
+        "level": "Dawn",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DayEnd",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Dusk",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DuskGraveyard",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DuskMid",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "HubReveal",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Night",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "NightEnd",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "NightEntrance",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Village",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Rain",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainEnd",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainForest",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainMid",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SkyHub2",
+        "nodes": 5,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Storm",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Sunset",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SunsetEnd",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SunsetEnd2",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SunsetRace",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "DecayHFRatio",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "DecayHFRatio0verride",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "DecayTime",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "DecayTime0verride",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "Density",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "Density0verride",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "Diffusion",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "Diffusion0verride",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "fadeTime",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "HFReference",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "HFReference0verride",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "LFReference",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "LFReference0verride",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "markers",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "Reflections",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "Reflections0verride",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "ReflectionsDelay",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "ReflectionsDelay0verride",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "Reverb",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "Reverb0verride",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "ReverbDelay",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "ReverbDelay0verride",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "Room",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "Room0verride",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "RoomHF",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "RoomHF0verride",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "RoomLF",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "RoomLF0verride",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100cf0c30",
+    "nativeRegisteredFields": [
+      {
+        "name": "markers",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 8,
+        "registrationFunction": "0x10058cb10",
+        "propertyAddress": "0x100cf0228"
+      },
+      {
+        "name": "fadeTime",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 16,
+        "registrationFunction": "0x10058cb10",
+        "propertyAddress": "0x100cf0278"
+      },
+      {
+        "name": "Room",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 20,
+        "registrationFunction": "0x10058cb10",
+        "propertyAddress": "0x100cf02c8"
+      },
+      {
+        "name": "Room0verride",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 24,
+        "registrationFunction": "0x10058cb10",
+        "propertyAddress": "0x100cf0318"
+      },
+      {
+        "name": "RoomHF",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 28,
+        "registrationFunction": "0x10058cb10",
+        "propertyAddress": "0x100cf0368"
+      },
+      {
+        "name": "RoomHF0verride",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 32,
+        "registrationFunction": "0x10058cb10",
+        "propertyAddress": "0x100cf03b8"
+      },
+      {
+        "name": "RoomLF",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 36,
+        "registrationFunction": "0x10058cb10",
+        "propertyAddress": "0x100cf0408"
+      },
+      {
+        "name": "RoomLF0verride",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 40,
+        "registrationFunction": "0x10058cb10",
+        "propertyAddress": "0x100cf0458"
+      },
+      {
+        "name": "DecayTime",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 44,
+        "registrationFunction": "0x10058cb10",
+        "propertyAddress": "0x100cf04a8"
+      },
+      {
+        "name": "DecayTime0verride",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 48,
+        "registrationFunction": "0x10058cb10",
+        "propertyAddress": "0x100cf04f8"
+      },
+      {
+        "name": "DecayHFRatio",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 52,
+        "registrationFunction": "0x10058cb10",
+        "propertyAddress": "0x100cf0548"
+      },
+      {
+        "name": "DecayHFRatio0verride",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x10058cb10",
+        "propertyAddress": "0x100cf0598"
+      },
+      {
+        "name": "Reflections",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 60,
+        "registrationFunction": "0x10058cb10",
+        "propertyAddress": "0x100cf05e8"
+      },
+      {
+        "name": "Reflections0verride",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 64,
+        "registrationFunction": "0x10058cb10",
+        "propertyAddress": "0x100cf0638"
+      },
+      {
+        "name": "ReflectionsDelay",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 68,
+        "registrationFunction": "0x10058cb10",
+        "propertyAddress": "0x100cf0688"
+      },
+      {
+        "name": "ReflectionsDelay0verride",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 72,
+        "registrationFunction": "0x10058cb10",
+        "propertyAddress": "0x100cf06d8"
+      },
+      {
+        "name": "Reverb",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 76,
+        "registrationFunction": "0x10058cb10",
+        "propertyAddress": "0x100cf0728"
+      },
+      {
+        "name": "Reverb0verride",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 80,
+        "registrationFunction": "0x10058cb10",
+        "propertyAddress": "0x100cf0778"
+      },
+      {
+        "name": "ReverbDelay",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 84,
+        "registrationFunction": "0x10058cb10",
+        "propertyAddress": "0x100cf07c8"
+      },
+      {
+        "name": "ReverbDelay0verride",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 88,
+        "registrationFunction": "0x10058cb10",
+        "propertyAddress": "0x100cf0818"
+      },
+      {
+        "name": "HFReference",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 92,
+        "registrationFunction": "0x10058cb10",
+        "propertyAddress": "0x100cf0868"
+      },
+      {
+        "name": "HFReference0verride",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 96,
+        "registrationFunction": "0x10058cb10",
+        "propertyAddress": "0x100cf08b8"
+      },
+      {
+        "name": "LFReference",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 100,
+        "registrationFunction": "0x10058cb10",
+        "propertyAddress": "0x100cf0908"
+      },
+      {
+        "name": "LFReference0verride",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 104,
+        "registrationFunction": "0x10058cb10",
+        "propertyAddress": "0x100cf0958"
+      },
+      {
+        "name": "Diffusion",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 108,
+        "registrationFunction": "0x10058cb10",
+        "propertyAddress": "0x100cf09a8"
+      },
+      {
+        "name": "Diffusion0verride",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 112,
+        "registrationFunction": "0x10058cb10",
+        "propertyAddress": "0x100cf09f8"
+      },
+      {
+        "name": "Density",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 116,
+        "registrationFunction": "0x10058cb10",
+        "propertyAddress": "0x100cf0a48"
+      },
+      {
+        "name": "Density0verride",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 120,
+        "registrationFunction": "0x10058cb10",
+        "propertyAddress": "0x100cf0a98"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 28 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "Dawn:n1331",
+      "level": "Dawn",
+      "nodeId": 1331,
+      "name": "BstNode_1165",
+      "className": "ReverbRegion",
+      "classIndex": 100,
+      "sourceOffset": 239408,
+      "sourceLength": 90,
+      "sourceSha256": "6d0e42d5e8a6c4223f50e44a32c772478750d9be8c6326a7b8b65d51f00ea5a7",
+      "declaredFieldCount": 28,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1331/p10",
+          "fieldName": "markers",
+          "target": "Dawn:n3320",
+          "targetNodeId": 3320,
+          "offset": 239456
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2304",
+      "level": "Dawn",
+      "nodeId": 2304,
+      "name": "BstNode_1160",
+      "className": "ReverbRegion",
+      "classIndex": 100,
+      "sourceOffset": 381979,
+      "sourceLength": 90,
+      "sourceSha256": "07130267f1eaa0f3a6ac61e89fee99a21e6ddc18b6316b2b8bf2c02fade94a05",
+      "declaredFieldCount": 28,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2304/p10",
+          "fieldName": "markers",
+          "target": "Dawn:n3624",
+          "targetNodeId": 3624,
+          "offset": 382027
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n27",
+      "level": "DayEnd",
+      "nodeId": 27,
+      "name": "BstNode_93",
+      "className": "ReverbRegion",
+      "classIndex": 12,
+      "sourceOffset": 27195,
+      "sourceLength": 88,
+      "sourceSha256": "d97d41a6d0f7be98b902ce3b8ce0afb540682ca7f3c4a325284d3049638561fa",
+      "declaredFieldCount": 28,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n27/p10",
+          "fieldName": "markers",
+          "target": "DayEnd:n1267",
+          "targetNodeId": 1267,
+          "offset": 27241
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n157",
+      "level": "Dusk",
+      "nodeId": 157,
+      "name": "BstNode_2783838215",
+      "className": "ReverbRegion",
+      "classIndex": 31,
+      "sourceOffset": 52129,
+      "sourceLength": 96,
+      "sourceSha256": "6f3db23f8639dbeb5fdacf6d3a0be8dc95d6e2ce8f6eed77ffbf4b79e3dd075f",
+      "declaredFieldCount": 28,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n157/p10",
+          "fieldName": "markers",
+          "target": "Dusk:n971",
+          "targetNodeId": 971,
+          "offset": 52183
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n422",
+      "level": "Dusk",
+      "nodeId": 422,
+      "name": "BstNode_2783838214",
+      "className": "ReverbRegion",
+      "classIndex": 31,
+      "sourceOffset": 100009,
+      "sourceLength": 96,
+      "sourceSha256": "39de55415d6d9a7256ef4c98063b86814e36686ed3a15cf1de79d39a3ba42939",
+      "declaredFieldCount": 28,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n422/p10",
+          "fieldName": "markers",
+          "target": "Dusk:n1224",
+          "targetNodeId": 1224,
+          "offset": 100063
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n408",
+      "level": "DuskGraveyard",
+      "nodeId": 408,
+      "name": "BstNode_2783838211",
+      "className": "ReverbRegion",
+      "classIndex": 39,
+      "sourceOffset": 121353,
+      "sourceLength": 96,
+      "sourceSha256": "ead14663bc6405626e3125aaf8b60d051e3d4d2f54bc671e29db68f3a5b38b95",
+      "declaredFieldCount": 28,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n408/p10",
+          "fieldName": "markers",
+          "target": "DuskGraveyard:n849",
+          "targetNodeId": 849,
+          "offset": 121407
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n761",
+      "level": "DuskGraveyard",
+      "nodeId": 761,
+      "name": "BstNode_2783838214",
+      "className": "ReverbRegion",
+      "classIndex": 39,
+      "sourceOffset": 198897,
+      "sourceLength": 96,
+      "sourceSha256": "385de79344f26ecb2525573c900fecc669e852d997eecc9287927dce81fb70e8",
+      "declaredFieldCount": 28,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n761/p10",
+          "fieldName": "markers",
+          "target": "DuskGraveyard:n1747",
+          "targetNodeId": 1747,
+          "offset": 198951
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n1694",
+      "level": "DuskGraveyard",
+      "nodeId": 1694,
+      "name": "BstNode_2783838213",
+      "className": "ReverbRegion",
+      "classIndex": 39,
+      "sourceOffset": 418795,
+      "sourceLength": 96,
+      "sourceSha256": "772587dda0a60974e0187dd774bd391a68f9e1fd62e281677961fbf0feee30b1",
+      "declaredFieldCount": 28,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1694/p10",
+          "fieldName": "markers",
+          "target": "DuskGraveyard:n1790",
+          "targetNodeId": 1790,
+          "offset": 418849
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n409",
+      "level": "DuskMid",
+      "nodeId": 409,
+      "name": "BstNode_2783838214",
+      "className": "ReverbRegion",
+      "classIndex": 45,
+      "sourceOffset": 91936,
+      "sourceLength": 96,
+      "sourceSha256": "0dfb01c51376f2d492f057862392e460752bdc628ec5fe14732516b72fd0a248",
+      "declaredFieldCount": 28,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n409/p10",
+          "fieldName": "markers",
+          "target": "DuskMid:n1172",
+          "targetNodeId": 1172,
+          "offset": 91990
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n674",
+      "level": "DuskMid",
+      "nodeId": 674,
+      "name": "BstNode_2783838216",
+      "className": "ReverbRegion",
+      "classIndex": 45,
+      "sourceOffset": 142454,
+      "sourceLength": 96,
+      "sourceSha256": "037c8396122a512bb33fc25ab2972d116c352b2d6f05712bca2b4517cab94143",
+      "declaredFieldCount": 28,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n674/p10",
+          "fieldName": "markers",
+          "target": "DuskMid:n1211",
+          "targetNodeId": 1211,
+          "offset": 142508
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n164",
+      "level": "HubReveal",
+      "nodeId": 164,
+      "name": "BstNode_1237",
+      "className": "ReverbRegion",
+      "classIndex": 43,
+      "sourceOffset": 57063,
+      "sourceLength": 90,
+      "sourceSha256": "a89f184ecf88057aaafe72a617443db1b1179d2b8949349c594457658e33d340",
+      "declaredFieldCount": 28,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n164/p10",
+          "fieldName": "markers",
+          "target": "HubReveal:n1538",
+          "targetNodeId": 1538,
+          "offset": 57111
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1385",
+      "level": "Night",
+      "nodeId": 1385,
+      "name": "BstNode_1948",
+      "className": "ReverbRegion",
+      "classIndex": 62,
+      "sourceOffset": 225417,
+      "sourceLength": 90,
+      "sourceSha256": "1bd2b391910bd63ecae9b328bca83249b84c80bf5ced9d84b56ded93a16b0898",
+      "declaredFieldCount": 28,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1385/p10",
+          "fieldName": "markers",
+          "target": "Night:n1383",
+          "targetNodeId": 1383,
+          "offset": 225465
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n3033",
+      "level": "Night",
+      "nodeId": 3033,
+      "name": "BstNode_1953",
+      "className": "ReverbRegion",
+      "classIndex": 62,
+      "sourceOffset": 471641,
+      "sourceLength": 90,
+      "sourceSha256": "5a0191509a85286413af2a54684ea1c5343ebfd63a812f7552caee9bf0b2c002",
+      "declaredFieldCount": 28,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n3033/p10",
+          "fieldName": "markers",
+          "target": "Night:n3700",
+          "targetNodeId": 3700,
+          "offset": 471689
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "NightEnd:n444",
+      "level": "NightEnd",
+      "nodeId": 444,
+      "name": "BstNode_185",
+      "className": "ReverbRegion",
+      "classIndex": 44,
+      "sourceOffset": 98110,
+      "sourceLength": 89,
+      "sourceSha256": "fe29394932141e6f03474049506d08e8d01d80922036c2047c9140b1eb116e64",
+      "declaredFieldCount": 28,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n444/p10",
+          "fieldName": "markers",
+          "target": "NightEnd:n939",
+          "targetNodeId": 939,
+          "offset": 98157
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "NightEntrance:n526",
+      "level": "NightEntrance",
+      "nodeId": 526,
+      "name": "BstNode_2783838213",
+      "className": "ReverbRegion",
+      "classIndex": 40,
+      "sourceOffset": 95156,
+      "sourceLength": 96,
+      "sourceSha256": "a118d90ed20deab1fa96aa3c7c727b2e7f3e9e6d7290edb6ed5f338889f4ee5a",
+      "declaredFieldCount": 28,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n526/p10",
+          "fieldName": "markers",
+          "target": "NightEntrance:n592",
+          "targetNodeId": 592,
+          "offset": 95210
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n443",
+      "level": "Prairie_Village",
+      "nodeId": 443,
+      "name": "BstNode_2783838264",
+      "className": "ReverbRegion",
+      "classIndex": 57,
+      "sourceOffset": 103388,
+      "sourceLength": 96,
+      "sourceSha256": "b4957c9c391afec6cfbd452f2bb6644dfe543ea73c99181459d28aa5d4db89ad",
+      "declaredFieldCount": 28,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n443/p10",
+          "fieldName": "markers",
+          "target": "Prairie_Village:n2941",
+          "targetNodeId": 2941,
+          "offset": 103442
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n371",
+      "level": "Rain",
+      "nodeId": 371,
+      "name": "BstNode_1468",
+      "className": "ReverbRegion",
+      "classIndex": 43,
+      "sourceOffset": 110707,
+      "sourceLength": 90,
+      "sourceSha256": "831a1887de00388050f7b9a17bfc950479a92d4d589ff5a433f841ed5922a261",
+      "declaredFieldCount": 28,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n371/p10",
+          "fieldName": "markers",
+          "target": "Rain:n532",
+          "targetNodeId": 532,
+          "offset": 110755
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n262",
+      "level": "RainEnd",
+      "nodeId": 262,
+      "name": "BstNode_609",
+      "className": "ReverbRegion",
+      "classIndex": 42,
+      "sourceOffset": 91302,
+      "sourceLength": 89,
+      "sourceSha256": "47dd8ca7fab0b0b8ce85786945d93b248ef2b9fdfd5f0da4c1ae4ef5884988c6",
+      "declaredFieldCount": 28,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n262/p10",
+          "fieldName": "markers",
+          "target": "RainEnd:n1717",
+          "targetNodeId": 1717,
+          "offset": 91349
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n488",
+      "level": "RainForest",
+      "nodeId": 488,
+      "name": "BstNode_1468",
+      "className": "ReverbRegion",
+      "classIndex": 49,
+      "sourceOffset": 110871,
+      "sourceLength": 90,
+      "sourceSha256": "9127c0af72bb86e230c2cd17cbb17e3cbd3d36b1e0b94fa83efef8410f6d5540",
+      "declaredFieldCount": 28,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n488/p10",
+          "fieldName": "markers",
+          "target": "RainForest:n836",
+          "targetNodeId": 836,
+          "offset": 110919
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n446",
+      "level": "RainMid",
+      "nodeId": 446,
+      "name": "BstNode_1341",
+      "className": "ReverbRegion",
+      "classIndex": 48,
+      "sourceOffset": 110003,
+      "sourceLength": 90,
+      "sourceSha256": "ff3ca552f2cba24fc23627e51c9b1256dd2b9c24465776d8050e23ba38c1a83f",
+      "declaredFieldCount": 28,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n446/p10",
+          "fieldName": "markers",
+          "target": "RainMid:n2252",
+          "targetNodeId": 2252,
+          "offset": 110051
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n1444",
+      "level": "RainMid",
+      "nodeId": 1444,
+      "name": "BstNode_1622",
+      "className": "ReverbRegion",
+      "classIndex": 48,
+      "sourceOffset": 290263,
+      "sourceLength": 90,
+      "sourceSha256": "124340387881abc0359750c79d27d8fbd15de76b06b7a49af129e467e854d3df",
+      "declaredFieldCount": 28,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1444/p10",
+          "fieldName": "markers",
+          "target": "RainMid:n1157",
+          "targetNodeId": 1157,
+          "offset": 290311
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n372",
+      "level": "SkyHub2",
+      "nodeId": 372,
+      "name": "BstNode_2783838247",
+      "className": "ReverbRegion",
+      "classIndex": 55,
+      "sourceOffset": 103376,
+      "sourceLength": 96,
+      "sourceSha256": "5ed65311fa82e0784f9d1302a98da072be04272ac72b992318e54e9aba026be4",
+      "declaredFieldCount": 28,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n372/p10",
+          "fieldName": "markers",
+          "target": "SkyHub2:n2518",
+          "targetNodeId": 2518,
+          "offset": 103430
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n606",
+      "level": "SkyHub2",
+      "nodeId": 606,
+      "name": "BstNode_2783838245",
+      "className": "ReverbRegion",
+      "classIndex": 55,
+      "sourceOffset": 145885,
+      "sourceLength": 96,
+      "sourceSha256": "4a501757923bdf6e989d77f05a3a177d6eed5701c5a4b7ca2c06059601ff1443",
+      "declaredFieldCount": 28,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n606/p10",
+          "fieldName": "markers",
+          "target": "SkyHub2:n2552",
+          "targetNodeId": 2552,
+          "offset": 145939
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n809",
+      "level": "SkyHub2",
+      "nodeId": 809,
+      "name": "BstNode_1482555422",
+      "className": "ReverbRegion",
+      "classIndex": 55,
+      "sourceOffset": 182600,
+      "sourceLength": 96,
+      "sourceSha256": "478eba030ff2fc040b4b9245ff23318e806e2bd7debabb2721b255893266a8cc",
+      "declaredFieldCount": 28,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n809/p10",
+          "fieldName": "markers",
+          "target": "SkyHub2:n2581",
+          "targetNodeId": 2581,
+          "offset": 182654
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1190",
+      "level": "SkyHub2",
+      "nodeId": 1190,
+      "name": "BstNode_2783838248",
+      "className": "ReverbRegion",
+      "classIndex": 55,
+      "sourceOffset": 249387,
+      "sourceLength": 96,
+      "sourceSha256": "f24918653a92d670cff043e9d01f35af6d21ded1122f9bdfd0dca60b14e9dfd8",
+      "declaredFieldCount": 28,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1190/p10",
+          "fieldName": "markers",
+          "target": "SkyHub2:n2647",
+          "targetNodeId": 2647,
+          "offset": 249441
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1235",
+      "level": "SkyHub2",
+      "nodeId": 1235,
+      "name": "BstNode_2783838246",
+      "className": "ReverbRegion",
+      "classIndex": 55,
+      "sourceOffset": 256658,
+      "sourceLength": 96,
+      "sourceSha256": "177bc6939e5b1fa503c6e0fde36dfdb4495d6e50e70da42083d4fbc4828899ac",
+      "declaredFieldCount": 28,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1235/p10",
+          "fieldName": "markers",
+          "target": "SkyHub2:n2657",
+          "targetNodeId": 2657,
+          "offset": 256712
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n397",
+      "level": "Storm",
+      "nodeId": 397,
+      "name": "BstNode_1278",
+      "className": "ReverbRegion",
+      "classIndex": 33,
+      "sourceOffset": 95046,
+      "sourceLength": 90,
+      "sourceSha256": "889c3cc7156a37407e37d11c240dc8826ba4adfd1f3943a1f3640b45ce59bcea",
+      "declaredFieldCount": 28,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n397/p10",
+          "fieldName": "markers",
+          "target": "Storm:n557",
+          "targetNodeId": 557,
+          "offset": 95094
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n1744",
+      "level": "Sunset",
+      "nodeId": 1744,
+      "name": "BstNode_2783838213",
+      "className": "ReverbRegion",
+      "classIndex": 82,
+      "sourceOffset": 320542,
+      "sourceLength": 96,
+      "sourceSha256": "a2ee86e91ec4cf1eb7276f0103d065300e82d256d205c2a1953a6a957b10c044",
+      "declaredFieldCount": 28,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1744/p10",
+          "fieldName": "markers",
+          "target": "Sunset:n1898",
+          "targetNodeId": 1898,
+          "offset": 320596
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n7",
+      "level": "SunsetEnd",
+      "nodeId": 7,
+      "name": "BstNode_1717",
+      "className": "ReverbRegion",
+      "classIndex": 5,
+      "sourceOffset": 27346,
+      "sourceLength": 90,
+      "sourceSha256": "7aa14af4b8119365e656f22d27b0c0fa3dea63d03e6ca0b61eba022bcf05a963",
+      "declaredFieldCount": 28,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n7/p10",
+          "fieldName": "markers",
+          "target": "SunsetEnd:n1839",
+          "targetNodeId": 1839,
+          "offset": 27394
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n77",
+      "level": "SunsetEnd",
+      "nodeId": 77,
+      "name": "BstNode_2783838218",
+      "className": "ReverbRegion",
+      "classIndex": 5,
+      "sourceOffset": 41235,
+      "sourceLength": 96,
+      "sourceSha256": "b43d9d182280c5c302a3d9298072391e327dfd3837fb43a9295c3656a1641e06",
+      "declaredFieldCount": 28,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n77/p10",
+          "fieldName": "markers",
+          "target": "SunsetEnd:n1841",
+          "targetNodeId": 1841,
+          "offset": 41289
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n834",
+      "level": "SunsetEnd",
+      "nodeId": 834,
+      "name": "BstNode_1986",
+      "className": "ReverbRegion",
+      "classIndex": 5,
+      "sourceOffset": 166142,
+      "sourceLength": 90,
+      "sourceSha256": "1bd4ceeb3cb95be2ec40d4ddf2b0d7c254e9a95aee83052ee755df1235be370e",
+      "declaredFieldCount": 28,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n834/p10",
+          "fieldName": "markers",
+          "target": "SunsetEnd:n1933",
+          "targetNodeId": 1933,
+          "offset": 166190
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd2:n9",
+      "level": "SunsetEnd2",
+      "nodeId": 9,
+      "name": "BstNode_1717",
+      "className": "ReverbRegion",
+      "classIndex": 4,
+      "sourceOffset": 23125,
+      "sourceLength": 90,
+      "sourceSha256": "a614926564220a4d6e915bb6d5ce184e3adbce69396dc1f84ef3b43a589e6535",
+      "declaredFieldCount": 28,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n9/p10",
+          "fieldName": "markers",
+          "target": "SunsetEnd2:n866",
+          "targetNodeId": 866,
+          "offset": 23173
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetRace:n926",
+      "level": "SunsetRace",
+      "nodeId": 926,
+      "name": "BstNode_2783838211",
+      "className": "ReverbRegion",
+      "classIndex": 49,
+      "sourceOffset": 200298,
+      "sourceLength": 96,
+      "sourceSha256": "6f718c8e6ece8968c7e091cebd16afc160a530b43862477dd99332d84288a3e8",
+      "declaredFieldCount": 28,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n926/p10",
+          "fieldName": "markers",
+          "target": "SunsetRace:n1027",
+          "targetNodeId": 1027,
+          "offset": 200352
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "Dawn",
+      "path": "Levels/Dawn/Objects.level.bin",
+      "sha256": "16e26aafc7f9d120a548bf5d8bec04fbc18146bc8db531ef75144889b1ff197a",
+      "bytes": 504637,
+      "nodes": 3798,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dawn.json",
+      "markdown": "Objects对象清单/Dawn.md"
+    },
+    {
+      "level": "DayEnd",
+      "path": "Levels/DayEnd/Objects.level.bin",
+      "sha256": "9b5c568cefa987e504a10236c5b61e5de4b748d965d09e42db3602e4e52cc904",
+      "bytes": 268140,
+      "nodes": 1459,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DayEnd.json",
+      "markdown": "Objects对象清单/DayEnd.md"
+    },
+    {
+      "level": "Dusk",
+      "path": "Levels/Dusk/Objects.level.bin",
+      "sha256": "9222b248f17fb4122cd4ad9650543ab86aab8b077b6965248c70ac2341bf2d5d",
+      "bytes": 242331,
+      "nodes": 1288,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dusk.json",
+      "markdown": "Objects对象清单/Dusk.md"
+    },
+    {
+      "level": "DuskGraveyard",
+      "path": "Levels/DuskGraveyard/Objects.level.bin",
+      "sha256": "128b30dcbe40b68e68fc25d195b68dc39f897259453c02612049ccd37a90ffb4",
+      "bytes": 424333,
+      "nodes": 1791,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DuskGraveyard.json",
+      "markdown": "Objects对象清单/DuskGraveyard.md"
+    },
+    {
+      "level": "DuskMid",
+      "path": "Levels/DuskMid/Objects.level.bin",
+      "sha256": "899ca33226dabd04afecfe7888750938ff4e460cb586603364e150591e9cbda5",
+      "bytes": 234288,
+      "nodes": 1268,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DuskMid.json",
+      "markdown": "Objects对象清单/DuskMid.md"
+    },
+    {
+      "level": "HubReveal",
+      "path": "Levels/HubReveal/Objects.level.bin",
+      "sha256": "4b32f12bbe4b246cde9ca1e4ba0982000ff108359865bb4340aba640e609861b",
+      "bytes": 289438,
+      "nodes": 1829,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/HubReveal.json",
+      "markdown": "Objects对象清单/HubReveal.md"
+    },
+    {
+      "level": "Night",
+      "path": "Levels/Night/Objects.level.bin",
+      "sha256": "6ce612c9efb82834d648de81251033b341a44f4d9374d8338d868575aab6a723",
+      "bytes": 499756,
+      "nodes": 3719,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Night.json",
+      "markdown": "Objects对象清单/Night.md"
+    },
+    {
+      "level": "NightEnd",
+      "path": "Levels/NightEnd/Objects.level.bin",
+      "sha256": "0dd8919c4f0ca58e9dc979e211b84dc990e012815929082b1004ed620af32422",
+      "bytes": 156479,
+      "nodes": 1090,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/NightEnd.json",
+      "markdown": "Objects对象清单/NightEnd.md"
+    },
+    {
+      "level": "NightEntrance",
+      "path": "Levels/NightEntrance/Objects.level.bin",
+      "sha256": "d7cc9c4e290e146b459a8ddcddd19be2287fd2cc8ac19f98b688003e05ebb354",
+      "bytes": 98001,
+      "nodes": 594,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/NightEntrance.json",
+      "markdown": "Objects对象清单/NightEntrance.md"
+    },
+    {
+      "level": "Prairie_Village",
+      "path": "Levels/Prairie_Village/Objects.level.bin",
+      "sha256": "4656296b54402016b59b894b4653fbdc71e106a21e0900294f73f2c7b7112385",
+      "bytes": 549989,
+      "nodes": 3724,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Village.json",
+      "markdown": "Objects对象清单/Prairie_Village.md"
+    },
+    {
+      "level": "Rain",
+      "path": "Levels/Rain/Objects.level.bin",
+      "sha256": "20093bccf3bb1ea0936cb993e66cef0187b40a5a411df3573eb28e4def4f75c6",
+      "bytes": 457732,
+      "nodes": 2079,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Rain.json",
+      "markdown": "Objects对象清单/Rain.md"
+    },
+    {
+      "level": "RainEnd",
+      "path": "Levels/RainEnd/Objects.level.bin",
+      "sha256": "247912ec955153e3df80c16a861eb872573502a285a17943518bdce448a8d5e3",
+      "bytes": 427926,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainEnd.json",
+      "markdown": "Objects对象清单/RainEnd.md"
+    },
+    {
+      "level": "RainForest",
+      "path": "Levels/RainForest/Objects.level.bin",
+      "sha256": "2e69b3314c70c61bd99435f4bb4418fba540f227c83670e1af3b5358c64c3b73",
+      "bytes": 271409,
+      "nodes": 1306,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainForest.json",
+      "markdown": "Objects对象清单/RainForest.md"
+    },
+    {
+      "level": "RainMid",
+      "path": "Levels/RainMid/Objects.level.bin",
+      "sha256": "139b219d9b71a2ab24418b1ec41f2ee8a2ebfdf4c5ea992c35348a758682ed23",
+      "bytes": 430825,
+      "nodes": 2457,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainMid.json",
+      "markdown": "Objects对象清单/RainMid.md"
+    },
+    {
+      "level": "SkyHub2",
+      "path": "Levels/SkyHub2/Objects.level.bin",
+      "sha256": "8b467f9b349d9d4ce0d038528c96e44dff30063149bf5bbf90232a56bb9dd36f",
+      "bytes": 475656,
+      "nodes": 2886,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SkyHub2.json",
+      "markdown": "Objects对象清单/SkyHub2.md"
+    },
+    {
+      "level": "Storm",
+      "path": "Levels/Storm/Objects.level.bin",
+      "sha256": "4be187f31f1ef86611831abeb45ed9c1deff5e925f3bae80a6be49af85fa52bd",
+      "bytes": 324849,
+      "nodes": 1954,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Storm.json",
+      "markdown": "Objects对象清单/Storm.md"
+    },
+    {
+      "level": "Sunset",
+      "path": "Levels/Sunset/Objects.level.bin",
+      "sha256": "8126f2db693502576075505797624e0b5e53dc064fe6af82e90f2261ca427f8a",
+      "bytes": 325410,
+      "nodes": 1899,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Sunset.json",
+      "markdown": "Objects对象清单/Sunset.md"
+    },
+    {
+      "level": "SunsetEnd",
+      "path": "Levels/SunsetEnd/Objects.level.bin",
+      "sha256": "9995ebfef7aa72982f6b95073a98a4ef01376bd8ac56c3b79b09729f97f43d6e",
+      "bytes": 352573,
+      "nodes": 1998,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SunsetEnd.json",
+      "markdown": "Objects对象清单/SunsetEnd.md"
+    },
+    {
+      "level": "SunsetEnd2",
+      "path": "Levels/SunsetEnd2/Objects.level.bin",
+      "sha256": "f76249413f9412f3db6d726aacf7425d5da546f8a9b88b9614c8a33fdb87e711",
+      "bytes": 209340,
+      "nodes": 975,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SunsetEnd2.json",
+      "markdown": "Objects对象清单/SunsetEnd2.md"
+    },
+    {
+      "level": "SunsetRace",
+      "path": "Levels/SunsetRace/Objects.level.bin",
+      "sha256": "2ebfc21451d30f976bcafafa0c42f409e322efeeb0f8403a4136899438e0b5dc",
+      "bytes": 333403,
+      "nodes": 1722,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SunsetRace.json",
+      "markdown": "Objects对象清单/SunsetRace.md"
+    }
+  ]
+}

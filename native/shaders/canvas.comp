@@ -1,0 +1,21 @@
+#version 450
+// Exact byte conversion of the existing float32 Tonemap output. Thresholds
+// are computed once from the CPU's double sRGB curve; GPU pow is not needed.
+layout(local_size_x=8,local_size_y=8) in;
+layout(set=0,binding=0) uniform sampler2D sourceImage;
+layout(std430,set=0,binding=1) readonly buffer Thresholds { uint threshold[255]; } lut;
+layout(std430,set=0,binding=2) buffer Pixels { uint invalid; uint rgba[]; } outputPixels;
+layout(push_constant) uniform Dimensions { uint width; uint height; } size;
+uint encode(float value) {
+    if(value<=0.0)return 0u;
+    if(value>=1.0)return 255u;
+    uint bits=floatBitsToUint(value),low=0u,high=255u;
+    while(low<high){uint middle=(low+high)/2u;if(bits>=lut.threshold[middle])low=middle+1u;else high=middle;}
+    return low;
+}
+void main(){
+    uvec2 p=gl_GlobalInvocationID.xy;if(p.x>=size.width||p.y>=size.height)return;
+    vec4 color=texelFetch(sourceImage,ivec2(p),0);
+    if(any(isnan(color))||any(isinf(color))){atomicOr(outputPixels.invalid,1u);color=vec4(0);}
+    outputPixels.rgba[p.y*size.width+p.x]=encode(color.r)|(encode(color.g)<<8u)|(encode(color.b)<<16u)|0xff000000u;
+}

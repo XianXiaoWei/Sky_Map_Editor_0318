@@ -1,0 +1,884 @@
+{
+  "className": "FragmentCollectActivity",
+  "functionGroup": "任务、先祖与场景机制",
+  "functionRole": "碎片数量与收集活动",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "FragmentCollectActivity 的原默认值、继承初始化及 5 个序列化字段变体；原注册字段 5 项。"
+    },
+    {
+      "name": "碎片数量与收集活动",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Clump（15 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "FragmentCollectActivity",
+    "category": "任务、先祖与场景机制",
+    "functionGroupId": "quests",
+    "functionRole": "碎片数量与收集活动",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "FragmentCollectActivity 的原默认值、继承初始化及 5 个序列化字段变体；原注册字段 5 项。"
+      },
+      {
+        "name": "碎片数量与收集活动",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Clump（15 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Clump",
+        "references": 15
+      }
+    ],
+    "rttiWorkingGroup": "系统和其余类型",
+    "role": "对象实例类型",
+    "instances": 15,
+    "nestedInstances": 0,
+    "referenceFields": 15,
+    "declaredLevels": 7,
+    "levels": [
+      {
+        "level": "CarryLand",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "CarryLand2",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Dawn",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_ButterflyFields",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Cave",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_NestAndKeeper",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Village",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "collectCountToSucceed",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "fragments",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "manualFailCamera",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "soulTraps",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "spawnType",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100c781c0",
+    "nativeRegisteredFields": [
+      {
+        "name": "fragments",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 24,
+        "registrationFunction": "0x100057120",
+        "propertyAddress": "0x100c77c70"
+      },
+      {
+        "name": "soulTraps",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 32,
+        "registrationFunction": "0x100057120",
+        "propertyAddress": "0x100c77cc0"
+      },
+      {
+        "name": "collectCountToSucceed",
+        "typeGetter": "__Z17GetMetaTypeByTypeIjERK8MetaTypev",
+        "nativeOffset": 40,
+        "registrationFunction": "0x100057120",
+        "propertyAddress": "0x100c77d10"
+      },
+      {
+        "name": "manualFailCamera",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP14CameraKeyFrameERK8MetaTypev",
+        "nativeOffset": 48,
+        "registrationFunction": "0x100057120",
+        "propertyAddress": "0x100c77d60"
+      },
+      {
+        "name": "spawnType",
+        "typeGetter": "__Z17GetMetaTypeByTypeI32FragmentCollectActivitySpawnTypeERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x100057120",
+        "propertyAddress": "0x100c77db0"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 5 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "CarryLand:n22",
+      "level": "CarryLand",
+      "nodeId": 22,
+      "name": "BstNode_3707306016",
+      "className": "FragmentCollectActivity",
+      "classIndex": 11,
+      "sourceOffset": 11898,
+      "sourceLength": 31,
+      "sourceSha256": "4068529368bc6c144680d16394dc3b468d55c501c665471c52f332aa1dbd91e1",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n22/p0",
+          "fieldName": "fragments",
+          "target": "CarryLand:n106",
+          "targetNodeId": 106,
+          "offset": 11921
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n27",
+      "level": "CarryLand",
+      "nodeId": 27,
+      "name": "BstNode_3707306045",
+      "className": "FragmentCollectActivity",
+      "classIndex": 11,
+      "sourceOffset": 12760,
+      "sourceLength": 31,
+      "sourceSha256": "03437177957a5905ee6956d685346e19309972a78d78ca4705a1721e4b91cbfe",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n27/p0",
+          "fieldName": "fragments",
+          "target": "CarryLand:n107",
+          "targetNodeId": 107,
+          "offset": 12783
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n66",
+      "level": "CarryLand",
+      "nodeId": 66,
+      "name": "BstNode_3707306004",
+      "className": "FragmentCollectActivity",
+      "classIndex": 11,
+      "sourceOffset": 18556,
+      "sourceLength": 31,
+      "sourceSha256": "e2051c50e16735a361451e576328f228578f5e988fbb270bb28b3593a885414e",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n66/p0",
+          "fieldName": "fragments",
+          "target": "CarryLand:n108",
+          "targetNodeId": 108,
+          "offset": 18579
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand2:n28",
+      "level": "CarryLand2",
+      "nodeId": 28,
+      "name": "BstNode_3707306045",
+      "className": "FragmentCollectActivity",
+      "classIndex": 9,
+      "sourceOffset": 17771,
+      "sourceLength": 39,
+      "sourceSha256": "13dc77ce0bcc51b9a1a2d5bef0ca50ba75e8bb44609f0401b41bb4652a21d9c2",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n28/p0",
+          "fieldName": "fragments",
+          "target": "CarryLand2:n241",
+          "targetNodeId": 241,
+          "offset": 17794
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand2:n71",
+      "level": "CarryLand2",
+      "nodeId": 71,
+      "name": "BstNode_3707306004",
+      "className": "FragmentCollectActivity",
+      "classIndex": 9,
+      "sourceOffset": 24560,
+      "sourceLength": 39,
+      "sourceSha256": "84f4a400f4b1c2cb36f063022496e5a89d3ebc18612fd5487658eaefc3f86234",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n71/p0",
+          "fieldName": "fragments",
+          "target": "CarryLand2:n242",
+          "targetNodeId": 242,
+          "offset": 24583
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand2:n148",
+      "level": "CarryLand2",
+      "nodeId": 148,
+      "name": "BstNode_3707306016",
+      "className": "FragmentCollectActivity",
+      "classIndex": 9,
+      "sourceOffset": 37032,
+      "sourceLength": 39,
+      "sourceSha256": "8aba446b3d9dcee1a29933c8ceafa2ffb5aa495b9ccaed7bc102ed93e6fc84dd",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n148/p0",
+          "fieldName": "fragments",
+          "target": "CarryLand2:n244",
+          "targetNodeId": 244,
+          "offset": 37055
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n876",
+      "level": "Dawn",
+      "nodeId": 876,
+      "name": "BstNode_3707305987",
+      "className": "FragmentCollectActivity",
+      "classIndex": 80,
+      "sourceOffset": 172064,
+      "sourceLength": 43,
+      "sourceSha256": "200bc35059fe8db7eebf8e02df11053e502e7a85928e99299531779a7f483a1a",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n876/p0",
+          "fieldName": "fragments",
+          "target": "Dawn:n2001",
+          "targetNodeId": 2001,
+          "offset": 172087
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n268",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 268,
+      "name": "BstNode_3122856005",
+      "className": "FragmentCollectActivity",
+      "classIndex": 35,
+      "sourceOffset": 83022,
+      "sourceLength": 43,
+      "sourceSha256": "1e794947428d0b1f09ded366253a48ea75a3f61d2b490c6556076c0c0d00db4a",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n268/p0",
+          "fieldName": "fragments",
+          "target": "Prairie_ButterflyFields:n772",
+          "targetNodeId": 772,
+          "offset": 83045
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n1180",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 1180,
+      "name": "BstNode_3707305987",
+      "className": "FragmentCollectActivity",
+      "classIndex": 35,
+      "sourceOffset": 255721,
+      "sourceLength": 43,
+      "sourceSha256": "8e69a6495f9b3fd98a654e5e79573392bcf304b94280f15e3d0c493793a23486",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1180/p0",
+          "fieldName": "fragments",
+          "target": "Prairie_ButterflyFields:n895",
+          "targetNodeId": 895,
+          "offset": 255744
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n423",
+      "level": "Prairie_Cave",
+      "nodeId": 423,
+      "name": "BstNode_3122856005",
+      "className": "FragmentCollectActivity",
+      "classIndex": 43,
+      "sourceOffset": 121276,
+      "sourceLength": 43,
+      "sourceSha256": "59138871c0ac7d60a98eee778093b4d5f3b2443f748dc5aa2bf6a4e5374d04e1",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n423/p0",
+          "fieldName": "fragments",
+          "target": "Prairie_Cave:n1192",
+          "targetNodeId": 1192,
+          "offset": 121299
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n1610",
+      "level": "Prairie_Cave",
+      "nodeId": 1610,
+      "name": "BstNode_3707305987",
+      "className": "FragmentCollectActivity",
+      "classIndex": 43,
+      "sourceOffset": 408671,
+      "sourceLength": 43,
+      "sourceSha256": "1e333ff1f95745627fb8b9d36a178ced7b1632b1da9f9c895b5b8a83fcb170ad",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1610/p0",
+          "fieldName": "fragments",
+          "target": "Prairie_Cave:n745",
+          "targetNodeId": 745,
+          "offset": 408694
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n28",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 28,
+      "name": "BstNode_3122856004",
+      "className": "FragmentCollectActivity",
+      "classIndex": 12,
+      "sourceOffset": 29027,
+      "sourceLength": 43,
+      "sourceSha256": "43ff9c4d8442cebbde851b64dc7bd8a329bb973061ee550e507f56aaaba3cb8b",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n28/p0",
+          "fieldName": "fragments",
+          "target": "Prairie_NestAndKeeper:n519",
+          "targetNodeId": 519,
+          "offset": 29050
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n201",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 201,
+      "name": "BstNode_34603010",
+      "className": "FragmentCollectActivity",
+      "classIndex": 12,
+      "sourceOffset": 69585,
+      "sourceLength": 41,
+      "sourceSha256": "cf18ad49206f85db720a6c926c8522af1e311b59abeacbc298da85f10af147a1",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n201/p0",
+          "fieldName": "fragments",
+          "target": "Prairie_NestAndKeeper:n366",
+          "targetNodeId": 366,
+          "offset": 69606
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n927",
+      "level": "Prairie_Village",
+      "nodeId": 927,
+      "name": "BstNode_1528234040",
+      "className": "FragmentCollectActivity",
+      "classIndex": 82,
+      "sourceOffset": 183060,
+      "sourceLength": 43,
+      "sourceSha256": "0a6ff6045e3371926b685b7c7b3a65ec26a4bbf93dbebc35a376eddfb4d0ac17",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n927/p0",
+          "fieldName": "fragments",
+          "target": "Prairie_Village:n3147",
+          "targetNodeId": 3147,
+          "offset": 183083
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1342",
+      "level": "Prairie_Village",
+      "nodeId": 1342,
+      "name": "BstNode_3707305987",
+      "className": "FragmentCollectActivity",
+      "classIndex": 82,
+      "sourceOffset": 246824,
+      "sourceLength": 43,
+      "sourceSha256": "d21b34fa355e3a810ef10e3aaef11279fac6044aca570f0a43d2087379af1151",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1342/p0",
+          "fieldName": "fragments",
+          "target": "Prairie_Village:n2080",
+          "targetNodeId": 2080,
+          "offset": 246847
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "CarryLand",
+      "path": "Levels/CarryLand/Objects.level.bin",
+      "sha256": "05b7ec8214f29c52ae93d689df8bbea764240612425e0524259f3b185907993c",
+      "bytes": 26338,
+      "nodes": 109,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/CarryLand.json",
+      "markdown": "Objects对象清单/CarryLand.md"
+    },
+    {
+      "level": "CarryLand2",
+      "path": "Levels/CarryLand2/Objects.level.bin",
+      "sha256": "e20b1611daee8e87548c3e2902ef3f5d7b5ce43f48c62c2510b08374c9ac55d2",
+      "bytes": 52809,
+      "nodes": 249,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/CarryLand2.json",
+      "markdown": "Objects对象清单/CarryLand2.md"
+    },
+    {
+      "level": "Dawn",
+      "path": "Levels/Dawn/Objects.level.bin",
+      "sha256": "16e26aafc7f9d120a548bf5d8bec04fbc18146bc8db531ef75144889b1ff197a",
+      "bytes": 504637,
+      "nodes": 3798,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dawn.json",
+      "markdown": "Objects对象清单/Dawn.md"
+    },
+    {
+      "level": "Prairie_ButterflyFields",
+      "path": "Levels/Prairie_ButterflyFields/Objects.level.bin",
+      "sha256": "29d8d61a082f3e3414ecfbb501b5f65499deb37ad4a1078ce2e9b88ac0d1e441",
+      "bytes": 297606,
+      "nodes": 1513,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_ButterflyFields.json",
+      "markdown": "Objects对象清单/Prairie_ButterflyFields.md"
+    },
+    {
+      "level": "Prairie_Cave",
+      "path": "Levels/Prairie_Cave/Objects.level.bin",
+      "sha256": "675a2256e24f8c4b16540cee6a5cd2b7647ff2fb495724a8bf596717ca39d944",
+      "bytes": 466340,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Cave.json",
+      "markdown": "Objects对象清单/Prairie_Cave.md"
+    },
+    {
+      "level": "Prairie_NestAndKeeper",
+      "path": "Levels/Prairie_NestAndKeeper/Objects.level.bin",
+      "sha256": "5eabe877e07c84e5f9270035aaab73fa20144c87f6e9136e5285dbaff3f85b7a",
+      "bytes": 239403,
+      "nodes": 1077,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_NestAndKeeper.json",
+      "markdown": "Objects对象清单/Prairie_NestAndKeeper.md"
+    },
+    {
+      "level": "Prairie_Village",
+      "path": "Levels/Prairie_Village/Objects.level.bin",
+      "sha256": "4656296b54402016b59b894b4653fbdc71e106a21e0900294f73f2c7b7112385",
+      "bytes": 549989,
+      "nodes": 3724,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Village.json",
+      "markdown": "Objects对象清单/Prairie_Village.md"
+    }
+  ]
+}

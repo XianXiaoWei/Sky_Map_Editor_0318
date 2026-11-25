@@ -1,0 +1,92 @@
+{
+  "passed": true,
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "functions": {
+    "Darkstone.Initialize": {
+      "address": "0x10027a7c0",
+      "end": "0x10027ae30",
+      "sha256": "a813d02243679e54eaf5c1b4fe5b6aa30a4e17f3a4784fb593152d0d0e19bcb3",
+      "evidence": "evidence/darkstone-initialization-Darkstone.Initialize.asm"
+    },
+    "Darkstone.BuildHierarchy": {
+      "address": "0x10027ae30",
+      "end": "0x10027b120",
+      "sha256": "a8eab921de71bc5deef63bd549941f013b668bef5a7a9b3a9bf8cb71b5b0b179",
+      "evidence": "evidence/darkstone-initialization-Darkstone.BuildHierarchy.asm"
+    },
+    "Darkstone.StaticInitialization": {
+      "address": "0x100280bc0",
+      "end": "0x100281a50",
+      "sha256": "635c5cd4ccddd8d17766c28b478fc92ba3bdf981d20796e493ecc3b9de2672d1",
+      "evidence": "evidence/darkstone-initialization-Darkstone.StaticInitialization.asm"
+    }
+  },
+  "colors": {
+    "diffuse": {
+      "address": "0x100ab5100",
+      "target": "0x100d2b490",
+      "load": "0x100280f35",
+      "store": "0x100280f3d",
+      "hex": "6f12833a6f12833a6f12833aa69b443b",
+      "values": [
+        0.0010000000474974513,
+        0.0010000000474974513,
+        0.0010000000474974513,
+        0.003000000026077032
+      ]
+    },
+    "burning": {
+      "address": "0x100ab5110",
+      "target": "0x100d2b4a0",
+      "load": "0x100280f45",
+      "store": "0x100280f4d",
+      "hex": "0ad7233ccdcc4c3dcdcc4c3d8fc2753c",
+      "values": [
+        0.009999999776482582,
+        0.05000000074505806,
+        0.05000000074505806,
+        0.014999999664723873
+      ]
+    },
+    "ancestorBurning": {
+      "address": "0x100ab5120",
+      "target": "0x100d2b4b0",
+      "load": "0x100280f55",
+      "store": "0x100280f5d",
+      "hex": "cdcc4c3d0ad7233d0ad7233c8fc2753c",
+      "values": [
+        0.05000000074505806,
+        0.03999999910593033,
+        0.009999999776482582,
+        0.014999999664723873
+      ]
+    },
+    "pulseLow": {
+      "address": "0x100ab5130",
+      "target": "0x100d2b4c0",
+      "load": "0x100280f65",
+      "store": "0x100280f6d",
+      "hex": "0ad723bc0ad723bc0ad723bc00000000",
+      "values": [
+        -0.009999999776482582,
+        -0.009999999776482582,
+        -0.009999999776482582,
+        0.0
+      ]
+    },
+    "pulseHigh": {
+      "address": "0x100ab5140",
+      "target": "0x100d2b4d0",
+      "load": "0x100280f75",
+      "store": "0x100280f7d",
+      "hex": "cdcc4c3d0ad7a33b000000008fc2753c",
+      "values": [
+        0.05000000074505806,
+        0.004999999888241291,
+        0.0,
+        0.014999999664723873
+      ]
+    }
+  },
+  "scope": "SHA-gated original function boundaries and direct static vec4 load/store instructions. Static registration as a whole is not executed by this extraction. Complete ordinary Initialize and geometry hierarchy have separate native oracle reports; burning Update/scene Model ownership/whole classes remain pending."
+}

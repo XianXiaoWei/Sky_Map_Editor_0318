@@ -1,0 +1,71 @@
+0x1007f5d90: push rbp
+0x1007f5d91: mov rbp, rsp
+0x1007f5d94: push r15
+0x1007f5d96: push r14
+0x1007f5d98: push r13
+0x1007f5d9a: push r12
+0x1007f5d9c: push rbx
+0x1007f5d9d: sub rsp, 0x28
+0x1007f5da1: mov dword ptr [rbp - 0x2c], r9d
+0x1007f5da5: mov r12, r8
+0x1007f5da8: mov r13, rcx
+0x1007f5dab: mov r14, rdx
+0x1007f5dae: mov r15, rsi
+0x1007f5db1: mov rbx, rdi
+0x1007f5db4: cmp byte ptr [rbx + 0x538], 1
+0x1007f5dbb: je 0x1007f5e2c
+0x1007f5dbd: lea rdi, [rbp - 0x50]
+0x1007f5dc1: call 0x1007c2530 ; 0x1007c2530
+0x1007f5dc6: call 0x1007d1100 ; 0x1007d1100
+0x1007f5dcb: mov rdi, r14
+0x1007f5dce: mov rsi, rax
+0x1007f5dd1: mov rdx, r13
+0x1007f5dd4: call 0x1007c4360 ; 0x1007c4360
+0x1007f5dd9: test rax, rax
+0x1007f5ddc: je 0x1007f5e4b
+0x1007f5dde: lea rsi, [rbp - 0x50]
+0x1007f5de2: mov rdi, rax
+0x1007f5de5: call 0x1007c2310 ; 0x1007c2310
+0x1007f5dea: mov rax, qword ptr [rbp - 0x50]
+0x1007f5dee: test rax, rax
+0x1007f5df1: je 0x1007f5df9
+0x1007f5df3: mov rdx, qword ptr [rax + 0x10]
+0x1007f5df7: jmp 0x1007f5dfb ; 0x1007f5dfb
+0x1007f5df9: xor edx, edx
+0x1007f5dfb: mov r8d, dword ptr [rbp - 0x2c]
+0x1007f5dff: mov rcx, r12
+0x1007f5e02: mov rsi, r15
+0x1007f5e05: add rdx, 0x100
+0x1007f5e0c: mov rdi, rbx
+0x1007f5e0f: call 0x1007f5e90 ; 0x1007f5e90
+0x1007f5e14: lea rdi, [rbp - 0x50]
+0x1007f5e18: call 0x1007c2570 ; 0x1007c2570
+0x1007f5e1d: add rsp, 0x28
+0x1007f5e21: pop rbx
+0x1007f5e22: pop r12
+0x1007f5e24: pop r13
+0x1007f5e26: pop r14
+0x1007f5e28: pop r15
+0x1007f5e2a: pop rbp
+0x1007f5e2b: ret 
+0x1007f5e2c: lea rdi, [rip + 0x3b1e3a] ; 0x100ba7c6d !m_isInitialized
+0x1007f5e33: lea rsi, [rip + 0x3b1caa] ; 0x100ba7ae4 Vertex.cpp
+0x1007f5e3a: mov edx, 0xc4
+0x1007f5e3f: mov ecx, 3
+0x1007f5e44: call 0x1007e5f70 ; 0x1007e5f70
+0x1007f5e49: ud2 
+0x1007f5e4b: lea rdi, [rip + 0x380bc2] ; 0x100b76a14 foundShader
+0x1007f5e52: lea rsi, [rip + 0x3b1c8b] ; 0x100ba7ae4 Vertex.cpp
+0x1007f5e59: lea r8, [rip + 0x380bc0] ; 0x100b76a20 No shader called %s
+0x1007f5e60: mov edx, 0xc8
+0x1007f5e65: mov ecx, 4
+0x1007f5e6a: xor eax, eax
+0x1007f5e6c: mov r9, r13
+0x1007f5e6f: call 0x1007e6030 ; 0x1007e6030
+0x1007f5e74: ud2 
+0x1007f5e76: mov rbx, rax
+0x1007f5e79: lea rdi, [rbp - 0x50]
+0x1007f5e7d: call 0x1007c2570 ; 0x1007c2570
+0x1007f5e82: mov rdi, rbx
+0x1007f5e85: call 0x100aa2192 ; 0x100aa2192 __Unwind_Resume
+0x1007f5e8a: nop word ptr [rax + rax]

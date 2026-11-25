@@ -1,0 +1,83 @@
+{
+  "passed": true,
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "wholeBodies": 5,
+  "nativeCases": 513,
+  "nativeComparedBytes": 71446536,
+  "nativeServiceCalls": 2151,
+  "reports": [
+    "docs/crab-behavior-oracle.json",
+    "docs/creature-flocking-oracle.json"
+  ],
+  "functionEvidence": "docs/crab-behavior-native.json",
+  "projectRegression": {
+    "command": "npm test",
+    "passed": true,
+    "tests": 586,
+    "log": "/root/sky-research/crab-behavior-regression.log"
+  },
+  "typecheck": {
+    "command": "npx tsc --noEmit",
+    "passed": true,
+    "log": "/root/sky-research/crab-behavior-typecheck.log"
+  },
+  "desktopBuild": {
+    "command": "npm run build:desktop",
+    "passed": true,
+    "log": "/root/sky-research/crab-behavior-desktop-build.log",
+    "artifactsSha256": {
+      "dist/main.cjs": "3e89b106b7aba08d03ba9972224ce3ffed192b8e6ed953678c42fbc1ff2048af",
+      "dist/app.js": "9a66f606b6d832454f17154bff93210f2600285a2d3fddfbe0f07b61f717bf37",
+      "dist/native/sky-vulkan": "4611c412915b2197ef0cbc793297b3e3d274bc78bf9d6b6c96f65fdf992c7a65"
+    }
+  },
+  "androidWebBuild": {
+    "command": "npm run build",
+    "passed": true,
+    "log": "/root/sky-research/crab-behavior-android-web-build.log",
+    "artifactsSha256": {
+      "android/app/src/main/assets/runtime/server.cjs": "fb404a214833de4c78557aff121f78df07908d219bce522f44ca26a5eab7fd44",
+      "android/app/src/main/assets/runtime/web/app.js": "592a1fd93a7512e724307a11e42e273f12464fd3046089b5b92918003532e3c8"
+    },
+    "scope": "Web/service bundle only; APK and Android native not rebuilt."
+  },
+  "classProgress": {
+    "command": "SKY_DATA=/root/sky-research/original-runtime-corpus npx tsx tools/objects-class-progress.ts",
+    "passed": true,
+    "levels": 33,
+    "totalNodes": 49824,
+    "nodeClasses": 280,
+    "declaredClasses": 283,
+    "nestedOnlyClasses": 0,
+    "declarationOnlyClasses": 3,
+    "references": 60016,
+    "brokenReferences": 0,
+    "coreSubchainVerifiedClasses": 47,
+    "completeRuntimeClasses": 0,
+    "completedCheckpoints": 877,
+    "totalCheckpoints": 2830,
+    "meanClassCheckpointPercent": 30.99,
+    "histogram": {
+      "20": 19,
+      "30": 217,
+      "40": 47
+    }
+  },
+  "sourceSha256": {
+    "src/core/crab-behavior-runtime.ts": "77b0357a5bd07a598058c73fec53e559d72eebcdb65d2b75f2096aacfaae0287",
+    "src/core/creature-motion-state-runtime.ts": "b620685595a7ea911dd74b3d771100726c8b5a9274875cd36c145434552a7460",
+    "src/core/creature-flocking-runtime.ts": "6637423cb5d11d04adb43d98bb72bc8d62c56074a2dcac2e31965e4463fd415c",
+    "tools/crab-behavior-cases.ts": "4a6a14cff5c97d3772971fc85bed92f4a22c0eff2c12c13518f42c89b2be8cd9",
+    "tools/crab-behavior-oracle.ts": "d89d53ab2cb0e377adfadb0c0b7b4005e2282a62b329f1b347fb627caa22b293",
+    "tools/creature-flocking-cases.ts": "6ab4c8e19c66ed983b41018b1f9f726e23f45b7a43334e2831f295afc258d399",
+    "tools/creature-flocking-oracle.ts": "2174f394fa5363b09f9b7fae6e68de5d0b4fae1d25e73bf6766ffd17dc527a6f",
+    "tools/native-crab-behavior-oracle.c": "74c39a277096efe4edc548ef5c11674f019b8fffa8f7f3e5f7fd2f7f4212e50e",
+    "tools/reverse-crab-behavior.py": "c2604e3761e477859fd84450825565c6993e572c19f8b2229fed61c6cf83555a",
+    "tests/crab-behavior-runtime.test.ts": "6e17a1ec6a9b4511d3fb59c5dcb1950799b2cd9f1cbb9ae4ee096ed80cc9f260",
+    "tests/creature-flocking-runtime.test.ts": "9dc59102e6c4243a498d773aa5004611f1960f7c418b1712fbf9641cb00e7ca0",
+    "tests/fixtures/crab-behavior-native.json.gz": "303f4f93f4695d23731a3ff26cb580408ef9ffa2c04fd6a391d8ac47739465e4",
+    "tests/fixtures/creature-flocking-native.json.gz": "fb6307526ff6fb1c071efea43768083f36929c13a5757862032152a47737c61f",
+    "tools/objects-class-progress-spec.json": "29786d1a2693ffc6f435c2526f3f5198e94fd07a85af8d53d5f0a8ec4a310a7e"
+  },
+  "scope": "Five independently verified scoring/motion subchains. Query, metadata, Avatar motion, generic OBB/caller scratch weight, Marker transforms, external asinf and dual-NaN arithmetic remain explicit dependencies. Full CrabAi.SelectState, CrabAi.Update/Crab.Update, real collision and Model/animation owner, autonomous BirdV2/BirdFlock/DarkCreature behavior and complete species acceptance remain pending. No new automatic viewport animation or complete-class claim. Windows ZIP and Android APK not repackaged."
+}

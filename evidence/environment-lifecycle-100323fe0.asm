@@ -1,0 +1,31 @@
+0x100323fe0: push rbp
+0x100323fe1: mov rbp, rsp
+0x100323fe4: push rbx
+0x100323fe5: push rax
+0x100323fe6: mov rbx, rdi
+0x100323fe9: call 0x1007945e0 ; 0x1007945e0
+0x100323fee: mov rdx, rbx
+0x100323ff1: sub rdx, -0x80
+0x100323ff5: lea rsi, [rip + 0x85cef5] ; 0x100b80ef1 u_windScroll0
+0x100323ffc: mov ecx, 3
+0x100324001: mov rdi, rax
+0x100324004: call 0x100793f20 ; 0x100793f20
+0x100324009: call 0x1007945e0 ; 0x1007945e0
+0x10032400e: lea rdx, [rbx + 0x90]
+0x100324015: lea rsi, [rip + 0x85cee3] ; 0x100b80eff u_windScroll1
+0x10032401c: mov ecx, 3
+0x100324021: mov rdi, rax
+0x100324024: call 0x100793f20 ; 0x100793f20
+0x100324029: call 0x1007945e0 ; 0x1007945e0
+0x10032402e: lea rdx, [rbx + 0xa0]
+0x100324035: lea rsi, [rip + 0x85ced1] ; 0x100b80f0d u_windScroll2
+0x10032403c: mov ecx, 3
+0x100324041: mov rdi, rax
+0x100324044: call 0x100793f20 ; 0x100793f20
+0x100324049: mov dword ptr [rbx + 0x48c0], 0
+0x100324053: mov dword ptr [rbx + 0x62d0], 0
+0x10032405d: add rsp, 8
+0x100324061: pop rbx
+0x100324062: pop rbp
+0x100324063: ret 
+0x100324064: nop word ptr cs:[rax + rax]

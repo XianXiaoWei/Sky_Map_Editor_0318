@@ -1,0 +1,376 @@
+{
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "functions": {
+    "env-initialize": "0x100319840",
+    "env-level-load": "0x1003198d0",
+    "env-register-vars": "0x10031b220",
+    "env-register-default": "0x10031b2e0",
+    "env-register-node": "0x10031acb0",
+    "env-register-hull": "0x10031b6e0",
+    "env-register-level-vars": "0x100376470",
+    "env-default-event": "0x10031d710"
+  },
+  "groups": [
+    {
+      "className": "AmbienceSun",
+      "nodeRegistrationIndex": 0,
+      "offsets": {
+        "EnvNode": 512,
+        "SetEnvDefault": 400,
+        "SetEnvHull": 448
+      },
+      "fields": [
+        {
+          "name": "moonPhase",
+          "nativeOffset": 52,
+          "tag": 6,
+          "bytes": 4
+        },
+        {
+          "name": "sunAngleXZ",
+          "nativeOffset": 32,
+          "tag": 6,
+          "bytes": 4
+        },
+        {
+          "name": "sunAngleY",
+          "nativeOffset": 36,
+          "tag": 6,
+          "bytes": 4
+        },
+        {
+          "name": "sunColor",
+          "nativeOffset": 16,
+          "tag": 10,
+          "bytes": 16
+        },
+        {
+          "name": "sunInt",
+          "nativeOffset": 44,
+          "tag": 6,
+          "bytes": 4
+        },
+        {
+          "name": "sunSize",
+          "nativeOffset": 40,
+          "tag": 6,
+          "bytes": 4
+        },
+        {
+          "name": "sunToMoon",
+          "nativeOffset": 48,
+          "tag": 6,
+          "bytes": 4
+        }
+      ]
+    },
+    {
+      "className": "AmbienceSky",
+      "nodeRegistrationIndex": 1,
+      "offsets": {
+        "EnvNode": 576,
+        "SetEnvDefault": 464,
+        "SetEnvHull": 512
+      },
+      "fields": [
+        {
+          "name": "atmosphereDensity",
+          "nativeOffset": 96,
+          "tag": 6,
+          "bytes": 4
+        },
+        {
+          "name": "cheapFogEnabled",
+          "nativeOffset": 192,
+          "tag": 11,
+          "bytes": 1
+        },
+        {
+          "name": "cheapFogTintBot",
+          "nativeOffset": 176,
+          "tag": 10,
+          "bytes": 16
+        },
+        {
+          "name": "cheapFogTintMidBot",
+          "nativeOffset": 160,
+          "tag": 10,
+          "bytes": 16
+        },
+        {
+          "name": "cheapFogTintMidMid",
+          "nativeOffset": 144,
+          "tag": 10,
+          "bytes": 16
+        },
+        {
+          "name": "cheapFogTintMidTop",
+          "nativeOffset": 128,
+          "tag": 10,
+          "bytes": 16
+        },
+        {
+          "name": "cheapFogTintTop",
+          "nativeOffset": 112,
+          "tag": 10,
+          "bytes": 16
+        },
+        {
+          "name": "tintBot",
+          "nativeOffset": 80,
+          "tag": 10,
+          "bytes": 16
+        },
+        {
+          "name": "tintMidBot",
+          "nativeOffset": 64,
+          "tag": 10,
+          "bytes": 16
+        },
+        {
+          "name": "tintMidMid",
+          "nativeOffset": 48,
+          "tag": 10,
+          "bytes": 16
+        },
+        {
+          "name": "tintMidTop",
+          "nativeOffset": 32,
+          "tag": 10,
+          "bytes": 16
+        },
+        {
+          "name": "tintTop",
+          "nativeOffset": 16,
+          "tag": 10,
+          "bytes": 16
+        }
+      ]
+    },
+    {
+      "className": "AmbienceFog",
+      "nodeRegistrationIndex": 2,
+      "offsets": {
+        "EnvNode": 784,
+        "SetEnvDefault": 672,
+        "SetEnvHull": 720
+      },
+      "fields": [
+        {
+          "name": "cheapFogFar",
+          "nativeOffset": 20,
+          "tag": 6,
+          "bytes": 4
+        },
+        {
+          "name": "cheapFogHeight",
+          "nativeOffset": 32,
+          "tag": 6,
+          "bytes": 4
+        },
+        {
+          "name": "cheapFogHeightDensity",
+          "nativeOffset": 36,
+          "tag": 6,
+          "bytes": 4
+        },
+        {
+          "name": "cheapFogLumReduction",
+          "nativeOffset": 24,
+          "tag": 6,
+          "bytes": 4
+        },
+        {
+          "name": "cheapFogNear",
+          "nativeOffset": 16,
+          "tag": 6,
+          "bytes": 4
+        },
+        {
+          "name": "drawDistance",
+          "nativeOffset": 12,
+          "tag": 6,
+          "bytes": 4
+        },
+        {
+          "name": "fogDensity",
+          "nativeOffset": 4,
+          "tag": 6,
+          "bytes": 4
+        },
+        {
+          "name": "fogHeight",
+          "nativeOffset": 8,
+          "tag": 6,
+          "bytes": 4
+        }
+      ]
+    },
+    {
+      "className": "AmbienceBloom",
+      "nodeRegistrationIndex": 3,
+      "offsets": {
+        "EnvNode": 832,
+        "SetEnvDefault": 720,
+        "SetEnvHull": 768
+      },
+      "fields": [
+        {
+          "name": "intensity",
+          "nativeOffset": 32,
+          "tag": 6,
+          "bytes": 4
+        },
+        {
+          "name": "overbright",
+          "nativeOffset": 36,
+          "tag": 6,
+          "bytes": 4
+        },
+        {
+          "name": "tint",
+          "nativeOffset": 16,
+          "tag": 8,
+          "bytes": 16
+        }
+      ]
+    },
+    {
+      "className": "AmbienceToneMap",
+      "nodeRegistrationIndex": 4,
+      "offsets": {
+        "EnvNode": 880,
+        "SetEnvDefault": 768,
+        "SetEnvHull": 816
+      },
+      "fields": [
+        {
+          "name": "exposure",
+          "nativeOffset": 4,
+          "tag": 6,
+          "bytes": 4
+        }
+      ]
+    },
+    {
+      "className": "AmbiencePointLight",
+      "nodeRegistrationIndex": 5,
+      "offsets": {
+        "EnvNode": 896,
+        "SetEnvDefault": 784,
+        "SetEnvHull": 832
+      },
+      "fields": [
+        {
+          "name": "color",
+          "nativeOffset": 16,
+          "tag": 8,
+          "bytes": 16
+        },
+        {
+          "name": "intensity",
+          "nativeOffset": 32,
+          "tag": 6,
+          "bytes": 4
+        }
+      ]
+    },
+    {
+      "className": "CloudEnvParams",
+      "nodeRegistrationIndex": 6,
+      "offsets": {
+        "EnvNode": 944,
+        "SetEnvDefault": 832,
+        "SetEnvHull": 880
+      },
+      "fields": [
+        {
+          "name": "undulationScale",
+          "nativeOffset": 4,
+          "tag": 6,
+          "bytes": 4
+        }
+      ]
+    },
+    {
+      "className": "FogVolumeParams",
+      "nodeRegistrationIndex": 7,
+      "offsets": {
+        "EnvNode": 952,
+        "SetEnvDefault": 840,
+        "SetEnvHull": 888
+      },
+      "fields": [
+        {
+          "name": "additive",
+          "nativeOffset": 14,
+          "tag": 11,
+          "bytes": 1
+        },
+        {
+          "name": "enabled",
+          "nativeOffset": 12,
+          "tag": 11,
+          "bytes": 1
+        },
+        {
+          "name": "ignoreClouds",
+          "nativeOffset": 15,
+          "tag": 11,
+          "bytes": 1
+        },
+        {
+          "name": "inverted",
+          "nativeOffset": 13,
+          "tag": 11,
+          "bytes": 1
+        },
+        {
+          "name": "resolution",
+          "nativeOffset": 8,
+          "tag": 5,
+          "bytes": 4
+        },
+        {
+          "name": "visibility",
+          "nativeOffset": 4,
+          "tag": 6,
+          "bytes": 4
+        }
+      ]
+    }
+  ],
+  "limits": {
+    "variables": 8,
+    "layers": 4,
+    "hullsPerVariablePerLayer": 96,
+    "hullStride": 56
+  },
+  "entry": {
+    "varsPointer": 0,
+    "clumpPointer": 8,
+    "nodePointer": 16,
+    "falloff": 24,
+    "fadeInTime": 28,
+    "fadeOutTime": 32,
+    "duration": 36,
+    "remaining": 40,
+    "alpha": 44,
+    "wasEnabled": 48,
+    "initialRemaining": "enabled ? float32(duration + epsilon) : epsilon",
+    "initialAlpha": "duration == 0 ? 1 : 0",
+    "initialWasEnabled": "node.enabled"
+  },
+  "epsilon": 9.999999747378752e-05,
+  "maxFrameDelta": 0.26600000262260437,
+  "frameDelta": "clamp(float32(delta * float32(timeScale * optionalDebugScale)), epsilon, maxFrameDelta)",
+  "updateOrder": "registered variable order; layers 0..3; append order within each layer; fade all entries before mixing all variables",
+  "defaultRule": "registered pointer is copied field-by-field with lerp weight 0; absent default retains previous output",
+  "levelLoad": "clears defaults and per-layer counts, closes registration, then registers queued nodes in ascending queue index",
+  "unresolved": [
+    "global initialization order of CloudEnvParams relative to the seven Level registrations",
+    "complete object construction (transforms/class IDs and non-serialized state)",
+    "queued node order versus serialized object order",
+    "Clump hulls and event dispatch"
+  ]
+}

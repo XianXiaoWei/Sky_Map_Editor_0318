@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "scope": "Actual Vulkan texture sharing, copy-on-write descriptor patches, mip sampling and scene reinstall. Analytical fixtures; original game image parity is not claimed.",
+  "checks": [
+    "Shared large texture with original mip levels and independent transforms",
+    "Updating one instance preserves another instance using the shared texture",
+    "Reinstalling a scene reuses the unchanged cached image",
+    "Shared patch bytes update all requested instances",
+    "Patched shared descriptors preserve original cached texels for future maps"
+  ],
+  "device": {
+    "engine": "Sky Native Vulkan",
+    "backend": "Vulkan",
+    "device": "llvmpipe (LLVM 19.1.7, 128 bits)",
+    "apiVersion": 4210993,
+    "deviceType": 4,
+    "nativeSurface": false,
+    "shaderFloat16": true,
+    "samplerAnisotropyPolicy": "llvmpipe-trilinear",
+    "maxSamplerAnisotropy": 16
+  },
+  "bytesSavedPerDuplicate": 344064
+}

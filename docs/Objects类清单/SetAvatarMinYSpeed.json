@@ -1,0 +1,643 @@
+{
+  "className": "SetAvatarMinYSpeed",
+  "functionGroup": "碰撞、受力与移动限制",
+  "functionRole": "玩家最小竖直速度与起飞",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "SetAvatarMinYSpeed 的原默认值、继承初始化及 4 个序列化字段变体；原注册字段 3 项。"
+    },
+    {
+      "name": "玩家最小竖直速度与起飞",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "当前无非空序列化依赖；原虚方法、资源或全局调用仍需恢复。"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "SetAvatarMinYSpeed",
+    "category": "碰撞、受力与移动限制",
+    "functionGroupId": "physics",
+    "functionRole": "玩家最小竖直速度与起飞",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "SetAvatarMinYSpeed 的原默认值、继承初始化及 4 个序列化字段变体；原注册字段 3 项。"
+      },
+      {
+        "name": "玩家最小竖直速度与起飞",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "当前无非空序列化依赖；原虚方法、资源或全局调用仍需恢复。"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [],
+    "rttiWorkingGroup": "交互、事件与任务",
+    "role": "对象实例类型",
+    "instances": 13,
+    "nestedInstances": 0,
+    "referenceFields": 0,
+    "declaredLevels": 4,
+    "levels": [
+      {
+        "level": "CandleSpaceEnd",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Night",
+        "nodes": 10,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_NestAndKeeper",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "StormEnd",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "fireOnce",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "forceTakeoff",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "minYSpeed",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100cfdaf0",
+    "nativeRegisteredFields": [
+      {
+        "name": "minYSpeed",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x1006529a0",
+        "propertyAddress": "0x100cfc5d0"
+      },
+      {
+        "name": "fireOnce",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 60,
+        "registrationFunction": "0x1006529a0",
+        "propertyAddress": "0x100cfc620"
+      },
+      {
+        "name": "forceTakeoff",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 61,
+        "registrationFunction": "0x1006529a0",
+        "propertyAddress": "0x100cfc670"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 3 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "CandleSpaceEnd:n552",
+      "level": "CandleSpaceEnd",
+      "nodeId": 552,
+      "name": "BstNode_2529558579",
+      "className": "SetAvatarMinYSpeed",
+      "classIndex": 48,
+      "sourceOffset": 112778,
+      "sourceLength": 30,
+      "sourceSha256": "845b1b0059e2c2cce1df3a562caf92603468897918df4915e40fc5db697a22e5",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n663",
+      "level": "Night",
+      "nodeId": 663,
+      "name": "BstNode_1255",
+      "className": "SetAvatarMinYSpeed",
+      "classIndex": 51,
+      "sourceOffset": 121390,
+      "sourceLength": 24,
+      "sourceSha256": "db53e14c1a7ca527ffc23095bbe02ff832f09e11ed809a8bfeace6f7707bdc03",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n867",
+      "level": "Night",
+      "nodeId": 867,
+      "name": "BstNode_1282",
+      "className": "SetAvatarMinYSpeed",
+      "classIndex": 51,
+      "sourceOffset": 153277,
+      "sourceLength": 24,
+      "sourceSha256": "43f328ce363b0bcd976bdf1f998642ff6d6deeb0563c0c8d3429a86141779450",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1661",
+      "level": "Night",
+      "nodeId": 1661,
+      "name": "BstNode_1623",
+      "className": "SetAvatarMinYSpeed",
+      "classIndex": 51,
+      "sourceOffset": 260779,
+      "sourceLength": 24,
+      "sourceSha256": "31678626b5906c61e5179bbf502e5c24349fea6fe04b7f5d68eab766cd52d755",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1965",
+      "level": "Night",
+      "nodeId": 1965,
+      "name": "BstNode_442",
+      "className": "SetAvatarMinYSpeed",
+      "classIndex": 51,
+      "sourceOffset": 305399,
+      "sourceLength": 23,
+      "sourceSha256": "748094843444f1168c86b079dcaca3878d4c5f60b9bd7d77ce8d13f0433ecabc",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1967",
+      "level": "Night",
+      "nodeId": 1967,
+      "name": "BstNode_1368",
+      "className": "SetAvatarMinYSpeed",
+      "classIndex": 51,
+      "sourceOffset": 305806,
+      "sourceLength": 24,
+      "sourceSha256": "c904694e5071677612709cd0506f47c9666c09d31ea9f00e65f51632e0fc27ea",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2312",
+      "level": "Night",
+      "nodeId": 2312,
+      "name": "BstNode_1409",
+      "className": "SetAvatarMinYSpeed",
+      "classIndex": 51,
+      "sourceOffset": 363685,
+      "sourceLength": 24,
+      "sourceSha256": "608ef77dc4f28d0a1252dae32736731f59f9e5c15cffd17e5a9f30dce2f7e82e",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2395",
+      "level": "Night",
+      "nodeId": 2395,
+      "name": "BstNode_1390",
+      "className": "SetAvatarMinYSpeed",
+      "classIndex": 51,
+      "sourceOffset": 375740,
+      "sourceLength": 24,
+      "sourceSha256": "6bcfdf04785e3c8f12dc3a3227b9bb91a1d84068a8f16ef23388237de83ae667",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2706",
+      "level": "Night",
+      "nodeId": 2706,
+      "name": "BstNode_1244",
+      "className": "SetAvatarMinYSpeed",
+      "classIndex": 51,
+      "sourceOffset": 421717,
+      "sourceLength": 24,
+      "sourceSha256": "f32d81ea07315022f299c9997d752732e466db65e9e2e984c9caec98ad8d379f",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2707",
+      "level": "Night",
+      "nodeId": 2707,
+      "name": "BstNode_1304",
+      "className": "SetAvatarMinYSpeed",
+      "classIndex": 51,
+      "sourceOffset": 421741,
+      "sourceLength": 24,
+      "sourceSha256": "6238e4ed0871b0028830d7f7c5042888aee4bdc9e01ab5ca2aaac97b2c2b0199",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2708",
+      "level": "Night",
+      "nodeId": 2708,
+      "name": "BstNode_1642",
+      "className": "SetAvatarMinYSpeed",
+      "classIndex": 51,
+      "sourceOffset": 421765,
+      "sourceLength": 24,
+      "sourceSha256": "0811cccdc8ff4753b9fd7cffdbe04bc751ef66439b6dc4e3e0bf990d7c54c5e4",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n537",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 537,
+      "name": "BstNode_34603123",
+      "className": "SetAvatarMinYSpeed",
+      "classIndex": 60,
+      "sourceOffset": 136694,
+      "sourceLength": 28,
+      "sourceSha256": "b99369d9fbf73fc2afe9724c56d5e247794ba11ec9daeeaaa37afe04f4f4ab9e",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n629",
+      "level": "StormEnd",
+      "nodeId": 629,
+      "name": "BstNode_3156082781",
+      "className": "SetAvatarMinYSpeed",
+      "classIndex": 55,
+      "sourceOffset": 130179,
+      "sourceLength": 30,
+      "sourceSha256": "ca93f4b3979f3637e4c9f8861cb476ba731e6a9313a26a144dff2b67f2eb115d",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "CandleSpaceEnd",
+      "path": "Levels/CandleSpaceEnd/Objects.level.bin",
+      "sha256": "d42c3e1f85fb9dcc75d903911a1e91e6e061d017ae47f809caf4375505071352",
+      "bytes": 131707,
+      "nodes": 852,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/CandleSpaceEnd.json",
+      "markdown": "Objects对象清单/CandleSpaceEnd.md"
+    },
+    {
+      "level": "Night",
+      "path": "Levels/Night/Objects.level.bin",
+      "sha256": "6ce612c9efb82834d648de81251033b341a44f4d9374d8338d868575aab6a723",
+      "bytes": 499756,
+      "nodes": 3719,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Night.json",
+      "markdown": "Objects对象清单/Night.md"
+    },
+    {
+      "level": "Prairie_NestAndKeeper",
+      "path": "Levels/Prairie_NestAndKeeper/Objects.level.bin",
+      "sha256": "5eabe877e07c84e5f9270035aaab73fa20144c87f6e9136e5285dbaff3f85b7a",
+      "bytes": 239403,
+      "nodes": 1077,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_NestAndKeeper.json",
+      "markdown": "Objects对象清单/Prairie_NestAndKeeper.md"
+    },
+    {
+      "level": "StormEnd",
+      "path": "Levels/StormEnd/Objects.level.bin",
+      "sha256": "a9c13b592198ee01ab2922a0c7901f4516ae172d56a22d9b7f806ff7464c9162",
+      "bytes": 224465,
+      "nodes": 1243,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/StormEnd.json",
+      "markdown": "Objects对象清单/StormEnd.md"
+    }
+  ]
+}

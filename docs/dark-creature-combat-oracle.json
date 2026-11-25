@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "functions": {
+    "DarkCreature.Chase": {
+      "start": "0x1002703d0",
+      "end": "0x100270960",
+      "wholeFunction": true,
+      "codeSha256": "3109d2d43aa158376463dec86e5ab5e8d27116bc664ec296b02dda9f102a3fd2",
+      "assembly": "evidence/darkcreature-chase.asm",
+      "instructions": 241,
+      "trampolinePrefixBytes": 15
+    },
+    "DarkCreature.Attack": {
+      "start": "0x100270960",
+      "end": "0x100270f10",
+      "wholeFunction": true,
+      "codeSha256": "f301f146c9866283898246e78957a87df2a1df91f49e2c737c193bd2dfc5c57d",
+      "assembly": "evidence/darkcreature-attack.asm",
+      "instructions": 267,
+      "trampolinePrefixBytes": 17
+    },
+    "DarkCreature.Hit": {
+      "start": "0x100270fd0",
+      "end": "0x100271400",
+      "wholeFunction": true,
+      "codeSha256": "c41f892710c7b8ddfb471eb95e48c0a517367968df954134368b8660ba301a51",
+      "assembly": "evidence/darkcreature-hit.asm",
+      "instructions": 212,
+      "trampolinePrefixBytes": 17
+    },
+    "AvatarBarn.Index": {
+      "start": "0x1001031d0",
+      "end": "0x1001031f0",
+      "wholeFunction": true,
+      "codeSha256": "71180c9e4dc5d0b0bddf2c960c7c42ea1356113d377e6ccb823438234e82bc64",
+      "assembly": "evidence/avatarbarn-index.asm",
+      "instructions": 8,
+      "trampolinePrefixBytes": 14
+    },
+    "Avatar.Active": {
+      "start": "0x1000fe050",
+      "end": "0x1000fe060",
+      "wholeFunction": true,
+      "codeSha256": "828141372ccd7cc85121164d7de874d651dd0fa10a9877b429c89f91b1711253",
+      "assembly": "evidence/avatar-active.asm",
+      "instructions": 6,
+      "trampolinePrefixBytes": 16
+    }
+  },
+  "cases": 585,
+  "comparedCases": 585,
+  "comparedBytes": 315046180,
+  "serviceCalls": 13024,
+  "nativeArithmeticProbes": 16,
+  "scope": "Whole original Chase, Attack and Hit functions, composed with actual raw Motion.Seek, indexed AvatarBarn and Avatar active reads, and the previously verified partial outer Update motion phase. The remainder of outer Update and actual scene, Bird hit, animation, audio, interaction and particle/resource owners remain pending. Hit up-vector private W and mutable global particle palette/template are explicitly caller-owned. Native expf is recorded/replayed; no JavaScript/macOS libm equivalence claim. Complete caller arena and ordered services compare horizontal chasing, windup/lock-on/animation, strict timer transitions, predicted attack motion, repeated sound version checks, actual hit consumers, fixed AvatarBarn slots and 64-bird cap, local-avatar side effects and particle/audio creation, callbacks and consecutive partial outer Update frames. Native sinf/expf/fmodf inputs and outputs are recorded/replayed explicitly; no JS/macOS libm equivalence claim.",
+  "failures": []
+}

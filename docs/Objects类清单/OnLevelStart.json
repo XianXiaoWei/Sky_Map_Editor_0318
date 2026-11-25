@@ -1,0 +1,1264 @@
+{
+  "className": "OnLevelStart",
+  "functionGroup": "地图加载、出生与检查点",
+  "functionRole": "地图启动事件",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "OnLevelStart 的原默认值、继承初始化及 4 个序列化字段变体；原注册字段 3 项。"
+    },
+    {
+      "name": "地图启动事件",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Clump（21 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "OnLevelStart",
+    "category": "地图加载、出生与检查点",
+    "functionGroupId": "levels",
+    "functionRole": "地图启动事件",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "OnLevelStart 的原默认值、继承初始化及 4 个序列化字段变体；原注册字段 3 项。"
+      },
+      {
+        "name": "地图启动事件",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Clump（21 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Clump",
+        "references": 21
+      }
+    ],
+    "rttiWorkingGroup": "场景与路径基础",
+    "role": "对象实例类型",
+    "instances": 21,
+    "nestedInstances": 0,
+    "referenceFields": 21,
+    "declaredLevels": 20,
+    "levels": [
+      {
+        "level": "CandleSpaceEnd",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "CarryLand",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "CarryLand2",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "CarryLand3",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Dawn",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DayHubCave",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Dusk",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DuskGraveyard",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DuskMid",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "HubReveal",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Night",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "NightEnd",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "NightEntrance",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Village",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainEnd",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainForest",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SkyHub2",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Sunset",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SunsetEnd",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SunsetEnd2",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "events",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "onlyOnWorldLoad",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "skipOnWorldLoad",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100cd58d0",
+    "nativeRegisteredFields": [
+      {
+        "name": "events",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x1004de830",
+        "propertyAddress": "0x100cd5370"
+      },
+      {
+        "name": "skipOnWorldLoad",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 64,
+        "registrationFunction": "0x1004de830",
+        "propertyAddress": "0x100cd53c0"
+      },
+      {
+        "name": "onlyOnWorldLoad",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 65,
+        "registrationFunction": "0x1004de830",
+        "propertyAddress": "0x100cd5410"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 3 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "CandleSpaceEnd:n194",
+      "level": "CandleSpaceEnd",
+      "nodeId": 194,
+      "name": "BstNode_3156082692",
+      "className": "OnLevelStart",
+      "classIndex": 32,
+      "sourceOffset": 49156,
+      "sourceLength": 30,
+      "sourceSha256": "6032d3b5e021585ff75d68d621e928fff8cd9650eda66ac5bfc39a8063b5ec3c",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n194/p2",
+          "fieldName": "events",
+          "target": "CandleSpaceEnd:n705",
+          "targetNodeId": 705,
+          "offset": 49181
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n34",
+      "level": "CarryLand",
+      "nodeId": 34,
+      "name": "BstNode_10",
+      "className": "OnLevelStart",
+      "classIndex": 13,
+      "sourceOffset": 13407,
+      "sourceLength": 22,
+      "sourceSha256": "49e88a25de5aa5584c9e98b4023802fd84e04c330a3ca4796dc7131b4c9897c7",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n34/p2",
+          "fieldName": "events",
+          "target": "CarryLand:n95",
+          "targetNodeId": 95,
+          "offset": 13424
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand2:n38",
+      "level": "CarryLand2",
+      "nodeId": 38,
+      "name": "BstNode_10",
+      "className": "OnLevelStart",
+      "classIndex": 13,
+      "sourceOffset": 18847,
+      "sourceLength": 22,
+      "sourceSha256": "058d328309ca078c9113e438a145ad59e38dfe4460af14dc48ceb18f56f76303",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n38/p2",
+          "fieldName": "events",
+          "target": "CarryLand2:n51",
+          "targetNodeId": 51,
+          "offset": 18864
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand3:n31",
+      "level": "CarryLand3",
+      "nodeId": 31,
+      "name": "BstNode_10",
+      "className": "OnLevelStart",
+      "classIndex": 12,
+      "sourceOffset": 9791,
+      "sourceLength": 22,
+      "sourceSha256": "1172165ca77d2433d10b8bb4a70d93fa0eb253fe256b2a8310ce8eb492018f47",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n31/p2",
+          "fieldName": "events",
+          "target": "CarryLand3:n29",
+          "targetNodeId": 29,
+          "offset": 9808
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n626",
+      "level": "Dawn",
+      "nodeId": 626,
+      "name": "BstNode_1234",
+      "className": "OnLevelStart",
+      "classIndex": 69,
+      "sourceOffset": 129518,
+      "sourceLength": 24,
+      "sourceSha256": "4e07b8e408fdb5c3f8bd3ff99c79b31cefb8da7cdc3b9ef329ef18a8b0d00d15",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n626/p2",
+          "fieldName": "events",
+          "target": "Dawn:n3141",
+          "targetNodeId": 3141,
+          "offset": 129537
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2894",
+      "level": "Dawn",
+      "nodeId": 2894,
+      "name": "BstNode_1842806870",
+      "className": "OnLevelStart",
+      "classIndex": 69,
+      "sourceOffset": 475216,
+      "sourceLength": 30,
+      "sourceSha256": "23d047bab5cea85835c263447f024d2f79d3e9648ff1da4289a761cb857d626e",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2894/p2",
+          "fieldName": "events",
+          "target": "Dawn:n3780",
+          "targetNodeId": 3780,
+          "offset": 475241
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayHubCave:n765",
+      "level": "DayHubCave",
+      "nodeId": 765,
+      "name": "BstNode_10",
+      "className": "OnLevelStart",
+      "classIndex": 63,
+      "sourceOffset": 166645,
+      "sourceLength": 22,
+      "sourceSha256": "5a52a0cb68155b5230a166e59dde47f80e625d71ec0aa0028e979d77989e2c34",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n765/p2",
+          "fieldName": "events",
+          "target": "DayHubCave:n458",
+          "targetNodeId": 458,
+          "offset": 166662
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n1013",
+      "level": "Dusk",
+      "nodeId": 1013,
+      "name": "BstNode_10",
+      "className": "OnLevelStart",
+      "classIndex": 72,
+      "sourceOffset": 207283,
+      "sourceLength": 22,
+      "sourceSha256": "f795fe6a5367c754b3b20686d1b6f44dc0aba7269fbfe9bf12801677a8e8be31",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1013/p2",
+          "fieldName": "events",
+          "target": "Dusk:n739",
+          "targetNodeId": 739,
+          "offset": 207300
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n1516",
+      "level": "DuskGraveyard",
+      "nodeId": 1516,
+      "name": "BstNode_10",
+      "className": "OnLevelStart",
+      "classIndex": 69,
+      "sourceOffset": 375786,
+      "sourceLength": 22,
+      "sourceSha256": "74c746d34ab438847d2c1b626db6e303ec4757497a71532cdf1f8308bc9b12fe",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1516/p2",
+          "fieldName": "events",
+          "target": "DuskGraveyard:n1218",
+          "targetNodeId": 1218,
+          "offset": 375803
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n915",
+      "level": "DuskMid",
+      "nodeId": 915,
+      "name": "BstNode_10",
+      "className": "OnLevelStart",
+      "classIndex": 62,
+      "sourceOffset": 195822,
+      "sourceLength": 22,
+      "sourceSha256": "3e4d3c97a08456153cb7038402e94752f6c211cdd05dfd1096d631ffec715a30",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n915/p2",
+          "fieldName": "events",
+          "target": "DuskMid:n623",
+          "targetNodeId": 623,
+          "offset": 195839
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n109",
+      "level": "HubReveal",
+      "nodeId": 109,
+      "name": "BstNode_1626",
+      "className": "OnLevelStart",
+      "classIndex": 36,
+      "sourceOffset": 48086,
+      "sourceLength": 24,
+      "sourceSha256": "f25ec7dc70419b84b3c14fcac67dec61c1657b2b06c66e0c9bf00d1bdced7d23",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n109/p2",
+          "fieldName": "events",
+          "target": "HubReveal:n1074",
+          "targetNodeId": 1074,
+          "offset": 48105
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2911",
+      "level": "Night",
+      "nodeId": 2911,
+      "name": "BstNode_10",
+      "className": "OnLevelStart",
+      "classIndex": 77,
+      "sourceOffset": 452337,
+      "sourceLength": 22,
+      "sourceSha256": "bfea03b4452b34035f383355b6dee8cbe8cdc7d3aa546ac247ac0817fd547155",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2911/p2",
+          "fieldName": "events",
+          "target": "Night:n2428",
+          "targetNodeId": 2428,
+          "offset": 452354
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "NightEnd:n606",
+      "level": "NightEnd",
+      "nodeId": 606,
+      "name": "BstNode_34603095",
+      "className": "OnLevelStart",
+      "classIndex": 54,
+      "sourceOffset": 122482,
+      "sourceLength": 28,
+      "sourceSha256": "f05fc401b1d1e255712b49f71242787964bdcd653363aec954f3067905bc1e7e",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n606/p2",
+          "fieldName": "events",
+          "target": "NightEnd:n590",
+          "targetNodeId": 590,
+          "offset": 122505
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "NightEntrance:n361",
+      "level": "NightEntrance",
+      "nodeId": 361,
+      "name": "BstNode_10",
+      "className": "OnLevelStart",
+      "classIndex": 33,
+      "sourceOffset": 69831,
+      "sourceLength": 22,
+      "sourceSha256": "5724b23b12370232ad3c61005cd4fb1d9f4205a566835ac234fb43585d939f9d",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n361/p2",
+          "fieldName": "events",
+          "target": "NightEntrance:n206",
+          "targetNodeId": 206,
+          "offset": 69848
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2839",
+      "level": "Prairie_Village",
+      "nodeId": 2839,
+      "name": "BstNode_1611",
+      "className": "OnLevelStart",
+      "classIndex": 101,
+      "sourceOffset": 482035,
+      "sourceLength": 24,
+      "sourceSha256": "ae8267219c346e2b092801191e5cc9e1efef25c829f18c503224ab8cca0ee782",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2839/p2",
+          "fieldName": "events",
+          "target": "Prairie_Village:n3676",
+          "targetNodeId": 3676,
+          "offset": 482054
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n700",
+      "level": "RainEnd",
+      "nodeId": 700,
+      "name": "BstNode_69",
+      "className": "OnLevelStart",
+      "classIndex": 62,
+      "sourceOffset": 198418,
+      "sourceLength": 22,
+      "sourceSha256": "26628fb81eccfb45c63c662f1f00fe630037e1787c38778e637666b014fe6865",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n700/p2",
+          "fieldName": "events",
+          "target": "RainEnd:n880",
+          "targetNodeId": 880,
+          "offset": 198435
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n1098",
+      "level": "RainForest",
+      "nodeId": 1098,
+      "name": "BstNode_10",
+      "className": "OnLevelStart",
+      "classIndex": 63,
+      "sourceOffset": 247050,
+      "sourceLength": 22,
+      "sourceSha256": "e5df1e82d0c1af8c4854193c19ac20c1b935d9a19b99fb311984a4b0b55a765f",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1098/p2",
+          "fieldName": "events",
+          "target": "RainForest:n871",
+          "targetNodeId": 871,
+          "offset": 247067
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n2251",
+      "level": "SkyHub2",
+      "nodeId": 2251,
+      "name": "BstNode_10",
+      "className": "OnLevelStart",
+      "classIndex": 120,
+      "sourceOffset": 424168,
+      "sourceLength": 22,
+      "sourceSha256": "72c7161935d25c3079802a05ceacf310642c01a2e66d96c4a537bf9c51a09210",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2251/p2",
+          "fieldName": "events",
+          "target": "SkyHub2:n1951",
+          "targetNodeId": 1951,
+          "offset": 424185
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n895",
+      "level": "Sunset",
+      "nodeId": 895,
+      "name": "BstNode_1049166103",
+      "className": "OnLevelStart",
+      "classIndex": 60,
+      "sourceOffset": 183054,
+      "sourceLength": 30,
+      "sourceSha256": "fc8da0c2378d9be7f3ee1a77a670ad1bd973c2cc62ff16a44664ecba09097a9c",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n895/p2",
+          "fieldName": "events",
+          "target": "Sunset:n1822",
+          "targetNodeId": 1822,
+          "offset": 183079
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n1182",
+      "level": "SunsetEnd",
+      "nodeId": 1182,
+      "name": "BstNode_11",
+      "className": "OnLevelStart",
+      "classIndex": 74,
+      "sourceOffset": 221363,
+      "sourceLength": 22,
+      "sourceSha256": "697d5a6287fde9a61a5a8f2832499d0c1f47391d78f4820a906971b5e51d25bd",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1182/p2",
+          "fieldName": "events",
+          "target": "SunsetEnd:n1951",
+          "targetNodeId": 1951,
+          "offset": 221380
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd2:n188",
+      "level": "SunsetEnd2",
+      "nodeId": 188,
+      "name": "BstNode_11",
+      "className": "OnLevelStart",
+      "classIndex": 37,
+      "sourceOffset": 59400,
+      "sourceLength": 22,
+      "sourceSha256": "f5ec8e402e509f5ff81ddaabcb5af60df243cdfad0ae2ae7cbc289ee46b4cf0c",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n188/p2",
+          "fieldName": "events",
+          "target": "SunsetEnd2:n219",
+          "targetNodeId": 219,
+          "offset": 59417
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "CandleSpaceEnd",
+      "path": "Levels/CandleSpaceEnd/Objects.level.bin",
+      "sha256": "d42c3e1f85fb9dcc75d903911a1e91e6e061d017ae47f809caf4375505071352",
+      "bytes": 131707,
+      "nodes": 852,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/CandleSpaceEnd.json",
+      "markdown": "Objects对象清单/CandleSpaceEnd.md"
+    },
+    {
+      "level": "CarryLand",
+      "path": "Levels/CarryLand/Objects.level.bin",
+      "sha256": "05b7ec8214f29c52ae93d689df8bbea764240612425e0524259f3b185907993c",
+      "bytes": 26338,
+      "nodes": 109,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/CarryLand.json",
+      "markdown": "Objects对象清单/CarryLand.md"
+    },
+    {
+      "level": "CarryLand2",
+      "path": "Levels/CarryLand2/Objects.level.bin",
+      "sha256": "e20b1611daee8e87548c3e2902ef3f5d7b5ce43f48c62c2510b08374c9ac55d2",
+      "bytes": 52809,
+      "nodes": 249,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/CarryLand2.json",
+      "markdown": "Objects对象清单/CarryLand2.md"
+    },
+    {
+      "level": "CarryLand3",
+      "path": "Levels/CarryLand3/Objects.level.bin",
+      "sha256": "2a40e8794b6ca7c88d4b6b89a025ca6e9885e11f81c00bae76ca9798b64a674e",
+      "bytes": 11217,
+      "nodes": 40,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/CarryLand3.json",
+      "markdown": "Objects对象清单/CarryLand3.md"
+    },
+    {
+      "level": "Dawn",
+      "path": "Levels/Dawn/Objects.level.bin",
+      "sha256": "16e26aafc7f9d120a548bf5d8bec04fbc18146bc8db531ef75144889b1ff197a",
+      "bytes": 504637,
+      "nodes": 3798,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dawn.json",
+      "markdown": "Objects对象清单/Dawn.md"
+    },
+    {
+      "level": "DayHubCave",
+      "path": "Levels/DayHubCave/Objects.level.bin",
+      "sha256": "e4da920cc9f0b1569f14ad1a6d1990db7155dc07ebfc3214c4e385a367872457",
+      "bytes": 202745,
+      "nodes": 1128,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DayHubCave.json",
+      "markdown": "Objects对象清单/DayHubCave.md"
+    },
+    {
+      "level": "Dusk",
+      "path": "Levels/Dusk/Objects.level.bin",
+      "sha256": "9222b248f17fb4122cd4ad9650543ab86aab8b077b6965248c70ac2341bf2d5d",
+      "bytes": 242331,
+      "nodes": 1288,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dusk.json",
+      "markdown": "Objects对象清单/Dusk.md"
+    },
+    {
+      "level": "DuskGraveyard",
+      "path": "Levels/DuskGraveyard/Objects.level.bin",
+      "sha256": "128b30dcbe40b68e68fc25d195b68dc39f897259453c02612049ccd37a90ffb4",
+      "bytes": 424333,
+      "nodes": 1791,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DuskGraveyard.json",
+      "markdown": "Objects对象清单/DuskGraveyard.md"
+    },
+    {
+      "level": "DuskMid",
+      "path": "Levels/DuskMid/Objects.level.bin",
+      "sha256": "899ca33226dabd04afecfe7888750938ff4e460cb586603364e150591e9cbda5",
+      "bytes": 234288,
+      "nodes": 1268,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DuskMid.json",
+      "markdown": "Objects对象清单/DuskMid.md"
+    },
+    {
+      "level": "HubReveal",
+      "path": "Levels/HubReveal/Objects.level.bin",
+      "sha256": "4b32f12bbe4b246cde9ca1e4ba0982000ff108359865bb4340aba640e609861b",
+      "bytes": 289438,
+      "nodes": 1829,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/HubReveal.json",
+      "markdown": "Objects对象清单/HubReveal.md"
+    },
+    {
+      "level": "Night",
+      "path": "Levels/Night/Objects.level.bin",
+      "sha256": "6ce612c9efb82834d648de81251033b341a44f4d9374d8338d868575aab6a723",
+      "bytes": 499756,
+      "nodes": 3719,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Night.json",
+      "markdown": "Objects对象清单/Night.md"
+    },
+    {
+      "level": "NightEnd",
+      "path": "Levels/NightEnd/Objects.level.bin",
+      "sha256": "0dd8919c4f0ca58e9dc979e211b84dc990e012815929082b1004ed620af32422",
+      "bytes": 156479,
+      "nodes": 1090,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/NightEnd.json",
+      "markdown": "Objects对象清单/NightEnd.md"
+    },
+    {
+      "level": "NightEntrance",
+      "path": "Levels/NightEntrance/Objects.level.bin",
+      "sha256": "d7cc9c4e290e146b459a8ddcddd19be2287fd2cc8ac19f98b688003e05ebb354",
+      "bytes": 98001,
+      "nodes": 594,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/NightEntrance.json",
+      "markdown": "Objects对象清单/NightEntrance.md"
+    },
+    {
+      "level": "Prairie_Village",
+      "path": "Levels/Prairie_Village/Objects.level.bin",
+      "sha256": "4656296b54402016b59b894b4653fbdc71e106a21e0900294f73f2c7b7112385",
+      "bytes": 549989,
+      "nodes": 3724,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Village.json",
+      "markdown": "Objects对象清单/Prairie_Village.md"
+    },
+    {
+      "level": "RainEnd",
+      "path": "Levels/RainEnd/Objects.level.bin",
+      "sha256": "247912ec955153e3df80c16a861eb872573502a285a17943518bdce448a8d5e3",
+      "bytes": 427926,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainEnd.json",
+      "markdown": "Objects对象清单/RainEnd.md"
+    },
+    {
+      "level": "RainForest",
+      "path": "Levels/RainForest/Objects.level.bin",
+      "sha256": "2e69b3314c70c61bd99435f4bb4418fba540f227c83670e1af3b5358c64c3b73",
+      "bytes": 271409,
+      "nodes": 1306,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainForest.json",
+      "markdown": "Objects对象清单/RainForest.md"
+    },
+    {
+      "level": "SkyHub2",
+      "path": "Levels/SkyHub2/Objects.level.bin",
+      "sha256": "8b467f9b349d9d4ce0d038528c96e44dff30063149bf5bbf90232a56bb9dd36f",
+      "bytes": 475656,
+      "nodes": 2886,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SkyHub2.json",
+      "markdown": "Objects对象清单/SkyHub2.md"
+    },
+    {
+      "level": "Sunset",
+      "path": "Levels/Sunset/Objects.level.bin",
+      "sha256": "8126f2db693502576075505797624e0b5e53dc064fe6af82e90f2261ca427f8a",
+      "bytes": 325410,
+      "nodes": 1899,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Sunset.json",
+      "markdown": "Objects对象清单/Sunset.md"
+    },
+    {
+      "level": "SunsetEnd",
+      "path": "Levels/SunsetEnd/Objects.level.bin",
+      "sha256": "9995ebfef7aa72982f6b95073a98a4ef01376bd8ac56c3b79b09729f97f43d6e",
+      "bytes": 352573,
+      "nodes": 1998,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SunsetEnd.json",
+      "markdown": "Objects对象清单/SunsetEnd.md"
+    },
+    {
+      "level": "SunsetEnd2",
+      "path": "Levels/SunsetEnd2/Objects.level.bin",
+      "sha256": "f76249413f9412f3db6d726aacf7425d5da546f8a9b88b9614c8a33fdb87e711",
+      "bytes": 209340,
+      "nodes": 975,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SunsetEnd2.json",
+      "markdown": "Objects对象清单/SunsetEnd2.md"
+    }
+  ]
+}

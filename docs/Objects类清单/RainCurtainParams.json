@@ -1,0 +1,535 @@
+{
+  "className": "RainCurtainParams",
+  "functionGroup": "水、雾与天气",
+  "functionRole": "雨幕标记、雨滴密度和尺寸",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "RainCurtainParams 的原默认值、继承初始化及 4 个序列化字段变体；原注册字段 4 项。"
+    },
+    {
+      "name": "雨幕标记、雨滴密度和尺寸",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Clump（6 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "RainCurtainParams",
+    "category": "水、雾与天气",
+    "functionGroupId": "weather",
+    "functionRole": "雨幕标记、雨滴密度和尺寸",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "RainCurtainParams 的原默认值、继承初始化及 4 个序列化字段变体；原注册字段 4 项。"
+      },
+      {
+        "name": "雨幕标记、雨滴密度和尺寸",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Clump（6 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Clump",
+        "references": 6
+      }
+    ],
+    "rttiWorkingGroup": "系统和其余类型",
+    "role": "对象实例类型",
+    "instances": 6,
+    "nestedInstances": 0,
+    "referenceFields": 6,
+    "declaredLevels": 4,
+    "levels": [
+      {
+        "level": "Rain",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainEnd",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainForest",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainMid",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "dropDensity",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "dropRate",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "dropSize",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "markers",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100cecda0",
+    "nativeRegisteredFields": [
+      {
+        "name": "markers",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 8,
+        "registrationFunction": "0x10056b430",
+        "propertyAddress": "0x100cec7e8"
+      },
+      {
+        "name": "dropDensity",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 16,
+        "registrationFunction": "0x10056b430",
+        "propertyAddress": "0x100cec838"
+      },
+      {
+        "name": "dropSize",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 20,
+        "registrationFunction": "0x10056b430",
+        "propertyAddress": "0x100cec888"
+      },
+      {
+        "name": "dropRate",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 24,
+        "registrationFunction": "0x10056b430",
+        "propertyAddress": "0x100cec8d8"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 4 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "Rain:n225",
+      "level": "Rain",
+      "nodeId": 225,
+      "name": "BstNode_2345992431",
+      "className": "RainCurtainParams",
+      "classIndex": 33,
+      "sourceOffset": 79364,
+      "sourceLength": 39,
+      "sourceSha256": "f0e0b86fb60c5483852bc8e956eb2fa23aa9377bf323d0901dcad24c501421ff",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n225/p0",
+          "fieldName": "markers",
+          "target": "Rain:n1165",
+          "targetNodeId": 1165,
+          "offset": 79387
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n1472",
+      "level": "Rain",
+      "nodeId": 1472,
+      "name": "BstNode_151",
+      "className": "RainCurtainParams",
+      "classIndex": 33,
+      "sourceOffset": 356983,
+      "sourceLength": 32,
+      "sourceSha256": "73d9369b1fa423b4eaa672c430836f7d44d56e578052f5a1f69b4f2a55b12c7d",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1472/p0",
+          "fieldName": "markers",
+          "target": "Rain:n1001",
+          "targetNodeId": 1001,
+          "offset": 356999
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n1232",
+      "level": "RainEnd",
+      "nodeId": 1232,
+      "name": "BstNode_190",
+      "className": "RainCurtainParams",
+      "classIndex": 76,
+      "sourceOffset": 324124,
+      "sourceLength": 32,
+      "sourceSha256": "653281b2a82c5f8cece4bfd7cd95aa1904a760bd22d1d6738d9f64fd2903ebde",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1232/p0",
+          "fieldName": "markers",
+          "target": "RainEnd:n16",
+          "targetNodeId": 16,
+          "offset": 324140
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n653",
+      "level": "RainForest",
+      "nodeId": 653,
+      "name": "BstNode_151",
+      "className": "RainCurtainParams",
+      "classIndex": 54,
+      "sourceOffset": 150310,
+      "sourceLength": 32,
+      "sourceSha256": "56ed6aa2f6862e97212f6f87b91efdf276c214de610b3feade30783d3b013ef4",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n653/p0",
+          "fieldName": "markers",
+          "target": "RainForest:n782",
+          "targetNodeId": 782,
+          "offset": 150326
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n255",
+      "level": "RainMid",
+      "nodeId": 255,
+      "name": "BstNode_1735",
+      "className": "RainCurtainParams",
+      "classIndex": 39,
+      "sourceOffset": 75825,
+      "sourceLength": 33,
+      "sourceSha256": "b9cb320c27d6097fc02aa3057349241e674d90fad0e65b65d0294f4bf26fb93f",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n255/p0",
+          "fieldName": "markers",
+          "target": "RainMid:n182",
+          "targetNodeId": 182,
+          "offset": 75842
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n1299",
+      "level": "RainMid",
+      "nodeId": 1299,
+      "name": "BstNode_2345992603",
+      "className": "RainCurtainParams",
+      "classIndex": 39,
+      "sourceOffset": 263601,
+      "sourceLength": 39,
+      "sourceSha256": "77843a931270283b570b5889c28ecef4f208905d68f92d76f6ab7e5bcd1c3333",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1299/p0",
+          "fieldName": "markers",
+          "target": "RainMid:n1067",
+          "targetNodeId": 1067,
+          "offset": 263624
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "Rain",
+      "path": "Levels/Rain/Objects.level.bin",
+      "sha256": "20093bccf3bb1ea0936cb993e66cef0187b40a5a411df3573eb28e4def4f75c6",
+      "bytes": 457732,
+      "nodes": 2079,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Rain.json",
+      "markdown": "Objects对象清单/Rain.md"
+    },
+    {
+      "level": "RainEnd",
+      "path": "Levels/RainEnd/Objects.level.bin",
+      "sha256": "247912ec955153e3df80c16a861eb872573502a285a17943518bdce448a8d5e3",
+      "bytes": 427926,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainEnd.json",
+      "markdown": "Objects对象清单/RainEnd.md"
+    },
+    {
+      "level": "RainForest",
+      "path": "Levels/RainForest/Objects.level.bin",
+      "sha256": "2e69b3314c70c61bd99435f4bb4418fba540f227c83670e1af3b5358c64c3b73",
+      "bytes": 271409,
+      "nodes": 1306,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainForest.json",
+      "markdown": "Objects对象清单/RainForest.md"
+    },
+    {
+      "level": "RainMid",
+      "path": "Levels/RainMid/Objects.level.bin",
+      "sha256": "139b219d9b71a2ab24418b1ec41f2ee8a2ebfdf4c5ea992c35348a758682ed23",
+      "bytes": 430825,
+      "nodes": 2457,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainMid.json",
+      "markdown": "Objects对象清单/RainMid.md"
+    }
+  ]
+}

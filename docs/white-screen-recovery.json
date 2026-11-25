@@ -1,0 +1,126 @@
+{
+  "passed": true,
+  "version": "0.3.5",
+  "scope": "Presentation compatibility recovery, same original-shader full Vulkan preview; no original-game image-parity or Windows hardware claim.",
+  "userReport": "Every map viewport is white",
+  "userDeviceRootCauseConfirmed": false,
+  "windowsRuntimeTested": false,
+  "defaultPresentation": "opaque BrowserWindow + Canvas2D",
+  "nativePresentationOptIn": "SKY_WINDOWS_NATIVE=1 / --sky-native-surface",
+  "recoveryOverride": "SKY_WINDOWS_CANVAS=1 / --sky-canvas",
+  "electronGpuRecoveryFlag": "--disable-gpu (independent Vulkan renderer remains enabled)",
+  "fullEffectsOnly": true,
+  "intermediateHdrPipeReadbacks": 0,
+  "finalDisplayPipeReadbacksPerFrame": 1,
+  "frameReplyBytes": "32 + width * height * 4",
+  "tests": {
+    "total": 474,
+    "passed": 474,
+    "failed": 0,
+    "typecheckPassed": true
+  },
+  "nativeBuilds": {
+    "linux": true,
+    "windowsAMD64PE": true,
+    "windowsHostSha256": "274b57af57cc44717eddcbd4c4d1190ffd7d7273a93a75faedc0a838efb219cc"
+  },
+  "vulkanValidation": {
+    "layer": "VK_LAYER_KHRONOS_validation",
+    "synchronizationValidationEnabled": true,
+    "maps": [
+      "WorldEmpty",
+      "Dawn",
+      "SkyHub2"
+    ],
+    "frames": 18,
+    "referencePixelDifferences": 0,
+    "warningOrErrorLogBytes": 0,
+    "logs": [
+      "/root/sky-research/white-screen-validation-before-23805.log",
+      "/root/sky-research/white-screen-validation-before-24023.log",
+      "/root/sky-research/white-screen-validation-before-24229.log",
+      "/root/sky-research/white-screen-validation-before-24253.log",
+      "/root/sky-research/white-screen-validation-scene-26274.log",
+      "/root/sky-research/white-screen-validation-scene-26330.log",
+      "/root/sky-research/white-screen-validation-scene-28964.log",
+      "/root/sky-research/white-screen-validation-scene-29080.log",
+      "/root/sky-research/white-screen-validation-scene-29525.log",
+      "/root/sky-research/white-screen-validation-scene-29553.log"
+    ]
+  },
+  "canvas": {
+    "report": "docs/white-screen-canvas-check.json",
+    "maps": [
+      {
+        "level": "Dawn",
+        "loadMs": 20699.196555000002,
+        "frames": 4,
+        "navigationStatusFps": 1.5131731181045922,
+        "canvas": {
+          "min": 13,
+          "max": 254,
+          "whiteFraction": 0.018355018587360595,
+          "opaqueFraction": 1,
+          "opacity": "1"
+        }
+      },
+      {
+        "level": "SkyHub2",
+        "loadMs": 20290.590303999998,
+        "frames": 10,
+        "navigationStatusFps": 3.823379388317479,
+        "canvas": {
+          "min": 0,
+          "max": 254,
+          "whiteFraction": 0.2834804832713755,
+          "opaqueFraction": 1,
+          "opacity": "1"
+        }
+      },
+      {
+        "level": "Dawn",
+        "loadMs": 11519.815359999993,
+        "frames": 7,
+        "navigationStatusFps": 2.7847989443807504,
+        "canvas": {
+          "min": 12,
+          "max": 254,
+          "whiteFraction": 0.024570167286245354,
+          "opaqueFraction": 1,
+          "opacity": "1"
+        }
+      }
+    ],
+    "frames": 48,
+    "finalPixelBytes": 22920960,
+    "intermediateReadbacks": 0,
+    "window": {
+      "count": 1,
+      "background": "#0C121B"
+    },
+    "modelEdit": {
+      "nodeId": 7,
+      "translation": 3,
+      "responseMs": 2450.2821859999967,
+      "poseRequests": 1,
+      "sceneReuploads": 0,
+      "materialReuploads": 0,
+      "geometryUnchanged": true
+    },
+    "resizeAndDpi": {
+      "ratio": 1.5,
+      "physicalWidth": 1125,
+      "renderWidth": 320,
+      "renderHeight": 302
+    },
+    "errors": [],
+    "sourceHashesUnchanged": true
+  },
+  "originalExecutableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "originalReferenceModified": false,
+  "limitations": [
+    "User Windows GPU and all-white root cause not directly accessible",
+    "Final RGBA readback adds display overhead",
+    "Original exposure/probe/shadow/water/bloom and complete original-game visual parity remain incomplete"
+  ]
+}

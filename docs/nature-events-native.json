@@ -1,0 +1,106 @@
+{
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "functions": {
+    "Critter_Shout.OnEnabled": {
+      "address": "0x100266350",
+      "end": "0x100266480",
+      "sha256": "c2d55e5f5f00ebe9e0ba3dadf45a40623b58eb152bdfff4982f5b49b7dd1c7d6",
+      "evidence": "evidence/nature-event-Critter_Shout.OnEnabled.asm"
+    },
+    "Critter_SendMsg.Update": {
+      "address": "0x100264fd0",
+      "end": "0x100265160",
+      "sha256": "dbc6cc19d71d2d9be9f04aa21896c24661a13c44e97900515378ac52511e38f0",
+      "evidence": "evidence/nature-event-Critter_SendMsg.Update.asm"
+    },
+    "SetDarkCreaturesMusicFloat.Update": {
+      "address": "0x1002744a0",
+      "end": "0x100274750",
+      "sha256": "ca8f74b4c376a98387be2b24ac23dd96a35f0bb4b59650c506e1278b6fec5496",
+      "evidence": "evidence/nature-event-SetDarkCreaturesMusicFloat.Update.asm"
+    },
+    "BirdV2ParamSwap.OnEnabled": {
+      "address": "0x1001aa160",
+      "end": "0x1001aa1b0",
+      "sha256": "7497d9a1dcea6b5e90cff08951b3cc95aaa859b752455b6ff3dac867f73c56a4",
+      "evidence": "evidence/nature-event-BirdV2ParamSwap.OnEnabled.asm"
+    },
+    "SetBirdGuidesEnabled.OnEnabled": {
+      "address": "0x1001a99e0",
+      "end": "0x1001a9af0",
+      "sha256": "ce1ebe950305207a1dcc617953dd41815e82fdf71496f42cfd68198038645350",
+      "evidence": "evidence/nature-event-SetBirdGuidesEnabled.OnEnabled.asm"
+    },
+    "SetDarkCreaturesNetworked.OnEnabled": {
+      "address": "0x100274080",
+      "end": "0x100274190",
+      "sha256": "ff83f86ced4d080f6ab4996865d137cb9190c01c5a935d8e5fb3e177deecf8fa",
+      "evidence": "evidence/nature-event-SetDarkCreaturesNetworked.OnEnabled.asm"
+    },
+    "BirdV2AiSwap.OnEnabled": {
+      "address": "0x1001a9dc0",
+      "end": "0x1001a9df0",
+      "sha256": "567ee80f8cd060019e4c6a55074ea82efaf8e487ca64d2db36c588b6aa480b09",
+      "evidence": "evidence/nature-event-BirdV2AiSwap.OnEnabled.asm"
+    },
+    "BirdV2AiSwap.Update": {
+      "address": "0x1001a9df0",
+      "end": "0x1001a9e90",
+      "sha256": "b331530bf4f61c7884475ec05aa9865eb8b7acf0642407517e0f6b4afc23f1d8",
+      "evidence": "evidence/nature-event-BirdV2AiSwap.Update.asm"
+    },
+    "AwakenDarkCreatures.Update": {
+      "address": "0x100273c50",
+      "end": "0x100273da0",
+      "sha256": "bde3f498a90762a28b8417bd0bf930303270fa6d6272ce48a1cdb4c3d50745d8",
+      "evidence": "evidence/nature-event-AwakenDarkCreatures.Update.asm"
+    },
+    "SetFlame.OnEnabled": {
+      "address": "0x100343270",
+      "end": "0x100343280",
+      "sha256": "8e00809684cc19911932ba13b2a266226b7481c129aebe78070d3448829ddedb",
+      "evidence": "evidence/nature-event-SetFlame.OnEnabled.asm"
+    },
+    "SetFlame.Update": {
+      "address": "0x100343280",
+      "end": "0x1003436d0",
+      "sha256": "9b625b156edbfcc771aaa69da26f4da096eaf9b01ab5586d3acdfeb54d713299",
+      "evidence": "evidence/nature-event-SetFlame.Update.asm"
+    },
+    "OnFlame.Update": {
+      "address": "0x100342910",
+      "end": "0x100342dd0",
+      "sha256": "f087bf35bde061ad3b3612b9765a64c07e08159f0f7a37b678390df8156d55fa",
+      "evidence": "evidence/nature-event-OnFlame.Update.asm"
+    },
+    "SetFlameOccIntensity.Update": {
+      "address": "0x1003439a0",
+      "end": "0x1003439c0",
+      "sha256": "383155c58c5166a604d059164b3675969a3673914bfd833c278caf544901b843",
+      "evidence": "evidence/nature-event-SetFlameOccIntensity.Update.asm"
+    }
+  },
+  "services": {
+    "Meta.SetEnabled": {
+      "address": "0x1004d1f60",
+      "evidence": "evidence/nature-event-Meta.SetEnabled.asm",
+      "scope": "Explicit injected service in event oracle; full original implementation/integration is separate"
+    },
+    "Flame.Extinguish": {
+      "address": "0x10033a780",
+      "evidence": "evidence/nature-event-Flame.Extinguish.asm",
+      "scope": "Explicit injected service in event oracle; full original implementation/integration is separate"
+    }
+  },
+  "constants": {
+    "0x100aa50c0": "0000803f",
+    "0x100aa50c4": "000080bf",
+    "0x100aa6a9c": "17b7d138",
+    "0x100aa6aa0": "2731883e",
+    "0x100aa70e4": "00000000",
+    "0x100aa77e8": "cdcccc3d",
+    "0x100aa77f0": "00004040",
+    "0x100aaa4a8": "6666663f"
+  },
+  "scope": "Whole normal call bodies, with original metadata/reflection/Event.Start/authority/extinguish boundaries. Barn and prepared shared storage are separately validated; full creature/Flame/Candle rendering and gameplay are not established."
+}

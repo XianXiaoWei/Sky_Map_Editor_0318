@@ -1,0 +1,534 @@
+{
+  "className": "OnBlaze",
+  "functionGroup": "粒子、灯光与场景效果",
+  "functionRole": "燃烧状态与激活事件",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "partial",
+      "description": "OnBlaze 的原默认值、继承初始化及 5 个序列化字段变体；原注册字段 4 项。"
+    },
+    {
+      "name": "燃烧状态与激活事件",
+      "status": "partial",
+      "description": "原启用／Update 与共享 EventBarn 状态接入已核验；重绑保留既有事件状态与激活边沿锁存。五个真实事件仍需真实 Blaze／Flame 装载和完整下游生命周期。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Blaze（5 条引用）、Clump（5 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "OnBlaze",
+    "category": "粒子、灯光与场景效果",
+    "functionGroupId": "effects",
+    "functionRole": "燃烧状态与激活事件",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "partial",
+        "description": "OnBlaze 的原默认值、继承初始化及 5 个序列化字段变体；原注册字段 4 项。"
+      },
+      {
+        "name": "燃烧状态与激活事件",
+        "status": "partial",
+        "description": "原启用／Update 与共享 EventBarn 状态接入已核验；重绑保留既有事件状态与激活边沿锁存。五个真实事件仍需真实 Blaze／Flame 装载和完整下游生命周期。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Blaze（5 条引用）、Clump（5 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Blaze",
+        "references": 5
+      },
+      {
+        "className": "Clump",
+        "references": 5
+      }
+    ],
+    "rttiWorkingGroup": "交互、事件与任务",
+    "role": "对象实例类型",
+    "instances": 5,
+    "nestedInstances": 0,
+    "referenceFields": 10,
+    "declaredLevels": 2,
+    "levels": [
+      {
+        "level": "Night",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Rain",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "blaze",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "events",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "fireOnce",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "onActivate",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100c8bdd0",
+    "nativeRegisteredFields": [
+      {
+        "name": "blaze",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5BlazeERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x1001b3050",
+        "propertyAddress": "0x100c8b778"
+      },
+      {
+        "name": "events",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 64,
+        "registrationFunction": "0x1001b3050",
+        "propertyAddress": "0x100c8b7c8"
+      },
+      {
+        "name": "fireOnce",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 72,
+        "registrationFunction": "0x1001b3050",
+        "propertyAddress": "0x100c8b818"
+      },
+      {
+        "name": "onActivate",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 73,
+        "registrationFunction": "0x1001b3050",
+        "propertyAddress": "0x100c8b868"
+      }
+    ],
+    "completedCheckpoints": 4,
+    "partialCheckpoints": 2,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 40,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": true,
+    "implementation": [
+      "src/core/blaze-runtime.ts",
+      "src/core/environment-event-runtime.ts"
+    ],
+    "evidence": [
+      "docs/黑暗植物与生物加载续接.md",
+      "docs/creature-plant-load-native.json",
+      "docs/blaze-oracle.json"
+    ],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 4 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "partial",
+        "note": "原启用／Update 与共享 EventBarn 状态接入已核验；重绑保留既有事件状态与激活边沿锁存。五个真实事件仍需真实 Blaze／Flame 装载和完整下游生命周期。",
+        "evidence": [
+          "docs/黑暗植物与生物加载续接.md",
+          "docs/creature-plant-load-native.json",
+          "docs/blaze-oracle.json"
+        ]
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "partial",
+        "note": "原启用／Update 与共享 EventBarn 状态接入已核验；重绑保留既有事件状态与激活边沿锁存。五个真实事件仍需真实 Blaze／Flame 装载和完整下游生命周期。",
+        "evidence": [
+          "docs/黑暗植物与生物加载续接.md",
+          "docs/creature-plant-load-native.json",
+          "docs/blaze-oracle.json"
+        ]
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "verified",
+        "note": "原启用／Update 与共享 EventBarn 状态接入已核验；重绑保留既有事件状态与激活边沿锁存。五个真实事件仍需真实 Blaze／Flame 装载和完整下游生命周期。",
+        "evidence": [
+          "docs/黑暗植物与生物加载续接.md",
+          "docs/creature-plant-load-native.json",
+          "docs/blaze-oracle.json"
+        ]
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "原启用／Update 与共享 EventBarn 状态接入已核验；重绑保留既有事件状态与激活边沿锁存。五个真实事件仍需真实 Blaze／Flame 装载和完整下游生命周期。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "Night:n364",
+      "level": "Night",
+      "nodeId": 364,
+      "name": "BstNode_2218",
+      "className": "OnBlaze",
+      "classIndex": 40,
+      "sourceOffset": 76526,
+      "sourceLength": 28,
+      "sourceSha256": "c02f04bc58377d3ab2619920b126366db6483a4402cc8cb08401c7345e7b4a02",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n364/p1",
+          "fieldName": "blaze",
+          "target": "Night:n84",
+          "targetNodeId": 84,
+          "offset": 76544
+        },
+        {
+          "fieldId": "n364/p3",
+          "fieldName": "events",
+          "target": "Night:n234",
+          "targetNodeId": 234,
+          "offset": 76549
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n419",
+      "level": "Night",
+      "nodeId": 419,
+      "name": "BstNode_2219",
+      "className": "OnBlaze",
+      "classIndex": 40,
+      "sourceOffset": 86330,
+      "sourceLength": 28,
+      "sourceSha256": "da819761e490eaa43bd9a6d6f26581ae4d68a05c734f3f45cb92374e3c090de7",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n419/p1",
+          "fieldName": "blaze",
+          "target": "Night:n3085",
+          "targetNodeId": 3085,
+          "offset": 86348
+        },
+        {
+          "fieldId": "n419/p3",
+          "fieldName": "events",
+          "target": "Night:n2329",
+          "targetNodeId": 2329,
+          "offset": 86353
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1119",
+      "level": "Night",
+      "nodeId": 1119,
+      "name": "BstNode_2232",
+      "className": "OnBlaze",
+      "classIndex": 40,
+      "sourceOffset": 187138,
+      "sourceLength": 28,
+      "sourceSha256": "c8c1f1fb26c97d0ebc6abe8dc47271599ed83f8a22cecea47f070d2245215767",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1119/p1",
+          "fieldName": "blaze",
+          "target": "Night:n2492",
+          "targetNodeId": 2492,
+          "offset": 187156
+        },
+        {
+          "fieldId": "n1119/p3",
+          "fieldName": "events",
+          "target": "Night:n2407",
+          "targetNodeId": 2407,
+          "offset": 187161
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2308",
+      "level": "Night",
+      "nodeId": 2308,
+      "name": "BstNode_2226",
+      "className": "OnBlaze",
+      "classIndex": 40,
+      "sourceOffset": 363068,
+      "sourceLength": 28,
+      "sourceSha256": "e2b96c41ddecad911de4d2a20e22df436fe3427fb6bbed1db7c1af4f8db749d5",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2308/p1",
+          "fieldName": "blaze",
+          "target": "Night:n483",
+          "targetNodeId": 483,
+          "offset": 363086
+        },
+        {
+          "fieldId": "n2308/p3",
+          "fieldName": "events",
+          "target": "Night:n540",
+          "targetNodeId": 540,
+          "offset": 363091
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n763",
+      "level": "Rain",
+      "nodeId": 763,
+      "name": "BstNode_2345992866",
+      "className": "OnBlaze",
+      "classIndex": 61,
+      "sourceOffset": 201012,
+      "sourceLength": 34,
+      "sourceSha256": "df6c0d6cf62a805be6ebc551e7602c00f7770755c4ef45ccbc841e60d600b353",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n763/p1",
+          "fieldName": "blaze",
+          "target": "Rain:n1626",
+          "targetNodeId": 1626,
+          "offset": 201036
+        },
+        {
+          "fieldId": "n763/p3",
+          "fieldName": "events",
+          "target": "Rain:n1953",
+          "targetNodeId": 1953,
+          "offset": 201041
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "Night",
+      "path": "Levels/Night/Objects.level.bin",
+      "sha256": "6ce612c9efb82834d648de81251033b341a44f4d9374d8338d868575aab6a723",
+      "bytes": 499756,
+      "nodes": 3719,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Night.json",
+      "markdown": "Objects对象清单/Night.md"
+    },
+    {
+      "level": "Rain",
+      "path": "Levels/Rain/Objects.level.bin",
+      "sha256": "20093bccf3bb1ea0936cb993e66cef0187b40a5a411df3573eb28e4def4f75c6",
+      "bytes": 457732,
+      "nodes": 2079,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Rain.json",
+      "markdown": "Objects对象清单/Rain.md"
+    }
+  ]
+}

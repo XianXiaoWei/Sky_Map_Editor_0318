@@ -1,0 +1,102 @@
+{
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "functions": {
+    "Animation.Update": {
+      "start": "0x100098b90",
+      "end": "0x100098be0",
+      "codeEnd": "0x100098be0",
+      "instructions": 24,
+      "codeSha256": "679bfceed9750ae8dfb403fa2b6bc3dcacd87747993b1cdf11c25608d76888ba",
+      "assembly": "evidence/resource-animation-update-Animation.Update.asm"
+    },
+    "Animation.UpdatePrimary": {
+      "start": "0x100098be0",
+      "end": "0x100099680",
+      "codeEnd": "0x100099680",
+      "instructions": 514,
+      "codeSha256": "63f52b8aab391adbae63b7b68a441b7cd5cf6c923316a341816f6af0260f8ce3",
+      "assembly": "evidence/resource-animation-update-Animation.UpdatePrimary.asm"
+    },
+    "Animation.UpdateSecondary": {
+      "start": "0x100099680",
+      "end": "0x100099ea0",
+      "codeEnd": "0x100099ea0",
+      "instructions": 431,
+      "codeSha256": "279893d0e6ef31aefe0c6524d194a814d1ff7004b627ac3e42258d6e20265491",
+      "assembly": "evidence/resource-animation-update-Animation.UpdateSecondary.asm"
+    },
+    "Animation.UpdateAdditive": {
+      "start": "0x100099ea0",
+      "end": "0x10009a980",
+      "codeEnd": "0x10009a980",
+      "instructions": 518,
+      "codeSha256": "889ce79c0e1000e1910e32d9050b822550f539a6ba8a504cbda0eb7c8c4910c5",
+      "assembly": "evidence/resource-animation-update-Animation.UpdateAdditive.asm"
+    },
+    "Animation.FlushMatricesAndEvents": {
+      "start": "0x10009a980",
+      "end": "0x10009ad60",
+      "codeEnd": "0x10009ad60",
+      "instructions": 230,
+      "codeSha256": "45b34109726ddb14ada6d2c7c0842eff459d1fe0d6af1421f9d0e8633ed0147b",
+      "assembly": "evidence/resource-animation-update-Animation.FlushMatricesAndEvents.asm"
+    },
+    "AnimationRequest.UpdateClock": {
+      "start": "0x100097df0",
+      "end": "0x100098150",
+      "codeEnd": "0x100098134",
+      "instructions": 197,
+      "codeSha256": "cd073190c389ca1fd2ec30008f94d2f38796e4426240375574ac38476a3469f0",
+      "assembly": "evidence/resource-animation-update-AnimationRequest.UpdateClock.asm"
+    },
+    "Transform.UpdateWorldMatrices": {
+      "start": "0x1007f2c20",
+      "end": "0x1007f2e60",
+      "codeEnd": "0x1007f2e60",
+      "instructions": 113,
+      "codeSha256": "283e895d7b2536983dcac2a904fcd03daa25d509b45564b941e0b08733cb3f9c",
+      "assembly": "evidence/resource-animation-update-Transform.UpdateWorldMatrices.asm"
+    },
+    "Transform.GetWorldMatrix": {
+      "start": "0x1007f26e0",
+      "end": "0x1007f2740",
+      "codeEnd": "0x1007f2740",
+      "instructions": 22,
+      "codeSha256": "5c17b62bab7a1a1e9483c4ee2243d9b2986383a0d08e9b93959b525ddb5ebed3",
+      "assembly": "evidence/resource-animation-update-Transform.GetWorldMatrix.asm"
+    },
+    "Transform.MarkDirty": {
+      "start": "0x1007f2740",
+      "end": "0x1007f2790",
+      "codeEnd": "0x1007f2790",
+      "instructions": 21,
+      "codeSha256": "079418f62725c591a2c772d3dec4d121f4b691bada95c21407a42177647cba07",
+      "assembly": "evidence/resource-animation-update-Transform.MarkDirty.asm"
+    }
+  },
+  "updatePhaseOrder": [
+    "Animation.UpdatePrimary",
+    "Animation.UpdateSecondary",
+    "Animation.UpdateAdditive",
+    "Animation.FlushMatricesAndEvents"
+  ],
+  "clockOnlyArgument": 0,
+  "secondaryMaskSelection": {
+    "start": "0x100099a87",
+    "end": "0x100099c20",
+    "primaryGlobal": "0x100d22ed0",
+    "secondaryGlobal": "0x100d232d0",
+    "dynamicToggle": "0x100c7dc91",
+    "humanByteOffset": "0x5830",
+    "bodyBlendOffset": "0x5834",
+    "requestFlagOffset": "0x62",
+    "formula": "float(body * secondary[i]) + float((1 - body) * primary[i]), unclamped"
+  },
+  "zeroDelayClockCorrection": {
+    "start": "0x100098068",
+    "end": "0x1000980c4",
+    "nativeClampOrder": "MINSS(1, MAXSS(0, -(remaining * fadeRate)))",
+    "equalOperandSelection": "second operand; preserves negative zero from zero remaining"
+  },
+  "scope": "Whole Animation.Update composition and Transform world-cache/GetWorldMatrix bodies, restored human/nonhuman secondary mask selection and exact-zero request fade clamp. Original metadata/pack/global-weight ownership, effects and QEMU arithmetic boundaries remain explicit. This evidence is not complete creature or scene acceptance."
+}

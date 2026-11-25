@@ -1,0 +1,72 @@
+{
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "functions": {
+    "FloatSplit.placement": "0x100717a10",
+    "FloatSplit.update": "0x100717b20",
+    "OnFloat.placement": "0x100719e20",
+    "OnFloat.destructor": "0x100719f20",
+    "OnFloat.update": "0x100719fc0",
+    "OnFloat.evaluate": "0x10071a140",
+    "OnFloat.toObject": "0x100719e80",
+    "OnFloat.fromObject": "0x100719ea0"
+  },
+  "vtables": {
+    "FloatSplit": {
+      "vptr": "0x100d0c298",
+      "slots": {
+        "0x0": "0x100717b00",
+        "0x8": "0x100717b10",
+        "0x10": "0x10001ecc0",
+        "0x18": "0x10001ecd0",
+        "0x20": "0x10001ece0",
+        "0x28": "0x10001ecf0",
+        "0x30": "0x10001ed40",
+        "0x38": "0x10001ed00",
+        "0x40": "0x10001ed10",
+        "0x48": "0x100717b20",
+        "0x50": "0x10001ed20"
+      }
+    },
+    "OnFloat": {
+      "vptr": "0x100d0d3f8",
+      "slots": {
+        "0x0": "0x100719f20",
+        "0x8": "0x100719f60",
+        "0x10": "0x10001ecc0",
+        "0x18": "0x10001ecd0",
+        "0x20": "0x10001ece0",
+        "0x28": "0x10001ecf0",
+        "0x30": "0x100719fb0",
+        "0x38": "0x10001ed00",
+        "0x40": "0x10001ed10",
+        "0x48": "0x100719fc0",
+        "0x50": "0x10001ed20"
+      }
+    }
+  },
+  "sizes": {
+    "FloatSplit": 72,
+    "OnFloat": 192
+  },
+  "OnFloatObjectSubobjectOffset": 8,
+  "OnFloatPointerFixupAdjustment": 8,
+  "comparisonEpsilon": {
+    "address": "0x100aa6ac0",
+    "type": "double",
+    "value": 0.0001
+  },
+  "comparisonOperators": {
+    "0": ">",
+    "1": ">=",
+    "2": "<",
+    "3": "<=",
+    "4": "abs(float32(lhs-rhs)) < epsilon"
+  },
+  "booleanOperators": {
+    "0": "first",
+    "1": "and",
+    "2": "or",
+    "other": false
+  },
+  "scope": "Original disassembly and constant/vtable assertions only. OnFloat normal paths execute in the separate logic-chain oracle; stream, exception and allocation services remain explicit."
+}

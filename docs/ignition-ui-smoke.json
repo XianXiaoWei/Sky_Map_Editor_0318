@@ -1,0 +1,155 @@
+{
+  "passed": true,
+  "scope": "Actual Electron/Vulkan original UIFlame atlas and ring, one proximity ignition action, hidden after ignition, retained native Candle/Flame draw, far rejection and unchanged source data. GPU crash recovery and DarkStone are outside this focused run.",
+  "errors": [],
+  "checks": [
+    "Far camera hides action and backend rejects ignition",
+    "One ignition button uses original UIFlame atlas region and original ring image; no post-ignition flame overlay",
+    "Paused ignition submits original Flame shader and recovered primary sprite vertices to the shared-depth transparent stage",
+    "Mouse ignition updates native Candle/Flame state at paused material time without selecting a scene object",
+    "No document dirty changes and original map file hashes preserved"
+  ],
+  "images": [
+    "docs/viewport-ignition-candle-near.png",
+    "docs/viewport-ignition-candle-lit.png"
+  ],
+  "sourceHashes": {
+    "Objects.level.bin": "8b467f9b349d9d4ce0d038528c96e44dff30063149bf5bbf90232a56bb9dd36f",
+    "BstBaked.meshes": "f3476d70eff88c830334562840cc03c10330892f6fe39d412e6e89d8d9d57c59"
+  },
+  "initial": {
+    "token": 4,
+    "counts": {
+      "candle": 138,
+      "darkstone": 49
+    }
+  },
+  "farRejection": true,
+  "ignitionUi": {
+    "icon": "UIFlame",
+    "atlas": "UIAtlas",
+    "maskedIcon": true,
+    "maskedRing": true
+  },
+  "candle": {
+    "target": {
+      "nodeId": 498,
+      "kind": "candle",
+      "position": [
+        505.4793701171875,
+        206.1433868408203,
+        -31.08677101135254
+      ],
+      "radius": 0,
+      "enabled": true,
+      "lit": true,
+      "burnt": false,
+      "progress": 0,
+      "light": 1.2599210739135742,
+      "loaded": true
+    },
+    "native": {
+      "nodeId": 498,
+      "position": [
+        505.4793701171875,
+        206.1433868408203,
+        -31.08677101135254
+      ],
+      "enabled": true,
+      "lit": true,
+      "burnt": false,
+      "elapsed": 0.00009999999747378752,
+      "duration": 0,
+      "intensity": 2,
+      "light": 1.2599210739135742,
+      "lightRadius": 0.7718791961669922,
+      "flameEnabled": true,
+      "loaded": true,
+      "template": 4,
+      "model": [
+        -1.5994130373001099,
+        0,
+        -0.5458661913871765,
+        0,
+        0,
+        1.689997673034668,
+        0,
+        0,
+        0.5458661913871765,
+        0,
+        -1.5994130373001099,
+        0,
+        505.4797058105469,
+        205.7772216796875,
+        -31.087013244628906,
+        1
+      ]
+    },
+    "flames": [
+      {
+        "nodeId": 498,
+        "standalone": false,
+        "width": 0.06678663194179535,
+        "height": 0.4007197916507721
+      }
+    ],
+    "passes": [
+      "CloudCore",
+      "OpaqueRGBDepth",
+      "Candle",
+      "WaterSim",
+      "OceanMesh",
+      "Flower",
+      "Flame",
+      "DepthDownsample",
+      "DepthDownsampleGather",
+      "DepthDownsampleQuarter",
+      "CloudFluffySuperCoarse",
+      "CloudFluffyCoarse",
+      "CloudFluffy",
+      "AlphaColorLogDepth",
+      "PreviewLuminance",
+      "FogUpsample",
+      "MotionGen",
+      "MotionDilate",
+      "TemporalAa",
+      "Tonemap"
+    ],
+    "owners": {
+      "advances": 11,
+      "last": 11,
+      "frame": 16,
+      "revision": 11,
+      "effectPools": [
+        {
+          "className": "FlowerPatch",
+          "owner": "FlowerBarn",
+          "pointer": "21743296688",
+          "count": 68,
+          "capacity": 255,
+          "stride": 272,
+          "scope": "Native allocation and shared field storage; complete owner construction/update/draw/unload pending"
+        },
+        {
+          "className": "Water",
+          "owner": "Ocean",
+          "pointer": "21743369856",
+          "count": 2,
+          "capacity": 8,
+          "stride": 1488,
+          "scope": "Native allocation and shared field storage; complete owner construction/update/draw/unload pending"
+        },
+        {
+          "className": "CandleObject",
+          "owner": "CandleBarn",
+          "pointer": "21743386832",
+          "count": 138,
+          "capacity": 196,
+          "stride": 176,
+          "scope": "Native allocation and shared field storage; complete owner construction/update/draw/unload pending"
+        }
+      ]
+    },
+    "selected": 0
+  }
+}

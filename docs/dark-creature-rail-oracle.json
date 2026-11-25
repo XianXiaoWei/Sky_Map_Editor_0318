@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "functions": {
+    "DarkCreature.SwitchRail": "0x10026d0f0"
+  },
+  "cases": 384,
+  "comparedCases": 384,
+  "comparedBytes": 12658176,
+  "serviceCalls": 1152,
+  "scope": "Whole DarkCreature patrol/cooldown rail selection, separate native timer resets, position-plus-heading nearest-time request, fmodf phase, two direction samples, scalar SSE normalization and direction latch. Actual Rail nearest/sample are explicit services; fmodf runs native libm. Full DarkCreature.Load/AI/attack/collision/animation/Model/GPU remain pending.",
+  "failures": []
+}

@@ -1,0 +1,125 @@
+0x1001b1310: push rbp
+0x1001b1311: mov rbp, rsp
+0x1001b1314: push r15
+0x1001b1316: push r14
+0x1001b1318: push r13
+0x1001b131a: push r12
+0x1001b131c: push rbx
+0x1001b131d: sub rsp, 0x38
+0x1001b1321: mov r15d, edx
+0x1001b1324: mov qword ptr [rbp - 0x30], rsi
+0x1001b1328: mov rbx, rdi
+0x1001b132b: cmp qword ptr [rbx + 0x58], 0
+0x1001b1330: jne 0x1001b1422
+0x1001b1336: cmp byte ptr [rbx + 0x90], 0
+0x1001b133d: je 0x1001b1422
+0x1001b1343: lea rdi, [rbp - 0x50]
+0x1001b1347: call 0x1007c2530 ; 0x1007c2530
+0x1001b134c: mov rax, qword ptr [rbp - 0x30]
+0x1001b1350: mov r12, qword ptr [rax + 0x140]
+0x1001b1357: test r15b, r15b
+0x1001b135a: je 0x1001b1386
+0x1001b135c: call 0x10079ac90 ; 0x10079ac90
+0x1001b1361: lea rdx, [rip + 0x9c6c5c] ; 0x100b77fc4 UIFootPrintLeft
+0x1001b1368: mov rdi, r12
+0x1001b136b: mov rsi, rax
+0x1001b136e: call 0x1007c4360 ; 0x1007c4360
+0x1001b1373: test rax, rax
+0x1001b1376: je 0x1001b13b0
+0x1001b1378: lea rsi, [rbp - 0x50]
+0x1001b137c: mov rdi, rax
+0x1001b137f: call 0x1007c2310 ; 0x1007c2310
+0x1001b1384: jmp 0x1001b13e2 ; 0x1001b13e2
+0x1001b1386: call 0x10079ac90 ; 0x10079ac90
+0x1001b138b: lea rdx, [rip + 0x9c6c42] ; 0x100b77fd4 UIFootPrintRight
+0x1001b1392: mov rdi, r12
+0x1001b1395: mov rsi, rax
+0x1001b1398: call 0x1007c4360 ; 0x1007c4360
+0x1001b139d: test rax, rax
+0x1001b13a0: je 0x1001b13ca
+0x1001b13a2: lea rsi, [rbp - 0x50]
+0x1001b13a6: mov rdi, rax
+0x1001b13a9: call 0x1007c2310 ; 0x1007c2310
+0x1001b13ae: jmp 0x1001b13e2 ; 0x1001b13e2
+0x1001b13b0: call 0x10079ac90 ; 0x10079ac90
+0x1001b13b5: mov rsi, qword ptr [rax + 8]
+0x1001b13b9: lea rdx, [rip + 0x9c6c04] ; 0x100b77fc4 UIFootPrintLeft
+0x1001b13c0: mov rdi, r12
+0x1001b13c3: call 0x1007c4640 ; 0x1007c4640
+0x1001b13c8: jmp 0x1001b13e2 ; 0x1001b13e2
+0x1001b13ca: call 0x10079ac90 ; 0x10079ac90
+0x1001b13cf: mov rsi, qword ptr [rax + 8]
+0x1001b13d3: lea rdx, [rip + 0x9c6bfa] ; 0x100b77fd4 UIFootPrintRight
+0x1001b13da: mov rdi, r12
+0x1001b13dd: call 0x1007c4640 ; 0x1007c4640
+0x1001b13e2: mov rdi, qword ptr [rbx + 0xe0]
+0x1001b13e9: mov rax, qword ptr [rbp - 0x50]
+0x1001b13ed: test rax, rax
+0x1001b13f0: je 0x1001b1406
+0x1001b13f2: mov rax, qword ptr [rax + 0x10]
+0x1001b13f6: lea rcx, [rax + 0xb0]
+0x1001b13fd: test rax, rax
+0x1001b1400: cmove rcx, rax
+0x1001b1404: jmp 0x1001b1408 ; 0x1001b1408
+0x1001b1406: xor ecx, ecx
+0x1001b1408: lea rdx, [rip + 0x9b3a9a] ; 0x100b64ea9 u_texture
+0x1001b140f: xor esi, esi
+0x1001b1411: xor r8d, r8d
+0x1001b1414: call 0x100466ee0 ; 0x100466ee0
+0x1001b1419: lea rdi, [rbp - 0x50]
+0x1001b141d: call 0x1007c2570 ; 0x1007c2570
+0x1001b1422: mov rax, qword ptr [rbx + 0x70]
+0x1001b1426: test rax, rax
+0x1001b1429: je 0x1001b14ab
+0x1001b142f: cmp dword ptr [rax + 0x10], 0
+0x1001b1433: je 0x1001b14ab
+0x1001b1435: xor r15b, 1
+0x1001b1439: xor r14d, r14d
+0x1001b143c: lea r12, [rbp - 0x50]
+0x1001b1440: lea r13, [rbp - 0x58]
+0x1001b1444: movzx r15d, r15b
+0x1001b1448: nop dword ptr [rax + rax]
+0x1001b1450: mov rax, qword ptr [rax + 8]
+0x1001b1454: mov ecx, r14d
+0x1001b1457: mov rax, qword ptr [rax + rcx*8]
+0x1001b145b: mov qword ptr [rbp - 0x58], rax
+0x1001b145f: call 0x1007abc10 ; 0x1007abc10
+0x1001b1464: mov qword ptr [rbp - 0x50], 0
+0x1001b146c: mov rdi, qword ptr [rip + 0x1c2998d] ; 0x101ddae00
+0x1001b1473: mov r8, qword ptr [rdi]
+0x1001b1476: mov rsi, r12
+0x1001b1479: mov rdx, r13
+0x1001b147c: mov rcx, rax
+0x1001b147f: call qword ptr [r8 + 0x40]
+0x1001b1483: mov rdi, qword ptr [rbp - 0x50]
+0x1001b1487: test rdi, rdi
+0x1001b148a: je 0x1001b14ba
+0x1001b148c: cmp byte ptr [rdi + 0x55], 0
+0x1001b1490: jne 0x1001b149e
+0x1001b1492: mov rsi, qword ptr [rbp - 0x30]
+0x1001b1496: mov edx, r15d
+0x1001b1499: call 0x1001b1310 ; 0x1001b1310
+0x1001b149e: inc r14d
+0x1001b14a1: mov rax, qword ptr [rbx + 0x70]
+0x1001b14a5: cmp r14d, dword ptr [rax + 0x10]
+0x1001b14a9: jb 0x1001b1450
+0x1001b14ab: add rsp, 0x38
+0x1001b14af: pop rbx
+0x1001b14b0: pop r12
+0x1001b14b2: pop r13
+0x1001b14b4: pop r14
+0x1001b14b6: pop r15
+0x1001b14b8: pop rbp
+0x1001b14b9: ret 
+0x1001b14ba: lea rdi, [rip + 0x9b0637] ; 0x100b61af8 ret
+0x1001b14c1: lea rsi, [rip + 0x9b049b] ; 0x100b61963 ./Clump.h
+0x1001b14c8: mov edx, 0x47
+0x1001b14cd: mov ecx, 3
+0x1001b14d2: call 0x1007e5f70 ; 0x1007e5f70
+0x1001b14d7: ud2 
+0x1001b14d9: mov rbx, rax
+0x1001b14dc: lea rdi, [rbp - 0x50]
+0x1001b14e0: call 0x1007c2570 ; 0x1007c2570
+0x1001b14e5: mov rdi, rbx
+0x1001b14e8: call 0x100aa2192 ; 0x100aa2192 __Unwind_Resume
+0x1001b14ed: nop dword ptr [rax]

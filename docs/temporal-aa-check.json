@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "scope": "Original MotionGen/MotionDilate/TemporalAa GLSL on production Vulkan resolver. Explicit stationary cloud motion, asymmetric image/flat region, camera cut, preserved half infinity and target-size reset. Centered scene jitter; excludes Metal and complete moving-model list.",
+  "device": {
+    "engine": "Sky Native Vulkan",
+    "backend": "Vulkan",
+    "device": "llvmpipe (LLVM 19.1.7, 128 bits)",
+    "apiVersion": 4210993,
+    "deviceType": 4,
+    "shaderFloat16": true
+  },
+  "checks": {
+    "maxCutError": 0.0004871487617492676,
+    "explicitCutError": 0.00048792362213134766,
+    "flatMismatches": 0,
+    "motionMismatches": 0,
+    "rawFrameDifference": 0.1504575163902094,
+    "resolvedFrameDifference": 0.06987677680121528,
+    "overflowMotionClampPassed": true,
+    "historyResetPassed": true
+  }
+}

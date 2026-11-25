@@ -1,0 +1,74 @@
+{
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "functions": {
+    "LevelMesh.float": {
+      "address": "0x1003ffe90",
+      "end": "0x1003fff20",
+      "codeSha256": "368f3131bfcb3ce85d922211105015192db253c4e0d02182447a68b4113288ff",
+      "evidence": "evidence/model-parameter-LevelMesh.float.asm"
+    },
+    "LevelMesh.vector": {
+      "address": "0x1003fff20",
+      "end": "0x1003fffc0",
+      "codeSha256": "b5ff07a4704aa48e7178ddbd9bfc7a78fe2cbaa3036ecc68838135f4ea2194c8",
+      "evidence": "evidence/model-parameter-LevelMesh.vector.asm"
+    },
+    "LevelMesh.texture": {
+      "address": "0x1003fffc0",
+      "end": "0x100400110",
+      "codeSha256": "86aa0e935f72b311e72ce578fe25c6099f264942acfd0ebc77b4a9357af152f6",
+      "evidence": "evidence/model-parameter-LevelMesh.texture.asm"
+    },
+    "LevelMesh.find": {
+      "address": "0x100400c80",
+      "end": "0x100400ea0",
+      "codeSha256": "8edbc921e4a9aef2c7b2ea4d986d0f5817e0f1159e31229fc782a931bfa18d7a",
+      "evidence": "evidence/model-parameter-LevelMesh.find.asm"
+    },
+    "LevelMesh.update": {
+      "address": "0x100402060",
+      "end": "0x100402710",
+      "codeSha256": "6b8c57df7fde260bedc202fa6662863c25d135e15d10ef3d55d0c1825e9a88fd",
+      "evidence": "evidence/model-parameter-LevelMesh.update.asm"
+    },
+    "Model.find": {
+      "address": "0x1004666a0",
+      "end": "0x100466710",
+      "codeSha256": "ac911826e05e8c44418e59de8e29324b4670d0fd921f67c3b8412469834a8af4",
+      "evidence": "evidence/model-parameter-Model.find.asm"
+    },
+    "Model.float": {
+      "address": "0x100466710",
+      "end": "0x1004667c0",
+      "codeSha256": "f79c92d4db8e1a753d4aad0f8ad984369b42c6280afa63d74f8521ac4156907c",
+      "evidence": "evidence/model-parameter-Model.float.asm"
+    },
+    "Model.vector": {
+      "address": "0x1004669b0",
+      "end": "0x100466a50",
+      "codeSha256": "81de288c35dc5b6b1fcf48ab6b7f82b4449393beb2b463f47fef64682930b237",
+      "evidence": "evidence/model-parameter-Model.vector.asm"
+    },
+    "Model.texture": {
+      "address": "0x100466e30",
+      "end": "0x100466ee0",
+      "codeSha256": "d54e045b0846f7b72da6e752907c03fb5168975ee804ce0cd098cacdfc2ab584",
+      "evidence": "evidence/model-parameter-Model.texture.asm"
+    }
+  },
+  "emptyTexture": {
+    "selector": "0x10040238c..0x100402396",
+    "name": "Black"
+  },
+  "sceneTextureGlobals": {
+    "u_caustics": {
+      "resource": "Caustics",
+      "resourceNameAddress": "0x100b621c4",
+      "resourceLookup": "0x10005a71e..0x10005a744",
+      "registration": "0x10005a78a..0x10005a796",
+      "uniformNameAddress": "0x100b621cd",
+      "samplerPointer": 0
+    }
+  },
+  "scope": "Address-backed whole setters/lookup and normal valid-uniform update path. Scene Caustics identity/registration proven by disassembly; complete Scene global initialization and resource lifetime are not executed/restored. Resource/Vertex services, hot reload, invalid-uniform diagnostic/removal and exception unwinding are explicit dependencies; complete class completion remains zero."
+}

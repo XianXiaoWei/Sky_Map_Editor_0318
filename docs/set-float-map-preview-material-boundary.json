@@ -1,0 +1,80 @@
+{
+  "passed": false,
+  "checks": [],
+  "scope": "Actual DayHubCave SetFloat #43 runs its saved time=0 endpoint. A separate prepared map links SetFloat #43 to TransformObject #270 and original PlatformRain_01 LevelMesh #339 through Enable #444; its changed controls are recorded. Electron/Vulkan editor visualization and JS Math fallback, not complete original Model/GPU, automatic scene startup, collision or Avatar. Source Objects/meshes and prepared saved documents remain unchanged.",
+  "windowsTested": false,
+  "prepared": {
+    "sourceSha256": "e4da920cc9f0b1569f14ad1a6d1990db7155dc07ebfc3214c4e385a367872457",
+    "changes": [
+      {
+        "node": 43,
+        "field": "time",
+        "before": {
+          "uint": 0,
+          "int": 0,
+          "float": 0
+        },
+        "after": 1
+      },
+      {
+        "node": 43,
+        "field": "snappiness",
+        "before": {
+          "uint": 1065353216,
+          "int": 1065353216,
+          "float": 1
+        },
+        "after": 0.3
+      },
+      {
+        "node": 270,
+        "field": "progress01",
+        "before": 4294967295,
+        "after": 874
+      },
+      {
+        "node": 270,
+        "field": "completeAtEnd",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "node": 444,
+        "field": "enable",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "node": 444,
+        "field": "objects",
+        "before": 1042,
+        "after": 84
+      },
+      {
+        "node": 84,
+        "field": "[0]",
+        "before": 479,
+        "after": 43
+      },
+      {
+        "node": 84,
+        "field": "[1]",
+        "before": 910,
+        "after": 270
+      }
+    ],
+    "root": 444,
+    "events": [
+      43,
+      270,
+      444
+    ],
+    "objects": [
+      339
+    ],
+    "map": "Prepared_SetFloat_Platform",
+    "sha256": "d1d6df6de51f1250160698f7c598b00520aa133c4c303d62b77b1fbebfcbc7c0"
+  },
+  "error": "TimeoutError: page.waitForFunction: Timeout 60000ms exceeded.",
+  "viewportError": "Vulkan 渲染进程退出 (1)：{\"engine\":\"Sky Native Vulkan\",\"backend\":\"Vulkan\",\"device\":\"llvmpipe (LLVM 19.1.7, 128 bits)\",\"apiVersion\":4210993,\"deviceType\":4,\"shaderFloat16\":true}\nVulkan renderer: Viewport shader produced 12 nonfinite RGB components"
+}

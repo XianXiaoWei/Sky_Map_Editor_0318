@@ -1,0 +1,518 @@
+{
+  "className": "CollectCollectible",
+  "functionGroup": "收集物、蜡烛与解锁",
+  "functionRole": "触发收集指定收集物",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "CollectCollectible 的原默认值、继承初始化及 2 个序列化字段变体；原注册字段 1 项。"
+    },
+    {
+      "name": "触发收集指定收集物",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Collectible（6 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "CollectCollectible",
+    "category": "收集物、蜡烛与解锁",
+    "functionGroupId": "collectibles",
+    "functionRole": "触发收集指定收集物",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "CollectCollectible 的原默认值、继承初始化及 2 个序列化字段变体；原注册字段 1 项。"
+      },
+      {
+        "name": "触发收集指定收集物",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Collectible（6 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Collectible",
+        "references": 6
+      }
+    ],
+    "rttiWorkingGroup": "系统和其余类型",
+    "role": "对象实例类型",
+    "instances": 6,
+    "nestedInstances": 0,
+    "referenceFields": 6,
+    "declaredLevels": 5,
+    "levels": [
+      {
+        "level": "Dawn",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DayHubCave",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "HubReveal",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Night",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainMid",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "collectible",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100c98230",
+    "nativeRegisteredFields": [
+      {
+        "name": "collectible",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP11CollectibleERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x1002356e0",
+        "propertyAddress": "0x100c97080"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 1 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "Dawn:n2920",
+      "level": "Dawn",
+      "nodeId": 2920,
+      "name": "BstNode_2446917753",
+      "className": "CollectCollectible",
+      "classIndex": 123,
+      "sourceOffset": 478216,
+      "sourceLength": 28,
+      "sourceSha256": "799a95b55f429fe63482637d0e1dc6c5888a9154e1213853549a5fbc4aec6d13",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2920/p1",
+          "fieldName": "collectible",
+          "target": "Dawn:n1746",
+          "targetNodeId": 1746,
+          "offset": 478240
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayHubCave:n283",
+      "level": "DayHubCave",
+      "nodeId": 283,
+      "name": "BstNode_2446917638",
+      "className": "CollectCollectible",
+      "classIndex": 38,
+      "sourceOffset": 73252,
+      "sourceLength": 28,
+      "sourceSha256": "9f7116bfaf4fa35550dd5057ac914cadf182d5212d65c02a3ba0f38b7f7fcfd9",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n283/p1",
+          "fieldName": "collectible",
+          "target": "DayHubCave:n846",
+          "targetNodeId": 846,
+          "offset": 73276
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n1076",
+      "level": "HubReveal",
+      "nodeId": 1076,
+      "name": "BstNode_2529558569",
+      "className": "CollectCollectible",
+      "classIndex": 92,
+      "sourceOffset": 210133,
+      "sourceLength": 28,
+      "sourceSha256": "003ee51eac1b887b509474a92e70fc1807fe34cdce110c3b01195ee1fdfe421e",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1076/p1",
+          "fieldName": "collectible",
+          "target": "HubReveal:n40",
+          "targetNodeId": 40,
+          "offset": 210157
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2627",
+      "level": "Night",
+      "nodeId": 2627,
+      "name": "BstNode_2446917656",
+      "className": "CollectCollectible",
+      "classIndex": 74,
+      "sourceOffset": 410244,
+      "sourceLength": 28,
+      "sourceSha256": "d9bb31975db3ecac4b019be461a819bf24fafd2775f9dec1d0f17232c4fe1fa2",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2627/p1",
+          "fieldName": "collectible",
+          "target": "Night:n2365",
+          "targetNodeId": 2365,
+          "offset": 410268
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n1681",
+      "level": "RainMid",
+      "nodeId": 1681,
+      "name": "BstNode_34603093",
+      "className": "CollectCollectible",
+      "classIndex": 75,
+      "sourceOffset": 336900,
+      "sourceLength": 26,
+      "sourceSha256": "5f8d88425b3badc3135d818090431cce79e1f5d29f7db68c14c6ac627f686659",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1681/p1",
+          "fieldName": "collectible",
+          "target": "RainMid:n326",
+          "targetNodeId": 326,
+          "offset": 336922
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n1814",
+      "level": "RainMid",
+      "nodeId": 1814,
+      "name": "BstNode_34603094",
+      "className": "CollectCollectible",
+      "classIndex": 75,
+      "sourceOffset": 358325,
+      "sourceLength": 26,
+      "sourceSha256": "e9c21d51dc7fb2badfbd9a21b8472a0282c2809f5a299b7605106a47f5667805",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1814/p1",
+          "fieldName": "collectible",
+          "target": "RainMid:n19",
+          "targetNodeId": 19,
+          "offset": 358347
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "Dawn",
+      "path": "Levels/Dawn/Objects.level.bin",
+      "sha256": "16e26aafc7f9d120a548bf5d8bec04fbc18146bc8db531ef75144889b1ff197a",
+      "bytes": 504637,
+      "nodes": 3798,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dawn.json",
+      "markdown": "Objects对象清单/Dawn.md"
+    },
+    {
+      "level": "DayHubCave",
+      "path": "Levels/DayHubCave/Objects.level.bin",
+      "sha256": "e4da920cc9f0b1569f14ad1a6d1990db7155dc07ebfc3214c4e385a367872457",
+      "bytes": 202745,
+      "nodes": 1128,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DayHubCave.json",
+      "markdown": "Objects对象清单/DayHubCave.md"
+    },
+    {
+      "level": "HubReveal",
+      "path": "Levels/HubReveal/Objects.level.bin",
+      "sha256": "4b32f12bbe4b246cde9ca1e4ba0982000ff108359865bb4340aba640e609861b",
+      "bytes": 289438,
+      "nodes": 1829,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/HubReveal.json",
+      "markdown": "Objects对象清单/HubReveal.md"
+    },
+    {
+      "level": "Night",
+      "path": "Levels/Night/Objects.level.bin",
+      "sha256": "6ce612c9efb82834d648de81251033b341a44f4d9374d8338d868575aab6a723",
+      "bytes": 499756,
+      "nodes": 3719,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Night.json",
+      "markdown": "Objects对象清单/Night.md"
+    },
+    {
+      "level": "RainMid",
+      "path": "Levels/RainMid/Objects.level.bin",
+      "sha256": "139b219d9b71a2ab24418b1ec41f2ee8a2ebfdf4c5ea992c35348a758682ed23",
+      "bytes": 430825,
+      "nodes": 2457,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainMid.json",
+      "markdown": "Objects对象清单/RainMid.md"
+    }
+  ]
+}

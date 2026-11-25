@@ -1,0 +1,109 @@
+{
+  "passed": false,
+  "complete": true,
+  "device": {
+    "engine": "Sky Native Vulkan",
+    "backend": "Vulkan",
+    "device": "llvmpipe (LLVM 19.1.7, 128 bits)",
+    "apiVersion": 4210993,
+    "deviceType": 4,
+    "shaderFloat16": true
+  },
+  "scope": "Original fine AIR plus CloudCard/CloudQuadParticleFluffy AIR drawn in ONE native Cloud pass through the production entry. Real Dawn cloud atlas/noise fields; explicit test vertex streams/cameras/depth/lighting/resources. Ordered list is supplied; actual object generation, Scene sorting and game image parity remain separate. Independent blend arithmetic uses standalone original half outputs and checks final half bytes; actual shader output correctness is covered separately by the original AIR CPU oracle. RTE remains the strict reference and its failures are retained. An independent non-game blend probe confirms this llvmpipe driver converts half blend results with RTZ; RTZ reproduction is reported separately, not substituted for original Metal acceptance.",
+  "shaders": [
+    "CloudFluffy",
+    "CloudCard",
+    "CloudQuadParticleFluffy"
+  ],
+  "size": [
+    63,
+    36
+  ],
+  "comparedComponents": 18144,
+  "nonzeroCloudPixels": [
+    2268,
+    2268
+  ],
+  "failedComponents": 8633,
+  "firstFailures": [
+    [
+      0,
+      1,
+      3.0,
+      2.998046875
+    ],
+    [
+      0,
+      6,
+      2.2890625,
+      2.287109375
+    ],
+    [
+      0,
+      8,
+      2.6796875,
+      2.677734375
+    ],
+    [
+      0,
+      9,
+      3.001953125,
+      3.0
+    ],
+    [
+      0,
+      11,
+      2.5390625,
+      2.537109375
+    ],
+    [
+      0,
+      12,
+      2.6796875,
+      2.677734375
+    ],
+    [
+      0,
+      13,
+      3.00390625,
+      3.001953125
+    ],
+    [
+      0,
+      14,
+      3.40234375,
+      3.400390625
+    ],
+    [
+      0,
+      15,
+      2.537109375,
+      2.53515625
+    ],
+    [
+      0,
+      19,
+      2.53515625,
+      2.533203125
+    ],
+    [
+      0,
+      20,
+      1.7431640625,
+      1.7421875
+    ],
+    [
+      0,
+      21,
+      1.9580078125,
+      1.95703125
+    ]
+  ],
+  "emptyListFailedAttachments": 0,
+  "rteReferencePassed": false,
+  "rtzFailedComponents": 0,
+  "driverReproductionPassed": true,
+  "independentRoundingProbe": "docs/vulkan-blend-rounding-check.json",
+  "observedDriverHalfBlendConversion": "RTZ",
+  "originalMetalBlendConversionVerified": false
+}

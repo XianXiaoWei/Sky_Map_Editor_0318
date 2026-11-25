@@ -1,0 +1,826 @@
+{
+  "className": "DeathMarch",
+  "functionGroup": "任务、先祖与场景机制",
+  "functionRole": "剧情区域、时间轴与场景对象调度",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "DeathMarch 的原默认值、继承初始化及 21 个序列化字段变体；原注册字段 20 项。"
+    },
+    {
+      "name": "剧情区域、时间轴与场景对象调度",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "EnvNode（2 条引用）、Wind（2 条引用）、Clump（13 条引用）、Marker（11 条引用）、MoveObjectAlongRail（1 条引用）、Timeline（4 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "DeathMarch",
+    "category": "任务、先祖与场景机制",
+    "functionGroupId": "quests",
+    "functionRole": "剧情区域、时间轴与场景对象调度",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "DeathMarch 的原默认值、继承初始化及 21 个序列化字段变体；原注册字段 20 项。"
+      },
+      {
+        "name": "剧情区域、时间轴与场景对象调度",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "EnvNode（2 条引用）、Wind（2 条引用）、Clump（13 条引用）、Marker（11 条引用）、MoveObjectAlongRail（1 条引用）、Timeline（4 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Clump",
+        "references": 13
+      },
+      {
+        "className": "Marker",
+        "references": 11
+      },
+      {
+        "className": "Timeline",
+        "references": 4
+      },
+      {
+        "className": "EnvNode",
+        "references": 2
+      },
+      {
+        "className": "Wind",
+        "references": 2
+      },
+      {
+        "className": "MoveObjectAlongRail",
+        "references": 1
+      }
+    ],
+    "rttiWorkingGroup": "系统和其余类型",
+    "role": "对象实例类型",
+    "instances": 2,
+    "nestedInstances": 0,
+    "referenceFields": 33,
+    "declaredLevels": 2,
+    "levels": [
+      {
+        "level": "Storm",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "StormEnd",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "beamMeshes",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "climbMountainTopRegion",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "cloudCardRail",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "cloudCards",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "deathStartRegion",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "deathTimeline",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "endRegion",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "engineMeshes",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "envNode",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "flags",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "lightingTimeline",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "lightning",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "moveObjectsAlongRails",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "rockMeshes",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "rockRails",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "rockRegions",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "rockSoundRegion",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "shelters",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "startRegion",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "wind",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100c82120",
+    "nativeRegisteredFields": [
+      {
+        "name": "rockRegions",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 168,
+        "registrationFunction": "0x10011d2c0",
+        "propertyAddress": "0x100c814f8"
+      },
+      {
+        "name": "shelters",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 176,
+        "registrationFunction": "0x10011d2c0",
+        "propertyAddress": "0x100c81548"
+      },
+      {
+        "name": "moveObjectsAlongRails",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 96,
+        "registrationFunction": "0x10011d2c0",
+        "propertyAddress": "0x100c81598"
+      },
+      {
+        "name": "climbMountainTopRegion",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP6MarkerERK8MetaTypev",
+        "nativeOffset": 80,
+        "registrationFunction": "0x10011d2c0",
+        "propertyAddress": "0x100c815e8"
+      },
+      {
+        "name": "startRegion",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP6MarkerERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x10011d2c0",
+        "propertyAddress": "0x100c81638"
+      },
+      {
+        "name": "deathStartRegion",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP6MarkerERK8MetaTypev",
+        "nativeOffset": 64,
+        "registrationFunction": "0x10011d2c0",
+        "propertyAddress": "0x100c81688"
+      },
+      {
+        "name": "endRegion",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP6MarkerERK8MetaTypev",
+        "nativeOffset": 72,
+        "registrationFunction": "0x10011d2c0",
+        "propertyAddress": "0x100c816d8"
+      },
+      {
+        "name": "wind",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP4WindERK8MetaTypev",
+        "nativeOffset": 104,
+        "registrationFunction": "0x10011d2c0",
+        "propertyAddress": "0x100c81728"
+      },
+      {
+        "name": "lightingTimeline",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP8TimelineERK8MetaTypev",
+        "nativeOffset": 128,
+        "registrationFunction": "0x10011d2c0",
+        "propertyAddress": "0x100c81778"
+      },
+      {
+        "name": "deathTimeline",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP8TimelineERK8MetaTypev",
+        "nativeOffset": 136,
+        "registrationFunction": "0x10011d2c0",
+        "propertyAddress": "0x100c817c8"
+      },
+      {
+        "name": "envNode",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP7EnvNodeERK8MetaTypev",
+        "nativeOffset": 120,
+        "registrationFunction": "0x10011d2c0",
+        "propertyAddress": "0x100c81818"
+      },
+      {
+        "name": "lightning",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP6MarkerERK8MetaTypev",
+        "nativeOffset": 144,
+        "registrationFunction": "0x10011d2c0",
+        "propertyAddress": "0x100c81868"
+      },
+      {
+        "name": "engineMeshes",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 112,
+        "registrationFunction": "0x10011d2c0",
+        "propertyAddress": "0x100c818b8"
+      },
+      {
+        "name": "beamMeshes",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 152,
+        "registrationFunction": "0x10011d2c0",
+        "propertyAddress": "0x100c81908"
+      },
+      {
+        "name": "rockMeshes",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 160,
+        "registrationFunction": "0x10011d2c0",
+        "propertyAddress": "0x100c81958"
+      },
+      {
+        "name": "flags",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 184,
+        "registrationFunction": "0x10011d2c0",
+        "propertyAddress": "0x100c819a8"
+      },
+      {
+        "name": "rockRails",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 192,
+        "registrationFunction": "0x10011d2c0",
+        "propertyAddress": "0x100c819f8"
+      },
+      {
+        "name": "rockSoundRegion",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP6MarkerERK8MetaTypev",
+        "nativeOffset": 88,
+        "registrationFunction": "0x10011d2c0",
+        "propertyAddress": "0x100c81a48"
+      },
+      {
+        "name": "cloudCardRail",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP19MoveObjectAlongRailERK8MetaTypev",
+        "nativeOffset": 200,
+        "registrationFunction": "0x10011d2c0",
+        "propertyAddress": "0x100c81a98"
+      },
+      {
+        "name": "cloudCards",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 208,
+        "registrationFunction": "0x10011d2c0",
+        "propertyAddress": "0x100c81ae8"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 20 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "Storm:n1048",
+      "level": "Storm",
+      "nodeId": 1048,
+      "name": "BstNode_2529558583",
+      "className": "DeathMarch",
+      "classIndex": 53,
+      "sourceOffset": 208648,
+      "sourceLength": 104,
+      "sourceSha256": "382df825ab4b54127e895a3b99dc90bbab6502957120b525de055352afbf57fb",
+      "declaredFieldCount": 21,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1048/p1",
+          "fieldName": "envNode",
+          "target": "Storm:n1513",
+          "targetNodeId": 1513,
+          "offset": 208672
+        },
+        {
+          "fieldId": "n1048/p2",
+          "fieldName": "wind",
+          "target": "Storm:n333",
+          "targetNodeId": 333,
+          "offset": 208676
+        },
+        {
+          "fieldId": "n1048/p3",
+          "fieldName": "shelters",
+          "target": "Storm:n1560",
+          "targetNodeId": 1560,
+          "offset": 208680
+        },
+        {
+          "fieldId": "n1048/p4",
+          "fieldName": "rockRails",
+          "target": "Storm:n1583",
+          "targetNodeId": 1583,
+          "offset": 208684
+        },
+        {
+          "fieldId": "n1048/p5",
+          "fieldName": "lightning",
+          "target": "Storm:n104",
+          "targetNodeId": 104,
+          "offset": 208688
+        },
+        {
+          "fieldId": "n1048/p6",
+          "fieldName": "climbMountainTopRegion",
+          "target": "Storm:n1627",
+          "targetNodeId": 1627,
+          "offset": 208692
+        },
+        {
+          "fieldId": "n1048/p7",
+          "fieldName": "endRegion",
+          "target": "Storm:n782",
+          "targetNodeId": 782,
+          "offset": 208696
+        },
+        {
+          "fieldId": "n1048/p8",
+          "fieldName": "cloudCardRail",
+          "target": "Storm:n1521",
+          "targetNodeId": 1521,
+          "offset": 208700
+        },
+        {
+          "fieldId": "n1048/p9",
+          "fieldName": "cloudCards",
+          "target": "Storm:n826",
+          "targetNodeId": 826,
+          "offset": 208704
+        },
+        {
+          "fieldId": "n1048/p10",
+          "fieldName": "engineMeshes",
+          "target": "Storm:n1104",
+          "targetNodeId": 1104,
+          "offset": 208708
+        },
+        {
+          "fieldId": "n1048/p11",
+          "fieldName": "deathTimeline",
+          "target": "Storm:n1271",
+          "targetNodeId": 1271,
+          "offset": 208712
+        },
+        {
+          "fieldId": "n1048/p12",
+          "fieldName": "beamMeshes",
+          "target": "Storm:n1656",
+          "targetNodeId": 1656,
+          "offset": 208716
+        },
+        {
+          "fieldId": "n1048/p13",
+          "fieldName": "flags",
+          "target": "Storm:n69",
+          "targetNodeId": 69,
+          "offset": 208720
+        },
+        {
+          "fieldId": "n1048/p14",
+          "fieldName": "rockSoundRegion",
+          "target": "Storm:n1040",
+          "targetNodeId": 1040,
+          "offset": 208724
+        },
+        {
+          "fieldId": "n1048/p15",
+          "fieldName": "deathStartRegion",
+          "target": "Storm:n1438",
+          "targetNodeId": 1438,
+          "offset": 208728
+        },
+        {
+          "fieldId": "n1048/p16",
+          "fieldName": "startRegion",
+          "target": "Storm:n697",
+          "targetNodeId": 697,
+          "offset": 208732
+        },
+        {
+          "fieldId": "n1048/p18",
+          "fieldName": "rockMeshes",
+          "target": "Storm:n730",
+          "targetNodeId": 730,
+          "offset": 208740
+        },
+        {
+          "fieldId": "n1048/p19",
+          "fieldName": "moveObjectsAlongRails",
+          "target": "Storm:n1215",
+          "targetNodeId": 1215,
+          "offset": 208744
+        },
+        {
+          "fieldId": "n1048/p20",
+          "fieldName": "lightingTimeline",
+          "target": "Storm:n664",
+          "targetNodeId": 664,
+          "offset": 208748
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n551",
+      "level": "StormEnd",
+      "nodeId": 551,
+      "name": "BstNode_2529558583",
+      "className": "DeathMarch",
+      "classIndex": 48,
+      "sourceOffset": 120436,
+      "sourceLength": 104,
+      "sourceSha256": "6fed7b90589d3f1aa8b8fdbec8ec97b6b555005c68da5220c4c7f7057d4858f6",
+      "declaredFieldCount": 21,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n551/p1",
+          "fieldName": "envNode",
+          "target": "StormEnd:n122",
+          "targetNodeId": 122,
+          "offset": 120460
+        },
+        {
+          "fieldId": "n551/p2",
+          "fieldName": "wind",
+          "target": "StormEnd:n181",
+          "targetNodeId": 181,
+          "offset": 120464
+        },
+        {
+          "fieldId": "n551/p3",
+          "fieldName": "shelters",
+          "target": "StormEnd:n627",
+          "targetNodeId": 627,
+          "offset": 120468
+        },
+        {
+          "fieldId": "n551/p5",
+          "fieldName": "lightning",
+          "target": "StormEnd:n70",
+          "targetNodeId": 70,
+          "offset": 120476
+        },
+        {
+          "fieldId": "n551/p6",
+          "fieldName": "climbMountainTopRegion",
+          "target": "StormEnd:n963",
+          "targetNodeId": 963,
+          "offset": 120480
+        },
+        {
+          "fieldId": "n551/p7",
+          "fieldName": "endRegion",
+          "target": "StormEnd:n390",
+          "targetNodeId": 390,
+          "offset": 120484
+        },
+        {
+          "fieldId": "n551/p10",
+          "fieldName": "engineMeshes",
+          "target": "StormEnd:n613",
+          "targetNodeId": 613,
+          "offset": 120496
+        },
+        {
+          "fieldId": "n551/p11",
+          "fieldName": "deathTimeline",
+          "target": "StormEnd:n778",
+          "targetNodeId": 778,
+          "offset": 120500
+        },
+        {
+          "fieldId": "n551/p12",
+          "fieldName": "beamMeshes",
+          "target": "StormEnd:n824",
+          "targetNodeId": 824,
+          "offset": 120504
+        },
+        {
+          "fieldId": "n551/p15",
+          "fieldName": "deathStartRegion",
+          "target": "StormEnd:n928",
+          "targetNodeId": 928,
+          "offset": 120516
+        },
+        {
+          "fieldId": "n551/p16",
+          "fieldName": "startRegion",
+          "target": "StormEnd:n356",
+          "targetNodeId": 356,
+          "offset": 120520
+        },
+        {
+          "fieldId": "n551/p18",
+          "fieldName": "rockMeshes",
+          "target": "StormEnd:n368",
+          "targetNodeId": 368,
+          "offset": 120528
+        },
+        {
+          "fieldId": "n551/p19",
+          "fieldName": "moveObjectsAlongRails",
+          "target": "StormEnd:n725",
+          "targetNodeId": 725,
+          "offset": 120532
+        },
+        {
+          "fieldId": "n551/p20",
+          "fieldName": "lightingTimeline",
+          "target": "StormEnd:n66",
+          "targetNodeId": 66,
+          "offset": 120536
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "Storm",
+      "path": "Levels/Storm/Objects.level.bin",
+      "sha256": "4be187f31f1ef86611831abeb45ed9c1deff5e925f3bae80a6be49af85fa52bd",
+      "bytes": 324849,
+      "nodes": 1954,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Storm.json",
+      "markdown": "Objects对象清单/Storm.md"
+    },
+    {
+      "level": "StormEnd",
+      "path": "Levels/StormEnd/Objects.level.bin",
+      "sha256": "a9c13b592198ee01ab2922a0c7901f4516ae172d56a22d9b7f806ff7464c9162",
+      "bytes": 224465,
+      "nodes": 1243,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/StormEnd.json",
+      "markdown": "Objects对象清单/StormEnd.md"
+    }
+  ]
+}

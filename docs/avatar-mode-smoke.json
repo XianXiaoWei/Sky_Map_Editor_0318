@@ -1,0 +1,81 @@
+{
+  "passed": true,
+  "checks": [
+    "Original OutfitDefs unique default declarations resolve 3 real Mesh v28 files across IPC; no synthesized character geometry",
+    "Original regular physical setter reaches both position slots, desired slot, cleared velocity and native state flags through AvatarSetPos",
+    "AvatarSetPos candidates are explicitly selected; finite pose rendered in actual Vulkan viewport",
+    "Separate Avatar look/zoom, Home/F reset, native Avatar slide motion preview and default follow move only the Avatar camera",
+    "Returning to editing restores the unchanged editor position and direction after Avatar map changes, drag, zoom and movement",
+    "Mode/map transitions stop movement and reset pose selection without dirtying Objects or meshes"
+  ],
+  "windowsTested": false,
+  "scope": "Actual Electron/Vulkan viewport with original unique body/hair/wing geometry, explicit AvatarSetPos selection and separate editor/Avatar cameras. Native physical setter and full Whisker initialization/reset arithmetic integrated with explicit neutral preview offset parameters and JavaScript libm services. Entry eye/pivot use recovered Euler->forward; lookAt/projection/continuous input remain preview. Native 8-iteration AvatarLoco slide is used during motion with the same physical state as placement; triangle/sphere collision, acceleration/gravity, static pose and neutral shading are explicit editor services. Full native camera/physics/skinning/shader/startup behavior pending.",
+  "parts": [
+    {
+      "slot": "body",
+      "file": "CharSkyKid_Body_ClassicShortPants_StripAnim_CompOcc_CompEdges",
+      "vertices": 2749,
+      "triangles": 3246
+    },
+    {
+      "slot": "hair",
+      "file": "CharSkyKid_Hair_BraidSideSmall_StripAnim_CompOcc_CompEdges",
+      "vertices": 514,
+      "triangles": 418
+    },
+    {
+      "slot": "wing",
+      "file": "CharSkyKid_Wing_ClassicOne_StripAnim_CompOcc_CompEdges",
+      "vertices": 4686,
+      "triangles": 3774
+    }
+  ],
+  "spawn": {
+    "id": 25,
+    "markerId": 26,
+    "relativeMarkerId": null,
+    "position": [
+      -0.1475210040807724,
+      2.009999990463257,
+      6.940424919128418,
+      1
+    ],
+    "desiredPosition": [
+      -0.1475210040807724,
+      2.009999990463257,
+      6.940424919128418,
+      1
+    ],
+    "previousPosition": [
+      -0.1475210040807724,
+      2.009999990463257,
+      6.940424919128418,
+      1
+    ],
+    "velocity": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "physicalFlags": [
+      1,
+      0,
+      0
+    ],
+    "euler": [
+      -3.1415927410125732,
+      0,
+      0,
+      1
+    ],
+    "result": "positioned",
+    "scope": "原 Update/物理位置写入/相机重置 + 编辑器矩阵/碰撞/运行参数服务"
+  },
+  "camera": "[-0.1475212723016739,2.809999942779541,9.940424919128418]",
+  "avatarSlide": {
+    "calls": 219,
+    "queries": 219,
+    "scope": "Original AvatarLoco slide with editor triangle/sphere collision and movement inputs; animation/skinning and complete Avatar update remain open."
+  }
+}

@@ -1,0 +1,860 @@
+{
+  "className": "DarkCreature",
+  "functionGroup": "生物、群体与 AI",
+  "functionRole": "暗生物实例",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "partial",
+      "description": "DarkCreature 的原默认值、继承初始化及 2 个序列化字段变体；原注册字段 2 项。"
+    },
+    {
+      "name": "暗生物实例",
+      "status": "partial",
+      "description": "原构造／保存字段／池分配及巡逻／冷却轨道切换已核验；完整普通 Load 86 组原对照零差异，含自身模型、五项纹理、骨骼、风场、Marker 和晚期轨道断言。Model／动画／Rail 几何／资源 owner、攻击碰撞、AI、音效和动态绘制仍待接。 本轮完整警戒转换62组、返回／冷却状态64组原对照零差异；包含24组实际Motion.Seek＋SwitchRail组合，保留检测前警戒快照、检测回调后重读、十秒转换计时、头骨位置、速度缩放、冷却切轨和晚期重置。本次完整玩家／鸟目标检测与实际警戒调用者组合179组、35,741,516字节、2,854次有序服务调用原对照零差异；保留六个近锚点、能量／启用门控、严格距离／视锥筛选、原候选顺序、射线遮挡、当前目标警戒和64鸟槽边界。原atan2f／cosf显式记录重放；真实Avatar／世界／射线owner、完整外层Update、其他状态／攻击／动画／碰撞和资源owner仍待接。 本次原外层Update前半段0x10026ddb0..0x10026e7da已恢复，止于Model.SetTransform与回调owner写入，包含状态分支、上下边界更新、速度平滑、真实速度／位置积分、朝向基与缩放矩阵。完整出现辅助函数和原Motion.FollowRail已恢复并接实际Seek／SwitchRail；587组、80,561,452字节、5,656次调用原对照零差异，包含真正组合入口、阈值／NaN／有向零、私有W、目标有效性、回调重读与连续帧。该阶段仅为部分外层Update；追击／攻击内部、后半段探照／音效／交互、真实Model／动画／GPU及场景生命周期仍待接，完整生物验收仍为0。 本阶段完整Chase／Attack／Hit及实际固定AvatarBarn索引／active读取已恢复，接已验证的外层移动前半段，585组、315,046,180字节、13,024次调用原对照零差异。涵盖水平追击阻尼、锁定音效／动作、计时后攻击、目标预测与脱离方向、重复版本检查、严格命中阈值、64鸟槽与16玩家槽、当地玩家反馈、实际命中函数组合、特效／音效请求、显式私有up.W、owner／模板／调色板回调重读及连续帧。原Hit函数已恢复，但Bird.Hit及真实动画／音效／交互／粒子资源owner仍为明确服务。完整外层Update后半段、真实场景Model／动画／GPU和自主视口／切图／卸载验收仍未完成，完整生物验收仍为0。 本阶段眼部／探照0x10026e7da..0x10026f41e连成原顺序更新链，504组、68,136,704字节、12,965次调用原对照零差异，涵盖巡视／警戒扫动／锁定朝向、四元数插值、眼部变换、地面射线、玩家／鸟落点、平滑、半径10→2.5、两次环境颜色查询、检测Marker及效果到期；后续交互／声音、真实资源／世界／渲染owner和视口／切图验收仍待接。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "DarkCreatureParams（13 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "DarkCreature",
+    "category": "生物、群体与 AI",
+    "functionGroupId": "creatures",
+    "functionRole": "暗生物实例",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "partial",
+        "description": "DarkCreature 的原默认值、继承初始化及 2 个序列化字段变体；原注册字段 2 项。"
+      },
+      {
+        "name": "暗生物实例",
+        "status": "partial",
+        "description": "原构造／保存字段／池分配及巡逻／冷却轨道切换已核验；完整普通 Load 86 组原对照零差异，含自身模型、五项纹理、骨骼、风场、Marker 和晚期轨道断言。Model／动画／Rail 几何／资源 owner、攻击碰撞、AI、音效和动态绘制仍待接。 本轮完整警戒转换62组、返回／冷却状态64组原对照零差异；包含24组实际Motion.Seek＋SwitchRail组合，保留检测前警戒快照、检测回调后重读、十秒转换计时、头骨位置、速度缩放、冷却切轨和晚期重置。本次完整玩家／鸟目标检测与实际警戒调用者组合179组、35,741,516字节、2,854次有序服务调用原对照零差异；保留六个近锚点、能量／启用门控、严格距离／视锥筛选、原候选顺序、射线遮挡、当前目标警戒和64鸟槽边界。原atan2f／cosf显式记录重放；真实Avatar／世界／射线owner、完整外层Update、其他状态／攻击／动画／碰撞和资源owner仍待接。 本次原外层Update前半段0x10026ddb0..0x10026e7da已恢复，止于Model.SetTransform与回调owner写入，包含状态分支、上下边界更新、速度平滑、真实速度／位置积分、朝向基与缩放矩阵。完整出现辅助函数和原Motion.FollowRail已恢复并接实际Seek／SwitchRail；587组、80,561,452字节、5,656次调用原对照零差异，包含真正组合入口、阈值／NaN／有向零、私有W、目标有效性、回调重读与连续帧。该阶段仅为部分外层Update；追击／攻击内部、后半段探照／音效／交互、真实Model／动画／GPU及场景生命周期仍待接，完整生物验收仍为0。 本阶段完整Chase／Attack／Hit及实际固定AvatarBarn索引／active读取已恢复，接已验证的外层移动前半段，585组、315,046,180字节、13,024次调用原对照零差异。涵盖水平追击阻尼、锁定音效／动作、计时后攻击、目标预测与脱离方向、重复版本检查、严格命中阈值、64鸟槽与16玩家槽、当地玩家反馈、实际命中函数组合、特效／音效请求、显式私有up.W、owner／模板／调色板回调重读及连续帧。原Hit函数已恢复，但Bird.Hit及真实动画／音效／交互／粒子资源owner仍为明确服务。完整外层Update后半段、真实场景Model／动画／GPU和自主视口／切图／卸载验收仍未完成，完整生物验收仍为0。 本阶段眼部／探照0x10026e7da..0x10026f41e连成原顺序更新链，504组、68,136,704字节、12,965次调用原对照零差异，涵盖巡视／警戒扫动／锁定朝向、四元数插值、眼部变换、地面射线、玩家／鸟落点、平滑、半径10→2.5、两次环境颜色查询、检测Marker及效果到期；后续交互／声音、真实资源／世界／渲染owner和视口／切图验收仍待接。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "DarkCreatureParams（13 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "DarkCreatureParams",
+        "references": 13
+      }
+    ],
+    "rttiWorkingGroup": "玩家、角色与动画",
+    "role": "对象实例类型",
+    "instances": 13,
+    "nestedInstances": 0,
+    "referenceFields": 13,
+    "declaredLevels": 3,
+    "levels": [
+      {
+        "level": "DuskGraveyard",
+        "nodes": 6,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DuskMid",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Storm",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "params",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "transform",
+        "type": 0,
+        "size": 64,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100c9e090",
+    "nativeRegisteredFields": [
+      {
+        "name": "transform",
+        "typeGetter": "__Z17GetMetaTypeByTypeIN10Vectormath3Aos7Matrix4EERK8MetaTypev",
+        "nativeOffset": 16,
+        "registrationFunction": "0x100274760",
+        "propertyAddress": "0x100c9da20"
+      },
+      {
+        "name": "params",
+        "typeGetter": "__Z17GetMetaTypeByTypeIPK18DarkCreatureParamsERK8MetaTypev",
+        "nativeOffset": 80,
+        "registrationFunction": "0x100274760",
+        "propertyAddress": "0x100c9da70"
+      }
+    ],
+    "completedCheckpoints": 4,
+    "partialCheckpoints": 2,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 40,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": true,
+    "implementation": [
+      "src/core/environment-object-state.ts",
+      "src/core/creature-construction-runtime.ts",
+      "src/core/creature-runtime.ts",
+      "src/core/dark-creature-rail-runtime.ts",
+      "src/core/dark-creature-load-runtime.ts",
+      "src/core/dark-creature-state-runtime.ts",
+      "src/core/creature-motion-runtime.ts",
+      "src/core/dark-creature-detect-runtime.ts",
+      "src/core/dark-creature-motion-runtime.ts",
+      "src/core/dark-creature-appear-runtime.ts",
+      "src/core/creature-motion-rail-runtime.ts",
+      "src/core/dark-creature-combat-runtime.ts",
+      "src/core/dark-creature-look-runtime.ts",
+      "src/core/dark-creature-spotlight-runtime.ts",
+      "src/core/dark-creature-visual-runtime.ts"
+    ],
+    "evidence": [
+      "docs/生物骨骼动画续接.md",
+      "docs/creature-construction.json",
+      "docs/creature-construction-oracle.json",
+      "docs/creature-kernel-oracle.json",
+      "docs/objects-nature-audit.json",
+      "docs/黑暗植物与生物加载续接.md",
+      "docs/creature-plant-load-native.json",
+      "docs/dark-creature-rail-oracle.json",
+      "docs/creature-objects-defaults.json",
+      "docs/creature-objects-default-oracle.json",
+      "docs/生物类续接.md",
+      "docs/dark-creature-load-oracle.json",
+      "docs/creature-lifecycle-native.json",
+      "docs/creature-lifecycle-oracle.json",
+      "docs/dark-creature-detect-native.json",
+      "docs/dark-creature-detect-oracle.json",
+      "tests/dark-creature-detect-runtime.test.ts",
+      "tests/fixtures/dark-creature-detect-native.json.gz",
+      "docs/dark-creature-motion-native.json",
+      "docs/dark-creature-motion-oracle.json",
+      "tests/dark-creature-motion-runtime.test.ts",
+      "tests/fixtures/dark-creature-motion-native.json.gz",
+      "docs/冥龙移动前半段与打包门槛.md",
+      "docs/dark-creature-combat-native.json",
+      "docs/dark-creature-combat-oracle.json",
+      "tests/dark-creature-combat-runtime.test.ts",
+      "tests/fixtures/dark-creature-combat-native.json.gz",
+      "docs/冥龙追击攻击命中与打包门槛.md",
+      "docs/dark-creature-spotlight-native.json",
+      "docs/dark-creature-spotlight-oracle.json",
+      "docs/冥龙探照光圈与鱼群轨道控制续接.md"
+    ],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 2 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "partial",
+        "note": "原构造／保存字段／池分配及巡逻／冷却轨道切换已核验；完整普通 Load 86 组原对照零差异，含自身模型、五项纹理、骨骼、风场、Marker 和晚期轨道断言。Model／动画／Rail 几何／资源 owner、攻击碰撞、AI、音效和动态绘制仍待接。 本轮完整警戒转换62组、返回／冷却状态64组原对照零差异；包含24组实际Motion.Seek＋SwitchRail组合，保留检测前警戒快照、检测回调后重读、十秒转换计时、头骨位置、速度缩放、冷却切轨和晚期重置。本次完整玩家／鸟目标检测与实际警戒调用者组合179组、35,741,516字节、2,854次有序服务调用原对照零差异；保留六个近锚点、能量／启用门控、严格距离／视锥筛选、原候选顺序、射线遮挡、当前目标警戒和64鸟槽边界。原atan2f／cosf显式记录重放；真实Avatar／世界／射线owner、完整外层Update、其他状态／攻击／动画／碰撞和资源owner仍待接。 本次原外层Update前半段0x10026ddb0..0x10026e7da已恢复，止于Model.SetTransform与回调owner写入，包含状态分支、上下边界更新、速度平滑、真实速度／位置积分、朝向基与缩放矩阵。完整出现辅助函数和原Motion.FollowRail已恢复并接实际Seek／SwitchRail；587组、80,561,452字节、5,656次调用原对照零差异，包含真正组合入口、阈值／NaN／有向零、私有W、目标有效性、回调重读与连续帧。该阶段仅为部分外层Update；追击／攻击内部、后半段探照／音效／交互、真实Model／动画／GPU及场景生命周期仍待接，完整生物验收仍为0。 本阶段完整Chase／Attack／Hit及实际固定AvatarBarn索引／active读取已恢复，接已验证的外层移动前半段，585组、315,046,180字节、13,024次调用原对照零差异。涵盖水平追击阻尼、锁定音效／动作、计时后攻击、目标预测与脱离方向、重复版本检查、严格命中阈值、64鸟槽与16玩家槽、当地玩家反馈、实际命中函数组合、特效／音效请求、显式私有up.W、owner／模板／调色板回调重读及连续帧。原Hit函数已恢复，但Bird.Hit及真实动画／音效／交互／粒子资源owner仍为明确服务。完整外层Update后半段、真实场景Model／动画／GPU和自主视口／切图／卸载验收仍未完成，完整生物验收仍为0。 本阶段眼部／探照0x10026e7da..0x10026f41e连成原顺序更新链，504组、68,136,704字节、12,965次调用原对照零差异，涵盖巡视／警戒扫动／锁定朝向、四元数插值、眼部变换、地面射线、玩家／鸟落点、平滑、半径10→2.5、两次环境颜色查询、检测Marker及效果到期；后续交互／声音、真实资源／世界／渲染owner和视口／切图验收仍待接。",
+        "evidence": [
+          "docs/生物骨骼动画续接.md",
+          "docs/creature-construction.json",
+          "docs/creature-construction-oracle.json",
+          "docs/creature-kernel-oracle.json",
+          "docs/objects-nature-audit.json",
+          "docs/黑暗植物与生物加载续接.md",
+          "docs/creature-plant-load-native.json",
+          "docs/dark-creature-rail-oracle.json",
+          "docs/creature-objects-defaults.json",
+          "docs/creature-objects-default-oracle.json",
+          "docs/生物类续接.md",
+          "docs/dark-creature-load-oracle.json",
+          "docs/creature-lifecycle-native.json",
+          "docs/creature-lifecycle-oracle.json",
+          "docs/dark-creature-detect-native.json",
+          "docs/dark-creature-detect-oracle.json",
+          "tests/dark-creature-detect-runtime.test.ts",
+          "tests/fixtures/dark-creature-detect-native.json.gz",
+          "docs/dark-creature-motion-native.json",
+          "docs/dark-creature-motion-oracle.json",
+          "tests/dark-creature-motion-runtime.test.ts",
+          "tests/fixtures/dark-creature-motion-native.json.gz",
+          "docs/冥龙移动前半段与打包门槛.md",
+          "docs/dark-creature-combat-native.json",
+          "docs/dark-creature-combat-oracle.json",
+          "tests/dark-creature-combat-runtime.test.ts",
+          "tests/fixtures/dark-creature-combat-native.json.gz",
+          "docs/冥龙追击攻击命中与打包门槛.md",
+          "docs/dark-creature-spotlight-native.json",
+          "docs/dark-creature-spotlight-oracle.json",
+          "docs/冥龙探照光圈与鱼群轨道控制续接.md"
+        ]
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "partial",
+        "note": "原构造／保存字段／池分配及巡逻／冷却轨道切换已核验；完整普通 Load 86 组原对照零差异，含自身模型、五项纹理、骨骼、风场、Marker 和晚期轨道断言。Model／动画／Rail 几何／资源 owner、攻击碰撞、AI、音效和动态绘制仍待接。 本轮完整警戒转换62组、返回／冷却状态64组原对照零差异；包含24组实际Motion.Seek＋SwitchRail组合，保留检测前警戒快照、检测回调后重读、十秒转换计时、头骨位置、速度缩放、冷却切轨和晚期重置。本次完整玩家／鸟目标检测与实际警戒调用者组合179组、35,741,516字节、2,854次有序服务调用原对照零差异；保留六个近锚点、能量／启用门控、严格距离／视锥筛选、原候选顺序、射线遮挡、当前目标警戒和64鸟槽边界。原atan2f／cosf显式记录重放；真实Avatar／世界／射线owner、完整外层Update、其他状态／攻击／动画／碰撞和资源owner仍待接。 本次原外层Update前半段0x10026ddb0..0x10026e7da已恢复，止于Model.SetTransform与回调owner写入，包含状态分支、上下边界更新、速度平滑、真实速度／位置积分、朝向基与缩放矩阵。完整出现辅助函数和原Motion.FollowRail已恢复并接实际Seek／SwitchRail；587组、80,561,452字节、5,656次调用原对照零差异，包含真正组合入口、阈值／NaN／有向零、私有W、目标有效性、回调重读与连续帧。该阶段仅为部分外层Update；追击／攻击内部、后半段探照／音效／交互、真实Model／动画／GPU及场景生命周期仍待接，完整生物验收仍为0。 本阶段完整Chase／Attack／Hit及实际固定AvatarBarn索引／active读取已恢复，接已验证的外层移动前半段，585组、315,046,180字节、13,024次调用原对照零差异。涵盖水平追击阻尼、锁定音效／动作、计时后攻击、目标预测与脱离方向、重复版本检查、严格命中阈值、64鸟槽与16玩家槽、当地玩家反馈、实际命中函数组合、特效／音效请求、显式私有up.W、owner／模板／调色板回调重读及连续帧。原Hit函数已恢复，但Bird.Hit及真实动画／音效／交互／粒子资源owner仍为明确服务。完整外层Update后半段、真实场景Model／动画／GPU和自主视口／切图／卸载验收仍未完成，完整生物验收仍为0。 本阶段眼部／探照0x10026e7da..0x10026f41e连成原顺序更新链，504组、68,136,704字节、12,965次调用原对照零差异，涵盖巡视／警戒扫动／锁定朝向、四元数插值、眼部变换、地面射线、玩家／鸟落点、平滑、半径10→2.5、两次环境颜色查询、检测Marker及效果到期；后续交互／声音、真实资源／世界／渲染owner和视口／切图验收仍待接。",
+        "evidence": [
+          "docs/生物骨骼动画续接.md",
+          "docs/creature-construction.json",
+          "docs/creature-construction-oracle.json",
+          "docs/creature-kernel-oracle.json",
+          "docs/objects-nature-audit.json",
+          "docs/黑暗植物与生物加载续接.md",
+          "docs/creature-plant-load-native.json",
+          "docs/dark-creature-rail-oracle.json",
+          "docs/creature-objects-defaults.json",
+          "docs/creature-objects-default-oracle.json",
+          "docs/生物类续接.md",
+          "docs/dark-creature-load-oracle.json",
+          "docs/creature-lifecycle-native.json",
+          "docs/creature-lifecycle-oracle.json",
+          "docs/dark-creature-detect-native.json",
+          "docs/dark-creature-detect-oracle.json",
+          "tests/dark-creature-detect-runtime.test.ts",
+          "tests/fixtures/dark-creature-detect-native.json.gz",
+          "docs/dark-creature-motion-native.json",
+          "docs/dark-creature-motion-oracle.json",
+          "tests/dark-creature-motion-runtime.test.ts",
+          "tests/fixtures/dark-creature-motion-native.json.gz",
+          "docs/冥龙移动前半段与打包门槛.md",
+          "docs/dark-creature-combat-native.json",
+          "docs/dark-creature-combat-oracle.json",
+          "tests/dark-creature-combat-runtime.test.ts",
+          "tests/fixtures/dark-creature-combat-native.json.gz",
+          "docs/冥龙追击攻击命中与打包门槛.md",
+          "docs/dark-creature-spotlight-native.json",
+          "docs/dark-creature-spotlight-oracle.json",
+          "docs/冥龙探照光圈与鱼群轨道控制续接.md"
+        ]
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "verified",
+        "note": "原构造／保存字段／池分配及巡逻／冷却轨道切换已核验；完整普通 Load 86 组原对照零差异，含自身模型、五项纹理、骨骼、风场、Marker 和晚期轨道断言。Model／动画／Rail 几何／资源 owner、攻击碰撞、AI、音效和动态绘制仍待接。 本轮完整警戒转换62组、返回／冷却状态64组原对照零差异；包含24组实际Motion.Seek＋SwitchRail组合，保留检测前警戒快照、检测回调后重读、十秒转换计时、头骨位置、速度缩放、冷却切轨和晚期重置。本次完整玩家／鸟目标检测与实际警戒调用者组合179组、35,741,516字节、2,854次有序服务调用原对照零差异；保留六个近锚点、能量／启用门控、严格距离／视锥筛选、原候选顺序、射线遮挡、当前目标警戒和64鸟槽边界。原atan2f／cosf显式记录重放；真实Avatar／世界／射线owner、完整外层Update、其他状态／攻击／动画／碰撞和资源owner仍待接。 本次原外层Update前半段0x10026ddb0..0x10026e7da已恢复，止于Model.SetTransform与回调owner写入，包含状态分支、上下边界更新、速度平滑、真实速度／位置积分、朝向基与缩放矩阵。完整出现辅助函数和原Motion.FollowRail已恢复并接实际Seek／SwitchRail；587组、80,561,452字节、5,656次调用原对照零差异，包含真正组合入口、阈值／NaN／有向零、私有W、目标有效性、回调重读与连续帧。该阶段仅为部分外层Update；追击／攻击内部、后半段探照／音效／交互、真实Model／动画／GPU及场景生命周期仍待接，完整生物验收仍为0。 本阶段完整Chase／Attack／Hit及实际固定AvatarBarn索引／active读取已恢复，接已验证的外层移动前半段，585组、315,046,180字节、13,024次调用原对照零差异。涵盖水平追击阻尼、锁定音效／动作、计时后攻击、目标预测与脱离方向、重复版本检查、严格命中阈值、64鸟槽与16玩家槽、当地玩家反馈、实际命中函数组合、特效／音效请求、显式私有up.W、owner／模板／调色板回调重读及连续帧。原Hit函数已恢复，但Bird.Hit及真实动画／音效／交互／粒子资源owner仍为明确服务。完整外层Update后半段、真实场景Model／动画／GPU和自主视口／切图／卸载验收仍未完成，完整生物验收仍为0。 本阶段眼部／探照0x10026e7da..0x10026f41e连成原顺序更新链，504组、68,136,704字节、12,965次调用原对照零差异，涵盖巡视／警戒扫动／锁定朝向、四元数插值、眼部变换、地面射线、玩家／鸟落点、平滑、半径10→2.5、两次环境颜色查询、检测Marker及效果到期；后续交互／声音、真实资源／世界／渲染owner和视口／切图验收仍待接。",
+        "evidence": [
+          "docs/生物骨骼动画续接.md",
+          "docs/creature-construction.json",
+          "docs/creature-construction-oracle.json",
+          "docs/creature-kernel-oracle.json",
+          "docs/objects-nature-audit.json",
+          "docs/黑暗植物与生物加载续接.md",
+          "docs/creature-plant-load-native.json",
+          "docs/dark-creature-rail-oracle.json",
+          "docs/creature-objects-defaults.json",
+          "docs/creature-objects-default-oracle.json",
+          "docs/生物类续接.md",
+          "docs/dark-creature-load-oracle.json",
+          "docs/creature-lifecycle-native.json",
+          "docs/creature-lifecycle-oracle.json",
+          "docs/dark-creature-detect-native.json",
+          "docs/dark-creature-detect-oracle.json",
+          "tests/dark-creature-detect-runtime.test.ts",
+          "tests/fixtures/dark-creature-detect-native.json.gz",
+          "docs/dark-creature-motion-native.json",
+          "docs/dark-creature-motion-oracle.json",
+          "tests/dark-creature-motion-runtime.test.ts",
+          "tests/fixtures/dark-creature-motion-native.json.gz",
+          "docs/冥龙移动前半段与打包门槛.md",
+          "docs/dark-creature-combat-native.json",
+          "docs/dark-creature-combat-oracle.json",
+          "tests/dark-creature-combat-runtime.test.ts",
+          "tests/fixtures/dark-creature-combat-native.json.gz",
+          "docs/冥龙追击攻击命中与打包门槛.md",
+          "docs/dark-creature-spotlight-native.json",
+          "docs/dark-creature-spotlight-oracle.json",
+          "docs/冥龙探照光圈与鱼群轨道控制续接.md"
+        ]
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "原构造／保存字段／池分配及巡逻／冷却轨道切换已核验；完整普通 Load 86 组原对照零差异，含自身模型、五项纹理、骨骼、风场、Marker 和晚期轨道断言。Model／动画／Rail 几何／资源 owner、攻击碰撞、AI、音效和动态绘制仍待接。 本轮完整警戒转换62组、返回／冷却状态64组原对照零差异；包含24组实际Motion.Seek＋SwitchRail组合，保留检测前警戒快照、检测回调后重读、十秒转换计时、头骨位置、速度缩放、冷却切轨和晚期重置。本次完整玩家／鸟目标检测与实际警戒调用者组合179组、35,741,516字节、2,854次有序服务调用原对照零差异；保留六个近锚点、能量／启用门控、严格距离／视锥筛选、原候选顺序、射线遮挡、当前目标警戒和64鸟槽边界。原atan2f／cosf显式记录重放；真实Avatar／世界／射线owner、完整外层Update、其他状态／攻击／动画／碰撞和资源owner仍待接。 本次原外层Update前半段0x10026ddb0..0x10026e7da已恢复，止于Model.SetTransform与回调owner写入，包含状态分支、上下边界更新、速度平滑、真实速度／位置积分、朝向基与缩放矩阵。完整出现辅助函数和原Motion.FollowRail已恢复并接实际Seek／SwitchRail；587组、80,561,452字节、5,656次调用原对照零差异，包含真正组合入口、阈值／NaN／有向零、私有W、目标有效性、回调重读与连续帧。该阶段仅为部分外层Update；追击／攻击内部、后半段探照／音效／交互、真实Model／动画／GPU及场景生命周期仍待接，完整生物验收仍为0。 本阶段完整Chase／Attack／Hit及实际固定AvatarBarn索引／active读取已恢复，接已验证的外层移动前半段，585组、315,046,180字节、13,024次调用原对照零差异。涵盖水平追击阻尼、锁定音效／动作、计时后攻击、目标预测与脱离方向、重复版本检查、严格命中阈值、64鸟槽与16玩家槽、当地玩家反馈、实际命中函数组合、特效／音效请求、显式私有up.W、owner／模板／调色板回调重读及连续帧。原Hit函数已恢复，但Bird.Hit及真实动画／音效／交互／粒子资源owner仍为明确服务。完整外层Update后半段、真实场景Model／动画／GPU和自主视口／切图／卸载验收仍未完成，完整生物验收仍为0。 本阶段眼部／探照0x10026e7da..0x10026f41e连成原顺序更新链，504组、68,136,704字节、12,965次调用原对照零差异，涵盖巡视／警戒扫动／锁定朝向、四元数插值、眼部变换、地面射线、玩家／鸟落点、平滑、半径10→2.5、两次环境颜色查询、检测Marker及效果到期；后续交互／声音、真实资源／世界／渲染owner和视口／切图验收仍待接。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "DuskGraveyard:n66",
+      "level": "DuskGraveyard",
+      "nodeId": 66,
+      "name": "BstNode_1475018768",
+      "className": "DarkCreature",
+      "classIndex": 13,
+      "sourceOffset": 40942,
+      "sourceLength": 91,
+      "sourceSha256": "553c897819d0887be99442497f642316f6d340d54ac98f08b39b97f79c8c0ac7",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n66/p1",
+          "fieldName": "params",
+          "target": "DuskGraveyard:n1063",
+          "targetNodeId": 1063,
+          "offset": 41029
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n354",
+      "level": "DuskGraveyard",
+      "nodeId": 354,
+      "name": "BstNode_611",
+      "className": "DarkCreature",
+      "classIndex": 13,
+      "sourceOffset": 109041,
+      "sourceLength": 84,
+      "sourceSha256": "91137b92bbc776773630957a2c47ffda5ed03b1e4338db835f3b1b3454084aed",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n354/p1",
+          "fieldName": "params",
+          "target": "DuskGraveyard:n373",
+          "targetNodeId": 373,
+          "offset": 109121
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n1103",
+      "level": "DuskGraveyard",
+      "nodeId": 1103,
+      "name": "BstNode_1475018766",
+      "className": "DarkCreature",
+      "classIndex": 13,
+      "sourceOffset": 284710,
+      "sourceLength": 91,
+      "sourceSha256": "f7cc4a86db04306143470611f636caa8ae3974b467d87a71ce663e130e8495b9",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1103/p1",
+          "fieldName": "params",
+          "target": "DuskGraveyard:n1079",
+          "targetNodeId": 1079,
+          "offset": 284797
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n1123",
+      "level": "DuskGraveyard",
+      "nodeId": 1123,
+      "name": "BstNode_1475018764",
+      "className": "DarkCreature",
+      "classIndex": 13,
+      "sourceOffset": 288547,
+      "sourceLength": 91,
+      "sourceSha256": "875b8b09a2bab8958e051055fa226517354d60ad861ff0f2ef2eb9f55ee76199",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1123/p1",
+          "fieldName": "params",
+          "target": "DuskGraveyard:n215",
+          "targetNodeId": 215,
+          "offset": 288634
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n1175",
+      "level": "DuskGraveyard",
+      "nodeId": 1175,
+      "name": "BstNode_2345993241",
+      "className": "DarkCreature",
+      "classIndex": 13,
+      "sourceOffset": 300213,
+      "sourceLength": 91,
+      "sourceSha256": "68f6b00fdd65ea6768028a2cb25a5449069a9d78bfe90fbf7c2edfb3d57ff0de",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1175/p1",
+          "fieldName": "params",
+          "target": "DuskGraveyard:n1053",
+          "targetNodeId": 1053,
+          "offset": 300300
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n1219",
+      "level": "DuskGraveyard",
+      "nodeId": 1219,
+      "name": "BstNode_1475018763",
+      "className": "DarkCreature",
+      "classIndex": 13,
+      "sourceOffset": 309370,
+      "sourceLength": 91,
+      "sourceSha256": "c954c63082ae8e4eb122f26f01e068798f12c32afa48a3c1adbd97bc738cfb3c",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1219/p1",
+          "fieldName": "params",
+          "target": "DuskGraveyard:n1055",
+          "targetNodeId": 1055,
+          "offset": 309457
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n631",
+      "level": "DuskMid",
+      "nodeId": 631,
+      "name": "BstNode_2345992697",
+      "className": "DarkCreature",
+      "classIndex": 55,
+      "sourceOffset": 135902,
+      "sourceLength": 91,
+      "sourceSha256": "68ba5021ac3c5f25b1e39915406e26662779e0a8890424749205cdf2f61429fa",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n631/p1",
+          "fieldName": "params",
+          "target": "DuskMid:n586",
+          "targetNodeId": 586,
+          "offset": 135989
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n665",
+      "level": "DuskMid",
+      "nodeId": 665,
+      "name": "BstNode_2345992674",
+      "className": "DarkCreature",
+      "classIndex": 55,
+      "sourceOffset": 141467,
+      "sourceLength": 91,
+      "sourceSha256": "bce2c538020c1f77cebaf2092fecd4ebb6323a1db1cde7bd05cecee9e5e350b4",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n665/p1",
+          "fieldName": "params",
+          "target": "DuskMid:n712",
+          "targetNodeId": 712,
+          "offset": 141554
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n952",
+      "level": "DuskMid",
+      "nodeId": 952,
+      "name": "BstNode_2345992646",
+      "className": "DarkCreature",
+      "classIndex": 55,
+      "sourceOffset": 203490,
+      "sourceLength": 91,
+      "sourceSha256": "6b2b06cebbd32f725eeecd4b54b3cffbda2c140d2b2103aedb201dd6c3bd8217",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n952/p1",
+          "fieldName": "params",
+          "target": "DuskMid:n290",
+          "targetNodeId": 290,
+          "offset": 203577
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n1",
+      "level": "Storm",
+      "nodeId": 1,
+      "name": "BstNode_2529559050",
+      "className": "DarkCreature",
+      "classIndex": 1,
+      "sourceOffset": 23546,
+      "sourceLength": 91,
+      "sourceSha256": "eb205f4697d6770538ce74a16f24f36f7775d9c568b67028f697d32ce5cdbbfd",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1/p1",
+          "fieldName": "params",
+          "target": "Storm:n612",
+          "targetNodeId": 612,
+          "offset": 23633
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n381",
+      "level": "Storm",
+      "nodeId": 381,
+      "name": "BstNode_2529559047",
+      "className": "DarkCreature",
+      "classIndex": 1,
+      "sourceOffset": 92050,
+      "sourceLength": 91,
+      "sourceSha256": "00219cf49d43c9d8dee2516fb581418d0821fd90cbce5e9f40267805769b86da",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n381/p1",
+          "fieldName": "params",
+          "target": "Storm:n28",
+          "targetNodeId": 28,
+          "offset": 92137
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n795",
+      "level": "Storm",
+      "nodeId": 795,
+      "name": "BstNode_2529559882",
+      "className": "DarkCreature",
+      "classIndex": 1,
+      "sourceOffset": 165066,
+      "sourceLength": 91,
+      "sourceSha256": "b816f557bdfd06d1d06c2a815ab0ed13105ae66cf7bd4f77d4fed01fb308e9bb",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n795/p1",
+          "fieldName": "params",
+          "target": "Storm:n1526",
+          "targetNodeId": 1526,
+          "offset": 165153
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n814",
+      "level": "Storm",
+      "nodeId": 814,
+      "name": "BstNode_2529559601",
+      "className": "DarkCreature",
+      "classIndex": 1,
+      "sourceOffset": 167902,
+      "sourceLength": 91,
+      "sourceSha256": "5034e83a3a593a43bb0e34d4e3bb8f740d807cf66d585c429444198609c5e6dd",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n814/p1",
+          "fieldName": "params",
+          "target": "Storm:n720",
+          "targetNodeId": 720,
+          "offset": 167989
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "DuskGraveyard",
+      "path": "Levels/DuskGraveyard/Objects.level.bin",
+      "sha256": "128b30dcbe40b68e68fc25d195b68dc39f897259453c02612049ccd37a90ffb4",
+      "bytes": 424333,
+      "nodes": 1791,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DuskGraveyard.json",
+      "markdown": "Objects对象清单/DuskGraveyard.md"
+    },
+    {
+      "level": "DuskMid",
+      "path": "Levels/DuskMid/Objects.level.bin",
+      "sha256": "899ca33226dabd04afecfe7888750938ff4e460cb586603364e150591e9cbda5",
+      "bytes": 234288,
+      "nodes": 1268,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DuskMid.json",
+      "markdown": "Objects对象清单/DuskMid.md"
+    },
+    {
+      "level": "Storm",
+      "path": "Levels/Storm/Objects.level.bin",
+      "sha256": "4be187f31f1ef86611831abeb45ed9c1deff5e925f3bae80a6be49af85fa52bd",
+      "bytes": 324849,
+      "nodes": 1954,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Storm.json",
+      "markdown": "Objects对象清单/Storm.md"
+    }
+  ]
+}

@@ -1,0 +1,2256 @@
+{
+  "className": "Npc_PlayAnim",
+  "functionGroup": "NPC 行为与社交",
+  "functionRole": "NPC 动画播放与速度",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "Npc_PlayAnim 的原默认值、继承初始化及 4 个序列化字段变体；原注册字段 3 项。"
+    },
+    {
+      "name": "NPC 动画播放与速度",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Npc（54 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "Npc_PlayAnim",
+    "category": "NPC 行为与社交",
+    "functionGroupId": "npc",
+    "functionRole": "NPC 动画播放与速度",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "Npc_PlayAnim 的原默认值、继承初始化及 4 个序列化字段变体；原注册字段 3 项。"
+      },
+      {
+        "name": "NPC 动画播放与速度",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Npc（54 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Npc",
+        "references": 54
+      }
+    ],
+    "rttiWorkingGroup": "交互、事件与任务",
+    "role": "对象实例类型",
+    "instances": 54,
+    "nestedInstances": 0,
+    "referenceFields": 54,
+    "declaredLevels": 16,
+    "levels": [
+      {
+        "level": "Dawn",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DayEnd",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DayHubCave",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Dusk",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DuskGraveyard",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DuskMid",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "HubReveal",
+        "nodes": 5,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Night",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Cave",
+        "nodes": 6,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_NestAndKeeper",
+        "nodes": 5,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Village",
+        "nodes": 9,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Rain",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainForest",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainMid",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SkyHub2",
+        "nodes": 7,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "StormEnd",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "anim",
+        "type": 1,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "npc",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "speedMult",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100cd0410",
+    "nativeRegisteredFields": [
+      {
+        "name": "npc",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP3NpcERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x1004c99f0",
+        "propertyAddress": "0x100ccec80"
+      },
+      {
+        "name": "anim",
+        "typeGetter": "__Z17GetMetaTypeByTypeINSt3__112basic_stringIcNS0_11char_traitsIcEE16StlPoolAllocatorIcEEEERK8MetaTypev",
+        "nativeOffset": 64,
+        "registrationFunction": "0x1004c99f0",
+        "propertyAddress": "0x100ccecd0"
+      },
+      {
+        "name": "speedMult",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 88,
+        "registrationFunction": "0x1004c99f0",
+        "propertyAddress": "0x100cced20"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 3 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "Dawn:n1078",
+      "level": "Dawn",
+      "nodeId": 1078,
+      "name": "BstNode_1747",
+      "className": "Npc_PlayAnim",
+      "classIndex": 93,
+      "sourceOffset": 197768,
+      "sourceLength": 30,
+      "sourceSha256": "59b8107484d7d9f2596ffdadd8062b25a4ae9456a1d57aa8c938f6c917de8f0c",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1078/p3",
+          "fieldName": "npc",
+          "target": "Dawn:n2713",
+          "targetNodeId": 2713,
+          "offset": 197794
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n86",
+      "level": "DayEnd",
+      "nodeId": 86,
+      "name": "BstNode_799",
+      "className": "Npc_PlayAnim",
+      "classIndex": 24,
+      "sourceOffset": 40216,
+      "sourceLength": 29,
+      "sourceSha256": "133a456c7671b4c20d62f61deb0a22b29fdfc0c709c679e0b36d5c32451460f0",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n86/p3",
+          "fieldName": "npc",
+          "target": "DayEnd:n788",
+          "targetNodeId": 788,
+          "offset": 40241
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n322",
+      "level": "DayEnd",
+      "nodeId": 322,
+      "name": "BstNode_798",
+      "className": "Npc_PlayAnim",
+      "classIndex": 24,
+      "sourceOffset": 84865,
+      "sourceLength": 29,
+      "sourceSha256": "fc89497bde9d80fc3b50b7ccb39f9357afc2b429e9c35923e3b97779955346c1",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n322/p3",
+          "fieldName": "npc",
+          "target": "DayEnd:n1082",
+          "targetNodeId": 1082,
+          "offset": 84890
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayHubCave:n152",
+      "level": "DayHubCave",
+      "nodeId": 152,
+      "name": "BstNode_2504654852",
+      "className": "Npc_PlayAnim",
+      "classIndex": 31,
+      "sourceOffset": 50555,
+      "sourceLength": 56,
+      "sourceSha256": "07d1e78d3fdd21c5d4a66fb01e21458f0a70fb652c34db68d61bd0f4e122df37",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n152/p3",
+          "fieldName": "npc",
+          "target": "DayHubCave:n164",
+          "targetNodeId": 164,
+          "offset": 50607
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayHubCave:n481",
+      "level": "DayHubCave",
+      "nodeId": 481,
+      "name": "BstNode_2504654858",
+      "className": "Npc_PlayAnim",
+      "classIndex": 31,
+      "sourceOffset": 114310,
+      "sourceLength": 56,
+      "sourceSha256": "aaf7a4784da73f667326ad756fa5d7f744da9164a02e656523a1cc625ceed216",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n481/p3",
+          "fieldName": "npc",
+          "target": "DayHubCave:n132",
+          "targetNodeId": 132,
+          "offset": 114362
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayHubCave:n644",
+      "level": "DayHubCave",
+      "nodeId": 644,
+      "name": "BstNode_2446917690",
+      "className": "Npc_PlayAnim",
+      "classIndex": 31,
+      "sourceOffset": 144695,
+      "sourceLength": 62,
+      "sourceSha256": "55124ab2242ad4dfe8921798987934ddc11d26c9af366c0c748272685ecfe19f",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n644/p3",
+          "fieldName": "npc",
+          "target": "DayHubCave:n542",
+          "targetNodeId": 542,
+          "offset": 144753
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayHubCave:n816",
+      "level": "DayHubCave",
+      "nodeId": 816,
+      "name": "BstNode_2446917691",
+      "className": "Npc_PlayAnim",
+      "classIndex": 31,
+      "sourceOffset": 175539,
+      "sourceLength": 62,
+      "sourceSha256": "dea2e51f9ad18bbc578d45356fb45ad37dee0848150ee4c4e79b3051f73f2e0f",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n816/p3",
+          "fieldName": "npc",
+          "target": "DayHubCave:n542",
+          "targetNodeId": 542,
+          "offset": 175597
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n191",
+      "level": "Dusk",
+      "nodeId": 191,
+      "name": "BstNode_2504654851",
+      "className": "Npc_PlayAnim",
+      "classIndex": 34,
+      "sourceOffset": 59522,
+      "sourceLength": 55,
+      "sourceSha256": "222365ab742ca690c79eebd42ead6a979ac07d0d30960b51cd8cdb2bd2dffc82",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n191/p3",
+          "fieldName": "npc",
+          "target": "Dusk:n536",
+          "targetNodeId": 536,
+          "offset": 59573
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n1146",
+      "level": "Dusk",
+      "nodeId": 1146,
+      "name": "BstNode_2504654884",
+      "className": "Npc_PlayAnim",
+      "classIndex": 34,
+      "sourceOffset": 234366,
+      "sourceLength": 52,
+      "sourceSha256": "3be044e1ff86375488cc8b7a83e0d0b09179f8746767e0a077c0b6b624b805dd",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1146/p3",
+          "fieldName": "npc",
+          "target": "Dusk:n320",
+          "targetNodeId": 320,
+          "offset": 234414
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n44",
+      "level": "DuskGraveyard",
+      "nodeId": 44,
+      "name": "BstNode_2504654867",
+      "className": "Npc_PlayAnim",
+      "classIndex": 11,
+      "sourceOffset": 35153,
+      "sourceLength": 51,
+      "sourceSha256": "8d17a0001b508109d2c89abe589c27461f7052b896ddbbb96c7652ce06efa1c7",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n44/p3",
+          "fieldName": "npc",
+          "target": "DuskGraveyard:n1346",
+          "targetNodeId": 1346,
+          "offset": 35200
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n39",
+      "level": "DuskMid",
+      "nodeId": 39,
+      "name": "BstNode_2504654850",
+      "className": "Npc_PlayAnim",
+      "classIndex": 13,
+      "sourceOffset": 27462,
+      "sourceLength": 58,
+      "sourceSha256": "3a4d63b941110567bf9b75027bc56c05c6fd02b535b3f3e5ae1e04cf05ea3895",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n39/p3",
+          "fieldName": "npc",
+          "target": "DuskMid:n884",
+          "targetNodeId": 884,
+          "offset": 27516
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n94",
+      "level": "HubReveal",
+      "nodeId": 94,
+      "name": "BstNode_2504654873",
+      "className": "Npc_PlayAnim",
+      "classIndex": 31,
+      "sourceOffset": 45876,
+      "sourceLength": 60,
+      "sourceSha256": "c8e9170c5b37ac055a277c93327d4d3b782c1fc8a8e4433edf9457f29f45be54",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n94/p3",
+          "fieldName": "npc",
+          "target": "HubReveal:n1056",
+          "targetNodeId": 1056,
+          "offset": 45932
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n522",
+      "level": "HubReveal",
+      "nodeId": 522,
+      "name": "BstNode_3156082745",
+      "className": "Npc_PlayAnim",
+      "classIndex": 31,
+      "sourceOffset": 118452,
+      "sourceLength": 60,
+      "sourceSha256": "a989709c9bb7d0bef76fc36919f9a76de7af3590cb945e3b38ee9fe6f451b891",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n522/p3",
+          "fieldName": "npc",
+          "target": "HubReveal:n832",
+          "targetNodeId": 832,
+          "offset": 118508
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n747",
+      "level": "HubReveal",
+      "nodeId": 747,
+      "name": "BstNode_3156082748",
+      "className": "Npc_PlayAnim",
+      "classIndex": 31,
+      "sourceOffset": 154748,
+      "sourceLength": 43,
+      "sourceSha256": "cb773eb3cae9fd809995ffc2b4d6f727aa03a089f801555757bffb30b5a19219",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n747/p3",
+          "fieldName": "npc",
+          "target": "HubReveal:n95",
+          "targetNodeId": 95,
+          "offset": 154787
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n752",
+      "level": "HubReveal",
+      "nodeId": 752,
+      "name": "BstNode_3156082749",
+      "className": "Npc_PlayAnim",
+      "classIndex": 31,
+      "sourceOffset": 155945,
+      "sourceLength": 43,
+      "sourceSha256": "26e44c25be8ab1e8660633986be3a2674917344890ddc089f898abacc49fb266",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n752/p3",
+          "fieldName": "npc",
+          "target": "HubReveal:n832",
+          "targetNodeId": 832,
+          "offset": 155984
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n1419",
+      "level": "HubReveal",
+      "nodeId": 1419,
+      "name": "BstNode_3156082744",
+      "className": "Npc_PlayAnim",
+      "classIndex": 31,
+      "sourceOffset": 268377,
+      "sourceLength": 59,
+      "sourceSha256": "6d33d3b7f7a28e1e15161090803e7b05a446d5e871665b0c55822281e4b9b4d1",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1419/p3",
+          "fieldName": "npc",
+          "target": "HubReveal:n95",
+          "targetNodeId": 95,
+          "offset": 268432
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2537",
+      "level": "Night",
+      "nodeId": 2537,
+      "name": "BstNode_34603388",
+      "className": "Npc_PlayAnim",
+      "classIndex": 73,
+      "sourceOffset": 397654,
+      "sourceLength": 34,
+      "sourceSha256": "6853f6a10c7dd952914d2d188fefe9584cc51743813b25f9683166d581f12d94",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2537/p3",
+          "fieldName": "npc",
+          "target": "Night:n646",
+          "targetNodeId": 646,
+          "offset": 397684
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n328",
+      "level": "Prairie_Cave",
+      "nodeId": 328,
+      "name": "BstNode_2504654948",
+      "className": "Npc_PlayAnim",
+      "classIndex": 40,
+      "sourceOffset": 98539,
+      "sourceLength": 57,
+      "sourceSha256": "b8cf36905341b1c4cc9e512fcda1668042d9c935605e6b990106a993a165170c",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n328/p3",
+          "fieldName": "npc",
+          "target": "Prairie_Cave:n228",
+          "targetNodeId": 228,
+          "offset": 98592
+        }
+      ],
+      "incomingReferenceCount": 4,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n364",
+      "level": "Prairie_Cave",
+      "nodeId": 364,
+      "name": "BstNode_2504654990",
+      "className": "Npc_PlayAnim",
+      "classIndex": 40,
+      "sourceOffset": 108274,
+      "sourceLength": 57,
+      "sourceSha256": "8a7f0ba5a0e4846a8a05bdc6f57ab135b7392329b210f96ff3db0a64779decb8",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n364/p3",
+          "fieldName": "npc",
+          "target": "Prairie_Cave:n807",
+          "targetNodeId": 807,
+          "offset": 108327
+        }
+      ],
+      "incomingReferenceCount": 4,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n377",
+      "level": "Prairie_Cave",
+      "nodeId": 377,
+      "name": "BstNode_2504654883",
+      "className": "Npc_PlayAnim",
+      "classIndex": 40,
+      "sourceOffset": 111963,
+      "sourceLength": 61,
+      "sourceSha256": "fd319c0b75c6a90a2e9c4d43148eed0099a41a81268305d0de1e02ad1ba9f1a7",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n377/p3",
+          "fieldName": "npc",
+          "target": "Prairie_Cave:n228",
+          "targetNodeId": 228,
+          "offset": 112020
+        }
+      ],
+      "incomingReferenceCount": 4,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n466",
+      "level": "Prairie_Cave",
+      "nodeId": 466,
+      "name": "BstNode_2504654967",
+      "className": "Npc_PlayAnim",
+      "classIndex": 40,
+      "sourceOffset": 131979,
+      "sourceLength": 51,
+      "sourceSha256": "067c7441e80f5b5ad933fbcc1bce00c43a6d9f031c614b5a369146c13a1b9e0c",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n466/p3",
+          "fieldName": "npc",
+          "target": "Prairie_Cave:n807",
+          "targetNodeId": 807,
+          "offset": 132026
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n981",
+      "level": "Prairie_Cave",
+      "nodeId": 981,
+      "name": "BstNode_2504654957",
+      "className": "Npc_PlayAnim",
+      "classIndex": 40,
+      "sourceOffset": 250300,
+      "sourceLength": 62,
+      "sourceSha256": "a1f0998332f00c30a9e1c351f4e2ca8bef9f15d81d7423a4254862d29a5cb6de",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n981/p3",
+          "fieldName": "npc",
+          "target": "Prairie_Cave:n228",
+          "targetNodeId": 228,
+          "offset": 250358
+        }
+      ],
+      "incomingReferenceCount": 4,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n1360",
+      "level": "Prairie_Cave",
+      "nodeId": 1360,
+      "name": "BstNode_2504654966",
+      "className": "Npc_PlayAnim",
+      "classIndex": 40,
+      "sourceOffset": 338490,
+      "sourceLength": 61,
+      "sourceSha256": "7b7abf402f0caf7dc3cdae557b19d3f31e1e2c333efc342193b7311aa3aa686a",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1360/p3",
+          "fieldName": "npc",
+          "target": "Prairie_Cave:n228",
+          "targetNodeId": 228,
+          "offset": 338547
+        }
+      ],
+      "incomingReferenceCount": 4,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n105",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 105,
+      "name": "BstNode_656801801",
+      "className": "Npc_PlayAnim",
+      "classIndex": 22,
+      "sourceOffset": 44591,
+      "sourceLength": 53,
+      "sourceSha256": "344235c9a6b04ba9f74a18521f502d224c02bb5eda6a9f19456f4a1e131b06b1",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n105/p3",
+          "fieldName": "npc",
+          "target": "Prairie_NestAndKeeper:n947",
+          "targetNodeId": 947,
+          "offset": 44640
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n210",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 210,
+      "name": "BstNode_2504654997",
+      "className": "Npc_PlayAnim",
+      "classIndex": 22,
+      "sourceOffset": 70854,
+      "sourceLength": 53,
+      "sourceSha256": "ce9f85bc191f0602b061db63f710cad56840305b22c5edac7cd8da22085e8260",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n210/p3",
+          "fieldName": "npc",
+          "target": "Prairie_NestAndKeeper:n820",
+          "targetNodeId": 820,
+          "offset": 70903
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n402",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 402,
+      "name": "BstNode_2504654996",
+      "className": "Npc_PlayAnim",
+      "classIndex": 22,
+      "sourceOffset": 113744,
+      "sourceLength": 58,
+      "sourceSha256": "8d38f57821144cef8ee8721b71e6a9e772d0eb694169617400af657b4d0d54b5",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n402/p3",
+          "fieldName": "npc",
+          "target": "Prairie_NestAndKeeper:n347",
+          "targetNodeId": 347,
+          "offset": 113798
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n671",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 671,
+      "name": "BstNode_2060386313",
+      "className": "Npc_PlayAnim",
+      "classIndex": 22,
+      "sourceOffset": 166750,
+      "sourceLength": 52,
+      "sourceSha256": "e10da42a8dc83c84d3d60c249817f81284a745db5fd81c122daa0e23a9950b78",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n671/p3",
+          "fieldName": "npc",
+          "target": "Prairie_NestAndKeeper:n820",
+          "targetNodeId": 820,
+          "offset": 166798
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n847",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 847,
+      "name": "BstNode_2060386310",
+      "className": "Npc_PlayAnim",
+      "classIndex": 22,
+      "sourceOffset": 211195,
+      "sourceLength": 57,
+      "sourceSha256": "d57c754efad83913c0887383bd6d9ec4fac4da2887f0ae4d200a4cf237bf4ff4",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n847/p3",
+          "fieldName": "npc",
+          "target": "Prairie_NestAndKeeper:n347",
+          "targetNodeId": 347,
+          "offset": 211248
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n157",
+      "level": "Prairie_Village",
+      "nodeId": 157,
+      "name": "BstNode_656801801",
+      "className": "Npc_PlayAnim",
+      "classIndex": 37,
+      "sourceOffset": 56679,
+      "sourceLength": 58,
+      "sourceSha256": "8ea7523eee41f5a1bff02b65559621999fe7297fe6c041aa91a59388778f98f3",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n157/p3",
+          "fieldName": "npc",
+          "target": "Prairie_Village:n971",
+          "targetNodeId": 971,
+          "offset": 56733
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n405",
+      "level": "Prairie_Village",
+      "nodeId": 405,
+      "name": "BstNode_2504655008",
+      "className": "Npc_PlayAnim",
+      "classIndex": 37,
+      "sourceOffset": 96506,
+      "sourceLength": 47,
+      "sourceSha256": "144d7750e4b785301efca1a969cea0611739c8470232995063610f925b4c155d",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n405/p3",
+          "fieldName": "npc",
+          "target": "Prairie_Village:n351",
+          "targetNodeId": 351,
+          "offset": 96549
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n722",
+      "level": "Prairie_Village",
+      "nodeId": 722,
+      "name": "BstNode_656801802",
+      "className": "Npc_PlayAnim",
+      "classIndex": 37,
+      "sourceOffset": 147703,
+      "sourceLength": 58,
+      "sourceSha256": "3507c54675e467a142fa9533fe1a06858e9cbeb1005fb09e865a208b3d0c413d",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n722/p3",
+          "fieldName": "npc",
+          "target": "Prairie_Village:n2617",
+          "targetNodeId": 2617,
+          "offset": 147757
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n912",
+      "level": "Prairie_Village",
+      "nodeId": 912,
+      "name": "BstNode_1842806797",
+      "className": "Npc_PlayAnim",
+      "classIndex": 37,
+      "sourceOffset": 180202,
+      "sourceLength": 54,
+      "sourceSha256": "c878c244bd439d913bc346545da4ef7b4766275fa81ef2e6e6779afb05fdaffe",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n912/p3",
+          "fieldName": "npc",
+          "target": "Prairie_Village:n1356",
+          "targetNodeId": 1356,
+          "offset": 180252
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n968",
+      "level": "Prairie_Village",
+      "nodeId": 968,
+      "name": "BstNode_2504655070",
+      "className": "Npc_PlayAnim",
+      "classIndex": 37,
+      "sourceOffset": 189764,
+      "sourceLength": 50,
+      "sourceSha256": "faab34ef843b4bbeb70df96f7808fdfaedf302ffb572ba399895e424417a95ee",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n968/p3",
+          "fieldName": "npc",
+          "target": "Prairie_Village:n2396",
+          "targetNodeId": 2396,
+          "offset": 189810
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n975",
+      "level": "Prairie_Village",
+      "nodeId": 975,
+      "name": "BstNode_2504654856",
+      "className": "Npc_PlayAnim",
+      "classIndex": 37,
+      "sourceOffset": 190880,
+      "sourceLength": 51,
+      "sourceSha256": "2c11bb9f2f2e744359020c8b30047c1a17144ee072fd3012e6238fac64e80a32",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n975/p3",
+          "fieldName": "npc",
+          "target": "Prairie_Village:n2427",
+          "targetNodeId": 2427,
+          "offset": 190927
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1053",
+      "level": "Prairie_Village",
+      "nodeId": 1053,
+      "name": "BstNode_1842806835",
+      "className": "Npc_PlayAnim",
+      "classIndex": 37,
+      "sourceOffset": 204061,
+      "sourceLength": 53,
+      "sourceSha256": "7c5683e83861a9fd7f23aac3f3c93d6bc1330ebf3490a0f28253efe8c5019a5a",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1053/p3",
+          "fieldName": "npc",
+          "target": "Prairie_Village:n1528",
+          "targetNodeId": 1528,
+          "offset": 204110
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1474",
+      "level": "Prairie_Village",
+      "nodeId": 1474,
+      "name": "BstNode_2504654869",
+      "className": "Npc_PlayAnim",
+      "classIndex": 37,
+      "sourceOffset": 266671,
+      "sourceLength": 51,
+      "sourceSha256": "bdd899459fe5d1323cc8cef9ca18a7b8661f0507f8ea824750bc3d7b41f24eeb",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1474/p3",
+          "fieldName": "npc",
+          "target": "Prairie_Village:n2427",
+          "targetNodeId": 2427,
+          "offset": 266718
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1492",
+      "level": "Prairie_Village",
+      "nodeId": 1492,
+      "name": "BstNode_2504654854",
+      "className": "Npc_PlayAnim",
+      "classIndex": 37,
+      "sourceOffset": 269256,
+      "sourceLength": 48,
+      "sourceSha256": "eb6ad2376bb81f8610f45f370ef7a9ba9463152928916b53344610afa79e7cdf",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1492/p3",
+          "fieldName": "npc",
+          "target": "Prairie_Village:n2427",
+          "targetNodeId": 2427,
+          "offset": 269300
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n247",
+      "level": "Rain",
+      "nodeId": 247,
+      "name": "BstNode_2345992326",
+      "className": "Npc_PlayAnim",
+      "classIndex": 36,
+      "sourceOffset": 83657,
+      "sourceLength": 47,
+      "sourceSha256": "7aa6d6a70bb4408a0515325d53bbb469524ee3a682e68a9f5e044ac3c5653789",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n247/p3",
+          "fieldName": "npc",
+          "target": "Rain:n446",
+          "targetNodeId": 446,
+          "offset": 83700
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n704",
+      "level": "Rain",
+      "nodeId": 704,
+      "name": "BstNode_2345992289",
+      "className": "Npc_PlayAnim",
+      "classIndex": 36,
+      "sourceOffset": 188206,
+      "sourceLength": 43,
+      "sourceSha256": "7dcdbd0a3063bfdaf8ef333f2fa4d2a4e21780f12f32b1e2cc5fb04aa19a831b",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n704/p3",
+          "fieldName": "npc",
+          "target": "Rain:n1041",
+          "targetNodeId": 1041,
+          "offset": 188245
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n1421",
+      "level": "Rain",
+      "nodeId": 1421,
+      "name": "BstNode_2345992340",
+      "className": "Npc_PlayAnim",
+      "classIndex": 36,
+      "sourceOffset": 345817,
+      "sourceLength": 47,
+      "sourceSha256": "d02a60e55a11a19d844ba5afea047c44c4d136188ec2347e04329b9b987b4119",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1421/p3",
+          "fieldName": "npc",
+          "target": "Rain:n1041",
+          "targetNodeId": 1041,
+          "offset": 345860
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n1428",
+      "level": "Rain",
+      "nodeId": 1428,
+      "name": "BstNode_2345992341",
+      "className": "Npc_PlayAnim",
+      "classIndex": 36,
+      "sourceOffset": 348128,
+      "sourceLength": 36,
+      "sourceSha256": "98171afdb00b3e8bbc921d1ec6504b25503fcfd0310712aae124e0f9df12b4fc",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1428/p3",
+          "fieldName": "npc",
+          "target": "Rain:n1041",
+          "targetNodeId": 1041,
+          "offset": 348160
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n1160",
+      "level": "RainForest",
+      "nodeId": 1160,
+      "name": "BstNode_2504654850",
+      "className": "Npc_PlayAnim",
+      "classIndex": 65,
+      "sourceOffset": 259642,
+      "sourceLength": 58,
+      "sourceSha256": "3015e76e25c605ec8038fc6fdc0935de730c4cb90d12a5e4382b716fab11ec72",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1160/p3",
+          "fieldName": "npc",
+          "target": "RainForest:n162",
+          "targetNodeId": 162,
+          "offset": 259696
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n1683",
+      "level": "RainMid",
+      "nodeId": 1683,
+      "name": "BstNode_2345992863",
+      "className": "Npc_PlayAnim",
+      "classIndex": 76,
+      "sourceOffset": 337082,
+      "sourceLength": 65,
+      "sourceSha256": "984729c335057c3e26b3ae356a21d8081c54c1d6c07e387c2a3b9339762ce867",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1683/p3",
+          "fieldName": "npc",
+          "target": "RainMid:n606",
+          "targetNodeId": 606,
+          "offset": 337143
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n130",
+      "level": "SkyHub2",
+      "nodeId": 130,
+      "name": "BstNode_2504654873",
+      "className": "Npc_PlayAnim",
+      "classIndex": 29,
+      "sourceOffset": 56966,
+      "sourceLength": 56,
+      "sourceSha256": "db3303384b2f61b892c1d9acc89c04098cd27ff39b379a8c9a9b1784ac0b24df",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n130/p3",
+          "fieldName": "npc",
+          "target": "SkyHub2:n2062",
+          "targetNodeId": 2062,
+          "offset": 57018
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n337",
+      "level": "SkyHub2",
+      "nodeId": 337,
+      "name": "BstNode_2529558622",
+      "className": "Npc_PlayAnim",
+      "classIndex": 29,
+      "sourceOffset": 97788,
+      "sourceLength": 43,
+      "sourceSha256": "de2b2e877266db16474a9237f22d0fa72125d74d89038fe4764dabf209269928",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n337/p3",
+          "fieldName": "npc",
+          "target": "SkyHub2:n918",
+          "targetNodeId": 918,
+          "offset": 97827
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1297",
+      "level": "SkyHub2",
+      "nodeId": 1297,
+      "name": "BstNode_2446917928",
+      "className": "Npc_PlayAnim",
+      "classIndex": 29,
+      "sourceOffset": 265448,
+      "sourceLength": 55,
+      "sourceSha256": "3b3085b026615bad9f7e53e7d079a24b3cdf5db68e3968c22e7572e9d2536a75",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1297/p3",
+          "fieldName": "npc",
+          "target": "SkyHub2:n1625",
+          "targetNodeId": 1625,
+          "offset": 265499
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1591",
+      "level": "SkyHub2",
+      "nodeId": 1591,
+      "name": "BstNode_1167524400",
+      "className": "Npc_PlayAnim",
+      "classIndex": 29,
+      "sourceOffset": 307478,
+      "sourceLength": 54,
+      "sourceSha256": "105984cc7625c6d4637899498a9b2be6e054bda30e43f94e77312cd5d9b34e59",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1591/p3",
+          "fieldName": "npc",
+          "target": "SkyHub2:n1395",
+          "targetNodeId": 1395,
+          "offset": 307528
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1618",
+      "level": "SkyHub2",
+      "nodeId": 1618,
+      "name": "BstNode_1167524397",
+      "className": "Npc_PlayAnim",
+      "classIndex": 29,
+      "sourceOffset": 312118,
+      "sourceLength": 55,
+      "sourceSha256": "a89cb1d790a097147cd5e9b97279de9597697107bea50ff0c18f762988c03ce8",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1618/p3",
+          "fieldName": "npc",
+          "target": "SkyHub2:n1395",
+          "targetNodeId": 1395,
+          "offset": 312169
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1647",
+      "level": "SkyHub2",
+      "nodeId": 1647,
+      "name": "BstNode_2504654859",
+      "className": "Npc_PlayAnim",
+      "classIndex": 29,
+      "sourceOffset": 316510,
+      "sourceLength": 55,
+      "sourceSha256": "7f44b35928428edd6d4d6a73e7f039a050b8fa9f5eb0747b76067fba3c9c29af",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1647/p3",
+          "fieldName": "npc",
+          "target": "SkyHub2:n766",
+          "targetNodeId": 766,
+          "offset": 316561
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n2348",
+      "level": "SkyHub2",
+      "nodeId": 2348,
+      "name": "BstNode_1167523860",
+      "className": "Npc_PlayAnim",
+      "classIndex": 29,
+      "sourceOffset": 442758,
+      "sourceLength": 42,
+      "sourceSha256": "1faad261de36f4284f31f2c609e5aed6aaf64fab61ea096f1129420745d42182",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2348/p3",
+          "fieldName": "npc",
+          "target": "SkyHub2:n1395",
+          "targetNodeId": 1395,
+          "offset": 442796
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n593",
+      "level": "StormEnd",
+      "nodeId": 593,
+      "name": "BstNode_2446917730",
+      "className": "Npc_PlayAnim",
+      "classIndex": 50,
+      "sourceOffset": 124592,
+      "sourceLength": 54,
+      "sourceSha256": "5f0a0251e7b64ade8a6a4f7347f177fdf81bebadc7aef19c0f3cf35dd26f03ea",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n593/p3",
+          "fieldName": "npc",
+          "target": "StormEnd:n620",
+          "targetNodeId": 620,
+          "offset": 124642
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n622",
+      "level": "StormEnd",
+      "nodeId": 622,
+      "name": "BstNode_2446917757",
+      "className": "Npc_PlayAnim",
+      "classIndex": 50,
+      "sourceOffset": 129248,
+      "sourceLength": 53,
+      "sourceSha256": "f64e36932a5002ce839e7c2e49a5e63f2db7c929cfe6fa6065692cb868086334",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n622/p3",
+          "fieldName": "npc",
+          "target": "StormEnd:n620",
+          "targetNodeId": 620,
+          "offset": 129297
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n924",
+      "level": "StormEnd",
+      "nodeId": 924,
+      "name": "BstNode_2446917763",
+      "className": "Npc_PlayAnim",
+      "classIndex": 50,
+      "sourceOffset": 177323,
+      "sourceLength": 52,
+      "sourceSha256": "e4ce5b0c84c161cf4cb3212c26a8c6c2f4c13c6e97b9d198c8e2eb3bd78d983c",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n924/p3",
+          "fieldName": "npc",
+          "target": "StormEnd:n620",
+          "targetNodeId": 620,
+          "offset": 177371
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n1075",
+      "level": "StormEnd",
+      "nodeId": 1075,
+      "name": "BstNode_2446917728",
+      "className": "Npc_PlayAnim",
+      "classIndex": 50,
+      "sourceOffset": 205994,
+      "sourceLength": 56,
+      "sourceSha256": "6ba58de4068a40a3adbd85d71a2ad58f1cd30c251dcd54130d7bc6233013ef3e",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1075/p3",
+          "fieldName": "npc",
+          "target": "StormEnd:n620",
+          "targetNodeId": 620,
+          "offset": 206046
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "Dawn",
+      "path": "Levels/Dawn/Objects.level.bin",
+      "sha256": "16e26aafc7f9d120a548bf5d8bec04fbc18146bc8db531ef75144889b1ff197a",
+      "bytes": 504637,
+      "nodes": 3798,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dawn.json",
+      "markdown": "Objects对象清单/Dawn.md"
+    },
+    {
+      "level": "DayEnd",
+      "path": "Levels/DayEnd/Objects.level.bin",
+      "sha256": "9b5c568cefa987e504a10236c5b61e5de4b748d965d09e42db3602e4e52cc904",
+      "bytes": 268140,
+      "nodes": 1459,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DayEnd.json",
+      "markdown": "Objects对象清单/DayEnd.md"
+    },
+    {
+      "level": "DayHubCave",
+      "path": "Levels/DayHubCave/Objects.level.bin",
+      "sha256": "e4da920cc9f0b1569f14ad1a6d1990db7155dc07ebfc3214c4e385a367872457",
+      "bytes": 202745,
+      "nodes": 1128,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DayHubCave.json",
+      "markdown": "Objects对象清单/DayHubCave.md"
+    },
+    {
+      "level": "Dusk",
+      "path": "Levels/Dusk/Objects.level.bin",
+      "sha256": "9222b248f17fb4122cd4ad9650543ab86aab8b077b6965248c70ac2341bf2d5d",
+      "bytes": 242331,
+      "nodes": 1288,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dusk.json",
+      "markdown": "Objects对象清单/Dusk.md"
+    },
+    {
+      "level": "DuskGraveyard",
+      "path": "Levels/DuskGraveyard/Objects.level.bin",
+      "sha256": "128b30dcbe40b68e68fc25d195b68dc39f897259453c02612049ccd37a90ffb4",
+      "bytes": 424333,
+      "nodes": 1791,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DuskGraveyard.json",
+      "markdown": "Objects对象清单/DuskGraveyard.md"
+    },
+    {
+      "level": "DuskMid",
+      "path": "Levels/DuskMid/Objects.level.bin",
+      "sha256": "899ca33226dabd04afecfe7888750938ff4e460cb586603364e150591e9cbda5",
+      "bytes": 234288,
+      "nodes": 1268,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DuskMid.json",
+      "markdown": "Objects对象清单/DuskMid.md"
+    },
+    {
+      "level": "HubReveal",
+      "path": "Levels/HubReveal/Objects.level.bin",
+      "sha256": "4b32f12bbe4b246cde9ca1e4ba0982000ff108359865bb4340aba640e609861b",
+      "bytes": 289438,
+      "nodes": 1829,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/HubReveal.json",
+      "markdown": "Objects对象清单/HubReveal.md"
+    },
+    {
+      "level": "Night",
+      "path": "Levels/Night/Objects.level.bin",
+      "sha256": "6ce612c9efb82834d648de81251033b341a44f4d9374d8338d868575aab6a723",
+      "bytes": 499756,
+      "nodes": 3719,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Night.json",
+      "markdown": "Objects对象清单/Night.md"
+    },
+    {
+      "level": "Prairie_Cave",
+      "path": "Levels/Prairie_Cave/Objects.level.bin",
+      "sha256": "675a2256e24f8c4b16540cee6a5cd2b7647ff2fb495724a8bf596717ca39d944",
+      "bytes": 466340,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Cave.json",
+      "markdown": "Objects对象清单/Prairie_Cave.md"
+    },
+    {
+      "level": "Prairie_NestAndKeeper",
+      "path": "Levels/Prairie_NestAndKeeper/Objects.level.bin",
+      "sha256": "5eabe877e07c84e5f9270035aaab73fa20144c87f6e9136e5285dbaff3f85b7a",
+      "bytes": 239403,
+      "nodes": 1077,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_NestAndKeeper.json",
+      "markdown": "Objects对象清单/Prairie_NestAndKeeper.md"
+    },
+    {
+      "level": "Prairie_Village",
+      "path": "Levels/Prairie_Village/Objects.level.bin",
+      "sha256": "4656296b54402016b59b894b4653fbdc71e106a21e0900294f73f2c7b7112385",
+      "bytes": 549989,
+      "nodes": 3724,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Village.json",
+      "markdown": "Objects对象清单/Prairie_Village.md"
+    },
+    {
+      "level": "Rain",
+      "path": "Levels/Rain/Objects.level.bin",
+      "sha256": "20093bccf3bb1ea0936cb993e66cef0187b40a5a411df3573eb28e4def4f75c6",
+      "bytes": 457732,
+      "nodes": 2079,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Rain.json",
+      "markdown": "Objects对象清单/Rain.md"
+    },
+    {
+      "level": "RainForest",
+      "path": "Levels/RainForest/Objects.level.bin",
+      "sha256": "2e69b3314c70c61bd99435f4bb4418fba540f227c83670e1af3b5358c64c3b73",
+      "bytes": 271409,
+      "nodes": 1306,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainForest.json",
+      "markdown": "Objects对象清单/RainForest.md"
+    },
+    {
+      "level": "RainMid",
+      "path": "Levels/RainMid/Objects.level.bin",
+      "sha256": "139b219d9b71a2ab24418b1ec41f2ee8a2ebfdf4c5ea992c35348a758682ed23",
+      "bytes": 430825,
+      "nodes": 2457,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainMid.json",
+      "markdown": "Objects对象清单/RainMid.md"
+    },
+    {
+      "level": "SkyHub2",
+      "path": "Levels/SkyHub2/Objects.level.bin",
+      "sha256": "8b467f9b349d9d4ce0d038528c96e44dff30063149bf5bbf90232a56bb9dd36f",
+      "bytes": 475656,
+      "nodes": 2886,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SkyHub2.json",
+      "markdown": "Objects对象清单/SkyHub2.md"
+    },
+    {
+      "level": "StormEnd",
+      "path": "Levels/StormEnd/Objects.level.bin",
+      "sha256": "a9c13b592198ee01ab2922a0c7901f4516ae172d56a22d9b7f806ff7464c9162",
+      "bytes": 224465,
+      "nodes": 1243,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/StormEnd.json",
+      "markdown": "Objects对象清单/StormEnd.md"
+    }
+  ]
+}

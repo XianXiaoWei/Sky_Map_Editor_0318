@@ -1,0 +1,67 @@
+0x100376470: push rbp
+0x100376471: mov rbp, rsp
+0x100376474: push r15
+0x100376476: push r14
+0x100376478: push r12
+0x10037647a: push rbx
+0x10037647b: sub rsp, 0x10
+0x10037647f: mov r14, rcx
+0x100376482: mov r15, rdx
+0x100376485: mov r12, rsi
+0x100376488: mov rbx, rdi
+0x10037648b: mov qword ptr [rbp - 0x30], r8
+0x10037648f: lea rdi, [rbp - 0x30]
+0x100376493: call 0x1007b04e0 ; 0x1007b04e0
+0x100376498: mov qword ptr [rbp - 0x28], 0
+0x1003764a0: mov rdi, qword ptr [rip + 0x1c82fa9] ; 0x101ff9450
+0x1003764a7: mov rax, qword ptr [rdi]
+0x1003764aa: lea rsi, [rbp - 0x28]
+0x1003764ae: mov rdx, rbx
+0x1003764b1: mov rcx, r12
+0x1003764b4: call qword ptr [rax + 0x40]
+0x1003764b7: mov r12, qword ptr [rbp - 0x28]
+0x1003764bb: mov qword ptr [rbp - 0x28], 0
+0x1003764c3: call 0x100319830 ; 0x100319830
+0x1003764c8: mov rbx, qword ptr [rax]
+0x1003764cb: lea rsi, [rbp - 0x28]
+0x1003764cf: mov rdi, rax
+0x1003764d2: mov rdx, r15
+0x1003764d5: mov rcx, r14
+0x1003764d8: call qword ptr [rbx + 0x40]
+0x1003764db: mov rbx, qword ptr [rbp - 0x28]
+0x1003764df: mov rsi, qword ptr [r12 + 0x2b0]
+0x1003764e7: add rsi, 0x10
+0x1003764eb: mov rdi, rbx
+0x1003764ee: call 0x10031b220 ; 0x10031b220
+0x1003764f3: mov rsi, qword ptr [r12 + 0x2b0]
+0x1003764fb: add rsi, 0x50
+0x1003764ff: mov rdi, rbx
+0x100376502: call 0x10031b220 ; 0x10031b220
+0x100376507: mov rsi, qword ptr [r12 + 0x2b0]
+0x10037650f: add rsi, 0x1f0
+0x100376516: mov rdi, rbx
+0x100376519: call 0x10031b220 ; 0x10031b220
+0x10037651e: mov rsi, qword ptr [r12 + 0x2b0]
+0x100376526: add rsi, 0x220
+0x10037652d: mov rdi, rbx
+0x100376530: call 0x10031b220 ; 0x10031b220
+0x100376535: mov rsi, qword ptr [r12 + 0x2b0]
+0x10037653d: add rsi, 0x250
+0x100376544: mov rdi, rbx
+0x100376547: call 0x10031b220 ; 0x10031b220
+0x10037654c: mov rsi, qword ptr [r12 + 0x2b0]
+0x100376554: add rsi, 0x260
+0x10037655b: mov rdi, rbx
+0x10037655e: call 0x10031b220 ; 0x10031b220
+0x100376563: mov rsi, qword ptr [r12 + 0x2c0]
+0x10037656b: add rsi, 0xc
+0x10037656f: mov rdi, rbx
+0x100376572: call 0x10031b220 ; 0x10031b220
+0x100376577: add rsp, 0x10
+0x10037657b: pop rbx
+0x10037657c: pop r12
+0x10037657e: pop r14
+0x100376580: pop r15
+0x100376582: pop rbp
+0x100376583: ret 
+0x100376584: nop word ptr cs:[rax + rax]

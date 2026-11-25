@@ -1,0 +1,34 @@
+import fs from 'node:fs';import os from 'node:os';import path from 'node:path';import crypto from 'node:crypto';import {spawnSync} from 'node:child_process';import {gunzipSync,gzipSync} from 'node:zlib';
+import {evaluateAvatarCase,type AvatarOracleCase,type AvatarOracleExpected} from './avatar-set-pos-evaluate';
+import {AVATAR_PHYSICAL_STATE_BYTES as size} from '../src/core/avatar-physical-state';
+const executable=process.argv[2]??'/storage/emulated/0/Download/地图编辑器/sky-map-editor/reference/Sky.app/Contents/MacOS/Sky',sha=crypto.createHash('sha256').update(fs.readFileSync(executable)).digest('hex');if(sha!=='3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20')throw new Error('Requires original executable');
+const old=JSON.parse(gunzipSync(fs.readFileSync('tests/fixtures/avatar-set-pos-native.json.gz')).toString()).cases as AvatarOracleCase[],cases:AvatarOracleCase[]=[],f=Math.fround;
+const floats=(v:number[])=>{const b=Buffer.alloc(v.length*4);v.forEach((n,i)=>b.writeFloatLE(n,i*4));return b;},u32=(v:number[])=>{const b=Buffer.alloc(v.length*4);v.forEach((n,i)=>b.writeUInt32LE(n>>>0,i*4));return b;};
+function prepare(c:AvatarOracleCase,i:number):AvatarOracleCase{
+ const original=Buffer.from(c.statesHex,'hex'),states=Buffer.alloc(size*2,0x5b);for(let j=0;j<2;j++){original.copy(states,j*size,j*320,(j+1)*320);states.writeFloatLE(f([0,1,2.25,-.5][(i+j)%4]),j*size+0xe4);}
+ const camera=Buffer.alloc(1024,0x5a);floats([.1,.8,-.1,0]).copy(camera,0x270);
+ return {...c,h:[...c.h],statesHex:states.toString('hex'),physical:[i%3,i%2+1,(0xfedcba00+i)>>>0,(0x318beef+i)>>>0,c.h[0]===1?1:0],axisHex:floats([0,1,0,0]).toString('hex'),cameraHex:camera.toString('hex')};
+}
+old.forEach((c,i)=>cases.push(prepare({...c,name:`joined-${c.name}`},i)));
+const base=old[0];
+for(const mode of [2,3])for(const reset of [0,1])for(const alias of [-1,0,0x10,0x20,0x50,0x130,0xc80])for(let n=0;n<6;n++){
+ const c=prepare(base,n),state=Buffer.from(c.statesHex,'hex');c.name=`setter-${mode}-reset-${reset}-alias-${alias}-input-${n}`;c.h[0]=mode;c.h[9]=alias+1;c.h[10]=reset;c.physical![1]=0;
+ const p=[[0,-0,0,1],[-0,0,-0,-0],[2.125,-4.75,80,1],[-70000,40000,-.001,0],[1e-20,-1e-20,1e-20,1],[9999.99,-9999.99,.07,-1]][n];c.inputHex=floats([...p,...c.input.slice(4)]).toString('hex');if(alias>=0)floats(p).copy(state,alias);c.statesHex=state.toString('hex');c.axisHex=floats(n%2?[.25,-2,.75,-1]:[0,1,0,0]).toString('hex');cases.push(c);
+}
+for(let i=0;i<128;i++){
+ const c=prepare(base,i),p=[f(i===0?-0:(i-64)*.17),f(i===1?-0:(i%16-8)*.11),f(i*7),i%2?-0:1];c.name=`forward-${i}`;c.h[0]=4;c.physical![1]=0;c.inputHex=floats([...p,...c.input.slice(4)]).toString('hex');cases.push(c);
+}
+// Explicit readiness inputs also exercise the unpositioned and leader-unavailable
+// paths. These are prepared service snapshots, not recovered startup defaults.
+for(const cameraMode of [1,2])for(const slot of [0,16])for(const leader of [0,1,2])for(const moved of [0,1]){
+ const c=prepare(base,0);c.name=`readiness-camera-${cameraMode}-slot-${slot}-leader-${leader}-moved-${moved}`;c.h[0]=1;c.h[1]=slot;c.h[4]=1;c.physical=[leader,cameraMode,0xfedcba98,0x12345678,moved];cases.push(c);
+}
+const input=Buffer.concat([u32([cases.length]),...cases.flatMap(c=>[u32(c.h),Buffer.from(c.eventHex,'hex'),Buffer.from(c.statesHex,'hex'),Buffer.from(c.inputHex!,'hex'),Buffer.from(c.hitHex!,'hex'),u32(c.physical!),Buffer.from(c.axisHex!,'hex'),Buffer.from(c.cameraHex!,'hex')])]),temp=fs.mkdtempSync(path.join(os.tmpdir(),'sky-avatar-physical-'));let raw:Buffer;
+try{const runner=path.join(temp,'oracle'),build=spawnSync('x86_64-linux-gnu-gcc',['-O2','-Wall','-Wextra','tools/native-avatar-physical-oracle.c','-lm','-o',runner]);if(build.status!==0)throw new Error(String(build.stderr));const run=spawnSync('qemu-x86_64',['-L','/usr/x86_64-linux-gnu','-cpu','max',runner,executable],{input,maxBuffer:128*1024*1024,timeout:60000});if(run.status!==0)throw new Error(`${run.status}/${run.signal}: ${run.stderr}`);raw=run.stdout;}finally{fs.rmSync(temp,{recursive:true,force:true});}
+let at=4,comparedBytes=0,failedBytes=0;const failures:unknown[]=[],saved:unknown[]=[];if(raw.readUInt32LE()!==cases.length)throw new Error('Count mismatch');
+for(const c of cases){const result=Array.from({length:5},(_,i)=>raw.readUInt32LE(at+i*4));at+=20;const eventHex=raw.subarray(at,at+80).toString('hex');at+=80;const statesHex=raw.subarray(at,at+size*2).toString('hex');at+=size*2;const traceHex=raw.subarray(at,at+result[0]*136).toString('hex');at+=result[0]*136;const cameraHex=raw.subarray(at,at+1024).toString('hex');at+=1024;const expected:AvatarOracleExpected={result,eventHex,statesHex,traceHex,cameraHex};
+ try{const actual=evaluateAvatarCase(c,expected);for(const key of ['result','eventHex','statesHex','traceHex','cameraHex'] as const){const a=key==='result'?u32(actual.result):Buffer.from(actual[key]??'','hex'),b=key==='result'?u32(result):Buffer.from(expected[key]??'','hex');comparedBytes+=Math.max(a.length,b.length);for(let j=0;j<Math.max(a.length,b.length);j++)if(a[j]!==b[j]){failedBytes++;if(failures.length<24)failures.push({name:c.name,field:key,offset:j,native:b[j],actual:a[j]});}}}catch(e){failedBytes++;if(failures.length<24)failures.push({name:c.name,error:String(e)});}saved.push({...c,expected});
+}
+if(at!==raw.length)throw new Error('Trailing native output');
+const scope='Whole unmodified AvatarSetPos Update/local selection/SetPosition/Marker-forward/Euler/Event Start joined with BOTH physical position setters 0x100146de0/0x1001480d0, Euler->forward 0x100147510, AvatarBarn readiness 0x1000fe060 and complete Whisker initializer/reset 0x10073aa90/0x10073ab80. All Event nonpointer bytes, two 0xd00-byte physical states, complete 1024-byte camera state and dependency arguments/order compared; alias inputs and signed zero preserved in hex. Runtime offset-axis global, state+e4, game tick and BSS camera word are explicit supplied snapshots. Marker/collision/material/rand/handhold/leader/logging services remain supplied. Linux sincosf/atan2f/asinf returns and explicit packed-return upper SIMD lanes captured/replayed; macOS libm/ABI parity not claimed. Finite camera inputs only; continuous tracking/avoidance/projection and full Avatar/game lifecycle not restored.';
+const report={passed:failedBytes===0,executableSha256:sha,cases:cases.length,joinedObjectCases:old.length,corpusConfigurations:59,physicalSetterCases:cases.filter(c=>c.h[0]===2||c.h[0]===3).length,directionCases:128,readinessCases:24,comparedBytes,failedBytes,scope,completeClassRuntime:false,fullNativeCameraVerified:false,failures};fs.writeFileSync('docs/avatar-physical-oracle.json',JSON.stringify(report,null,2)+'\n');if(report.passed)fs.writeFileSync('tests/fixtures/avatar-physical-native.json.gz',gzipSync(JSON.stringify({scope,cases:saved})));console.log(JSON.stringify(report));if(!report.passed)process.exitCode=1;

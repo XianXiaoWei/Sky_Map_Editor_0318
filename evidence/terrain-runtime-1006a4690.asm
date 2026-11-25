@@ -1,0 +1,73 @@
+0x1006a4690: push rbp
+0x1006a4691: mov rbp, rsp
+0x1006a4694: push r15
+0x1006a4696: push r14
+0x1006a4698: push rbx
+0x1006a4699: push rax
+0x1006a469a: mov r14, rdi
+0x1006a469d: cmp byte ptr [r14 + 0x338], 0
+0x1006a46a5: je 0x1006a47b1
+0x1006a46ab: cmp dword ptr [r14 + 0xe08], 0
+0x1006a46b3: je 0x1006a4726
+0x1006a46b5: xor ebx, ebx
+0x1006a46b7: nop word ptr [rax + rax]
+0x1006a46c0: mov eax, ebx
+0x1006a46c2: imul rax, rax, 0x3540
+0x1006a46c9: lea rdi, [r14 + rax + 0xf00]
+0x1006a46d1: call 0x1007f6540 ; 0x1007f6540
+0x1006a46d6: inc ebx
+0x1006a46d8: mov r15d, dword ptr [r14 + 0xe08]
+0x1006a46df: cmp ebx, r15d
+0x1006a46e2: jb 0x1006a46c0
+0x1006a46e4: cmp byte ptr [r14 + 0x339], 0
+0x1006a46ec: je 0x1006a4738
+0x1006a46ee: test r15d, r15d
+0x1006a46f1: je 0x1006a4735
+0x1006a46f3: xor ebx, ebx
+0x1006a46f5: nop word ptr cs:[rax + rax]
+0x1006a4700: mov eax, ebx
+0x1006a4702: imul rax, rax, 0x550
+0x1006a4709: lea rdi, [r14 + rax + 0xc54d0]
+0x1006a4711: call 0x1007f6540 ; 0x1007f6540
+0x1006a4716: inc ebx
+0x1006a4718: mov r15d, dword ptr [r14 + 0xe08]
+0x1006a471f: cmp ebx, r15d
+0x1006a4722: jb 0x1006a4700
+0x1006a4724: jmp 0x1006a4738 ; 0x1006a4738
+0x1006a4726: xor r15d, r15d
+0x1006a4729: cmp byte ptr [r14 + 0x339], 0
+0x1006a4731: jne 0x1006a46ee
+0x1006a4733: jmp 0x1006a4738 ; 0x1006a4738
+0x1006a4735: xor r15d, r15d
+0x1006a4738: cmp byte ptr [rip + 0x65e366], 0 ; 0x100d02aa5
+0x1006a473f: jne 0x1006a476a
+0x1006a4741: jmp 0x1006a47b1 ; 0x1006a47b1
+0x1006a4743: nop word ptr cs:[rax + rax]
+0x1006a4750: mov eax, r15d
+0x1006a4753: imul rax, rax, 0x3540
+0x1006a475a: lea rdi, [r14 + rax + 0xf00]
+0x1006a4762: call 0x1007f6540 ; 0x1007f6540
+0x1006a4767: inc r15d
+0x1006a476a: mov eax, dword ptr [r14 + 0xe0c]
+0x1006a4771: cmp r15d, eax
+0x1006a4774: jb 0x1006a4750
+0x1006a4776: cmp byte ptr [r14 + 0x339], 0
+0x1006a477e: je 0x1006a47b1
+0x1006a4780: mov ebx, dword ptr [r14 + 0xe08]
+0x1006a4787: cmp ebx, eax
+0x1006a4789: jae 0x1006a47b1
+0x1006a478b: nop dword ptr [rax + rax]
+0x1006a4790: mov eax, ebx
+0x1006a4792: imul rax, rax, 0x550
+0x1006a4799: lea rdi, [r14 + rax + 0xc54d0]
+0x1006a47a1: call 0x1007f6540 ; 0x1007f6540
+0x1006a47a6: inc ebx
+0x1006a47a8: cmp ebx, dword ptr [r14 + 0xe0c]
+0x1006a47af: jb 0x1006a4790
+0x1006a47b1: add rsp, 8
+0x1006a47b5: pop rbx
+0x1006a47b6: pop r14
+0x1006a47b8: pop r15
+0x1006a47ba: pop rbp
+0x1006a47bb: ret 
+0x1006a47bc: nop dword ptr [rax]

@@ -1,0 +1,80 @@
+{
+  "passed": true,
+  "level": "CandleSpace",
+  "nodeId": 342,
+  "scope": "Production binding of actual default MaterialDef model shader/textures and packed model/baked lighting. Original shader sources, saved fields and assets remain unchanged; scene probe/light grid and Vulkan backend are adapters, not full original Model/Metal/game parity.",
+  "sourceHashes": {
+    "objects": "db7140d2dd5ee9cd2fcdcbb61a898b9facf1683ff21fec83fcbef81b885f56db",
+    "mesh": "f7c166a1a6ca3df0aa7df060660ed10c5851096b61c44e3a9550b7f2cf53a104"
+  },
+  "shader": "RockFaceShMesh",
+  "materialId": 2,
+  "device": {
+    "engine": "Sky Native Vulkan",
+    "backend": "Vulkan",
+    "device": "llvmpipe (LLVM 19.1.7, 128 bits)",
+    "apiVersion": 4210993,
+    "deviceType": 4,
+    "shaderFloat16": true,
+    "samplerAnisotropyPolicy": "llvmpipe-trilinear",
+    "maxSamplerAnisotropy": 16
+  },
+  "coveredPixels": 8072,
+  "outputSha256": "b40ba53fa006fdeb58aac56c4096e005d43c4087bc75384fccc95810a043c5de",
+  "binding": {
+    "scope": "Original terrain/skirt GLSL, real packed geometry/material textures with declared gamma/mip handling and supported anisotropy (16x preview request), recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/MotionGen/MotionDilate/TemporalAa/Tonemap chain. PNG area-filtered mip generation and anisotropy strength remain preview adapters, not original exporter/Metal parity. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending. Resource models use original GLSL, packed float3/color/SNORM normals/half4 UV pairs and remapped baked lighting. Original Model construction, visibility, RenderList sorting, animations and full scene services remain open.",
+    "draws": 1,
+    "terrainDraws": 0,
+    "modelDraws": 1,
+    "modelBoundaries": [],
+    "modelBindings": [
+      {
+        "nodeId": 342,
+        "shader": "RockFaceShMesh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 12
+      }
+    ],
+    "shaders": [
+      "RockFaceShMesh"
+    ],
+    "triangles": 12,
+    "textures": [
+      "WallSh"
+    ],
+    "samplerPolicy": "llvmpipe-trilinear",
+    "textureSampling": [
+      {
+        "name": "WallSh",
+        "mipLevels": 10,
+        "anisotropy": 16,
+        "effectiveAnisotropy": 1,
+        "gamma": false
+      }
+    ],
+    "dynamics": {
+      "time": 0,
+      "scrolls": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    }
+  }
+}

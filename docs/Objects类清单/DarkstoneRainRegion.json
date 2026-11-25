@@ -1,0 +1,687 @@
+{
+  "className": "DarkstoneRainRegion",
+  "functionGroup": "水、雾与天气",
+  "functionRole": "区域降落物、收集物与能量消耗",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "DarkstoneRainRegion 的原默认值、继承初始化及 7 个序列化字段变体；原注册字段 6 项。"
+    },
+    {
+      "name": "区域降落物、收集物与能量消耗",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Marker（10 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "DarkstoneRainRegion",
+    "category": "水、雾与天气",
+    "functionGroupId": "weather",
+    "functionRole": "区域降落物、收集物与能量消耗",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "DarkstoneRainRegion 的原默认值、继承初始化及 7 个序列化字段变体；原注册字段 6 项。"
+      },
+      {
+        "name": "区域降落物、收集物与能量消耗",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Marker（10 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Marker",
+        "references": 10
+      }
+    ],
+    "rttiWorkingGroup": "交互、事件与任务",
+    "role": "对象实例类型",
+    "instances": 11,
+    "nestedInstances": 0,
+    "referenceFields": 10,
+    "declaredLevels": 2,
+    "levels": [
+      {
+        "level": "Storm",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "StormEnd",
+        "nodes": 10,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "dropCollectibles",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "dropRatePerSecond",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "dropSizeMax",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "dropSizeMin",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "playerEnergyDrain",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "region",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100c9feb0",
+    "nativeRegisteredFields": [
+      {
+        "name": "region",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP6MarkerERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x1002860d0",
+        "propertyAddress": "0x100c9fa80"
+      },
+      {
+        "name": "dropRatePerSecond",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 64,
+        "registrationFunction": "0x1002860d0",
+        "propertyAddress": "0x100c9fad0"
+      },
+      {
+        "name": "dropSizeMin",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 68,
+        "registrationFunction": "0x1002860d0",
+        "propertyAddress": "0x100c9fb20"
+      },
+      {
+        "name": "dropSizeMax",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 72,
+        "registrationFunction": "0x1002860d0",
+        "propertyAddress": "0x100c9fb70"
+      },
+      {
+        "name": "playerEnergyDrain",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 76,
+        "registrationFunction": "0x1002860d0",
+        "propertyAddress": "0x100c9fbc0"
+      },
+      {
+        "name": "dropCollectibles",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 80,
+        "registrationFunction": "0x1002860d0",
+        "propertyAddress": "0x100c9fc10"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 6 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "Storm:n1153",
+      "level": "Storm",
+      "nodeId": 1153,
+      "name": "BstNode_2529559962",
+      "className": "DarkstoneRainRegion",
+      "classIndex": 55,
+      "sourceOffset": 228730,
+      "sourceLength": 45,
+      "sourceSha256": "b05bf86913dcc509841bf22223dfeefb7f4d6e92d27db6943b16982fc5df8cf2",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1153/p2",
+          "fieldName": "region",
+          "target": "Storm:n1568",
+          "targetNodeId": 1568,
+          "offset": 228758
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n73",
+      "level": "StormEnd",
+      "nodeId": 73,
+      "name": "BstNode_3156082731",
+      "className": "DarkstoneRainRegion",
+      "classIndex": 19,
+      "sourceOffset": 33637,
+      "sourceLength": 45,
+      "sourceSha256": "94e41b66576982bacc0024d70cbd517835ed87f0ea3e477854d0d6f00046ebed",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n73/p2",
+          "fieldName": "region",
+          "target": "StormEnd:n410",
+          "targetNodeId": 410,
+          "offset": 33665
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n91",
+      "level": "StormEnd",
+      "nodeId": 91,
+      "name": "BstNode_1040",
+      "className": "DarkstoneRainRegion",
+      "classIndex": 19,
+      "sourceOffset": 36990,
+      "sourceLength": 39,
+      "sourceSha256": "a257edf36c5a0b9bd4d34a173f39161b85b88d2726d0d596ff2e616d253b3c99",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n97",
+      "level": "StormEnd",
+      "nodeId": 97,
+      "name": "BstNode_2345992929",
+      "className": "DarkstoneRainRegion",
+      "classIndex": 19,
+      "sourceOffset": 38586,
+      "sourceLength": 45,
+      "sourceSha256": "330f3b6fefa4b846eb26af12e1c3a04140ab543fa1920257ea12d1879fa83efc",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n97/p2",
+          "fieldName": "region",
+          "target": "StormEnd:n759",
+          "targetNodeId": 759,
+          "offset": 38614
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n330",
+      "level": "StormEnd",
+      "nodeId": 330,
+      "name": "BstNode_3156082699",
+      "className": "DarkstoneRainRegion",
+      "classIndex": 19,
+      "sourceOffset": 80245,
+      "sourceLength": 45,
+      "sourceSha256": "226b547a5576dfdd836c11855b0bb564b6a6e44eda63e92928bde4abe5a2f838",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n330/p2",
+          "fieldName": "region",
+          "target": "StormEnd:n743",
+          "targetNodeId": 743,
+          "offset": 80273
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n438",
+      "level": "StormEnd",
+      "nodeId": 438,
+      "name": "BstNode_2345992948",
+      "className": "DarkstoneRainRegion",
+      "classIndex": 19,
+      "sourceOffset": 102286,
+      "sourceLength": 45,
+      "sourceSha256": "09674a4009a57025a95c4840d4284415ee1ddd01f14de9d3fcd291fa1b0297e0",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n438/p2",
+          "fieldName": "region",
+          "target": "StormEnd:n601",
+          "targetNodeId": 601,
+          "offset": 102314
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n691",
+      "level": "StormEnd",
+      "nodeId": 691,
+      "name": "BstNode_2446917638",
+      "className": "DarkstoneRainRegion",
+      "classIndex": 19,
+      "sourceOffset": 139803,
+      "sourceLength": 45,
+      "sourceSha256": "fc8ffc09e8f36cb501f3ef8dc2ab12138f14cfce0023f5a22090140389996e01",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n691/p2",
+          "fieldName": "region",
+          "target": "StormEnd:n750",
+          "targetNodeId": 750,
+          "offset": 139831
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n745",
+      "level": "StormEnd",
+      "nodeId": 745,
+      "name": "BstNode_3156082719",
+      "className": "DarkstoneRainRegion",
+      "classIndex": 19,
+      "sourceOffset": 147328,
+      "sourceLength": 45,
+      "sourceSha256": "ffaf60323e6dcac75095824d2c5ff669405c001092ae789f0768127c763750c8",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n745/p2",
+          "fieldName": "region",
+          "target": "StormEnd:n918",
+          "targetNodeId": 918,
+          "offset": 147356
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n754",
+      "level": "StormEnd",
+      "nodeId": 754,
+      "name": "BstNode_3156082767",
+      "className": "DarkstoneRainRegion",
+      "classIndex": 19,
+      "sourceOffset": 148322,
+      "sourceLength": 45,
+      "sourceSha256": "d1cd1140f651c70d84afb911d73468ad7e4a3a78c10b92d6b5d3a9bd2f0d8281",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n754/p2",
+          "fieldName": "region",
+          "target": "StormEnd:n38",
+          "targetNodeId": 38,
+          "offset": 148350
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n788",
+      "level": "StormEnd",
+      "nodeId": 788,
+      "name": "BstNode_3156082743",
+      "className": "DarkstoneRainRegion",
+      "classIndex": 19,
+      "sourceOffset": 153254,
+      "sourceLength": 45,
+      "sourceSha256": "9f6ce46afb4caf9a83ef6d7351f9cec68ca5dc1e2d92fffd3e2a24e238564382",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n788/p2",
+          "fieldName": "region",
+          "target": "StormEnd:n757",
+          "targetNodeId": 757,
+          "offset": 153282
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n798",
+      "level": "StormEnd",
+      "nodeId": 798,
+      "name": "BstNode_3156082755",
+      "className": "DarkstoneRainRegion",
+      "classIndex": 19,
+      "sourceOffset": 154949,
+      "sourceLength": 45,
+      "sourceSha256": "32067acd9df357fdfaacda032c098df0e6590c01937be6ea4f7fcb0e69fc5881",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n798/p2",
+          "fieldName": "region",
+          "target": "StormEnd:n731",
+          "targetNodeId": 731,
+          "offset": 154977
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "Storm",
+      "path": "Levels/Storm/Objects.level.bin",
+      "sha256": "4be187f31f1ef86611831abeb45ed9c1deff5e925f3bae80a6be49af85fa52bd",
+      "bytes": 324849,
+      "nodes": 1954,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Storm.json",
+      "markdown": "Objects对象清单/Storm.md"
+    },
+    {
+      "level": "StormEnd",
+      "path": "Levels/StormEnd/Objects.level.bin",
+      "sha256": "a9c13b592198ee01ab2922a0c7901f4516ae172d56a22d9b7f806ff7464c9162",
+      "bytes": 224465,
+      "nodes": 1243,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/StormEnd.json",
+      "markdown": "Objects对象清单/StormEnd.md"
+    }
+  ]
+}

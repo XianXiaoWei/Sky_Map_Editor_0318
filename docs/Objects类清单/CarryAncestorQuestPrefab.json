@@ -1,0 +1,773 @@
+{
+  "className": "CarryAncestorQuestPrefab",
+  "functionGroup": "任务、先祖与场景机制",
+  "functionRole": "先祖携带任务预制体",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "CarryAncestorQuestPrefab 的原默认值、继承初始化及 8 个序列化字段变体；原注册字段 2 项。"
+    },
+    {
+      "name": "先祖携带任务预制体",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Clump（22 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "CarryAncestorQuestPrefab",
+    "category": "任务、先祖与场景机制",
+    "functionGroupId": "quests",
+    "functionRole": "先祖携带任务预制体",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "CarryAncestorQuestPrefab 的原默认值、继承初始化及 8 个序列化字段变体；原注册字段 2 项。"
+      },
+      {
+        "name": "先祖携带任务预制体",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Clump（22 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Clump",
+        "references": 22
+      }
+    ],
+    "rttiWorkingGroup": "交互、事件与任务",
+    "role": "对象实例类型",
+    "instances": 10,
+    "nestedInstances": 0,
+    "referenceFields": 22,
+    "declaredLevels": 5,
+    "levels": [
+      {
+        "level": "CarryLand2",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_ButterflyFields",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Cave",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_NestAndKeeper",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Village",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "ancientSpirit",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "fragments",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "manualFailCamera",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "minPlayers",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "onReward",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "questDef",
+        "type": 1,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "soulTraps",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "transform",
+        "type": 0,
+        "size": 64,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100cfc580",
+    "nativeRegisteredFields": [
+      {
+        "name": "onReward",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 184,
+        "registrationFunction": "0x10062aaa0",
+        "propertyAddress": "0x100cfb5d0"
+      },
+      {
+        "name": "ancientSpirit",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP13AncientSpiritERK8MetaTypev",
+        "nativeOffset": 192,
+        "registrationFunction": "0x10062aaa0",
+        "propertyAddress": "0x100cfb620"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 2 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "CarryLand2:n162",
+      "level": "CarryLand2",
+      "nodeId": 162,
+      "name": "BstNode_3707306201",
+      "className": "CarryAncestorQuestPrefab",
+      "classIndex": 21,
+      "sourceOffset": 39256,
+      "sourceLength": 104,
+      "sourceSha256": "65f5e86989eea7ac8c424c9c90723729f18615d325545edbc80d324f28f17444",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n162/p0",
+          "fieldName": "fragments",
+          "target": "CarryLand2:n111",
+          "targetNodeId": 111,
+          "offset": 39279
+        },
+        {
+          "fieldId": "n162/p5",
+          "fieldName": "onReward",
+          "target": "CarryLand2:n245",
+          "targetNodeId": 245,
+          "offset": 39356
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n437",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 437,
+      "name": "BstNode_1167523977",
+      "className": "CarryAncestorQuestPrefab",
+      "classIndex": 47,
+      "sourceOffset": 117272,
+      "sourceLength": 129,
+      "sourceSha256": "67635e11f6a5bde56af0f2fb76759431ccee4f6c2437c13d137178eafdff6834",
+      "declaredFieldCount": 8,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n437/p0",
+          "fieldName": "fragments",
+          "target": "Prairie_ButterflyFields:n591",
+          "targetNodeId": 591,
+          "offset": 117295
+        },
+        {
+          "fieldId": "n437/p7",
+          "fieldName": "onReward",
+          "target": "Prairie_ButterflyFields:n1418",
+          "targetNodeId": 1418,
+          "offset": 117397
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n556",
+      "level": "Prairie_Cave",
+      "nodeId": 556,
+      "name": "BstNode_1842806836",
+      "className": "CarryAncestorQuestPrefab",
+      "classIndex": 53,
+      "sourceOffset": 152180,
+      "sourceLength": 124,
+      "sourceSha256": "58083749667973cc809081d01501b2a47dc12197737eaf476490d88b8c903237",
+      "declaredFieldCount": 8,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n556/p0",
+          "fieldName": "fragments",
+          "target": "Prairie_Cave:n560",
+          "targetNodeId": 560,
+          "offset": 152203
+        },
+        {
+          "fieldId": "n556/p7",
+          "fieldName": "onReward",
+          "target": "Prairie_Cave:n1865",
+          "targetNodeId": 1865,
+          "offset": 152300
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n754",
+      "level": "Prairie_Cave",
+      "nodeId": 754,
+      "name": "BstNode_1528234013",
+      "className": "CarryAncestorQuestPrefab",
+      "classIndex": 53,
+      "sourceOffset": 199937,
+      "sourceLength": 124,
+      "sourceSha256": "7d873637610d0a6b90747dbd5d98fb75d437dcfabf4e5be9b77be97ae5a12950",
+      "declaredFieldCount": 8,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n754/p0",
+          "fieldName": "fragments",
+          "target": "Prairie_Cave:n420",
+          "targetNodeId": 420,
+          "offset": 199960
+        },
+        {
+          "fieldId": "n754/p7",
+          "fieldName": "onReward",
+          "target": "Prairie_Cave:n1877",
+          "targetNodeId": 1877,
+          "offset": 200057
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n416",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 416,
+      "name": "BstNode_1528233985",
+      "className": "CarryAncestorQuestPrefab",
+      "classIndex": 46,
+      "sourceOffset": 116528,
+      "sourceLength": 132,
+      "sourceSha256": "633e67c27e91b71fa734fafbb1984b29563b1a313a0f0711c2d9ed63a8af687e",
+      "declaredFieldCount": 8,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n416/p0",
+          "fieldName": "fragments",
+          "target": "Prairie_NestAndKeeper:n803",
+          "targetNodeId": 803,
+          "offset": 116551
+        },
+        {
+          "fieldId": "n416/p7",
+          "fieldName": "onReward",
+          "target": "Prairie_NestAndKeeper:n1019",
+          "targetNodeId": 1019,
+          "offset": 116656
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n447",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 447,
+      "name": "BstNode_1528234013",
+      "className": "CarryAncestorQuestPrefab",
+      "classIndex": 46,
+      "sourceOffset": 121911,
+      "sourceLength": 129,
+      "sourceSha256": "1598422f4c33f4f0f3d4da3862e2d66e32e84004222c5f040055e93f7eca81dc",
+      "declaredFieldCount": 8,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n447/p0",
+          "fieldName": "fragments",
+          "target": "Prairie_NestAndKeeper:n907",
+          "targetNodeId": 907,
+          "offset": 121934
+        },
+        {
+          "fieldId": "n447/p7",
+          "fieldName": "onReward",
+          "target": "Prairie_NestAndKeeper:n1021",
+          "targetNodeId": 1021,
+          "offset": 122036
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n984",
+      "level": "Prairie_Village",
+      "nodeId": 984,
+      "name": "BstNode_1528234013",
+      "className": "CarryAncestorQuestPrefab",
+      "classIndex": 83,
+      "sourceOffset": 192554,
+      "sourceLength": 128,
+      "sourceSha256": "e6a4acebafaee985541d2547ca3db4703c7eff0ee2606a6e6a89de3639bc1843",
+      "declaredFieldCount": 8,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n984/p0",
+          "fieldName": "fragments",
+          "target": "Prairie_Village:n921",
+          "targetNodeId": 921,
+          "offset": 192577
+        },
+        {
+          "fieldId": "n984/p7",
+          "fieldName": "onReward",
+          "target": "Prairie_Village:n3320",
+          "targetNodeId": 3320,
+          "offset": 192678
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1369",
+      "level": "Prairie_Village",
+      "nodeId": 1369,
+      "name": "BstNode_1528234011",
+      "className": "CarryAncestorQuestPrefab",
+      "classIndex": 83,
+      "sourceOffset": 251698,
+      "sourceLength": 124,
+      "sourceSha256": "a264654c177df211db3c23463f52f872fc800c5fe2e9ddca1f5267b7c78a4c5b",
+      "declaredFieldCount": 8,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1369/p0",
+          "fieldName": "fragments",
+          "target": "Prairie_Village:n1005",
+          "targetNodeId": 1005,
+          "offset": 251721
+        },
+        {
+          "fieldId": "n1369/p2",
+          "fieldName": "soulTraps",
+          "target": "Prairie_Village:n3407",
+          "targetNodeId": 3407,
+          "offset": 251729
+        },
+        {
+          "fieldId": "n1369/p7",
+          "fieldName": "onReward",
+          "target": "Prairie_Village:n3408",
+          "targetNodeId": 3408,
+          "offset": 251818
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2206",
+      "level": "Prairie_Village",
+      "nodeId": 2206,
+      "name": "BstNode_1842806901",
+      "className": "CarryAncestorQuestPrefab",
+      "classIndex": 83,
+      "sourceOffset": 384056,
+      "sourceLength": 124,
+      "sourceSha256": "9a59cbaf102070e091af9217d3a309d11288ddb7eb48dadcd7046e9594492e6a",
+      "declaredFieldCount": 8,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2206/p0",
+          "fieldName": "fragments",
+          "target": "Prairie_Village:n1352",
+          "targetNodeId": 1352,
+          "offset": 384079
+        },
+        {
+          "fieldId": "n2206/p2",
+          "fieldName": "soulTraps",
+          "target": "Prairie_Village:n3561",
+          "targetNodeId": 3561,
+          "offset": 384087
+        },
+        {
+          "fieldId": "n2206/p7",
+          "fieldName": "onReward",
+          "target": "Prairie_Village:n3562",
+          "targetNodeId": 3562,
+          "offset": 384176
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2378",
+      "level": "Prairie_Village",
+      "nodeId": 2378,
+      "name": "BstNode_1528234132",
+      "className": "CarryAncestorQuestPrefab",
+      "classIndex": 83,
+      "sourceOffset": 410222,
+      "sourceLength": 125,
+      "sourceSha256": "1c12f174d3025240b1259ee6285864bc0ada0531238c6d6fe569bd741f3868df",
+      "declaredFieldCount": 8,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2378/p0",
+          "fieldName": "fragments",
+          "target": "Prairie_Village:n2296",
+          "targetNodeId": 2296,
+          "offset": 410245
+        },
+        {
+          "fieldId": "n2378/p7",
+          "fieldName": "onReward",
+          "target": "Prairie_Village:n3592",
+          "targetNodeId": 3592,
+          "offset": 410343
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "CarryLand2",
+      "path": "Levels/CarryLand2/Objects.level.bin",
+      "sha256": "e20b1611daee8e87548c3e2902ef3f5d7b5ce43f48c62c2510b08374c9ac55d2",
+      "bytes": 52809,
+      "nodes": 249,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/CarryLand2.json",
+      "markdown": "Objects对象清单/CarryLand2.md"
+    },
+    {
+      "level": "Prairie_ButterflyFields",
+      "path": "Levels/Prairie_ButterflyFields/Objects.level.bin",
+      "sha256": "29d8d61a082f3e3414ecfbb501b5f65499deb37ad4a1078ce2e9b88ac0d1e441",
+      "bytes": 297606,
+      "nodes": 1513,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_ButterflyFields.json",
+      "markdown": "Objects对象清单/Prairie_ButterflyFields.md"
+    },
+    {
+      "level": "Prairie_Cave",
+      "path": "Levels/Prairie_Cave/Objects.level.bin",
+      "sha256": "675a2256e24f8c4b16540cee6a5cd2b7647ff2fb495724a8bf596717ca39d944",
+      "bytes": 466340,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Cave.json",
+      "markdown": "Objects对象清单/Prairie_Cave.md"
+    },
+    {
+      "level": "Prairie_NestAndKeeper",
+      "path": "Levels/Prairie_NestAndKeeper/Objects.level.bin",
+      "sha256": "5eabe877e07c84e5f9270035aaab73fa20144c87f6e9136e5285dbaff3f85b7a",
+      "bytes": 239403,
+      "nodes": 1077,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_NestAndKeeper.json",
+      "markdown": "Objects对象清单/Prairie_NestAndKeeper.md"
+    },
+    {
+      "level": "Prairie_Village",
+      "path": "Levels/Prairie_Village/Objects.level.bin",
+      "sha256": "4656296b54402016b59b894b4653fbdc71e106a21e0900294f73f2c7b7112385",
+      "bytes": 549989,
+      "nodes": 3724,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Village.json",
+      "markdown": "Objects对象清单/Prairie_Village.md"
+    }
+  ]
+}

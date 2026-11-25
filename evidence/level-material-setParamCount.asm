@@ -1,0 +1,13 @@
+0x100407a40: cmp esi, 0x11
+0x100407a43: jae 0x100407a4c
+0x100407a45: mov dword ptr [rdi + 0xc0], esi
+0x100407a4b: ret 
+0x100407a4c: push rbp
+0x100407a4d: mov rbp, rsp
+0x100407a50: lea rdi, [rip + 0x77fdc3] ; 0x100b8781a count <= kMaxParams
+0x100407a57: lea rsi, [rip + 0x77fdd0] ; 0x100b8782e LevelModel.cpp
+0x100407a5e: mov edx, 0x5d
+0x100407a63: mov ecx, 3
+0x100407a68: call 0x1007e5f70 ; 0x1007e5f70
+0x100407a6d: ud2 
+0x100407a6f: nop 

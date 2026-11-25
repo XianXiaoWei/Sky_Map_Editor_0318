@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "complete": true,
+  "device": {
+    "engine": "Sky Native Vulkan",
+    "backend": "Vulkan",
+    "device": "llvmpipe (LLVM 19.1.7, 128 bits)",
+    "apiVersion": 4210993,
+    "deviceType": 4,
+    "shaderFloat16": true
+  },
+  "scope": "4,096 synthetic half operand triples, including cancellation. Independent LLVM llvm.fma.f16 intrinsic compiled at O0 to AArch64 versus Vulkan float32 FMA with explicit half rounding. Exact float32 values checked. Separate fmul fast half plus fadd/fsub fast half fixture measures the compiler choice to contract: fast permits fusion but does not require it. Original Metal hardware and game acceptance remain separate.",
+  "referenceLlvmSha256": "45d8ee6744c0ce1a1abb067c72445d6405e7190c5435e7cdceecdb41a8279fa2",
+  "triples": 4096,
+  "operations": 8192,
+  "compilerContractionDifferences": 3199,
+  "failedComponents": 0,
+  "firstFailures": []
+}

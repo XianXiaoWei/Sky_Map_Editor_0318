@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "nativeCases": 803,
+  "nativeComparedBytes": 78210940,
+  "nativeServiceCalls": 11379,
+  "reports": [
+    "bird-load-oracle",
+    "blaze-load-oracle",
+    "dark-creature-rail-oracle",
+    "darkstone-oracle"
+  ],
+  "projectRegression": {
+    "command": "npm test",
+    "passed": true,
+    "tests": 567,
+    "log": "/root/sky-research/continue-nature-full-tests.log",
+    "scope": "Full project after Bird/Blaze/rail changes, before final isolated Darkstone module."
+  },
+  "finalFocusedRegression": {
+    "command": "npx tsx --test tests/darkstone-runtime.test.ts tests/dark-creature-rail-runtime.test.ts tests/blaze-load-runtime.test.ts tests/bird-load-runtime.test.ts tests/blaze-event-owner.test.ts",
+    "passed": true,
+    "tests": 12,
+    "log": "/root/sky-research/continue-nature-final-targeted-tests.log"
+  },
+  "typecheck": {
+    "command": "npx tsc --noEmit",
+    "passed": true,
+    "log": "/root/sky-research/continue-nature-final-tsc.log"
+  },
+  "classProgress": {
+    "command": "npx tsx tools/objects-class-progress.ts",
+    "passed": true,
+    "declaredClasses": 283,
+    "coreSubchainVerifiedClasses": 44,
+    "completeRuntimeClasses": 0,
+    "log": "/root/sky-research/continue-nature-class-progress.log"
+  },
+  "sourceSha256": {
+    "src/core/bird-load-runtime.ts": "6bf306445645912209314272d640501e0aa3d1ab0624fbcb7c91757619387bbb",
+    "src/core/blaze-load-runtime.ts": "c6fd2f212b1dea3052f315e3cd7b667e94ae45c5d553001ff10ec665fa27b7c7",
+    "src/core/dark-creature-rail-runtime.ts": "0bc3765818c0bf1931a0fbafae28b7599509d1efb32272eff34b4232a4bba6a5",
+    "src/core/darkstone-runtime.ts": "d8c08e3e30b18fc03e7828f1e730cd1df1818ab954e80f4dd86066f914486734",
+    "tests/bird-load-runtime.test.ts": "481fdd5cf0845188c34f16f9db8f41aea7ba273953d6a5985834a865a5defd48",
+    "tests/blaze-load-runtime.test.ts": "0af2126908191439a4bbefd50cb370d05fd78c76be55fcdc64b73c90ba0623be",
+    "tests/dark-creature-rail-runtime.test.ts": "fd68dd995d133f750d506a448bd471397b020b3f36f8399421c4e7782a1b52f1",
+    "tests/darkstone-runtime.test.ts": "b60ff1f09eed311aac070458df45cf6731c1e29e7eb750408bfff81cd144b7b2",
+    "tools/objects-class-progress-spec.json": "b115718f77080f3bd60588b12fe29ca7d1acbe7f49869091346914d1d713275a"
+  },
+  "scope": "Ordinary original functions, saved configuration dependency audit, source implementation and listed checks. Actual Darkstone.Initialize/OBB hierarchy/burning/reward/network/live GPU and complete Model/animation/AI startup remain pending; no complete class or new live-map animation claim.",
+  "desktopBuild": {
+    "command": "npm run build:desktop",
+    "passed": true,
+    "log": "/root/sky-research/continue-nature-final-desktop-build.log",
+    "artifactsSha256": {
+      "dist/main.cjs": "64e09a503244fbac8e1c01b19f66bb5897aca567deaa564ef660a94804025efd",
+      "dist/app.js": "d0b520ef779fb1ca42b7b76fb78de352cb0cc85486dfd19906662fd83343417a",
+      "dist/native/sky-vulkan": "9a5289c552cd2d23ba3fb00713f83f9fba71cb794db75b1803a79d6af6e932e7"
+    },
+    "scope": "Desktop source/native build passed; Windows ZIP not repackaged."
+  }
+}

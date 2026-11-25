@@ -1,0 +1,121 @@
+{
+  "passed": true,
+  "updatedUtc": "2026-11-25T04:16:55.662686+00:00",
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "nativeReport": "docs/dark-creature-combat-oracle.json",
+  "nativeCases": 585,
+  "nativeCaseBreakdown": {
+    "wholeChase": 163,
+    "wholeAttackWithActualHit": 141,
+    "wholeHitWithOriginalAvatarBarnLayoutAndActiveReads": 155,
+    "partialMotionUpdateWithObservedRealCombat": 63,
+    "partialMotionUpdateWithUnmodifiedProductionCombatComposition": 63
+  },
+  "nativeComparedBytes": 315046180,
+  "nativeServiceCalls": 13024,
+  "nativeCodeHashesBoundariesAndAssemblyVerified": true,
+  "nativeFunctionCount": 5,
+  "wholeCombatFunctionCount": 3,
+  "originalIndexedAvatarReaderCount": 2,
+  "wholeOuterUpdateVerified": false,
+  "partialOuterUpdate": {
+    "start": "0x10026ddb0",
+    "stop": "0x10026e7da",
+    "wholeFunctionEnd": "0x10026ffc0",
+    "instructions": 439,
+    "stopAfter": "Model.SetTransform and model callback-owner writes"
+  },
+  "nativeScope": "Whole original Chase, Attack and Hit functions, composed with actual raw Motion.Seek, indexed AvatarBarn and Avatar active reads, and the previously verified partial outer Update motion phase. The remainder of outer Update and actual scene, Bird hit, animation, audio, interaction and particle/resource owners remain pending. Hit up-vector private W and mutable global particle palette/template are explicitly caller-owned. Native expf is recorded/replayed; no JavaScript/macOS libm equivalence claim. Complete caller arena and ordered services compare horizontal chasing, windup/lock-on/animation, strict timer transitions, predicted attack motion, repeated sound version checks, actual hit consumers, fixed AvatarBarn slots and 64-bird cap, local-avatar side effects and particle/audio creation, callbacks and consecutive partial outer Update frames. Native sinf/expf/fmodf inputs and outputs are recorded/replayed explicitly; no JS/macOS libm equivalence claim.",
+  "baselineRegression": {
+    "passed": true,
+    "tests": 677,
+    "command": "./node_modules/.bin/tsx --test tests/*.test.ts",
+    "log": "/root/sky-research/dark-creature-motion-final-tests.log"
+  },
+  "focusedRegression": {
+    "passed": true,
+    "tests": 11,
+    "command": "./node_modules/.bin/tsx --test tests/dark-creature-combat-runtime.test.ts tests/dark-creature-motion-runtime.test.ts tests/dark-creature-detect-runtime.test.ts tests/dark-creature-state-runtime.test.ts",
+    "log": "/root/sky-research/dark-creature-combat-focused.log"
+  },
+  "projectRegression": {
+    "passed": true,
+    "tests": 682,
+    "command": "./node_modules/.bin/tsx --test tests/*.test.ts",
+    "log": "/root/sky-research/dark-creature-combat-final-tests.log"
+  },
+  "typecheck": {
+    "passed": true,
+    "command": "./node_modules/.bin/tsc --noEmit",
+    "log": "/root/sky-research/dark-creature-combat-final-types.log"
+  },
+  "windowsBuild": {
+    "passed": true,
+    "command": "node tools/build.mjs --windows",
+    "log": "/root/sky-research/dark-creature-combat-windows-build.log",
+    "windowsMachineRuntimeTested": false,
+    "machine": "AMD64",
+    "binarySha256": "d024518d753c3131ae0e949d6cc9efd1ba7e67ec7338469375a24fcdb00b99f4"
+  },
+  "windowsSourcePlan": {
+    "passed": true,
+    "command": "python3 tools/package-windows-source.py --plan",
+    "report": "docs/windows-source-plan.json",
+    "log": "/root/sky-research/dark-creature-combat-windows-source-plan.log",
+    "includesNewRuntimeAndNativeFixtures": true,
+    "androidHostIncluded": false,
+    "buildOutputsIncluded": false,
+    "nodeModulesIncluded": false,
+    "cacheIncluded": false
+  },
+  "inventory": {
+    "passed": true,
+    "maps": 33,
+    "declaredClasses": 283,
+    "objects": 49824,
+    "references": 60016,
+    "brokenReferences": 0,
+    "completeRuntimeClasses": 0,
+    "allMapsRoundTripUnchanged": true,
+    "coreSubchainVerifiedClasses": 53,
+    "log": "/root/sky-research/dark-creature-combat-class-progress.log"
+  },
+  "categoryCensus": {
+    "passed": true,
+    "command": "python3 tools/objects-category-census.py",
+    "log": "/root/sky-research/dark-creature-combat-category-census.log",
+    "nativeCreatureFamilies": 52,
+    "mapDeclaredCreatureFamilies": 18,
+    "completeCreatureClasses": 0
+  },
+  "completeCreatureClasses": 0,
+  "autonomousViewportCreatureAcceptancePassed": false,
+  "newWindowsArchiveCreated": false,
+  "newSourceArchiveCreated": false,
+  "androidWorkPerformed": false,
+  "packagingReadiness": "Windows build passes. User requires completed creatures before packaging. Whole DarkCreature Chase/Attack/Hit are now composed with the verified partial motion Update. The outer Update remainder and actual scene/Bird hit/animation/audio/interaction/particle and Model/GPU lifecycle remain pending. No reliable packaging date is available.",
+  "remaining": [
+    "DarkCreature outer Update remainder 0x10026e7da..0x10026ffc0, including look direction/material/lighting/audio/interactions",
+    "Crab whole outer Update 0x10025bc10 and original ground/world/interaction/resource owners",
+    "Real scene/Bird hit/Avatar/rail geometry/audio/interaction/particle/network/Barn lifecycle and Model/animation/GPU owners",
+    "Autonomous viewport behavior, stopping, level switches, repeated loading/unload and Windows hardware acceptance"
+  ],
+  "artifactSha256": {
+    "src/core/dark-creature-combat-runtime.ts": "c23ae1e8d816fb618e491edc6a4a90ee3c65d78f7f04caf8d4c13f3f4bd9be8e",
+    "tools/dark-creature-combat-cases.ts": "57a0e246e5e0d2601967883717efe5e417ddd9ef65523f3ab389322b56ff1e05",
+    "tools/dark-creature-combat-oracle.ts": "6f3baa39d30b5db97a33c81bddc81a6e1a10a75dd13db3f40456a9caf74e8e3d",
+    "tools/native-dark-creature-combat-oracle.c": "4c163629d259dd255189768cf5d3797276fe252ae4db3a05ebc57a0269a6142a",
+    "tools/reverse-dark-creature-combat.py": "efba5672e0f413df40d27babada3b941dab618ec1617cbcd50bf40dd8c350fed",
+    "tests/dark-creature-combat-runtime.test.ts": "c1b2ab078460cd94c62e5145818ff4208672725a5c80a477f184bbf4c17ec393",
+    "tests/fixtures/dark-creature-combat-native.json.gz": "d85f15ab380e619664d2f4b06f1c9cff3e4be6a2472bfdc72887fdbc24fb5561",
+    "docs/冥龙追击攻击命中与打包门槛.md": "09436b08d174a08ef2802bddf3d0df13af5431c9ee9bea75d1e2c742e1fd3f51",
+    "docs/dark-creature-combat-native.json": "452b8f8e6d7d93d73b875b86885ab43f63c11f6a138df8f75f1850e5e286db4f",
+    "docs/dark-creature-combat-oracle.json": "f1208d3b719b384b0a228f1a7033c8113baec08e943b2220053306d35e197559",
+    "tools/objects-class-progress-spec.json": "238c7f7ad68d4e3a470f932ed721fc1d6be5afea842fee916ca8a648af863efe",
+    "evidence/darkcreature-chase.asm": "4391ea459192eac0e6ed82e903e0abb967fbfeb0221b67be934e324e6b8f4a14",
+    "evidence/darkcreature-attack.asm": "344ebe7d7e552bff5c9ab0c34f131bc25ca1918e1f2613479fc5c521427dfdec",
+    "evidence/darkcreature-hit.asm": "fe8263c6b5ea72e0251ae13c1b2d21932baf509a95c9c6920154566ceb6a3340",
+    "evidence/avatarbarn-index.asm": "243e58792e510ff2cac95d2401652350f10f372c17c887fc14434c123b22a4c8",
+    "evidence/avatar-active.asm": "47b039f2b6274067ffe76b46d43f83308ccb8468569ab66577dc20f3fc44326d"
+  }
+}

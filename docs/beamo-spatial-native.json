@@ -1,0 +1,62 @@
+{
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "functions": {
+    "Beamo.collisionColor": "0x10077d4b0",
+    "CollisionGeo.Remove": "0x100779200",
+    "ParentBarn.Reset": "0x100522290",
+    "ParentBarn.Create": "0x100522700",
+    "ParentBarn.Release": "0x1005227a0",
+    "ParentBarn.ReleaseAll": "0x100522390",
+    "ParentBarn.HotDate": "0x100522380",
+    "Parent.ReleaseNodes": "0x100523480",
+    "ParentBarn.FindByTarget": "0x100523c00"
+  },
+  "intervals": {
+    "Beamo.spatial": "0x10019579b..0x100195bc5",
+    "Beamo.materialGroups": "0x100195f89..0x100196094"
+  },
+  "constants": {
+    "0x100aa45b8": "0000003f",
+    "0x100aa7670": "0000003f0000003f0000003f00000000",
+    "0x100aad5d0": "55558542",
+    "0x100aa85b8": "cdcc0c40",
+    "0x100aad570": "00007f4300007f4300007f4300007f43",
+    "0x100aabf50": "00008000"
+  },
+  "record": {
+    "matrix": 48,
+    "worldObb": 112,
+    "sphereRadius": 176,
+    "disableDistance": 180,
+    "collisionEnabled": 188,
+    "callback": 192,
+    "collisionInstance": 208,
+    "primaryMaterial": 216,
+    "secondaryMaterial": 224,
+    "primaryGroup": 232,
+    "secondaryGroup": 236,
+    "alphaGroup": 240,
+    "collisionColor": 248
+  },
+  "collisionDescriptorBytes": 56,
+  "collisionDescriptorTail": "context+0x178..0x17f retains prior matrix bytes",
+  "materialGroups": {
+    "regions": 6,
+    "normalPrimary": 0,
+    "decalPrimary": 1,
+    "secondary": 2,
+    "alpha": 5,
+    "strictLimit": 16
+  },
+  "parentPool": {
+    "slots": 128,
+    "firstSlot": 16,
+    "stride": 144,
+    "freeHead": 18448,
+    "updateCount": 19480,
+    "dirty": 19484,
+    "nodePool": 19488,
+    "activityInSlot": 137
+  },
+  "scope": "Original contiguous Beamo bounds/distance/collision descriptor and material grouping; CollisionGeo.Remove and ParentBarn pool lifecycle bodies. Resource bootstrap/index/registration/libm/string/meta services are explicit. Complete map startup, collision physics, GPU drawing, Parent joint/follow/order and whole-class acceptance remain open."
+}

@@ -1,0 +1,449 @@
+{
+  "className": "DetachFromBirdGuides",
+  "functionGroup": "生物、群体与 AI",
+  "functionRole": "解除鸟类引导",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "partial",
+      "description": "DetachFromBirdGuides 的原默认值、继承初始化及 2 个序列化字段变体；原注册字段 1 项。"
+    },
+    {
+      "name": "解除鸟类引导",
+      "status": "partial",
+      "description": "原 OnEnabled、16槽 Avatar访问／active和版本化 Guide.Get／Set 子函数已独立核验。保留 active→虚 enabled门控、四个实时guide引用、stale／null匹配、版本／dirty／timeout写入。与 Release 共133组、61,560,380字节零差异，接共享 EventBarn；四份保存配置的无活跃引导分支可调度，活跃分支须附加真实 AvatarBarn／启用服务。附加保留既有starts和事件状态，完整玩家／鸟引导owner与原游戏验收仍待接。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "partial",
+      "description": "BirdV2（4 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "partial",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "DetachFromBirdGuides",
+    "category": "生物、群体与 AI",
+    "functionGroupId": "creatures",
+    "functionRole": "解除鸟类引导",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "partial",
+        "description": "DetachFromBirdGuides 的原默认值、继承初始化及 2 个序列化字段变体；原注册字段 1 项。"
+      },
+      {
+        "name": "解除鸟类引导",
+        "status": "partial",
+        "description": "原 OnEnabled、16槽 Avatar访问／active和版本化 Guide.Get／Set 子函数已独立核验。保留 active→虚 enabled门控、四个实时guide引用、stale／null匹配、版本／dirty／timeout写入。与 Release 共133组、61,560,380字节零差异，接共享 EventBarn；四份保存配置的无活跃引导分支可调度，活跃分支须附加真实 AvatarBarn／启用服务。附加保留既有starts和事件状态，完整玩家／鸟引导owner与原游戏验收仍待接。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "partial",
+        "description": "BirdV2（4 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "partial",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "BirdV2",
+        "references": 4
+      }
+    ],
+    "rttiWorkingGroup": "玩家、角色与动画",
+    "role": "对象实例类型",
+    "instances": 4,
+    "nestedInstances": 0,
+    "referenceFields": 4,
+    "declaredLevels": 1,
+    "levels": [
+      {
+        "level": "Prairie_Village",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "bird",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100c8af50",
+    "nativeRegisteredFields": [
+      {
+        "name": "bird",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP6BirdV2ERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x1001aaa50",
+        "propertyAddress": "0x100c89e30"
+      }
+    ],
+    "completedCheckpoints": 4,
+    "partialCheckpoints": 4,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 40,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": true,
+    "implementation": [
+      "src/core/environment-object-state.ts",
+      "src/core/creature-construction-runtime.ts",
+      "src/core/creature-runtime.ts",
+      "src/core/bird-guide-runtime.ts",
+      "src/core/environment-event-owner.ts"
+    ],
+    "evidence": [
+      "docs/生物骨骼动画续接.md",
+      "docs/creature-construction.json",
+      "docs/creature-construction-oracle.json",
+      "docs/creature-kernel-oracle.json",
+      "docs/objects-nature-audit.json",
+      "docs/bird-guide-native.json",
+      "docs/自然动画与鸟群引导续接.md",
+      "docs/bird-guide-oracle.json"
+    ],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 1 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "partial",
+        "note": "原 OnEnabled、16槽 Avatar访问／active和版本化 Guide.Get／Set 子函数已独立核验。保留 active→虚 enabled门控、四个实时guide引用、stale／null匹配、版本／dirty／timeout写入。与 Release 共133组、61,560,380字节零差异，接共享 EventBarn；四份保存配置的无活跃引导分支可调度，活跃分支须附加真实 AvatarBarn／启用服务。附加保留既有starts和事件状态，完整玩家／鸟引导owner与原游戏验收仍待接。",
+        "evidence": [
+          "docs/生物骨骼动画续接.md",
+          "docs/creature-construction.json",
+          "docs/creature-construction-oracle.json",
+          "docs/creature-kernel-oracle.json",
+          "docs/objects-nature-audit.json",
+          "docs/bird-guide-native.json",
+          "docs/自然动画与鸟群引导续接.md",
+          "docs/bird-guide-oracle.json"
+        ]
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "partial",
+        "note": "原 OnEnabled、16槽 Avatar访问／active和版本化 Guide.Get／Set 子函数已独立核验。保留 active→虚 enabled门控、四个实时guide引用、stale／null匹配、版本／dirty／timeout写入。与 Release 共133组、61,560,380字节零差异，接共享 EventBarn；四份保存配置的无活跃引导分支可调度，活跃分支须附加真实 AvatarBarn／启用服务。附加保留既有starts和事件状态，完整玩家／鸟引导owner与原游戏验收仍待接。",
+        "evidence": [
+          "docs/生物骨骼动画续接.md",
+          "docs/creature-construction.json",
+          "docs/creature-construction-oracle.json",
+          "docs/creature-kernel-oracle.json",
+          "docs/objects-nature-audit.json",
+          "docs/bird-guide-native.json",
+          "docs/自然动画与鸟群引导续接.md",
+          "docs/bird-guide-oracle.json"
+        ]
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "verified",
+        "note": "原 OnEnabled、16槽 Avatar访问／active和版本化 Guide.Get／Set 子函数已独立核验。保留 active→虚 enabled门控、四个实时guide引用、stale／null匹配、版本／dirty／timeout写入。与 Release 共133组、61,560,380字节零差异，接共享 EventBarn；四份保存配置的无活跃引导分支可调度，活跃分支须附加真实 AvatarBarn／启用服务。附加保留既有starts和事件状态，完整玩家／鸟引导owner与原游戏验收仍待接。",
+        "evidence": [
+          "docs/生物骨骼动画续接.md",
+          "docs/creature-construction.json",
+          "docs/creature-construction-oracle.json",
+          "docs/creature-kernel-oracle.json",
+          "docs/objects-nature-audit.json",
+          "docs/bird-guide-native.json",
+          "docs/自然动画与鸟群引导续接.md",
+          "docs/bird-guide-oracle.json"
+        ]
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "partial",
+        "note": "原 OnEnabled、16槽 Avatar访问／active和版本化 Guide.Get／Set 子函数已独立核验。保留 active→虚 enabled门控、四个实时guide引用、stale／null匹配、版本／dirty／timeout写入。与 Release 共133组、61,560,380字节零差异，接共享 EventBarn；四份保存配置的无活跃引导分支可调度，活跃分支须附加真实 AvatarBarn／启用服务。附加保留既有starts和事件状态，完整玩家／鸟引导owner与原游戏验收仍待接。",
+        "evidence": [
+          "docs/生物骨骼动画续接.md",
+          "docs/creature-construction.json",
+          "docs/creature-construction-oracle.json",
+          "docs/creature-kernel-oracle.json",
+          "docs/objects-nature-audit.json",
+          "docs/bird-guide-native.json",
+          "docs/自然动画与鸟群引导续接.md",
+          "docs/bird-guide-oracle.json"
+        ]
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "partial",
+        "note": "原 OnEnabled、16槽 Avatar访问／active和版本化 Guide.Get／Set 子函数已独立核验。保留 active→虚 enabled门控、四个实时guide引用、stale／null匹配、版本／dirty／timeout写入。与 Release 共133组、61,560,380字节零差异，接共享 EventBarn；四份保存配置的无活跃引导分支可调度，活跃分支须附加真实 AvatarBarn／启用服务。附加保留既有starts和事件状态，完整玩家／鸟引导owner与原游戏验收仍待接。",
+        "evidence": [
+          "docs/生物骨骼动画续接.md",
+          "docs/creature-construction.json",
+          "docs/creature-construction-oracle.json",
+          "docs/creature-kernel-oracle.json",
+          "docs/objects-nature-audit.json",
+          "docs/bird-guide-native.json",
+          "docs/自然动画与鸟群引导续接.md",
+          "docs/bird-guide-oracle.json"
+        ]
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "原 OnEnabled、16槽 Avatar访问／active和版本化 Guide.Get／Set 子函数已独立核验。保留 active→虚 enabled门控、四个实时guide引用、stale／null匹配、版本／dirty／timeout写入。与 Release 共133组、61,560,380字节零差异，接共享 EventBarn；四份保存配置的无活跃引导分支可调度，活跃分支须附加真实 AvatarBarn／启用服务。附加保留既有starts和事件状态，完整玩家／鸟引导owner与原游戏验收仍待接。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "Prairie_Village:n783",
+      "level": "Prairie_Village",
+      "nodeId": 783,
+      "name": "BstNode_544",
+      "className": "DetachFromBirdGuides",
+      "classIndex": 77,
+      "sourceOffset": 157948,
+      "sourceLength": 21,
+      "sourceSha256": "ebb549a4b717d75b37951fdd930460cd5ae2afe7deca27ef6bfee07d48e22e7f",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n783/p1",
+          "fieldName": "bird",
+          "target": "Prairie_Village:n1051",
+          "targetNodeId": 1051,
+          "offset": 157965
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2279",
+      "level": "Prairie_Village",
+      "nodeId": 2279,
+      "name": "BstNode_554",
+      "className": "DetachFromBirdGuides",
+      "classIndex": 77,
+      "sourceOffset": 395465,
+      "sourceLength": 21,
+      "sourceSha256": "bfeeffb9cebc63fc08606e532da3631eeda0a433f7ccbf24a0e81a4698320c29",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2279/p1",
+          "fieldName": "bird",
+          "target": "Prairie_Village:n1699",
+          "targetNodeId": 1699,
+          "offset": 395482
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2448",
+      "level": "Prairie_Village",
+      "nodeId": 2448,
+      "name": "BstNode_550",
+      "className": "DetachFromBirdGuides",
+      "classIndex": 77,
+      "sourceOffset": 421510,
+      "sourceLength": 21,
+      "sourceSha256": "016ea8003e47e3cac376aa9089ae9f981d4fc594d5e3b24fca0a200d400c234f",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2448/p1",
+          "fieldName": "bird",
+          "target": "Prairie_Village:n126",
+          "targetNodeId": 126,
+          "offset": 421527
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2778",
+      "level": "Prairie_Village",
+      "nodeId": 2778,
+      "name": "BstNode_547",
+      "className": "DetachFromBirdGuides",
+      "classIndex": 77,
+      "sourceOffset": 471182,
+      "sourceLength": 21,
+      "sourceSha256": "d6ac8d3c225d819d2d79b407298f41abb7e1502cda6efe21ad94e17235144921",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2778/p1",
+          "fieldName": "bird",
+          "target": "Prairie_Village:n419",
+          "targetNodeId": 419,
+          "offset": 471199
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "Prairie_Village",
+      "path": "Levels/Prairie_Village/Objects.level.bin",
+      "sha256": "4656296b54402016b59b894b4653fbdc71e106a21e0900294f73f2c7b7112385",
+      "bytes": 549989,
+      "nodes": 3724,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Village.json",
+      "markdown": "Objects对象清单/Prairie_Village.md"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "passed": true,
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "functions": {
+    "FishV2.Load": {
+      "start": "0x1003370c0",
+      "end": "0x100337500",
+      "codeSha256": "f0c767d9328b2e3cb75a28154be6674127c88238f38c07173509a96fedc3f37e",
+      "assembly": "evidence/fishv2-load.asm"
+    },
+    "FishV2.Unload": {
+      "start": "0x100337500",
+      "end": "0x100337540",
+      "codeSha256": "b5e563c67d9dd45dc0f52e44b970d2ec58a5f00f1b0ea6ead279b15e244237ce",
+      "assembly": "evidence/fishv2-unload.asm"
+    },
+    "FishV2.Transform": {
+      "start": "0x1003384a0",
+      "end": "0x100338550",
+      "codeSha256": "51d3c505fa141202977db061033cac312b35f9574332f42ef8ecf0535a030ca6",
+      "assembly": "evidence/fishv2-transform.asm"
+    },
+    "Movement.BankInitialize": {
+      "start": "0x100192520",
+      "end": "0x100192550",
+      "codeSha256": "2508845185b9bd38b5f808eae634a19a8aaf8dc3d0d72665208a4639205568bb",
+      "assembly": "evidence/movement-bankinitialize.asm"
+    },
+    "Movement.Seek": {
+      "start": "0x10062cb10",
+      "end": "0x10062cb70",
+      "codeSha256": "754e845d3bc831e1ad45699400032f87e03b24e6e36ab0361130a24339a70730",
+      "assembly": "evidence/movement-seek.asm"
+    },
+    "DarkCreature.Alert": {
+      "start": "0x10026d2a0",
+      "end": "0x10026d410",
+      "codeSha256": "0d8e47a794100e4994ddabc13beb5393cf7ab2156f7a55da16edca4d28aad55b",
+      "assembly": "evidence/darkcreature-alert.asm"
+    },
+    "DarkCreature.Return": {
+      "start": "0x100270f10",
+      "end": "0x100270fd0",
+      "codeSha256": "8c48263503eef5868bb0205aacc9037eef9efae2d0157ba1a1de28088487bed1",
+      "assembly": "evidence/darkcreature-return.asm"
+    },
+    "DarkCreature.SwitchRail": {
+      "start": "0x10026d0f0",
+      "end": "0x10026d2a0",
+      "codeSha256": "baaecbb2fa19fc17529de6fd64ffee05e3160ddbf855c19a5f97cf64ed1770ad",
+      "assembly": "evidence/darkcreature-switchrail.asm"
+    },
+    "CrabBarn.AssignAuthority": {
+      "start": "0x10025f030",
+      "end": "0x10025f090",
+      "codeSha256": "4c70838158ef26313ecdf9f2ee2ec06bcbf4235fe90efef7b4c4af1aa00b5d6a",
+      "assembly": "evidence/crabbarn-assignauthority.asm"
+    },
+    "CrabBarn.Update": {
+      "start": "0x10025ed80",
+      "end": "0x10025ee60",
+      "codeSha256": "991c5881cd467c8dbc8c115de682ab9c71ee309ef44a95b53eccba85b748938e",
+      "assembly": "evidence/crabbarn-update.asm"
+    }
+  },
+  "cases": 270,
+  "comparedCases": 270,
+  "comparedBytes": 35504096,
+  "serviceCalls": 862,
+  "byMode": {
+    "fish-load": {
+      "cases": 51,
+      "comparedBytes": 6751664,
+      "serviceCalls": 517
+    },
+    "fish-unload": {
+      "cases": 8,
+      "comparedBytes": 1049216,
+      "serviceCalls": 4
+    },
+    "fish-transform": {
+      "cases": 18,
+      "comparedBytes": 2359584,
+      "serviceCalls": 0
+    },
+    "dark-alert": {
+      "cases": 62,
+      "comparedBytes": 8136800,
+      "serviceCalls": 73
+    },
+    "dark-return": {
+      "cases": 64,
+      "comparedBytes": 8416256,
+      "serviceCalls": 208
+    },
+    "crab-authority": {
+      "cases": 49,
+      "comparedBytes": 6423312,
+      "serviceCalls": 0
+    },
+    "crab-barn-update": {
+      "cases": 18,
+      "comparedBytes": 2367264,
+      "serviceCalls": 60
+    }
+  },
+  "scope": "Whole ordinary fish Load/Unload/Transform, DarkCreature alert/return state callers and CrabBarn authority/update callers. Steering initialization, model/resource/animation owners, target detection and stream bodies retain explicit boundaries. Original bank initialization and DarkCreature.SwitchRail execute inside their callers. Fish Transform executes original matrix multiplication, including output/input aliases and composition with Load. A separate return-state chain executes actual motion Seek; other return cases explicitly exercise seek callback mutations. Rail nearest/sample remain explicit geometry services. Full arena bytes and ordered service traces are compared, including callback mutations, repeats, assertions and original zero-player unsigned division faults. The virtual callback code pointer is reset to its canonical zero before comparing arena bytes. No actual network traffic is sent. Autonomous AI, collision, real Model/animation/GPU ownership and complete creature lifecycle remain pending.",
+  "failures": []
+}

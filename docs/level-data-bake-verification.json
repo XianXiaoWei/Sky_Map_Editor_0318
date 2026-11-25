@@ -1,0 +1,184 @@
+{
+  "dateUTC": "2026-11-21T03:41:30.432190+00:00",
+  "passed": true,
+  "scope": "LevelData stable prepared GUID/LOD loader instruction subchains and editor map/CloudCard integration. Disjoint heap allocations; async resource IO, full construction/lifecycle, alias/reentrant allocator services, native startup/Visibility/unbaked light generation and Metal/game visual parity remain unverified. Foundation classes audited against their existing explicit original-function scopes, not declared complete. No new light bake generated.",
+  "native": {
+    "passed": true,
+    "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+    "cases": 11563,
+    "syntheticCases": 252,
+    "maps": 33,
+    "corpusLods": 11311,
+    "missingResourceLods": 18,
+    "mismatchedSampleLods": 18,
+    "uniformLods": 551,
+    "comparedBytes": 78562125,
+    "fixtureCases": 320
+  },
+  "corpus": {
+    "maps": 33,
+    "records": 10653,
+    "invalidatedRecords": 18,
+    "lods": 11311,
+    "loadedLods": 11275,
+    "clearedLods": 36,
+    "unchangedLightingLods": 11275,
+    "cloudCardsUsingOriginalBake": 356
+  },
+  "modelClasses": {
+    "LevelMesh": {
+      "instances": 4133,
+      "resourcePresent": 4117,
+      "serializedAssociations": 3086,
+      "loadedGuidFound": 3071,
+      "originalAcceptanceSatisfied": 3071,
+      "loadedLightingReady": 3071,
+      "completeOriginalClass": false,
+      "completeOriginalInstances": 0,
+      "originalAcceptanceRule": "first expanded LOD render vertex count"
+    },
+    "Beamo": {
+      "instances": 6598,
+      "resourcePresent": 6595,
+      "serializedAssociations": 6598,
+      "loadedGuidFound": 6595,
+      "originalAcceptanceSatisfied": 6595,
+      "loadedLightingReady": 6595,
+      "completeOriginalClass": false,
+      "completeOriginalInstances": 0,
+      "originalAcceptanceRule": "LOD count"
+    },
+    "BeamoDecal": {
+      "instances": 552,
+      "resourcePresent": 552,
+      "serializedAssociations": 552,
+      "loadedGuidFound": 552,
+      "originalAcceptanceSatisfied": 0,
+      "loadedLightingReady": 0,
+      "completeOriginalClass": false,
+      "completeOriginalInstances": 0,
+      "originalAcceptanceRule": "unverified independent BeamoDecal consumer"
+    },
+    "CloudCard": {
+      "instances": 356,
+      "resourcePresent": 356,
+      "serializedAssociations": 356,
+      "loadedGuidFound": 356,
+      "originalAcceptanceSatisfied": 356,
+      "loadedLightingReady": 356,
+      "completeOriginalClass": false,
+      "completeOriginalInstances": 0,
+      "originalAcceptanceRule": "first expanded LOD render vertex count"
+    }
+  },
+  "foundationCounts": {
+    "Clump": 9627,
+    "Marker": 6538,
+    "Rail": 402
+  },
+  "foundationsCompletelyRestored": {
+    "Clump": false,
+    "Marker": false,
+    "Rail": false
+  },
+  "checks": {
+    "projectTests": 387,
+    "relatedTests": 10,
+    "typecheck": true,
+    "build": true,
+    "cloudGpu": true,
+    "actualMapGpu": true
+  },
+  "gpu": {
+    "Dawn": {
+      "frames": 2,
+      "bakedCards": 78,
+      "unbakedCards": 0,
+      "visibleCards": 74
+    },
+    "Prairie_Cave": {
+      "nodeId": 240,
+      "modelDraws": 23,
+      "cloud": {
+        "bakedCards": 7,
+        "unbakedCards": 0,
+        "visibleCards": 7
+      },
+      "sourceHashes": {
+        "Objects.level.bin": "675a2256e24f8c4b16540cee6a5cd2b7647ff2fb495724a8bf596717ca39d944",
+        "BstBaked.meshes": "eab1b6359cee5308851234b5f4022819f4d3afc7f805667a1875e5d6b7d86919"
+      },
+      "images": [
+        "docs/model-material-Prairie_Cave.png",
+        "docs/model-material-Prairie_Cave-viewport.png",
+        "docs/model-material-Prairie_Cave-render.png"
+      ]
+    }
+  },
+  "completeOriginalGameRuntime": false,
+  "completeOriginalClasses": 0,
+  "completeOriginalInstances": 0,
+  "sourceHashes": {
+    "src/core/baking.ts": "d90ba67d1c422be3fe40100cd8464dadb9edbe017d8182ffa1fc75ca368f872a",
+    "src/core/level-data-bake-runtime.ts": "5b0ec82e527fe327f0eec3af8bc84d3cc68347d6d6bb16884cb1bc21675f352d",
+    "src/core/level-data-bake-adapter.ts": "2b5e5035d0fa0d84fda0b7de79a0a335f812c44f0bc5c8ff924600ff3692cbf1",
+    "src/main/main.ts": "0bc81f461c9603f1743b4ccc5678a9782a188c91f8cf30ded85745438c7c6fdc",
+    "src/main/vulkan-viewport-cloud.ts": "a657b6f255fe2f4fb60d6f90b1151c8ab3decbb2fb2c8764e1183c2f6db5b243",
+    "tools/native-level-data-bake-oracle.c": "51986483d96c8f2731c712082c08f29140b74f6c15fa6cd6b36b8efc869b6f2c",
+    "tools/level-data-bake-cases.ts": "b18632386ae9295dba23531cbbd33d5f9b2749583a7a500f1cbc95a9a88eab56",
+    "tools/level-data-bake-oracle.ts": "147fa1e43597e52a30548cb08dd524e312944dc6a8267cd349b5732b488313ff",
+    "tools/level-data-bake-audit.ts": "c3e1794c79338a526e00b6d0d81062163d7cec1cc7ed494861194683a615de8c",
+    "tools/reverse-level-data-bake.py": "8bd56d6cfaa4b5a27a99be70c5d0a3e9c63469170f1e9cf044b5f9820b641523",
+    "tests/level-data-bake-runtime.test.ts": "9739a89871a63a922961abfa383115552d2ce208b8bf2019504c99337468797b",
+    "tests/fixtures/level-data-bake-native.json.gz": "e232e544995a45715deb412620ba2d91b99a666f36628ca7877ac3fe427055c6",
+    "evidence/level-data-bake-load.asm": "e9dd1779464b8fd87d355d3bfc6b0073f2f8ad66d220b640813c60e03daad31a",
+    "docs/level-data-bake-native.json": "025638cb737c304049c5b3e77f975379c35d66af7403be52213c57e63bcf8eb0",
+    "docs/level-data-bake-oracle.json": "ba624db9dc2dc0f8a0bb998acb08610fedcc622865681498a60aba72b35e667e",
+    "docs/level-data-bake-audit.json": "6f1de074f9f00c6b4007939d26db0d5de687daf708f7cdd1b4298b47ac9747f0",
+    "docs/level-data-bake-map-smoke.json": "7d0f639b2afe91eebeb1a61ca1162f5ce4981c0f211576d4a3580759577ad499",
+    "docs/viewport-cloud-check.json": "8acc2e705430acca44e531a4d6dcdc73fe78d557519004e4c050b9adcc9830dc",
+    "docs/烘焙与基础类完整性核验.md": "203331c5b2e99bbc51c4aab82f2a22037289db31ba58c68f023f87d436ae244a",
+    "docs/Objects续接状态.md": "7c43dfd3ce7d4b369e1f0bef75bf0577c1652fcd432296228b07071729124d12",
+    "docs/model-material-Prairie_Cave-render.png": "cd319b751eba356f69c894f7eb925faff21c8910516237804399d64b9c5ac7c0",
+    "docs/model-material-Prairie_Cave-viewport.png": "30a9762e16351414d7470bb25853c0a0577c0e23907a110269a7cdaf0c7c4893",
+    "docs/model-material-Prairie_Cave.png": "91773e88179aeb12c8289d7de5aa72daa2b2f43b5b247f121a2870f7faa8b564",
+    "docs/shader-effects/Dawn-cloud-pipeline.png": "78be30816432d66ad4aa968514f5333c7c84e09e045bb20e86af042e95233f17",
+    "dist/main.cjs": "0b6a3ff2179045e5a21933686cdd1d9917fc74f39be03975a0c35fa4159c454a",
+    "dist/app.js": "383f45c84d61ce5442ed9bc0a99887cc968e4bb4ea6d55901e17ada07513cc41",
+    "dist/native/sky-vulkan": "3ee3ac32e32d6ea1a870532732f68cf59e9288a6fa2cd2b29d86836dc678ad41"
+  },
+  "logs": {
+    "allTests": {
+      "path": "/root/sky-research/level-data-bake-all-tests.log",
+      "sha256": "ccba73e990b9cbe29c38e1468d93b85d94128948202fc4f931bae004b2923803"
+    },
+    "relatedTests": {
+      "path": "/root/sky-research/level-data-bake-tests.log",
+      "sha256": "152857c45a4f77936557020465f89f4f5eb6aa979d75fa6dd576f4835c753b8f"
+    },
+    "tsc": {
+      "path": "/root/sky-research/level-data-bake-tsc.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "build": {
+      "path": "/root/sky-research/level-data-bake-build.log",
+      "sha256": "f50073a93432040228f73ce7bf27f11e6bc005f3d774d70e50d4bd63077a1c1d"
+    },
+    "nativeOracle": {
+      "path": "/root/sky-research/level-data-bake-oracle.log",
+      "sha256": "c1f6f500ee42cda5785d04425a2df4fb8fec016bdcf5263a79f00bde5f4b0e59"
+    },
+    "corpusAudit": {
+      "path": "/root/sky-research/level-data-bake-audit.log",
+      "sha256": "1dc41d0ccc9cf440b23fb4f02bda66294df2d091a8c5492a22f4ec297c472b62"
+    },
+    "cloudGpu": {
+      "path": "/root/sky-research/level-data-bake-cloud-gpu.log",
+      "sha256": "beef758ab865ce246a9600e6ad4482c4c550ee267eb06ee9aa18e36aa137ccb8"
+    },
+    "mapGpu": {
+      "path": "/root/sky-research/level-data-bake-map-smoke.log",
+      "sha256": "efb07d46ae38f5a5fbb098f84a95123468cb5ac1629611825f55c32dff5bcd79"
+    }
+  }
+}

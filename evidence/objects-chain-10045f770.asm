@@ -1,0 +1,67 @@
+0x10045f770: push rbp
+0x10045f771: mov rbp, rsp
+0x10045f774: push r15
+0x10045f776: push r14
+0x10045f778: push r12
+0x10045f77a: push rbx
+0x10045f77b: sub rsp, 0x20
+0x10045f77f: mov r14d, ecx
+0x10045f782: mov r15, rdx
+0x10045f785: mov rbx, rsi
+0x10045f788: mov r12, rdi
+0x10045f78b: vxorps xmm0, xmm0, xmm0
+0x10045f78f: vmovaps xmmword ptr [r12], xmm0
+0x10045f795: mov qword ptr [r12 + 0xd], 0
+0x10045f79e: lea rdi, [rbp - 0x40]
+0x10045f7a2: call 0x1007c2530 ; 0x1007c2530
+0x10045f7a7: call 0x1004559d0 ; 0x1004559d0
+0x10045f7ac: mov rdi, rbx
+0x10045f7af: mov rsi, rax
+0x10045f7b2: mov rdx, r15
+0x10045f7b5: call 0x1007c4360 ; 0x1007c4360
+0x10045f7ba: test rax, rax
+0x10045f7bd: je 0x10045f810
+0x10045f7bf: lea rsi, [rbp - 0x40]
+0x10045f7c3: mov rdi, rax
+0x10045f7c6: call 0x1007c2310 ; 0x1007c2310
+0x10045f7cb: mov rax, qword ptr [rbp - 0x40]
+0x10045f7cf: test rax, rax
+0x10045f7d2: je 0x10045f826
+0x10045f7d4: mov rsi, qword ptr [rax + 0x10]
+0x10045f7d8: test rsi, rsi
+0x10045f7db: je 0x10045f826
+0x10045f7dd: cmp byte ptr [rsi + 0x108], 0
+0x10045f7e4: je 0x10045f7fa
+0x10045f7e6: add rsi, 0xa8
+0x10045f7ed: xor edx, edx
+0x10045f7ef: mov rdi, r12
+0x10045f7f2: mov ecx, r14d
+0x10045f7f5: call 0x10045f880 ; 0x10045f880
+0x10045f7fa: lea rdi, [rbp - 0x40]
+0x10045f7fe: call 0x1007c2570 ; 0x1007c2570
+0x10045f803: add rsp, 0x20
+0x10045f807: pop rbx
+0x10045f808: pop r12
+0x10045f80a: pop r14
+0x10045f80c: pop r15
+0x10045f80e: pop rbp
+0x10045f80f: ret 
+0x10045f810: call 0x1004559d0 ; 0x1004559d0
+0x10045f815: mov rsi, qword ptr [rax + 8]
+0x10045f819: mov rdi, rbx
+0x10045f81c: mov rdx, r15
+0x10045f81f: call 0x1007c4640 ; 0x1007c4640
+0x10045f824: jmp 0x10045f7cb ; 0x10045f7cb
+0x10045f826: lea rdi, [rip + 0x706638] ; 0x100b65e65 Observed()
+0x10045f82d: lea rsi, [rip + 0x70663c] ; 0x100b65e70 ./Mesh.h
+0x10045f834: mov edx, 0x6d
+0x10045f839: mov ecx, 3
+0x10045f83e: call 0x1007e5f70 ; 0x1007e5f70
+0x10045f843: ud2 
+0x10045f845: jmp 0x10045f847 ; 0x10045f847
+0x10045f847: mov rbx, rax
+0x10045f84a: lea rdi, [rbp - 0x40]
+0x10045f84e: call 0x1007c2570 ; 0x1007c2570
+0x10045f853: mov rdi, rbx
+0x10045f856: call 0x100aa2192 ; 0x100aa2192 __Unwind_Resume
+0x10045f85b: nop dword ptr [rax + rax]

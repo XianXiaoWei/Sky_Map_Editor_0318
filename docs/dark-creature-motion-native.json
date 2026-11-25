@@ -1,0 +1,85 @@
+{
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "functions": {
+    "DarkCreature.Update.MotionPhase": {
+      "start": "0x10026ddb0",
+      "end": "0x10026e7da",
+      "wholeFunctionEnd": "0x10026ffc0",
+      "wholeFunction": false,
+      "codeSha256": "1d1d5e4d58869151837e92ea34093a3cb7bfed3bf62fe7687748113c1d5e3a0f",
+      "assembly": "evidence/darkcreature-update-motionphase.asm",
+      "trampolinePrefixBytes": 17
+    },
+    "DarkCreature.Appear": {
+      "start": "0x100270010",
+      "end": "0x100270310",
+      "wholeFunctionEnd": "0x100270310",
+      "wholeFunction": true,
+      "codeSha256": "392c95296697d9607e1fd6d60329739289f4828ae895387b3a4390dff129aa62",
+      "assembly": "evidence/darkcreature-appear.asm",
+      "trampolinePrefixBytes": 20
+    },
+    "Motion.FollowRail": {
+      "start": "0x10062e300",
+      "end": "0x10062e430",
+      "wholeFunctionEnd": "0x10062e430",
+      "wholeFunction": true,
+      "codeSha256": "71627553883fbe636399ee2260963c2cf005455db10e88a99de86f5dc1b566df",
+      "assembly": "evidence/motion-followrail.asm",
+      "trampolinePrefixBytes": 15
+    }
+  },
+  "constants": {
+    "one": 1065353216,
+    "half": 1056964608,
+    "epsilon": 953267991,
+    "normalizeThreshold": 925353388,
+    "upThreshold": 1065336439,
+    "appearHeight": 1089470464,
+    "speedSmooth": 3201183081,
+    "fadeDuration": 1077936128,
+    "waveScale": 1086918619,
+    "returnDuration": 1051361018,
+    "chaseWave": 1101004800,
+    "five": 1084227584
+  },
+  "vectors": {
+    "up": [
+      0,
+      1065353216,
+      0,
+      0
+    ],
+    "duplicatedUp": [
+      0,
+      1065353216,
+      0,
+      1065353216
+    ],
+    "fallbackUp": [
+      2147483648,
+      2147483648,
+      3212836864,
+      0
+    ],
+    "boundY": [
+      0,
+      1084227584,
+      0,
+      0
+    ],
+    "boundZ": [
+      0,
+      0,
+      1084227584,
+      0
+    ],
+    "modelScale": [
+      1040187392,
+      1040187392,
+      1040187392,
+      0
+    ]
+  },
+  "scope": "Exact original DarkCreature.Update motion phase 0x10026ddb0..0x10026e7da, stopping after Model.SetTransform and callback-owner writes. This is a partial outer Update, not the complete function. Complete original appearance/return-to-patrol helper and Motion.FollowRail are separately compared and composed. Caller-owned palette and private force scratch, original libm and world/model/audio services remain explicit; chase/attack consumers and the outer Update remainder are pending."
+}

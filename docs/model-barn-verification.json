@@ -1,0 +1,113 @@
+{
+  "dateUTC": "2026-11-19",
+  "passed": true,
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "projectTests": {
+    "tests": 344,
+    "passed": 344,
+    "failed": 0,
+    "log": "/root/sky-research/transform-preview-tests.log"
+  },
+  "typecheck": {
+    "passed": true,
+    "log": "/root/sky-research/transform-preview-typecheck.log"
+  },
+  "build": {
+    "passed": true,
+    "log": "/root/sky-research/transform-preview-build.log"
+  },
+  "classProgress": {
+    "levels": 33,
+    "totalNodes": 49824,
+    "nodeClasses": 280,
+    "declaredClasses": 283,
+    "nestedOnlyClasses": 0,
+    "declarationOnlyClasses": 3,
+    "references": 60016,
+    "brokenReferences": 0,
+    "coreSubchainVerifiedClasses": 26,
+    "completeRuntimeClasses": 0,
+    "completedCheckpoints": 856,
+    "totalCheckpoints": 2830,
+    "meanClassCheckpointPercent": 30.25,
+    "histogram": {
+      "20": 19,
+      "30": 238,
+      "40": 26
+    }
+  },
+  "completeOriginalGameRuntime": false,
+  "referenceChanged": false,
+  "releaseRepackaged": false,
+  "modelBarn": {
+    "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+    "passed": true,
+    "cases": 2410,
+    "comparedOutputBytes": 2685560004,
+    "meshResources": 1152,
+    "resourceNameCases": 2304,
+    "assertions": 49,
+    "constructorDependencyBoundaries": 4,
+    "capturedConstructorCalls": 2361,
+    "fullModelCreations": 0,
+    "scope": "Two complete unchanged normal ModelBarn CreateBaked/CreateUnbaked wrappers, explicit caller stack allocation fill, fixed 64-byte C-string boundaries, 1024-slot/0x3e0 stride allocation and before-constructor count commit, complete ABI argument bytes excluding the unwritten 16-byte inter-argument stack padding, all 1152 Mesh filename snapshots in both branches. Entire 0x110000-byte prepared arena compared for each call. Model constructor is a capture/no-op or explicit failure dependency service; successful wrapper returns are prepared pool addresses, not complete Model creation. Unbaked aggregate index dword retains prepared stack contents. Actual Model constructor, LevelMesh binding, heap/GPU/animation/scene/Avatar/full game remain open.",
+    "completeOriginalGameRuntime": false,
+    "failures": []
+  },
+  "modelLodQuery": {
+    "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+    "originalRefs": true,
+    "registeredLookup": true,
+    "passed": true,
+    "cases": 1168,
+    "nativeOutputBytes": 9806292,
+    "comparedOutputBytes": 9726868,
+    "arithmeticServiceBytes": 79424,
+    "meshResources": 1152,
+    "meshLods": 1152,
+    "bakeMaps": 0,
+    "bakeRecords": 0,
+    "queryCases": 1168,
+    "corpusMapsScanned": 33,
+    "realMeshMissingAssertions": 0,
+    "realAcceptedSnapshots": 0,
+    "assertions": 4,
+    "diagnosticCases": 0,
+    "acceptedSnapshots": 0,
+    "scope": "Complete original Model Mesh LOD query 0x1004653c0 with registered ResourceManager equal_range/lookup/metadata-ID getter and original ResourceRef normal lifecycle. All 1152 Mesh names/count snapshots, zero/high unsigned counts and failed name/observation assertions. Whole 8192-byte prepared memory, callback order and result bytes compared. Query does not load/request a missing resource. Prepared registry tree/metadata conversions/type getter/resource callback internals and stack padding are services. Exception unwind, actual loading, complete Model constructor/LevelMesh binding/GPU/Avatar/game remain open.",
+    "completeOriginalGameRuntime": false,
+    "failures": []
+  },
+  "focusedTests": {
+    "tests": 14,
+    "passed": 14,
+    "failed": 0,
+    "log": "/root/sky-research/model-barn-focused.log"
+  },
+  "sourceSha256": {
+    "docs/model-barn-native.json": "5964a9b3e708a2654f8172cdc58df8c3946b15422b1cbc498941b61c0595a3b3",
+    "docs/model-barn-oracle.json": "69a19047340a7ad0e38b54545d475a2a75939e6a6a0d55e95a5cf40b55e21ae0",
+    "docs/model-lod-oracle.json": "04998afa682564b713fc870500dc363cf3a083fb5bf738643a4547e554280873",
+    "evidence/model-barn-CreateBaked.asm": "72f138780ad422d6497db4a3b29205f6d6de039a04b00d87ee069d63582cdcf4",
+    "evidence/model-barn-CreateUnbaked.asm": "fe06847b1f0c391b3ca20a685b9623920d86ed3b52ebe8907da8031000d2380e",
+    "evidence/model-barn-MeshLodCount.asm": "feca0281f0835d3a63520bbcf8b6bc3db4256478e1610a451366c1e6e702e9b5",
+    "src/core/model-baked-runtime.ts": "9405e8c4d408892d5fe5477ae5193a417b19a0682478bf07a6ae6427432e5e1b",
+    "src/core/model-barn-runtime.ts": "5866c41b305c2978a4fe5158322d1fd1a1136c151a90596fa9f344feb0c98f69",
+    "tests/fixtures/model-barn-native.json.gz": "d13a62496d6a3d8d7eab7ca586898229c0a4ad68fc6299837065096751365a2b",
+    "tests/fixtures/model-lod-native.json.gz": "a5b358b405a77f6a4776b49dbb97b7cd677dbd35723172d4c4e9b07337d8cf10",
+    "tests/model-barn-runtime.test.ts": "a313aa29bb9eb0deb01bcb898198a9962a73c9121e7634906a7686e1da214493",
+    "tests/model-lod-runtime.test.ts": "da2deb9413d9ba642999f4be403a3e717a39b50f1f645b4a5f47068fd985899f",
+    "tools/model-baked-evaluate.ts": "627b704705b29238e8f73cf3ee018f1dfecd2d1e94eec4fc4a7f5aaeff902ea7",
+    "tools/model-barn-cases.ts": "04b0b27a3f1ca096ab4d645a82d7107a4ea08af46ce2f47b53c79d2faea5c606",
+    "tools/model-barn-evaluate.ts": "4b4a2cd2f32ad4359adccb4e12bf98af8dbde0202523a656298dad1fd0e4fada",
+    "tools/model-barn-oracle.ts": "033ceb6a755b9e2c45f963f92d3ac213d35ffbbf79fa48f16946353e53f3e94a",
+    "tools/model-lod-cases.ts": "98f4f83cb8d77cda3af2264dcbad80d0308825d5403d8fd5e4178d2afc509e58",
+    "tools/model-lod-oracle.ts": "b37b0993ed86ef5ebb3eb79e9677cb4dc6700787bf309005b193e4d9fdeba30b",
+    "tools/native-model-baked-oracle.c": "fd46aee50205fe9f99c50fbf6ea82e4b7209789c2f65d06096b1691650a5ad6a",
+    "tools/native-model-barn-oracle.c": "8c0c2a2b28da279b94e6889e4b425ee8057ae3882a6f8b31a018e9d43cb4c5e5",
+    "tools/reverse-model-barn.py": "6ca52e3fcc747a94289cf5aa57830200d62f73d81b9d9fa7a7f742b4c97b9a63"
+  },
+  "fullModelCreations": 0,
+  "scope": "Complete normal ModelBarn wrappers and LOD query verified against original machine code. Constructor capture/no-op and failure services remain explicit dependencies; prepared pool addresses are not Model creations. Latest combined project checks passed after the subsequent Vertex and editor preview changes.",
+  "next": "Close Vertex setters and constructor dependencies, then full Model creation and actual LevelMesh binding."
+}

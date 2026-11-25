@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "scope": "Complete unmodified TerrainBarn bin draw preparation 0x1006a7b50 executes under QEMU x86_64 -cpu max without patches, imports or callbacks. Explicit model, 0x3e0 draw blocks, 128-byte packets, 59 index pointer tokens, vertex pointer token and LOD/pending arrays. Every block byte, all other bins, 64-byte trailing guards, input packets/model (normalized only for harness pointers) and repeated calls are compared. Tests include selectors 0/58, ordered duplicate overwrite including zero counts, unsigned uint32 offsets and uint64 address wrap, and null draw storage bypassing invalid selectors. The native body trusts packet producers; JS rejects unsupported selectors/storage before mutation. No original packet/index-base/bounds producer, resource allocation, actual LOD transitions, jobs, rendering, original hardware/game or viewport integration claimed. No packets fabricated from map surfaces.",
+  "cases": 170,
+  "steps": 1028,
+  "compared": 17074992,
+  "failed": 0,
+  "failures": [],
+  "corpusMaps": 0,
+  "originalPacketProducerRestored": false,
+  "lodTransitionsAndJobsRestored": false,
+  "viewportIntegrated": false
+}

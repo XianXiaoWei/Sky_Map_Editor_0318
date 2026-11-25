@@ -1,0 +1,2206 @@
+{
+  "className": "AvatarGrindToPos",
+  "functionGroup": "玩家状态与输入",
+  "functionRole": "玩家轨道式定位与停止",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "AvatarGrindToPos 的原默认值、继承初始化及 16 个序列化字段变体；原注册字段 15 项。"
+    },
+    {
+      "name": "玩家轨道式定位与停止",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Clump（57 条引用）、Npc（7 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "AvatarGrindToPos",
+    "category": "玩家状态与输入",
+    "functionGroupId": "avatar",
+    "functionRole": "玩家轨道式定位与停止",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "AvatarGrindToPos 的原默认值、继承初始化及 16 个序列化字段变体；原注册字段 15 项。"
+      },
+      {
+        "name": "玩家轨道式定位与停止",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Clump（57 条引用）、Npc（7 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Clump",
+        "references": 57
+      },
+      {
+        "className": "Npc",
+        "references": 7
+      }
+    ],
+    "rttiWorkingGroup": "玩家、角色与动画",
+    "role": "对象实例类型",
+    "instances": 46,
+    "nestedInstances": 0,
+    "referenceFields": 64,
+    "declaredLevels": 11,
+    "levels": [
+      {
+        "level": "CandleSpace",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Dawn",
+        "nodes": 11,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DayEnd",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Dusk",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "HubReveal",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_ButterflyFields",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Rain",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainMid",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SkyHub2",
+        "nodes": 17,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "StormEnd",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "TitleWater",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "comeToStop",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "grindCompleteFX",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "inputStr",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "npc",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "positionSnap",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "remoteTarget",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "setOrientDuration",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "smoothInTime",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "smoothOutDist",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "speed",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "stopDist",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "target",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "time",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "useInputStr",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "useTime",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100c85c60",
+    "nativeRegisteredFields": [
+      {
+        "name": "target",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 64,
+        "registrationFunction": "0x10014f2b0",
+        "propertyAddress": "0x100c84290"
+      },
+      {
+        "name": "remoteTarget",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 72,
+        "registrationFunction": "0x10014f2b0",
+        "propertyAddress": "0x100c842e0"
+      },
+      {
+        "name": "speed",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 80,
+        "registrationFunction": "0x10014f2b0",
+        "propertyAddress": "0x100c84330"
+      },
+      {
+        "name": "time",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 84,
+        "registrationFunction": "0x10014f2b0",
+        "propertyAddress": "0x100c84380"
+      },
+      {
+        "name": "useTime",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 100,
+        "registrationFunction": "0x10014f2b0",
+        "propertyAddress": "0x100c843d0"
+      },
+      {
+        "name": "stopDist",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 96,
+        "registrationFunction": "0x10014f2b0",
+        "propertyAddress": "0x100c84420"
+      },
+      {
+        "name": "npc",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP3NpcERK8MetaTypev",
+        "nativeOffset": 104,
+        "registrationFunction": "0x10014f2b0",
+        "propertyAddress": "0x100c84470"
+      },
+      {
+        "name": "setOrientDuration",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 88,
+        "registrationFunction": "0x10014f2b0",
+        "propertyAddress": "0x100c844c0"
+      },
+      {
+        "name": "comeToStop",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 113,
+        "registrationFunction": "0x10014f2b0",
+        "propertyAddress": "0x100c84510"
+      },
+      {
+        "name": "useInputStr",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 112,
+        "registrationFunction": "0x10014f2b0",
+        "propertyAddress": "0x100c84560"
+      },
+      {
+        "name": "inputStr",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 92,
+        "registrationFunction": "0x10014f2b0",
+        "propertyAddress": "0x100c845b0"
+      },
+      {
+        "name": "positionSnap",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 116,
+        "registrationFunction": "0x10014f2b0",
+        "propertyAddress": "0x100c84600"
+      },
+      {
+        "name": "smoothInTime",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 120,
+        "registrationFunction": "0x10014f2b0",
+        "propertyAddress": "0x100c84650"
+      },
+      {
+        "name": "smoothOutDist",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 124,
+        "registrationFunction": "0x10014f2b0",
+        "propertyAddress": "0x100c846a0"
+      },
+      {
+        "name": "grindCompleteFX",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 128,
+        "registrationFunction": "0x10014f2b0",
+        "propertyAddress": "0x100c846f0"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 15 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "CandleSpace:n362",
+      "level": "CandleSpace",
+      "nodeId": 362,
+      "name": "BstNode_2529559061",
+      "className": "AvatarGrindToPos",
+      "classIndex": 66,
+      "sourceOffset": 76521,
+      "sourceLength": 75,
+      "sourceSha256": "483733b345054429206eeed64bbcfc60011effe2edd65852d8718844ca919ac9",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n362/p8",
+          "fieldName": "target",
+          "target": "CandleSpace:n535",
+          "targetNodeId": 535,
+          "offset": 76564
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n73",
+      "level": "Dawn",
+      "nodeId": 73,
+      "name": "BstNode_656801799",
+      "className": "AvatarGrindToPos",
+      "classIndex": 24,
+      "sourceOffset": 45488,
+      "sourceLength": 74,
+      "sourceSha256": "5ad1973f3b71ce46284d92aa791f6cc35e365db04c048e414b934632a37d9f4b",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n73/p8",
+          "fieldName": "target",
+          "target": "Dawn:n2984",
+          "targetNodeId": 2984,
+          "offset": 45530
+        },
+        {
+          "fieldId": "n73/p14",
+          "fieldName": "grindCompleteFX",
+          "target": "Dawn:n2985",
+          "targetNodeId": 2985,
+          "offset": 45554
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n225",
+      "level": "Dawn",
+      "nodeId": 225,
+      "name": "BstNode_2446917751",
+      "className": "AvatarGrindToPos",
+      "classIndex": 24,
+      "sourceOffset": 68320,
+      "sourceLength": 75,
+      "sourceSha256": "87c807f5eed2794ea4d0fc88b7268be4e9b00c3f7ac631ed4846dcf5093a3235",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n225/p8",
+          "fieldName": "target",
+          "target": "Dawn:n3034",
+          "targetNodeId": 3034,
+          "offset": 68363
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n456",
+      "level": "Dawn",
+      "nodeId": 456,
+      "name": "BstNode_1293287714",
+      "className": "AvatarGrindToPos",
+      "classIndex": 24,
+      "sourceOffset": 102271,
+      "sourceLength": 75,
+      "sourceSha256": "d340728489e4b8351c570ea9b63a0a81bb5e985df8a10c9733cdb1065f7553ed",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n456/p8",
+          "fieldName": "target",
+          "target": "Dawn:n3103",
+          "targetNodeId": 3103,
+          "offset": 102314
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1366",
+      "level": "Dawn",
+      "nodeId": 1366,
+      "name": "BstNode_3122856123",
+      "className": "AvatarGrindToPos",
+      "classIndex": 24,
+      "sourceOffset": 242683,
+      "sourceLength": 75,
+      "sourceSha256": "4633a31aa53f747dd9bab0df6553b4864ea5d68b5db6a3ea8af1d3f4e21656a5",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1366/p8",
+          "fieldName": "target",
+          "target": "Dawn:n3336",
+          "targetNodeId": 3336,
+          "offset": 242726
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1539",
+      "level": "Dawn",
+      "nodeId": 1539,
+      "name": "BstNode_1293287867",
+      "className": "AvatarGrindToPos",
+      "classIndex": 24,
+      "sourceOffset": 268314,
+      "sourceLength": 75,
+      "sourceSha256": "ca754461d70d35b6378fe96f4299267dd2e9c04f2b8eeef82bf306f36b0acc18",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1539/p8",
+          "fieldName": "target",
+          "target": "Dawn:n3389",
+          "targetNodeId": 3389,
+          "offset": 268357
+        },
+        {
+          "fieldId": "n1539/p14",
+          "fieldName": "grindCompleteFX",
+          "target": "Dawn:n3390",
+          "targetNodeId": 3390,
+          "offset": 268381
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1793",
+      "level": "Dawn",
+      "nodeId": 1793,
+      "name": "BstNode_656801812",
+      "className": "AvatarGrindToPos",
+      "classIndex": 24,
+      "sourceOffset": 301493,
+      "sourceLength": 74,
+      "sourceSha256": "b7bc622ba45455b04c30778aed97732694b08b5f017aad137c91c8bb9d63b46c",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1793/p8",
+          "fieldName": "target",
+          "target": "Dawn:n3472",
+          "targetNodeId": 3472,
+          "offset": 301535
+        },
+        {
+          "fieldId": "n1793/p14",
+          "fieldName": "grindCompleteFX",
+          "target": "Dawn:n3473",
+          "targetNodeId": 3473,
+          "offset": 301559
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2083",
+      "level": "Dawn",
+      "nodeId": 2083,
+      "name": "BstNode_3122856239",
+      "className": "AvatarGrindToPos",
+      "classIndex": 24,
+      "sourceOffset": 341241,
+      "sourceLength": 75,
+      "sourceSha256": "9672af301ac5b279d86fc49e242875846f31361c6bdca29c85df3bbda2dd4a43",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2083/p8",
+          "fieldName": "target",
+          "target": "Dawn:n3565",
+          "targetNodeId": 3565,
+          "offset": 341284
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2184",
+      "level": "Dawn",
+      "nodeId": 2184,
+      "name": "BstNode_1293287724",
+      "className": "AvatarGrindToPos",
+      "classIndex": 24,
+      "sourceOffset": 359745,
+      "sourceLength": 75,
+      "sourceSha256": "3fde340d279839f908b50ef4623fb9612250a505b370056ae2c6b853f5f6c49b",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2184/p8",
+          "fieldName": "target",
+          "target": "Dawn:n3588",
+          "targetNodeId": 3588,
+          "offset": 359788
+        },
+        {
+          "fieldId": "n2184/p14",
+          "fieldName": "grindCompleteFX",
+          "target": "Dawn:n3589",
+          "targetNodeId": 3589,
+          "offset": 359812
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2299",
+      "level": "Dawn",
+      "nodeId": 2299,
+      "name": "BstNode_3122856312",
+      "className": "AvatarGrindToPos",
+      "classIndex": 24,
+      "sourceOffset": 381072,
+      "sourceLength": 75,
+      "sourceSha256": "bd18ddf1ff3ae9d94ed662a18b5c63ccd5f7ba65e76a0abca0771f3e8f432dc8",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2299/p8",
+          "fieldName": "target",
+          "target": "Dawn:n3623",
+          "targetNodeId": 3623,
+          "offset": 381115
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2324",
+      "level": "Dawn",
+      "nodeId": 2324,
+      "name": "BstNode_1293287733",
+      "className": "AvatarGrindToPos",
+      "classIndex": 24,
+      "sourceOffset": 384686,
+      "sourceLength": 75,
+      "sourceSha256": "b871ff6cc53b90464417c725c36fe267207512e8771bf1bd8a1488b8b3568c8c",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2324/p8",
+          "fieldName": "target",
+          "target": "Dawn:n3629",
+          "targetNodeId": 3629,
+          "offset": 384729
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2829",
+      "level": "Dawn",
+      "nodeId": 2829,
+      "name": "BstNode_3122856341",
+      "className": "AvatarGrindToPos",
+      "classIndex": 24,
+      "sourceOffset": 463735,
+      "sourceLength": 75,
+      "sourceSha256": "1e88073b150c58e13fdba5f94c0c40690a02ad23b4a15303b4faf25258b7a9d8",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2829/p8",
+          "fieldName": "target",
+          "target": "Dawn:n3759",
+          "targetNodeId": 3759,
+          "offset": 463778
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n558",
+      "level": "DayEnd",
+      "nodeId": 558,
+      "name": "BstNode_1167523867",
+      "className": "AvatarGrindToPos",
+      "classIndex": 61,
+      "sourceOffset": 129076,
+      "sourceLength": 75,
+      "sourceSha256": "bdf38d35e6b4fa3ded84daefbeb558f99a32ad89984d20a876b368f063db1029",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n558/p8",
+          "fieldName": "target",
+          "target": "DayEnd:n1339",
+          "targetNodeId": 1339,
+          "offset": 129119
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n235",
+      "level": "Dusk",
+      "nodeId": 235,
+      "name": "BstNode_2345992694",
+      "className": "AvatarGrindToPos",
+      "classIndex": 38,
+      "sourceOffset": 67424,
+      "sourceLength": 75,
+      "sourceSha256": "2dde29064e90dceb661625dd2b5bb69446c11fff22b9852df5e5ff0fe5461016",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n235/p8",
+          "fieldName": "target",
+          "target": "Dusk:n1205",
+          "targetNodeId": 1205,
+          "offset": 67467
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n986",
+      "level": "Dusk",
+      "nodeId": 986,
+      "name": "BstNode_2345992657",
+      "className": "AvatarGrindToPos",
+      "classIndex": 38,
+      "sourceOffset": 201578,
+      "sourceLength": 75,
+      "sourceSha256": "54c3c3ce54b15752232a0b136fde077d71d60b7f6ca13c4cbfab7feaaa92f561",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n986/p8",
+          "fieldName": "target",
+          "target": "Dusk:n1274",
+          "targetNodeId": 1274,
+          "offset": 201621
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n29",
+      "level": "HubReveal",
+      "nodeId": 29,
+      "name": "BstNode_15",
+      "className": "AvatarGrindToPos",
+      "classIndex": 17,
+      "sourceOffset": 33398,
+      "sourceLength": 67,
+      "sourceSha256": "8ea7cbbda568e9977d26b2609fb441e8263928ce74b884faeb9b29db81f206b4",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n29/p8",
+          "fieldName": "target",
+          "target": "HubReveal:n1511",
+          "targetNodeId": 1511,
+          "offset": 33433
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n932",
+      "level": "HubReveal",
+      "nodeId": 932,
+      "name": "BstNode_3156082769",
+      "className": "AvatarGrindToPos",
+      "classIndex": 17,
+      "sourceOffset": 186760,
+      "sourceLength": 75,
+      "sourceSha256": "47891fb1e2cb10118ca6aa748cb525fd70cd597c73bfc2665e7358d6ce442027",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n932/p8",
+          "fieldName": "target",
+          "target": "HubReveal:n1672",
+          "targetNodeId": 1672,
+          "offset": 186803
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n1196",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 1196,
+      "name": "BstNode_2529558548",
+      "className": "AvatarGrindToPos",
+      "classIndex": 67,
+      "sourceOffset": 259767,
+      "sourceLength": 75,
+      "sourceSha256": "c95af820256a2e4d830659da8adbbbcc0b2636a1179bb30c55fa54f39b97df32",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1196/p8",
+          "fieldName": "target",
+          "target": "Prairie_ButterflyFields:n1483",
+          "targetNodeId": 1483,
+          "offset": 259810
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n179",
+      "level": "Rain",
+      "nodeId": 179,
+      "name": "BstNode_140",
+      "className": "AvatarGrindToPos",
+      "classIndex": 30,
+      "sourceOffset": 68561,
+      "sourceLength": 68,
+      "sourceSha256": "4a075e1f6e1d5b7d07e16cdf87aff3b230ecb93d044a3583a93b27fc2fc7a9c8",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n179/p8",
+          "fieldName": "target",
+          "target": "Rain:n1892",
+          "targetNodeId": 1892,
+          "offset": 68597
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n380",
+      "level": "Rain",
+      "nodeId": 380,
+      "name": "BstNode_2227",
+      "className": "AvatarGrindToPos",
+      "classIndex": 30,
+      "sourceOffset": 113590,
+      "sourceLength": 69,
+      "sourceSha256": "effa4ae3f699a7d33aa6614d90d5d660d53320061c0fa64c0c3ef1d2b7e41bb5",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n380/p8",
+          "fieldName": "target",
+          "target": "Rain:n1915",
+          "targetNodeId": 1915,
+          "offset": 113627
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n753",
+      "level": "Rain",
+      "nodeId": 753,
+      "name": "BstNode_510",
+      "className": "AvatarGrindToPos",
+      "classIndex": 30,
+      "sourceOffset": 199727,
+      "sourceLength": 68,
+      "sourceSha256": "d9dd6840a4b46db3b75dce2450489eb2380c2e0c37b5955dd4183d397e8ac8ee",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n753/p8",
+          "fieldName": "target",
+          "target": "Rain:n1952",
+          "targetNodeId": 1952,
+          "offset": 199763
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n21",
+      "level": "RainMid",
+      "nodeId": 21,
+      "name": "BstNode_2345993200",
+      "className": "AvatarGrindToPos",
+      "classIndex": 10,
+      "sourceOffset": 30083,
+      "sourceLength": 75,
+      "sourceSha256": "32f0fb62f719c234d947895329c9c8ccbc260a67a73e38e2a9d080a2468b564f",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n21/p8",
+          "fieldName": "target",
+          "target": "RainMid:n2195",
+          "targetNodeId": 2195,
+          "offset": 30126
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n139",
+      "level": "SkyHub2",
+      "nodeId": 139,
+      "name": "BstNode_2279670123",
+      "className": "AvatarGrindToPos",
+      "classIndex": 30,
+      "sourceOffset": 58706,
+      "sourceLength": 75,
+      "sourceSha256": "cea9d6a9604d8613089d4a084af9272aee1fa1048acf48038eb57d6a25e2824c",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n139/p8",
+          "fieldName": "target",
+          "target": "SkyHub2:n2475",
+          "targetNodeId": 2475,
+          "offset": 58749
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n340",
+      "level": "SkyHub2",
+      "nodeId": 340,
+      "name": "BstNode_2529558664",
+      "className": "AvatarGrindToPos",
+      "classIndex": 30,
+      "sourceOffset": 98267,
+      "sourceLength": 75,
+      "sourceSha256": "f803535055eec028fdd139016fc3c4c316a5365a3f92473db8098d604fb620ac",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n340/p6",
+          "fieldName": "npc",
+          "target": "SkyHub2:n1395",
+          "targetNodeId": 1395,
+          "offset": 98302
+        },
+        {
+          "fieldId": "n340/p8",
+          "fieldName": "target",
+          "target": "SkyHub2:n2506",
+          "targetNodeId": 2506,
+          "offset": 98310
+        },
+        {
+          "fieldId": "n340/p14",
+          "fieldName": "grindCompleteFX",
+          "target": "SkyHub2:n633",
+          "targetNodeId": 633,
+          "offset": 98334
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n573",
+      "level": "SkyHub2",
+      "nodeId": 573,
+      "name": "BstNode_2529558576",
+      "className": "AvatarGrindToPos",
+      "classIndex": 30,
+      "sourceOffset": 139477,
+      "sourceLength": 75,
+      "sourceSha256": "9418b6f67f3b4e3de9e86fea38af6ed4ec637c8825f350b740eef21ccdce43f7",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n573/p6",
+          "fieldName": "npc",
+          "target": "SkyHub2:n1395",
+          "targetNodeId": 1395,
+          "offset": 139512
+        },
+        {
+          "fieldId": "n573/p8",
+          "fieldName": "target",
+          "target": "SkyHub2:n2551",
+          "targetNodeId": 2551,
+          "offset": 139520
+        },
+        {
+          "fieldId": "n573/p14",
+          "fieldName": "grindCompleteFX",
+          "target": "SkyHub2:n377",
+          "targetNodeId": 377,
+          "offset": 139544
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n888",
+      "level": "SkyHub2",
+      "nodeId": 888,
+      "name": "BstNode_2529558658",
+      "className": "AvatarGrindToPos",
+      "classIndex": 30,
+      "sourceOffset": 195178,
+      "sourceLength": 75,
+      "sourceSha256": "9ad1e72f7e8716aaf1a360d74d2c74ed47d7c3abb5ac0272ca37fa41f5b12e96",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n888/p8",
+          "fieldName": "target",
+          "target": "SkyHub2:n2602",
+          "targetNodeId": 2602,
+          "offset": 195221
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1004",
+      "level": "SkyHub2",
+      "nodeId": 1004,
+      "name": "BstNode_2529558534",
+      "className": "AvatarGrindToPos",
+      "classIndex": 30,
+      "sourceOffset": 216514,
+      "sourceLength": 75,
+      "sourceSha256": "f9ddb35470fa01b00fc73f2909f3846a090cdae69e6b05dd9ab8afc78c0f6b4b",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1004/p8",
+          "fieldName": "target",
+          "target": "SkyHub2:n2614",
+          "targetNodeId": 2614,
+          "offset": 216557
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1162",
+      "level": "SkyHub2",
+      "nodeId": 1162,
+      "name": "BstNode_1167524409",
+      "className": "AvatarGrindToPos",
+      "classIndex": 30,
+      "sourceOffset": 244228,
+      "sourceLength": 75,
+      "sourceSha256": "a4a35b5096b0d248771d516baef2e91a9d3ea806d8314c78fc546ca704d20681",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1162/p8",
+          "fieldName": "target",
+          "target": "SkyHub2:n2644",
+          "targetNodeId": 2644,
+          "offset": 244271
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1197",
+      "level": "SkyHub2",
+      "nodeId": 1197,
+      "name": "BstNode_2529558698",
+      "className": "AvatarGrindToPos",
+      "classIndex": 30,
+      "sourceOffset": 250012,
+      "sourceLength": 75,
+      "sourceSha256": "9d9b5fb836dae6c6bdc02f4dc3be9a810d50fda2a3d29eab955b0143333753db",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1197/p8",
+          "fieldName": "target",
+          "target": "SkyHub2:n2650",
+          "targetNodeId": 2650,
+          "offset": 250055
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1283",
+      "level": "SkyHub2",
+      "nodeId": 1283,
+      "name": "BstNode_2529558569",
+      "className": "AvatarGrindToPos",
+      "classIndex": 30,
+      "sourceOffset": 263416,
+      "sourceLength": 75,
+      "sourceSha256": "fefd635fe78e7d27c774c2f973d0932722e747147ff2b88c536004f0c86e218f",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1283/p8",
+          "fieldName": "target",
+          "target": "SkyHub2:n2663",
+          "targetNodeId": 2663,
+          "offset": 263459
+        },
+        {
+          "fieldId": "n1283/p14",
+          "fieldName": "grindCompleteFX",
+          "target": "SkyHub2:n646",
+          "targetNodeId": 646,
+          "offset": 263483
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1322",
+      "level": "SkyHub2",
+      "nodeId": 1322,
+      "name": "BstNode_2446917895",
+      "className": "AvatarGrindToPos",
+      "classIndex": 30,
+      "sourceOffset": 269154,
+      "sourceLength": 75,
+      "sourceSha256": "76d4f3d6b4dae9dc5b02c7d67aedd9f9f02b4e41934b4ef8d8805154f0ec1b95",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1322/p6",
+          "fieldName": "npc",
+          "target": "SkyHub2:n1395",
+          "targetNodeId": 1395,
+          "offset": 269189
+        },
+        {
+          "fieldId": "n1322/p8",
+          "fieldName": "target",
+          "target": "SkyHub2:n2668",
+          "targetNodeId": 2668,
+          "offset": 269197
+        },
+        {
+          "fieldId": "n1322/p14",
+          "fieldName": "grindCompleteFX",
+          "target": "SkyHub2:n2669",
+          "targetNodeId": 2669,
+          "offset": 269221
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1334",
+      "level": "SkyHub2",
+      "nodeId": 1334,
+      "name": "BstNode_2529558637",
+      "className": "AvatarGrindToPos",
+      "classIndex": 30,
+      "sourceOffset": 270584,
+      "sourceLength": 75,
+      "sourceSha256": "2f7c12a8cc1906ec2bd3a8114b7c4213871eacb5f9f8112c05a2f6e09bfb82f9",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1334/p6",
+          "fieldName": "npc",
+          "target": "SkyHub2:n1395",
+          "targetNodeId": 1395,
+          "offset": 270619
+        },
+        {
+          "fieldId": "n1334/p8",
+          "fieldName": "target",
+          "target": "SkyHub2:n2670",
+          "targetNodeId": 2670,
+          "offset": 270627
+        },
+        {
+          "fieldId": "n1334/p14",
+          "fieldName": "grindCompleteFX",
+          "target": "SkyHub2:n730",
+          "targetNodeId": 730,
+          "offset": 270651
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1345",
+      "level": "SkyHub2",
+      "nodeId": 1345,
+      "name": "BstNode_1167524403",
+      "className": "AvatarGrindToPos",
+      "classIndex": 30,
+      "sourceOffset": 271830,
+      "sourceLength": 75,
+      "sourceSha256": "6b178fe67bb59b17cc42aad49701c8d091e2c92ed291dd059670fa1c61b92fee",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1345/p6",
+          "fieldName": "npc",
+          "target": "SkyHub2:n1395",
+          "targetNodeId": 1395,
+          "offset": 271865
+        },
+        {
+          "fieldId": "n1345/p8",
+          "fieldName": "target",
+          "target": "SkyHub2:n2674",
+          "targetNodeId": 2674,
+          "offset": 271873
+        },
+        {
+          "fieldId": "n1345/p14",
+          "fieldName": "grindCompleteFX",
+          "target": "SkyHub2:n2675",
+          "targetNodeId": 2675,
+          "offset": 271897
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1386",
+      "level": "SkyHub2",
+      "nodeId": 1386,
+      "name": "BstNode_2529558709",
+      "className": "AvatarGrindToPos",
+      "classIndex": 30,
+      "sourceOffset": 275311,
+      "sourceLength": 75,
+      "sourceSha256": "c74861e30b7aefa6096eee14bd38830fad47700c76c6b22bafa448178ffcb571",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1386/p8",
+          "fieldName": "target",
+          "target": "SkyHub2:n2683",
+          "targetNodeId": 2683,
+          "offset": 275354
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1452",
+      "level": "SkyHub2",
+      "nodeId": 1452,
+      "name": "BstNode_1167523992",
+      "className": "AvatarGrindToPos",
+      "classIndex": 30,
+      "sourceOffset": 283931,
+      "sourceLength": 75,
+      "sourceSha256": "635a3d5810e28ad538d65b6aa2c70d4d9f16a91972186352e81cda02cda52fa4",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1452/p8",
+          "fieldName": "target",
+          "target": "SkyHub2:n2696",
+          "targetNodeId": 2696,
+          "offset": 283974
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1739",
+      "level": "SkyHub2",
+      "nodeId": 1739,
+      "name": "BstNode_1167524161",
+      "className": "AvatarGrindToPos",
+      "classIndex": 30,
+      "sourceOffset": 330354,
+      "sourceLength": 75,
+      "sourceSha256": "0dd4bcb302b7e02dae2aaf0e100cda33ee725784e11796b9e3d0df6350df87a3",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1739/p6",
+          "fieldName": "npc",
+          "target": "SkyHub2:n1395",
+          "targetNodeId": 1395,
+          "offset": 330389
+        },
+        {
+          "fieldId": "n1739/p8",
+          "fieldName": "target",
+          "target": "SkyHub2:n2764",
+          "targetNodeId": 2764,
+          "offset": 330397
+        },
+        {
+          "fieldId": "n1739/p14",
+          "fieldName": "grindCompleteFX",
+          "target": "SkyHub2:n2765",
+          "targetNodeId": 2765,
+          "offset": 330421
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1992",
+      "level": "SkyHub2",
+      "nodeId": 1992,
+      "name": "BstNode_1167524150",
+      "className": "AvatarGrindToPos",
+      "classIndex": 30,
+      "sourceOffset": 377107,
+      "sourceLength": 75,
+      "sourceSha256": "a91ad8961dd0c612f7b65dd019aee16ed8ae2d209627e42e72b114772fe486fa",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1992/p8",
+          "fieldName": "target",
+          "target": "SkyHub2:n2815",
+          "targetNodeId": 2815,
+          "offset": 377150
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n2159",
+      "level": "SkyHub2",
+      "nodeId": 2159,
+      "name": "BstNode_1167524406",
+      "className": "AvatarGrindToPos",
+      "classIndex": 30,
+      "sourceOffset": 406414,
+      "sourceLength": 75,
+      "sourceSha256": "2dcacd0887f83e8034ad0c88ae83885f0d7b1451e1d413514e37f107fe287a15",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2159/p6",
+          "fieldName": "npc",
+          "target": "SkyHub2:n1395",
+          "targetNodeId": 1395,
+          "offset": 406449
+        },
+        {
+          "fieldId": "n2159/p8",
+          "fieldName": "target",
+          "target": "SkyHub2:n2842",
+          "targetNodeId": 2842,
+          "offset": 406457
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n2328",
+      "level": "SkyHub2",
+      "nodeId": 2328,
+      "name": "BstNode_1167523952",
+      "className": "AvatarGrindToPos",
+      "classIndex": 30,
+      "sourceOffset": 439199,
+      "sourceLength": 75,
+      "sourceSha256": "35b1d6f219c952bc3972ce48da741e5ab6f67688afd7fd70f9ca00b9f326b885",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2328/p8",
+          "fieldName": "target",
+          "target": "SkyHub2:n2871",
+          "targetNodeId": 2871,
+          "offset": 439242
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n547",
+      "level": "StormEnd",
+      "nodeId": 547,
+      "name": "BstNode_2446917751",
+      "className": "AvatarGrindToPos",
+      "classIndex": 47,
+      "sourceOffset": 120133,
+      "sourceLength": 75,
+      "sourceSha256": "8728608c0752a5061e19250fafa0bdcbbc67371205131fdf9ba162186dca3227",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n547/p8",
+          "fieldName": "target",
+          "target": "StormEnd:n1186",
+          "targetNodeId": 1186,
+          "offset": 120176
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n584",
+      "level": "StormEnd",
+      "nodeId": 584,
+      "name": "BstNode_2446917745",
+      "className": "AvatarGrindToPos",
+      "classIndex": 47,
+      "sourceOffset": 123935,
+      "sourceLength": 75,
+      "sourceSha256": "9022b4a112d01bfc869f0bedbb066d539087648dab8270758b38790fe6b2b396",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n584/p8",
+          "fieldName": "target",
+          "target": "StormEnd:n1195",
+          "targetNodeId": 1195,
+          "offset": 123978
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n588",
+      "level": "StormEnd",
+      "nodeId": 588,
+      "name": "BstNode_2529559315",
+      "className": "AvatarGrindToPos",
+      "classIndex": 47,
+      "sourceOffset": 124300,
+      "sourceLength": 75,
+      "sourceSha256": "7948c6e29f81880e064a206c27d06c73b34275f84a8723d1e2ae12c79160827d",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n588/p8",
+          "fieldName": "target",
+          "target": "StormEnd:n1196",
+          "targetNodeId": 1196,
+          "offset": 124343
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n662",
+      "level": "StormEnd",
+      "nodeId": 662,
+      "name": "BstNode_2446917748",
+      "className": "AvatarGrindToPos",
+      "classIndex": 47,
+      "sourceOffset": 135406,
+      "sourceLength": 75,
+      "sourceSha256": "ef0166079e5cf52faf1f06c53783201cd9e093363025b601e4f564e7e2c2e97e",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n662/p8",
+          "fieldName": "target",
+          "target": "StormEnd:n1207",
+          "targetNodeId": 1207,
+          "offset": 135449
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "TitleWater:n44",
+      "level": "TitleWater",
+      "nodeId": 44,
+      "name": "BstNode_1528234047",
+      "className": "AvatarGrindToPos",
+      "classIndex": 23,
+      "sourceOffset": 22986,
+      "sourceLength": 75,
+      "sourceSha256": "723bf365cedec62f5f18837737d6444bab305a7aa1284d0acf55b288fffbdf26",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n44/p8",
+          "fieldName": "target",
+          "target": "TitleWater:n206",
+          "targetNodeId": 206,
+          "offset": 23029
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "TitleWater:n45",
+      "level": "TitleWater",
+      "nodeId": 45,
+      "name": "BstNode_1528234049",
+      "className": "AvatarGrindToPos",
+      "classIndex": 23,
+      "sourceOffset": 23061,
+      "sourceLength": 75,
+      "sourceSha256": "85f666ea6600e01b4ea5a937992ecde726b54786d4f55e40d3e34a5bfbb1c6eb",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n45/p8",
+          "fieldName": "target",
+          "target": "TitleWater:n207",
+          "targetNodeId": 207,
+          "offset": 23104
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "TitleWater:n191",
+      "level": "TitleWater",
+      "nodeId": 191,
+      "name": "BstNode_39",
+      "className": "AvatarGrindToPos",
+      "classIndex": 23,
+      "sourceOffset": 43736,
+      "sourceLength": 67,
+      "sourceSha256": "79e14d51b4f9acd377ed1924e5086d8328f534ff44f46288f05d2b828c0fa607",
+      "declaredFieldCount": 16,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n191/p8",
+          "fieldName": "target",
+          "target": "TitleWater:n236",
+          "targetNodeId": 236,
+          "offset": 43771
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "CandleSpace",
+      "path": "Levels/CandleSpace/Objects.level.bin",
+      "sha256": "db7140d2dd5ee9cd2fcdcbb61a898b9facf1683ff21fec83fcbef81b885f56db",
+      "bytes": 92607,
+      "nodes": 564,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/CandleSpace.json",
+      "markdown": "Objects对象清单/CandleSpace.md"
+    },
+    {
+      "level": "Dawn",
+      "path": "Levels/Dawn/Objects.level.bin",
+      "sha256": "16e26aafc7f9d120a548bf5d8bec04fbc18146bc8db531ef75144889b1ff197a",
+      "bytes": 504637,
+      "nodes": 3798,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dawn.json",
+      "markdown": "Objects对象清单/Dawn.md"
+    },
+    {
+      "level": "DayEnd",
+      "path": "Levels/DayEnd/Objects.level.bin",
+      "sha256": "9b5c568cefa987e504a10236c5b61e5de4b748d965d09e42db3602e4e52cc904",
+      "bytes": 268140,
+      "nodes": 1459,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DayEnd.json",
+      "markdown": "Objects对象清单/DayEnd.md"
+    },
+    {
+      "level": "Dusk",
+      "path": "Levels/Dusk/Objects.level.bin",
+      "sha256": "9222b248f17fb4122cd4ad9650543ab86aab8b077b6965248c70ac2341bf2d5d",
+      "bytes": 242331,
+      "nodes": 1288,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dusk.json",
+      "markdown": "Objects对象清单/Dusk.md"
+    },
+    {
+      "level": "HubReveal",
+      "path": "Levels/HubReveal/Objects.level.bin",
+      "sha256": "4b32f12bbe4b246cde9ca1e4ba0982000ff108359865bb4340aba640e609861b",
+      "bytes": 289438,
+      "nodes": 1829,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/HubReveal.json",
+      "markdown": "Objects对象清单/HubReveal.md"
+    },
+    {
+      "level": "Prairie_ButterflyFields",
+      "path": "Levels/Prairie_ButterflyFields/Objects.level.bin",
+      "sha256": "29d8d61a082f3e3414ecfbb501b5f65499deb37ad4a1078ce2e9b88ac0d1e441",
+      "bytes": 297606,
+      "nodes": 1513,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_ButterflyFields.json",
+      "markdown": "Objects对象清单/Prairie_ButterflyFields.md"
+    },
+    {
+      "level": "Rain",
+      "path": "Levels/Rain/Objects.level.bin",
+      "sha256": "20093bccf3bb1ea0936cb993e66cef0187b40a5a411df3573eb28e4def4f75c6",
+      "bytes": 457732,
+      "nodes": 2079,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Rain.json",
+      "markdown": "Objects对象清单/Rain.md"
+    },
+    {
+      "level": "RainMid",
+      "path": "Levels/RainMid/Objects.level.bin",
+      "sha256": "139b219d9b71a2ab24418b1ec41f2ee8a2ebfdf4c5ea992c35348a758682ed23",
+      "bytes": 430825,
+      "nodes": 2457,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainMid.json",
+      "markdown": "Objects对象清单/RainMid.md"
+    },
+    {
+      "level": "SkyHub2",
+      "path": "Levels/SkyHub2/Objects.level.bin",
+      "sha256": "8b467f9b349d9d4ce0d038528c96e44dff30063149bf5bbf90232a56bb9dd36f",
+      "bytes": 475656,
+      "nodes": 2886,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SkyHub2.json",
+      "markdown": "Objects对象清单/SkyHub2.md"
+    },
+    {
+      "level": "StormEnd",
+      "path": "Levels/StormEnd/Objects.level.bin",
+      "sha256": "a9c13b592198ee01ab2922a0c7901f4516ae172d56a22d9b7f806ff7464c9162",
+      "bytes": 224465,
+      "nodes": 1243,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/StormEnd.json",
+      "markdown": "Objects对象清单/StormEnd.md"
+    },
+    {
+      "level": "TitleWater",
+      "path": "Levels/TitleWater/Objects.level.bin",
+      "sha256": "46841a22d17b360fcc3c7ceb8406d8c7e73441fd59023f64b4bce4057e1b9414",
+      "bytes": 45511,
+      "nodes": 238,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/TitleWater.json",
+      "markdown": "Objects对象清单/TitleWater.md"
+    }
+  ]
+}

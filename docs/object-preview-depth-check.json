@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "scope": "Actual Vulkan diagnostic opaque editor geometry writes the original Mesh GLSL RGBDepth rule min(256000, 1/gl_FragCoord.w)*0.1 during HDR capture. Editor overlays preserve underlying alpha; regular RGBA display remains unchanged. This does not establish original Model/material/GPU lifecycle or game image parity.",
+  "checks": [
+    {
+      "distance": 5,
+      "hdrDepth": 0.5,
+      "displayAlpha": 255
+    },
+    {
+      "distance": 10,
+      "hdrDepth": 1,
+      "displayAlpha": 255
+    },
+    {
+      "distance": 20,
+      "hdrDepth": 2,
+      "displayAlpha": 255
+    },
+    {
+      "overlayPreservesOpaqueDepth": true,
+      "hdrDepth": 1
+    }
+  ],
+  "device": {
+    "engine": "Sky Native Vulkan",
+    "backend": "Vulkan",
+    "device": "llvmpipe (LLVM 19.1.7, 128 bits)",
+    "apiVersion": 4210993,
+    "deviceType": 4,
+    "shaderFloat16": true
+  }
+}

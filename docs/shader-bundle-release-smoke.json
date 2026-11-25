@@ -1,0 +1,79 @@
+{
+  "passed": true,
+  "packaged": true,
+  "compilerExecutablesAvailable": false,
+  "emptyInitialProfile": true,
+  "maps": [
+    {
+      "level": "Rain",
+      "frames": 7,
+      "passes": [
+        "CloudCore",
+        "OpaqueRGBDepth",
+        "WaterSim",
+        "OceanMeshWet",
+        "Flower",
+        "DepthDownsample",
+        "DepthDownsampleGather",
+        "DepthDownsampleQuarter",
+        "CloudFluffySuperCoarse",
+        "CloudFluffyCoarse",
+        "CloudFluffy",
+        "AlphaColorLogDepth",
+        "PreviewLuminance",
+        "FogUpsample",
+        "MotionGen",
+        "MotionDilate",
+        "TemporalAa",
+        "Tonemap"
+      ],
+      "water": {
+        "objects": 3,
+        "frames": 7,
+        "shader": "OceanMeshWet",
+        "ocean": {
+          "enabled": false,
+          "shader": "Ocean",
+          "indices": 0,
+          "rows": 0,
+          "grid": [
+            96,
+            96
+          ],
+          "math": "Browser float libm and reciprocal square root; original captured arithmetic verified independently"
+        },
+        "normal": "OceanNormal",
+        "caustics": "Caustics",
+        "puddleNormal": "PuddleSim zero-gradient reset",
+        "grid": [
+          256,
+          256
+        ],
+        "terms": [
+          276.625,
+          8.375,
+          0,
+          0.0625
+        ],
+        "waterNodeIds": [
+          146,
+          582,
+          1350
+        ],
+        "scope": "Original 96x96 Ocean projected sphere grid under the shared SetOceanRender state, Plane10x10 local Water transforms and original Ocean/OceanMesh variants; WaterSim/Reset two-target GLSL with GPU history and restored material wind scroll. The water opaque sampler maps viewport zero sky depth to the equivalent 256000m far distance; actual surface depth is unchanged. Browser Ocean math, editor camera grid focus, zero Avatar contact impulses, sky-only probe and empty point-light grid are explicit adapters. Wet variants bind the PuddleSim signed zero-gradient reset. Actual PuddleSim/rain drops, scene reflections, complete Ocean lifecycle and Metal image parity remain pending",
+        "renderPath": "gpu-resident",
+        "enabled": true
+      },
+      "modes": [
+        "smooth",
+        "balanced",
+        "native"
+      ]
+    }
+  ],
+  "errors": [],
+  "windowsHardwareTested": false,
+  "scope": "Shipped ASAR and patched shader resources on Linux/Vulkan with no compiler executable or prior shader cache.",
+  "asarSha256": "cf699e492680390aafd05146ca93f868b5130d40386d0f3ddec8754fcb32dde1",
+  "shaderCacheEntries": []
+}

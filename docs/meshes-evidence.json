@@ -1,0 +1,5007 @@
+{
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "functions": {
+    "material-initialize": "0x10043fb70",
+    "material-reset": "0x100443f50",
+    "material-upload": "0x100443810",
+    "material-parameters": "0x100443a70",
+    "terrain-scatter": "0x1006a7280",
+    "skirt-load": "0x1005abf50",
+    "vertex-buffer-format": "0x1007f5430"
+  },
+  "scope": "Original material initialization incl. HSV/gamma conversion and level overrides. Linux libc imports; no game startup or GPU rendering.",
+  "default": [
+    {
+      "index": 0,
+      "materialId": 1,
+      "shaderName": "RockFaceSh",
+      "color": [
+        1.0,
+        0.0,
+        0.21763762831687927,
+        1.0
+      ],
+      "metalness": 0.0,
+      "roughness": 1.0,
+      "uvScale": 0.0,
+      "minimumWeight": 0,
+      "stopWeight": 255,
+      "textures": [
+        {
+          "name": "u_topGeoTexture",
+          "texture": "RockHeightCliffSh"
+        },
+        {
+          "name": "u_sideGeoTexture",
+          "texture": "RockHeightCliffSh"
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "index": 1,
+      "materialId": 16,
+      "shaderName": "RockFaceSh",
+      "color": [
+        0.009423205628991127,
+        0.017744505777955055,
+        0.016783174127340317,
+        1.0
+      ],
+      "metalness": 0.0,
+      "roughness": 1.0,
+      "uvScale": 0.25,
+      "minimumWeight": 0,
+      "stopWeight": 255,
+      "textures": [
+        {
+          "name": "u_topGeoTexture",
+          "texture": "CliffSh"
+        },
+        {
+          "name": "u_sideGeoTexture",
+          "texture": "CliffSh"
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "index": 2,
+      "materialId": 18,
+      "shaderName": "RockFaceSh",
+      "color": [
+        0.0542924664914608,
+        0.0899408608675003,
+        0.0993000939488411,
+        1.0
+      ],
+      "metalness": 0.0,
+      "roughness": 1.0,
+      "uvScale": 0.25,
+      "minimumWeight": 0,
+      "stopWeight": 255,
+      "textures": [
+        {
+          "name": "u_topGeoTexture",
+          "texture": "CliffSh"
+        },
+        {
+          "name": "u_sideGeoTexture",
+          "texture": "CliffSh"
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "index": 3,
+      "materialId": 17,
+      "shaderName": "RockFaceSh",
+      "color": [
+        2.1766558347735554e-05,
+        3.605846723075956e-05,
+        3.981070767622441e-05,
+        1.0
+      ],
+      "metalness": 0.0,
+      "roughness": 0.8999999761581421,
+      "uvScale": 0.44999998807907104,
+      "minimumWeight": 0,
+      "stopWeight": 255,
+      "textures": [
+        {
+          "name": "u_topGeoTexture",
+          "texture": "SoilSh"
+        },
+        {
+          "name": "u_sideGeoTexture",
+          "texture": "SoilSh"
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "index": 4,
+      "materialId": 27,
+      "shaderName": "RockFaceRainSh",
+      "color": [
+        2.1766558347735554e-05,
+        3.605846723075956e-05,
+        3.981070767622441e-05,
+        1.0
+      ],
+      "metalness": 0.0,
+      "roughness": 0.25,
+      "uvScale": 0.44999998807907104,
+      "minimumWeight": 0,
+      "stopWeight": 255,
+      "textures": [
+        {
+          "name": "u_topGeoTexture",
+          "texture": "SoilSh"
+        },
+        {
+          "name": "u_sideGeoTexture",
+          "texture": "SoilSh"
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "index": 5,
+      "materialId": 20,
+      "shaderName": "RockFaceSh",
+      "color": [
+        0.4562634229660034,
+        0.4562634229660034,
+        0.4562634229660034,
+        1.0
+      ],
+      "metalness": 0.10000000149011612,
+      "roughness": 0.949999988079071,
+      "uvScale": 0.25,
+      "minimumWeight": 0,
+      "stopWeight": 255,
+      "textures": [
+        {
+          "name": "u_topGeoTexture",
+          "texture": "WallSh"
+        },
+        {
+          "name": "u_sideGeoTexture",
+          "texture": "WallSh"
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "index": 6,
+      "materialId": 19,
+      "shaderName": "RockFaceSh",
+      "color": [
+        0.04736613854765892,
+        0.04736613854765892,
+        0.04736613854765892,
+        1.0
+      ],
+      "metalness": 0.10000000149011612,
+      "roughness": 1.0,
+      "uvScale": 0.44999998807907104,
+      "minimumWeight": 0,
+      "stopWeight": 255,
+      "textures": [
+        {
+          "name": "u_topGeoTexture",
+          "texture": "CliffSh"
+        },
+        {
+          "name": "u_sideGeoTexture",
+          "texture": "CliffSh"
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "index": 7,
+      "materialId": 21,
+      "shaderName": "RockFaceSh",
+      "color": [
+        0.4562634229660034,
+        0.13939028978347778,
+        0.0,
+        1.0
+      ],
+      "metalness": 1.0,
+      "roughness": 0.05000000074505806,
+      "uvScale": 1.0,
+      "minimumWeight": 0,
+      "stopWeight": 255,
+      "textures": [
+        {
+          "name": "u_topGeoTexture",
+          "texture": "GoldSh"
+        },
+        {
+          "name": "u_sideGeoTexture",
+          "texture": "GoldSh"
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "index": 8,
+      "materialId": 22,
+      "shaderName": "RockFaceSh",
+      "color": [
+        0.04736613854765892,
+        0.19818489253520966,
+        0.21763762831687927,
+        1.0
+      ],
+      "metalness": 0.5,
+      "roughness": 0.10000000149011612,
+      "uvScale": 0.125,
+      "minimumWeight": 0,
+      "stopWeight": 255,
+      "textures": [
+        {
+          "name": "u_topGeoTexture",
+          "texture": "GlacierSh"
+        },
+        {
+          "name": "u_sideGeoTexture",
+          "texture": "GlacierSh"
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "index": 9,
+      "materialId": 23,
+      "shaderName": "RockFaceSh",
+      "color": [
+        0.21763762831687927,
+        0.21763762831687927,
+        0.21763762831687927,
+        1.0
+      ],
+      "metalness": 0.0,
+      "roughness": 1.0,
+      "uvScale": 0.5,
+      "minimumWeight": 0,
+      "stopWeight": 255,
+      "textures": [
+        {
+          "name": "u_topGeoTexture",
+          "texture": "TileCeilingSh"
+        },
+        {
+          "name": "u_sideGeoTexture",
+          "texture": "TileCeilingSh"
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "index": 10,
+      "materialId": 24,
+      "shaderName": "RockFaceSh",
+      "color": [
+        0.0050041857175529,
+        0.009423205628991127,
+        0.008912690915167332,
+        1.0
+      ],
+      "metalness": 0.10000000149011612,
+      "roughness": 1.0,
+      "uvScale": 0.25,
+      "minimumWeight": 0,
+      "stopWeight": 255,
+      "textures": [
+        {
+          "name": "u_topGeoTexture",
+          "texture": "TileFloorSh"
+        },
+        {
+          "name": "u_sideGeoTexture",
+          "texture": "WallSh"
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "index": 11,
+      "materialId": 25,
+      "shaderName": "RockFaceSh",
+      "color": [
+        0.21763762831687927,
+        0.21763762831687927,
+        0.21763762831687927,
+        1.0
+      ],
+      "metalness": 0.0,
+      "roughness": 0.75,
+      "uvScale": 0.15000000596046448,
+      "minimumWeight": 0,
+      "stopWeight": 255,
+      "textures": [
+        {
+          "name": "u_topGeoTexture",
+          "texture": "TileFloorSh"
+        },
+        {
+          "name": "u_sideGeoTexture",
+          "texture": "WallBrickBigSh"
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "index": 12,
+      "materialId": 26,
+      "shaderName": "RockFaceSh",
+      "color": [
+        0.009423205628991127,
+        0.017744505777955055,
+        0.016783174127340317,
+        1.0
+      ],
+      "metalness": 0.0,
+      "roughness": 1.0,
+      "uvScale": 0.20000000298023224,
+      "minimumWeight": 0,
+      "stopWeight": 255,
+      "textures": [
+        {
+          "name": "u_topGeoTexture",
+          "texture": "WallBrickSh"
+        },
+        {
+          "name": "u_sideGeoTexture",
+          "texture": "WallBrickSh"
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "index": 13,
+      "materialId": 28,
+      "shaderName": "RockFaceSh",
+      "color": [
+        0.0019034506985917687,
+        0.006309573072940111,
+        0.006309573072940111,
+        1.0
+      ],
+      "metalness": 0.0,
+      "roughness": 0.25,
+      "uvScale": 0.25,
+      "minimumWeight": 0,
+      "stopWeight": 255,
+      "textures": [
+        {
+          "name": "u_topGeoTexture",
+          "texture": "CliffWetSh"
+        },
+        {
+          "name": "u_sideGeoTexture",
+          "texture": "CliffWetSh"
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "index": 14,
+      "materialId": 29,
+      "shaderName": "RockFaceSh",
+      "color": [
+        0.4562634229660034,
+        0.4562634229660034,
+        0.4562634229660034,
+        1.0
+      ],
+      "metalness": 0.0,
+      "roughness": 0.949999988079071,
+      "uvScale": 1.0,
+      "minimumWeight": 0,
+      "stopWeight": 255,
+      "textures": [
+        {
+          "name": "u_topGeoTexture",
+          "texture": "WallSh"
+        },
+        {
+          "name": "u_sideGeoTexture",
+          "texture": "WallSh"
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "index": 15,
+      "materialId": 30,
+      "shaderName": "RockFaceSh",
+      "color": [
+        0.1332085132598877,
+        0.1332085132598877,
+        0.1332085132598877,
+        1.0
+      ],
+      "metalness": 0.0,
+      "roughness": 0.6499999761581421,
+      "uvScale": 0.10000000149011612,
+      "minimumWeight": 0,
+      "stopWeight": 255,
+      "textures": [
+        {
+          "name": "u_topGeoTexture",
+          "texture": "WoodSh"
+        },
+        {
+          "name": "u_sideGeoTexture",
+          "texture": "WoodSh"
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "index": 16,
+      "materialId": 31,
+      "shaderName": "RockFaceSh",
+      "color": [
+        0.4562634229660034,
+        0.4562634229660034,
+        0.4562634229660034,
+        1.0
+      ],
+      "metalness": 0.10000000149011612,
+      "roughness": 0.949999988079071,
+      "uvScale": 0.25,
+      "minimumWeight": 0,
+      "stopWeight": 255,
+      "textures": [
+        {
+          "name": "u_topGeoTexture",
+          "texture": "WallSh"
+        },
+        {
+          "name": "u_sideGeoTexture",
+          "texture": "WallSh"
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "index": 17,
+      "materialId": 2,
+      "shaderName": "RockFaceSh",
+      "color": [
+        0.4562634229660034,
+        0.4562634229660034,
+        0.4562634229660034,
+        1.0
+      ],
+      "metalness": 0.10000000149011612,
+      "roughness": 0.949999988079071,
+      "uvScale": 0.25,
+      "minimumWeight": 0,
+      "stopWeight": 255,
+      "textures": [
+        {
+          "name": "u_topGeoTexture",
+          "texture": "WallSh"
+        },
+        {
+          "name": "u_sideGeoTexture",
+          "texture": "WallSh"
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "index": 18,
+      "materialId": 3,
+      "shaderName": "RockFaceSh",
+      "color": [
+        0.4562634229660034,
+        0.4562634229660034,
+        0.4562634229660034,
+        1.0
+      ],
+      "metalness": 0.10000000149011612,
+      "roughness": 0.949999988079071,
+      "uvScale": 0.25,
+      "minimumWeight": 0,
+      "stopWeight": 255,
+      "textures": [
+        {
+          "name": "u_topGeoTexture",
+          "texture": "WallSh"
+        },
+        {
+          "name": "u_sideGeoTexture",
+          "texture": "WallSh"
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "index": 19,
+      "materialId": 32,
+      "shaderName": "SandSh",
+      "color": [
+        0.1332085132598877,
+        0.11625543981790543,
+        0.10055272281169891,
+        1.0
+      ],
+      "metalness": 0.0,
+      "roughness": 0.5,
+      "uvScale": 0.25,
+      "minimumWeight": 0,
+      "stopWeight": 255,
+      "textures": [
+        {
+          "name": "u_normalTex",
+          "texture": "Noise3Ch"
+        },
+        {
+          "name": "u_grassMaskTexture",
+          "texture": "Noise3Ch"
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "index": 20,
+      "materialId": 34,
+      "shaderName": "SandSh",
+      "color": [
+        0.1332085132598877,
+        0.11625543981790543,
+        0.10055272281169891,
+        1.0
+      ],
+      "metalness": 0.0,
+      "roughness": 0.5,
+      "uvScale": 0.25,
+      "minimumWeight": 0,
+      "stopWeight": 255,
+      "textures": [
+        {
+          "name": "u_normalTex",
+          "texture": "Noise3Ch"
+        },
+        {
+          "name": "u_grassMaskTexture",
+          "texture": "Noise3Ch"
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "index": 21,
+      "materialId": 35,
+      "shaderName": "SandSh",
+      "color": [
+        0.5310491919517517,
+        0.5310491919517517,
+        0.5310491919517517,
+        1.0
+      ],
+      "metalness": 0.0,
+      "roughness": 0.5,
+      "uvScale": 0.25,
+      "minimumWeight": 0,
+      "stopWeight": 255,
+      "textures": [
+        {
+          "name": "u_normalTex",
+          "texture": "Noise3Ch"
+        },
+        {
+          "name": "u_grassMaskTexture",
+          "texture": "Noise3Ch"
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "index": 22,
+      "materialId": 36,
+      "shaderName": "SandSh",
+      "color": [
+        0.10564900934696198,
+        0.1332085132598877,
+        0.10564900934696198,
+        1.0
+      ],
+      "metalness": 0.0,
+      "roughness": 0.5,
+      "uvScale": 0.25,
+      "minimumWeight": 0,
+      "stopWeight": 255,
+      "textures": [
+        {
+          "name": "u_normalTex",
+          "texture": "Noise3Ch"
+        },
+        {
+          "name": "u_grassMaskTexture",
+          "texture": "Noise3Ch"
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "index": 23,
+      "materialId": 33,
+      "shaderName": "SandRainSh",
+      "color": [
+        0.028991185128688812,
+        0.02742054872214794,
+        0.025897502899169922,
+        1.0
+      ],
+      "metalness": 0.0,
+      "roughness": 0.0,
+      "uvScale": 0.25,
+      "minimumWeight": 0,
+      "stopWeight": 255,
+      "textures": [
+        {
+          "name": "u_normalTex",
+          "texture": "Noise3Ch"
+        },
+        {
+          "name": "u_grassMaskTexture",
+          "texture": "Noise3Ch"
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "index": 24,
+      "materialId": 48,
+      "shaderName": "GrassSh",
+      "color": [
+        0.02742054872214794,
+        0.04736613854765892,
+        0.015395747497677803,
+        1.0
+      ],
+      "metalness": 0.07500000298023224,
+      "roughness": 0.800000011920929,
+      "uvScale": 1.0,
+      "minimumWeight": 0,
+      "stopWeight": 255,
+      "textures": [
+        {
+          "name": "u_grassNorm1Tex",
+          "texture": "GrassNorTex0"
+        },
+        {
+          "name": "u_grassNorm2Tex",
+          "texture": "GrassNorTex1"
+        },
+        {
+          "name": "u_grassMaskTex",
+          "texture": "GrassMask"
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "index": 25,
+      "materialId": 50,
+      "shaderName": "GrassSh",
+      "color": [
+        0.02742054872214794,
+        0.04736613854765892,
+        0.015395747497677803,
+        1.0
+      ],
+      "metalness": 0.0,
+      "roughness": 0.6000000238418579,
+      "uvScale": 1.0,
+      "minimumWeight": 0,
+      "stopWeight": 255,
+      "textures": [
+        {
+          "name": "u_grassNorm1Tex",
+          "texture": "GrassNorTex0"
+        },
+        {
+          "name": "u_grassNorm2Tex",
+          "texture": "GrassNorTex1"
+        },
+        {
+          "name": "u_grassMaskTex",
+          "texture": "GrassMask"
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "index": 26,
+      "materialId": 49,
+      "shaderName": "GrassSh",
+      "color": [
+        0.028991185128688812,
+        0.04736613854765892,
+        0.02161143720149994,
+        1.0
+      ],
+      "metalness": 0.25,
+      "roughness": 0.800000011920929,
+      "uvScale": 1.0,
+      "minimumWeight": 0,
+      "stopWeight": 255,
+      "textures": [
+        {
+          "name": "u_grassNorm1Tex",
+          "texture": "GrassNorTex0"
+        },
+        {
+          "name": "u_grassNorm2Tex",
+          "texture": "GrassNorTex1"
+        },
+        {
+          "name": "u_grassMaskTex",
+          "texture": "GrassMask"
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "index": 27,
+      "materialId": 51,
+      "shaderName": "GrassSh",
+      "color": [
+        0.02742054872214794,
+        0.04736613854765892,
+        0.015395747497677803,
+        1.0
+      ],
+      "metalness": 0.25,
+      "roughness": 0.6000000238418579,
+      "uvScale": 1.0,
+      "minimumWeight": 0,
+      "stopWeight": 255,
+      "textures": [
+        {
+          "name": "u_grassNorm1Tex",
+          "texture": "GrassNorTex0"
+        },
+        {
+          "name": "u_grassNorm2Tex",
+          "texture": "GrassNorTex1"
+        },
+        {
+          "name": "u_grassMaskTex",
+          "texture": "GrassMask"
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "index": 28,
+      "materialId": 52,
+      "shaderName": "GrassSh",
+      "color": [
+        0.02742054872214794,
+        0.04736613854765892,
+        0.015395747497677803,
+        1.0
+      ],
+      "metalness": 0.07500000298023224,
+      "roughness": 0.800000011920929,
+      "uvScale": 1.0,
+      "minimumWeight": 0,
+      "stopWeight": 255,
+      "textures": [
+        {
+          "name": "u_grassNorm1Tex",
+          "texture": "GrassNorTex0"
+        },
+        {
+          "name": "u_grassNorm2Tex",
+          "texture": "GrassNorTex1"
+        },
+        {
+          "name": "u_grassMaskTex",
+          "texture": "GrassMask"
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "index": 29,
+      "materialId": 80,
+      "shaderName": "CloudSh",
+      "color": [
+        0.4562634229660034,
+        0.4562634229660034,
+        0.4562634229660034,
+        1.0
+      ],
+      "metalness": 0.0,
+      "roughness": 1.0,
+      "uvScale": 0.0,
+      "minimumWeight": 0,
+      "stopWeight": 255,
+      "textures": [],
+      "parameters": []
+    }
+  ],
+  "levelsAudited": [
+    "CandleSpace",
+    "CandleSpaceEnd",
+    "CarryLand",
+    "CarryLand2",
+    "CarryLand3",
+    "Dawn",
+    "DayEnd",
+    "DayHubCave",
+    "Dusk",
+    "DuskGraveyard",
+    "DuskMid",
+    "Dusk_CrabField",
+    "HubReveal",
+    "Night",
+    "NightEnd",
+    "NightEntrance",
+    "Prairie_ButterflyFields",
+    "Prairie_Cave",
+    "Prairie_NestAndKeeper",
+    "Prairie_Village",
+    "Rain",
+    "RainEnd",
+    "RainForest",
+    "RainMid",
+    "SkyHub2",
+    "Storm",
+    "StormEnd",
+    "Sunset",
+    "SunsetEnd",
+    "SunsetEnd2",
+    "SunsetRace",
+    "TitleWater",
+    "WorldEmpty"
+  ],
+  "levels": {
+    "Dawn": [
+      {
+        "index": 0,
+        "materialId": 1,
+        "shaderName": "RockFaceSh",
+        "color": [
+          1.0,
+          0.0,
+          0.21763762831687927,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 1.0,
+        "uvScale": 0.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "RockHeightCliffSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "RockHeightCliffSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 1,
+        "materialId": 16,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.009423205628991127,
+          0.017744505777955055,
+          0.016783174127340317,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 1.0,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "CliffSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "CliffSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 2,
+        "materialId": 18,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.09316517412662506,
+          0.1252821385860443,
+          0.1332085132598877,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 1.0,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "CliffSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "CliffSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 3,
+        "materialId": 17,
+        "shaderName": "RockFaceSh",
+        "color": [
+          2.1766558347735554e-05,
+          3.605846723075956e-05,
+          3.981070767622441e-05,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.8999999761581421,
+        "uvScale": 0.44999998807907104,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "SoilSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "SoilSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 4,
+        "materialId": 27,
+        "shaderName": "RockFaceRainSh",
+        "color": [
+          2.1766558347735554e-05,
+          3.605846723075956e-05,
+          3.981070767622441e-05,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.25,
+        "uvScale": 0.44999998807907104,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "SoilSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "SoilSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 5,
+        "materialId": 20,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.4562634229660034,
+          0.4562634229660034,
+          0.4562634229660034,
+          1.0
+        ],
+        "metalness": 0.10000000149011612,
+        "roughness": 0.949999988079071,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "WallSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WallSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 6,
+        "materialId": 19,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.04736613854765892,
+          0.04736613854765892,
+          0.04736613854765892,
+          1.0
+        ],
+        "metalness": 0.10000000149011612,
+        "roughness": 1.0,
+        "uvScale": 0.44999998807907104,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "CliffSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "CliffSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 7,
+        "materialId": 21,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.4562634229660034,
+          0.13939028978347778,
+          0.0,
+          1.0
+        ],
+        "metalness": 1.0,
+        "roughness": 0.05000000074505806,
+        "uvScale": 1.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "GoldSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "GoldSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 8,
+        "materialId": 22,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.04736613854765892,
+          0.19818489253520966,
+          0.21763762831687927,
+          1.0
+        ],
+        "metalness": 0.5,
+        "roughness": 0.10000000149011612,
+        "uvScale": 0.125,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "GlacierSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "GlacierSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 9,
+        "materialId": 23,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.21763762831687927,
+          0.21763762831687927,
+          0.21763762831687927,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 1.0,
+        "uvScale": 0.5,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "TileCeilingSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "TileCeilingSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 10,
+        "materialId": 24,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.0050041857175529,
+          0.009423205628991127,
+          0.008912690915167332,
+          1.0
+        ],
+        "metalness": 0.10000000149011612,
+        "roughness": 1.0,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "TileFloorSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WallSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 11,
+        "materialId": 25,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.21763762831687927,
+          0.21763762831687927,
+          0.21763762831687927,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.75,
+        "uvScale": 0.15000000596046448,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "TileFloorSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WallBrickBigSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 12,
+        "materialId": 26,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.009423205628991127,
+          0.017744505777955055,
+          0.016783174127340317,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 1.0,
+        "uvScale": 0.20000000298023224,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "WallBrickSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WallBrickSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 13,
+        "materialId": 28,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.0019034506985917687,
+          0.006309573072940111,
+          0.006309573072940111,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.25,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "CliffWetSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "CliffWetSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 14,
+        "materialId": 29,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.4562634229660034,
+          0.4562634229660034,
+          0.4562634229660034,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.949999988079071,
+        "uvScale": 1.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "WallSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WallSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 15,
+        "materialId": 30,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.1332085132598877,
+          0.1332085132598877,
+          0.1332085132598877,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.6499999761581421,
+        "uvScale": 0.10000000149011612,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "WoodSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WoodSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 16,
+        "materialId": 31,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.4562634229660034,
+          0.4562634229660034,
+          0.4562634229660034,
+          1.0
+        ],
+        "metalness": 0.10000000149011612,
+        "roughness": 0.949999988079071,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "WallSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WallSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 17,
+        "materialId": 2,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.4562634229660034,
+          0.4562634229660034,
+          0.4562634229660034,
+          1.0
+        ],
+        "metalness": 0.10000000149011612,
+        "roughness": 0.949999988079071,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "WallSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WallSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 18,
+        "materialId": 3,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.4562634229660034,
+          0.4562634229660034,
+          0.4562634229660034,
+          1.0
+        ],
+        "metalness": 0.10000000149011612,
+        "roughness": 0.949999988079071,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "WallSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WallSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 19,
+        "materialId": 32,
+        "shaderName": "SandSh",
+        "color": [
+          0.1332085132598877,
+          0.12599176168441772,
+          0.11899367719888687,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.5,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_normalTex",
+            "texture": "Noise3Ch"
+          },
+          {
+            "name": "u_grassMaskTexture",
+            "texture": "Noise3Ch"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 20,
+        "materialId": 34,
+        "shaderName": "SandSh",
+        "color": [
+          0.21287831664085388,
+          0.25866609811782837,
+          0.26840952038764954,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.5,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_normalTex",
+            "texture": "Noise3Ch"
+          },
+          {
+            "name": "u_grassMaskTexture",
+            "texture": "Noise3Ch"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 21,
+        "materialId": 35,
+        "shaderName": "SandSh",
+        "color": [
+          0.5310491919517517,
+          0.5310491919517517,
+          0.5310491919517517,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.5,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_normalTex",
+            "texture": "Noise3Ch"
+          },
+          {
+            "name": "u_grassMaskTexture",
+            "texture": "Noise3Ch"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 22,
+        "materialId": 36,
+        "shaderName": "SandSh",
+        "color": [
+          0.10564900934696198,
+          0.1332085132598877,
+          0.10564900934696198,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.5,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_normalTex",
+            "texture": "Noise3Ch"
+          },
+          {
+            "name": "u_grassMaskTexture",
+            "texture": "Noise3Ch"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 23,
+        "materialId": 33,
+        "shaderName": "SandRainSh",
+        "color": [
+          0.028991185128688812,
+          0.02742054872214794,
+          0.025897502899169922,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.0,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_normalTex",
+            "texture": "Noise3Ch"
+          },
+          {
+            "name": "u_grassMaskTexture",
+            "texture": "Noise3Ch"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 24,
+        "materialId": 48,
+        "shaderName": "GrassSh",
+        "color": [
+          0.11899367719888687,
+          0.10023877024650574,
+          0.08322342485189438,
+          1.0
+        ],
+        "metalness": 0.07500000298023224,
+        "roughness": 0.800000011920929,
+        "uvScale": 1.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_grassNorm1Tex",
+            "texture": "GrassNorTex0"
+          },
+          {
+            "name": "u_grassNorm2Tex",
+            "texture": "GrassNorTex1"
+          },
+          {
+            "name": "u_grassMaskTex",
+            "texture": "GrassMask"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 25,
+        "materialId": 50,
+        "shaderName": "GrassSh",
+        "color": [
+          0.0607781745493412,
+          0.0993000939488411,
+          0.0607781745493412,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.6000000238418579,
+        "uvScale": 1.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_grassNorm1Tex",
+            "texture": "GrassNorTex0"
+          },
+          {
+            "name": "u_grassNorm2Tex",
+            "texture": "GrassNorTex1"
+          },
+          {
+            "name": "u_grassMaskTex",
+            "texture": "GrassMask"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 26,
+        "materialId": 49,
+        "shaderName": "GrassSh",
+        "color": [
+          0.028991185128688812,
+          0.04736613854765892,
+          0.02161143720149994,
+          1.0
+        ],
+        "metalness": 0.25,
+        "roughness": 0.800000011920929,
+        "uvScale": 1.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_grassNorm1Tex",
+            "texture": "GrassNorTex0"
+          },
+          {
+            "name": "u_grassNorm2Tex",
+            "texture": "GrassNorTex1"
+          },
+          {
+            "name": "u_grassMaskTex",
+            "texture": "GrassMask"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 27,
+        "materialId": 51,
+        "shaderName": "GrassSh",
+        "color": [
+          0.02742054872214794,
+          0.04736613854765892,
+          0.015395747497677803,
+          1.0
+        ],
+        "metalness": 0.25,
+        "roughness": 0.6000000238418579,
+        "uvScale": 1.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_grassNorm1Tex",
+            "texture": "GrassNorTex0"
+          },
+          {
+            "name": "u_grassNorm2Tex",
+            "texture": "GrassNorTex1"
+          },
+          {
+            "name": "u_grassMaskTex",
+            "texture": "GrassMask"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 28,
+        "materialId": 52,
+        "shaderName": "GrassSh",
+        "color": [
+          0.11899367719888687,
+          0.10023877024650574,
+          0.08322342485189438,
+          1.0
+        ],
+        "metalness": 0.07500000298023224,
+        "roughness": 0.800000011920929,
+        "uvScale": 1.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_grassNorm1Tex",
+            "texture": "GrassNorTex0"
+          },
+          {
+            "name": "u_grassNorm2Tex",
+            "texture": "GrassNorTex1"
+          },
+          {
+            "name": "u_grassMaskTex",
+            "texture": "GrassMask"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 29,
+        "materialId": 80,
+        "shaderName": "CloudSh",
+        "color": [
+          0.4562634229660034,
+          0.4562634229660034,
+          0.4562634229660034,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 1.0,
+        "uvScale": 0.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [],
+        "parameters": []
+      }
+    ],
+    "Prairie_NestAndKeeper": [
+      {
+        "index": 0,
+        "materialId": 1,
+        "shaderName": "RockFaceSh",
+        "color": [
+          1.0,
+          0.0,
+          0.21763762831687927,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 1.0,
+        "uvScale": 0.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "RockHeightCliffSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "RockHeightCliffSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 1,
+        "materialId": 16,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.01898735947906971,
+          0.035754431039094925,
+          0.033817388117313385,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 1.0,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "CliffSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "CliffSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 2,
+        "materialId": 18,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.0542924664914608,
+          0.0899408608675003,
+          0.0993000939488411,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 1.0,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "CliffSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "CliffSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 3,
+        "materialId": 17,
+        "shaderName": "RockFaceSh",
+        "color": [
+          2.1766558347735554e-05,
+          3.605846723075956e-05,
+          3.981070767622441e-05,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.8999999761581421,
+        "uvScale": 0.44999998807907104,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "SoilSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "SoilSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 4,
+        "materialId": 27,
+        "shaderName": "RockFaceRainSh",
+        "color": [
+          2.1766558347735554e-05,
+          3.605846723075956e-05,
+          3.981070767622441e-05,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.25,
+        "uvScale": 0.44999998807907104,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "SoilSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "SoilSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 5,
+        "materialId": 20,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.4562634229660034,
+          0.4562634229660034,
+          0.4562634229660034,
+          1.0
+        ],
+        "metalness": 0.10000000149011612,
+        "roughness": 0.949999988079071,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "WallSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WallSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 6,
+        "materialId": 19,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.04736613854765892,
+          0.04736613854765892,
+          0.04736613854765892,
+          1.0
+        ],
+        "metalness": 0.10000000149011612,
+        "roughness": 1.0,
+        "uvScale": 0.44999998807907104,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "CliffSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "CliffSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 7,
+        "materialId": 21,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.4562634229660034,
+          0.13939028978347778,
+          0.0,
+          1.0
+        ],
+        "metalness": 1.0,
+        "roughness": 0.05000000074505806,
+        "uvScale": 1.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "GoldSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "GoldSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 8,
+        "materialId": 22,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.04736613854765892,
+          0.19818489253520966,
+          0.21763762831687927,
+          1.0
+        ],
+        "metalness": 0.5,
+        "roughness": 0.10000000149011612,
+        "uvScale": 0.125,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "GlacierSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "GlacierSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 9,
+        "materialId": 23,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.21763762831687927,
+          0.21763762831687927,
+          0.21763762831687927,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 1.0,
+        "uvScale": 0.5,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "TileCeilingSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "TileCeilingSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 10,
+        "materialId": 24,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.0050041857175529,
+          0.009423205628991127,
+          0.008912690915167332,
+          1.0
+        ],
+        "metalness": 0.10000000149011612,
+        "roughness": 1.0,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "TileFloorSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WallSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 11,
+        "materialId": 25,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.21763762831687927,
+          0.21763762831687927,
+          0.21763762831687927,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.75,
+        "uvScale": 0.15000000596046448,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "TileFloorSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WallBrickBigSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 12,
+        "materialId": 26,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.009423205628991127,
+          0.017744505777955055,
+          0.016783174127340317,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 1.0,
+        "uvScale": 0.20000000298023224,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "WallBrickSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WallBrickSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 13,
+        "materialId": 28,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.0019034506985917687,
+          0.006309573072940111,
+          0.006309573072940111,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.25,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "CliffWetSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "CliffWetSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 14,
+        "materialId": 29,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.4562634229660034,
+          0.4562634229660034,
+          0.4562634229660034,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.949999988079071,
+        "uvScale": 1.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "WallSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WallSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 15,
+        "materialId": 30,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.1332085132598877,
+          0.1332085132598877,
+          0.1332085132598877,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.6499999761581421,
+        "uvScale": 0.10000000149011612,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "WoodSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WoodSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 16,
+        "materialId": 31,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.4562634229660034,
+          0.4562634229660034,
+          0.4562634229660034,
+          1.0
+        ],
+        "metalness": 0.10000000149011612,
+        "roughness": 0.949999988079071,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "WallSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WallSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 17,
+        "materialId": 2,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.4562634229660034,
+          0.4562634229660034,
+          0.4562634229660034,
+          1.0
+        ],
+        "metalness": 0.10000000149011612,
+        "roughness": 0.949999988079071,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "WallSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WallSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 18,
+        "materialId": 3,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.4562634229660034,
+          0.4562634229660034,
+          0.4562634229660034,
+          1.0
+        ],
+        "metalness": 0.10000000149011612,
+        "roughness": 0.949999988079071,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "WallSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WallSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 19,
+        "materialId": 32,
+        "shaderName": "SandSh",
+        "color": [
+          0.1332085132598877,
+          0.11625543981790543,
+          0.10055272281169891,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.5,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_normalTex",
+            "texture": "Noise3Ch"
+          },
+          {
+            "name": "u_grassMaskTexture",
+            "texture": "Noise3Ch"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 20,
+        "materialId": 34,
+        "shaderName": "SandSh",
+        "color": [
+          0.1332085132598877,
+          0.11625543981790543,
+          0.10055272281169891,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.5,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_normalTex",
+            "texture": "Noise3Ch"
+          },
+          {
+            "name": "u_grassMaskTexture",
+            "texture": "Noise3Ch"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 21,
+        "materialId": 35,
+        "shaderName": "SandSh",
+        "color": [
+          0.5310491919517517,
+          0.5310491919517517,
+          0.5310491919517517,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.5,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_normalTex",
+            "texture": "Noise3Ch"
+          },
+          {
+            "name": "u_grassMaskTexture",
+            "texture": "Noise3Ch"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 22,
+        "materialId": 36,
+        "shaderName": "SandSh",
+        "color": [
+          0.10564900934696198,
+          0.1332085132598877,
+          0.10564900934696198,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.5,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_normalTex",
+            "texture": "Noise3Ch"
+          },
+          {
+            "name": "u_grassMaskTexture",
+            "texture": "Noise3Ch"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 23,
+        "materialId": 33,
+        "shaderName": "SandRainSh",
+        "color": [
+          0.028991185128688812,
+          0.02742054872214794,
+          0.025897502899169922,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.0,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_normalTex",
+            "texture": "Noise3Ch"
+          },
+          {
+            "name": "u_grassMaskTexture",
+            "texture": "Noise3Ch"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 24,
+        "materialId": 48,
+        "shaderName": "GrassSh",
+        "color": [
+          0.04095197841525078,
+          0.07074028253555298,
+          0.02299320511519909,
+          1.0
+        ],
+        "metalness": 0.07500000298023224,
+        "roughness": 0.800000011920929,
+        "uvScale": 1.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_grassNorm1Tex",
+            "texture": "GrassNorTex0"
+          },
+          {
+            "name": "u_grassNorm2Tex",
+            "texture": "GrassNorTex1"
+          },
+          {
+            "name": "u_grassMaskTex",
+            "texture": "GrassMask"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 25,
+        "materialId": 50,
+        "shaderName": "GrassSh",
+        "color": [
+          0.04095197841525078,
+          0.07074028253555298,
+          0.02299320511519909,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.6000000238418579,
+        "uvScale": 1.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_grassNorm1Tex",
+            "texture": "GrassNorTex0"
+          },
+          {
+            "name": "u_grassNorm2Tex",
+            "texture": "GrassNorTex1"
+          },
+          {
+            "name": "u_grassMaskTex",
+            "texture": "GrassMask"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 26,
+        "materialId": 49,
+        "shaderName": "GrassSh",
+        "color": [
+          0.028991185128688812,
+          0.04736613854765892,
+          0.02161143720149994,
+          1.0
+        ],
+        "metalness": 0.25,
+        "roughness": 0.800000011920929,
+        "uvScale": 1.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_grassNorm1Tex",
+            "texture": "GrassNorTex0"
+          },
+          {
+            "name": "u_grassNorm2Tex",
+            "texture": "GrassNorTex1"
+          },
+          {
+            "name": "u_grassMaskTex",
+            "texture": "GrassMask"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 27,
+        "materialId": 51,
+        "shaderName": "GrassSh",
+        "color": [
+          0.02742054872214794,
+          0.04736613854765892,
+          0.015395747497677803,
+          1.0
+        ],
+        "metalness": 0.25,
+        "roughness": 0.6000000238418579,
+        "uvScale": 1.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_grassNorm1Tex",
+            "texture": "GrassNorTex0"
+          },
+          {
+            "name": "u_grassNorm2Tex",
+            "texture": "GrassNorTex1"
+          },
+          {
+            "name": "u_grassMaskTex",
+            "texture": "GrassMask"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 28,
+        "materialId": 52,
+        "shaderName": "GrassSh",
+        "color": [
+          0.04095197841525078,
+          0.07074028253555298,
+          0.02299320511519909,
+          1.0
+        ],
+        "metalness": 0.07500000298023224,
+        "roughness": 0.800000011920929,
+        "uvScale": 1.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_grassNorm1Tex",
+            "texture": "GrassNorTex0"
+          },
+          {
+            "name": "u_grassNorm2Tex",
+            "texture": "GrassNorTex1"
+          },
+          {
+            "name": "u_grassMaskTex",
+            "texture": "GrassMask"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 29,
+        "materialId": 80,
+        "shaderName": "CloudSh",
+        "color": [
+          0.4562634229660034,
+          0.4562634229660034,
+          0.4562634229660034,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 1.0,
+        "uvScale": 0.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [],
+        "parameters": []
+      }
+    ],
+    "RainMid": [
+      {
+        "index": 0,
+        "materialId": 1,
+        "shaderName": "RockFaceSh",
+        "color": [
+          1.0,
+          0.0,
+          0.21763762831687927,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 1.0,
+        "uvScale": 0.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "RockHeightCliffSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "RockHeightCliffSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 1,
+        "materialId": 16,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.009423205628991127,
+          0.009423205628991127,
+          0.009423205628991127,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 1.0,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "CliffSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "CliffSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 2,
+        "materialId": 18,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.0542924664914608,
+          0.0899408608675003,
+          0.0993000939488411,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 1.0,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "CliffSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "CliffSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 3,
+        "materialId": 17,
+        "shaderName": "RockFaceSh",
+        "color": [
+          2.1766558347735554e-05,
+          3.605846723075956e-05,
+          3.981070767622441e-05,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.8999999761581421,
+        "uvScale": 0.44999998807907104,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "SoilSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "SoilSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 4,
+        "materialId": 27,
+        "shaderName": "RockFaceRainSh",
+        "color": [
+          2.1766558347735554e-05,
+          3.605846723075956e-05,
+          3.981070767622441e-05,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.25,
+        "uvScale": 0.44999998807907104,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "SoilSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "SoilSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 5,
+        "materialId": 20,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.4562634229660034,
+          0.4562634229660034,
+          0.4562634229660034,
+          1.0
+        ],
+        "metalness": 0.10000000149011612,
+        "roughness": 0.949999988079071,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "WallSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WallSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 6,
+        "materialId": 19,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.04736613854765892,
+          0.04736613854765892,
+          0.04736613854765892,
+          1.0
+        ],
+        "metalness": 0.10000000149011612,
+        "roughness": 1.0,
+        "uvScale": 0.44999998807907104,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "CliffSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "CliffSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 7,
+        "materialId": 21,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.4562634229660034,
+          0.13939028978347778,
+          0.0,
+          1.0
+        ],
+        "metalness": 1.0,
+        "roughness": 0.05000000074505806,
+        "uvScale": 1.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "GoldSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "GoldSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 8,
+        "materialId": 22,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.04736613854765892,
+          0.19818489253520966,
+          0.21763762831687927,
+          1.0
+        ],
+        "metalness": 0.5,
+        "roughness": 0.10000000149011612,
+        "uvScale": 0.125,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "GlacierSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "GlacierSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 9,
+        "materialId": 23,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.21763762831687927,
+          0.21763762831687927,
+          0.21763762831687927,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 1.0,
+        "uvScale": 0.5,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "TileCeilingSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "TileCeilingSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 10,
+        "materialId": 24,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.0050041857175529,
+          0.009423205628991127,
+          0.008912690915167332,
+          1.0
+        ],
+        "metalness": 0.10000000149011612,
+        "roughness": 1.0,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "TileFloorSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WallSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 11,
+        "materialId": 25,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.21763762831687927,
+          0.21763762831687927,
+          0.21763762831687927,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.75,
+        "uvScale": 0.15000000596046448,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "TileFloorSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WallBrickBigSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 12,
+        "materialId": 26,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.009423205628991127,
+          0.017744505777955055,
+          0.016783174127340317,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 1.0,
+        "uvScale": 0.20000000298023224,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "WallBrickSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WallBrickSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 13,
+        "materialId": 28,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.0019034506985917687,
+          0.006309573072940111,
+          0.006309573072940111,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.25,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "CliffWetSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "CliffWetSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 14,
+        "materialId": 29,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.4562634229660034,
+          0.4562634229660034,
+          0.4562634229660034,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.949999988079071,
+        "uvScale": 1.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "WallSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WallSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 15,
+        "materialId": 30,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.0607781745493412,
+          0.0607781745493412,
+          0.0607781745493412,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.25,
+        "uvScale": 0.10000000149011612,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "WoodSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WoodSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 16,
+        "materialId": 31,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.4562634229660034,
+          0.4562634229660034,
+          0.4562634229660034,
+          1.0
+        ],
+        "metalness": 0.10000000149011612,
+        "roughness": 0.949999988079071,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "WallSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WallSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 17,
+        "materialId": 2,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.4562634229660034,
+          0.4562634229660034,
+          0.4562634229660034,
+          1.0
+        ],
+        "metalness": 0.10000000149011612,
+        "roughness": 0.949999988079071,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "WallSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WallSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 18,
+        "materialId": 3,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.4562634229660034,
+          0.4562634229660034,
+          0.4562634229660034,
+          1.0
+        ],
+        "metalness": 0.10000000149011612,
+        "roughness": 0.949999988079071,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "WallSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WallSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 19,
+        "materialId": 32,
+        "shaderName": "SandSh",
+        "color": [
+          0.07074028253555298,
+          0.07074028253555298,
+          0.07074028253555298,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.5,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_normalTex",
+            "texture": "Noise3Ch"
+          },
+          {
+            "name": "u_grassMaskTexture",
+            "texture": "Noise3Ch"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 20,
+        "materialId": 34,
+        "shaderName": "SandSh",
+        "color": [
+          0.07074028253555298,
+          0.07074028253555298,
+          0.07074028253555298,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.5,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_normalTex",
+            "texture": "Noise3Ch"
+          },
+          {
+            "name": "u_grassMaskTexture",
+            "texture": "Noise3Ch"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 21,
+        "materialId": 35,
+        "shaderName": "SandSh",
+        "color": [
+          0.5310491919517517,
+          0.5310491919517517,
+          0.5310491919517517,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.5,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_normalTex",
+            "texture": "Noise3Ch"
+          },
+          {
+            "name": "u_grassMaskTexture",
+            "texture": "Noise3Ch"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 22,
+        "materialId": 36,
+        "shaderName": "SandSh",
+        "color": [
+          0.10564900934696198,
+          0.1332085132598877,
+          0.10564900934696198,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.5,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_normalTex",
+            "texture": "Noise3Ch"
+          },
+          {
+            "name": "u_grassMaskTexture",
+            "texture": "Noise3Ch"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 23,
+        "materialId": 33,
+        "shaderName": "SandRainSh",
+        "color": [
+          0.024421805515885353,
+          0.024421805515885353,
+          0.024421805515885353,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.0,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_normalTex",
+            "texture": "Noise3Ch"
+          },
+          {
+            "name": "u_grassMaskTexture",
+            "texture": "Noise3Ch"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 24,
+        "materialId": 48,
+        "shaderName": "GrassSh",
+        "color": [
+          0.0607781745493412,
+          0.0993000939488411,
+          0.0607781745493412,
+          1.0
+        ],
+        "metalness": 0.07500000298023224,
+        "roughness": 0.800000011920929,
+        "uvScale": 1.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_grassNorm1Tex",
+            "texture": "GrassNorTex0"
+          },
+          {
+            "name": "u_grassNorm2Tex",
+            "texture": "GrassNorTex1"
+          },
+          {
+            "name": "u_grassMaskTex",
+            "texture": "GrassMask"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 25,
+        "materialId": 50,
+        "shaderName": "GrassSh",
+        "color": [
+          0.0607781745493412,
+          0.0993000939488411,
+          0.0607781745493412,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.6000000238418579,
+        "uvScale": 1.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_grassNorm1Tex",
+            "texture": "GrassNorTex0"
+          },
+          {
+            "name": "u_grassNorm2Tex",
+            "texture": "GrassNorTex1"
+          },
+          {
+            "name": "u_grassMaskTex",
+            "texture": "GrassMask"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 26,
+        "materialId": 49,
+        "shaderName": "GrassSh",
+        "color": [
+          0.028991185128688812,
+          0.04736613854765892,
+          0.02161143720149994,
+          1.0
+        ],
+        "metalness": 0.25,
+        "roughness": 0.800000011920929,
+        "uvScale": 1.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_grassNorm1Tex",
+            "texture": "GrassNorTex0"
+          },
+          {
+            "name": "u_grassNorm2Tex",
+            "texture": "GrassNorTex1"
+          },
+          {
+            "name": "u_grassMaskTex",
+            "texture": "GrassMask"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 27,
+        "materialId": 51,
+        "shaderName": "GrassSh",
+        "color": [
+          0.02742054872214794,
+          0.04736613854765892,
+          0.015395747497677803,
+          1.0
+        ],
+        "metalness": 0.25,
+        "roughness": 0.6000000238418579,
+        "uvScale": 1.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_grassNorm1Tex",
+            "texture": "GrassNorTex0"
+          },
+          {
+            "name": "u_grassNorm2Tex",
+            "texture": "GrassNorTex1"
+          },
+          {
+            "name": "u_grassMaskTex",
+            "texture": "GrassMask"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 28,
+        "materialId": 52,
+        "shaderName": "GrassSh",
+        "color": [
+          0.0607781745493412,
+          0.0993000939488411,
+          0.0607781745493412,
+          1.0
+        ],
+        "metalness": 0.07500000298023224,
+        "roughness": 0.800000011920929,
+        "uvScale": 1.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_grassNorm1Tex",
+            "texture": "GrassNorTex0"
+          },
+          {
+            "name": "u_grassNorm2Tex",
+            "texture": "GrassNorTex1"
+          },
+          {
+            "name": "u_grassMaskTex",
+            "texture": "GrassMask"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 29,
+        "materialId": 80,
+        "shaderName": "CloudSh",
+        "color": [
+          0.4562634229660034,
+          0.4562634229660034,
+          0.4562634229660034,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 1.0,
+        "uvScale": 0.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [],
+        "parameters": []
+      }
+    ],
+    "SkyHub2": [
+      {
+        "index": 0,
+        "materialId": 1,
+        "shaderName": "RockFaceSh",
+        "color": [
+          1.0,
+          0.0,
+          0.21763762831687927,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 1.0,
+        "uvScale": 0.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "RockHeightCliffSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "RockHeightCliffSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 1,
+        "materialId": 16,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.009423205628991127,
+          0.017744505777955055,
+          0.016783174127340317,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 1.0,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "CliffSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "CliffSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 2,
+        "materialId": 18,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.0542924664914608,
+          0.0899408608675003,
+          0.0993000939488411,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 1.0,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "CliffSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "CliffSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 3,
+        "materialId": 17,
+        "shaderName": "RockFaceSh",
+        "color": [
+          2.1766558347735554e-05,
+          3.605846723075956e-05,
+          3.981070767622441e-05,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.8999999761581421,
+        "uvScale": 0.44999998807907104,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "SoilSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "SoilSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 4,
+        "materialId": 27,
+        "shaderName": "RockFaceRainSh",
+        "color": [
+          2.1766558347735554e-05,
+          3.605846723075956e-05,
+          3.981070767622441e-05,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.25,
+        "uvScale": 0.44999998807907104,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "SoilSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "SoilSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 5,
+        "materialId": 20,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.4562634229660034,
+          0.4562634229660034,
+          0.4562634229660034,
+          1.0
+        ],
+        "metalness": 0.10000000149011612,
+        "roughness": 0.949999988079071,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "WallSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WallSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 6,
+        "materialId": 19,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.04736613854765892,
+          0.04736613854765892,
+          0.04736613854765892,
+          1.0
+        ],
+        "metalness": 0.10000000149011612,
+        "roughness": 1.0,
+        "uvScale": 0.44999998807907104,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "CliffSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "CliffSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 7,
+        "materialId": 21,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.4562634229660034,
+          0.13939028978347778,
+          0.0,
+          1.0
+        ],
+        "metalness": 1.0,
+        "roughness": 0.05000000074505806,
+        "uvScale": 1.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "GoldSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "GoldSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 8,
+        "materialId": 22,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.04736613854765892,
+          0.19818489253520966,
+          0.21763762831687927,
+          1.0
+        ],
+        "metalness": 0.5,
+        "roughness": 0.10000000149011612,
+        "uvScale": 0.125,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "GlacierSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "GlacierSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 9,
+        "materialId": 23,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.21763762831687927,
+          0.21763762831687927,
+          0.21763762831687927,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 1.0,
+        "uvScale": 0.5,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "TileCeilingSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "TileCeilingSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 10,
+        "materialId": 24,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.0050041857175529,
+          0.009423205628991127,
+          0.008912690915167332,
+          1.0
+        ],
+        "metalness": 0.10000000149011612,
+        "roughness": 1.0,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "TileFloorSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WallSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 11,
+        "materialId": 25,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.21763762831687927,
+          0.21763762831687927,
+          0.21763762831687927,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.75,
+        "uvScale": 0.15000000596046448,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "TileFloorSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WallBrickBigSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 12,
+        "materialId": 26,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.009423205628991127,
+          0.017744505777955055,
+          0.016783174127340317,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 1.0,
+        "uvScale": 0.20000000298023224,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "WallBrickSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WallBrickSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 13,
+        "materialId": 28,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.0019034506985917687,
+          0.006309573072940111,
+          0.006309573072940111,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.25,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "CliffWetSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "CliffWetSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 14,
+        "materialId": 29,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.4562634229660034,
+          0.4562634229660034,
+          0.4562634229660034,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.949999988079071,
+        "uvScale": 1.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "WallSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WallSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 15,
+        "materialId": 30,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.1332085132598877,
+          0.1332085132598877,
+          0.1332085132598877,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.6499999761581421,
+        "uvScale": 0.10000000149011612,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "WoodSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WoodSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 16,
+        "materialId": 31,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.4562634229660034,
+          0.4562634229660034,
+          0.4562634229660034,
+          1.0
+        ],
+        "metalness": 0.10000000149011612,
+        "roughness": 0.949999988079071,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "WallSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WallSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 17,
+        "materialId": 2,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.4562634229660034,
+          0.4562634229660034,
+          0.4562634229660034,
+          1.0
+        ],
+        "metalness": 0.10000000149011612,
+        "roughness": 0.949999988079071,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "WallSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WallSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 18,
+        "materialId": 3,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.4562634229660034,
+          0.4562634229660034,
+          0.4562634229660034,
+          1.0
+        ],
+        "metalness": 0.10000000149011612,
+        "roughness": 0.949999988079071,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "WallSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WallSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 19,
+        "materialId": 32,
+        "shaderName": "SandSh",
+        "color": [
+          0.1332085132598877,
+          0.11625543981790543,
+          0.10055272281169891,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.5,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_normalTex",
+            "texture": "Noise3Ch"
+          },
+          {
+            "name": "u_grassMaskTexture",
+            "texture": "Noise3Ch"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 20,
+        "materialId": 34,
+        "shaderName": "SandSh",
+        "color": [
+          0.1332085132598877,
+          0.11625543981790543,
+          0.10055272281169891,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.5,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_normalTex",
+            "texture": "Noise3Ch"
+          },
+          {
+            "name": "u_grassMaskTexture",
+            "texture": "Noise3Ch"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 21,
+        "materialId": 35,
+        "shaderName": "SandSh",
+        "color": [
+          0.5310491919517517,
+          0.5310491919517517,
+          0.5310491919517517,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.5,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_normalTex",
+            "texture": "Noise3Ch"
+          },
+          {
+            "name": "u_grassMaskTexture",
+            "texture": "Noise3Ch"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 22,
+        "materialId": 36,
+        "shaderName": "SandSh",
+        "color": [
+          0.10564900934696198,
+          0.1332085132598877,
+          0.10564900934696198,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.5,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_normalTex",
+            "texture": "Noise3Ch"
+          },
+          {
+            "name": "u_grassMaskTexture",
+            "texture": "Noise3Ch"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 23,
+        "materialId": 33,
+        "shaderName": "SandRainSh",
+        "color": [
+          0.028991185128688812,
+          0.02742054872214794,
+          0.025897502899169922,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.0,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_normalTex",
+            "texture": "Noise3Ch"
+          },
+          {
+            "name": "u_grassMaskTexture",
+            "texture": "Noise3Ch"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 24,
+        "materialId": 48,
+        "shaderName": "GrassSh",
+        "color": [
+          0.02742054872214794,
+          0.04736613854765892,
+          0.015395747497677803,
+          1.0
+        ],
+        "metalness": 0.07500000298023224,
+        "roughness": 0.800000011920929,
+        "uvScale": 1.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_grassNorm1Tex",
+            "texture": "GrassNorTex0"
+          },
+          {
+            "name": "u_grassNorm2Tex",
+            "texture": "GrassNorTex1"
+          },
+          {
+            "name": "u_grassMaskTex",
+            "texture": "GrassMask"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 25,
+        "materialId": 50,
+        "shaderName": "GrassSh",
+        "color": [
+          0.02742054872214794,
+          0.04736613854765892,
+          0.015395747497677803,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.6000000238418579,
+        "uvScale": 1.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_grassNorm1Tex",
+            "texture": "GrassNorTex0"
+          },
+          {
+            "name": "u_grassNorm2Tex",
+            "texture": "GrassNorTex1"
+          },
+          {
+            "name": "u_grassMaskTex",
+            "texture": "GrassMask"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 26,
+        "materialId": 49,
+        "shaderName": "GrassSh",
+        "color": [
+          0.028991185128688812,
+          0.04736613854765892,
+          0.02161143720149994,
+          1.0
+        ],
+        "metalness": 0.25,
+        "roughness": 0.800000011920929,
+        "uvScale": 1.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_grassNorm1Tex",
+            "texture": "GrassNorTex0"
+          },
+          {
+            "name": "u_grassNorm2Tex",
+            "texture": "GrassNorTex1"
+          },
+          {
+            "name": "u_grassMaskTex",
+            "texture": "GrassMask"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 27,
+        "materialId": 51,
+        "shaderName": "GrassSh",
+        "color": [
+          0.09236329048871994,
+          0.1332085132598877,
+          0.04329769313335419,
+          1.0
+        ],
+        "metalness": 0.25,
+        "roughness": 0.6000000238418579,
+        "uvScale": 1.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_grassNorm1Tex",
+            "texture": "GrassNorTex0"
+          },
+          {
+            "name": "u_grassNorm2Tex",
+            "texture": "GrassNorTex1"
+          },
+          {
+            "name": "u_grassMaskTex",
+            "texture": "GrassMask"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 28,
+        "materialId": 52,
+        "shaderName": "GrassSh",
+        "color": [
+          0.02742054872214794,
+          0.04736613854765892,
+          0.015395747497677803,
+          1.0
+        ],
+        "metalness": 0.07500000298023224,
+        "roughness": 0.800000011920929,
+        "uvScale": 1.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_grassNorm1Tex",
+            "texture": "GrassNorTex0"
+          },
+          {
+            "name": "u_grassNorm2Tex",
+            "texture": "GrassNorTex1"
+          },
+          {
+            "name": "u_grassMaskTex",
+            "texture": "GrassMask"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 29,
+        "materialId": 80,
+        "shaderName": "CloudSh",
+        "color": [
+          0.4562634229660034,
+          0.4562634229660034,
+          0.4562634229660034,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 1.0,
+        "uvScale": 0.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [],
+        "parameters": []
+      }
+    ],
+    "SunsetEnd": [
+      {
+        "index": 0,
+        "materialId": 1,
+        "shaderName": "RockFaceSh",
+        "color": [
+          1.0,
+          0.0,
+          0.21763762831687927,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 1.0,
+        "uvScale": 0.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "RockHeightCliffSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "RockHeightCliffSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 1,
+        "materialId": 16,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.009423205628991127,
+          0.017744505777955055,
+          0.016783174127340317,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 1.0,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "CliffSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "CliffSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 2,
+        "materialId": 18,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.09316517412662506,
+          0.1252821385860443,
+          0.1332085132598877,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 1.0,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "CliffSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "CliffSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 3,
+        "materialId": 17,
+        "shaderName": "RockFaceSh",
+        "color": [
+          2.1766558347735554e-05,
+          3.605846723075956e-05,
+          3.981070767622441e-05,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.8999999761581421,
+        "uvScale": 0.44999998807907104,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "SoilSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "SoilSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 4,
+        "materialId": 27,
+        "shaderName": "RockFaceRainSh",
+        "color": [
+          2.1766558347735554e-05,
+          3.605846723075956e-05,
+          3.981070767622441e-05,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.25,
+        "uvScale": 0.44999998807907104,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "SoilSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "SoilSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 5,
+        "materialId": 20,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.4562634229660034,
+          0.4562634229660034,
+          0.4562634229660034,
+          1.0
+        ],
+        "metalness": 0.10000000149011612,
+        "roughness": 0.949999988079071,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "WallSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WallSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 6,
+        "materialId": 19,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.04736613854765892,
+          0.04736613854765892,
+          0.04736613854765892,
+          1.0
+        ],
+        "metalness": 0.10000000149011612,
+        "roughness": 1.0,
+        "uvScale": 0.44999998807907104,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "CliffSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "CliffSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 7,
+        "materialId": 21,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.4562634229660034,
+          0.13939028978347778,
+          0.0,
+          1.0
+        ],
+        "metalness": 1.0,
+        "roughness": 0.05000000074505806,
+        "uvScale": 1.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "GoldSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "GoldSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 8,
+        "materialId": 22,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.04736613854765892,
+          0.19818489253520966,
+          0.21763762831687927,
+          1.0
+        ],
+        "metalness": 0.5,
+        "roughness": 0.10000000149011612,
+        "uvScale": 0.125,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "GlacierSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "GlacierSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 9,
+        "materialId": 23,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.21763762831687927,
+          0.21763762831687927,
+          0.21763762831687927,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 1.0,
+        "uvScale": 0.5,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "TileCeilingSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "TileCeilingSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 10,
+        "materialId": 24,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.0050041857175529,
+          0.009423205628991127,
+          0.008912690915167332,
+          1.0
+        ],
+        "metalness": 0.10000000149011612,
+        "roughness": 1.0,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "TileFloorSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WallSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 11,
+        "materialId": 25,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.21763762831687927,
+          0.21763762831687927,
+          0.21763762831687927,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.75,
+        "uvScale": 0.15000000596046448,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "TileFloorSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WallBrickBigSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 12,
+        "materialId": 26,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.009423205628991127,
+          0.017744505777955055,
+          0.016783174127340317,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 1.0,
+        "uvScale": 0.20000000298023224,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "WallBrickSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WallBrickSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 13,
+        "materialId": 28,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.0019034506985917687,
+          0.006309573072940111,
+          0.006309573072940111,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.25,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "CliffWetSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "CliffWetSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 14,
+        "materialId": 29,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.4562634229660034,
+          0.4562634229660034,
+          0.4562634229660034,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.949999988079071,
+        "uvScale": 1.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "WallSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WallSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 15,
+        "materialId": 30,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.1332085132598877,
+          0.1332085132598877,
+          0.1332085132598877,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.6499999761581421,
+        "uvScale": 0.10000000149011612,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "WoodSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WoodSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 16,
+        "materialId": 31,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.4562634229660034,
+          0.4562634229660034,
+          0.4562634229660034,
+          1.0
+        ],
+        "metalness": 0.10000000149011612,
+        "roughness": 0.949999988079071,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "WallSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WallSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 17,
+        "materialId": 2,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.4562634229660034,
+          0.4562634229660034,
+          0.4562634229660034,
+          1.0
+        ],
+        "metalness": 0.10000000149011612,
+        "roughness": 0.949999988079071,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "WallSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WallSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 18,
+        "materialId": 3,
+        "shaderName": "RockFaceSh",
+        "color": [
+          0.4562634229660034,
+          0.4562634229660034,
+          0.4562634229660034,
+          1.0
+        ],
+        "metalness": 0.10000000149011612,
+        "roughness": 0.949999988079071,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_topGeoTexture",
+            "texture": "WallSh"
+          },
+          {
+            "name": "u_sideGeoTexture",
+            "texture": "WallSh"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 19,
+        "materialId": 32,
+        "shaderName": "SandSh",
+        "color": [
+          0.1332085132598877,
+          0.11625543981790543,
+          0.10055272281169891,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.5,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_normalTex",
+            "texture": "Noise3Ch"
+          },
+          {
+            "name": "u_grassMaskTexture",
+            "texture": "Noise3Ch"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 20,
+        "materialId": 34,
+        "shaderName": "SandSh",
+        "color": [
+          0.1332085132598877,
+          0.11625543981790543,
+          0.10055272281169891,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.5,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_normalTex",
+            "texture": "Noise3Ch"
+          },
+          {
+            "name": "u_grassMaskTexture",
+            "texture": "Noise3Ch"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 21,
+        "materialId": 35,
+        "shaderName": "SandSh",
+        "color": [
+          0.5310491919517517,
+          0.5310491919517517,
+          0.5310491919517517,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.5,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_normalTex",
+            "texture": "Noise3Ch"
+          },
+          {
+            "name": "u_grassMaskTexture",
+            "texture": "Noise3Ch"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 22,
+        "materialId": 36,
+        "shaderName": "SandSh",
+        "color": [
+          0.10564900934696198,
+          0.1332085132598877,
+          0.10564900934696198,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.5,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_normalTex",
+            "texture": "Noise3Ch"
+          },
+          {
+            "name": "u_grassMaskTexture",
+            "texture": "Noise3Ch"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 23,
+        "materialId": 33,
+        "shaderName": "SandRainSh",
+        "color": [
+          0.028991185128688812,
+          0.02742054872214794,
+          0.025897502899169922,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.0,
+        "uvScale": 0.25,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_normalTex",
+            "texture": "Noise3Ch"
+          },
+          {
+            "name": "u_grassMaskTexture",
+            "texture": "Noise3Ch"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 24,
+        "materialId": 48,
+        "shaderName": "GrassSh",
+        "color": [
+          0.02742054872214794,
+          0.04736613854765892,
+          0.015395747497677803,
+          1.0
+        ],
+        "metalness": 0.07500000298023224,
+        "roughness": 0.800000011920929,
+        "uvScale": 1.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_grassNorm1Tex",
+            "texture": "GrassNorTex0"
+          },
+          {
+            "name": "u_grassNorm2Tex",
+            "texture": "GrassNorTex1"
+          },
+          {
+            "name": "u_grassMaskTex",
+            "texture": "GrassMask"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 25,
+        "materialId": 50,
+        "shaderName": "GrassSh",
+        "color": [
+          0.02742054872214794,
+          0.04736613854765892,
+          0.015395747497677803,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 0.6000000238418579,
+        "uvScale": 1.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_grassNorm1Tex",
+            "texture": "GrassNorTex0"
+          },
+          {
+            "name": "u_grassNorm2Tex",
+            "texture": "GrassNorTex1"
+          },
+          {
+            "name": "u_grassMaskTex",
+            "texture": "GrassMask"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 26,
+        "materialId": 49,
+        "shaderName": "GrassSh",
+        "color": [
+          0.028991185128688812,
+          0.04736613854765892,
+          0.02161143720149994,
+          1.0
+        ],
+        "metalness": 0.25,
+        "roughness": 0.800000011920929,
+        "uvScale": 1.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_grassNorm1Tex",
+            "texture": "GrassNorTex0"
+          },
+          {
+            "name": "u_grassNorm2Tex",
+            "texture": "GrassNorTex1"
+          },
+          {
+            "name": "u_grassMaskTex",
+            "texture": "GrassMask"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 27,
+        "materialId": 51,
+        "shaderName": "GrassSh",
+        "color": [
+          0.02742054872214794,
+          0.04736613854765892,
+          0.015395747497677803,
+          1.0
+        ],
+        "metalness": 0.25,
+        "roughness": 0.6000000238418579,
+        "uvScale": 1.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_grassNorm1Tex",
+            "texture": "GrassNorTex0"
+          },
+          {
+            "name": "u_grassNorm2Tex",
+            "texture": "GrassNorTex1"
+          },
+          {
+            "name": "u_grassMaskTex",
+            "texture": "GrassMask"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 28,
+        "materialId": 52,
+        "shaderName": "GrassSh",
+        "color": [
+          0.02742054872214794,
+          0.04736613854765892,
+          0.015395747497677803,
+          1.0
+        ],
+        "metalness": 0.07500000298023224,
+        "roughness": 0.800000011920929,
+        "uvScale": 1.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [
+          {
+            "name": "u_grassNorm1Tex",
+            "texture": "GrassNorTex0"
+          },
+          {
+            "name": "u_grassNorm2Tex",
+            "texture": "GrassNorTex1"
+          },
+          {
+            "name": "u_grassMaskTex",
+            "texture": "GrassMask"
+          }
+        ],
+        "parameters": []
+      },
+      {
+        "index": 29,
+        "materialId": 80,
+        "shaderName": "CloudSh",
+        "color": [
+          0.4562634229660034,
+          0.4562634229660034,
+          0.4562634229660034,
+          1.0
+        ],
+        "metalness": 0.0,
+        "roughness": 1.0,
+        "uvScale": 0.0,
+        "minimumWeight": 0,
+        "stopWeight": 255,
+        "textures": [],
+        "parameters": []
+      }
+    ]
+  },
+  "scatter": {
+    "count": 59,
+    "ordering": "30 opaque surfaces then 29 decal surfaces, definition order",
+    "vertexRule": "scan up to 4 slots, stop on ID 0 or weight >= stopWeight; include iff weight > minimumWeight",
+    "triangleRule": "union vertex masks; lowest ordinal remains opaque, remaining bits shift by materialCount-1",
+    "indices": "stable input triangle order in each surface; counts-only call supported"
+  },
+  "skirt": {
+    "stride": 40,
+    "baseVertexBytes": 36,
+    "extraAttribute": "a_userData1, UNORM8 vec4, bytes 36..39",
+    "distanceRange": 5.0,
+    "materialRule": "whole skirt drawn once per nonzero material ID present in any vertex; ignores weight"
+  },
+  "unresolved": [
+    "Complete native draw scheduling, initial global environment outputs and GPU resources; basic Opaque/Decal/Skirts states are in meshes-render-state.json",
+    "Terrain patch visibility/jobs/tessellation and collision regeneration",
+    "Cloud sparse texture upload, preceding ray march/composite passes and occluder pipeline"
+  ]
+}

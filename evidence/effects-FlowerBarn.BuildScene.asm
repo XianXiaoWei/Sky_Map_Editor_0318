@@ -1,0 +1,22 @@
+0x10034f090: push rbp
+0x10034f091: mov rbp, rsp
+0x10034f094: push rbx
+0x10034f095: push rax
+0x10034f096: mov rbx, rdi
+0x10034f099: cmp byte ptr [rip + 0x961080], 0 ; 0x100cb0120
+0x10034f0a0: je 0x10034f0cc
+0x10034f0a2: cmp dword ptr [rbx + 0x35dd0], 0
+0x10034f0a9: je 0x10034f0cc
+0x10034f0ab: lea rdi, [rbx + 0x450]
+0x10034f0b2: call 0x1007f6540 ; 0x1007f6540
+0x10034f0b7: add rbx, 0x990
+0x10034f0be: mov rdi, rbx
+0x10034f0c1: add rsp, 8
+0x10034f0c5: pop rbx
+0x10034f0c6: pop rbp
+0x10034f0c7: jmp 0x1007f6540 ; 0x1007f6540
+0x10034f0cc: add rsp, 8
+0x10034f0d0: pop rbx
+0x10034f0d1: pop rbp
+0x10034f0d2: ret 
+0x10034f0d3: nop word ptr cs:[rax + rax]

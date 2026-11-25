@@ -1,0 +1,33 @@
+{
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "resourceLodReader": "0x100455e90",
+  "resourceLodStride": 184,
+  "renderVertexCount": {
+    "nativeOffset": 52,
+    "readInstructions": "0x100456065..0x100456075"
+  },
+  "bakeVertexCount": {
+    "nativeOffset": 64,
+    "readInstructions": "0x10045609c..0x1004560a8",
+    "fileField": "Second count after render vertex/index counts"
+  },
+  "bakeRemap": {
+    "nativeOffset": 152,
+    "readInstructions": "0x1004562bc..0x100456307",
+    "format": "u32 array, renderVertexCount entries, present when bakeVertexCount > 0"
+  },
+  "bakeLoader": "0x1003f4840",
+  "countCheck": "0x1003f4dfa..0x1003f4e09",
+  "expandInstructions": "0x1003f4f20..0x1003f4f60",
+  "expansion": "Copy 12 bytes per render vertex from sample 0 when uniform, otherwise from Mesh LOD bakeRemap[vertex]",
+  "opaqueExtraBlock": "Preserved bytes after lighting; does not provide the lighting remap",
+  "shaderEvidence": {
+    "vertex": "Mesh49525.vert: v_light0/1/2 = a_light0/1/2",
+    "fragment": "Mesh49525.frag lines 63..72; UNORM8 light0 RGB squared / alpha, sky blend, squared sun visibility, packed direction and point-light exponent"
+  },
+  "notImplemented": [
+    "Native rendering state and complete environment uniforms",
+    "New lighting bake",
+    "GPU drawing verification"
+  ]
+}

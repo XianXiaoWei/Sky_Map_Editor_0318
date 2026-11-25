@@ -1,0 +1,774 @@
+{
+  "className": "MakeFloaty",
+  "functionGroup": "场景基础与对象变换",
+  "functionRole": "对象浮动、旋转与错峰动画",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "MakeFloaty 的原默认值、继承初始化及 9 个序列化字段变体；原注册字段 8 项。"
+    },
+    {
+      "name": "对象浮动、旋转与错峰动画",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Marker（7 条引用）、Clump（10 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "MakeFloaty",
+    "category": "场景基础与对象变换",
+    "functionGroupId": "scene",
+    "functionRole": "对象浮动、旋转与错峰动画",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "MakeFloaty 的原默认值、继承初始化及 9 个序列化字段变体；原注册字段 8 项。"
+      },
+      {
+        "name": "对象浮动、旋转与错峰动画",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Marker（7 条引用）、Clump（10 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Clump",
+        "references": 10
+      },
+      {
+        "className": "Marker",
+        "references": 7
+      }
+    ],
+    "rttiWorkingGroup": "系统和其余类型",
+    "role": "对象实例类型",
+    "instances": 10,
+    "nestedInstances": 0,
+    "referenceFields": 17,
+    "declaredLevels": 4,
+    "levels": [
+      {
+        "level": "CandleSpace",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "CandleSpaceEnd",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Night",
+        "nodes": 5,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainEnd",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "fadeIn",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "floatRange",
+        "type": 0,
+        "size": 16,
+        "nestedClass": null
+      },
+      {
+        "name": "floatSpeedMult",
+        "type": 0,
+        "size": 16,
+        "nestedClass": null
+      },
+      {
+        "name": "objects",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "pivot",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "rotateSpeed",
+        "type": 0,
+        "size": 16,
+        "nestedClass": null
+      },
+      {
+        "name": "speed",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "staggerMult",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100d073a0",
+    "nativeRegisteredFields": [
+      {
+        "name": "objects",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x1006dc260",
+        "propertyAddress": "0x100d069c0"
+      },
+      {
+        "name": "pivot",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP6ObjectERK8MetaTypev",
+        "nativeOffset": 96,
+        "registrationFunction": "0x1006dc260",
+        "propertyAddress": "0x100d06a10"
+      },
+      {
+        "name": "floatRange",
+        "typeGetter": "__Z17GetMetaTypeByTypeIN10Vectormath3Aos7Vector3EERK8MetaTypev",
+        "nativeOffset": 64,
+        "registrationFunction": "0x1006dc260",
+        "propertyAddress": "0x100d06a60"
+      },
+      {
+        "name": "floatSpeedMult",
+        "typeGetter": "__Z17GetMetaTypeByTypeIN10Vectormath3Aos7Vector3EERK8MetaTypev",
+        "nativeOffset": 80,
+        "registrationFunction": "0x1006dc260",
+        "propertyAddress": "0x100d06ab0"
+      },
+      {
+        "name": "speed",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 104,
+        "registrationFunction": "0x1006dc260",
+        "propertyAddress": "0x100d06b00"
+      },
+      {
+        "name": "rotateSpeed",
+        "typeGetter": "__Z17GetMetaTypeByTypeIN10Vectormath3Aos7Vector3EERK8MetaTypev",
+        "nativeOffset": 112,
+        "registrationFunction": "0x1006dc260",
+        "propertyAddress": "0x100d06b50"
+      },
+      {
+        "name": "staggerMult",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 128,
+        "registrationFunction": "0x1006dc260",
+        "propertyAddress": "0x100d06ba0"
+      },
+      {
+        "name": "fadeIn",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 132,
+        "registrationFunction": "0x1006dc260",
+        "propertyAddress": "0x100d06bf0"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 8 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "CandleSpace:n115",
+      "level": "CandleSpace",
+      "nodeId": 115,
+      "name": "BstNode_2446917710",
+      "className": "MakeFloaty",
+      "classIndex": 33,
+      "sourceOffset": 37912,
+      "sourceLength": 89,
+      "sourceSha256": "600a5488fe1e800264bfb2474993548de93ee7c522c21f6b52a06237c498668d",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n115/p6",
+          "fieldName": "pivot",
+          "target": "CandleSpace:n65",
+          "targetNodeId": 65,
+          "offset": 37992
+        },
+        {
+          "fieldId": "n115/p8",
+          "fieldName": "objects",
+          "target": "CandleSpace:n408",
+          "targetNodeId": 408,
+          "offset": 37997
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CandleSpace:n344",
+      "level": "CandleSpace",
+      "nodeId": 344,
+      "name": "BstNode_2446917707",
+      "className": "MakeFloaty",
+      "classIndex": 33,
+      "sourceOffset": 74645,
+      "sourceLength": 89,
+      "sourceSha256": "a029d39375f8591097825c50a66a52a59106660a7addb35a415dc95408eef4c0",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n344/p6",
+          "fieldName": "pivot",
+          "target": "CandleSpace:n65",
+          "targetNodeId": 65,
+          "offset": 74725
+        },
+        {
+          "fieldId": "n344/p8",
+          "fieldName": "objects",
+          "target": "CandleSpace:n528",
+          "targetNodeId": 528,
+          "offset": 74730
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CandleSpaceEnd:n356",
+      "level": "CandleSpaceEnd",
+      "nodeId": 356,
+      "name": "BstNode_2446917667",
+      "className": "MakeFloaty",
+      "classIndex": 39,
+      "sourceOffset": 85281,
+      "sourceLength": 89,
+      "sourceSha256": "fa5badc0c183dd3b82ee8df2abba4e0b26cf438d4c0a731e19eca6c55aa9f3ca",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n356/p8",
+          "fieldName": "objects",
+          "target": "CandleSpaceEnd:n328",
+          "targetNodeId": 328,
+          "offset": 85366
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n541",
+      "level": "Night",
+      "nodeId": 541,
+      "name": "BstNode_34604364",
+      "className": "MakeFloaty",
+      "classIndex": 48,
+      "sourceOffset": 103450,
+      "sourceLength": 87,
+      "sourceSha256": "71a37b7ffe3f53c39878cdafb1a6b5f61a000b475ab4b0afe50e491e46cc6b7b",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n541/p8",
+          "fieldName": "objects",
+          "target": "Night:n662",
+          "targetNodeId": 662,
+          "offset": 103533
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1146",
+      "level": "Night",
+      "nodeId": 1146,
+      "name": "BstNode_34604017",
+      "className": "MakeFloaty",
+      "classIndex": 48,
+      "sourceOffset": 192634,
+      "sourceLength": 87,
+      "sourceSha256": "973990bf9a20bcd9517b843800c50903ce9aac63e0f2b0c96f998c0a43336df3",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1146/p6",
+          "fieldName": "pivot",
+          "target": "Night:n2916",
+          "targetNodeId": 2916,
+          "offset": 192712
+        },
+        {
+          "fieldId": "n1146/p8",
+          "fieldName": "objects",
+          "target": "Night:n2714",
+          "targetNodeId": 2714,
+          "offset": 192717
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1578",
+      "level": "Night",
+      "nodeId": 1578,
+      "name": "BstNode_2005",
+      "className": "MakeFloaty",
+      "classIndex": 48,
+      "sourceOffset": 246867,
+      "sourceLength": 83,
+      "sourceSha256": "e17f022eb8a7e5131d2e8aeb3ca7359eb5063fdbefc1610210bc56198bd11365",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1578/p6",
+          "fieldName": "pivot",
+          "target": "Night:n2739",
+          "targetNodeId": 2739,
+          "offset": 246941
+        },
+        {
+          "fieldId": "n1578/p8",
+          "fieldName": "objects",
+          "target": "Night:n2982",
+          "targetNodeId": 2982,
+          "offset": 246946
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1884",
+      "level": "Night",
+      "nodeId": 1884,
+      "name": "BstNode_480",
+      "className": "MakeFloaty",
+      "classIndex": 48,
+      "sourceOffset": 291812,
+      "sourceLength": 82,
+      "sourceSha256": "1d5eae6541a6efbf85274d161c0a10ddc1786b781f71ba86678a1f2b38164219",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1884/p6",
+          "fieldName": "pivot",
+          "target": "Night:n1486",
+          "targetNodeId": 1486,
+          "offset": 291885
+        },
+        {
+          "fieldId": "n1884/p8",
+          "fieldName": "objects",
+          "target": "Night:n1488",
+          "targetNodeId": 1488,
+          "offset": 291890
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n1956",
+      "level": "Night",
+      "nodeId": 1956,
+      "name": "BstNode_34603384",
+      "className": "MakeFloaty",
+      "classIndex": 48,
+      "sourceOffset": 302733,
+      "sourceLength": 87,
+      "sourceSha256": "c8d9839d2ecf717a072afe2c4b362f8a40b8ecb613319a92450fd1c42b706ab4",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1956/p8",
+          "fieldName": "objects",
+          "target": "Night:n1193",
+          "targetNodeId": 1193,
+          "offset": 302816
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n244",
+      "level": "RainEnd",
+      "nodeId": 244,
+      "name": "BstNode_2345992577",
+      "className": "MakeFloaty",
+      "classIndex": 40,
+      "sourceOffset": 87048,
+      "sourceLength": 89,
+      "sourceSha256": "f1591a0bd75b0f1824051d350236e32b5dc89c714b1f5d20a40250280253558b",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n244/p6",
+          "fieldName": "pivot",
+          "target": "RainEnd:n1595",
+          "targetNodeId": 1595,
+          "offset": 87128
+        },
+        {
+          "fieldId": "n244/p8",
+          "fieldName": "objects",
+          "target": "RainEnd:n1712",
+          "targetNodeId": 1712,
+          "offset": 87133
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n984",
+      "level": "RainEnd",
+      "nodeId": 984,
+      "name": "BstNode_2345992772",
+      "className": "MakeFloaty",
+      "classIndex": 40,
+      "sourceOffset": 261390,
+      "sourceLength": 89,
+      "sourceSha256": "b0b18c9ba2351cdde96b2022c30f5fcdb25929d84e18476c644e87d089f349c0",
+      "declaredFieldCount": 9,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n984/p6",
+          "fieldName": "pivot",
+          "target": "RainEnd:n1370",
+          "targetNodeId": 1370,
+          "offset": 261470
+        },
+        {
+          "fieldId": "n984/p8",
+          "fieldName": "objects",
+          "target": "RainEnd:n1833",
+          "targetNodeId": 1833,
+          "offset": 261475
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "CandleSpace",
+      "path": "Levels/CandleSpace/Objects.level.bin",
+      "sha256": "db7140d2dd5ee9cd2fcdcbb61a898b9facf1683ff21fec83fcbef81b885f56db",
+      "bytes": 92607,
+      "nodes": 564,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/CandleSpace.json",
+      "markdown": "Objects对象清单/CandleSpace.md"
+    },
+    {
+      "level": "CandleSpaceEnd",
+      "path": "Levels/CandleSpaceEnd/Objects.level.bin",
+      "sha256": "d42c3e1f85fb9dcc75d903911a1e91e6e061d017ae47f809caf4375505071352",
+      "bytes": 131707,
+      "nodes": 852,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/CandleSpaceEnd.json",
+      "markdown": "Objects对象清单/CandleSpaceEnd.md"
+    },
+    {
+      "level": "Night",
+      "path": "Levels/Night/Objects.level.bin",
+      "sha256": "6ce612c9efb82834d648de81251033b341a44f4d9374d8338d868575aab6a723",
+      "bytes": 499756,
+      "nodes": 3719,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Night.json",
+      "markdown": "Objects对象清单/Night.md"
+    },
+    {
+      "level": "RainEnd",
+      "path": "Levels/RainEnd/Objects.level.bin",
+      "sha256": "247912ec955153e3df80c16a861eb872573502a285a17943518bdce448a8d5e3",
+      "bytes": 427926,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainEnd.json",
+      "markdown": "Objects对象清单/RainEnd.md"
+    }
+  ]
+}

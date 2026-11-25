@@ -1,0 +1,1566 @@
+{
+  "scope": "Coverage of actual serialized BstBaked.meshes records, byte preservation and known verification reports. Parsing covers the full LOD0 payload. All 33 levels have zero-length serialized terrain collision blocks; original runtime collision building/query is not recovered. Some patch/occluder semantics remain unresolved. This is not a complete native function inventory or completion percentage.",
+  "priority": "BstBaked.meshes rendering first; editing, topology/collision rebuilding and new baking indefinitely stopped by user",
+  "renderFunctionInventory": {
+    "report": "docs/meshes-render-functions.json",
+    "established": true,
+    "nativeAddressIndexComplete": true,
+    "renderReachabilityComplete": false,
+    "stats": {
+      "nativeFunctionsIndexed": 54121,
+      "renderRoots": 305,
+      "directDependencyFunctions": 399,
+      "unexpandedDependencyBodies": 342,
+      "unresolvedIndirectSites": 356,
+      "incompleteDisassemblies": 7,
+      "renderStages": 20,
+      "stagesWithImplementation": 18
+    }
+  },
+  "totals": {
+    "levels": 33,
+    "compressedBytes": 139613809,
+    "decompressedBytes": 189997299,
+    "bakeRecords": 10653,
+    "bakeLODs": 11311,
+    "preservedCollisionBytes": 0,
+    "terrainPatches": 96309,
+    "cloudBlocks": 399839,
+    "geometry": {
+      "terrain": {
+        "records": 77,
+        "vertices": 1679808,
+        "triangles": 3274619
+      },
+      "cloud": {
+        "records": 27,
+        "vertices": 201960,
+        "triangles": 405017
+      },
+      "skirt": {
+        "records": 2533,
+        "vertices": 363788,
+        "triangles": 446524
+      },
+      "occluder": {
+        "records": 33,
+        "vertices": 190987,
+        "triangles": 381355
+      }
+    },
+    "byteIdenticalUnchangedSerialization": true,
+    "directoryTags": [
+      "LOD0"
+    ]
+  },
+  "majorRemainingAreas": [
+    {
+      "area": "Original material and lighting runtime",
+      "remaining": "Original terrain/skirt GLSL, actual textures and packed attributes draw in the viewport, with recovered shader time and texture drift. Full EnvironmentForces wind field, scene-hit probes, point lights/shadows, model shaders, startup/camera and original compositor/Tonemap remain.",
+      "evidence": [
+        "meshes-oracle.json",
+        "vulkan-gpu.json",
+        "viewport-terrain-maps-check.json",
+        "material-dynamics-oracle.json",
+        "material-gradient-check.json",
+        "material-gradient-ideal-sampler-failure.json",
+        "material-animation-smoke.json"
+      ]
+    },
+    {
+      "area": "Cloud composition and temporal history",
+      "remaining": "Avatar/model automatic emission state and game RNG, full source preparation/interaction forces, original registration order, real Visibility occlusion classification/buffers and full wind field, opaque scene depth production, actual water/blue noise and history/reprojection, viewport integration, original Metal boundary interpolation/intrinsic/contraction and half overflow acceptance. CloudCard quarter-acos/28-byte dynamic streams using actual TGCL alphaMult and CloudBarn world move/scroll are recovered, including native byte and real-card GPU checks. Complete insertion/reset/model emission helpers and physics-sphere append pass 424 native cases, nearest-three selection passes 593 cases and integration passes 400 cases. Particle lifetime ring, 32-byte post-physics packing and original signed-depth uint16 permutations are also recovered; model state/random stream and preceding force inputs remain explicit. A snapshot runtime chains queue consumption, lifetime, integration, packing and sorting without default forces. Native target descriptors/sizes/formats and earlier opaque CloudCore read are recovered; nine cloud/depth AIR runtime programs and three-pass native depth IPC are implemented, with same-pass fine + explicit ordered CloudCard/particle batch IPC and original CloudCard world sphere/overlap components, exact original group/distance permutations, shared index offsets, six normalized frustum planes, sphere tests and original unstable status compaction connected to distance draw queue IPC. Visibility classification statuses and stored CPU frustum matrix are explicit inputs; the external classifier is excluded from the passing oracle. True half pass RTE reference remains failed; current llvmpipe RTZ reproduction is exact but original Metal conversion is unverified. Two-level cloud and connected depth/cloud fixtures pass; quarter sampling is exact with captured Vulkan UV while independent CPU raster has boundary differences.",
+      "evidence": [
+        "cloud-particle-emission-oracle.json",
+        "cloud-particle-selection-oracle.json",
+        "cloud-particle-physics-oracle.json",
+        "cloud-card-dynamic-oracle.json",
+        "cloud-card-dynamic-gpu-check.json",
+        "cloud-wind-oracle.json",
+        "cloud-particle-life-oracle.json",
+        "cloud-particle-pack-oracle.json",
+        "cloud-particle-sort-oracle.json",
+        "cloud-card-visibility-evidence.json",
+        "cloud-card-visibility-oracle.json",
+        "cloud-card-visibility-ipc-check.json",
+        "cloud-card-sort-oracle.json",
+        "cloud-card-index-oracle.json",
+        "cloud-card-draw-oracle.json",
+        "cloud-card-plan-ipc-check.json",
+        "cloud-card-layout-oracle.json",
+        "cloud-pass-ipc-check.json",
+        "cloud-card-air-check.json",
+        "cloud-card-carry-air-check.json",
+        "cloud-blend-check.json",
+        "cloud-pass-check.json",
+        "vulkan-blend-rounding-check.json",
+        "cloud-air-vulkan-check.json",
+        "cloud-air-graph-check.json",
+        "cloud-air-graph-carry-check.json",
+        "cloud-depth-graph-check.json",
+        "cloud-depth-air-check.json",
+        "cloud-depth-sampling-check.json",
+        "cloud-depth-ipc-check.json",
+        "cloud-render-graph.json",
+        "cloud-sampler-check.json",
+        "vulkan-target-formats.json",
+        "vulkan-half-fma-check.json",
+        "vulkan-half-check.json",
+        "cloud-vulkan-gpu.json"
+      ]
+    },
+    {
+      "area": "Terrain visibility and LOD",
+      "remaining": "Patch flags, visibility Jobs, LOD budgets, tessellation and native shader handles/sort scheduling",
+      "evidence": [
+        "meshes-render-state.json"
+      ]
+    },
+    {
+      "area": "Terrain topology and collision rebuilding",
+      "remaining": "Tree decoding/query/rebuild, changed bounds/grids, edge topology generation and game interaction",
+      "developmentStatus": "indefinitely stopped by user; excluded from current rendering work"
+    },
+    {
+      "area": "New skirt geometry game integration",
+      "remaining": "Native lighting, boundary updates, collision and original-game loading acceptance",
+      "developmentStatus": "indefinitely stopped by user; excluded from current rendering work"
+    },
+    {
+      "area": "Native baking and cloud editing",
+      "remaining": "Bake generation, changed cloud sparse fields/proxy/lighting/collision rebuilt together",
+      "developmentStatus": "indefinitely stopped by user; excluded from current rendering work"
+    },
+    {
+      "area": "Occluder runtime",
+      "remaining": "Four-byte vertex payload semantics, culling/occlusion submission and runtime behavior"
+    },
+    {
+      "area": "Target acceptance",
+      "remaining": "Windows GPU and full original game image/loading/edit-save comparisons"
+    }
+  ],
+  "functionInventoryComplete": false,
+  "completionPercentage": null,
+  "levels": [
+    {
+      "name": "CandleSpace",
+      "sha256": "bbbcb49a5b779297316d968fc0750b9df2b4616cb8c66c889310d90bf977f2fa",
+      "version": 52,
+      "compressedBytes": 234956,
+      "decompressedBytes": 353404,
+      "byteIdenticalUnchangedSerialization": true,
+      "directory": [
+        {
+          "tag": "LOD0",
+          "offset": 132,
+          "length": 234824
+        }
+      ],
+      "bakeRecords": 88,
+      "bakeLODs": 89,
+      "geometry": {
+        "terrain": {
+          "records": 0,
+          "vertices": 0,
+          "triangles": 0
+        },
+        "cloud": {
+          "records": 1,
+          "vertices": 137,
+          "triangles": 270
+        },
+        "skirt": {
+          "records": 0,
+          "vertices": 0,
+          "triangles": 0
+        },
+        "occluder": {
+          "records": 1,
+          "vertices": 137,
+          "triangles": 270
+        }
+      },
+      "preservedCollisionBytes": 0,
+      "terrainPatches": 0,
+      "cloudBlocks": 149,
+      "cloudCompressedFieldsBytes": 6507
+    },
+    {
+      "name": "CandleSpaceEnd",
+      "sha256": "7ad85502465b41ef7f79e2e40c4a033471942ee6b70f4605f282ea5a5d5859f9",
+      "version": 52,
+      "compressedBytes": 4404779,
+      "decompressedBytes": 6051355,
+      "byteIdenticalUnchangedSerialization": true,
+      "directory": [
+        {
+          "tag": "LOD0",
+          "offset": 132,
+          "length": 4404647
+        }
+      ],
+      "bakeRecords": 148,
+      "bakeLODs": 148,
+      "geometry": {
+        "terrain": {
+          "records": 1,
+          "vertices": 63900,
+          "triangles": 128094
+        },
+        "cloud": {
+          "records": 0,
+          "vertices": 0,
+          "triangles": 0
+        },
+        "skirt": {
+          "records": 0,
+          "vertices": 0,
+          "triangles": 0
+        },
+        "occluder": {
+          "records": 1,
+          "vertices": 5911,
+          "triangles": 12018
+        }
+      },
+      "preservedCollisionBytes": 0,
+      "terrainPatches": 0,
+      "cloudBlocks": 0,
+      "cloudCompressedFieldsBytes": 0
+    },
+    {
+      "name": "CarryLand",
+      "sha256": "01b0116ccb43691044f74d20e776d4579884526c2380afd28752b0a36424e18a",
+      "version": 52,
+      "compressedBytes": 2438888,
+      "decompressedBytes": 3563500,
+      "byteIdenticalUnchangedSerialization": true,
+      "directory": [
+        {
+          "tag": "LOD0",
+          "offset": 132,
+          "length": 2438756
+        }
+      ],
+      "bakeRecords": 60,
+      "bakeLODs": 60,
+      "geometry": {
+        "terrain": {
+          "records": 1,
+          "vertices": 64189,
+          "triangles": 128363
+        },
+        "cloud": {
+          "records": 1,
+          "vertices": 430,
+          "triangles": 856
+        },
+        "skirt": {
+          "records": 0,
+          "vertices": 0,
+          "triangles": 0
+        },
+        "occluder": {
+          "records": 1,
+          "vertices": 6031,
+          "triangles": 12058
+        }
+      },
+      "preservedCollisionBytes": 0,
+      "terrainPatches": 263,
+      "cloudBlocks": 472,
+      "cloudCompressedFieldsBytes": 20777
+    },
+    {
+      "name": "CarryLand2",
+      "sha256": "d8aeb8f8e90b1a5856440c70f3f6285c636cdbfe8c03cb5dccaf14fe6dff8861",
+      "version": 52,
+      "compressedBytes": 2819888,
+      "decompressedBytes": 4144034,
+      "byteIdenticalUnchangedSerialization": true,
+      "directory": [
+        {
+          "tag": "LOD0",
+          "offset": 132,
+          "length": 2819756
+        }
+      ],
+      "bakeRecords": 151,
+      "bakeLODs": 151,
+      "geometry": {
+        "terrain": {
+          "records": 1,
+          "vertices": 63971,
+          "triangles": 127840
+        },
+        "cloud": {
+          "records": 1,
+          "vertices": 431,
+          "triangles": 858
+        },
+        "skirt": {
+          "records": 0,
+          "vertices": 0,
+          "triangles": 0
+        },
+        "occluder": {
+          "records": 1,
+          "vertices": 6080,
+          "triangles": 12154
+        }
+      },
+      "preservedCollisionBytes": 0,
+      "terrainPatches": 263,
+      "cloudBlocks": 472,
+      "cloudCompressedFieldsBytes": 20814
+    },
+    {
+      "name": "CarryLand3",
+      "sha256": "ce366f9e5eca8dd0677be6719f5a5b94338278e8da559e19df64c3dc9c521259",
+      "version": 52,
+      "compressedBytes": 2296610,
+      "decompressedBytes": 3363730,
+      "byteIdenticalUnchangedSerialization": true,
+      "directory": [
+        {
+          "tag": "LOD0",
+          "offset": 132,
+          "length": 2296478
+        }
+      ],
+      "bakeRecords": 10,
+      "bakeLODs": 10,
+      "geometry": {
+        "terrain": {
+          "records": 1,
+          "vertices": 63761,
+          "triangles": 127451
+        },
+        "cloud": {
+          "records": 1,
+          "vertices": 1100,
+          "triangles": 2196
+        },
+        "skirt": {
+          "records": 0,
+          "vertices": 0,
+          "triangles": 0
+        },
+        "occluder": {
+          "records": 1,
+          "vertices": 6054,
+          "triangles": 12100
+        }
+      },
+      "preservedCollisionBytes": 0,
+      "terrainPatches": 68,
+      "cloudBlocks": 1148,
+      "cloudCompressedFieldsBytes": 47271
+    },
+    {
+      "name": "Dawn",
+      "sha256": "309bdcf43bcb8c1a8257c2492e103bb694e42193ff72b843e36e07d913311920",
+      "version": 52,
+      "compressedBytes": 5261976,
+      "decompressedBytes": 6389281,
+      "byteIdenticalUnchangedSerialization": true,
+      "directory": [
+        {
+          "tag": "LOD0",
+          "offset": 132,
+          "length": 5261844
+        }
+      ],
+      "bakeRecords": 402,
+      "bakeLODs": 504,
+      "geometry": {
+        "terrain": {
+          "records": 2,
+          "vertices": 22420,
+          "triangles": 44487
+        },
+        "cloud": {
+          "records": 1,
+          "vertices": 12349,
+          "triangles": 24781
+        },
+        "skirt": {
+          "records": 147,
+          "vertices": 23569,
+          "triangles": 29115
+        },
+        "occluder": {
+          "records": 1,
+          "vertices": 6051,
+          "triangles": 12103
+        }
+      },
+      "preservedCollisionBytes": 0,
+      "terrainPatches": 889,
+      "cloudBlocks": 6361,
+      "cloudCompressedFieldsBytes": 2492496
+    },
+    {
+      "name": "DayEnd",
+      "sha256": "c8b8fe87278520100b22f51cf677cb068681867ea62715815f33fc3d5eecefe7",
+      "version": 52,
+      "compressedBytes": 3249275,
+      "decompressedBytes": 4169696,
+      "byteIdenticalUnchangedSerialization": true,
+      "directory": [
+        {
+          "tag": "LOD0",
+          "offset": 132,
+          "length": 3249143
+        }
+      ],
+      "bakeRecords": 356,
+      "bakeLODs": 392,
+      "geometry": {
+        "terrain": {
+          "records": 2,
+          "vertices": 13587,
+          "triangles": 26128
+        },
+        "cloud": {
+          "records": 1,
+          "vertices": 1808,
+          "triangles": 3617
+        },
+        "skirt": {
+          "records": 154,
+          "vertices": 19845,
+          "triangles": 25500
+        },
+        "occluder": {
+          "records": 1,
+          "vertices": 6100,
+          "triangles": 12167
+        }
+      },
+      "preservedCollisionBytes": 0,
+      "terrainPatches": 622,
+      "cloudBlocks": 3576,
+      "cloudCompressedFieldsBytes": 1211335
+    },
+    {
+      "name": "DayHubCave",
+      "sha256": "de96a8fa373bf29da316e2003376d2542d7b8b01356bbb9ea89acfa9f4058b52",
+      "version": 52,
+      "compressedBytes": 4657690,
+      "decompressedBytes": 5544295,
+      "byteIdenticalUnchangedSerialization": true,
+      "directory": [
+        {
+          "tag": "LOD0",
+          "offset": 132,
+          "length": 4657558
+        }
+      ],
+      "bakeRecords": 232,
+      "bakeLODs": 279,
+      "geometry": {
+        "terrain": {
+          "records": 1,
+          "vertices": 39001,
+          "triangles": 74827
+        },
+        "cloud": {
+          "records": 1,
+          "vertices": 11936,
+          "triangles": 23860
+        },
+        "skirt": {
+          "records": 14,
+          "vertices": 1852,
+          "triangles": 2117
+        },
+        "occluder": {
+          "records": 1,
+          "vertices": 6076,
+          "triangles": 12138
+        }
+      },
+      "preservedCollisionBytes": 0,
+      "terrainPatches": 423,
+      "cloudBlocks": 4602,
+      "cloudCompressedFieldsBytes": 1723644
+    },
+    {
+      "name": "Dusk",
+      "sha256": "7ee4233606e0ff96dcc36e2c2a7ebc3798c41ba70a1e3a2dc0fe00f2a920c712",
+      "version": 52,
+      "compressedBytes": 4870728,
+      "decompressedBytes": 6396010,
+      "byteIdenticalUnchangedSerialization": true,
+      "directory": [
+        {
+          "tag": "LOD0",
+          "offset": 132,
+          "length": 4870596
+        }
+      ],
+      "bakeRecords": 514,
+      "bakeLODs": 521,
+      "geometry": {
+        "terrain": {
+          "records": 2,
+          "vertices": 41604,
+          "triangles": 80106
+        },
+        "cloud": {
+          "records": 1,
+          "vertices": 8574,
+          "triangles": 17204
+        },
+        "skirt": {
+          "records": 114,
+          "vertices": 13063,
+          "triangles": 14185
+        },
+        "occluder": {
+          "records": 1,
+          "vertices": 5971,
+          "triangles": 11988
+        }
+      },
+      "preservedCollisionBytes": 0,
+      "terrainPatches": 9039,
+      "cloudBlocks": 37978,
+      "cloudCompressedFieldsBytes": 1362048
+    },
+    {
+      "name": "DuskGraveyard",
+      "sha256": "2bce2741af8220995f812de4764ea39473692fcb80677326a923fd50e794166a",
+      "version": 52,
+      "compressedBytes": 6220714,
+      "decompressedBytes": 8314331,
+      "byteIdenticalUnchangedSerialization": true,
+      "directory": [
+        {
+          "tag": "LOD0",
+          "offset": 132,
+          "length": 6220582
+        }
+      ],
+      "bakeRecords": 492,
+      "bakeLODs": 512,
+      "geometry": {
+        "terrain": {
+          "records": 2,
+          "vertices": 84908,
+          "triangles": 164800
+        },
+        "cloud": {
+          "records": 0,
+          "vertices": 0,
+          "triangles": 0
+        },
+        "skirt": {
+          "records": 219,
+          "vertices": 36520,
+          "triangles": 39879
+        },
+        "occluder": {
+          "records": 1,
+          "vertices": 6016,
+          "triangles": 12077
+        }
+      },
+      "preservedCollisionBytes": 0,
+      "terrainPatches": 10416,
+      "cloudBlocks": 0,
+      "cloudCompressedFieldsBytes": 0
+    },
+    {
+      "name": "DuskMid",
+      "sha256": "48b95b98a8f40c3eae7d30726af907450eb961be78074a637efae42ab3d3cb6a",
+      "version": 52,
+      "compressedBytes": 4207779,
+      "decompressedBytes": 5901594,
+      "byteIdenticalUnchangedSerialization": true,
+      "directory": [
+        {
+          "tag": "LOD0",
+          "offset": 132,
+          "length": 4207647
+        }
+      ],
+      "bakeRecords": 321,
+      "bakeLODs": 321,
+      "geometry": {
+        "terrain": {
+          "records": 3,
+          "vertices": 27563,
+          "triangles": 53390
+        },
+        "cloud": {
+          "records": 1,
+          "vertices": 12684,
+          "triangles": 25484
+        },
+        "skirt": {
+          "records": 77,
+          "vertices": 8237,
+          "triangles": 9704
+        },
+        "occluder": {
+          "records": 1,
+          "vertices": 5939,
+          "triangles": 11922
+        }
+      },
+      "preservedCollisionBytes": 0,
+      "terrainPatches": 16659,
+      "cloudBlocks": 32259,
+      "cloudCompressedFieldsBytes": 1247046
+    },
+    {
+      "name": "Dusk_CrabField",
+      "sha256": "b6109bf48e6a6b1aea08498cab6c532e9c06823315156ecf06f4fd29038f9893",
+      "version": 52,
+      "compressedBytes": 6055035,
+      "decompressedBytes": 7902683,
+      "byteIdenticalUnchangedSerialization": true,
+      "directory": [
+        {
+          "tag": "LOD0",
+          "offset": 132,
+          "length": 6054903
+        }
+      ],
+      "bakeRecords": 547,
+      "bakeLODs": 547,
+      "geometry": {
+        "terrain": {
+          "records": 4,
+          "vertices": 78358,
+          "triangles": 152847
+        },
+        "cloud": {
+          "records": 1,
+          "vertices": 12331,
+          "triangles": 24730
+        },
+        "skirt": {
+          "records": 64,
+          "vertices": 6849,
+          "triangles": 7662
+        },
+        "occluder": {
+          "records": 1,
+          "vertices": 5988,
+          "triangles": 11983
+        }
+      },
+      "preservedCollisionBytes": 0,
+      "terrainPatches": 5112,
+      "cloudBlocks": 37473,
+      "cloudCompressedFieldsBytes": 1451312
+    },
+    {
+      "name": "HubReveal",
+      "sha256": "ec5607653fca16a6409ba2fedc2efc0ba6d345f69ba4ed81e9039754e2ebd877",
+      "version": 52,
+      "compressedBytes": 5189321,
+      "decompressedBytes": 6693030,
+      "byteIdenticalUnchangedSerialization": true,
+      "directory": [
+        {
+          "tag": "LOD0",
+          "offset": 132,
+          "length": 5189189
+        }
+      ],
+      "bakeRecords": 172,
+      "bakeLODs": 184,
+      "geometry": {
+        "terrain": {
+          "records": 4,
+          "vertices": 47397,
+          "triangles": 92089
+        },
+        "cloud": {
+          "records": 1,
+          "vertices": 12494,
+          "triangles": 25364
+        },
+        "skirt": {
+          "records": 106,
+          "vertices": 13086,
+          "triangles": 19074
+        },
+        "occluder": {
+          "records": 1,
+          "vertices": 5872,
+          "triangles": 11891
+        }
+      },
+      "preservedCollisionBytes": 0,
+      "terrainPatches": 660,
+      "cloudBlocks": 32832,
+      "cloudCompressedFieldsBytes": 1513657
+    },
+    {
+      "name": "Night",
+      "sha256": "56eda539fffdb40e3fdd4da9730ed48d17696dcec2e4917b56fbf75dbf66acbf",
+      "version": 52,
+      "compressedBytes": 6269996,
+      "decompressedBytes": 10044117,
+      "byteIdenticalUnchangedSerialization": true,
+      "directory": [
+        {
+          "tag": "LOD0",
+          "offset": 132,
+          "length": 6269864
+        }
+      ],
+      "bakeRecords": 775,
+      "bakeLODs": 779,
+      "geometry": {
+        "terrain": {
+          "records": 1,
+          "vertices": 63424,
+          "triangles": 125264
+        },
+        "cloud": {
+          "records": 0,
+          "vertices": 0,
+          "triangles": 0
+        },
+        "skirt": {
+          "records": 35,
+          "vertices": 16818,
+          "triangles": 18546
+        },
+        "occluder": {
+          "records": 1,
+          "vertices": 5856,
+          "triangles": 11684
+        }
+      },
+      "preservedCollisionBytes": 0,
+      "terrainPatches": 3997,
+      "cloudBlocks": 0,
+      "cloudCompressedFieldsBytes": 0
+    },
+    {
+      "name": "NightEnd",
+      "sha256": "3e191c0f17400000b27200c7fd73b12e378d7ede11c3097ffcd828bbcad7709b",
+      "version": 52,
+      "compressedBytes": 3016236,
+      "decompressedBytes": 5237926,
+      "byteIdenticalUnchangedSerialization": true,
+      "directory": [
+        {
+          "tag": "LOD0",
+          "offset": 132,
+          "length": 3016104
+        }
+      ],
+      "bakeRecords": 100,
+      "bakeLODs": 100,
+      "geometry": {
+        "terrain": {
+          "records": 1,
+          "vertices": 63969,
+          "triangles": 126998
+        },
+        "cloud": {
+          "records": 0,
+          "vertices": 0,
+          "triangles": 0
+        },
+        "skirt": {
+          "records": 24,
+          "vertices": 6015,
+          "triangles": 7172
+        },
+        "occluder": {
+          "records": 1,
+          "vertices": 6142,
+          "triangles": 12272
+        }
+      },
+      "preservedCollisionBytes": 0,
+      "terrainPatches": 4898,
+      "cloudBlocks": 0,
+      "cloudCompressedFieldsBytes": 0
+    },
+    {
+      "name": "NightEntrance",
+      "sha256": "6e3c7cb631351bde967fa78c63a088f9a0a516fbdc66333473d22fc6973de68a",
+      "version": 52,
+      "compressedBytes": 3032552,
+      "decompressedBytes": 4818216,
+      "byteIdenticalUnchangedSerialization": true,
+      "directory": [
+        {
+          "tag": "LOD0",
+          "offset": 132,
+          "length": 3032420
+        }
+      ],
+      "bakeRecords": 179,
+      "bakeLODs": 180,
+      "geometry": {
+        "terrain": {
+          "records": 1,
+          "vertices": 43744,
+          "triangles": 85814
+        },
+        "cloud": {
+          "records": 0,
+          "vertices": 0,
+          "triangles": 0
+        },
+        "skirt": {
+          "records": 117,
+          "vertices": 22546,
+          "triangles": 25161
+        },
+        "occluder": {
+          "records": 1,
+          "vertices": 6027,
+          "triangles": 12062
+        }
+      },
+      "preservedCollisionBytes": 0,
+      "terrainPatches": 1228,
+      "cloudBlocks": 0,
+      "cloudCompressedFieldsBytes": 0
+    },
+    {
+      "name": "Prairie_ButterflyFields",
+      "sha256": "6713e6fff51ad20d1e92968d2a998db1beb59da7cd9d4f81586935f06854e247",
+      "version": 52,
+      "compressedBytes": 6198372,
+      "decompressedBytes": 7848103,
+      "byteIdenticalUnchangedSerialization": true,
+      "directory": [
+        {
+          "tag": "LOD0",
+          "offset": 132,
+          "length": 6198240
+        }
+      ],
+      "bakeRecords": 139,
+      "bakeLODs": 177,
+      "geometry": {
+        "terrain": {
+          "records": 6,
+          "vertices": 100901,
+          "triangles": 197260
+        },
+        "cloud": {
+          "records": 1,
+          "vertices": 12439,
+          "triangles": 24934
+        },
+        "skirt": {
+          "records": 44,
+          "vertices": 5683,
+          "triangles": 7805
+        },
+        "occluder": {
+          "records": 1,
+          "vertices": 6089,
+          "triangles": 12133
+        }
+      },
+      "preservedCollisionBytes": 0,
+      "terrainPatches": 2261,
+      "cloudBlocks": 26623,
+      "cloudCompressedFieldsBytes": 1217670
+    },
+    {
+      "name": "Prairie_Cave",
+      "sha256": "eab1b6359cee5308851234b5f4022819f4d3afc7f805667a1875e5d6b7d86919",
+      "version": 52,
+      "compressedBytes": 5300883,
+      "decompressedBytes": 7409297,
+      "byteIdenticalUnchangedSerialization": true,
+      "directory": [
+        {
+          "tag": "LOD0",
+          "offset": 132,
+          "length": 5300751
+        }
+      ],
+      "bakeRecords": 360,
+      "bakeLODs": 391,
+      "geometry": {
+        "terrain": {
+          "records": 4,
+          "vertices": 57221,
+          "triangles": 110090
+        },
+        "cloud": {
+          "records": 1,
+          "vertices": 8657,
+          "triangles": 17306
+        },
+        "skirt": {
+          "records": 243,
+          "vertices": 23688,
+          "triangles": 33195
+        },
+        "occluder": {
+          "records": 1,
+          "vertices": 6072,
+          "triangles": 12180
+        }
+      },
+      "preservedCollisionBytes": 0,
+      "terrainPatches": 4151,
+      "cloudBlocks": 17340,
+      "cloudCompressedFieldsBytes": 842400
+    },
+    {
+      "name": "Prairie_NestAndKeeper",
+      "sha256": "874269e9e9a319d642121f3bda83daf340f589e89cf606965ca5680895e1681c",
+      "version": 52,
+      "compressedBytes": 3929077,
+      "decompressedBytes": 4882583,
+      "byteIdenticalUnchangedSerialization": true,
+      "directory": [
+        {
+          "tag": "LOD0",
+          "offset": 132,
+          "length": 3928945
+        }
+      ],
+      "bakeRecords": 159,
+      "bakeLODs": 192,
+      "geometry": {
+        "terrain": {
+          "records": 3,
+          "vertices": 41580,
+          "triangles": 81331
+        },
+        "cloud": {
+          "records": 1,
+          "vertices": 12407,
+          "triangles": 24843
+        },
+        "skirt": {
+          "records": 56,
+          "vertices": 7716,
+          "triangles": 10615
+        },
+        "occluder": {
+          "records": 1,
+          "vertices": 6051,
+          "triangles": 12050
+        }
+      },
+      "preservedCollisionBytes": 0,
+      "terrainPatches": 278,
+      "cloudBlocks": 14949,
+      "cloudCompressedFieldsBytes": 743445
+    },
+    {
+      "name": "Prairie_Village",
+      "sha256": "4bda4473b2714961ad69c65a8834faf312d267b9b51d47b20bfd7894844f621d",
+      "version": 52,
+      "compressedBytes": 6225272,
+      "decompressedBytes": 7999424,
+      "byteIdenticalUnchangedSerialization": true,
+      "directory": [
+        {
+          "tag": "LOD0",
+          "offset": 132,
+          "length": 6225140
+        }
+      ],
+      "bakeRecords": 476,
+      "bakeLODs": 510,
+      "geometry": {
+        "terrain": {
+          "records": 4,
+          "vertices": 68663,
+          "triangles": 133497
+        },
+        "cloud": {
+          "records": 1,
+          "vertices": 11412,
+          "triangles": 22903
+        },
+        "skirt": {
+          "records": 164,
+          "vertices": 18215,
+          "triangles": 23830
+        },
+        "occluder": {
+          "records": 1,
+          "vertices": 6098,
+          "triangles": 12208
+        }
+      },
+      "preservedCollisionBytes": 0,
+      "terrainPatches": 2725,
+      "cloudBlocks": 24359,
+      "cloudCompressedFieldsBytes": 1198617
+    },
+    {
+      "name": "Rain",
+      "sha256": "e7572d72ee4240d250f7fa3e2866210042d570d743923498bd5a0008431218ed",
+      "version": 52,
+      "compressedBytes": 4151858,
+      "decompressedBytes": 5523385,
+      "byteIdenticalUnchangedSerialization": true,
+      "directory": [
+        {
+          "tag": "LOD0",
+          "offset": 132,
+          "length": 4151726
+        }
+      ],
+      "bakeRecords": 270,
+      "bakeLODs": 293,
+      "geometry": {
+        "terrain": {
+          "records": 2,
+          "vertices": 51956,
+          "triangles": 97884
+        },
+        "cloud": {
+          "records": 1,
+          "vertices": 12406,
+          "triangles": 24902
+        },
+        "skirt": {
+          "records": 119,
+          "vertices": 17061,
+          "triangles": 22602
+        },
+        "occluder": {
+          "records": 1,
+          "vertices": 6099,
+          "triangles": 11608
+        }
+      },
+      "preservedCollisionBytes": 0,
+      "terrainPatches": 1217,
+      "cloudBlocks": 5673,
+      "cloudCompressedFieldsBytes": 314863
+    },
+    {
+      "name": "RainEnd",
+      "sha256": "bf264ff5edb7d3a374c4c92740eae8f793c0188bd812ac45b26b45859d589189",
+      "version": 52,
+      "compressedBytes": 4726978,
+      "decompressedBytes": 6294913,
+      "byteIdenticalUnchangedSerialization": true,
+      "directory": [
+        {
+          "tag": "LOD0",
+          "offset": 132,
+          "length": 4726846
+        }
+      ],
+      "bakeRecords": 361,
+      "bakeLODs": 365,
+      "geometry": {
+        "terrain": {
+          "records": 3,
+          "vertices": 67139,
+          "triangles": 130762
+        },
+        "cloud": {
+          "records": 1,
+          "vertices": 1879,
+          "triangles": 3784
+        },
+        "skirt": {
+          "records": 21,
+          "vertices": 3201,
+          "triangles": 3719
+        },
+        "occluder": {
+          "records": 1,
+          "vertices": 6060,
+          "triangles": 12282
+        }
+      },
+      "preservedCollisionBytes": 0,
+      "terrainPatches": 1461,
+      "cloudBlocks": 2558,
+      "cloudCompressedFieldsBytes": 805882
+    },
+    {
+      "name": "RainForest",
+      "sha256": "37bd864127ff0d36fd32a5e83ec879ec0eed78c7d0ab4c6a67ad6b3a3c955999",
+      "version": 52,
+      "compressedBytes": 4251529,
+      "decompressedBytes": 5667660,
+      "byteIdenticalUnchangedSerialization": true,
+      "directory": [
+        {
+          "tag": "LOD0",
+          "offset": 132,
+          "length": 4251397
+        }
+      ],
+      "bakeRecords": 254,
+      "bakeLODs": 280,
+      "geometry": {
+        "terrain": {
+          "records": 2,
+          "vertices": 64615,
+          "triangles": 123014
+        },
+        "cloud": {
+          "records": 1,
+          "vertices": 5731,
+          "triangles": 11492
+        },
+        "skirt": {
+          "records": 106,
+          "vertices": 14688,
+          "triangles": 17112
+        },
+        "occluder": {
+          "records": 1,
+          "vertices": 10108,
+          "triangles": 19650
+        }
+      },
+      "preservedCollisionBytes": 0,
+      "terrainPatches": 2543,
+      "cloudBlocks": 2554,
+      "cloudCompressedFieldsBytes": 141823
+    },
+    {
+      "name": "RainMid",
+      "sha256": "b6f9d841343f6b7b900172ceb79b6f8851f7ea9fa9f00ab1f41641b02abe8fd2",
+      "version": 52,
+      "compressedBytes": 5537479,
+      "decompressedBytes": 7335071,
+      "byteIdenticalUnchangedSerialization": true,
+      "directory": [
+        {
+          "tag": "LOD0",
+          "offset": 132,
+          "length": 5537347
+        }
+      ],
+      "bakeRecords": 712,
+      "bakeLODs": 915,
+      "geometry": {
+        "terrain": {
+          "records": 2,
+          "vertices": 42017,
+          "triangles": 81148
+        },
+        "cloud": {
+          "records": 1,
+          "vertices": 3742,
+          "triangles": 7531
+        },
+        "skirt": {
+          "records": 151,
+          "vertices": 16559,
+          "triangles": 20451
+        },
+        "occluder": {
+          "records": 1,
+          "vertices": 6107,
+          "triangles": 12204
+        }
+      },
+      "preservedCollisionBytes": 0,
+      "terrainPatches": 3431,
+      "cloudBlocks": 31735,
+      "cloudCompressedFieldsBytes": 1150055
+    },
+    {
+      "name": "SkyHub2",
+      "sha256": "f3476d70eff88c830334562840cc03c10330892f6fe39d412e6e89d8d9d57c59",
+      "version": 52,
+      "compressedBytes": 4541507,
+      "decompressedBytes": 5788115,
+      "byteIdenticalUnchangedSerialization": true,
+      "directory": [
+        {
+          "tag": "LOD0",
+          "offset": 132,
+          "length": 4541375
+        }
+      ],
+      "bakeRecords": 397,
+      "bakeLODs": 429,
+      "geometry": {
+        "terrain": {
+          "records": 3,
+          "vertices": 33237,
+          "triangles": 62836
+        },
+        "cloud": {
+          "records": 1,
+          "vertices": 6654,
+          "triangles": 13388
+        },
+        "skirt": {
+          "records": 140,
+          "vertices": 23304,
+          "triangles": 33252
+        },
+        "occluder": {
+          "records": 1,
+          "vertices": 5923,
+          "triangles": 11882
+        }
+      },
+      "preservedCollisionBytes": 0,
+      "terrainPatches": 495,
+      "cloudBlocks": 12136,
+      "cloudCompressedFieldsBytes": 602051
+    },
+    {
+      "name": "Storm",
+      "sha256": "b9a74507b014c72a37eb71be8a15708e01f9456efbf1ce19399c2509c3c168a0",
+      "version": 52,
+      "compressedBytes": 5067346,
+      "decompressedBytes": 7023159,
+      "byteIdenticalUnchangedSerialization": true,
+      "directory": [
+        {
+          "tag": "LOD0",
+          "offset": 132,
+          "length": 5067214
+        }
+      ],
+      "bakeRecords": 663,
+      "bakeLODs": 664,
+      "geometry": {
+        "terrain": {
+          "records": 2,
+          "vertices": 64726,
+          "triangles": 126402
+        },
+        "cloud": {
+          "records": 1,
+          "vertices": 9178,
+          "triangles": 18370
+        },
+        "skirt": {
+          "records": 31,
+          "vertices": 8506,
+          "triangles": 13706
+        },
+        "occluder": {
+          "records": 1,
+          "vertices": 5987,
+          "triangles": 12032
+        }
+      },
+      "preservedCollisionBytes": 0,
+      "terrainPatches": 1191,
+      "cloudBlocks": 11508,
+      "cloudCompressedFieldsBytes": 582756
+    },
+    {
+      "name": "StormEnd",
+      "sha256": "afa18980075ce1f261a566a857403ffacf8f037d147e0f4686c758e62e5069b8",
+      "version": 52,
+      "compressedBytes": 6591339,
+      "decompressedBytes": 9475497,
+      "byteIdenticalUnchangedSerialization": true,
+      "directory": [
+        {
+          "tag": "LOD0",
+          "offset": 132,
+          "length": 6591207
+        }
+      ],
+      "bakeRecords": 474,
+      "bakeLODs": 475,
+      "geometry": {
+        "terrain": {
+          "records": 2,
+          "vertices": 100131,
+          "triangles": 194892
+        },
+        "cloud": {
+          "records": 1,
+          "vertices": 12676,
+          "triangles": 25352
+        },
+        "skirt": {
+          "records": 7,
+          "vertices": 1094,
+          "triangles": 1380
+        },
+        "occluder": {
+          "records": 1,
+          "vertices": 5923,
+          "triangles": 11834
+        }
+      },
+      "preservedCollisionBytes": 0,
+      "terrainPatches": 1368,
+      "cloudBlocks": 34128,
+      "cloudCompressedFieldsBytes": 978629
+    },
+    {
+      "name": "Sunset",
+      "sha256": "aa4c89745a59c85580a10f5dbf4380e03700e71d7337f64762be5ac58274cf1b",
+      "version": 52,
+      "compressedBytes": 4676445,
+      "decompressedBytes": 6238470,
+      "byteIdenticalUnchangedSerialization": true,
+      "directory": [
+        {
+          "tag": "LOD0",
+          "offset": 132,
+          "length": 4676313
+        }
+      ],
+      "bakeRecords": 416,
+      "bakeLODs": 417,
+      "geometry": {
+        "terrain": {
+          "records": 3,
+          "vertices": 50742,
+          "triangles": 97830
+        },
+        "cloud": {
+          "records": 1,
+          "vertices": 8447,
+          "triangles": 16871
+        },
+        "skirt": {
+          "records": 70,
+          "vertices": 10428,
+          "triangles": 11476
+        },
+        "occluder": {
+          "records": 1,
+          "vertices": 6043,
+          "triangles": 12082
+        }
+      },
+      "preservedCollisionBytes": 0,
+      "terrainPatches": 9008,
+      "cloudBlocks": 19843,
+      "cloudCompressedFieldsBytes": 858393
+    },
+    {
+      "name": "SunsetEnd",
+      "sha256": "1238a968f8bb14d9d3d07e1d313b65bd182d3cd3aec45ee3d9acff5e2f543c8c",
+      "version": 52,
+      "compressedBytes": 4107726,
+      "decompressedBytes": 5705169,
+      "byteIdenticalUnchangedSerialization": true,
+      "directory": [
+        {
+          "tag": "LOD0",
+          "offset": 132,
+          "length": 4107594
+        }
+      ],
+      "bakeRecords": 702,
+      "bakeLODs": 702,
+      "geometry": {
+        "terrain": {
+          "records": 4,
+          "vertices": 33991,
+          "triangles": 63921
+        },
+        "cloud": {
+          "records": 1,
+          "vertices": 5795,
+          "triangles": 11586
+        },
+        "skirt": {
+          "records": 113,
+          "vertices": 10057,
+          "triangles": 10414
+        },
+        "occluder": {
+          "records": 1,
+          "vertices": 6055,
+          "triangles": 12085
+        }
+      },
+      "preservedCollisionBytes": 0,
+      "terrainPatches": 3963,
+      "cloudBlocks": 20026,
+      "cloudCompressedFieldsBytes": 749716
+    },
+    {
+      "name": "SunsetEnd2",
+      "sha256": "c2609161eceacf847b800334580494bf76dfde5b3690e6dba4b9ac9d18a485e7",
+      "version": 52,
+      "compressedBytes": 2222600,
+      "decompressedBytes": 3146786,
+      "byteIdenticalUnchangedSerialization": true,
+      "directory": [
+        {
+          "tag": "LOD0",
+          "offset": 132,
+          "length": 2222468
+        }
+      ],
+      "bakeRecords": 248,
+      "bakeLODs": 249,
+      "geometry": {
+        "terrain": {
+          "records": 3,
+          "vertices": 26118,
+          "triangles": 51392
+        },
+        "cloud": {
+          "records": 1,
+          "vertices": 919,
+          "triangles": 1839
+        },
+        "skirt": {
+          "records": 18,
+          "vertices": 2583,
+          "triangles": 3001
+        },
+        "occluder": {
+          "records": 1,
+          "vertices": 5900,
+          "triangles": 11805
+        }
+      },
+      "preservedCollisionBytes": 0,
+      "terrainPatches": 135,
+      "cloudBlocks": 3002,
+      "cloudCompressedFieldsBytes": 138902
+    },
+    {
+      "name": "SunsetRace",
+      "sha256": "255dcdf04ceef8ad4740b5ba82c2f420569eefec36051e8242e9a95e52e1b361",
+      "version": 52,
+      "compressedBytes": 5755164,
+      "decompressedBytes": 8102108,
+      "byteIdenticalUnchangedSerialization": true,
+      "directory": [
+        {
+          "tag": "LOD0",
+          "offset": 132,
+          "length": 5755032
+        }
+      ],
+      "bakeRecords": 470,
+      "bakeLODs": 470,
+      "geometry": {
+        "terrain": {
+          "records": 6,
+          "vertices": 70633,
+          "triangles": 135184
+        },
+        "cloud": {
+          "records": 1,
+          "vertices": 2910,
+          "triangles": 5812
+        },
+        "skirt": {
+          "records": 177,
+          "vertices": 31933,
+          "triangles": 35081
+        },
+        "occluder": {
+          "records": 1,
+          "vertices": 6094,
+          "triangles": 12210
+        }
+      },
+      "preservedCollisionBytes": 0,
+      "terrainPatches": 7525,
+      "cloudBlocks": 1557,
+      "cloudCompressedFieldsBytes": 88437
+    },
+    {
+      "name": "TitleWater",
+      "sha256": "9a06e5a5d4aff85bb2ddcaa4b1f7c1e2be248cd2b2d252404873cbbab551ab17",
+      "version": 52,
+      "compressedBytes": 2103662,
+      "decompressedBytes": 2670329,
+      "byteIdenticalUnchangedSerialization": true,
+      "directory": [
+        {
+          "tag": "LOD0",
+          "offset": 132,
+          "length": 2103530
+        }
+      ],
+      "bakeRecords": 5,
+      "bakeLODs": 5,
+      "geometry": {
+        "terrain": {
+          "records": 1,
+          "vertices": 24342,
+          "triangles": 48678
+        },
+        "cloud": {
+          "records": 1,
+          "vertices": 12434,
+          "triangles": 24884
+        },
+        "skirt": {
+          "records": 2,
+          "vertices": 672,
+          "triangles": 770
+        },
+        "occluder": {
+          "records": 1,
+          "vertices": 6127,
+          "triangles": 12223
+        }
+      },
+      "preservedCollisionBytes": 0,
+      "terrainPatches": 20,
+      "cloudBlocks": 14526,
+      "cloudCompressedFieldsBytes": 638815
+    },
+    {
+      "name": "WorldEmpty",
+      "sha256": "fed40a4aa38016626f1a288eb95948e401805973c6fd2e98b08fb80ebe9955f9",
+      "version": 51,
+      "compressedBytes": 149,
+      "decompressedBytes": 28,
+      "byteIdenticalUnchangedSerialization": true,
+      "directory": [
+        {
+          "tag": "LOD0",
+          "offset": 132,
+          "length": 17
+        }
+      ],
+      "bakeRecords": 0,
+      "bakeLODs": 0,
+      "geometry": {
+        "terrain": {
+          "records": 0,
+          "vertices": 0,
+          "triangles": 0
+        },
+        "cloud": {
+          "records": 0,
+          "vertices": 0,
+          "triangles": 0
+        },
+        "skirt": {
+          "records": 0,
+          "vertices": 0,
+          "triangles": 0
+        },
+        "occluder": {
+          "records": 1,
+          "vertices": 0,
+          "triangles": 0
+        }
+      },
+      "preservedCollisionBytes": 0,
+      "terrainPatches": 0,
+      "cloudBlocks": 0,
+      "cloudCompressedFieldsBytes": 0
+    }
+  ]
+}

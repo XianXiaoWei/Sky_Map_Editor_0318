@@ -1,0 +1,2938 @@
+{
+  "className": "SpawnMotes",
+  "functionGroup": "光点、碎片与灵魂",
+  "functionRole": "发射光点数量、速度与时长",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "SpawnMotes 的原默认值、继承初始化及 6 个序列化字段变体；原注册字段 5 项。"
+    },
+    {
+      "name": "发射光点数量、速度与时长",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "MoteParams（76 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "SpawnMotes",
+    "category": "光点、碎片与灵魂",
+    "functionGroupId": "fragments",
+    "functionRole": "发射光点数量、速度与时长",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "SpawnMotes 的原默认值、继承初始化及 6 个序列化字段变体；原注册字段 5 项。"
+      },
+      {
+        "name": "发射光点数量、速度与时长",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "MoteParams（76 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "MoteParams",
+        "references": 76
+      }
+    ],
+    "rttiWorkingGroup": "交互、事件与任务",
+    "role": "对象实例类型",
+    "instances": 76,
+    "nestedInstances": 0,
+    "referenceFields": 76,
+    "declaredLevels": 13,
+    "levels": [
+      {
+        "level": "Dawn",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DayEnd",
+        "nodes": 10,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DayHubCave",
+        "nodes": 7,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "HubReveal",
+        "nodes": 5,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_ButterflyFields",
+        "nodes": 27,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Cave",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_NestAndKeeper",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Village",
+        "nodes": 8,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainEnd",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainForest",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainMid",
+        "nodes": 8,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SkyHub2",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Sunset",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "number",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "params",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "time",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "transform",
+        "type": 0,
+        "size": 64,
+        "nestedClass": null
+      },
+      {
+        "name": "vel",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100ccb760",
+    "nativeRegisteredFields": [
+      {
+        "name": "transform",
+        "typeGetter": "__Z17GetMetaTypeByTypeIN10Vectormath3Aos7Matrix4EERK8MetaTypev",
+        "nativeOffset": 64,
+        "registrationFunction": "0x100481c40",
+        "propertyAddress": "0x100cca960"
+      },
+      {
+        "name": "params",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP10MoteParamsERK8MetaTypev",
+        "nativeOffset": 128,
+        "registrationFunction": "0x100481c40",
+        "propertyAddress": "0x100cca9b0"
+      },
+      {
+        "name": "number",
+        "typeGetter": "__Z17GetMetaTypeByTypeIjERK8MetaTypev",
+        "nativeOffset": 136,
+        "registrationFunction": "0x100481c40",
+        "propertyAddress": "0x100ccaa00"
+      },
+      {
+        "name": "time",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 140,
+        "registrationFunction": "0x100481c40",
+        "propertyAddress": "0x100ccaa50"
+      },
+      {
+        "name": "vel",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 144,
+        "registrationFunction": "0x100481c40",
+        "propertyAddress": "0x100ccaaa0"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 5 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "Dawn:n1047",
+      "level": "Dawn",
+      "nodeId": 1047,
+      "name": "BstNode_3122856195",
+      "className": "SpawnMotes",
+      "classIndex": 90,
+      "sourceOffset": 193540,
+      "sourceLength": 104,
+      "sourceSha256": "0c93cceb3f88d77f94fd4c096f5ad5f226b47edbf086301992978cbfdd3f7726",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1047/p5",
+          "fieldName": "params",
+          "target": "Dawn:n2068",
+          "targetNodeId": 2068,
+          "offset": 193640
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2491",
+      "level": "Dawn",
+      "nodeId": 2491,
+      "name": "BstNode_3122856103",
+      "className": "SpawnMotes",
+      "classIndex": 90,
+      "sourceOffset": 414924,
+      "sourceLength": 104,
+      "sourceSha256": "4a224230eea2c9ea416fcbb8a207af218c89ee933ed54df983897688341648c0",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2491/p5",
+          "fieldName": "params",
+          "target": "Dawn:n283",
+          "targetNodeId": 283,
+          "offset": 415024
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n92",
+      "level": "DayEnd",
+      "nodeId": 92,
+      "name": "BstNode_228",
+      "className": "SpawnMotes",
+      "classIndex": 25,
+      "sourceOffset": 41224,
+      "sourceLength": 97,
+      "sourceSha256": "e9c2b731c72e516eaccb948b467df6e37f9cee80c93e2076d5b6d6f90c5f6f24",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n92/p5",
+          "fieldName": "params",
+          "target": "DayEnd:n1180",
+          "targetNodeId": 1180,
+          "offset": 41317
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n220",
+      "level": "DayEnd",
+      "nodeId": 220,
+      "name": "BstNode_74",
+      "className": "SpawnMotes",
+      "classIndex": 25,
+      "sourceOffset": 67706,
+      "sourceLength": 96,
+      "sourceSha256": "4d5ec2dbbc5d2c81b9bee461e812cd3dd0b25bf1bca0bdd3774921f5722ffd5c",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n220/p5",
+          "fieldName": "params",
+          "target": "DayEnd:n1180",
+          "targetNodeId": 1180,
+          "offset": 67798
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n321",
+      "level": "DayEnd",
+      "nodeId": 321,
+      "name": "BstNode_569",
+      "className": "SpawnMotes",
+      "classIndex": 25,
+      "sourceOffset": 84768,
+      "sourceLength": 97,
+      "sourceSha256": "bfc77ced7ee27f79031a841929c86de96f0c1c4b7876d7b1aae049ac77a08892",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n321/p5",
+          "fieldName": "params",
+          "target": "DayEnd:n125",
+          "targetNodeId": 125,
+          "offset": 84861
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n348",
+      "level": "DayEnd",
+      "nodeId": 348,
+      "name": "BstNode_96",
+      "className": "SpawnMotes",
+      "classIndex": 25,
+      "sourceOffset": 89500,
+      "sourceLength": 96,
+      "sourceSha256": "22c9feae032a8acaf68b50488ca5d483ea61a84fb3d4c50fca161a7b8d62b98e",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n348/p5",
+          "fieldName": "params",
+          "target": "DayEnd:n1180",
+          "targetNodeId": 1180,
+          "offset": 89592
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n375",
+      "level": "DayEnd",
+      "nodeId": 375,
+      "name": "BstNode_248",
+      "className": "SpawnMotes",
+      "classIndex": 25,
+      "sourceOffset": 94095,
+      "sourceLength": 97,
+      "sourceSha256": "cf2f489c1965f5a178edfc227a718a0607bbbb241e1bfb86939343ea59e133ac",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n375/p5",
+          "fieldName": "params",
+          "target": "DayEnd:n1180",
+          "targetNodeId": 1180,
+          "offset": 94188
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n423",
+      "level": "DayEnd",
+      "nodeId": 423,
+      "name": "BstNode_331",
+      "className": "SpawnMotes",
+      "classIndex": 25,
+      "sourceOffset": 104347,
+      "sourceLength": 97,
+      "sourceSha256": "faf1211ed4703204643cc62c63ef0be1f90f053de111e2f20c60736c52824a56",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n423/p5",
+          "fieldName": "params",
+          "target": "DayEnd:n1180",
+          "targetNodeId": 1180,
+          "offset": 104440
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n537",
+      "level": "DayEnd",
+      "nodeId": 537,
+      "name": "BstNode_833",
+      "className": "SpawnMotes",
+      "classIndex": 25,
+      "sourceOffset": 125904,
+      "sourceLength": 97,
+      "sourceSha256": "fe28c9329e9a5b9cdf80025793e422728433b532a056f935f12713dc0c49d930",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n537/p5",
+          "fieldName": "params",
+          "target": "DayEnd:n1180",
+          "targetNodeId": 1180,
+          "offset": 125997
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n616",
+      "level": "DayEnd",
+      "nodeId": 616,
+      "name": "BstNode_94",
+      "className": "SpawnMotes",
+      "classIndex": 25,
+      "sourceOffset": 142087,
+      "sourceLength": 96,
+      "sourceSha256": "29f12784bfc7e5586094518f501092a551e33e88f6de5dfab41431ee1a0ba977",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n616/p5",
+          "fieldName": "params",
+          "target": "DayEnd:n1180",
+          "targetNodeId": 1180,
+          "offset": 142179
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n839",
+      "level": "DayEnd",
+      "nodeId": 839,
+      "name": "BstNode_31",
+      "className": "SpawnMotes",
+      "classIndex": 25,
+      "sourceOffset": 182141,
+      "sourceLength": 96,
+      "sourceSha256": "b1500e94c163171b71e1820745c7f80329243239799f6a2bef761d767fff173d",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n839/p5",
+          "fieldName": "params",
+          "target": "DayEnd:n1180",
+          "targetNodeId": 1180,
+          "offset": 182233
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n1005",
+      "level": "DayEnd",
+      "nodeId": 1005,
+      "name": "BstNode_229",
+      "className": "SpawnMotes",
+      "classIndex": 25,
+      "sourceOffset": 212475,
+      "sourceLength": 97,
+      "sourceSha256": "40736e42a20b6f0b4bdd3d8a43e2ac0438722fa28710f5dfe0a8bb7553262dda",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1005/p5",
+          "fieldName": "params",
+          "target": "DayEnd:n1180",
+          "targetNodeId": 1180,
+          "offset": 212568
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayHubCave:n232",
+      "level": "DayHubCave",
+      "nodeId": 232,
+      "name": "BstNode_2345992669",
+      "className": "SpawnMotes",
+      "classIndex": 37,
+      "sourceOffset": 62109,
+      "sourceLength": 104,
+      "sourceSha256": "53de5da2459db9816faa327a9513e2549a7b77f768a756e910c7f46c5631c7ac",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n232/p5",
+          "fieldName": "params",
+          "target": "DayHubCave:n735",
+          "targetNodeId": 735,
+          "offset": 62209
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayHubCave:n309",
+      "level": "DayHubCave",
+      "nodeId": 309,
+      "name": "BstNode_94",
+      "className": "SpawnMotes",
+      "classIndex": 37,
+      "sourceOffset": 78313,
+      "sourceLength": 96,
+      "sourceSha256": "61017049db1a7a634656c89d78efa50cd4f789fdc27c5b4582659a0f8af03979",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n309/p5",
+          "fieldName": "params",
+          "target": "DayHubCave:n864",
+          "targetNodeId": 864,
+          "offset": 78405
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayHubCave:n327",
+      "level": "DayHubCave",
+      "nodeId": 327,
+      "name": "BstNode_2345992714",
+      "className": "SpawnMotes",
+      "classIndex": 37,
+      "sourceOffset": 81832,
+      "sourceLength": 104,
+      "sourceSha256": "5643b18f7eb4354cbb9cdecec83f5cbd49075686d319ea6e37de4c6a90ee382f",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n327/p5",
+          "fieldName": "params",
+          "target": "DayHubCave:n616",
+          "targetNodeId": 616,
+          "offset": 81932
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayHubCave:n411",
+      "level": "DayHubCave",
+      "nodeId": 411,
+      "name": "BstNode_2345992679",
+      "className": "SpawnMotes",
+      "classIndex": 37,
+      "sourceOffset": 99779,
+      "sourceLength": 104,
+      "sourceSha256": "3849198669311a1c4d92a58fb5ffe983565db43f86f8a2259b8632bf1b43097c",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n411/p5",
+          "fieldName": "params",
+          "target": "DayHubCave:n569",
+          "targetNodeId": 569,
+          "offset": 99879
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayHubCave:n457",
+      "level": "DayHubCave",
+      "nodeId": 457,
+      "name": "BstNode_2345992676",
+      "className": "SpawnMotes",
+      "classIndex": 37,
+      "sourceOffset": 109304,
+      "sourceLength": 104,
+      "sourceSha256": "57a30f3c2d58061ebd2dbb2bea4e6a0eb1086f634613d9e3b5535549b6006f6d",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n457/p5",
+          "fieldName": "params",
+          "target": "DayHubCave:n517",
+          "targetNodeId": 517,
+          "offset": 109404
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayHubCave:n618",
+      "level": "DayHubCave",
+      "nodeId": 618,
+      "name": "BstNode_2345992717",
+      "className": "SpawnMotes",
+      "classIndex": 37,
+      "sourceOffset": 140723,
+      "sourceLength": 104,
+      "sourceSha256": "a0dce00e6137e309f658266cd57b3a87842046e4ebac0083f3626dbaf75e1a3f",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n618/p5",
+          "fieldName": "params",
+          "target": "DayHubCave:n126",
+          "targetNodeId": 126,
+          "offset": 140823
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayHubCave:n835",
+      "level": "DayHubCave",
+      "nodeId": 835,
+      "name": "BstNode_2345992666",
+      "className": "SpawnMotes",
+      "classIndex": 37,
+      "sourceOffset": 178667,
+      "sourceLength": 104,
+      "sourceSha256": "bf78dde2520b54fd529cccd4054876e999c8fecf041e025a2789d1f975ba0652",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n835/p5",
+          "fieldName": "params",
+          "target": "DayHubCave:n799",
+          "targetNodeId": 799,
+          "offset": 178767
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n174",
+      "level": "HubReveal",
+      "nodeId": 174,
+      "name": "BstNode_1320",
+      "className": "SpawnMotes",
+      "classIndex": 44,
+      "sourceOffset": 59147,
+      "sourceLength": 98,
+      "sourceSha256": "5d344366eb470d18b3b33b1857e920db208a1aee78b8e881c377fbdb7ea44175",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n174/p5",
+          "fieldName": "params",
+          "target": "HubReveal:n678",
+          "targetNodeId": 678,
+          "offset": 59241
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n551",
+      "level": "HubReveal",
+      "nodeId": 551,
+      "name": "BstNode_1857",
+      "className": "SpawnMotes",
+      "classIndex": 44,
+      "sourceOffset": 125019,
+      "sourceLength": 98,
+      "sourceSha256": "37300b8b8355fec50ca308f127ce196df03d83537451936c3720b5966837655a",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n551/p5",
+          "fieldName": "params",
+          "target": "HubReveal:n1393",
+          "targetNodeId": 1393,
+          "offset": 125113
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n695",
+      "level": "HubReveal",
+      "nodeId": 695,
+      "name": "BstNode_33",
+      "className": "SpawnMotes",
+      "classIndex": 44,
+      "sourceOffset": 146030,
+      "sourceLength": 96,
+      "sourceSha256": "b28bf4ba08d3fc7f43641bb0fbb95cee66b3b95557db582ad843a724d3c71a11",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n695/p5",
+          "fieldName": "params",
+          "target": "HubReveal:n639",
+          "targetNodeId": 639,
+          "offset": 146122
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n821",
+      "level": "HubReveal",
+      "nodeId": 821,
+      "name": "BstNode_2498",
+      "className": "SpawnMotes",
+      "classIndex": 44,
+      "sourceOffset": 166893,
+      "sourceLength": 98,
+      "sourceSha256": "909cc637e7620b648bc7d1eeb4f9bc2169126dc9a12a6197dd7051ed691ebf66",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n821/p5",
+          "fieldName": "params",
+          "target": "HubReveal:n566",
+          "targetNodeId": 566,
+          "offset": 166987
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n1273",
+      "level": "HubReveal",
+      "nodeId": 1273,
+      "name": "BstNode_1177",
+      "className": "SpawnMotes",
+      "classIndex": 44,
+      "sourceOffset": 246237,
+      "sourceLength": 98,
+      "sourceSha256": "dea9bf5daab5092bc7cdf407e6a8d6665311b71ce0d3edfaef9485cbfb45a56d",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1273/p5",
+          "fieldName": "params",
+          "target": "HubReveal:n552",
+          "targetNodeId": 552,
+          "offset": 246331
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n39",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 39,
+      "name": "BstNode_3122856004",
+      "className": "SpawnMotes",
+      "classIndex": 12,
+      "sourceOffset": 32604,
+      "sourceLength": 104,
+      "sourceSha256": "13ac426bf091352eb2096c9ec53db9f294468fe47beb6d2bb0f2f9a1072f0261",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n39/p5",
+          "fieldName": "params",
+          "target": "Prairie_ButterflyFields:n1355",
+          "targetNodeId": 1355,
+          "offset": 32704
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n106",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 106,
+      "name": "BstNode_3122856051",
+      "className": "SpawnMotes",
+      "classIndex": 12,
+      "sourceOffset": 46741,
+      "sourceLength": 104,
+      "sourceSha256": "d5f4d5a5d32cc2559c04e75b867aeb0088253951762bed4a6d15b892e0067fa3",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n106/p5",
+          "fieldName": "params",
+          "target": "Prairie_ButterflyFields:n578",
+          "targetNodeId": 578,
+          "offset": 46841
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n135",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 135,
+      "name": "BstNode_3122856061",
+      "className": "SpawnMotes",
+      "classIndex": 12,
+      "sourceOffset": 51825,
+      "sourceLength": 104,
+      "sourceSha256": "4de975720a7aee2dc7bd5b6d074fddf7f7c439db2248822eeae15f51350ba4a1",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n135/p5",
+          "fieldName": "params",
+          "target": "Prairie_ButterflyFields:n543",
+          "targetNodeId": 543,
+          "offset": 51925
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n153",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 153,
+      "name": "BstNode_3122856003",
+      "className": "SpawnMotes",
+      "classIndex": 12,
+      "sourceOffset": 55958,
+      "sourceLength": 104,
+      "sourceSha256": "b4e8625b665c5f34e0d5f5c93b5b886a694671b14fad8f29e2a3bfd24c3b6aec",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n153/p5",
+          "fieldName": "params",
+          "target": "Prairie_ButterflyFields:n280",
+          "targetNodeId": 280,
+          "offset": 56058
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n182",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 182,
+      "name": "BstNode_1221",
+      "className": "SpawnMotes",
+      "classIndex": 12,
+      "sourceOffset": 61537,
+      "sourceLength": 98,
+      "sourceSha256": "b6102ae883369b2c7b2fde01eb8d8dbf9008663526f972189d2566b8fa4d505c",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n182/p5",
+          "fieldName": "params",
+          "target": "Prairie_ButterflyFields:n1131",
+          "targetNodeId": 1131,
+          "offset": 61631
+        }
+      ],
+      "incomingReferenceCount": 5,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n304",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 304,
+      "name": "BstNode_1582",
+      "className": "SpawnMotes",
+      "classIndex": 12,
+      "sourceOffset": 90144,
+      "sourceLength": 98,
+      "sourceSha256": "5481b4db9b68c3e669ba88a0daf68965eb24f2afd0baccc99bba08debce4a8fe",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n304/p5",
+          "fieldName": "params",
+          "target": "Prairie_ButterflyFields:n1103",
+          "targetNodeId": 1103,
+          "offset": 90238
+        }
+      ],
+      "incomingReferenceCount": 5,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n319",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 319,
+      "name": "BstNode_1065",
+      "className": "SpawnMotes",
+      "classIndex": 12,
+      "sourceOffset": 94199,
+      "sourceLength": 98,
+      "sourceSha256": "3e92b75227ade48b6dfd4a472f8caf6aaf2dd13288b83f7d570760a50794579d",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n319/p5",
+          "fieldName": "params",
+          "target": "Prairie_ButterflyFields:n491",
+          "targetNodeId": 491,
+          "offset": 94293
+        }
+      ],
+      "incomingReferenceCount": 4,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n428",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 428,
+      "name": "BstNode_3122856002",
+      "className": "SpawnMotes",
+      "classIndex": 12,
+      "sourceOffset": 115993,
+      "sourceLength": 104,
+      "sourceSha256": "ece0486b7049b1933bb7657919d6826b8b4b37351b5b03ccc460fff9b60aecb6",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n428/p5",
+          "fieldName": "params",
+          "target": "Prairie_ButterflyFields:n91",
+          "targetNodeId": 91,
+          "offset": 116093
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n433",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 433,
+      "name": "BstNode_1167523925",
+      "className": "SpawnMotes",
+      "classIndex": 12,
+      "sourceOffset": 116589,
+      "sourceLength": 104,
+      "sourceSha256": "36e0c2b689d87856a72cad3379cb0090b1c99af62e38255faa3bb5d588ba9c4f",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n433/p5",
+          "fieldName": "params",
+          "target": "Prairie_ButterflyFields:n122",
+          "targetNodeId": 122,
+          "offset": 116689
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n480",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 480,
+      "name": "BstNode_3122856037",
+      "className": "SpawnMotes",
+      "classIndex": 12,
+      "sourceOffset": 125239,
+      "sourceLength": 104,
+      "sourceSha256": "8d6d1a19ee8cf48b737c326177425540cecb5a998d5226e15ffbefb1e4451243",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n480/p5",
+          "fieldName": "params",
+          "target": "Prairie_ButterflyFields:n769",
+          "targetNodeId": 769,
+          "offset": 125339
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n520",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 520,
+      "name": "BstNode_3122856025",
+      "className": "SpawnMotes",
+      "classIndex": 12,
+      "sourceOffset": 135238,
+      "sourceLength": 104,
+      "sourceSha256": "a9e3cc5e79cb5ef9557e75d1555bca70385fd44201640a91915249b7d19c5a2d",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n520/p5",
+          "fieldName": "params",
+          "target": "Prairie_ButterflyFields:n700",
+          "targetNodeId": 700,
+          "offset": 135338
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n554",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 554,
+      "name": "BstNode_2446917679",
+      "className": "SpawnMotes",
+      "classIndex": 12,
+      "sourceOffset": 142383,
+      "sourceLength": 104,
+      "sourceSha256": "727b129601f46e2f4c4391ce001c81054339400c667e6eb0b0c04b765e6d643b",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n554/p5",
+          "fieldName": "params",
+          "target": "Prairie_ButterflyFields:n112",
+          "targetNodeId": 112,
+          "offset": 142483
+        }
+      ],
+      "incomingReferenceCount": 4,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n589",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 589,
+      "name": "BstNode_1298",
+      "className": "SpawnMotes",
+      "classIndex": 12,
+      "sourceOffset": 147180,
+      "sourceLength": 98,
+      "sourceSha256": "7ea203d74285680ba71e6d9afe592265aa7a6efd0993e74b675ef3d7bd1e48f0",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n589/p5",
+          "fieldName": "params",
+          "target": "Prairie_ButterflyFields:n835",
+          "targetNodeId": 835,
+          "offset": 147274
+        }
+      ],
+      "incomingReferenceCount": 5,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n650",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 650,
+      "name": "BstNode_984",
+      "className": "SpawnMotes",
+      "classIndex": 12,
+      "sourceOffset": 157125,
+      "sourceLength": 97,
+      "sourceSha256": "42ce2b8bdedfe1ef67e1406d970f1b529f7afee6f42c94ae6e6d3a1459743a54",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n650/p5",
+          "fieldName": "params",
+          "target": "Prairie_ButterflyFields:n713",
+          "targetNodeId": 713,
+          "offset": 157218
+        }
+      ],
+      "incomingReferenceCount": 4,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n653",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 653,
+      "name": "BstNode_2345992563",
+      "className": "SpawnMotes",
+      "classIndex": 12,
+      "sourceOffset": 157548,
+      "sourceLength": 104,
+      "sourceSha256": "7772528964d0af716fa6de7e4ea0ca7d66e02cd483b83ea2f5a54ecc9d00a879",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n653/p5",
+          "fieldName": "params",
+          "target": "Prairie_ButterflyFields:n1214",
+          "targetNodeId": 1214,
+          "offset": 157648
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n673",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 673,
+      "name": "BstNode_1167523952",
+      "className": "SpawnMotes",
+      "classIndex": 12,
+      "sourceOffset": 161458,
+      "sourceLength": 104,
+      "sourceSha256": "3308b23aa89109905ef23c6bafca3f7ab8ed936796724e93476569c51dd59749",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n673/p5",
+          "fieldName": "params",
+          "target": "Prairie_ButterflyFields:n219",
+          "targetNodeId": 219,
+          "offset": 161558
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n708",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 708,
+      "name": "BstNode_3122856001",
+      "className": "SpawnMotes",
+      "classIndex": 12,
+      "sourceOffset": 167043,
+      "sourceLength": 104,
+      "sourceSha256": "4a349a248a9f6a17fb5581724d4cfd50b7094943709b8377cc2b4e94b56f32dd",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n708/p5",
+          "fieldName": "params",
+          "target": "Prairie_ButterflyFields:n861",
+          "targetNodeId": 861,
+          "offset": 167143
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n724",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 724,
+      "name": "BstNode_3122856056",
+      "className": "SpawnMotes",
+      "classIndex": 12,
+      "sourceOffset": 169898,
+      "sourceLength": 104,
+      "sourceSha256": "0dad6c78eee53127bc9d61c18bafd15bd0a38228f7d746cd94fb053e3cead61b",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n724/p5",
+          "fieldName": "params",
+          "target": "Prairie_ButterflyFields:n979",
+          "targetNodeId": 979,
+          "offset": 169998
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n734",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 734,
+      "name": "BstNode_669",
+      "className": "SpawnMotes",
+      "classIndex": 12,
+      "sourceOffset": 172109,
+      "sourceLength": 97,
+      "sourceSha256": "02c5e35f985381fd51b84caf8644eee35cd7102e17848c8c41dc8df7359772d4",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n734/p5",
+          "fieldName": "params",
+          "target": "Prairie_ButterflyFields:n187",
+          "targetNodeId": 187,
+          "offset": 172202
+        }
+      ],
+      "incomingReferenceCount": 4,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n742",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 742,
+      "name": "BstNode_954",
+      "className": "SpawnMotes",
+      "classIndex": 12,
+      "sourceOffset": 173520,
+      "sourceLength": 97,
+      "sourceSha256": "f425ac400c8d3d0607de6d2261d4faa362c52a034d86873af378939089a73bc0",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n742/p5",
+          "fieldName": "params",
+          "target": "Prairie_ButterflyFields:n677",
+          "targetNodeId": 677,
+          "offset": 173613
+        }
+      ],
+      "incomingReferenceCount": 4,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n753",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 753,
+      "name": "BstNode_1336",
+      "className": "SpawnMotes",
+      "classIndex": 12,
+      "sourceOffset": 175034,
+      "sourceLength": 98,
+      "sourceSha256": "73fd9fecfed86e392320dba20ffa66d61f15a600552122a435f87fe10d63fa65",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n753/p5",
+          "fieldName": "params",
+          "target": "Prairie_ButterflyFields:n750",
+          "targetNodeId": 750,
+          "offset": 175128
+        }
+      ],
+      "incomingReferenceCount": 5,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n777",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 777,
+      "name": "BstNode_771",
+      "className": "SpawnMotes",
+      "classIndex": 12,
+      "sourceOffset": 177245,
+      "sourceLength": 97,
+      "sourceSha256": "f0eff8b0abe9e11ae79b298b53abb05ace03eebbd9bdc6b6b899436f74948f95",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n777/p5",
+          "fieldName": "params",
+          "target": "Prairie_ButterflyFields:n605",
+          "targetNodeId": 605,
+          "offset": 177338
+        }
+      ],
+      "incomingReferenceCount": 5,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n800",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 800,
+      "name": "BstNode_2060386314",
+      "className": "SpawnMotes",
+      "classIndex": 12,
+      "sourceOffset": 180773,
+      "sourceLength": 104,
+      "sourceSha256": "b5c59630e3ad5093c83e401d42c468904097ea4072fc6cfe78b27e3682854c26",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n800/p5",
+          "fieldName": "params",
+          "target": "Prairie_ButterflyFields:n901",
+          "targetNodeId": 901,
+          "offset": 180873
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n1017",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 1017,
+      "name": "BstNode_1282",
+      "className": "SpawnMotes",
+      "classIndex": 12,
+      "sourceOffset": 219934,
+      "sourceLength": 98,
+      "sourceSha256": "8045b9d8293e0cd065855d843bf6b87c9f6c3b5f07870dc8d0ffd28fcbb4357e",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1017/p5",
+          "fieldName": "params",
+          "target": "Prairie_ButterflyFields:n691",
+          "targetNodeId": 691,
+          "offset": 220028
+        }
+      ],
+      "incomingReferenceCount": 5,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n1074",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 1074,
+      "name": "BstNode_1132",
+      "className": "SpawnMotes",
+      "classIndex": 12,
+      "sourceOffset": 233175,
+      "sourceLength": 98,
+      "sourceSha256": "caf241008a904349d55b0555fcfe431cf7b41b3b8967621dc168bdb9897205b5",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1074/p5",
+          "fieldName": "params",
+          "target": "Prairie_ButterflyFields:n83",
+          "targetNodeId": 83,
+          "offset": 233269
+        }
+      ],
+      "incomingReferenceCount": 5,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n1112",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 1112,
+      "name": "BstNode_872",
+      "className": "SpawnMotes",
+      "classIndex": 12,
+      "sourceOffset": 241716,
+      "sourceLength": 97,
+      "sourceSha256": "17c28f05cfd61a759717e74808064300888fdf262b45f0e6a477016fe3fc1c40",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1112/p5",
+          "fieldName": "params",
+          "target": "Prairie_ButterflyFields:n81",
+          "targetNodeId": 81,
+          "offset": 241809
+        }
+      ],
+      "incomingReferenceCount": 5,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n1127",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 1127,
+      "name": "BstNode_3122856031",
+      "className": "SpawnMotes",
+      "classIndex": 12,
+      "sourceOffset": 244805,
+      "sourceLength": 104,
+      "sourceSha256": "3477036be296d5d36c062779f5ca43971445d8c7d26fe7d5152b1c120bb3aab0",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1127/p5",
+          "fieldName": "params",
+          "target": "Prairie_ButterflyFields:n707",
+          "targetNodeId": 707,
+          "offset": 244905
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n297",
+      "level": "Prairie_Cave",
+      "nodeId": 297,
+      "name": "BstNode_1057",
+      "className": "SpawnMotes",
+      "classIndex": 39,
+      "sourceOffset": 91755,
+      "sourceLength": 98,
+      "sourceSha256": "ac6f1e3ac385e41fe60500babdf665a8e0377b16302ac7f0b06c9e6bb2f704ad",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n297/p5",
+          "fieldName": "params",
+          "target": "Prairie_Cave:n538",
+          "targetNodeId": 538,
+          "offset": 91849
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n1058",
+      "level": "Prairie_Cave",
+      "nodeId": 1058,
+      "name": "BstNode_1320",
+      "className": "SpawnMotes",
+      "classIndex": 39,
+      "sourceOffset": 267368,
+      "sourceLength": 98,
+      "sourceSha256": "1987985ccbd116513fc168227322e35734c30cf784a5b23b03688a65959626ed",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1058/p5",
+          "fieldName": "params",
+          "target": "Prairie_Cave:n982",
+          "targetNodeId": 982,
+          "offset": 267462
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n973",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 973,
+      "name": "BstNode_34603222",
+      "className": "SpawnMotes",
+      "classIndex": 67,
+      "sourceOffset": 236649,
+      "sourceLength": 102,
+      "sourceSha256": "061d6f67305fda4bbc92d346e166b91569720addf182083f6ab37523b49568bf",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n973/p5",
+          "fieldName": "params",
+          "target": "Prairie_NestAndKeeper:n112",
+          "targetNodeId": 112,
+          "offset": 236747
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n82",
+      "level": "Prairie_Village",
+      "nodeId": 82,
+      "name": "BstNode_814",
+      "className": "SpawnMotes",
+      "classIndex": 25,
+      "sourceOffset": 43936,
+      "sourceLength": 97,
+      "sourceSha256": "07dcd526a3a862bb0bb612039dab8025fa836a652a78df8677022cea6a4995e9",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n82/p5",
+          "fieldName": "params",
+          "target": "Prairie_Village:n2338",
+          "targetNodeId": 2338,
+          "offset": 44029
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n308",
+      "level": "Prairie_Village",
+      "nodeId": 308,
+      "name": "BstNode_1592",
+      "className": "SpawnMotes",
+      "classIndex": 25,
+      "sourceOffset": 79088,
+      "sourceLength": 98,
+      "sourceSha256": "35b3594b906040ae8b5c34e02640b6594aa9dc0876ca1179fdac81af04edeb0b",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n308/p5",
+          "fieldName": "params",
+          "target": "Prairie_Village:n1571",
+          "targetNodeId": 1571,
+          "offset": 79182
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1021",
+      "level": "Prairie_Village",
+      "nodeId": 1021,
+      "name": "BstNode_426",
+      "className": "SpawnMotes",
+      "classIndex": 25,
+      "sourceOffset": 198613,
+      "sourceLength": 97,
+      "sourceSha256": "a7eaafc220115ed2c3ec5e882680d5f9981daa691a65de50df238bc9d8b591ab",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1021/p5",
+          "fieldName": "params",
+          "target": "Prairie_Village:n240",
+          "targetNodeId": 240,
+          "offset": 198706
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1239",
+      "level": "Prairie_Village",
+      "nodeId": 1239,
+      "name": "BstNode_2259",
+      "className": "SpawnMotes",
+      "classIndex": 25,
+      "sourceOffset": 230705,
+      "sourceLength": 98,
+      "sourceSha256": "e1352e8bd8756f3e989998cdafba6153e77b21afda21946ef1a790a95b62f065",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1239/p5",
+          "fieldName": "params",
+          "target": "Prairie_Village:n776",
+          "targetNodeId": 776,
+          "offset": 230799
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2334",
+      "level": "Prairie_Village",
+      "nodeId": 2334,
+      "name": "BstNode_2170",
+      "className": "SpawnMotes",
+      "classIndex": 25,
+      "sourceOffset": 403213,
+      "sourceLength": 98,
+      "sourceSha256": "1a0783480ac1479cad91ba224ea8694e0b111f2c1f5bfdf1488195cea3f5a59c",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2334/p5",
+          "fieldName": "params",
+          "target": "Prairie_Village:n241",
+          "targetNodeId": 241,
+          "offset": 403307
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2474",
+      "level": "Prairie_Village",
+      "nodeId": 2474,
+      "name": "BstNode_1057",
+      "className": "SpawnMotes",
+      "classIndex": 25,
+      "sourceOffset": 423654,
+      "sourceLength": 98,
+      "sourceSha256": "93334de269ce28261680443db639da9156c3035a0ad26180b8eed552027cb228",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2474/p5",
+          "fieldName": "params",
+          "target": "Prairie_Village:n1879",
+          "targetNodeId": 1879,
+          "offset": 423748
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2881",
+      "level": "Prairie_Village",
+      "nodeId": 2881,
+      "name": "BstNode_34603111",
+      "className": "SpawnMotes",
+      "classIndex": 25,
+      "sourceOffset": 490063,
+      "sourceLength": 102,
+      "sourceSha256": "d53fef99ade2ec7b0589e94ec8b9dd65d4c2762d7af65026ead0af9030521434",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2881/p5",
+          "fieldName": "params",
+          "target": "Prairie_Village:n2562",
+          "targetNodeId": 2562,
+          "offset": 490161
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2903",
+      "level": "Prairie_Village",
+      "nodeId": 2903,
+      "name": "BstNode_1589",
+      "className": "SpawnMotes",
+      "classIndex": 25,
+      "sourceOffset": 493522,
+      "sourceLength": 98,
+      "sourceSha256": "b2349e34fbf0d5caa9bb627c0c4ea3b48e4b42df6ce6e24764d2c7aa1bbbec00",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2903/p5",
+          "fieldName": "params",
+          "target": "Prairie_Village:n2745",
+          "targetNodeId": 2745,
+          "offset": 493616
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n1041",
+      "level": "RainEnd",
+      "nodeId": 1041,
+      "name": "BstNode_396",
+      "className": "SpawnMotes",
+      "classIndex": 73,
+      "sourceOffset": 277611,
+      "sourceLength": 97,
+      "sourceSha256": "7d23a857db899ed2d9c75db14e40e07265fe92fb714f298438dc06aafe633779",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1041/p5",
+          "fieldName": "params",
+          "target": "RainEnd:n1409",
+          "targetNodeId": 1409,
+          "offset": 277704
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n1010",
+      "level": "RainForest",
+      "nodeId": 1010,
+      "name": "BstNode_591",
+      "className": "SpawnMotes",
+      "classIndex": 61,
+      "sourceOffset": 231893,
+      "sourceLength": 97,
+      "sourceSha256": "2eba148189393ea67ad5f0760cab1d69ad4034d13522b4286a51aebf5f310c63",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1010/p5",
+          "fieldName": "params",
+          "target": "RainForest:n42",
+          "targetNodeId": 42,
+          "offset": 231986
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n1156",
+      "level": "RainForest",
+      "nodeId": 1156,
+      "name": "BstNode_1318",
+      "className": "SpawnMotes",
+      "classIndex": 61,
+      "sourceOffset": 258636,
+      "sourceLength": 98,
+      "sourceSha256": "70dc4272067640c0ec5f2d49f589e23f59d13015e656fc8fb83c35c931c2bf66",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1156/p5",
+          "fieldName": "params",
+          "target": "RainForest:n467",
+          "targetNodeId": 467,
+          "offset": 258730
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n1087",
+      "level": "RainMid",
+      "nodeId": 1087,
+      "name": "BstNode_1698",
+      "className": "SpawnMotes",
+      "classIndex": 64,
+      "sourceOffset": 224975,
+      "sourceLength": 98,
+      "sourceSha256": "fca22935442ef41cfafc000e892845de61e4dbe6863e752593b323ff2dbbc2ee",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1087/p5",
+          "fieldName": "params",
+          "target": "RainMid:n1078",
+          "targetNodeId": 1078,
+          "offset": 225069
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n1089",
+      "level": "RainMid",
+      "nodeId": 1089,
+      "name": "BstNode_2345992700",
+      "className": "SpawnMotes",
+      "classIndex": 64,
+      "sourceOffset": 225554,
+      "sourceLength": 104,
+      "sourceSha256": "f1c400a1912710f7b5f6995740f9924185917b8654c67c530003bc4a2a004b26",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1089/p5",
+          "fieldName": "params",
+          "target": "RainMid:n1078",
+          "targetNodeId": 1078,
+          "offset": 225654
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n1481",
+      "level": "RainMid",
+      "nodeId": 1481,
+      "name": "BstNode_2345992699",
+      "className": "SpawnMotes",
+      "classIndex": 64,
+      "sourceOffset": 296604,
+      "sourceLength": 104,
+      "sourceSha256": "89d55c04cf813a84274f1eeb65e6743c4068a26f70602ad2081ff383d59496be",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1481/p5",
+          "fieldName": "params",
+          "target": "RainMid:n1078",
+          "targetNodeId": 1078,
+          "offset": 296704
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n1668",
+      "level": "RainMid",
+      "nodeId": 1668,
+      "name": "BstNode_2345992701",
+      "className": "SpawnMotes",
+      "classIndex": 64,
+      "sourceOffset": 334759,
+      "sourceLength": 104,
+      "sourceSha256": "355b4677cc2c7dc324db455717f8379f8c9c30368459db3536488a60c29c7496",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1668/p5",
+          "fieldName": "params",
+          "target": "RainMid:n1078",
+          "targetNodeId": 1078,
+          "offset": 334859
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n1687",
+      "level": "RainMid",
+      "nodeId": 1687,
+      "name": "BstNode_2345992822",
+      "className": "SpawnMotes",
+      "classIndex": 64,
+      "sourceOffset": 337426,
+      "sourceLength": 104,
+      "sourceSha256": "d6d127fafbf969fce0900e455fb3eb20b3b18baca67e749777399c51dc0f63a3",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1687/p5",
+          "fieldName": "params",
+          "target": "RainMid:n2067",
+          "targetNodeId": 2067,
+          "offset": 337526
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n1723",
+      "level": "RainMid",
+      "nodeId": 1723,
+      "name": "BstNode_2345992816",
+      "className": "SpawnMotes",
+      "classIndex": 64,
+      "sourceOffset": 343172,
+      "sourceLength": 104,
+      "sourceSha256": "27016f6dace546593883189421c7409535c86dbaa1225c9f3e5b72461e41c0c3",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1723/p5",
+          "fieldName": "params",
+          "target": "RainMid:n472",
+          "targetNodeId": 472,
+          "offset": 343272
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n1733",
+      "level": "RainMid",
+      "nodeId": 1733,
+      "name": "BstNode_2345992698",
+      "className": "SpawnMotes",
+      "classIndex": 64,
+      "sourceOffset": 344694,
+      "sourceLength": 104,
+      "sourceSha256": "7f967d1401a47649548db82753490ae8512e58187933d00702c7bbf08a8a4c10",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1733/p5",
+          "fieldName": "params",
+          "target": "RainMid:n1078",
+          "targetNodeId": 1078,
+          "offset": 344794
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n1797",
+      "level": "RainMid",
+      "nodeId": 1797,
+      "name": "BstNode_2345993111",
+      "className": "SpawnMotes",
+      "classIndex": 64,
+      "sourceOffset": 355736,
+      "sourceLength": 104,
+      "sourceSha256": "046d817504d7530d899b7b0e678629aefdcdd25c94578b146d8fd1bf21dca59d",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1797/p5",
+          "fieldName": "params",
+          "target": "RainMid:n761",
+          "targetNodeId": 761,
+          "offset": 355836
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n771",
+      "level": "SkyHub2",
+      "nodeId": 771,
+      "name": "BstNode_2060386367",
+      "className": "SpawnMotes",
+      "classIndex": 78,
+      "sourceOffset": 173922,
+      "sourceLength": 104,
+      "sourceSha256": "a2964c23ad5ad99ef17ea66d3d0e240739ee826f77f5b03d8dab8b2f8cb0bdad",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n771/p5",
+          "fieldName": "params",
+          "target": "SkyHub2:n558",
+          "targetNodeId": 558,
+          "offset": 174022
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n2042",
+      "level": "SkyHub2",
+      "nodeId": 2042,
+      "name": "BstNode_2060386359",
+      "className": "SpawnMotes",
+      "classIndex": 78,
+      "sourceOffset": 384064,
+      "sourceLength": 104,
+      "sourceSha256": "a75d6b9a94b29233e58766cf0dc4e75045ade95d8dc78c317c57a6f5679651ca",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2042/p5",
+          "fieldName": "params",
+          "target": "SkyHub2:n414",
+          "targetNodeId": 414,
+          "offset": 384164
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n1631",
+      "level": "Sunset",
+      "nodeId": 1631,
+      "name": "BstNode_294",
+      "className": "SpawnMotes",
+      "classIndex": 81,
+      "sourceOffset": 301142,
+      "sourceLength": 97,
+      "sourceSha256": "8208fa0da595f12ac5913939f5b86254b1b6da45b3ff9fdd95f40dbf6162ca27",
+      "declaredFieldCount": 6,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1631/p5",
+          "fieldName": "params",
+          "target": "Sunset:n257",
+          "targetNodeId": 257,
+          "offset": 301235
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "Dawn",
+      "path": "Levels/Dawn/Objects.level.bin",
+      "sha256": "16e26aafc7f9d120a548bf5d8bec04fbc18146bc8db531ef75144889b1ff197a",
+      "bytes": 504637,
+      "nodes": 3798,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dawn.json",
+      "markdown": "Objects对象清单/Dawn.md"
+    },
+    {
+      "level": "DayEnd",
+      "path": "Levels/DayEnd/Objects.level.bin",
+      "sha256": "9b5c568cefa987e504a10236c5b61e5de4b748d965d09e42db3602e4e52cc904",
+      "bytes": 268140,
+      "nodes": 1459,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DayEnd.json",
+      "markdown": "Objects对象清单/DayEnd.md"
+    },
+    {
+      "level": "DayHubCave",
+      "path": "Levels/DayHubCave/Objects.level.bin",
+      "sha256": "e4da920cc9f0b1569f14ad1a6d1990db7155dc07ebfc3214c4e385a367872457",
+      "bytes": 202745,
+      "nodes": 1128,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DayHubCave.json",
+      "markdown": "Objects对象清单/DayHubCave.md"
+    },
+    {
+      "level": "HubReveal",
+      "path": "Levels/HubReveal/Objects.level.bin",
+      "sha256": "4b32f12bbe4b246cde9ca1e4ba0982000ff108359865bb4340aba640e609861b",
+      "bytes": 289438,
+      "nodes": 1829,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/HubReveal.json",
+      "markdown": "Objects对象清单/HubReveal.md"
+    },
+    {
+      "level": "Prairie_ButterflyFields",
+      "path": "Levels/Prairie_ButterflyFields/Objects.level.bin",
+      "sha256": "29d8d61a082f3e3414ecfbb501b5f65499deb37ad4a1078ce2e9b88ac0d1e441",
+      "bytes": 297606,
+      "nodes": 1513,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_ButterflyFields.json",
+      "markdown": "Objects对象清单/Prairie_ButterflyFields.md"
+    },
+    {
+      "level": "Prairie_Cave",
+      "path": "Levels/Prairie_Cave/Objects.level.bin",
+      "sha256": "675a2256e24f8c4b16540cee6a5cd2b7647ff2fb495724a8bf596717ca39d944",
+      "bytes": 466340,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Cave.json",
+      "markdown": "Objects对象清单/Prairie_Cave.md"
+    },
+    {
+      "level": "Prairie_NestAndKeeper",
+      "path": "Levels/Prairie_NestAndKeeper/Objects.level.bin",
+      "sha256": "5eabe877e07c84e5f9270035aaab73fa20144c87f6e9136e5285dbaff3f85b7a",
+      "bytes": 239403,
+      "nodes": 1077,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_NestAndKeeper.json",
+      "markdown": "Objects对象清单/Prairie_NestAndKeeper.md"
+    },
+    {
+      "level": "Prairie_Village",
+      "path": "Levels/Prairie_Village/Objects.level.bin",
+      "sha256": "4656296b54402016b59b894b4653fbdc71e106a21e0900294f73f2c7b7112385",
+      "bytes": 549989,
+      "nodes": 3724,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Village.json",
+      "markdown": "Objects对象清单/Prairie_Village.md"
+    },
+    {
+      "level": "RainEnd",
+      "path": "Levels/RainEnd/Objects.level.bin",
+      "sha256": "247912ec955153e3df80c16a861eb872573502a285a17943518bdce448a8d5e3",
+      "bytes": 427926,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainEnd.json",
+      "markdown": "Objects对象清单/RainEnd.md"
+    },
+    {
+      "level": "RainForest",
+      "path": "Levels/RainForest/Objects.level.bin",
+      "sha256": "2e69b3314c70c61bd99435f4bb4418fba540f227c83670e1af3b5358c64c3b73",
+      "bytes": 271409,
+      "nodes": 1306,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainForest.json",
+      "markdown": "Objects对象清单/RainForest.md"
+    },
+    {
+      "level": "RainMid",
+      "path": "Levels/RainMid/Objects.level.bin",
+      "sha256": "139b219d9b71a2ab24418b1ec41f2ee8a2ebfdf4c5ea992c35348a758682ed23",
+      "bytes": 430825,
+      "nodes": 2457,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainMid.json",
+      "markdown": "Objects对象清单/RainMid.md"
+    },
+    {
+      "level": "SkyHub2",
+      "path": "Levels/SkyHub2/Objects.level.bin",
+      "sha256": "8b467f9b349d9d4ce0d038528c96e44dff30063149bf5bbf90232a56bb9dd36f",
+      "bytes": 475656,
+      "nodes": 2886,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SkyHub2.json",
+      "markdown": "Objects对象清单/SkyHub2.md"
+    },
+    {
+      "level": "Sunset",
+      "path": "Levels/Sunset/Objects.level.bin",
+      "sha256": "8126f2db693502576075505797624e0b5e53dc064fe6af82e90f2261ca427f8a",
+      "bytes": 325410,
+      "nodes": 1899,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Sunset.json",
+      "markdown": "Objects对象清单/Sunset.md"
+    }
+  ]
+}

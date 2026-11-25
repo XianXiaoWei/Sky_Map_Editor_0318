@@ -1,0 +1,6 @@
+0x1007bc820: push rbp
+0x1007bc821: mov rbp, rsp
+0x1007bc824: mov esi, 0x19838
+0x1007bc829: call 0x100aa24aa ; 0x100aa24aa ___bzero
+0x1007bc82e: pop rbp
+0x1007bc82f: ret 

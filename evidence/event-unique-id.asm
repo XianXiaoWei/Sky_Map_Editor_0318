@@ -1,0 +1,16 @@
+0x10032f130: cmp dword ptr [rdi + 0x28], 1
+0x10032f134: jne 0x10032f145
+0x10032f136: movzx eax, word ptr [rdi + 0x2c]
+0x10032f13a: cmp eax, 0xffff
+0x10032f13f: je 0x10032f145
+0x10032f141: movzx eax, ax
+0x10032f144: ret 
+0x10032f145: push rbp
+0x10032f146: mov rbp, rsp
+0x10032f149: lea rdi, [rip + 0x851fed] ; 0x100b8113d HasUniqueId()
+0x10032f150: lea rsi, [rip + 0x851ff4] ; 0x100b8114b Event.cpp
+0x10032f157: mov edx, 0x59
+0x10032f15c: mov ecx, 3
+0x10032f161: call 0x1007e5f70 ; 0x1007e5f70
+0x10032f166: ud2 
+0x10032f168: nop dword ptr [rax + rax]

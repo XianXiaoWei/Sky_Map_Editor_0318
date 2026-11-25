@@ -1,0 +1,11 @@
+import hashlib,json,pathlib,struct,sys
+from native import Native
+n=Native(sys.argv[1] if len(sys.argv)>1 else '/storage/emulated/0/Download/地图编辑器/sky-map-editor/reference/Sky.app/Contents/MacOS/Sky')
+functions={}
+for name,address in [('DarkCreature.Chase',0x1002703d0),('DarkCreature.Attack',0x100270960),('DarkCreature.Hit',0x100270fd0),('AvatarBarn.Index',0x1001031d0),('Avatar.Active',0x1000fe050)]:
+ start,end=n.bounds(address);assembly='evidence/'+name.lower().replace('.','-')+'.asm';pathlib.Path(assembly).write_text(n.annotated(start));ins=n.instructions(start)
+ functions[name]={'start':hex(start),'end':hex(end),'wholeFunction':True,'codeSha256':hashlib.sha256(n.read(start,end-start)).hexdigest(),'assembly':assembly,'instructions':len(ins),'trampolinePrefixBytes':next(i.address+i.size-start for i in ins if i.address+i.size-start>=14)}
+addresses={'one':0x100aa50c0,'half':0x100aa45b8,'epsilon':0x100aa6a9c,'normalizeThreshold':0x100aa78c4,'chaseSmooth':0x100aaa48c,'chaseDuration':0x100aa6aa8,'attackDuration':0x100aa7cc0,'attackOffset':0x100aa8620,'attackSpeedLow':0x100aa89cc,'attackSpeedHigh':0x100ab490c,'pitchOffset':0x100aa86a4,'pitchDivisor':0x100aa866c,'pitchHigh':0x100aa91dc,'hitDistanceSquared':0x100ab4910}
+constants={name:struct.unpack('<I',n.read(addr,4))[0] for name,addr in addresses.items()}
+vectors={name:list(struct.unpack('<4I',n.read(addr,16))) for name,addr in [('up',0x100aa80a0),('chaseTargetScale',0x100aa9660),('attackDirectionScale',0x100aa7ed0),('attackUp',0x100ab4960),('attackForceScale',0x100ab4970),('attackTargetOffset',0x100aa78f0),('localHitEffect',0x100aaafc0)]}
+pathlib.Path('docs/dark-creature-combat-native.json').write_text(json.dumps({'executableSha256':n.digest,'functions':functions,'constants':constants,'vectors':vectors,'scope':'Whole original Chase, Attack and Hit functions, composed with actual raw Motion.Seek, indexed AvatarBarn and Avatar active reads, and the previously verified partial outer Update motion phase. The remainder of outer Update and actual scene, Bird hit, animation, audio, interaction and particle/resource owners remain pending. Hit up-vector private W and mutable global particle palette/template are explicitly caller-owned. Native expf is recorded/replayed; no JavaScript/macOS libm equivalence claim.'},indent=2)+'\n')

@@ -1,0 +1,979 @@
+{
+  "className": "BenchChat",
+  "functionGroup": "网络、账户与社交流程",
+  "functionRole": "长椅座位与聊天频道",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "BenchChat 的原默认值、继承初始化及 3 个序列化字段变体；原注册字段 2 项。"
+    },
+    {
+      "name": "长椅座位与聊天频道",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Clump（18 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "BenchChat",
+    "category": "网络、账户与社交流程",
+    "functionGroupId": "network",
+    "functionRole": "长椅座位与聊天频道",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "BenchChat 的原默认值、继承初始化及 3 个序列化字段变体；原注册字段 2 项。"
+      },
+      {
+        "name": "长椅座位与聊天频道",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Clump（18 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Clump",
+        "references": 18
+      }
+    ],
+    "rttiWorkingGroup": "系统和其余类型",
+    "role": "对象实例类型",
+    "instances": 18,
+    "nestedInstances": 0,
+    "referenceFields": 18,
+    "declaredLevels": 9,
+    "levels": [
+      {
+        "level": "DayEnd",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Dusk",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "HubReveal",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Night",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Village",
+        "nodes": 7,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainForest",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainMid",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SkyHub2",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Sunset",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "channelId",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "seats",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100c939e0",
+    "nativeRegisteredFields": [
+      {
+        "name": "channelId",
+        "typeGetter": "__Z17GetMetaTypeByTypeI11ChatChannelERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x1001fdf10",
+        "propertyAddress": "0x100c92ed8"
+      },
+      {
+        "name": "seats",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 64,
+        "registrationFunction": "0x1001fdf10",
+        "propertyAddress": "0x100c92f28"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 2 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "DayEnd:n456",
+      "level": "DayEnd",
+      "nodeId": 456,
+      "name": "BstNode_2446917715",
+      "className": "BenchChat",
+      "classIndex": 55,
+      "sourceOffset": 110556,
+      "sourceLength": 29,
+      "sourceSha256": "a8987d7e90eab755898fe8aa020020be366918ed4af186d91e991b2088151e9d",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n456/p1",
+          "fieldName": "seats",
+          "target": "DayEnd:n398",
+          "targetNodeId": 398,
+          "offset": 110580
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n566",
+      "level": "DayEnd",
+      "nodeId": 566,
+      "name": "BstNode_2446917716",
+      "className": "BenchChat",
+      "classIndex": 55,
+      "sourceOffset": 131127,
+      "sourceLength": 29,
+      "sourceSha256": "391806111e19160cb2bc955d3ca2b1f1b230f8cd633ab1b443e07583cf35336a",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n566/p1",
+          "fieldName": "seats",
+          "target": "DayEnd:n699",
+          "targetNodeId": 699,
+          "offset": 131151
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n396",
+      "level": "Dusk",
+      "nodeId": 396,
+      "name": "BstNode_2446917747",
+      "className": "BenchChat",
+      "classIndex": 48,
+      "sourceOffset": 95735,
+      "sourceLength": 29,
+      "sourceSha256": "e1685cebc1c6e0b0f1d859cc1c4a9632eb24bbc6af9705b7246fd3fd52a16e9b",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n396/p1",
+          "fieldName": "seats",
+          "target": "Dusk:n295",
+          "targetNodeId": 295,
+          "offset": 95759
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n888",
+      "level": "HubReveal",
+      "nodeId": 888,
+      "name": "BstNode_2446917747",
+      "className": "BenchChat",
+      "classIndex": 86,
+      "sourceOffset": 178077,
+      "sourceLength": 29,
+      "sourceSha256": "72ee944dd0d66391fb8e77075a4659c24ba103b684597a17c97fcc8c926c323b",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n888/p1",
+          "fieldName": "seats",
+          "target": "HubReveal:n1263",
+          "targetNodeId": 1263,
+          "offset": 178101
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n536",
+      "level": "Night",
+      "nodeId": 536,
+      "name": "BstNode_34604462",
+      "className": "BenchChat",
+      "classIndex": 47,
+      "sourceOffset": 103124,
+      "sourceLength": 27,
+      "sourceSha256": "c508ecaa17f894879180f5279d2ccf77eb591a6a5aeb1aaec4a69bfe6f940688",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n536/p1",
+          "fieldName": "seats",
+          "target": "Night:n1541",
+          "targetNodeId": 1541,
+          "offset": 103146
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2181",
+      "level": "Night",
+      "nodeId": 2181,
+      "name": "BstNode_2446917747",
+      "className": "BenchChat",
+      "classIndex": 47,
+      "sourceOffset": 345525,
+      "sourceLength": 29,
+      "sourceSha256": "44a30f3603f39b602cfcb50d4d1492aae25991a582578dc4360f14b6aeaa7b47",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2181/p1",
+          "fieldName": "seats",
+          "target": "Night:n1899",
+          "targetNodeId": 1899,
+          "offset": 345549
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n897",
+      "level": "Prairie_Village",
+      "nodeId": 897,
+      "name": "BstNode_1167524003",
+      "className": "BenchChat",
+      "classIndex": 81,
+      "sourceOffset": 177669,
+      "sourceLength": 29,
+      "sourceSha256": "6590feeaa044acc347fa54280018d8a48e271cc75a84fbedd3c434f141fe94c0",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n897/p1",
+          "fieldName": "seats",
+          "target": "Prairie_Village:n609",
+          "targetNodeId": 609,
+          "offset": 177693
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n943",
+      "level": "Prairie_Village",
+      "nodeId": 943,
+      "name": "BstNode_1167523929",
+      "className": "BenchChat",
+      "classIndex": 81,
+      "sourceOffset": 185341,
+      "sourceLength": 29,
+      "sourceSha256": "8802cd137213a1f388d1b60d67b1b2915162277f5739c27de01d78006b4c811d",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n943/p1",
+          "fieldName": "seats",
+          "target": "Prairie_Village:n487",
+          "targetNodeId": 487,
+          "offset": 185365
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1071",
+      "level": "Prairie_Village",
+      "nodeId": 1071,
+      "name": "BstNode_1167523989",
+      "className": "BenchChat",
+      "classIndex": 81,
+      "sourceOffset": 208178,
+      "sourceLength": 29,
+      "sourceSha256": "680952c6efa1c42df42dc1b8d2d77912c27a28ab24538c3abddc5e9fa37f21de",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1071/p1",
+          "fieldName": "seats",
+          "target": "Prairie_Village:n2284",
+          "targetNodeId": 2284,
+          "offset": 208202
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2307",
+      "level": "Prairie_Village",
+      "nodeId": 2307,
+      "name": "BstNode_1482555547",
+      "className": "BenchChat",
+      "classIndex": 81,
+      "sourceOffset": 400109,
+      "sourceLength": 29,
+      "sourceSha256": "086c660dfbbadaa838814ab1f7308018c3924aec6e297b1050dc61b6a0cbc7f2",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2307/p1",
+          "fieldName": "seats",
+          "target": "Prairie_Village:n940",
+          "targetNodeId": 940,
+          "offset": 400133
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2667",
+      "level": "Prairie_Village",
+      "nodeId": 2667,
+      "name": "BstNode_2345992499",
+      "className": "BenchChat",
+      "classIndex": 81,
+      "sourceOffset": 451278,
+      "sourceLength": 29,
+      "sourceSha256": "fc0f6ad2f78db13cf16f829fac2540ef99d6acfd9159c73d2a265691f5b66a51",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2667/p1",
+          "fieldName": "seats",
+          "target": "Prairie_Village:n135",
+          "targetNodeId": 135,
+          "offset": 451302
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2846",
+      "level": "Prairie_Village",
+      "nodeId": 2846,
+      "name": "BstNode_1482555526",
+      "className": "BenchChat",
+      "classIndex": 81,
+      "sourceOffset": 483094,
+      "sourceLength": 29,
+      "sourceSha256": "fcd14670043b7bacd027e7ce1c82badce6fc4bb4e77b05ac20b2da367fe9bc32",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2846/p1",
+          "fieldName": "seats",
+          "target": "Prairie_Village:n2259",
+          "targetNodeId": 2259,
+          "offset": 483118
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n3042",
+      "level": "Prairie_Village",
+      "nodeId": 3042,
+      "name": "BstNode_1167523946",
+      "className": "BenchChat",
+      "classIndex": 81,
+      "sourceOffset": 516210,
+      "sourceLength": 29,
+      "sourceSha256": "ab5041387b1b2c597f3b244c7080ef5feacd685a7c415fcc3bbb69fcab261371",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n3042/p1",
+          "fieldName": "seats",
+          "target": "Prairie_Village:n2588",
+          "targetNodeId": 2588,
+          "offset": 516234
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n444",
+      "level": "RainForest",
+      "nodeId": 444,
+      "name": "BstNode_2446917747",
+      "className": "BenchChat",
+      "classIndex": 47,
+      "sourceOffset": 100413,
+      "sourceLength": 29,
+      "sourceSha256": "a908454e509eb429f3c74f20c428d08c1908008e319d2c099b9ff33ad6737f19",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n444/p1",
+          "fieldName": "seats",
+          "target": "RainForest:n1203",
+          "targetNodeId": 1203,
+          "offset": 100437
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n256",
+      "level": "RainMid",
+      "nodeId": 256,
+      "name": "BstNode_34603114",
+      "className": "BenchChat",
+      "classIndex": 40,
+      "sourceOffset": 75858,
+      "sourceLength": 27,
+      "sourceSha256": "35eb948966d3580648e923116c156d9bbcd7d216e7a163839e5e103e4b7a0bd8",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n256/p1",
+          "fieldName": "seats",
+          "target": "RainMid:n1264",
+          "targetNodeId": 1264,
+          "offset": 75880
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1231",
+      "level": "SkyHub2",
+      "nodeId": 1231,
+      "name": "BstNode_3156082697",
+      "className": "BenchChat",
+      "classIndex": 93,
+      "sourceOffset": 256012,
+      "sourceLength": 29,
+      "sourceSha256": "31358375df754464be1dbe55d8861775b21481eafc77ac5f8154820b1fb7265f",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1231/p1",
+          "fieldName": "seats",
+          "target": "SkyHub2:n1537",
+          "targetNodeId": 1537,
+          "offset": 256036
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n259",
+      "level": "Sunset",
+      "nodeId": 259,
+      "name": "BstNode_2446917751",
+      "className": "BenchChat",
+      "classIndex": 36,
+      "sourceOffset": 76012,
+      "sourceLength": 29,
+      "sourceSha256": "ab3604f883d4ba7735d8958db0c85fc39f5fa5de66c72365a0fccd23213f5cad",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n259/p1",
+          "fieldName": "seats",
+          "target": "Sunset:n832",
+          "targetNodeId": 832,
+          "offset": 76036
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n756",
+      "level": "Sunset",
+      "nodeId": 756,
+      "name": "BstNode_2446917747",
+      "className": "BenchChat",
+      "classIndex": 36,
+      "sourceOffset": 161311,
+      "sourceLength": 29,
+      "sourceSha256": "99e8a78896bb9eb1919b015292d477746775f0e55c1cb6801d39fd64aa353e57",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n756/p1",
+          "fieldName": "seats",
+          "target": "Sunset:n523",
+          "targetNodeId": 523,
+          "offset": 161335
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "DayEnd",
+      "path": "Levels/DayEnd/Objects.level.bin",
+      "sha256": "9b5c568cefa987e504a10236c5b61e5de4b748d965d09e42db3602e4e52cc904",
+      "bytes": 268140,
+      "nodes": 1459,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DayEnd.json",
+      "markdown": "Objects对象清单/DayEnd.md"
+    },
+    {
+      "level": "Dusk",
+      "path": "Levels/Dusk/Objects.level.bin",
+      "sha256": "9222b248f17fb4122cd4ad9650543ab86aab8b077b6965248c70ac2341bf2d5d",
+      "bytes": 242331,
+      "nodes": 1288,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dusk.json",
+      "markdown": "Objects对象清单/Dusk.md"
+    },
+    {
+      "level": "HubReveal",
+      "path": "Levels/HubReveal/Objects.level.bin",
+      "sha256": "4b32f12bbe4b246cde9ca1e4ba0982000ff108359865bb4340aba640e609861b",
+      "bytes": 289438,
+      "nodes": 1829,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/HubReveal.json",
+      "markdown": "Objects对象清单/HubReveal.md"
+    },
+    {
+      "level": "Night",
+      "path": "Levels/Night/Objects.level.bin",
+      "sha256": "6ce612c9efb82834d648de81251033b341a44f4d9374d8338d868575aab6a723",
+      "bytes": 499756,
+      "nodes": 3719,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Night.json",
+      "markdown": "Objects对象清单/Night.md"
+    },
+    {
+      "level": "Prairie_Village",
+      "path": "Levels/Prairie_Village/Objects.level.bin",
+      "sha256": "4656296b54402016b59b894b4653fbdc71e106a21e0900294f73f2c7b7112385",
+      "bytes": 549989,
+      "nodes": 3724,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Village.json",
+      "markdown": "Objects对象清单/Prairie_Village.md"
+    },
+    {
+      "level": "RainForest",
+      "path": "Levels/RainForest/Objects.level.bin",
+      "sha256": "2e69b3314c70c61bd99435f4bb4418fba540f227c83670e1af3b5358c64c3b73",
+      "bytes": 271409,
+      "nodes": 1306,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainForest.json",
+      "markdown": "Objects对象清单/RainForest.md"
+    },
+    {
+      "level": "RainMid",
+      "path": "Levels/RainMid/Objects.level.bin",
+      "sha256": "139b219d9b71a2ab24418b1ec41f2ee8a2ebfdf4c5ea992c35348a758682ed23",
+      "bytes": 430825,
+      "nodes": 2457,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainMid.json",
+      "markdown": "Objects对象清单/RainMid.md"
+    },
+    {
+      "level": "SkyHub2",
+      "path": "Levels/SkyHub2/Objects.level.bin",
+      "sha256": "8b467f9b349d9d4ce0d038528c96e44dff30063149bf5bbf90232a56bb9dd36f",
+      "bytes": 475656,
+      "nodes": 2886,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SkyHub2.json",
+      "markdown": "Objects对象清单/SkyHub2.md"
+    },
+    {
+      "level": "Sunset",
+      "path": "Levels/Sunset/Objects.level.bin",
+      "sha256": "8126f2db693502576075505797624e0b5e53dc064fe6af82e90f2261ca427f8a",
+      "bytes": 325410,
+      "nodes": 1899,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Sunset.json",
+      "markdown": "Objects对象清单/Sunset.md"
+    }
+  ]
+}

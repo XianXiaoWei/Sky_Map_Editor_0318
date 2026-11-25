@@ -1,0 +1,1880 @@
+{
+  "passed": true,
+  "complete": true,
+  "device": {
+    "engine": "Sky Native Vulkan",
+    "backend": "Vulkan",
+    "device": "llvmpipe (LLVM 19.1.7, 128 bits)",
+    "apiVersion": 4210993,
+    "deviceType": 4,
+    "shaderFloat16": true
+  },
+  "airManifest": {
+    "scope": "AIR operation/type reconstruction. Half arithmetic uses float32 and explicit RTE before half assignments. Recorded single-use fast multiply followed by fast add/sub uses FMA when enabled, skipping intermediate product rounding as permitted by original fast flags. Original cloud 3D descriptors use float32 texelFetch interpolation over unchanged upload bytes. Parallel phi, Metal projection and float32 external interfaces retained. Undef/poison and padding use deterministic zero. Vulkan fast intrinsics and contraction choices are not guaranteed equal to original Metal hardware or game images.",
+    "stages": [
+      {
+        "program": "CloudCore0",
+        "stage": "vert",
+        "source": "evidence/CloudCore0.vert.air.ll",
+        "sourceSha256": "27c688ae2fd7a090554e60406a05587bd51a0683dfcb0db1b15b62c74f96d82c",
+        "generatedSha256": "36bd72833a091f3f372ce60bdebea5e29f05c8985833ad37633e6e12ca53aa7d",
+        "opcodes": {
+          "extractelement": 7,
+          "getelementptr": 5,
+          "load": 5,
+          "fpext": 1,
+          "fmul": 20,
+          "fadd": 9,
+          "call": 7,
+          "fsub": 7,
+          "insertelement": 6,
+          "shufflevector": 9,
+          "bitcast": 1,
+          "br": 2,
+          "phi": 2,
+          "sext": 1,
+          "add": 1,
+          "icmp": 1,
+          "insertvalue": 1,
+          "ret": 1
+        },
+        "paddingLoads": [
+          {
+            "offset": 16,
+            "uniform": "u_localAvatarPos",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          }
+        ],
+        "bindings": {
+          "u_cloudTex0": 1
+        },
+        "contractions": []
+      },
+      {
+        "program": "CloudCore0",
+        "stage": "frag",
+        "source": "evidence/CloudCore0.frag.air.ll",
+        "sourceSha256": "029571a8b89e128b6c0c1deb71e0c93c8393688393b9d559432b6b63a6080a4c",
+        "generatedSha256": "59869e295c1fa767d71a632aed2c43b2301c50a520f52d0d809557523bd740e5",
+        "opcodes": {
+          "shufflevector": 4,
+          "getelementptr": 1,
+          "load": 1,
+          "fdiv": 3,
+          "call": 2,
+          "extractelement": 2,
+          "fcmp": 1,
+          "br": 2,
+          "phi": 1,
+          "fmul": 1,
+          "fptrunc": 1,
+          "fsub": 1,
+          "insertelement": 1,
+          "insertvalue": 1,
+          "ret": 1
+        },
+        "paddingLoads": [],
+        "bindings": {
+          "u_cloudTex0": 1
+        },
+        "contractions": []
+      },
+      {
+        "program": "CloudFluffy0",
+        "stage": "vert",
+        "source": "evidence/CloudFluffy0.vert.air.ll",
+        "sourceSha256": "0ef19a020f1643f3ff7de42a39aef2af14393b3cff3453c3f5003d252abc83f3",
+        "generatedSha256": "a3acff24307d554391668b06b7cc11c06adafd4a1378aa6f34441d2c37b83f5a",
+        "opcodes": {
+          "getelementptr": 9,
+          "load": 10,
+          "fadd": 6,
+          "shufflevector": 15,
+          "bitcast": 6,
+          "fmul": 6,
+          "call": 2,
+          "extractelement": 3,
+          "fdiv": 1,
+          "insertelement": 4,
+          "fsub": 2,
+          "insertvalue": 4,
+          "ret": 1
+        },
+        "paddingLoads": [
+          {
+            "offset": 112,
+            "uniform": "u_projPlaneOrigin",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 80,
+            "uniform": "u_projPlaneU",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 96,
+            "uniform": "u_projPlaneV",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 0,
+            "uniform": "u_cloudBinMinWorld",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 128,
+            "uniform": "u_eyePos",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 16,
+            "uniform": "u_cloudBinRangeWorld",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          }
+        ],
+        "bindings": {
+          "u_cloudAmb0": 1,
+          "u_cloudAmb1": 2,
+          "u_cloudAmb2": 3,
+          "u_cloudDist": 4,
+          "u_cloudNoise3D": 5,
+          "u_cloudSparse": 6,
+          "u_cloudTTex": 7,
+          "u_depthHalfTex": 8,
+          "u_texBlueNoise": 9,
+          "u_waterSim": 10
+        },
+        "contractions": []
+      },
+      {
+        "program": "CloudFluffy0",
+        "stage": "frag",
+        "source": "evidence/CloudFluffy0.frag.air.ll",
+        "sourceSha256": "5d1dcb0d06aeff637a22de9e439d3faab26f5e7dd5495cd258674350e0fd4f4f",
+        "generatedSha256": "d56396f0415c5fceb6946d4e4b71eb86e4462c55d5094b8c241f3611d0b23255",
+        "opcodes": {
+          "shufflevector": 121,
+          "call": 101,
+          "insertelement": 65,
+          "fmul": 202,
+          "fdiv": 20,
+          "extractelement": 99,
+          "fpext": 41,
+          "getelementptr": 34,
+          "load": 74,
+          "fcmp": 25,
+          "select": 3,
+          "br": 42,
+          "fadd": 105,
+          "phi": 35,
+          "and": 2,
+          "fsub": 62,
+          "bitcast": 13,
+          "fptrunc": 20,
+          "or": 1,
+          "sext": 2,
+          "add": 2,
+          "icmp": 2,
+          "insertvalue": 2,
+          "ret": 1
+        },
+        "paddingLoads": [
+          {
+            "offset": 208,
+            "uniform": "u_eyePos",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 128,
+            "uniform": "u_cloudBinMinWorld",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 144,
+            "uniform": "u_cloudBinRangeWorld",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 96,
+            "uniform": "u_cloudWindScroll",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 208,
+            "uniform": "u_eyePos",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 80,
+            "uniform": "u_cloudWindMove",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 0,
+            "uniform": "u_sunDir",
+            "type": "<4 x half>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 128,
+            "uniform": "u_cloudBinMinWorld",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 144,
+            "uniform": "u_cloudBinRangeWorld",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 128,
+            "uniform": "u_cloudBinMinWorld",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 144,
+            "uniform": "u_cloudBinRangeWorld",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 96,
+            "uniform": "u_cloudWindScroll",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 96,
+            "uniform": "u_cloudWindScroll",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 96,
+            "uniform": "u_cloudWindScroll",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 96,
+            "uniform": "u_cloudWindScroll",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 0,
+            "uniform": "u_sunDir",
+            "type": "<4 x half>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 128,
+            "uniform": "u_cloudBinMinWorld",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 144,
+            "uniform": "u_cloudBinRangeWorld",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 96,
+            "uniform": "u_cloudWindScroll",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 128,
+            "uniform": "u_cloudBinMinWorld",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 144,
+            "uniform": "u_cloudBinRangeWorld",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 16,
+            "uniform": "u_averageSkyColor",
+            "type": "<4 x half>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 8,
+            "uniform": "u_sunColor",
+            "type": "<4 x half>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 24,
+            "uniform": "u_pointLight",
+            "type": "<4 x half>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 96,
+            "uniform": "u_cloudWindScroll",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 8,
+            "uniform": "u_sunColor",
+            "type": "<4 x half>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 8,
+            "uniform": "u_sunColor",
+            "type": "<4 x half>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 8,
+            "uniform": "u_sunColor",
+            "type": "<4 x half>",
+            "paddingLane": 3
+          }
+        ],
+        "bindings": {
+          "u_cloudAmb0": 1,
+          "u_cloudAmb1": 2,
+          "u_cloudAmb2": 3,
+          "u_cloudDist": 4,
+          "u_cloudNoise3D": 5,
+          "u_cloudSparse": 6,
+          "u_cloudTTex": 7,
+          "u_depthHalfTex": 8,
+          "u_texBlueNoise": 9,
+          "u_waterSim": 10
+        },
+        "contractions": [
+          {
+            "product": "%244",
+            "consumer": "%245",
+            "type": "half",
+            "operation": "fsub"
+          },
+          {
+            "product": "%580",
+            "consumer": "%581",
+            "type": "half",
+            "operation": "fsub"
+          },
+          {
+            "product": "%596",
+            "consumer": "%597",
+            "type": "half",
+            "operation": "fsub"
+          },
+          {
+            "product": "%616",
+            "consumer": "%617",
+            "type": "half",
+            "operation": "fsub"
+          },
+          {
+            "product": "%630",
+            "consumer": "%631",
+            "type": "half",
+            "operation": "fsub"
+          },
+          {
+            "product": "%785",
+            "consumer": "%787",
+            "type": "half",
+            "operation": "fsub"
+          },
+          {
+            "product": "%861",
+            "consumer": "%862",
+            "type": "half",
+            "operation": "fadd"
+          },
+          {
+            "product": "%890",
+            "consumer": "%891",
+            "type": "<3 x half>",
+            "operation": "fadd"
+          },
+          {
+            "product": "%930",
+            "consumer": "%931",
+            "type": "half",
+            "operation": "fadd"
+          },
+          {
+            "product": "%964",
+            "consumer": "%965",
+            "type": "half",
+            "operation": "fadd"
+          },
+          {
+            "product": "%966",
+            "consumer": "%967",
+            "type": "half",
+            "operation": "fadd"
+          },
+          {
+            "product": "%971",
+            "consumer": "%972",
+            "type": "half",
+            "operation": "fadd"
+          },
+          {
+            "product": "%978",
+            "consumer": "%979",
+            "type": "half",
+            "operation": "fadd"
+          },
+          {
+            "product": "%988",
+            "consumer": "%989",
+            "type": "<3 x half>",
+            "operation": "fadd"
+          },
+          {
+            "product": "%970",
+            "consumer": "%991",
+            "type": "<3 x half>",
+            "operation": "fadd"
+          },
+          {
+            "product": "%995",
+            "consumer": "%996",
+            "type": "<3 x half>",
+            "operation": "fadd"
+          },
+          {
+            "product": "%1050",
+            "consumer": "%1056",
+            "type": "<3 x half>",
+            "operation": "fadd"
+          }
+        ]
+      },
+      {
+        "program": "CloudFluffy54734",
+        "stage": "vert",
+        "source": "evidence/CloudFluffy54734.vert.air.ll",
+        "sourceSha256": "1767a0e3ee9e7bf96d946a04d7ec45c2d0f8d0f42bfeb823293770f0b2b9eb18",
+        "generatedSha256": "876cfe354394b3f8a0c5d16fa1a1bc8e731f3a3c561f9d34ec420d04be0a595a",
+        "opcodes": {
+          "getelementptr": 9,
+          "load": 10,
+          "fadd": 6,
+          "shufflevector": 15,
+          "bitcast": 6,
+          "fmul": 6,
+          "call": 2,
+          "extractelement": 3,
+          "fdiv": 1,
+          "insertelement": 4,
+          "fsub": 2,
+          "insertvalue": 4,
+          "ret": 1
+        },
+        "paddingLoads": [
+          {
+            "offset": 112,
+            "uniform": "u_projPlaneOrigin",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 80,
+            "uniform": "u_projPlaneU",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 96,
+            "uniform": "u_projPlaneV",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 0,
+            "uniform": "u_cloudBinMinWorld",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 128,
+            "uniform": "u_eyePos",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 16,
+            "uniform": "u_cloudBinRangeWorld",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          }
+        ],
+        "bindings": {
+          "u_cloudDist": 1,
+          "u_cloudNoise3D": 2,
+          "u_cloudSparse": 3,
+          "u_depthQuarterTex": 4
+        },
+        "contractions": []
+      },
+      {
+        "program": "CloudFluffy54734",
+        "stage": "frag",
+        "source": "evidence/CloudFluffy54734.frag.air.ll",
+        "sourceSha256": "4ddfc2f32ff4907bc44471fbfffdaa536408f2bcf335da7f20ebfcadd66f5009",
+        "generatedSha256": "a0c9e3ea876ed7c4d3a126b607593e35d30aa7ced642f209a97b17f24a13b294",
+        "opcodes": {
+          "shufflevector": 18,
+          "call": 32,
+          "insertelement": 7,
+          "fmul": 36,
+          "fdiv": 5,
+          "extractelement": 23,
+          "getelementptr": 11,
+          "load": 12,
+          "fsub": 11,
+          "fptrunc": 6,
+          "fpext": 5,
+          "fadd": 17,
+          "fcmp": 5,
+          "br": 8,
+          "bitcast": 4,
+          "phi": 9,
+          "select": 3,
+          "insertvalue": 1,
+          "ret": 1
+        },
+        "paddingLoads": [
+          {
+            "offset": 112,
+            "uniform": "u_eyePos",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 32,
+            "uniform": "u_cloudBinMinWorld",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 48,
+            "uniform": "u_cloudBinRangeWorld",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 16,
+            "uniform": "u_cloudWindScroll",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          }
+        ],
+        "bindings": {
+          "u_cloudDist": 1,
+          "u_cloudNoise3D": 2,
+          "u_cloudSparse": 3,
+          "u_depthQuarterTex": 4
+        },
+        "contractions": [
+          {
+            "product": "%203",
+            "consumer": "%204",
+            "type": "half",
+            "operation": "fsub"
+          }
+        ]
+      },
+      {
+        "program": "CloudFluffy62865",
+        "stage": "vert",
+        "source": "evidence/CloudFluffy62865.vert.air.ll",
+        "sourceSha256": "cfc32567093dc7866380b3ca36eb1755224c63462339c9053b32fc07f35cedca",
+        "generatedSha256": "a3acff24307d554391668b06b7cc11c06adafd4a1378aa6f34441d2c37b83f5a",
+        "opcodes": {
+          "getelementptr": 9,
+          "load": 10,
+          "fadd": 6,
+          "shufflevector": 15,
+          "bitcast": 6,
+          "fmul": 6,
+          "call": 2,
+          "extractelement": 3,
+          "fdiv": 1,
+          "insertelement": 4,
+          "fsub": 2,
+          "insertvalue": 4,
+          "ret": 1
+        },
+        "paddingLoads": [
+          {
+            "offset": 112,
+            "uniform": "u_projPlaneOrigin",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 80,
+            "uniform": "u_projPlaneU",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 96,
+            "uniform": "u_projPlaneV",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 0,
+            "uniform": "u_cloudBinMinWorld",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 128,
+            "uniform": "u_eyePos",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 16,
+            "uniform": "u_cloudBinRangeWorld",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          }
+        ],
+        "bindings": {
+          "u_cloudCoarseTTex": 1,
+          "u_cloudDist": 2,
+          "u_cloudNoise3D": 3,
+          "u_cloudSparse": 4,
+          "u_depthQuarterTex": 5,
+          "u_waterSim": 6
+        },
+        "contractions": []
+      },
+      {
+        "program": "CloudFluffy62865",
+        "stage": "frag",
+        "source": "evidence/CloudFluffy62865.frag.air.ll",
+        "sourceSha256": "9da7fdfe5fbef9d13cc633fcb3aff1cdf82e9a83fc4156dab73a4bbc430039cf",
+        "generatedSha256": "2d2d8d60f5d731876f9397287400baec5b72d35c9d2b59e80a5da3b8e7c53b47",
+        "opcodes": {
+          "shufflevector": 21,
+          "call": 32,
+          "insertelement": 7,
+          "fmul": 38,
+          "fdiv": 4,
+          "extractelement": 22,
+          "fpext": 5,
+          "fadd": 18,
+          "fcmp": 6,
+          "br": 9,
+          "getelementptr": 10,
+          "bitcast": 4,
+          "phi": 6,
+          "load": 11,
+          "fsub": 12,
+          "fptrunc": 2,
+          "select": 1,
+          "insertvalue": 1,
+          "ret": 1
+        },
+        "paddingLoads": [
+          {
+            "offset": 128,
+            "uniform": "u_eyePos",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 48,
+            "uniform": "u_cloudBinMinWorld",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 64,
+            "uniform": "u_cloudBinRangeWorld",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 32,
+            "uniform": "u_cloudWindScroll",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          }
+        ],
+        "bindings": {
+          "u_cloudCoarseTTex": 1,
+          "u_cloudDist": 2,
+          "u_cloudNoise3D": 3,
+          "u_cloudSparse": 4,
+          "u_depthQuarterTex": 5,
+          "u_waterSim": 6
+        },
+        "contractions": [
+          {
+            "product": "%210",
+            "consumer": "%212",
+            "type": "half",
+            "operation": "fsub"
+          }
+        ]
+      },
+      {
+        "program": "Fullscreen45204",
+        "stage": "vert",
+        "source": "evidence/Fullscreen45204.vert.air.ll",
+        "sourceSha256": "f2bb086fe920e36708c01cd5fc46805e08c9e844cd868b671e08265783ed383b",
+        "generatedSha256": "c7fa8a048e0a1921a87caa1a03dc1a2fc97fdfc2fbc7737cea951fcf6e370776",
+        "opcodes": {
+          "shl": 1,
+          "ashr": 1,
+          "switch": 1,
+          "br": 1,
+          "phi": 1,
+          "icmp": 1,
+          "select": 1,
+          "insertelement": 8,
+          "fpext": 4,
+          "getelementptr": 1,
+          "load": 1,
+          "fdiv": 1,
+          "fsub": 2,
+          "fmul": 1,
+          "fadd": 1,
+          "extractelement": 2,
+          "insertvalue": 2,
+          "ret": 1
+        },
+        "paddingLoads": [],
+        "bindings": {
+          "u_depthFullTex": 1
+        },
+        "contractions": [
+          {
+            "product": "%20",
+            "consumer": "%21",
+            "type": "<4 x half>",
+            "operation": "fadd"
+          }
+        ]
+      },
+      {
+        "program": "DepthDownsample45204",
+        "stage": "frag",
+        "source": "evidence/DepthDownsample45204.frag.air.ll",
+        "sourceSha256": "cccfa29f28b4c8cacee7606c32ea395440bc39d962d68a32314be7f0b92d306d",
+        "generatedSha256": "acb131b23039301555274d84c8ccab0febacad6a643df9014e3fb01f0fef235b",
+        "opcodes": {
+          "call": 11,
+          "extractelement": 6,
+          "insertelement": 2,
+          "fcmp": 3,
+          "select": 4,
+          "getelementptr": 1,
+          "load": 1,
+          "insertvalue": 1,
+          "ret": 1
+        },
+        "paddingLoads": [],
+        "bindings": {
+          "u_depthFullTex": 1
+        },
+        "contractions": []
+      },
+      {
+        "program": "Fullscreen3593",
+        "stage": "vert",
+        "source": "evidence/Fullscreen3593.vert.air.ll",
+        "sourceSha256": "95070facda6704da5fb0161adf90581cfdf89438a8d7e2ac6192fdf156d86d6c",
+        "generatedSha256": "087b346704d624a61aa9eaf97e34944866900b25f65f5f22e7e750fa613f65ff",
+        "opcodes": {
+          "shl": 1,
+          "ashr": 1,
+          "switch": 1,
+          "br": 1,
+          "phi": 1,
+          "icmp": 1,
+          "select": 1,
+          "insertelement": 8,
+          "getelementptr": 1,
+          "load": 1,
+          "fmul": 2,
+          "fsub": 2,
+          "call": 1,
+          "extractelement": 4,
+          "fpext": 4,
+          "fadd": 1,
+          "insertvalue": 2,
+          "ret": 1
+        },
+        "paddingLoads": [],
+        "bindings": {
+          "u_depthMinTex": 1
+        },
+        "contractions": [
+          {
+            "product": "%14",
+            "consumer": "%15",
+            "type": "<2 x half>",
+            "operation": "fsub"
+          },
+          {
+            "product": "%23",
+            "consumer": "%24",
+            "type": "<2 x half>",
+            "operation": "fadd"
+          }
+        ]
+      },
+      {
+        "program": "DepthDownsample3593",
+        "stage": "frag",
+        "source": "evidence/DepthDownsample3593.frag.air.ll",
+        "sourceSha256": "a457de29bbb8378bced4ce38ce2c895a257118e8bc7a7b00d5586990605c1d1b",
+        "generatedSha256": "5d768a6948bcada00ef5d46d90bc33f6d63898b486cab543857c11ae34198464",
+        "opcodes": {
+          "call": 4,
+          "shufflevector": 5,
+          "getelementptr": 1,
+          "load": 1,
+          "extractelement": 2,
+          "fcmp": 2,
+          "select": 2,
+          "insertvalue": 1,
+          "ret": 1
+        },
+        "paddingLoads": [],
+        "bindings": {
+          "u_depthMinTex": 1
+        },
+        "contractions": []
+      },
+      {
+        "program": "Fullscreen5322",
+        "stage": "vert",
+        "source": "evidence/Fullscreen5322.vert.air.ll",
+        "sourceSha256": "13103d1170f5f92b8e168b75d3affb3e571bce40b3cc82113c7a71f9b224d6c1",
+        "generatedSha256": "00ed01ad6829362c0007831e6b5e799c462c257aec7acd8c7f3bf633144e040f",
+        "opcodes": {
+          "shl": 1,
+          "ashr": 1,
+          "switch": 1,
+          "br": 1,
+          "phi": 1,
+          "icmp": 1,
+          "select": 1,
+          "insertelement": 8,
+          "getelementptr": 1,
+          "load": 1,
+          "fadd": 2,
+          "extractelement": 4,
+          "fpext": 4,
+          "fmul": 1,
+          "fsub": 1,
+          "insertvalue": 2,
+          "ret": 1
+        },
+        "paddingLoads": [],
+        "bindings": {
+          "u_depthHalfTex": 1
+        },
+        "contractions": [
+          {
+            "product": "%21",
+            "consumer": "%22",
+            "type": "<2 x half>",
+            "operation": "fadd"
+          }
+        ]
+      },
+      {
+        "program": "DepthDownsample5322",
+        "stage": "frag",
+        "source": "evidence/DepthDownsample5322.frag.air.ll",
+        "sourceSha256": "fc9cd6f0f2c5c2a8d3f228654e20360b0fe5db0e43c977e57eabba1611bee35d",
+        "generatedSha256": "faa4d5894e1e1dd5358597e6cbd484c0b7b334480273212cabe7ae9fd42a3439",
+        "opcodes": {
+          "call": 8,
+          "extractelement": 4,
+          "insertelement": 2,
+          "insertvalue": 1,
+          "ret": 1
+        },
+        "paddingLoads": [],
+        "bindings": {
+          "u_depthHalfTex": 1
+        },
+        "contractions": []
+      },
+      {
+        "program": "CloudCard0",
+        "stage": "vert",
+        "source": "evidence/CloudCard0.vert.air.ll",
+        "sourceSha256": "1c0cc36ccfbcf729c65936bdf15ffe6fca22afb53425e2bc5ab5c7d8a1f9ef77",
+        "generatedSha256": "52095f95387cc8e2ac9a09dfd46ca04e1aac42be7cf64ebfeb194314b97d4738",
+        "opcodes": {
+          "getelementptr": 22,
+          "bitcast": 11,
+          "load": 36,
+          "shufflevector": 63,
+          "fsub": 30,
+          "call": 46,
+          "insertelement": 38,
+          "fmul": 107,
+          "fadd": 51,
+          "extractelement": 50,
+          "fpext": 18,
+          "fptrunc": 18,
+          "br": 15,
+          "phi": 6,
+          "sext": 1,
+          "add": 1,
+          "icmp": 1,
+          "fdiv": 9,
+          "fcmp": 8,
+          "insertvalue": 8,
+          "ret": 1
+        },
+        "paddingLoads": [
+          {
+            "offset": 240,
+            "uniform": "u_eyePos",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 0,
+            "uniform": "u_sunDir",
+            "type": "<4 x half>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 304,
+            "uniform": "u_projPlaneOrigin",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 272,
+            "uniform": "u_projPlaneU",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 288,
+            "uniform": "u_projPlaneV",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 16,
+            "uniform": "u_averageSkyColor",
+            "type": "<4 x half>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 8,
+            "uniform": "u_sunColor",
+            "type": "<4 x half>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 24,
+            "uniform": "u_pointLight",
+            "type": "<4 x half>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 0,
+            "uniform": "u_sunDir",
+            "type": "<4 x half>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 96,
+            "uniform": "u_cloudBinMinWorld",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 112,
+            "uniform": "u_cloudBinRangeWorld",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 64,
+            "uniform": "u_cloudWindScroll",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 8,
+            "uniform": "u_sunColor",
+            "type": "<4 x half>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 96,
+            "uniform": "u_cloudBinMinWorld",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 112,
+            "uniform": "u_cloudBinRangeWorld",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 96,
+            "uniform": "u_cloudBinMinWorld",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 112,
+            "uniform": "u_cloudBinRangeWorld",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          }
+        ],
+        "bindings": {
+          "u_alphaTex": 1,
+          "u_cloudDist": 2,
+          "u_cloudNoise3D": 3,
+          "u_cloudSparse": 4,
+          "u_depthHalfTex": 5,
+          "u_texPerturb": 6,
+          "u_waterSim": 7
+        },
+        "contractions": [
+          {
+            "product": "%42",
+            "consumer": "%43",
+            "type": "<2 x half>",
+            "operation": "fadd"
+          },
+          {
+            "product": "%175",
+            "consumer": "%176",
+            "type": "<3 x half>",
+            "operation": "fadd"
+          },
+          {
+            "product": "%332",
+            "consumer": "%334",
+            "type": "half",
+            "operation": "fsub"
+          },
+          {
+            "product": "%402",
+            "consumer": "%403",
+            "type": "half",
+            "operation": "fadd"
+          },
+          {
+            "product": "%404",
+            "consumer": "%405",
+            "type": "half",
+            "operation": "fadd"
+          },
+          {
+            "product": "%414",
+            "consumer": "%415",
+            "type": "<3 x half>",
+            "operation": "fadd"
+          },
+          {
+            "product": "%408",
+            "consumer": "%417",
+            "type": "<3 x half>",
+            "operation": "fadd"
+          },
+          {
+            "product": "%421",
+            "consumer": "%422",
+            "type": "<3 x half>",
+            "operation": "fadd"
+          }
+        ]
+      },
+      {
+        "program": "CloudCard0",
+        "stage": "frag",
+        "source": "evidence/CloudCard0.frag.air.ll",
+        "sourceSha256": "c8843a42496eab53a9694a42f38b7d508ded59d4f2b2d717539e8d51d332b81d",
+        "generatedSha256": "c9dcd1bf0081a604a7cb6648cdba1ef1c6a43ab8b5a1fd17bf301a268ca87721",
+        "opcodes": {
+          "shufflevector": 11,
+          "getelementptr": 6,
+          "load": 7,
+          "fdiv": 4,
+          "extractelement": 16,
+          "call": 16,
+          "fmul": 20,
+          "fsub": 6,
+          "fcmp": 2,
+          "br": 5,
+          "fpext": 6,
+          "fadd": 5,
+          "insertelement": 14,
+          "bitcast": 2,
+          "phi": 4,
+          "sext": 1,
+          "add": 1,
+          "icmp": 1,
+          "fptrunc": 4,
+          "insertvalue": 2,
+          "ret": 1
+        },
+        "paddingLoads": [
+          {
+            "offset": 16,
+            "uniform": "u_cloudWindScroll",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 0,
+            "uniform": "u_cloudWindMove",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          }
+        ],
+        "bindings": {
+          "u_alphaTex": 1,
+          "u_cloudDist": 2,
+          "u_cloudNoise3D": 3,
+          "u_cloudSparse": 4,
+          "u_depthHalfTex": 5,
+          "u_texPerturb": 6,
+          "u_waterSim": 7
+        },
+        "contractions": [
+          {
+            "product": "%39",
+            "consumer": "%40",
+            "type": "half",
+            "operation": "fadd"
+          }
+        ]
+      },
+      {
+        "program": "FlatCloud11244",
+        "stage": "vert",
+        "source": "evidence/FlatCloud11244.vert.air.ll",
+        "sourceSha256": "a1a76d10dcd4827ca6f23c0d9355cadea4f6cf36cd738d089d268ca9294ea6d0",
+        "generatedSha256": "dd8b0d01f3ff20c41d3ed283c0be421e8c7606c90378a202b41ca4bf8491660a",
+        "opcodes": {
+          "extractelement": 55,
+          "fptrunc": 20,
+          "fadd": 55,
+          "fmul": 116,
+          "fcmp": 11,
+          "select": 2,
+          "call": 49,
+          "insertelement": 54,
+          "shufflevector": 86,
+          "getelementptr": 30,
+          "load": 40,
+          "fdiv": 17,
+          "fpext": 28,
+          "br": 24,
+          "fsub": 34,
+          "phi": 17,
+          "sext": 3,
+          "add": 3,
+          "icmp": 3,
+          "bitcast": 11,
+          "insertvalue": 9,
+          "ret": 1
+        },
+        "paddingLoads": [
+          {
+            "offset": 512,
+            "uniform": "u_projPlaneOrigin",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 480,
+            "uniform": "u_projPlaneU",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 496,
+            "uniform": "u_projPlaneV",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 96,
+            "uniform": "u_cloudBinMinWorld",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 112,
+            "uniform": "u_cloudBinRangeWorld",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 240,
+            "uniform": "u_eyePos",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 16,
+            "uniform": "u_averageSkyColor",
+            "type": "<4 x half>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 8,
+            "uniform": "u_sunColor",
+            "type": "<4 x half>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 24,
+            "uniform": "u_pointLight",
+            "type": "<4 x half>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 0,
+            "uniform": "u_sunDir",
+            "type": "<4 x half>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 96,
+            "uniform": "u_cloudBinMinWorld",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 112,
+            "uniform": "u_cloudBinRangeWorld",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 64,
+            "uniform": "u_cloudWindScroll",
+            "type": "<4 x float>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 0,
+            "uniform": "u_sunDir",
+            "type": "<4 x half>",
+            "paddingLane": 3
+          },
+          {
+            "offset": 8,
+            "uniform": "u_sunColor",
+            "type": "<4 x half>",
+            "paddingLane": 3
+          }
+        ],
+        "bindings": {
+          "u_cloudAmb0": 1,
+          "u_cloudAmb1": 2,
+          "u_cloudAmb2": 3,
+          "u_cloudDist": 4,
+          "u_cloudNoise3D": 5,
+          "u_cloudSparse": 6,
+          "u_depthHalfTex": 7,
+          "u_texture": 8,
+          "u_waterSim": 9
+        },
+        "contractions": [
+          {
+            "product": "%347",
+            "consumer": "%348",
+            "type": "half",
+            "operation": "fadd"
+          },
+          {
+            "product": "%413",
+            "consumer": "%421",
+            "type": "<3 x half>",
+            "operation": "fadd"
+          },
+          {
+            "product": "%577",
+            "consumer": "%579",
+            "type": "half",
+            "operation": "fsub"
+          },
+          {
+            "product": "%651",
+            "consumer": "%652",
+            "type": "half",
+            "operation": "fadd"
+          },
+          {
+            "product": "%653",
+            "consumer": "%654",
+            "type": "half",
+            "operation": "fadd"
+          },
+          {
+            "product": "%663",
+            "consumer": "%664",
+            "type": "<3 x half>",
+            "operation": "fadd"
+          },
+          {
+            "product": "%657",
+            "consumer": "%666",
+            "type": "<3 x half>",
+            "operation": "fadd"
+          },
+          {
+            "product": "%670",
+            "consumer": "%671",
+            "type": "<3 x half>",
+            "operation": "fadd"
+          }
+        ]
+      },
+      {
+        "program": "FlatCloud11244",
+        "stage": "frag",
+        "source": "evidence/FlatCloud11244.frag.air.ll",
+        "sourceSha256": "2de86dbc8ba2db6258075121e0339ad8a3a40aaefcd38b6894d43b77aa0bcac9",
+        "generatedSha256": "f2d2bb31548330e9ddbd5f4e9878b0119163e75741a68426266126d94ff145d0",
+        "opcodes": {
+          "insertelement": 8,
+          "shufflevector": 4,
+          "fmul": 10,
+          "extractelement": 9,
+          "fptrunc": 6,
+          "fpext": 6,
+          "call": 9,
+          "getelementptr": 1,
+          "load": 1,
+          "fdiv": 2,
+          "fsub": 2,
+          "fadd": 1,
+          "insertvalue": 2,
+          "ret": 1
+        },
+        "paddingLoads": [],
+        "bindings": {
+          "u_cloudAmb0": 1,
+          "u_cloudAmb1": 2,
+          "u_cloudAmb2": 3,
+          "u_cloudDist": 4,
+          "u_cloudNoise3D": 5,
+          "u_cloudSparse": 6,
+          "u_depthHalfTex": 7,
+          "u_texture": 8,
+          "u_waterSim": 9
+        },
+        "contractions": []
+      }
+    ],
+    "gpuParityVerified": false,
+    "contractFast": "half"
+  },
+  "generatedSources": [
+    {
+      "name": "CloudCard",
+      "cameraCase": "16x16-depth10000",
+      "stages": {
+        "vert": "52095f95387cc8e2ac9a09dfd46ca04e1aac42be7cf64ebfeb194314b97d4738",
+        "frag": "c9dcd1bf0081a604a7cb6648cdba1ef1c6a43ab8b5a1fd17bf301a268ca87721"
+      }
+    },
+    {
+      "name": "CloudCard",
+      "cameraCase": "63x37-depth10000",
+      "stages": {
+        "vert": "52095f95387cc8e2ac9a09dfd46ca04e1aac42be7cf64ebfeb194314b97d4738",
+        "frag": "c9dcd1bf0081a604a7cb6648cdba1ef1c6a43ab8b5a1fd17bf301a268ca87721"
+      }
+    },
+    {
+      "name": "CloudCard",
+      "cameraCase": "16x16-depth-10000",
+      "stages": {
+        "vert": "52095f95387cc8e2ac9a09dfd46ca04e1aac42be7cf64ebfeb194314b97d4738",
+        "frag": "c9dcd1bf0081a604a7cb6648cdba1ef1c6a43ab8b5a1fd17bf301a268ca87721"
+      }
+    },
+    {
+      "name": "CloudCard",
+      "cameraCase": "63x37-depth-10000",
+      "stages": {
+        "vert": "52095f95387cc8e2ac9a09dfd46ca04e1aac42be7cf64ebfeb194314b97d4738",
+        "frag": "c9dcd1bf0081a604a7cb6648cdba1ef1c6a43ab8b5a1fd17bf301a268ca87721"
+      }
+    },
+    {
+      "name": "CloudCard",
+      "cameraCase": "16x16-depth0",
+      "stages": {
+        "vert": "52095f95387cc8e2ac9a09dfd46ca04e1aac42be7cf64ebfeb194314b97d4738",
+        "frag": "c9dcd1bf0081a604a7cb6648cdba1ef1c6a43ab8b5a1fd17bf301a268ca87721"
+      }
+    },
+    {
+      "name": "CloudCard",
+      "cameraCase": "63x37-depth0",
+      "stages": {
+        "vert": "52095f95387cc8e2ac9a09dfd46ca04e1aac42be7cf64ebfeb194314b97d4738",
+        "frag": "c9dcd1bf0081a604a7cb6648cdba1ef1c6a43ab8b5a1fd17bf301a268ca87721"
+      }
+    },
+    {
+      "name": "CloudQuadParticleFluffy",
+      "cameraCase": "16x16-depth10000",
+      "stages": {
+        "vert": "dd8b0d01f3ff20c41d3ed283c0be421e8c7606c90378a202b41ca4bf8491660a",
+        "frag": "f2d2bb31548330e9ddbd5f4e9878b0119163e75741a68426266126d94ff145d0"
+      }
+    },
+    {
+      "name": "CloudQuadParticleFluffy",
+      "cameraCase": "63x37-depth10000",
+      "stages": {
+        "vert": "dd8b0d01f3ff20c41d3ed283c0be421e8c7606c90378a202b41ca4bf8491660a",
+        "frag": "f2d2bb31548330e9ddbd5f4e9878b0119163e75741a68426266126d94ff145d0"
+      }
+    },
+    {
+      "name": "CloudQuadParticleFluffy",
+      "cameraCase": "16x16-depth-10000",
+      "stages": {
+        "vert": "dd8b0d01f3ff20c41d3ed283c0be421e8c7606c90378a202b41ca4bf8491660a",
+        "frag": "f2d2bb31548330e9ddbd5f4e9878b0119163e75741a68426266126d94ff145d0"
+      }
+    },
+    {
+      "name": "CloudQuadParticleFluffy",
+      "cameraCase": "63x37-depth-10000",
+      "stages": {
+        "vert": "dd8b0d01f3ff20c41d3ed283c0be421e8c7606c90378a202b41ca4bf8491660a",
+        "frag": "f2d2bb31548330e9ddbd5f4e9878b0119163e75741a68426266126d94ff145d0"
+      }
+    },
+    {
+      "name": "CloudQuadParticleFluffy",
+      "cameraCase": "16x16-depth0",
+      "stages": {
+        "vert": "dd8b0d01f3ff20c41d3ed283c0be421e8c7606c90378a202b41ca4bf8491660a",
+        "frag": "f2d2bb31548330e9ddbd5f4e9878b0119163e75741a68426266126d94ff145d0"
+      }
+    },
+    {
+      "name": "CloudQuadParticleFluffy",
+      "cameraCase": "63x37-depth0",
+      "stages": {
+        "vert": "dd8b0d01f3ff20c41d3ed283c0be421e8c7606c90378a202b41ca4bf8491660a",
+        "frag": "f2d2bb31548330e9ddbd5f4e9878b0119163e75741a68426266126d94ff145d0"
+      }
+    }
+  ],
+  "reference": "Original AIR SSA/branches/casts retargeted by LLVM to Linux AArch64 at O0, exact LLVM pointer-only entry bridges and small-vector intrinsic ABI, explicit CPU math and float32 sampler",
+  "referenceToolSha256": "3c0ec45c7d3618f890246ddc855d8252398bb1726fc9a30d61a959786b83ee0a",
+  "scope": "Original CloudCard and CloudQuadParticleFluffy AIR on real level cloud atlas/noise inputs. Explicit test quad/particle vertex attributes, lighting, matrix, perturb/alpha/water textures and positive/negative/zero depth. Shader standalone output before Cloud blending; arbitrary level object generation and original game/Metal behavior are not covered. Each CPU stage consumes the same Vulkan-produced input textures. CPU raster interpolation unless the stage declares captured varying inputs. Tolerance 0.025 + 1% magnitude. Tests two finite uniform padding patterns. No original Metal execution, hardware intrinsic/filter guarantee, complete Compositor, Windows or game-image parity.",
+  "sources": [
+    {
+      "file": "evidence/CloudCard0.frag.air.ll",
+      "sha256": "c8843a42496eab53a9694a42f38b7d508ded59d4f2b2d717539e8d51d332b81d",
+      "instructionBodySha256": "8821a35964798ae2ab4653268511546afa78d44a89f3e4e9d59d9c2a26a2a031",
+      "instructionBodyUnchanged": true
+    },
+    {
+      "file": "evidence/CloudCard0.vert.air.ll",
+      "sha256": "1c0cc36ccfbcf729c65936bdf15ffe6fca22afb53425e2bc5ab5c7d8a1f9ef77",
+      "instructionBodySha256": "fe3a5d11fcaa9bd355a796215b63678f68132903a6742eb654b1c3c6e1f23ed3",
+      "instructionBodyUnchanged": true
+    },
+    {
+      "file": "evidence/FlatCloud11244.frag.air.ll",
+      "sha256": "2de86dbc8ba2db6258075121e0339ad8a3a40aaefcd38b6894d43b77aa0bcac9",
+      "instructionBodySha256": "094257f2e3ca4f6c89ae75f9716c667b6c9484cb5629d95952788934d360142c",
+      "instructionBodyUnchanged": true
+    },
+    {
+      "file": "evidence/FlatCloud11244.vert.air.ll",
+      "sha256": "a1a76d10dcd4827ca6f23c0d9355cadea4f6cf36cd738d089d268ca9294ea6d0",
+      "instructionBodySha256": "0d10e499ed173ddce3994f117c9341060ddf73d9b957407c2bf20d2e74d8eefc",
+      "instructionBodyUnchanged": true
+    }
+  ],
+  "samplerSourceSha256": "ebf8886a2dd00f6fbbcf84ba9c0038b216efc69d828086e5f069e01475603025",
+  "programs": [
+    {
+      "name": "CloudCard",
+      "cameraCase": "16x16-depth10000",
+      "rasterSamples": 256,
+      "nonzeroReferencePixels": 256,
+      "uniformPaddingFailures": 0,
+      "varyingCaptureOutputMatches": null,
+      "vertexInterpolationFailedComponents": 0,
+      "maxVertexInterpolationDifference": 0.0,
+      "attachments": [
+        {
+          "location": 0,
+          "comparedComponents": 1024,
+          "maxAbsoluteDifference": 0.00048828125,
+          "failedComponents": 0,
+          "firstFailures": [],
+          "passed": true
+        },
+        {
+          "location": 1,
+          "comparedComponents": 1024,
+          "maxAbsoluteDifference": 0.5,
+          "failedComponents": 0,
+          "firstFailures": [],
+          "passed": true
+        }
+      ]
+    },
+    {
+      "name": "CloudCard",
+      "cameraCase": "63x37-depth10000",
+      "rasterSamples": 2331,
+      "nonzeroReferencePixels": 2331,
+      "uniformPaddingFailures": 0,
+      "varyingCaptureOutputMatches": null,
+      "vertexInterpolationFailedComponents": 0,
+      "maxVertexInterpolationDifference": 0.0,
+      "attachments": [
+        {
+          "location": 0,
+          "comparedComponents": 9324,
+          "maxAbsoluteDifference": 0.00048828125,
+          "failedComponents": 0,
+          "firstFailures": [],
+          "passed": true
+        },
+        {
+          "location": 1,
+          "comparedComponents": 9324,
+          "maxAbsoluteDifference": 0.5,
+          "failedComponents": 0,
+          "firstFailures": [],
+          "passed": true
+        }
+      ]
+    },
+    {
+      "name": "CloudCard",
+      "cameraCase": "16x16-depth-10000",
+      "rasterSamples": 256,
+      "nonzeroReferencePixels": 256,
+      "uniformPaddingFailures": 0,
+      "varyingCaptureOutputMatches": null,
+      "vertexInterpolationFailedComponents": 0,
+      "maxVertexInterpolationDifference": 0.0,
+      "attachments": [
+        {
+          "location": 0,
+          "comparedComponents": 1024,
+          "maxAbsoluteDifference": 0.00048828125,
+          "failedComponents": 0,
+          "firstFailures": [],
+          "passed": true
+        },
+        {
+          "location": 1,
+          "comparedComponents": 1024,
+          "maxAbsoluteDifference": 0.5,
+          "failedComponents": 0,
+          "firstFailures": [],
+          "passed": true
+        }
+      ]
+    },
+    {
+      "name": "CloudCard",
+      "cameraCase": "63x37-depth-10000",
+      "rasterSamples": 2331,
+      "nonzeroReferencePixels": 2331,
+      "uniformPaddingFailures": 0,
+      "varyingCaptureOutputMatches": null,
+      "vertexInterpolationFailedComponents": 0,
+      "maxVertexInterpolationDifference": 0.0,
+      "attachments": [
+        {
+          "location": 0,
+          "comparedComponents": 9324,
+          "maxAbsoluteDifference": 0.00048828125,
+          "failedComponents": 0,
+          "firstFailures": [],
+          "passed": true
+        },
+        {
+          "location": 1,
+          "comparedComponents": 9324,
+          "maxAbsoluteDifference": 0.5,
+          "failedComponents": 0,
+          "firstFailures": [],
+          "passed": true
+        }
+      ]
+    },
+    {
+      "name": "CloudCard",
+      "cameraCase": "16x16-depth0",
+      "rasterSamples": 256,
+      "nonzeroReferencePixels": 0,
+      "uniformPaddingFailures": 0,
+      "varyingCaptureOutputMatches": null,
+      "vertexInterpolationFailedComponents": 0,
+      "maxVertexInterpolationDifference": 0.0,
+      "attachments": [
+        {
+          "location": 0,
+          "comparedComponents": 1024,
+          "maxAbsoluteDifference": 0.0,
+          "failedComponents": 0,
+          "firstFailures": [],
+          "passed": true
+        },
+        {
+          "location": 1,
+          "comparedComponents": 1024,
+          "maxAbsoluteDifference": 0.0,
+          "failedComponents": 0,
+          "firstFailures": [],
+          "passed": true
+        }
+      ]
+    },
+    {
+      "name": "CloudCard",
+      "cameraCase": "63x37-depth0",
+      "rasterSamples": 2331,
+      "nonzeroReferencePixels": 0,
+      "uniformPaddingFailures": 0,
+      "varyingCaptureOutputMatches": null,
+      "vertexInterpolationFailedComponents": 0,
+      "maxVertexInterpolationDifference": 0.0,
+      "attachments": [
+        {
+          "location": 0,
+          "comparedComponents": 9324,
+          "maxAbsoluteDifference": 0.0,
+          "failedComponents": 0,
+          "firstFailures": [],
+          "passed": true
+        },
+        {
+          "location": 1,
+          "comparedComponents": 9324,
+          "maxAbsoluteDifference": 0.0,
+          "failedComponents": 0,
+          "firstFailures": [],
+          "passed": true
+        }
+      ]
+    },
+    {
+      "name": "CloudQuadParticleFluffy",
+      "cameraCase": "16x16-depth10000",
+      "rasterSamples": 256,
+      "nonzeroReferencePixels": 256,
+      "uniformPaddingFailures": 0,
+      "varyingCaptureOutputMatches": null,
+      "vertexInterpolationFailedComponents": 0,
+      "maxVertexInterpolationDifference": 0.0,
+      "attachments": [
+        {
+          "location": 0,
+          "comparedComponents": 1024,
+          "maxAbsoluteDifference": 0.0009765625,
+          "failedComponents": 0,
+          "firstFailures": [],
+          "passed": true
+        },
+        {
+          "location": 1,
+          "comparedComponents": 1024,
+          "maxAbsoluteDifference": 0.0,
+          "failedComponents": 0,
+          "firstFailures": [],
+          "passed": true
+        }
+      ]
+    },
+    {
+      "name": "CloudQuadParticleFluffy",
+      "cameraCase": "63x37-depth10000",
+      "rasterSamples": 2331,
+      "nonzeroReferencePixels": 2331,
+      "uniformPaddingFailures": 0,
+      "varyingCaptureOutputMatches": null,
+      "vertexInterpolationFailedComponents": 0,
+      "maxVertexInterpolationDifference": 0.0,
+      "attachments": [
+        {
+          "location": 0,
+          "comparedComponents": 9324,
+          "maxAbsoluteDifference": 0.0009765625,
+          "failedComponents": 0,
+          "firstFailures": [],
+          "passed": true
+        },
+        {
+          "location": 1,
+          "comparedComponents": 9324,
+          "maxAbsoluteDifference": 0.0,
+          "failedComponents": 0,
+          "firstFailures": [],
+          "passed": true
+        }
+      ]
+    },
+    {
+      "name": "CloudQuadParticleFluffy",
+      "cameraCase": "16x16-depth-10000",
+      "rasterSamples": 256,
+      "nonzeroReferencePixels": 256,
+      "uniformPaddingFailures": 0,
+      "varyingCaptureOutputMatches": null,
+      "vertexInterpolationFailedComponents": 0,
+      "maxVertexInterpolationDifference": 0.0,
+      "attachments": [
+        {
+          "location": 0,
+          "comparedComponents": 1024,
+          "maxAbsoluteDifference": 0.0009765625,
+          "failedComponents": 0,
+          "firstFailures": [],
+          "passed": true
+        },
+        {
+          "location": 1,
+          "comparedComponents": 1024,
+          "maxAbsoluteDifference": 0.0,
+          "failedComponents": 0,
+          "firstFailures": [],
+          "passed": true
+        }
+      ]
+    },
+    {
+      "name": "CloudQuadParticleFluffy",
+      "cameraCase": "63x37-depth-10000",
+      "rasterSamples": 2331,
+      "nonzeroReferencePixels": 2331,
+      "uniformPaddingFailures": 0,
+      "varyingCaptureOutputMatches": null,
+      "vertexInterpolationFailedComponents": 0,
+      "maxVertexInterpolationDifference": 0.0,
+      "attachments": [
+        {
+          "location": 0,
+          "comparedComponents": 9324,
+          "maxAbsoluteDifference": 0.0009765625,
+          "failedComponents": 0,
+          "firstFailures": [],
+          "passed": true
+        },
+        {
+          "location": 1,
+          "comparedComponents": 9324,
+          "maxAbsoluteDifference": 0.0,
+          "failedComponents": 0,
+          "firstFailures": [],
+          "passed": true
+        }
+      ]
+    },
+    {
+      "name": "CloudQuadParticleFluffy",
+      "cameraCase": "16x16-depth0",
+      "rasterSamples": 256,
+      "nonzeroReferencePixels": 256,
+      "uniformPaddingFailures": 0,
+      "varyingCaptureOutputMatches": null,
+      "vertexInterpolationFailedComponents": 0,
+      "maxVertexInterpolationDifference": 0.0,
+      "attachments": [
+        {
+          "location": 0,
+          "comparedComponents": 1024,
+          "maxAbsoluteDifference": 0.0009765625,
+          "failedComponents": 0,
+          "firstFailures": [],
+          "passed": true
+        },
+        {
+          "location": 1,
+          "comparedComponents": 1024,
+          "maxAbsoluteDifference": 0.0,
+          "failedComponents": 0,
+          "firstFailures": [],
+          "passed": true
+        }
+      ]
+    },
+    {
+      "name": "CloudQuadParticleFluffy",
+      "cameraCase": "63x37-depth0",
+      "rasterSamples": 2331,
+      "nonzeroReferencePixels": 2331,
+      "uniformPaddingFailures": 0,
+      "varyingCaptureOutputMatches": null,
+      "vertexInterpolationFailedComponents": 0,
+      "maxVertexInterpolationDifference": 0.0,
+      "attachments": [
+        {
+          "location": 0,
+          "comparedComponents": 9324,
+          "maxAbsoluteDifference": 0.0009765625,
+          "failedComponents": 0,
+          "firstFailures": [],
+          "passed": true
+        },
+        {
+          "location": 1,
+          "comparedComponents": 9324,
+          "maxAbsoluteDifference": 0.0,
+          "failedComponents": 0,
+          "firstFailures": [],
+          "passed": true
+        }
+      ]
+    }
+  ]
+}

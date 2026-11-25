@@ -1,0 +1,775 @@
+{
+  "className": "OutfitSelect",
+  "functionGroup": "动画、回放与装扮",
+  "functionRole": "衣柜、区域、商店与购买事件",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "OutfitSelect 的原默认值、继承初始化及 7 个序列化字段变体；原注册字段 6 项。"
+    },
+    {
+      "name": "衣柜、区域、商店与购买事件",
+      "status": "pending",
+      "description": "节点及 115 条 OutfitDefs/七槽资源已清点；账户解锁、原衣柜 UI、资源/配色/配件和换装事件待恢复。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Clump（6 条引用）、Marker（12 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "OutfitSelect",
+    "category": "动画、回放与装扮",
+    "functionGroupId": "animation",
+    "functionRole": "衣柜、区域、商店与购买事件",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "OutfitSelect 的原默认值、继承初始化及 7 个序列化字段变体；原注册字段 6 项。"
+      },
+      {
+        "name": "衣柜、区域、商店与购买事件",
+        "status": "pending",
+        "description": "节点及 115 条 OutfitDefs/七槽资源已清点；账户解锁、原衣柜 UI、资源/配色/配件和换装事件待恢复。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Clump（6 条引用）、Marker（12 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Marker",
+        "references": 12
+      },
+      {
+        "className": "Clump",
+        "references": 6
+      }
+    ],
+    "rttiWorkingGroup": "系统和其余类型",
+    "role": "对象实例类型",
+    "instances": 12,
+    "nestedInstances": 0,
+    "referenceFields": 18,
+    "declaredLevels": 2,
+    "levels": [
+      {
+        "level": "CandleSpaceEnd",
+        "nodes": 7,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SkyHub2",
+        "nodes": 5,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "avatarRegion",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "closet",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "onAllPurchased",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "shopName",
+        "type": 1,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "showAllPurchased",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "showAllPurchasedType",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100ce33a0",
+    "nativeRegisteredFields": [
+      {
+        "name": "avatarRegion",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP6MarkerERK8MetaTypev",
+        "nativeOffset": 80,
+        "registrationFunction": "0x1005174a0",
+        "propertyAddress": "0x100ce2f20"
+      },
+      {
+        "name": "shopName",
+        "typeGetter": "__Z17GetMetaTypeByTypeINSt3__112basic_stringIcNS0_11char_traitsIcEE16StlPoolAllocatorIcEEEERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x1005174a0",
+        "propertyAddress": "0x100ce2f70"
+      },
+      {
+        "name": "showAllPurchased",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 89,
+        "registrationFunction": "0x1005174a0",
+        "propertyAddress": "0x100ce2fc0"
+      },
+      {
+        "name": "showAllPurchasedType",
+        "typeGetter": "__Z17GetMetaTypeByTypeI14OutfitSlotTypeERK8MetaTypev",
+        "nativeOffset": 92,
+        "registrationFunction": "0x1005174a0",
+        "propertyAddress": "0x100ce3010"
+      },
+      {
+        "name": "onAllPurchased",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 96,
+        "registrationFunction": "0x1005174a0",
+        "propertyAddress": "0x100ce3060"
+      },
+      {
+        "name": "closet",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 88,
+        "registrationFunction": "0x1005174a0",
+        "propertyAddress": "0x100ce30b0"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [
+      "docs/Objects与Avatar进度.json"
+    ],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 6 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "节点及 115 条 OutfitDefs/七槽资源已清点；账户解锁、原衣柜 UI、资源/配色/配件和换装事件待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "CandleSpaceEnd:n46",
+      "level": "CandleSpaceEnd",
+      "nodeId": 46,
+      "name": "BstNode_2446917670",
+      "className": "OutfitSelect",
+      "classIndex": 16,
+      "sourceOffset": 23423,
+      "sourceLength": 52,
+      "sourceSha256": "1aca6ea4baa2cf2f3ba2d9c585bbc5e63a02dde826058d346ca49054fc569d0f",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n46/p3",
+          "fieldName": "onAllPurchased",
+          "target": "CandleSpaceEnd:n664",
+          "targetNodeId": 664,
+          "offset": 23462
+        },
+        {
+          "fieldId": "n46/p6",
+          "fieldName": "avatarRegion",
+          "target": "CandleSpaceEnd:n261",
+          "targetNodeId": 261,
+          "offset": 23471
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CandleSpaceEnd:n66",
+      "level": "CandleSpaceEnd",
+      "nodeId": 66,
+      "name": "BstNode_2446917682",
+      "className": "OutfitSelect",
+      "classIndex": 16,
+      "sourceOffset": 26069,
+      "sourceLength": 55,
+      "sourceSha256": "3b3154727228a4180ead69e537d5a685cc641960c712d22708a69ff1ecfc6150",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n66/p3",
+          "fieldName": "onAllPurchased",
+          "target": "CandleSpaceEnd:n674",
+          "targetNodeId": 674,
+          "offset": 26111
+        },
+        {
+          "fieldId": "n66/p6",
+          "fieldName": "avatarRegion",
+          "target": "CandleSpaceEnd:n544",
+          "targetNodeId": 544,
+          "offset": 26120
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CandleSpaceEnd:n143",
+      "level": "CandleSpaceEnd",
+      "nodeId": 143,
+      "name": "BstNode_2446917688",
+      "className": "OutfitSelect",
+      "classIndex": 16,
+      "sourceOffset": 37587,
+      "sourceLength": 53,
+      "sourceSha256": "70118ebfe61d5e6a4a52198d52987ed9cf174bb45105ef9c2c644a76c66e2220",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n143/p3",
+          "fieldName": "onAllPurchased",
+          "target": "CandleSpaceEnd:n694",
+          "targetNodeId": 694,
+          "offset": 37627
+        },
+        {
+          "fieldId": "n143/p6",
+          "fieldName": "avatarRegion",
+          "target": "CandleSpaceEnd:n401",
+          "targetNodeId": 401,
+          "offset": 37636
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CandleSpaceEnd:n280",
+      "level": "CandleSpaceEnd",
+      "nodeId": 280,
+      "name": "BstNode_2446917868",
+      "className": "OutfitSelect",
+      "classIndex": 16,
+      "sourceOffset": 69466,
+      "sourceLength": 53,
+      "sourceSha256": "a4f37770049744dadb1039c4804bfa584a20254bfbeae8224c5d4f941ea5ec05",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n280/p3",
+          "fieldName": "onAllPurchased",
+          "target": "CandleSpaceEnd:n731",
+          "targetNodeId": 731,
+          "offset": 69506
+        },
+        {
+          "fieldId": "n280/p6",
+          "fieldName": "avatarRegion",
+          "target": "CandleSpaceEnd:n245",
+          "targetNodeId": 245,
+          "offset": 69515
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CandleSpaceEnd:n402",
+      "level": "CandleSpaceEnd",
+      "nodeId": 402,
+      "name": "BstNode_2446917694",
+      "className": "OutfitSelect",
+      "classIndex": 16,
+      "sourceOffset": 91904,
+      "sourceLength": 54,
+      "sourceSha256": "9222ea492e2e6b351cbd10b38e6b2614e084c01f5709dd304ce94f485444f2bf",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n402/p3",
+          "fieldName": "onAllPurchased",
+          "target": "CandleSpaceEnd:n766",
+          "targetNodeId": 766,
+          "offset": 91945
+        },
+        {
+          "fieldId": "n402/p6",
+          "fieldName": "avatarRegion",
+          "target": "CandleSpaceEnd:n570",
+          "targetNodeId": 570,
+          "offset": 91954
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CandleSpaceEnd:n461",
+      "level": "CandleSpaceEnd",
+      "nodeId": 461,
+      "name": "BstNode_2446917676",
+      "className": "OutfitSelect",
+      "classIndex": 16,
+      "sourceOffset": 99802,
+      "sourceLength": 53,
+      "sourceSha256": "a85856f2adcd5b7b5795d4b6dc4144ddd7e949b85814065b133424588b163f17",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n461/p3",
+          "fieldName": "onAllPurchased",
+          "target": "CandleSpaceEnd:n783",
+          "targetNodeId": 783,
+          "offset": 99842
+        },
+        {
+          "fieldId": "n461/p6",
+          "fieldName": "avatarRegion",
+          "target": "CandleSpaceEnd:n105",
+          "targetNodeId": 105,
+          "offset": 99851
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CandleSpaceEnd:n482",
+      "level": "CandleSpaceEnd",
+      "nodeId": 482,
+      "name": "BstNode_2446917700",
+      "className": "OutfitSelect",
+      "classIndex": 16,
+      "sourceOffset": 103594,
+      "sourceLength": 54,
+      "sourceSha256": "5244ef19934d9578cbe95533a27f2478a7c5a2bdef5411f5394ff69b0791a263",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n482/p6",
+          "fieldName": "avatarRegion",
+          "target": "CandleSpaceEnd:n439",
+          "targetNodeId": 439,
+          "offset": 103644
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n849",
+      "level": "SkyHub2",
+      "nodeId": 849,
+      "name": "BstNode_1167523853",
+      "className": "OutfitSelect",
+      "classIndex": 82,
+      "sourceOffset": 188381,
+      "sourceLength": 39,
+      "sourceSha256": "9f20c28ca4b2aafef2db8d7d572dc12bd3db8cb7ef5130a2eba79fa2b951a105",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n849/p6",
+          "fieldName": "avatarRegion",
+          "target": "SkyHub2:n1481",
+          "targetNodeId": 1481,
+          "offset": 188416
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1292",
+      "level": "SkyHub2",
+      "nodeId": 1292,
+      "name": "BstNode_1524",
+      "className": "OutfitSelect",
+      "classIndex": 82,
+      "sourceOffset": 264775,
+      "sourceLength": 33,
+      "sourceSha256": "95e87c3bb336258a94a8a1fff6edd7648f11c924ec453156a50b3bf671b2d5b7",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1292/p6",
+          "fieldName": "avatarRegion",
+          "target": "SkyHub2:n656",
+          "targetNodeId": 656,
+          "offset": 264804
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1312",
+      "level": "SkyHub2",
+      "nodeId": 1312,
+      "name": "BstNode_1522",
+      "className": "OutfitSelect",
+      "classIndex": 82,
+      "sourceOffset": 266943,
+      "sourceLength": 33,
+      "sourceSha256": "3ea545f7a6b0bf9eb01900e1e86359aa05b11cb9a93688c4d841c1be60b815f3",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1312/p6",
+          "fieldName": "avatarRegion",
+          "target": "SkyHub2:n1399",
+          "targetNodeId": 1399,
+          "offset": 266972
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1387",
+      "level": "SkyHub2",
+      "nodeId": 1387,
+      "name": "BstNode_1520",
+      "className": "OutfitSelect",
+      "classIndex": 82,
+      "sourceOffset": 275386,
+      "sourceLength": 33,
+      "sourceSha256": "b32c7a8489c5afb7ff6d70df58150fb1397fece463259eb2aad3172e1d0905f2",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1387/p6",
+          "fieldName": "avatarRegion",
+          "target": "SkyHub2:n1680",
+          "targetNodeId": 1680,
+          "offset": 275415
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1478",
+      "level": "SkyHub2",
+      "nodeId": 1478,
+      "name": "BstNode_406",
+      "className": "OutfitSelect",
+      "classIndex": 82,
+      "sourceOffset": 286405,
+      "sourceLength": 32,
+      "sourceSha256": "1115baf17c107360c802830475c6d3c51d3bff2e829f5e7131dca95242b14466",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1478/p6",
+          "fieldName": "avatarRegion",
+          "target": "SkyHub2:n2075",
+          "targetNodeId": 2075,
+          "offset": 286433
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "CandleSpaceEnd",
+      "path": "Levels/CandleSpaceEnd/Objects.level.bin",
+      "sha256": "d42c3e1f85fb9dcc75d903911a1e91e6e061d017ae47f809caf4375505071352",
+      "bytes": 131707,
+      "nodes": 852,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/CandleSpaceEnd.json",
+      "markdown": "Objects对象清单/CandleSpaceEnd.md"
+    },
+    {
+      "level": "SkyHub2",
+      "path": "Levels/SkyHub2/Objects.level.bin",
+      "sha256": "8b467f9b349d9d4ce0d038528c96e44dff30063149bf5bbf90232a56bb9dd36f",
+      "bytes": 475656,
+      "nodes": 2886,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SkyHub2.json",
+      "markdown": "Objects对象清单/SkyHub2.md"
+    }
+  ]
+}

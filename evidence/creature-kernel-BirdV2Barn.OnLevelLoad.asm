@@ -1,0 +1,8 @@
+0x10019ff10: push rbp
+0x10019ff11: mov rbp, rsp
+0x10019ff14: add rdi, 0x10
+0x10019ff18: mov esi, 0x204
+0x10019ff1d: call 0x100aa24aa ; 0x100aa24aa ___bzero
+0x10019ff22: pop rbp
+0x10019ff23: ret 
+0x10019ff24: nop word ptr cs:[rax + rax]

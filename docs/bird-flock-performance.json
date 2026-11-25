@@ -1,0 +1,103 @@
+{
+  "scope": "Node CPU flock state + expanded Vulkan vertex preparation only. Original cached-rail motion retained. Excludes IPC, map shading, GPU work and display; this does not establish 120 rendered FPS.",
+  "platform": "linux",
+  "architecture": "arm64",
+  "rows": [
+    {
+      "before": {
+        "birds": 100,
+        "step": {
+          "medianMs": 0.07005200000003242,
+          "p95Ms": 0.15250000000003183
+        },
+        "transport": {
+          "medianMs": 0.29145900000003166,
+          "p95Ms": 1.2653119999999944
+        },
+        "total": {
+          "medianMs": 0.36546899999984817,
+          "p95Ms": 1.3905730000000176
+        }
+      },
+      "after": {
+        "birds": 100,
+        "step": {
+          "medianMs": 0.08343700000000354,
+          "p95Ms": 0.13312500000006366
+        },
+        "transport": {
+          "medianMs": 0.20921899999984817,
+          "p95Ms": 0.21265700000003562
+        },
+        "total": {
+          "medianMs": 0.292603999999983,
+          "p95Ms": 0.3301040000001194
+        }
+      }
+    },
+    {
+      "before": {
+        "birds": 1000,
+        "step": {
+          "medianMs": 0.3245840000001863,
+          "p95Ms": 1.5230209999999715
+        },
+        "transport": {
+          "medianMs": 4.014740000000074,
+          "p95Ms": 6.50619800000004
+        },
+        "total": {
+          "medianMs": 4.464322999999922,
+          "p95Ms": 7.988958000000139
+        }
+      },
+      "after": {
+        "birds": 1000,
+        "step": {
+          "medianMs": 0.08359399999994821,
+          "p95Ms": 0.08630199999993238
+        },
+        "transport": {
+          "medianMs": 0.18005199999993238,
+          "p95Ms": 0.2165620000000672
+        },
+        "total": {
+          "medianMs": 0.26380199999994147,
+          "p95Ms": 0.3078649999999925
+        }
+      }
+    },
+    {
+      "before": {
+        "birds": 10000,
+        "step": {
+          "medianMs": 3.0551040000000285,
+          "p95Ms": 3.4634900000000926
+        },
+        "transport": {
+          "medianMs": 28.226198000000295,
+          "p95Ms": 67.29588599999988
+        },
+        "total": {
+          "medianMs": 31.250676999999996,
+          "p95Ms": 70.50489599999946
+        }
+      },
+      "after": {
+        "birds": 10000,
+        "step": {
+          "medianMs": 0.7994799999996758,
+          "p95Ms": 1.0443230000000767
+        },
+        "transport": {
+          "medianMs": 1.71875,
+          "p95Ms": 1.909375000000182
+        },
+        "total": {
+          "medianMs": 2.5577610000000277,
+          "p95Ms": 2.846509999999398
+        }
+      }
+    }
+  ]
+}

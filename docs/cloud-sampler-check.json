@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "complete": true,
+  "device": {
+    "engine": "Sky Native Vulkan",
+    "backend": "Vulkan",
+    "device": "llvmpipe (LLVM 19.1.7, 128 bits)",
+    "apiVersion": 4210993,
+    "deviceType": 4,
+    "shaderFloat16": true
+  },
+  "scope": "Six real Dawn cloud upload textures including normalized CloudFluffy.vol. Independent CPU C normalized sampler; Vulkan production helper with texelFetch. Negative repeat coordinates, clamp edges, texel centers, seams, integer offsets and deterministic random points. Float32 result tolerance 0.000002; no Metal hardware filtering claim.",
+  "helperSha256": "7b412bb656c6a0b2a31bfc7945ae353e92460acd807f98e1adddd278450e2df3",
+  "referenceSha256": "87dae80cce10e2cfd19dd1470dc3fae8fb9e05b194e38e5e5a062e708a1e7482",
+  "textures": [
+    {
+      "name": "u_cloudSparse",
+      "textureSha256": "2e814f2cc806509bbb8d00023d6b70a65320d9bcb8ed562cd2f2a90fe2728192",
+      "samples": 1024,
+      "maxAbsoluteDifference": 5.960464477539063e-08,
+      "failedComponents": 0,
+      "firstFailures": [],
+      "passed": true
+    },
+    {
+      "name": "u_cloudDist",
+      "textureSha256": "e8a5374d8ca3ca2c5b864b709274b27b84e76242412789634d788c20a8b7aebe",
+      "samples": 1024,
+      "maxAbsoluteDifference": 5.960464477539063e-08,
+      "failedComponents": 0,
+      "firstFailures": [],
+      "passed": true
+    },
+    {
+      "name": "u_cloudAmb0",
+      "textureSha256": "a20e7e195495ef4bc0f7edbc0d9f884bdba16eb888b2f2b3bd03cae582882805",
+      "samples": 1024,
+      "maxAbsoluteDifference": 1.1920928955078125e-07,
+      "failedComponents": 0,
+      "firstFailures": [],
+      "passed": true
+    },
+    {
+      "name": "u_cloudAmb1",
+      "textureSha256": "9291e5316fefa0a83201ebd9b7f67308ec034216f6e94d22be6d1b3bd60ded9e",
+      "samples": 1024,
+      "maxAbsoluteDifference": 1.1920928955078125e-07,
+      "failedComponents": 0,
+      "firstFailures": [],
+      "passed": true
+    },
+    {
+      "name": "u_cloudAmb2",
+      "textureSha256": "6d84337ce867b74cecc43d4c25d9fb6e07cc84297f15f44ce2af90b4ddeb1577",
+      "samples": 1024,
+      "maxAbsoluteDifference": 5.960464477539063e-08,
+      "failedComponents": 0,
+      "firstFailures": [],
+      "passed": true
+    },
+    {
+      "name": "u_cloudNoise3D",
+      "textureSha256": "3840e441f7dd0e9704a252988e4e02e2ceaac5ad5399d7de1e7a6d0522943de6",
+      "samples": 1024,
+      "maxAbsoluteDifference": 1.7881393432617188e-07,
+      "failedComponents": 0,
+      "firstFailures": [],
+      "passed": true
+    }
+  ]
+}

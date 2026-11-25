@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "scope": "Original Rock/Sand/Grass shader programs and original texture bytes, synthetic packed two-patch mesh. Validates the cross-patch batch-order fix, not full material sampling or original Metal/game image parity.",
+  "device": {
+    "engine": "Sky Native Vulkan",
+    "backend": "Vulkan",
+    "device": "llvmpipe (LLVM 19.1.7, 128 bits)",
+    "apiVersion": 4210993,
+    "deviceType": 4,
+    "shaderFloat16": true
+  },
+  "oldShaders": [
+    "RockFaceSh",
+    "GrassShAlpha",
+    "SandShAlpha"
+  ],
+  "newShaders": [
+    "RockFaceSh",
+    "SandShAlpha",
+    "GrassShAlpha"
+  ],
+  "changedPixels": 6974,
+  "unchangedFirstPatch": true,
+  "maxLinearHDRDifference": 0.01012363564223051
+}

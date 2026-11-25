@@ -1,0 +1,2224 @@
+{
+  "className": "Collectible",
+  "functionGroup": "收集物、蜡烛与解锁",
+  "functionRole": "收集物类型、名称与空间",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "Collectible 的原默认值、继承初始化及 3 个序列化字段变体；原注册字段 3 项。"
+    },
+    {
+      "name": "收集物类型、名称与空间",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "当前无非空序列化依赖；原虚方法、资源或全局调用仍需恢复。"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "Collectible",
+    "category": "收集物、蜡烛与解锁",
+    "functionGroupId": "collectibles",
+    "functionRole": "收集物类型、名称与空间",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "Collectible 的原默认值、继承初始化及 3 个序列化字段变体；原注册字段 3 项。"
+      },
+      {
+        "name": "收集物类型、名称与空间",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "当前无非空序列化依赖；原虚方法、资源或全局调用仍需恢复。"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [],
+    "rttiWorkingGroup": "系统和其余类型",
+    "role": "对象实例类型",
+    "instances": 53,
+    "nestedInstances": 0,
+    "referenceFields": 0,
+    "declaredLevels": 20,
+    "levels": [
+      {
+        "level": "CandleSpace",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Dawn",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DayEnd",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DayHubCave",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Dusk",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DuskGraveyard",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DuskMid",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "HubReveal",
+        "nodes": 6,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Night",
+        "nodes": 5,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_ButterflyFields",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Cave",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_NestAndKeeper",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Village",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Rain",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainEnd",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainForest",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainMid",
+        "nodes": 5,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SkyHub2",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Sunset",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SunsetEnd",
+        "nodes": 5,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "name",
+        "type": 1,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "transform",
+        "type": 0,
+        "size": 64,
+        "nestedClass": null
+      },
+      {
+        "name": "type",
+        "type": 1,
+        "size": 0,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100c98410",
+    "nativeRegisteredFields": [
+      {
+        "name": "transform",
+        "typeGetter": "__Z17GetMetaTypeByTypeIN10Vectormath3Aos7Matrix4EERK8MetaTypev",
+        "nativeOffset": 16,
+        "registrationFunction": "0x1002356e0",
+        "propertyAddress": "0x100c970d0"
+      },
+      {
+        "name": "name",
+        "typeGetter": "__Z17GetMetaTypeByTypeINSt3__112basic_stringIcNS0_11char_traitsIcEE16StlPoolAllocatorIcEEEERK8MetaTypev",
+        "nativeOffset": 80,
+        "registrationFunction": "0x1002356e0",
+        "propertyAddress": "0x100c97120"
+      },
+      {
+        "name": "type",
+        "typeGetter": "__Z17GetMetaTypeByTypeINSt3__112basic_stringIcNS0_11char_traitsIcEE16StlPoolAllocatorIcEEEERK8MetaTypev",
+        "nativeOffset": 104,
+        "registrationFunction": "0x1002356e0",
+        "propertyAddress": "0x100c97170"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 3 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "CandleSpace:n277",
+      "level": "CandleSpace",
+      "nodeId": 277,
+      "name": "BstNode_2529559024",
+      "className": "Collectible",
+      "classIndex": 56,
+      "sourceOffset": 62884,
+      "sourceLength": 98,
+      "sourceSha256": "8a39fe17b7da49a1d1b9232075572378d154d09264dd34580d6c9e7043030dac",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "flame",
+          "raw": "666c616d6500"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1746",
+      "level": "Dawn",
+      "nodeId": 1746,
+      "name": "BstNode_2446917786",
+      "className": "Collectible",
+      "classIndex": 106,
+      "sourceOffset": 296775,
+      "sourceLength": 97,
+      "sourceSha256": "2a22e6c533e5ca22f4dd275538ba1b01c7fade22ffd7fad3e85ed2f121fd8ee9",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "cape",
+          "raw": "6361706500"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n693",
+      "level": "DayEnd",
+      "nodeId": 693,
+      "name": "BstNode_2446917786",
+      "className": "Collectible",
+      "classIndex": 63,
+      "sourceOffset": 155871,
+      "sourceLength": 97,
+      "sourceSha256": "1cb6dafc2656ecd8772811cb5c644efd3618785d9b049b05fafb81c547d7575d",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "cape",
+          "raw": "6361706500"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayHubCave:n77",
+      "level": "DayHubCave",
+      "nodeId": 77,
+      "name": "BstNode_2446917684",
+      "className": "Collectible",
+      "classIndex": 24,
+      "sourceOffset": 36400,
+      "sourceLength": 103,
+      "sourceSha256": "bad2601b4bc20a0670b37219b351afcb6aaf28e3b03301b3dfcbca981e690dc1",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "thumbsup",
+          "raw": "7468756d6273757000"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayHubCave:n846",
+      "level": "DayHubCave",
+      "nodeId": 846,
+      "name": "BstNode_2470641668",
+      "className": "Collectible",
+      "classIndex": 24,
+      "sourceOffset": 180792,
+      "sourceLength": 99,
+      "sourceSha256": "c3d3c89e97db88116d94c4261c4dd2af4354af54aa3e00d9aa115cdfcc57dc12",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "beacon",
+          "raw": "626561636f6e00"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n237",
+      "level": "Dusk",
+      "nodeId": 237,
+      "name": "BstNode_1844",
+      "className": "Collectible",
+      "classIndex": 39,
+      "sourceOffset": 67630,
+      "sourceLength": 91,
+      "sourceSha256": "1ae6c3a2d861ad0d3890cb2bb073c696b0801f12874f2369980cd38c633f0ee9",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "die",
+          "raw": "64696500"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n927",
+      "level": "Dusk",
+      "nodeId": 927,
+      "name": "BstNode_2345992306",
+      "className": "Collectible",
+      "classIndex": 39,
+      "sourceOffset": 190659,
+      "sourceLength": 100,
+      "sourceSha256": "4174ae14092594403fefe6704b18101a5d0d4c9f3a81c53bafc795a303096ae0",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "scared",
+          "raw": "73636172656400"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n183",
+      "level": "DuskGraveyard",
+      "nodeId": 183,
+      "name": "BstNode_2345992762",
+      "className": "Collectible",
+      "classIndex": 25,
+      "sourceOffset": 67686,
+      "sourceLength": 39,
+      "sourceSha256": "b4f0d3bcde2a4f6e094cec6640a2503f7a76897875f4b04421d7b02fd2627ded",
+      "declaredFieldCount": 2,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "sneaky",
+          "raw": "736e65616b7900"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n400",
+      "level": "DuskMid",
+      "nodeId": 400,
+      "name": "BstNode_1622",
+      "className": "Collectible",
+      "classIndex": 44,
+      "sourceOffset": 90574,
+      "sourceLength": 34,
+      "sourceSha256": "f7c4a7d3dd73e1e981b716af7b1c48e33bed8ca1cd4ca245e008f2b30f9391a6",
+      "declaredFieldCount": 2,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "lookaround",
+          "raw": "6c6f6f6b61726f756e6400"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n454",
+      "level": "DuskMid",
+      "nodeId": 454,
+      "name": "BstNode_2345992381",
+      "className": "Collectible",
+      "classIndex": 44,
+      "sourceOffset": 101075,
+      "sourceLength": 36,
+      "sourceSha256": "4a543202e44d49a5c8cca6e53300bdbcb2f20d9b7f927c4cc1ce03c20e3217b3",
+      "declaredFieldCount": 2,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "salute",
+          "raw": "73616c75746500"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n40",
+      "level": "HubReveal",
+      "nodeId": 40,
+      "name": "BstNode_2504654915",
+      "className": "Collectible",
+      "classIndex": 21,
+      "sourceOffset": 34551,
+      "sourceLength": 97,
+      "sourceSha256": "639ab51a662909ed2b8d275979a251e152f4aac8aa4231e491a871065d0b4b09",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "cape",
+          "raw": "6361706500"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n134",
+      "level": "HubReveal",
+      "nodeId": 134,
+      "name": "BstNode_1101",
+      "className": "Collectible",
+      "classIndex": 21,
+      "sourceOffset": 52803,
+      "sourceLength": 92,
+      "sourceSha256": "e9d806178c02ce063f502fd6379127cbed6ba0e5287e70c21ef3a2143683c463",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "ohno",
+          "raw": "6f686e6f00"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n152",
+      "level": "HubReveal",
+      "nodeId": 152,
+      "name": "BstNode_3156082758",
+      "className": "Collectible",
+      "classIndex": 21,
+      "sourceOffset": 55442,
+      "sourceLength": 99,
+      "sourceSha256": "7d61478a8b6246cdea37737db567c68cc3a4d13851a053c7517b2d73ccd73148",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "flame",
+          "raw": "666c616d6500"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n663",
+      "level": "HubReveal",
+      "nodeId": 663,
+      "name": "BstNode_2529558572",
+      "className": "Collectible",
+      "classIndex": 21,
+      "sourceOffset": 140782,
+      "sourceLength": 97,
+      "sourceSha256": "93fb56c41b92d3cbb6e9a354fa8c17a76cf88ed89bae2f915d1361231b0af59e",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "bow",
+          "raw": "626f7700"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 4,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n1164",
+      "level": "HubReveal",
+      "nodeId": 1164,
+      "name": "BstNode_2529558609",
+      "className": "Collectible",
+      "classIndex": 21,
+      "sourceOffset": 227005,
+      "sourceLength": 97,
+      "sourceSha256": "bdce96bcb7f8bb8a0798d45f9805ec7df1b7beb0aca9a07bdb4a2e2dd5539e17",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "cape",
+          "raw": "6361706500"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n1289",
+      "level": "HubReveal",
+      "nodeId": 1289,
+      "name": "BstNode_2504654917",
+      "className": "Collectible",
+      "classIndex": 21,
+      "sourceOffset": 248435,
+      "sourceLength": 97,
+      "sourceSha256": "b6eefa2f4d943f642922aa7167d5b64c40da260a21c40d420543f37c7e7a4112",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "cape",
+          "raw": "6361706500"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n124",
+      "level": "Night",
+      "nodeId": 124,
+      "name": "BstNode_34604517",
+      "className": "Collectible",
+      "classIndex": 29,
+      "sourceOffset": 41084,
+      "sourceLength": 99,
+      "sourceSha256": "e810e162a35e84ca750a6343e08d3b1aed34a2daab6c6dd3cd1b72b04a9514a4",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "love",
+          "raw": "6c6f766500"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n147",
+      "level": "Night",
+      "nodeId": 147,
+      "name": "BstNode_34603997",
+      "className": "Collectible",
+      "classIndex": 29,
+      "sourceOffset": 44261,
+      "sourceLength": 97,
+      "sourceSha256": "a36d7a96ceab2ff60df1dcb41cf4e429ebd65c923d97d4362037c26e299a35cc",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "force",
+          "raw": "666f72636500"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2157",
+      "level": "Night",
+      "nodeId": 2157,
+      "name": "BstNode_2345992306",
+      "className": "Collectible",
+      "classIndex": 29,
+      "sourceOffset": 342325,
+      "sourceLength": 99,
+      "sourceSha256": "e6f4e6bff6ffacef347e4f3ffb5c3ab4a5d5ed8f0ab0177b158b34ce5801aca6",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "float",
+          "raw": "666c6f617400"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2365",
+      "level": "Night",
+      "nodeId": 2365,
+      "name": "BstNode_34604067",
+      "className": "Collectible",
+      "classIndex": 29,
+      "sourceOffset": 371367,
+      "sourceLength": 97,
+      "sourceSha256": "154ef7d742490ee7ece0672467e7c8a8a3a88686f6b24352b01ac17cc1aebb91",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "ghost",
+          "raw": "67686f737400"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2785",
+      "level": "Night",
+      "nodeId": 2785,
+      "name": "BstNode_34603579",
+      "className": "Collectible",
+      "classIndex": 29,
+      "sourceOffset": 432908,
+      "sourceLength": 96,
+      "sourceSha256": "103566d32dcbb3eec560a307723b3a20f73eb7e73309342b0192eb7f5a845f46",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "pray",
+          "raw": "7072617900"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n336",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 336,
+      "name": "BstNode_1706",
+      "className": "Collectible",
+      "classIndex": 41,
+      "sourceOffset": 98088,
+      "sourceLength": 97,
+      "sourceSha256": "09f26bac2753cf46bc1406d02e633e09b635c2075cd77591d8b4a93d5eba8c5e",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "butterfly",
+          "raw": "627574746572666c7900"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n419",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 419,
+      "name": "BstNode_2446917684",
+      "className": "Collectible",
+      "classIndex": 41,
+      "sourceOffset": 113880,
+      "sourceLength": 103,
+      "sourceSha256": "d0b748a7bf9d16f2f0c1b32049b4e149f55c3905dc713713335cf86db5422dfa",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "butterfly",
+          "raw": "627574746572666c7900"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n262",
+      "level": "Prairie_Cave",
+      "nodeId": 262,
+      "name": "BstNode_3122856047",
+      "className": "Collectible",
+      "classIndex": 38,
+      "sourceOffset": 84487,
+      "sourceLength": 98,
+      "sourceSha256": "e4c767e9bc75607d6d3c451d684fef0e2b3eff845e2de9bc0affad131a867954",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "wipe",
+          "raw": "7769706500"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 4,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n298",
+      "level": "Prairie_Cave",
+      "nodeId": 298,
+      "name": "BstNode_1101",
+      "className": "Collectible",
+      "classIndex": 38,
+      "sourceOffset": 91853,
+      "sourceLength": 92,
+      "sourceSha256": "c761f886980c56a6319eaf1d838339c1c6bb2429632e68df8ec591edcb1ad6a5",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "ohno",
+          "raw": "6f686e6f00"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n1065",
+      "level": "Prairie_Cave",
+      "nodeId": 1065,
+      "name": "BstNode_1293287551",
+      "className": "Collectible",
+      "classIndex": 38,
+      "sourceOffset": 269564,
+      "sourceLength": 98,
+      "sourceSha256": "e0a9f8ea08662955506da2f6de6d98922dee3e0eb328c532a434284904979178",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "wipe",
+          "raw": "7769706500"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n488",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 488,
+      "name": "BstNode_34603016",
+      "className": "Collectible",
+      "classIndex": 53,
+      "sourceOffset": 128274,
+      "sourceLength": 96,
+      "sourceSha256": "7c6756d075f5184d1b5ab2abd0480a2a3ee23d7a464fdb6ea3019facb09ea69c",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "bird",
+          "raw": "6269726400"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n878",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 878,
+      "name": "BstNode_34603536",
+      "className": "Collectible",
+      "classIndex": 53,
+      "sourceOffset": 217401,
+      "sourceLength": 99,
+      "sourceSha256": "2c7136c72be1866ba50b3ff152ba21fa66e3c947091c7ba5735a7c8d558e650c",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "strong",
+          "raw": "7374726f6e6700"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1479",
+      "level": "Prairie_Village",
+      "nodeId": 1479,
+      "name": "BstNode_2504655004",
+      "className": "Collectible",
+      "classIndex": 95,
+      "sourceOffset": 267235,
+      "sourceLength": 98,
+      "sourceSha256": "fe7b8edc0af77f5c749ff1ab0c0dac40802dc9d9a1f31857128feb907a84f5e0",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "wave",
+          "raw": "7761766500"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1525",
+      "level": "Prairie_Village",
+      "nodeId": 1525,
+      "name": "BstNode_3122855955",
+      "className": "Collectible",
+      "classIndex": 95,
+      "sourceOffset": 273485,
+      "sourceLength": 103,
+      "sourceSha256": "5223c1f61531011d9f55955c8a152c7f34bb1d8de1da5b84b1f9aea21efdfdb9",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "thumbsup",
+          "raw": "7468756d6273757000"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2190",
+      "level": "Prairie_Village",
+      "nodeId": 2190,
+      "name": "BstNode_1293287597",
+      "className": "Collectible",
+      "classIndex": 95,
+      "sourceOffset": 382452,
+      "sourceLength": 98,
+      "sourceSha256": "0bdc33659166538a56deb6f5a3584fb955eb5d116b344074ab5e651b476df514",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "yawn",
+          "raw": "7961776e00"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2250",
+      "level": "Prairie_Village",
+      "nodeId": 2250,
+      "name": "BstNode_3122855974",
+      "className": "Collectible",
+      "classIndex": 95,
+      "sourceOffset": 390934,
+      "sourceLength": 99,
+      "sourceSha256": "a594574690b99ff75a0be5f52d0708fe1d54385964459786916cd4b9722fbfcd",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "laugh",
+          "raw": "6c6175676800"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n1608",
+      "level": "Rain",
+      "nodeId": 1608,
+      "name": "BstNode_1499",
+      "className": "Collectible",
+      "classIndex": 89,
+      "sourceOffset": 386205,
+      "sourceLength": 91,
+      "sourceSha256": "023b51b22c5a6acb4bddbfdadea2e7a6a15328a2c1025ed21761d578a3b0e17a",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "bow",
+          "raw": "626f7700"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n1705",
+      "level": "Rain",
+      "nodeId": 1705,
+      "name": "BstNode_2345992871",
+      "className": "Collectible",
+      "classIndex": 89,
+      "sourceOffset": 409761,
+      "sourceLength": 98,
+      "sourceSha256": "c8de29b114c5c414617a6c6164dc0134c30b879b0d3c83c2cf2977e2b93fd9bb",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "cold",
+          "raw": "636f6c6400"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n1455",
+      "level": "RainEnd",
+      "nodeId": 1455,
+      "name": "BstNode_1534",
+      "className": "Collectible",
+      "classIndex": 81,
+      "sourceOffset": 377254,
+      "sourceLength": 93,
+      "sourceSha256": "e91b7a7c363e2acdf7c58af422c10fb4b46d216a604d887dab0e598906fd38e2",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "think",
+          "raw": "7468696e6b00"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n418",
+      "level": "RainForest",
+      "nodeId": 418,
+      "name": "BstNode_34603146",
+      "className": "Collectible",
+      "classIndex": 45,
+      "sourceOffset": 95565,
+      "sourceLength": 96,
+      "sourceSha256": "f8eb9afe9dcd4c03f9bd9974e03ab72858cf6823467e615afc7754d58a0d29ce",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "seek",
+          "raw": "7365656b00"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n460",
+      "level": "RainForest",
+      "nodeId": 460,
+      "name": "BstNode_1622",
+      "className": "Collectible",
+      "classIndex": 45,
+      "sourceOffset": 104121,
+      "sourceLength": 91,
+      "sourceSha256": "65c6c3d0303c20316b6a600f1c81e63da7cd5bdb221bbc0bec3ed2ae5e93e3f6",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "shy",
+          "raw": "73687900"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n639",
+      "level": "RainForest",
+      "nodeId": 639,
+      "name": "BstNode_1534",
+      "className": "Collectible",
+      "classIndex": 45,
+      "sourceOffset": 146345,
+      "sourceLength": 92,
+      "sourceSha256": "996d6781c1873559f97d629b2be75a29a11d16d837a51e4d6d2592fa545a2209",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "pout",
+          "raw": "706f757400"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n19",
+      "level": "RainMid",
+      "nodeId": 19,
+      "name": "BstNode_2060386407",
+      "className": "Collectible",
+      "classIndex": 8,
+      "sourceOffset": 29897,
+      "sourceLength": 99,
+      "sourceSha256": "eaee55a715313b336b9610f8a04b4c62f4131b94fa6b721d6b3d7d2e44ab6df8",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "manta",
+          "raw": "6d616e746100"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n194",
+      "level": "RainMid",
+      "nodeId": 194,
+      "name": "BstNode_1665",
+      "className": "Collectible",
+      "classIndex": 8,
+      "sourceOffset": 65077,
+      "sourceLength": 93,
+      "sourceSha256": "0bdc6be9b4ca32c43a6cec87e0719058b8a9aaf86750efb2cfeba4600f377f64",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "sorry",
+          "raw": "736f72727900"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n326",
+      "level": "RainMid",
+      "nodeId": 326,
+      "name": "BstNode_2345992665",
+      "className": "Collectible",
+      "classIndex": 8,
+      "sourceOffset": 88398,
+      "sourceLength": 99,
+      "sourceSha256": "b6b4e60dd0a7a2031867b125e36cbd50b4cb69467bfa7d2c395bf51386f702eb",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "whale",
+          "raw": "7768616c6500"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n866",
+      "level": "RainMid",
+      "nodeId": 866,
+      "name": "BstNode_1851",
+      "className": "Collectible",
+      "classIndex": 8,
+      "sourceOffset": 187478,
+      "sourceLength": 96,
+      "sourceSha256": "9e4051c6d438eff44e2c582ffc78cd2360f519e3c83bbf6034ae3f54a4b21e89",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "facepalm",
+          "raw": "6661636570616c6d00"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainMid:n1847",
+      "level": "RainMid",
+      "nodeId": 1847,
+      "name": "BstNode_1759",
+      "className": "Collectible",
+      "classIndex": 8,
+      "sourceOffset": 362640,
+      "sourceLength": 91,
+      "sourceSha256": "05ddc4eec345b764e51e9396fe6ac0c5cd567eeedc513e40296b4c2e7b61cce5",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "cry",
+          "raw": "63727900"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n955",
+      "level": "SkyHub2",
+      "nodeId": 955,
+      "name": "BstNode_1167524167",
+      "className": "Collectible",
+      "classIndex": 86,
+      "sourceOffset": 206368,
+      "sourceLength": 102,
+      "sourceSha256": "6d05bdb08bea0f21546cf6311c2aecbb8cfca2d3f898b14257e31cc9ac00973e",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "nothanks",
+          "raw": "6e6f7468616e6b7300"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1015",
+      "level": "SkyHub2",
+      "nodeId": 1015,
+      "name": "BstNode_2446917934",
+      "className": "Collectible",
+      "classIndex": 86,
+      "sourceOffset": 218542,
+      "sourceLength": 99,
+      "sourceSha256": "4405c7a5889c5f99adc5b4be6917b89fb0b90e434d6909c692079ddcba61c8f0",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "point",
+          "raw": "706f696e7400"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 4,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1423",
+      "level": "SkyHub2",
+      "nodeId": 1423,
+      "name": "BstNode_2446917925",
+      "className": "Collectible",
+      "classIndex": 86,
+      "sourceOffset": 280682,
+      "sourceLength": 98,
+      "sourceSha256": "68a4e73ab12da0b0807ab41254b319dd97fde2ea19fbdaa6228b2dc9dc57ea24",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "come",
+          "raw": "636f6d6500"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n25",
+      "level": "Sunset",
+      "nodeId": 25,
+      "name": "BstNode_1167524233",
+      "className": "Collectible",
+      "classIndex": 10,
+      "sourceOffset": 30283,
+      "sourceLength": 103,
+      "sourceSha256": "9190b5da277b75cd1e9b4ec30483c3eb0e04f59731795fc89fa2f16ded87272b",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "handstand",
+          "raw": "68616e647374616e6400"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n776",
+      "level": "Sunset",
+      "nodeId": 776,
+      "name": "BstNode_1622",
+      "className": "Collectible",
+      "classIndex": 10,
+      "sourceOffset": 164774,
+      "sourceLength": 93,
+      "sourceSha256": "be8b74479d9f52053fbb5ebce866c1054f1d08fe7ac288da010399b278d3efba",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "dance",
+          "raw": "64616e636500"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n37",
+      "level": "SunsetEnd",
+      "nodeId": 37,
+      "name": "BstNode_1167524490",
+      "className": "Collectible",
+      "classIndex": 13,
+      "sourceOffset": 31912,
+      "sourceLength": 102,
+      "sourceSha256": "7754dccf159d3865eb2236285c86f7fd88a587f2e2a5313f91c2624b9a90d0a5",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "proud",
+          "raw": "70726f756400"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n91",
+      "level": "SunsetEnd",
+      "nodeId": 91,
+      "name": "BstNode_1167524176",
+      "className": "Collectible",
+      "classIndex": 13,
+      "sourceOffset": 43082,
+      "sourceLength": 99,
+      "sourceSha256": "ad98e7fcb0d21003730d5bbb5b13673a18e61e5db8786a6a1e70017a22907e50",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "cheer",
+          "raw": "636865657200"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n878",
+      "level": "SunsetEnd",
+      "nodeId": 878,
+      "name": "BstNode_2446917668",
+      "className": "Collectible",
+      "classIndex": 13,
+      "sourceOffset": 172816,
+      "sourceLength": 98,
+      "sourceSha256": "614e19e04e7eb2524c8cc0bd72e0c601dbdf0ee37ae56f77de0d4cb2a53846d4",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "bow",
+          "raw": "626f7700"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n1135",
+      "level": "SunsetEnd",
+      "nodeId": 1135,
+      "name": "BstNode_1622",
+      "className": "Collectible",
+      "classIndex": 13,
+      "sourceOffset": 212822,
+      "sourceLength": 92,
+      "sourceSha256": "758b00382c1e7fea663ddbc1447ffb329b1f9e6ffebc335a35ee515cf47e39f1",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "kiss",
+          "raw": "6b69737300"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n1164",
+      "level": "SunsetEnd",
+      "nodeId": 1164,
+      "name": "BstNode_1167524448",
+      "className": "Collectible",
+      "classIndex": 13,
+      "sourceOffset": 217720,
+      "sourceLength": 102,
+      "sourceSha256": "1e342bef05ddd6a671abdf9092d2d5ad41bdf2a46f040dc05161c28ba4f1e2b0",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "backflip",
+          "raw": "6261636b666c697000"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "CandleSpace",
+      "path": "Levels/CandleSpace/Objects.level.bin",
+      "sha256": "db7140d2dd5ee9cd2fcdcbb61a898b9facf1683ff21fec83fcbef81b885f56db",
+      "bytes": 92607,
+      "nodes": 564,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/CandleSpace.json",
+      "markdown": "Objects对象清单/CandleSpace.md"
+    },
+    {
+      "level": "Dawn",
+      "path": "Levels/Dawn/Objects.level.bin",
+      "sha256": "16e26aafc7f9d120a548bf5d8bec04fbc18146bc8db531ef75144889b1ff197a",
+      "bytes": 504637,
+      "nodes": 3798,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dawn.json",
+      "markdown": "Objects对象清单/Dawn.md"
+    },
+    {
+      "level": "DayEnd",
+      "path": "Levels/DayEnd/Objects.level.bin",
+      "sha256": "9b5c568cefa987e504a10236c5b61e5de4b748d965d09e42db3602e4e52cc904",
+      "bytes": 268140,
+      "nodes": 1459,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DayEnd.json",
+      "markdown": "Objects对象清单/DayEnd.md"
+    },
+    {
+      "level": "DayHubCave",
+      "path": "Levels/DayHubCave/Objects.level.bin",
+      "sha256": "e4da920cc9f0b1569f14ad1a6d1990db7155dc07ebfc3214c4e385a367872457",
+      "bytes": 202745,
+      "nodes": 1128,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DayHubCave.json",
+      "markdown": "Objects对象清单/DayHubCave.md"
+    },
+    {
+      "level": "Dusk",
+      "path": "Levels/Dusk/Objects.level.bin",
+      "sha256": "9222b248f17fb4122cd4ad9650543ab86aab8b077b6965248c70ac2341bf2d5d",
+      "bytes": 242331,
+      "nodes": 1288,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dusk.json",
+      "markdown": "Objects对象清单/Dusk.md"
+    },
+    {
+      "level": "DuskGraveyard",
+      "path": "Levels/DuskGraveyard/Objects.level.bin",
+      "sha256": "128b30dcbe40b68e68fc25d195b68dc39f897259453c02612049ccd37a90ffb4",
+      "bytes": 424333,
+      "nodes": 1791,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DuskGraveyard.json",
+      "markdown": "Objects对象清单/DuskGraveyard.md"
+    },
+    {
+      "level": "DuskMid",
+      "path": "Levels/DuskMid/Objects.level.bin",
+      "sha256": "899ca33226dabd04afecfe7888750938ff4e460cb586603364e150591e9cbda5",
+      "bytes": 234288,
+      "nodes": 1268,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DuskMid.json",
+      "markdown": "Objects对象清单/DuskMid.md"
+    },
+    {
+      "level": "HubReveal",
+      "path": "Levels/HubReveal/Objects.level.bin",
+      "sha256": "4b32f12bbe4b246cde9ca1e4ba0982000ff108359865bb4340aba640e609861b",
+      "bytes": 289438,
+      "nodes": 1829,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/HubReveal.json",
+      "markdown": "Objects对象清单/HubReveal.md"
+    },
+    {
+      "level": "Night",
+      "path": "Levels/Night/Objects.level.bin",
+      "sha256": "6ce612c9efb82834d648de81251033b341a44f4d9374d8338d868575aab6a723",
+      "bytes": 499756,
+      "nodes": 3719,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Night.json",
+      "markdown": "Objects对象清单/Night.md"
+    },
+    {
+      "level": "Prairie_ButterflyFields",
+      "path": "Levels/Prairie_ButterflyFields/Objects.level.bin",
+      "sha256": "29d8d61a082f3e3414ecfbb501b5f65499deb37ad4a1078ce2e9b88ac0d1e441",
+      "bytes": 297606,
+      "nodes": 1513,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_ButterflyFields.json",
+      "markdown": "Objects对象清单/Prairie_ButterflyFields.md"
+    },
+    {
+      "level": "Prairie_Cave",
+      "path": "Levels/Prairie_Cave/Objects.level.bin",
+      "sha256": "675a2256e24f8c4b16540cee6a5cd2b7647ff2fb495724a8bf596717ca39d944",
+      "bytes": 466340,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Cave.json",
+      "markdown": "Objects对象清单/Prairie_Cave.md"
+    },
+    {
+      "level": "Prairie_NestAndKeeper",
+      "path": "Levels/Prairie_NestAndKeeper/Objects.level.bin",
+      "sha256": "5eabe877e07c84e5f9270035aaab73fa20144c87f6e9136e5285dbaff3f85b7a",
+      "bytes": 239403,
+      "nodes": 1077,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_NestAndKeeper.json",
+      "markdown": "Objects对象清单/Prairie_NestAndKeeper.md"
+    },
+    {
+      "level": "Prairie_Village",
+      "path": "Levels/Prairie_Village/Objects.level.bin",
+      "sha256": "4656296b54402016b59b894b4653fbdc71e106a21e0900294f73f2c7b7112385",
+      "bytes": 549989,
+      "nodes": 3724,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Village.json",
+      "markdown": "Objects对象清单/Prairie_Village.md"
+    },
+    {
+      "level": "Rain",
+      "path": "Levels/Rain/Objects.level.bin",
+      "sha256": "20093bccf3bb1ea0936cb993e66cef0187b40a5a411df3573eb28e4def4f75c6",
+      "bytes": 457732,
+      "nodes": 2079,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Rain.json",
+      "markdown": "Objects对象清单/Rain.md"
+    },
+    {
+      "level": "RainEnd",
+      "path": "Levels/RainEnd/Objects.level.bin",
+      "sha256": "247912ec955153e3df80c16a861eb872573502a285a17943518bdce448a8d5e3",
+      "bytes": 427926,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainEnd.json",
+      "markdown": "Objects对象清单/RainEnd.md"
+    },
+    {
+      "level": "RainForest",
+      "path": "Levels/RainForest/Objects.level.bin",
+      "sha256": "2e69b3314c70c61bd99435f4bb4418fba540f227c83670e1af3b5358c64c3b73",
+      "bytes": 271409,
+      "nodes": 1306,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainForest.json",
+      "markdown": "Objects对象清单/RainForest.md"
+    },
+    {
+      "level": "RainMid",
+      "path": "Levels/RainMid/Objects.level.bin",
+      "sha256": "139b219d9b71a2ab24418b1ec41f2ee8a2ebfdf4c5ea992c35348a758682ed23",
+      "bytes": 430825,
+      "nodes": 2457,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainMid.json",
+      "markdown": "Objects对象清单/RainMid.md"
+    },
+    {
+      "level": "SkyHub2",
+      "path": "Levels/SkyHub2/Objects.level.bin",
+      "sha256": "8b467f9b349d9d4ce0d038528c96e44dff30063149bf5bbf90232a56bb9dd36f",
+      "bytes": 475656,
+      "nodes": 2886,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SkyHub2.json",
+      "markdown": "Objects对象清单/SkyHub2.md"
+    },
+    {
+      "level": "Sunset",
+      "path": "Levels/Sunset/Objects.level.bin",
+      "sha256": "8126f2db693502576075505797624e0b5e53dc064fe6af82e90f2261ca427f8a",
+      "bytes": 325410,
+      "nodes": 1899,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Sunset.json",
+      "markdown": "Objects对象清单/Sunset.md"
+    },
+    {
+      "level": "SunsetEnd",
+      "path": "Levels/SunsetEnd/Objects.level.bin",
+      "sha256": "9995ebfef7aa72982f6b95073a98a4ef01376bd8ac56c3b79b09729f97f43d6e",
+      "bytes": 352573,
+      "nodes": 1998,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SunsetEnd.json",
+      "markdown": "Objects对象清单/SunsetEnd.md"
+    }
+  ]
+}

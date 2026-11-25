@@ -1,0 +1,40 @@
+{
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "functions": {
+    "BirdV2Ai.FollowObject": {
+      "start": "0x1001a08e0",
+      "end": "0x1001a0d20",
+      "codeSha256": "964d317aa90e6db0663212346564b6c8c4e183ac37a0b561edcd942b9c88e37c",
+      "assembly": "evidence/birdv2ai-followobject.asm"
+    },
+    "Steering.Orbit": {
+      "start": "0x100630190",
+      "end": "0x100630340",
+      "codeSha256": "6c7e61f541fef4cae2c0555f27401c0c03271af01604fd9bcf4bcf293466a1b7",
+      "assembly": "evidence/steering-orbit.asm"
+    },
+    "Steering.Brake": {
+      "start": "0x100630480",
+      "end": "0x100630530",
+      "codeSha256": "2eeb2cde60276364d1abed0203df98045ab921863a6452d3284be78f86a66802",
+      "assembly": "evidence/steering-brake.asm"
+    },
+    "Steering.SeekDirect": {
+      "start": "0x10062f190",
+      "end": "0x10062f240",
+      "codeSha256": "83764a28b9caa3cbeda3daab1275d10e2a53e237fc370a62dedaef10208eb4ee",
+      "assembly": "evidence/steering-seekdirect.asm"
+    }
+  },
+  "constants": {
+    "targetResetSquared": 1008981770,
+    "targetReleaseSquared": 1103626240,
+    "timeout": 1106247680,
+    "headingMinimum": 1065185444,
+    "resetCountdown": 3240099840,
+    "nearSquared": 1074790400,
+    "avatarRadius": 1045220557,
+    "randomScale": 805306368
+  },
+  "scope": "Whole original object-follow state machine, accumulating Orbit and Brake, connected to recovered Seek. Actual Avatar selection/world position, target virtual transform/OBB, sphere/OBB projection and Critter emission remain explicit owner services. Matrix product follows the original four-column operation order. Full world, animation, GPU and lifecycle acceptance remain open."
+}

@@ -1,0 +1,7 @@
+0x100229050: push rbp
+0x100229051: mov rbp, rsp
+0x100229054: xor esi, esi
+0x100229056: xor edx, edx
+0x100229058: pop rbp
+0x100229059: jmp 0x1002291a0 ; 0x1002291a0
+0x10022905e: nop 

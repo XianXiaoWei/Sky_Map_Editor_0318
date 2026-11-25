@@ -1,0 +1,602 @@
+{
+  "className": "Critter_OnRegion",
+  "functionGroup": "区域、喊叫与空间触发",
+  "functionRole": "生物集合进入区域条件",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "partial",
+      "description": "Critter_OnRegion 的原默认值、继承初始化及 11 个序列化字段变体；原注册字段 9 项。"
+    },
+    {
+      "name": "生物集合进入区域条件",
+      "status": "partial",
+      "description": "原父构造和缺省／保存字段已恢复并检查 4 个真实实例；区域碰撞、成员创建／释放、CritterV2 消息和完整 Update 仍待接。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Clump（12 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "Critter_OnRegion",
+    "category": "区域、喊叫与空间触发",
+    "functionGroupId": "regions",
+    "functionRole": "生物集合进入区域条件",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "partial",
+        "description": "Critter_OnRegion 的原默认值、继承初始化及 11 个序列化字段变体；原注册字段 9 项。"
+      },
+      {
+        "name": "生物集合进入区域条件",
+        "status": "partial",
+        "description": "原父构造和缺省／保存字段已恢复并检查 4 个真实实例；区域碰撞、成员创建／释放、CritterV2 消息和完整 Update 仍待接。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Clump（12 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Clump",
+        "references": 12
+      }
+    ],
+    "rttiWorkingGroup": "交互、事件与任务",
+    "role": "对象实例类型",
+    "instances": 4,
+    "nestedInstances": 0,
+    "referenceFields": 12,
+    "declaredLevels": 2,
+    "levels": [
+      {
+        "level": "DuskGraveyard",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Village",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "activateFromAll",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "activateFromSingle",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "critters",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "effectAll",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "effects",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "effectSingle",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "fireOnce",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "fromAllPercent",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "onEnter",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "regions",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100c9caf0",
+    "nativeRegisteredFields": [
+      {
+        "name": "regions",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 88,
+        "registrationFunction": "0x1002675a0",
+        "propertyAddress": "0x100c9be90"
+      },
+      {
+        "name": "effects",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 96,
+        "registrationFunction": "0x1002675a0",
+        "propertyAddress": "0x100c9bee0"
+      },
+      {
+        "name": "onEnter",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 104,
+        "registrationFunction": "0x1002675a0",
+        "propertyAddress": "0x100c9bf30"
+      },
+      {
+        "name": "fireOnce",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 105,
+        "registrationFunction": "0x1002675a0",
+        "propertyAddress": "0x100c9bf80"
+      },
+      {
+        "name": "activateFromSingle",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 106,
+        "registrationFunction": "0x1002675a0",
+        "propertyAddress": "0x100c9bfd0"
+      },
+      {
+        "name": "activateFromAll",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 107,
+        "registrationFunction": "0x1002675a0",
+        "propertyAddress": "0x100c9c020"
+      },
+      {
+        "name": "fromAllPercent",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 108,
+        "registrationFunction": "0x1002675a0",
+        "propertyAddress": "0x100c9c070"
+      },
+      {
+        "name": "effectSingle",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 112,
+        "registrationFunction": "0x1002675a0",
+        "propertyAddress": "0x100c9c0c0"
+      },
+      {
+        "name": "effectAll",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 113,
+        "registrationFunction": "0x1002675a0",
+        "propertyAddress": "0x100c9c110"
+      }
+    ],
+    "completedCheckpoints": 4,
+    "partialCheckpoints": 2,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 40,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": true,
+    "implementation": [
+      "src/core/environment-object-state.ts",
+      "src/core/creature-construction-runtime.ts"
+    ],
+    "evidence": [
+      "docs/creature-construction.json",
+      "docs/creature-construction-oracle.json",
+      "docs/creature-objects-defaults.json",
+      "docs/creature-objects-default-oracle.json",
+      "docs/objects-nature-audit.json",
+      "docs/生物类续接.md"
+    ],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 9 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "partial",
+        "note": "原父构造和缺省／保存字段已恢复并检查 4 个真实实例；区域碰撞、成员创建／释放、CritterV2 消息和完整 Update 仍待接。",
+        "evidence": [
+          "docs/creature-construction.json",
+          "docs/creature-construction-oracle.json",
+          "docs/creature-objects-defaults.json",
+          "docs/creature-objects-default-oracle.json",
+          "docs/objects-nature-audit.json",
+          "docs/生物类续接.md"
+        ]
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "partial",
+        "note": "原父构造和缺省／保存字段已恢复并检查 4 个真实实例；区域碰撞、成员创建／释放、CritterV2 消息和完整 Update 仍待接。",
+        "evidence": [
+          "docs/creature-construction.json",
+          "docs/creature-construction-oracle.json",
+          "docs/creature-objects-defaults.json",
+          "docs/creature-objects-default-oracle.json",
+          "docs/objects-nature-audit.json",
+          "docs/生物类续接.md"
+        ]
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "verified",
+        "note": "原父构造和缺省／保存字段已恢复并检查 4 个真实实例；区域碰撞、成员创建／释放、CritterV2 消息和完整 Update 仍待接。",
+        "evidence": [
+          "docs/creature-construction.json",
+          "docs/creature-construction-oracle.json",
+          "docs/creature-objects-defaults.json",
+          "docs/creature-objects-default-oracle.json",
+          "docs/objects-nature-audit.json",
+          "docs/生物类续接.md"
+        ]
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "原父构造和缺省／保存字段已恢复并检查 4 个真实实例；区域碰撞、成员创建／释放、CritterV2 消息和完整 Update 仍待接。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "DuskGraveyard:n1187",
+      "level": "DuskGraveyard",
+      "nodeId": 1187,
+      "name": "BstNode_463",
+      "className": "Critter_OnRegion",
+      "classIndex": 60,
+      "sourceOffset": 302606,
+      "sourceLength": 39,
+      "sourceSha256": "5c7b8e305d83db79a93df71d3a58dec8ac29beac6e7851f53439448a406bea27",
+      "declaredFieldCount": 11,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1187/p1",
+          "fieldName": "critters",
+          "target": "DuskGraveyard:n1760",
+          "targetNodeId": 1760,
+          "offset": 302623
+        },
+        {
+          "fieldId": "n1187/p5",
+          "fieldName": "effects",
+          "target": "DuskGraveyard:n1761",
+          "targetNodeId": 1761,
+          "offset": 302630
+        },
+        {
+          "fieldId": "n1187/p6",
+          "fieldName": "regions",
+          "target": "DuskGraveyard:n1762",
+          "targetNodeId": 1762,
+          "offset": 302634
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n499",
+      "level": "Prairie_Village",
+      "nodeId": 499,
+      "name": "BstNode_318",
+      "className": "Critter_OnRegion",
+      "classIndex": 60,
+      "sourceOffset": 112761,
+      "sourceLength": 39,
+      "sourceSha256": "c653b5fc8491c707ec08868b5c9671ac2a8be31e1c371298875495a8f1072427",
+      "declaredFieldCount": 11,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n499/p1",
+          "fieldName": "critters",
+          "target": "Prairie_Village:n3230",
+          "targetNodeId": 3230,
+          "offset": 112778
+        },
+        {
+          "fieldId": "n499/p5",
+          "fieldName": "effects",
+          "target": "Prairie_Village:n515",
+          "targetNodeId": 515,
+          "offset": 112785
+        },
+        {
+          "fieldId": "n499/p6",
+          "fieldName": "regions",
+          "target": "Prairie_Village:n3231",
+          "targetNodeId": 3231,
+          "offset": 112789
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1402",
+      "level": "Prairie_Village",
+      "nodeId": 1402,
+      "name": "BstNode_322",
+      "className": "Critter_OnRegion",
+      "classIndex": 60,
+      "sourceOffset": 256207,
+      "sourceLength": 39,
+      "sourceSha256": "1d7594611f8ddc98cbbc2597471068ef4ad4f873a83d4e4156605e2fb1e431fa",
+      "declaredFieldCount": 11,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1402/p1",
+          "fieldName": "critters",
+          "target": "Prairie_Village:n3415",
+          "targetNodeId": 3415,
+          "offset": 256224
+        },
+        {
+          "fieldId": "n1402/p5",
+          "fieldName": "effects",
+          "target": "Prairie_Village:n750",
+          "targetNodeId": 750,
+          "offset": 256231
+        },
+        {
+          "fieldId": "n1402/p6",
+          "fieldName": "regions",
+          "target": "Prairie_Village:n3416",
+          "targetNodeId": 3416,
+          "offset": 256235
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2087",
+      "level": "Prairie_Village",
+      "nodeId": 2087,
+      "name": "BstNode_328",
+      "className": "Critter_OnRegion",
+      "classIndex": 60,
+      "sourceOffset": 368814,
+      "sourceLength": 39,
+      "sourceSha256": "7fd5fe22b81a98aed1b3987eefecc7a784b21faf0b49b0cf97ff166b59aed7a6",
+      "declaredFieldCount": 11,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2087/p1",
+          "fieldName": "critters",
+          "target": "Prairie_Village:n3541",
+          "targetNodeId": 3541,
+          "offset": 368831
+        },
+        {
+          "fieldId": "n2087/p5",
+          "fieldName": "effects",
+          "target": "Prairie_Village:n1979",
+          "targetNodeId": 1979,
+          "offset": 368838
+        },
+        {
+          "fieldId": "n2087/p6",
+          "fieldName": "regions",
+          "target": "Prairie_Village:n3542",
+          "targetNodeId": 3542,
+          "offset": 368842
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "DuskGraveyard",
+      "path": "Levels/DuskGraveyard/Objects.level.bin",
+      "sha256": "128b30dcbe40b68e68fc25d195b68dc39f897259453c02612049ccd37a90ffb4",
+      "bytes": 424333,
+      "nodes": 1791,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DuskGraveyard.json",
+      "markdown": "Objects对象清单/DuskGraveyard.md"
+    },
+    {
+      "level": "Prairie_Village",
+      "path": "Levels/Prairie_Village/Objects.level.bin",
+      "sha256": "4656296b54402016b59b894b4653fbdc71e106a21e0900294f73f2c7b7112385",
+      "bytes": 549989,
+      "nodes": 3724,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Village.json",
+      "markdown": "Objects对象清单/Prairie_Village.md"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "functions": {
+    "Crab.NetState": {
+      "start": "0x10025ead0",
+      "end": "0x10025ecc0",
+      "codeSha256": "85879e1ffc91425d19999235f98944ca5c19697076ef569de14b692607566543",
+      "assembly": "evidence/crab-netstate.asm"
+    },
+    "CrabBarn.Receive": {
+      "start": "0x10025ee60",
+      "end": "0x10025efe0",
+      "codeSha256": "a946f81e2c104c7681d2d0fc6373c808c89dda12b6ce27bb49ae07e199b4c5d7",
+      "assembly": "evidence/crabbarn-receive.asm"
+    },
+    "CrabBarn.Send": {
+      "start": "0x10025f0d0",
+      "end": "0x10025f2a0",
+      "codeSha256": "4549658bcacd84ee762296f24ae71cd4d4108f55307806544fe0106646fde5c4",
+      "assembly": "evidence/crabbarn-send.asm"
+    },
+    "CrabBarn.Update": {
+      "start": "0x10025ed80",
+      "end": "0x10025ee60",
+      "codeSha256": "991c5881cd467c8dbc8c115de682ab9c71ee309ef44a95b53eccba85b748938e",
+      "assembly": "evidence/crabbarn-update.asm"
+    }
+  },
+  "cases": 176,
+  "comparedCases": 176,
+  "comparedBytes": 46303232,
+  "serviceCalls": 853,
+  "nativeArithmeticProbes": 16,
+  "scope": "Whole original Crab state snapshot and CrabBarn receive/send, composed with its existing Update. Metadata casts, stream lookup/count and state serializer retain explicit boundaries. Caller supplies initialized 120-byte private state scratch; original state field/copy order, ownership gates, preselected sends and per-object timer writes are preserved. Original packet codec, actual network, Crab outer Update and world/animation/GPU ownership remain pending. Full caller arena and ordered service comparisons include repeated metadata casts, snapshot owner/target branches, empty/single/odd/even Barn counts, due/NaN timers, receive local-owner skips, invalid index assertions, callback-modified counts/pointers/history and consecutive Barn Update frames. The count service explicitly supplies original private state scratch bytes; the serializer is a prepared service and no network traffic is emitted. Receive-mode count input is uninitialized by the original caller and represented as undefined in the runtime; the decoder must write it. Only that write-only trace input is normalized to zero; decoded count, maximum, all object bytes and service outputs remain compared. Additional cases cover private scratch seeded with 0/90/255, consecutive reuse and both canonical NaN signs in snapshot SIMD lanes.",
+  "failures": []
+}

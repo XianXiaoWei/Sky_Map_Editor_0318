@@ -1,0 +1,9 @@
+import hashlib,json,pathlib,struct,sys
+from native import Native
+n=Native(sys.argv[1] if len(sys.argv)>1 else '/storage/emulated/0/Download/地图编辑器/sky-map-editor/reference/Sky.app/Contents/MacOS/Sky')
+functions={}
+for name,address in [('Crab.SerializeState',0x1002582b0),('BinaryStream.Bytes',0x10076a0a0),('BinaryStream.WriteBits',0x1007692c0),('BinaryStream.ReadBits',0x1007693f0),('BinaryStream.UInt',0x10076ad40),('BinaryStream.Byte',0x10076ae50),('BinaryStream.Float',0x10076af70),('BinaryStream.QuantizedVector',0x10076b4e0),('BinaryStream.Vector',0x10076a360),('BinaryStream.Bool',0x10076aae0),('NetGameTypes.PlayerId',0x10049d9b0),('NetPlayerBarn.ShortId',0x1004aa260),('NetPlayerBarn.PlayerId',0x1004aa2b0)]:
+ start,end=n.bounds(address);assembly='evidence/'+name.lower().replace('.','-')+'.asm';pathlib.Path(assembly).write_text(n.annotated(start));functions[name]={'start':hex(start),'end':hex(end),'codeSha256':hashlib.sha256(n.read(start,end-start)).hexdigest(),'assembly':assembly}
+constants={name:struct.unpack('<I',n.read(addr,4))[0] for name,addr in [('one',0x100aa50c0),('half',0x100aa45b8)]}
+vectors={'targetMinimum':list(struct.unpack('<2I',n.read(0x100aaec70,8)))+[0xc2c80000],'targetMaximum':list(struct.unpack('<2I',n.read(0x100aa7ed0,8)))+[0x42c80000]}
+pathlib.Path('docs/crab-codec-native.json').write_text(json.dumps({'executableSha256':n.digest,'functions':functions,'constants':constants,'vectors':vectors,'scope':'Whole original Crab field codec composed with actual BinaryStream bit/byte/range/quantization/bool/vector operations and player-ID contexts and NetPlayerBarn mappings. Actual caller-owned packet buffers, stream cursors/status and memory are compared. Real network transport, world collision, outer Crab/DarkCreature Update and Model/animation/GPU owners remain pending.'},indent=2)+'\n')

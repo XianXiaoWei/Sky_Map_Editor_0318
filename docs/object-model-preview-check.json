@@ -1,0 +1,784 @@
+{
+  "passed": true,
+  "runtime": "linux arm64",
+  "scope": "Current editor resource geometry/packed bake/inspector preview only. LevelMesh static mesh and diagnostic material; Beamo has a helper placeholder, not original BeamoBarn model drawing. No animation, complete class runtime or original-game image parity is implied.",
+  "images": [
+    {
+      "className": "LevelMesh",
+      "level": "Dawn",
+      "nodeId": 7,
+      "label": "Cube\nBstNode_1049166257",
+      "file": "docs/LevelMesh-current-preview.png",
+      "viewport": {
+        "scope": "Original terrain/skirt GLSL, real packed geometry/material textures with declared gamma/mip handling and supported anisotropy (16x preview request), recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/MotionGen/MotionDilate/TemporalAa/Tonemap chain. PNG area-filtered mip generation and anisotropy strength remain preview adapters, not original exporter/Metal parity. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending.",
+        "draws": 20,
+        "shaders": [
+          "RockFaceSh",
+          "SandSh",
+          "GrassSh",
+          "RockFaceShAlpha",
+          "SandShAlpha",
+          "GrassShAlpha",
+          "RockFaceShAlphaSkirt",
+          "SandShAlphaSkirt",
+          "GrassShAlphaSkirt"
+        ],
+        "triangles": 138277,
+        "textures": [
+          "CliffSh",
+          "CliffWetSh",
+          "Noise3Ch",
+          "GrassNorTex0",
+          "GrassNorTex1",
+          "GrassMask"
+        ],
+        "textureSampling": [
+          {
+            "name": "CliffSh",
+            "mipLevels": 10,
+            "anisotropy": 16,
+            "gamma": false
+          },
+          {
+            "name": "CliffWetSh",
+            "mipLevels": 10,
+            "anisotropy": 16,
+            "gamma": false
+          },
+          {
+            "name": "Noise3Ch",
+            "mipLevels": 10,
+            "anisotropy": 1,
+            "gamma": false
+          },
+          {
+            "name": "GrassNorTex0",
+            "mipLevels": 10,
+            "anisotropy": 16,
+            "gamma": false
+          },
+          {
+            "name": "GrassNorTex1",
+            "mipLevels": 9,
+            "anisotropy": 1,
+            "gamma": false
+          },
+          {
+            "name": "GrassMask",
+            "mipLevels": 10,
+            "anisotropy": 1,
+            "gamma": false
+          }
+        ],
+        "dynamics": {
+          "time": 0,
+          "scrolls": [
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        "sceneUploads": 4,
+        "overlayUpdates": 4,
+        "cloud": {
+          "scope": "Original sparse cloud fields and CloudFluffy.vol; CloudCore history/signed depth, three depth passes, 1/8 and 1/4 R16F coarse passes, half-resolution dual RGBA16F CloudFluffy plus dynamic CloudCard, original FogUpsample, MotionGen/MotionDilate/TemporalAa and Tonemap GLSL. Native eight-phase scene and 32-phase half jitter, Gaussian taps and current-jitter correction of previous projection; editor frame clock. Stage-sized viewport uniforms; native top-row depth for AIR FragCoord and explicit lower-left storage for projected Coarse/Fog UV. Preview: zero sampled EnvironmentForces wind, static map-start environments, camera used for local avatar, neutral unbaked card lighting, no Visibility occlusion, water/fog-volume/transparent-list/bloom/motion-blur inputs zero, static opaque motion with original temporal resolve; deterministic editor rand31 stream with native conversion, explicit preview composed-HDR geometric-mean exposure and sRGB display transfer. Native opaque RGBA32F converted once to half RTE; original per-draw Metal half rounding/game image parity remain unverified.",
+          "enabled": true,
+          "frames": 1,
+          "volumeBlocks": 6361,
+          "proxyTriangles": 24781,
+          "visibleCards": 3,
+          "passes": [
+            "CloudCore",
+            "OpaqueRGBDepth",
+            "DepthDownsample",
+            "DepthDownsampleGather",
+            "DepthDownsampleQuarter",
+            "CloudFluffySuperCoarse",
+            "CloudFluffyCoarse",
+            "CloudFluffy",
+            "CloudCard",
+            "PreviewLuminance",
+            "FogUpsample",
+            "MotionGen",
+            "MotionDilate",
+            "TemporalAa",
+            "Tonemap"
+          ],
+          "noise": "Tex3D/CloudFluffy.vol",
+          "screenNoiseImages": [
+            "NoiseBlue3Ch",
+            "HeatTex"
+          ],
+          "randomOffset": [
+            0.40886253118515015,
+            0.20190106332302094,
+            0.5250416398048401
+          ],
+          "sampling": {
+            "frame": 0,
+            "phase": 0,
+            "halfPhase": 0,
+            "pixelOffset": [
+              0.0625,
+              -0.1875
+            ],
+            "jitter": [
+              -0.00009765625145519152,
+              0.00030241935746744275
+            ],
+            "jitterHalf": [
+              -0.0007812500116415322,
+              -0.000806451600510627
+            ],
+            "clockScope": "Editor completed-frame counter; native sampling sequence, not original process frame timing"
+          },
+          "randomStreamScope": "Deterministic editor 31-bit sequence with original Compositor conversion; process-wide Darwin rand stream not reproduced",
+          "wind": {
+            "move": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "scroll": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "time": 0
+          },
+          "undulationScale": 1,
+          "cloudMat": [
+            0.4562634229660034,
+            0.4562634229660034,
+            0.4562634229660034,
+            0.10000000149011612
+          ],
+          "cloudNoiseTweaks": [
+            2.5,
+            0.5,
+            0.5,
+            0.15000000596046448
+          ],
+          "lastMilliseconds": 14258.693276,
+          "averageLum": 0.002006272172990688,
+          "exposureScope": "Editor composed-HDR geometric mean and sRGB display transfer; original luminance feedback pending",
+          "statistics": {
+            "Opaque": {
+              "min": [
+                -0.0006060109590180218,
+                -0.0007285676547326148,
+                -0.0006667486159130931,
+                -23.03125
+              ],
+              "max": [
+                0.04269953444600105,
+                0.03350257873535156,
+                0.024648332968354225,
+                11.738297462463379
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "CloudFluffySuperCoarse": {
+              "min": [
+                2.5,
+                0,
+                0,
+                1
+              ],
+              "max": [
+                164.875,
+                0,
+                0,
+                1
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "CloudFluffyCoarse": {
+              "min": [
+                2.5,
+                0,
+                0,
+                1
+              ],
+              "max": [
+                165.375,
+                0,
+                0,
+                1
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "CloudA": {
+              "min": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "max": [
+                0.060882568359375,
+                0.0193939208984375,
+                0.0082550048828125,
+                1.068359375
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "CloudB": {
+              "min": [
+                0,
+                -0.00018918514251708984,
+                -4.73828125,
+                0
+              ],
+              "max": [
+                1943,
+                0.0041961669921875,
+                0.00010651350021362305,
+                1.068359375
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "FogUpsample": {
+              "min": [
+                0.173583984375,
+                0.1727294921875,
+                0.2122802734375,
+                0
+              ],
+              "max": [
+                0.89599609375,
+                0.8955078125,
+                0.93359375,
+                0
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "MotionGen": {
+              "min": [
+                -0.000579833984375,
+                -49.75,
+                19.390625,
+                0.00019991397857666016
+              ],
+              "max": [
+                0.044158935546875,
+                0.00038909912109375,
+                65504,
+                2.267578125
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "MotionDilate": {
+              "min": [
+                -0.000579833984375,
+                -49.75,
+                -0.122802734375,
+                -30.109375
+              ],
+              "max": [
+                0.044158935546875,
+                0.00038909912109375,
+                -0.00009995698928833008,
+                -0.00009995698928833008
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "TemporalAa": {
+              "min": [
+                0.173583984375,
+                0.1727294921875,
+                0.2122802734375,
+                0
+              ],
+              "max": [
+                0.89599609375,
+                0.8955078125,
+                0.93359375,
+                0
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "temporal": {
+              "cameraCut": true,
+              "frames": 1,
+              "scope": "Original GLES motion and temporal fragments, supplied native camera Gaussian taps, previous composed color. Static opaque motion; moving model Motion list and original Metal quantization pending."
+            },
+            "Tonemap": {
+              "min": [
+                0.007740451954305172,
+                0.007814601995050907,
+                0.003115205792710185,
+                0
+              ],
+              "max": [
+                0.6669968962669373,
+                0.6684541702270508,
+                0.6028332114219666,
+                0
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          },
+          "active": true
+        }
+      },
+      "scope": "Static resource mesh/diagnostic preview with current inspector"
+    },
+    {
+      "className": "Beamo",
+      "level": "Dawn",
+      "nodeId": 23,
+      "label": "BstNode_1049165972",
+      "file": "docs/Beamo-current-preview.png",
+      "viewport": {
+        "scope": "Original terrain/skirt GLSL, real packed geometry/material textures with declared gamma/mip handling and supported anisotropy (16x preview request), recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/MotionGen/MotionDilate/TemporalAa/Tonemap chain. PNG area-filtered mip generation and anisotropy strength remain preview adapters, not original exporter/Metal parity. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending.",
+        "draws": 20,
+        "shaders": [
+          "RockFaceSh",
+          "SandSh",
+          "GrassSh",
+          "RockFaceShAlpha",
+          "SandShAlpha",
+          "GrassShAlpha",
+          "RockFaceShAlphaSkirt",
+          "SandShAlphaSkirt",
+          "GrassShAlphaSkirt"
+        ],
+        "triangles": 138277,
+        "textures": [
+          "CliffSh",
+          "CliffWetSh",
+          "Noise3Ch",
+          "GrassNorTex0",
+          "GrassNorTex1",
+          "GrassMask"
+        ],
+        "textureSampling": [
+          {
+            "name": "CliffSh",
+            "mipLevels": 10,
+            "anisotropy": 16,
+            "gamma": false
+          },
+          {
+            "name": "CliffWetSh",
+            "mipLevels": 10,
+            "anisotropy": 16,
+            "gamma": false
+          },
+          {
+            "name": "Noise3Ch",
+            "mipLevels": 10,
+            "anisotropy": 1,
+            "gamma": false
+          },
+          {
+            "name": "GrassNorTex0",
+            "mipLevels": 10,
+            "anisotropy": 16,
+            "gamma": false
+          },
+          {
+            "name": "GrassNorTex1",
+            "mipLevels": 9,
+            "anisotropy": 1,
+            "gamma": false
+          },
+          {
+            "name": "GrassMask",
+            "mipLevels": 10,
+            "anisotropy": 1,
+            "gamma": false
+          }
+        ],
+        "dynamics": {
+          "time": 0,
+          "scrolls": [
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        "sceneUploads": 5,
+        "overlayUpdates": 5,
+        "cloud": {
+          "scope": "Original sparse cloud fields and CloudFluffy.vol; CloudCore history/signed depth, three depth passes, 1/8 and 1/4 R16F coarse passes, half-resolution dual RGBA16F CloudFluffy plus dynamic CloudCard, original FogUpsample, MotionGen/MotionDilate/TemporalAa and Tonemap GLSL. Native eight-phase scene and 32-phase half jitter, Gaussian taps and current-jitter correction of previous projection; editor frame clock. Stage-sized viewport uniforms; native top-row depth for AIR FragCoord and explicit lower-left storage for projected Coarse/Fog UV. Preview: zero sampled EnvironmentForces wind, static map-start environments, camera used for local avatar, neutral unbaked card lighting, no Visibility occlusion, water/fog-volume/transparent-list/bloom/motion-blur inputs zero, static opaque motion with original temporal resolve; deterministic editor rand31 stream with native conversion, explicit preview composed-HDR geometric-mean exposure and sRGB display transfer. Native opaque RGBA32F converted once to half RTE; original per-draw Metal half rounding/game image parity remain unverified.",
+          "enabled": true,
+          "frames": 2,
+          "volumeBlocks": 6361,
+          "proxyTriangles": 24781,
+          "visibleCards": 78,
+          "passes": [
+            "CloudCore",
+            "OpaqueRGBDepth",
+            "DepthDownsample",
+            "DepthDownsampleGather",
+            "DepthDownsampleQuarter",
+            "CloudFluffySuperCoarse",
+            "CloudFluffyCoarse",
+            "CloudFluffy",
+            "CloudCard",
+            "PreviewLuminance",
+            "FogUpsample",
+            "MotionGen",
+            "MotionDilate",
+            "TemporalAa",
+            "Tonemap"
+          ],
+          "noise": "Tex3D/CloudFluffy.vol",
+          "screenNoiseImages": [
+            "NoiseBlue3Ch",
+            "HeatTex"
+          ],
+          "randomOffset": [
+            0.40886253118515015,
+            0.20190106332302094,
+            0.5250416398048401
+          ],
+          "sampling": {
+            "frame": 1,
+            "phase": 1,
+            "halfPhase": 1,
+            "pixelOffset": [
+              -0.1875,
+              0.1875
+            ],
+            "jitter": [
+              0.0002929687616415322,
+              -0.00030241935746744275
+            ],
+            "jitterHalf": [
+              0.0007812500116415322,
+              -0.000806451600510627
+            ],
+            "clockScope": "Editor completed-frame counter; native sampling sequence, not original process frame timing"
+          },
+          "randomStreamScope": "Deterministic editor 31-bit sequence with original Compositor conversion; process-wide Darwin rand stream not reproduced",
+          "wind": {
+            "move": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "scroll": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "time": 0
+          },
+          "undulationScale": 1,
+          "cloudMat": [
+            0.4562634229660034,
+            0.4562634229660034,
+            0.4562634229660034,
+            0.10000000149011612
+          ],
+          "cloudNoiseTweaks": [
+            2.5,
+            0.5,
+            0.5,
+            0.15000000596046448
+          ],
+          "lastMilliseconds": 6408.667706,
+          "averageLum": 0.004114550134021785,
+          "exposureScope": "Editor composed-HDR geometric mean and sRGB display transfer; original luminance feedback pending",
+          "statistics": {
+            "Opaque": {
+              "min": [
+                -0.0022095346357673407,
+                -0.002824468770995736,
+                -0.00232568196952343,
+                -85.25
+              ],
+              "max": [
+                1,
+                1,
+                1,
+                75.8738021850586
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "CloudFluffySuperCoarse": {
+              "min": [
+                2.5,
+                0,
+                0,
+                1
+              ],
+              "max": [
+                792.5,
+                0,
+                0,
+                1
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "CloudFluffyCoarse": {
+              "min": [
+                2.5,
+                0,
+                0,
+                1
+              ],
+              "max": [
+                818,
+                0,
+                0,
+                1
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "CloudA": {
+              "min": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "max": [
+                0.286865234375,
+                0.10406494140625,
+                0.051300048828125,
+                1.4462890625
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "CloudB": {
+              "min": [
+                0,
+                -0.7744140625,
+                -1.12890625,
+                0
+              ],
+              "max": [
+                3278,
+                0.0002930164337158203,
+                72.9375,
+                1.4462890625
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "FogUpsample": {
+              "min": [
+                0.00409698486328125,
+                0.00409698486328125,
+                0.00409698486328125,
+                0
+              ],
+              "max": [
+                0.986328125,
+                0.98583984375,
+                0.9912109375,
+                0
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "MotionGen": {
+              "min": [
+                -0.53515625,
+                -16,
+                10,
+                0.00019991397857666016
+              ],
+              "max": [
+                0.0078125,
+                50.40625,
+                65504,
+                2.330078125
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "MotionDilate": {
+              "min": [
+                -0.53515625,
+                -0.14990234375,
+                -11.7578125,
+                -30.515625
+              ],
+              "max": [
+                0.0078125,
+                50.40625,
+                -0.00009995698928833008,
+                -0.00009995698928833008
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "TemporalAa": {
+              "min": [
+                0.00409698486328125,
+                0.00409698486328125,
+                0.00409698486328125,
+                0
+              ],
+              "max": [
+                0.98583984375,
+                0.9853515625,
+                0.99072265625,
+                0
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "temporal": {
+              "cameraCut": true,
+              "frames": 2,
+              "scope": "Original GLES motion and temporal fragments, supplied native camera Gaussian taps, previous composed color. Static opaque motion; moving model Motion list and original Metal quantization pending."
+            },
+            "Tonemap": {
+              "min": [
+                0.00017709482926875353,
+                0.0001894869055831805,
+                0.00007606195867992938,
+                0
+              ],
+              "max": [
+                0.9912810325622559,
+                0.9912810325622559,
+                0.9912810325622559,
+                0
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          },
+          "active": true
+        }
+      },
+      "scope": "Helper and inspector only; actual Beamo model drawing is incomplete"
+    }
+  ],
+  "errors": []
+}

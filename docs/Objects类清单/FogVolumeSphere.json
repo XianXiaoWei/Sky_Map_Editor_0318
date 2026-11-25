@@ -1,0 +1,3149 @@
+{
+  "className": "FogVolumeSphere",
+  "functionGroup": "水、雾与天气",
+  "functionRole": "球形体积雾与可见性参数",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "FogVolumeSphere 的原默认值、继承初始化及 8 个序列化字段变体；原注册字段 8 项。"
+    },
+    {
+      "name": "球形体积雾与可见性参数",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "PointLight（28 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "FogVolumeSphere",
+    "category": "水、雾与天气",
+    "functionGroupId": "weather",
+    "functionRole": "球形体积雾与可见性参数",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "FogVolumeSphere 的原默认值、继承初始化及 8 个序列化字段变体；原注册字段 8 项。"
+      },
+      {
+        "name": "球形体积雾与可见性参数",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "PointLight（28 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "PointLight",
+        "references": 28
+      }
+    ],
+    "rttiWorkingGroup": "地形、云、水和环境",
+    "role": "对象实例类型",
+    "instances": 78,
+    "nestedInstances": 0,
+    "referenceFields": 28,
+    "declaredLevels": 11,
+    "levels": [
+      {
+        "level": "Dawn",
+        "nodes": 12,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DayEnd",
+        "nodes": 6,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DuskGraveyard",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "HubReveal",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_ButterflyFields",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Cave",
+        "nodes": 14,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Rain",
+        "nodes": 12,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainEnd",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainForest",
+        "nodes": 5,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SunsetEnd2",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SunsetRace",
+        "nodes": 12,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "additive",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "enabled",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "ignoreClouds",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "inverted",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "pointLightSource",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "resolution",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "transform",
+        "type": 0,
+        "size": 64,
+        "nestedClass": null
+      },
+      {
+        "name": "visibility",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100cb1200",
+    "nativeRegisteredFields": [
+      {
+        "name": "enabled",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 92,
+        "registrationFunction": "0x100359b90",
+        "propertyAddress": "0x100cb0b48"
+      },
+      {
+        "name": "resolution",
+        "typeGetter": "__Z17GetMetaTypeByTypeIjERK8MetaTypev",
+        "nativeOffset": 88,
+        "registrationFunction": "0x100359b90",
+        "propertyAddress": "0x100cb0b98"
+      },
+      {
+        "name": "visibility",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 96,
+        "registrationFunction": "0x100359b90",
+        "propertyAddress": "0x100cb0be8"
+      },
+      {
+        "name": "additive",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 93,
+        "registrationFunction": "0x100359b90",
+        "propertyAddress": "0x100cb0c38"
+      },
+      {
+        "name": "inverted",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 94,
+        "registrationFunction": "0x100359b90",
+        "propertyAddress": "0x100cb0c88"
+      },
+      {
+        "name": "ignoreClouds",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 95,
+        "registrationFunction": "0x100359b90",
+        "propertyAddress": "0x100cb0cd8"
+      },
+      {
+        "name": "transform",
+        "typeGetter": "__Z17GetMetaTypeByTypeIN10Vectormath3Aos7Matrix4EERK8MetaTypev",
+        "nativeOffset": 16,
+        "registrationFunction": "0x100359b90",
+        "propertyAddress": "0x100cb0d28"
+      },
+      {
+        "name": "pointLightSource",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP10PointLightERK8MetaTypev",
+        "nativeOffset": 80,
+        "registrationFunction": "0x100359b90",
+        "propertyAddress": "0x100cb0d78"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 8 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "Dawn:n482",
+      "level": "Dawn",
+      "nodeId": 482,
+      "name": "BstNode_1049166278",
+      "className": "FogVolumeSphere",
+      "classIndex": 67,
+      "sourceOffset": 106367,
+      "sourceLength": 103,
+      "sourceSha256": "dd2f9928f2193065544eff9a34931824f6a588168ba94f44b3e2da7821089154",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n482/p1",
+          "fieldName": "pointLightSource",
+          "target": "Dawn:n2916",
+          "targetNodeId": 2916,
+          "offset": 106391
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n624",
+      "level": "Dawn",
+      "nodeId": 624,
+      "name": "BstNode_1049166276",
+      "className": "FogVolumeSphere",
+      "classIndex": 67,
+      "sourceOffset": 129362,
+      "sourceLength": 103,
+      "sourceSha256": "ed2b1d0d4bffd35c2f7fa1d1817d20db28cd2e7f11eb2ca0a288337ba6d3073b",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n624/p1",
+          "fieldName": "pointLightSource",
+          "target": "Dawn:n2916",
+          "targetNodeId": 2916,
+          "offset": 129386
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n898",
+      "level": "Dawn",
+      "nodeId": 898,
+      "name": "BstNode_2279669768",
+      "className": "FogVolumeSphere",
+      "classIndex": 67,
+      "sourceOffset": 175127,
+      "sourceLength": 103,
+      "sourceSha256": "d1a2690f0b766573362972ed7f859af6542b74344b764ef1c3fbeaeb612b7bb4",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1427",
+      "level": "Dawn",
+      "nodeId": 1427,
+      "name": "BstNode_3122856957",
+      "className": "FogVolumeSphere",
+      "classIndex": 67,
+      "sourceOffset": 251294,
+      "sourceLength": 103,
+      "sourceSha256": "9bd71b5dd8a443b5e82cc2152749e0f391722cbb2ac54cc2de96b0c0def02ee6",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1427/p1",
+          "fieldName": "pointLightSource",
+          "target": "Dawn:n2916",
+          "targetNodeId": 2916,
+          "offset": 251318
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1455",
+      "level": "Dawn",
+      "nodeId": 1455,
+      "name": "BstNode_3122856821",
+      "className": "FogVolumeSphere",
+      "classIndex": 67,
+      "sourceOffset": 256140,
+      "sourceLength": 103,
+      "sourceSha256": "5789cf9051b9789ade2326dfeef6d4dab462753777d1b61797a61cee0f1a6389",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1455/p1",
+          "fieldName": "pointLightSource",
+          "target": "Dawn:n2916",
+          "targetNodeId": 2916,
+          "offset": 256164
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1590",
+      "level": "Dawn",
+      "nodeId": 1590,
+      "name": "BstNode_404",
+      "className": "FogVolumeSphere",
+      "classIndex": 67,
+      "sourceOffset": 274561,
+      "sourceLength": 96,
+      "sourceSha256": "fd4e1040dec3a88c9139dd76dcb9c043acf9a5f749effd9544d1a3ebf3acb590",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1590/p1",
+          "fieldName": "pointLightSource",
+          "target": "Dawn:n2916",
+          "targetNodeId": 2916,
+          "offset": 274578
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1742",
+      "level": "Dawn",
+      "nodeId": 1742,
+      "name": "BstNode_1049166277",
+      "className": "FogVolumeSphere",
+      "classIndex": 67,
+      "sourceOffset": 296320,
+      "sourceLength": 103,
+      "sourceSha256": "59faee3b5795dd620bc0d5fd5c8310c005bca60f96a16397194db44e26b6d29d",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1742/p1",
+          "fieldName": "pointLightSource",
+          "target": "Dawn:n2916",
+          "targetNodeId": 2916,
+          "offset": 296344
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1932",
+      "level": "Dawn",
+      "nodeId": 1932,
+      "name": "BstNode_2446917724",
+      "className": "FogVolumeSphere",
+      "classIndex": 67,
+      "sourceOffset": 317647,
+      "sourceLength": 103,
+      "sourceSha256": "b7de23e0429bd35dd0b38c735bb34f5497de6f1279c57254bab99fbc7a7225e9",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1932/p1",
+          "fieldName": "pointLightSource",
+          "target": "Dawn:n2916",
+          "targetNodeId": 2916,
+          "offset": 317671
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2145",
+      "level": "Dawn",
+      "nodeId": 2145,
+      "name": "BstNode_1049166275",
+      "className": "FogVolumeSphere",
+      "classIndex": 67,
+      "sourceOffset": 351128,
+      "sourceLength": 103,
+      "sourceSha256": "4c1b527bbbb0932658388719eb51a6832e3075b878fcf92d0dd392ada7439ee5",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n2145/p1",
+          "fieldName": "pointLightSource",
+          "target": "Dawn:n2916",
+          "targetNodeId": 2916,
+          "offset": 351152
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2331",
+      "level": "Dawn",
+      "nodeId": 2331,
+      "name": "BstNode_2279669779",
+      "className": "FogVolumeSphere",
+      "classIndex": 67,
+      "sourceOffset": 387277,
+      "sourceLength": 103,
+      "sourceSha256": "d8046efac9804eb4548e4f51569a52095d83cdedcdeac425c80df42a055eed1f",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2835",
+      "level": "Dawn",
+      "nodeId": 2835,
+      "name": "BstNode_2279669791",
+      "className": "FogVolumeSphere",
+      "classIndex": 67,
+      "sourceOffset": 464806,
+      "sourceLength": 103,
+      "sourceSha256": "5de194c250cffd5e641e0aa7cf15a703201ee83b70fa7d614ec740748e4c7724",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2842",
+      "level": "Dawn",
+      "nodeId": 2842,
+      "name": "BstNode_386",
+      "className": "FogVolumeSphere",
+      "classIndex": 67,
+      "sourceOffset": 465541,
+      "sourceLength": 96,
+      "sourceSha256": "17db2fa42e6247e3ee288d6e9b59092b34308b8fa4e5016504c191d49fb1ee83",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n2842/p1",
+          "fieldName": "pointLightSource",
+          "target": "Dawn:n2916",
+          "targetNodeId": 2916,
+          "offset": 465558
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n169",
+      "level": "DayEnd",
+      "nodeId": 169,
+      "name": "BstNode_980",
+      "className": "FogVolumeSphere",
+      "classIndex": 33,
+      "sourceOffset": 58260,
+      "sourceLength": 96,
+      "sourceSha256": "d625be6fb3f7a20fe3e11df305b9b1bb0d369ac783a04457ea853c32a2f3d687",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n301",
+      "level": "DayEnd",
+      "nodeId": 301,
+      "name": "BstNode_876",
+      "className": "FogVolumeSphere",
+      "classIndex": 33,
+      "sourceOffset": 80937,
+      "sourceLength": 96,
+      "sourceSha256": "0ecbba06460b102e07dc321788e9556f07fe9d43a84b8bafc4120ef2a823a2e6",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n489",
+      "level": "DayEnd",
+      "nodeId": 489,
+      "name": "BstNode_981",
+      "className": "FogVolumeSphere",
+      "classIndex": 33,
+      "sourceOffset": 117523,
+      "sourceLength": 96,
+      "sourceSha256": "2ac4ba97046e04211a252ab3c20f3315b82b3a60de0c53ae8d871d66972c0765",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n833",
+      "level": "DayEnd",
+      "nodeId": 833,
+      "name": "BstNode_720",
+      "className": "FogVolumeSphere",
+      "classIndex": 33,
+      "sourceOffset": 181577,
+      "sourceLength": 96,
+      "sourceSha256": "05f729f9669bf1a9b29629d1d1a9d0d04d56699b074e64a8695acbecc30754a2",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n1092",
+      "level": "DayEnd",
+      "nodeId": 1092,
+      "name": "BstNode_987",
+      "className": "FogVolumeSphere",
+      "classIndex": 33,
+      "sourceOffset": 227754,
+      "sourceLength": 96,
+      "sourceSha256": "cc062205149d0767a55c4364392c11ccab2182b7278a11ae6e39f2b8ec82b643",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n1198",
+      "level": "DayEnd",
+      "nodeId": 1198,
+      "name": "BstNode_721",
+      "className": "FogVolumeSphere",
+      "classIndex": 33,
+      "sourceOffset": 248949,
+      "sourceLength": 96,
+      "sourceSha256": "6e2b9b3b034a254a6a2739b659634c9e354e9a7607ed217f4268507cc0f0e956",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n440",
+      "level": "DuskGraveyard",
+      "nodeId": 440,
+      "name": "BstNode_2345992690",
+      "className": "FogVolumeSphere",
+      "classIndex": 40,
+      "sourceOffset": 128414,
+      "sourceLength": 103,
+      "sourceSha256": "da08f56d289c84177cc9464591696be13ffcb229ed1a726b0ee4d57bd77cadc3",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n929",
+      "level": "DuskGraveyard",
+      "nodeId": 929,
+      "name": "BstNode_2345992723",
+      "className": "FogVolumeSphere",
+      "classIndex": 40,
+      "sourceOffset": 240389,
+      "sourceLength": 103,
+      "sourceSha256": "42e8fa7fc023d2a77345706970a2c83068343434be46d220f34124261a0d6480",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskGraveyard:n1665",
+      "level": "DuskGraveyard",
+      "nodeId": 1665,
+      "name": "BstNode_2345992696",
+      "className": "FogVolumeSphere",
+      "classIndex": 40,
+      "sourceOffset": 411007,
+      "sourceLength": 103,
+      "sourceSha256": "903532487c39b323621f48129c40f55ab7d2cf5b465fdddc497dbd8b77d15ed8",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n9",
+      "level": "HubReveal",
+      "nodeId": 9,
+      "name": "BstNode_1507",
+      "className": "FogVolumeSphere",
+      "classIndex": 8,
+      "sourceOffset": 30564,
+      "sourceLength": 97,
+      "sourceSha256": "480c799c19e642907dd547b6bc07b1b3b39874859a5541f5ff33c804635fb1cf",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n705",
+      "level": "HubReveal",
+      "nodeId": 705,
+      "name": "BstNode_2084",
+      "className": "FogVolumeSphere",
+      "classIndex": 8,
+      "sourceOffset": 147173,
+      "sourceLength": 97,
+      "sourceSha256": "48874ceeaff9aa3565f27493246fcb06d212725163df47d3ff3a3278550cde83",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n705/p1",
+          "fieldName": "pointLightSource",
+          "target": "HubReveal:n943",
+          "targetNodeId": 943,
+          "offset": 147191
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n927",
+      "level": "HubReveal",
+      "nodeId": 927,
+      "name": "BstNode_1740",
+      "className": "FogVolumeSphere",
+      "classIndex": 8,
+      "sourceOffset": 186431,
+      "sourceLength": 97,
+      "sourceSha256": "b403daff69e65a17e54e19a21d1ad2a2f3015519ff151dca98cf47ef87b06db0",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n1098",
+      "level": "HubReveal",
+      "nodeId": 1098,
+      "name": "BstNode_2082",
+      "className": "FogVolumeSphere",
+      "classIndex": 8,
+      "sourceOffset": 213744,
+      "sourceLength": 97,
+      "sourceSha256": "ceae14d8f66ebd980483e3ba90d1bd1b868c33e95d3d3142910aa8a44bc62175",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n9",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 9,
+      "name": "BstNode_1507",
+      "className": "FogVolumeSphere",
+      "classIndex": 4,
+      "sourceOffset": 25830,
+      "sourceLength": 97,
+      "sourceSha256": "aae0c817055e561905132f28996688ddaf42fe097e46b3933a8fe746aecabe0e",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n468",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 468,
+      "name": "BstNode_898",
+      "className": "FogVolumeSphere",
+      "classIndex": 4,
+      "sourceOffset": 122426,
+      "sourceLength": 96,
+      "sourceSha256": "c8a777a936b8579b2fa598fc575b62af268dce7140f00a9171c466d9479cfc56",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n468/p1",
+          "fieldName": "pointLightSource",
+          "target": "Prairie_ButterflyFields:n412",
+          "targetNodeId": 412,
+          "offset": 122443
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n518",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 518,
+      "name": "BstNode_1740",
+      "className": "FogVolumeSphere",
+      "classIndex": 4,
+      "sourceOffset": 135110,
+      "sourceLength": 97,
+      "sourceSha256": "a19a8a24f46241209804a5e88c777a3425a6f7d899bbaddb0173b7b1d9944938",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n822",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 822,
+      "name": "BstNode_2082",
+      "className": "FogVolumeSphere",
+      "classIndex": 4,
+      "sourceOffset": 184761,
+      "sourceLength": 97,
+      "sourceSha256": "18ac5ea3fae6a4afa54c8edd04c32307e79723ea9a88b53f3e5edc771da12b59",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n93",
+      "level": "Prairie_Cave",
+      "nodeId": 93,
+      "name": "BstNode_1842807032",
+      "className": "FogVolumeSphere",
+      "classIndex": 19,
+      "sourceOffset": 46487,
+      "sourceLength": 103,
+      "sourceSha256": "7b131fd0a3b9d927ff1fd7670655619001a5d48f7cf708a944581a2e661c8ade",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n100",
+      "level": "Prairie_Cave",
+      "nodeId": 100,
+      "name": "BstNode_3122856273",
+      "className": "FogVolumeSphere",
+      "classIndex": 19,
+      "sourceOffset": 48069,
+      "sourceLength": 103,
+      "sourceSha256": "1955e8d39a34563e653954fef5dfcb954c97f7956db164abd0e9d1903a94f1fb",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n277",
+      "level": "Prairie_Cave",
+      "nodeId": 277,
+      "name": "BstNode_1842806873",
+      "className": "FogVolumeSphere",
+      "classIndex": 19,
+      "sourceOffset": 87221,
+      "sourceLength": 103,
+      "sourceSha256": "481f595e857d0eb2dfb6fc33a6f9daa62fb590640f7bd115b371deae7ecb723f",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n508",
+      "level": "Prairie_Cave",
+      "nodeId": 508,
+      "name": "BstNode_3122856272",
+      "className": "FogVolumeSphere",
+      "classIndex": 19,
+      "sourceOffset": 141428,
+      "sourceLength": 103,
+      "sourceSha256": "ce32c3c2cc2329583e84b01a29dd54881c798a2288891d62c79659651aacf3c3",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n575",
+      "level": "Prairie_Cave",
+      "nodeId": 575,
+      "name": "BstNode_3122856153",
+      "className": "FogVolumeSphere",
+      "classIndex": 19,
+      "sourceOffset": 157153,
+      "sourceLength": 103,
+      "sourceSha256": "1e3b2a417a86c5729c4e531d4d8fd152ac5b57a1949617b8bb69451f43ff3b40",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n846",
+      "level": "Prairie_Cave",
+      "nodeId": 846,
+      "name": "BstNode_1842806861",
+      "className": "FogVolumeSphere",
+      "classIndex": 19,
+      "sourceOffset": 220768,
+      "sourceLength": 103,
+      "sourceSha256": "1e9132ed438c1c949f27da9242f60aaf2f8184c1d1fa7d0751bdf8b730d1c1af",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n848",
+      "level": "Prairie_Cave",
+      "nodeId": 848,
+      "name": "BstNode_2753888416",
+      "className": "FogVolumeSphere",
+      "classIndex": 19,
+      "sourceOffset": 221262,
+      "sourceLength": 103,
+      "sourceSha256": "6d080823d099e209abf0009c761f8fa63c8595507180272b378b47549f14bb79",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n977",
+      "level": "Prairie_Cave",
+      "nodeId": 977,
+      "name": "BstNode_2753888417",
+      "className": "FogVolumeSphere",
+      "classIndex": 19,
+      "sourceOffset": 249575,
+      "sourceLength": 103,
+      "sourceSha256": "de775ec04a02ec2d45fbc0754551554ec47030b384d09c9e20d87520cb926146",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n993",
+      "level": "Prairie_Cave",
+      "nodeId": 993,
+      "name": "BstNode_1293287513",
+      "className": "FogVolumeSphere",
+      "classIndex": 19,
+      "sourceOffset": 252785,
+      "sourceLength": 103,
+      "sourceSha256": "305138beeb043c01a877ca547c6165b3bc32c62527059d87deb35f11bc565e46",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n1075",
+      "level": "Prairie_Cave",
+      "nodeId": 1075,
+      "name": "BstNode_2753888448",
+      "className": "FogVolumeSphere",
+      "classIndex": 19,
+      "sourceOffset": 271581,
+      "sourceLength": 103,
+      "sourceSha256": "890817005df51bb4e77d92414e3543a6f7e03f3aaf9c7afb046e5549e60c675e",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n1167",
+      "level": "Prairie_Cave",
+      "nodeId": 1167,
+      "name": "BstNode_1842806846",
+      "className": "FogVolumeSphere",
+      "classIndex": 19,
+      "sourceOffset": 294309,
+      "sourceLength": 103,
+      "sourceSha256": "e7cef206499e5b1c35013a0efc4d1a5a8863556e8051934add7c9eb48c0505b0",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1167/p1",
+          "fieldName": "pointLightSource",
+          "target": "Prairie_Cave:n578",
+          "targetNodeId": 578,
+          "offset": 294333
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n1202",
+      "level": "Prairie_Cave",
+      "nodeId": 1202,
+      "name": "BstNode_2753888418",
+      "className": "FogVolumeSphere",
+      "classIndex": 19,
+      "sourceOffset": 300797,
+      "sourceLength": 103,
+      "sourceSha256": "44b268c19f1da88ae4a01b99b8974cc5c2d882f7a8e8c2f7d42188217edc56eb",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n1472",
+      "level": "Prairie_Cave",
+      "nodeId": 1472,
+      "name": "BstNode_1293287464",
+      "className": "FogVolumeSphere",
+      "classIndex": 19,
+      "sourceOffset": 370372,
+      "sourceLength": 103,
+      "sourceSha256": "7451a5518b50a874f5ae95ba42eaafd9012a8eadc3920e023d0f46084a0ab3f2",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Cave:n1727",
+      "level": "Prairie_Cave",
+      "nodeId": 1727,
+      "name": "BstNode_1842807039",
+      "className": "FogVolumeSphere",
+      "classIndex": 19,
+      "sourceOffset": 442651,
+      "sourceLength": 103,
+      "sourceSha256": "0a23645bc57372381e9406fe96d07bf0ab93dbc2a1ff3e61f8f284fd62ab0b4e",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n178",
+      "level": "Rain",
+      "nodeId": 178,
+      "name": "BstNode_400",
+      "className": "FogVolumeSphere",
+      "classIndex": 29,
+      "sourceOffset": 68465,
+      "sourceLength": 96,
+      "sourceSha256": "eca2bc65d80e5b213002129e657a32b48ea5b102e9e997df84ceeb9e57ecd3f6",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n441",
+      "level": "Rain",
+      "nodeId": 441,
+      "name": "BstNode_2345992352",
+      "className": "FogVolumeSphere",
+      "classIndex": 29,
+      "sourceOffset": 127282,
+      "sourceLength": 103,
+      "sourceSha256": "570fcac2501d75200527797943a84de5c49c5ed5717f47b1aee5edf2967c24d3",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n731",
+      "level": "Rain",
+      "nodeId": 731,
+      "name": "BstNode_2345992354",
+      "className": "FogVolumeSphere",
+      "classIndex": 29,
+      "sourceOffset": 195046,
+      "sourceLength": 103,
+      "sourceSha256": "874bce965d4420a5cec6b6295d6e3d8a52ae8f9df99479ee501b699fd629873c",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n883",
+      "level": "Rain",
+      "nodeId": 883,
+      "name": "BstNode_2345992259",
+      "className": "FogVolumeSphere",
+      "classIndex": 29,
+      "sourceOffset": 227633,
+      "sourceLength": 103,
+      "sourceSha256": "8732331a88832f40ba1474cc94c95f471c4ff649197f09f0e9acb6e1406654e7",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n912",
+      "level": "Rain",
+      "nodeId": 912,
+      "name": "BstNode_579",
+      "className": "FogVolumeSphere",
+      "classIndex": 29,
+      "sourceOffset": 235022,
+      "sourceLength": 96,
+      "sourceSha256": "86805098ad4141ebb61befeff97e5c9344ba42086aaaf7d63ef26c95596f63f3",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n988",
+      "level": "Rain",
+      "nodeId": 988,
+      "name": "BstNode_569",
+      "className": "FogVolumeSphere",
+      "classIndex": 29,
+      "sourceOffset": 252528,
+      "sourceLength": 96,
+      "sourceSha256": "cb5ade94b97c89b3089956e9f25e2a01beeccbd6f56e4ccbe883f297ab64e5aa",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n1171",
+      "level": "Rain",
+      "nodeId": 1171,
+      "name": "BstNode_570",
+      "className": "FogVolumeSphere",
+      "classIndex": 29,
+      "sourceOffset": 293255,
+      "sourceLength": 96,
+      "sourceSha256": "8403747638b90cab55e6e21c320e60a25a13784bc4aa55ba98cb38322b21e755",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n1278",
+      "level": "Rain",
+      "nodeId": 1278,
+      "name": "BstNode_2345992434",
+      "className": "FogVolumeSphere",
+      "classIndex": 29,
+      "sourceOffset": 314140,
+      "sourceLength": 103,
+      "sourceSha256": "aedfb21222be1d55f26156eec87266008a55364e415f983fdb2e5112ebc3a5f7",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1278/p1",
+          "fieldName": "pointLightSource",
+          "target": "Rain:n621",
+          "targetNodeId": 621,
+          "offset": 314164
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n1615",
+      "level": "Rain",
+      "nodeId": 1615,
+      "name": "BstNode_684",
+      "className": "FogVolumeSphere",
+      "classIndex": 29,
+      "sourceOffset": 387662,
+      "sourceLength": 96,
+      "sourceSha256": "13132f114b81c0c0ae8843308dc31bd9f5102fbfd34383e8bed5eb84efec5cf7",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n1704",
+      "level": "Rain",
+      "nodeId": 1704,
+      "name": "BstNode_840696321",
+      "className": "FogVolumeSphere",
+      "classIndex": 29,
+      "sourceOffset": 409659,
+      "sourceLength": 102,
+      "sourceSha256": "caaacbaa7b37ebc22c0bbfde141dcd7d290603b1074e57384676b5917caf5f16",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n1708",
+      "level": "Rain",
+      "nodeId": 1708,
+      "name": "BstNode_2345992742",
+      "className": "FogVolumeSphere",
+      "classIndex": 29,
+      "sourceOffset": 410745,
+      "sourceLength": 103,
+      "sourceSha256": "d42b8e42b50d9d1ea676c4a65526063b994145f0ffa1c068b5d2bf049dabd227",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n1752",
+      "level": "Rain",
+      "nodeId": 1752,
+      "name": "BstNode_2345992884",
+      "className": "FogVolumeSphere",
+      "classIndex": 29,
+      "sourceOffset": 420703,
+      "sourceLength": 103,
+      "sourceSha256": "806c4ed570ae1221c66aa4dea021845f9b53c9592b036369c1d6dbae41695dcd",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1752/p1",
+          "fieldName": "pointLightSource",
+          "target": "Rain:n1331",
+          "targetNodeId": 1331,
+          "offset": 420727
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n26",
+      "level": "RainEnd",
+      "nodeId": 26,
+      "name": "BstNode_107",
+      "className": "FogVolumeSphere",
+      "classIndex": 11,
+      "sourceOffset": 34245,
+      "sourceLength": 96,
+      "sourceSha256": "9d43b0ce9653ecfdb04ab2376331b04843d1993822e5afae263585a739a40bc2",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n188",
+      "level": "RainEnd",
+      "nodeId": 188,
+      "name": "BstNode_840696133",
+      "className": "FogVolumeSphere",
+      "classIndex": 11,
+      "sourceOffset": 75217,
+      "sourceLength": 102,
+      "sourceSha256": "f2cc9f863f69a4b2a608486754cbb9673e2c5cce5ff4f7177b062e993171b5d2",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n1186",
+      "level": "RainEnd",
+      "nodeId": 1186,
+      "name": "BstNode_840696132",
+      "className": "FogVolumeSphere",
+      "classIndex": 11,
+      "sourceOffset": 311619,
+      "sourceLength": 102,
+      "sourceSha256": "906ecbd38eeff862e8114970d0aef3bf1959703a1a3b86217a51ce8dfff82ce3",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n188",
+      "level": "RainForest",
+      "nodeId": 188,
+      "name": "BstNode_400",
+      "className": "FogVolumeSphere",
+      "classIndex": 28,
+      "sourceOffset": 59143,
+      "sourceLength": 96,
+      "sourceSha256": "fe6fad4821f2caa467925d89765bf2d07583bca4ee9e4742ad655fd8783e65ad",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n583",
+      "level": "RainForest",
+      "nodeId": 583,
+      "name": "BstNode_2345992742",
+      "className": "FogVolumeSphere",
+      "classIndex": 28,
+      "sourceOffset": 135019,
+      "sourceLength": 103,
+      "sourceSha256": "54ee46e2759724c1fce78416d87807fa7caf831fb323b844bf605ab421256f6f",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n753",
+      "level": "RainForest",
+      "nodeId": 753,
+      "name": "BstNode_570",
+      "className": "FogVolumeSphere",
+      "classIndex": 28,
+      "sourceOffset": 173948,
+      "sourceLength": 96,
+      "sourceSha256": "639d6aba33d324151d1bd19dc198e0afd169e14bf8f00a43dabfd63c7d08d07e",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n795",
+      "level": "RainForest",
+      "nodeId": 795,
+      "name": "BstNode_569",
+      "className": "FogVolumeSphere",
+      "classIndex": 28,
+      "sourceOffset": 182385,
+      "sourceLength": 96,
+      "sourceSha256": "1e5848970e13ae1f755cb9c854530ad812de9e5716d9c3e1522900b1042ee69c",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainForest:n831",
+      "level": "RainForest",
+      "nodeId": 831,
+      "name": "BstNode_840696321",
+      "className": "FogVolumeSphere",
+      "classIndex": 28,
+      "sourceOffset": 189777,
+      "sourceLength": 102,
+      "sourceSha256": "9ca0cb5df38d505ec7403ffd6817fe813178c2f1dc822f082e4ef27463e165b3",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd2:n107",
+      "level": "SunsetEnd2",
+      "nodeId": 107,
+      "name": "BstNode_840695855",
+      "className": "FogVolumeSphere",
+      "classIndex": 26,
+      "sourceOffset": 43791,
+      "sourceLength": 102,
+      "sourceSha256": "2186d28632f92e4e56937649265aecafaecaf4f4dd3ec082e06a737efe90053d",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n107/p1",
+          "fieldName": "pointLightSource",
+          "target": "SunsetEnd2:n852",
+          "targetNodeId": 852,
+          "offset": 43814
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd2:n271",
+      "level": "SunsetEnd2",
+      "nodeId": 271,
+      "name": "BstNode_840695951",
+      "className": "FogVolumeSphere",
+      "classIndex": 26,
+      "sourceOffset": 78996,
+      "sourceLength": 102,
+      "sourceSha256": "6fe0a3880251df25f6f8e6af01c017c8f156f4b208082f1c9625aabf39774112",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n271/p1",
+          "fieldName": "pointLightSource",
+          "target": "SunsetEnd2:n852",
+          "targetNodeId": 852,
+          "offset": 79019
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd2:n764",
+      "level": "SunsetEnd2",
+      "nodeId": 764,
+      "name": "BstNode_840695930",
+      "className": "FogVolumeSphere",
+      "classIndex": 26,
+      "sourceOffset": 186883,
+      "sourceLength": 102,
+      "sourceSha256": "c03db7e353f59ebfe5be21e901a7bbcb3041b4514c224ca24d8eeaa0d892aa00",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n764/p1",
+          "fieldName": "pointLightSource",
+          "target": "SunsetEnd2:n852",
+          "targetNodeId": 852,
+          "offset": 186906
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetRace:n268",
+      "level": "SunsetRace",
+      "nodeId": 268,
+      "name": "BstNode_1049165974",
+      "className": "FogVolumeSphere",
+      "classIndex": 31,
+      "sourceOffset": 72754,
+      "sourceLength": 103,
+      "sourceSha256": "9767f1e41b51e8fd64ef068c15b70816cb4e299a22210be1dbeb554b1714f29b",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n268/p1",
+          "fieldName": "pointLightSource",
+          "target": "SunsetRace:n531",
+          "targetNodeId": 531,
+          "offset": 72778
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetRace:n288",
+      "level": "SunsetRace",
+      "nodeId": 288,
+      "name": "BstNode_1049165910",
+      "className": "FogVolumeSphere",
+      "classIndex": 31,
+      "sourceOffset": 76358,
+      "sourceLength": 103,
+      "sourceSha256": "793f7bd31facb9787ad228379d295d4d1d17f26ec6a9cc9e4d1c5bcba740e6de",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n288/p1",
+          "fieldName": "pointLightSource",
+          "target": "SunsetRace:n519",
+          "targetNodeId": 519,
+          "offset": 76382
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetRace:n373",
+      "level": "SunsetRace",
+      "nodeId": 373,
+      "name": "BstNode_1049165972",
+      "className": "FogVolumeSphere",
+      "classIndex": 31,
+      "sourceOffset": 95337,
+      "sourceLength": 103,
+      "sourceSha256": "2c9dd7017b4b871ea30e42072ca08a79573975d96474cf2119f9c8afa4b19174",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n373/p1",
+          "fieldName": "pointLightSource",
+          "target": "SunsetRace:n531",
+          "targetNodeId": 531,
+          "offset": 95361
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetRace:n565",
+      "level": "SunsetRace",
+      "nodeId": 565,
+      "name": "BstNode_1049165907",
+      "className": "FogVolumeSphere",
+      "classIndex": 31,
+      "sourceOffset": 136898,
+      "sourceLength": 103,
+      "sourceSha256": "464d42fe8ecf54e15353a197367ee130cdc18ad63f455e0394049fb9569dd6d1",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n565/p1",
+          "fieldName": "pointLightSource",
+          "target": "SunsetRace:n519",
+          "targetNodeId": 519,
+          "offset": 136922
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetRace:n678",
+      "level": "SunsetRace",
+      "nodeId": 678,
+      "name": "BstNode_1049165973",
+      "className": "FogVolumeSphere",
+      "classIndex": 31,
+      "sourceOffset": 157358,
+      "sourceLength": 103,
+      "sourceSha256": "e212448d516214ede51a4a0b8583904b23227911602b1f99b22a65f4b3f792cc",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n678/p1",
+          "fieldName": "pointLightSource",
+          "target": "SunsetRace:n531",
+          "targetNodeId": 531,
+          "offset": 157382
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetRace:n708",
+      "level": "SunsetRace",
+      "nodeId": 708,
+      "name": "BstNode_840696065",
+      "className": "FogVolumeSphere",
+      "classIndex": 31,
+      "sourceOffset": 161808,
+      "sourceLength": 102,
+      "sourceSha256": "9ae31cc87174d0bc5bef88e8c7064b00f29bba12bd1275da66f6d1ce18ef5574",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n708/p1",
+          "fieldName": "pointLightSource",
+          "target": "SunsetRace:n262",
+          "targetNodeId": 262,
+          "offset": 161831
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetRace:n1125",
+      "level": "SunsetRace",
+      "nodeId": 1125,
+      "name": "BstNode_2279669910",
+      "className": "FogVolumeSphere",
+      "classIndex": 31,
+      "sourceOffset": 231020,
+      "sourceLength": 103,
+      "sourceSha256": "1f3d4fe35ebf503fd0731136f5956c48638d3fd56d34f8ea78982d0cfb29ee39",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1125/p1",
+          "fieldName": "pointLightSource",
+          "target": "SunsetRace:n519",
+          "targetNodeId": 519,
+          "offset": 231044
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetRace:n1175",
+      "level": "SunsetRace",
+      "nodeId": 1175,
+      "name": "BstNode_1049165908",
+      "className": "FogVolumeSphere",
+      "classIndex": 31,
+      "sourceOffset": 239836,
+      "sourceLength": 103,
+      "sourceSha256": "aee49dd4b7761ee53fb3c0f029742a415b2a346e657834987a61a40a59741184",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1175/p1",
+          "fieldName": "pointLightSource",
+          "target": "SunsetRace:n519",
+          "targetNodeId": 519,
+          "offset": 239860
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetRace:n1247",
+      "level": "SunsetRace",
+      "nodeId": 1247,
+      "name": "BstNode_840696042",
+      "className": "FogVolumeSphere",
+      "classIndex": 31,
+      "sourceOffset": 254992,
+      "sourceLength": 102,
+      "sourceSha256": "2574f412d7212e9f22d493024bb9cbc79ce6a4ee634d467da337e0f0c4868ef0",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetRace:n1444",
+      "level": "SunsetRace",
+      "nodeId": 1444,
+      "name": "BstNode_840696066",
+      "className": "FogVolumeSphere",
+      "classIndex": 31,
+      "sourceOffset": 294799,
+      "sourceLength": 102,
+      "sourceSha256": "a8fefc4d4efc36ed7ce991b612b698aae3b735fe0bf6715e1eb92029b8cada1f",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1444/p1",
+          "fieldName": "pointLightSource",
+          "target": "SunsetRace:n262",
+          "targetNodeId": 262,
+          "offset": 294822
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetRace:n1488",
+      "level": "SunsetRace",
+      "nodeId": 1488,
+      "name": "BstNode_1049165909",
+      "className": "FogVolumeSphere",
+      "classIndex": 31,
+      "sourceOffset": 303263,
+      "sourceLength": 103,
+      "sourceSha256": "d25aec7e5ea307dec69dfeacfb57929dadda23bee0961c4dc020a7f2f6201e3d",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1488/p1",
+          "fieldName": "pointLightSource",
+          "target": "SunsetRace:n519",
+          "targetNodeId": 519,
+          "offset": 303287
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetRace:n1529",
+      "level": "SunsetRace",
+      "nodeId": 1529,
+      "name": "BstNode_840695930",
+      "className": "FogVolumeSphere",
+      "classIndex": 31,
+      "sourceOffset": 312693,
+      "sourceLength": 102,
+      "sourceSha256": "e05e06edf9f5349b33453370ae77127f8afd726a4589832d4663439aeb60289e",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1529/p1",
+          "fieldName": "pointLightSource",
+          "target": "SunsetRace:n531",
+          "targetNodeId": 531,
+          "offset": 312716
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "Dawn",
+      "path": "Levels/Dawn/Objects.level.bin",
+      "sha256": "16e26aafc7f9d120a548bf5d8bec04fbc18146bc8db531ef75144889b1ff197a",
+      "bytes": 504637,
+      "nodes": 3798,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dawn.json",
+      "markdown": "Objects对象清单/Dawn.md"
+    },
+    {
+      "level": "DayEnd",
+      "path": "Levels/DayEnd/Objects.level.bin",
+      "sha256": "9b5c568cefa987e504a10236c5b61e5de4b748d965d09e42db3602e4e52cc904",
+      "bytes": 268140,
+      "nodes": 1459,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DayEnd.json",
+      "markdown": "Objects对象清单/DayEnd.md"
+    },
+    {
+      "level": "DuskGraveyard",
+      "path": "Levels/DuskGraveyard/Objects.level.bin",
+      "sha256": "128b30dcbe40b68e68fc25d195b68dc39f897259453c02612049ccd37a90ffb4",
+      "bytes": 424333,
+      "nodes": 1791,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DuskGraveyard.json",
+      "markdown": "Objects对象清单/DuskGraveyard.md"
+    },
+    {
+      "level": "HubReveal",
+      "path": "Levels/HubReveal/Objects.level.bin",
+      "sha256": "4b32f12bbe4b246cde9ca1e4ba0982000ff108359865bb4340aba640e609861b",
+      "bytes": 289438,
+      "nodes": 1829,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/HubReveal.json",
+      "markdown": "Objects对象清单/HubReveal.md"
+    },
+    {
+      "level": "Prairie_ButterflyFields",
+      "path": "Levels/Prairie_ButterflyFields/Objects.level.bin",
+      "sha256": "29d8d61a082f3e3414ecfbb501b5f65499deb37ad4a1078ce2e9b88ac0d1e441",
+      "bytes": 297606,
+      "nodes": 1513,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_ButterflyFields.json",
+      "markdown": "Objects对象清单/Prairie_ButterflyFields.md"
+    },
+    {
+      "level": "Prairie_Cave",
+      "path": "Levels/Prairie_Cave/Objects.level.bin",
+      "sha256": "675a2256e24f8c4b16540cee6a5cd2b7647ff2fb495724a8bf596717ca39d944",
+      "bytes": 466340,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Cave.json",
+      "markdown": "Objects对象清单/Prairie_Cave.md"
+    },
+    {
+      "level": "Rain",
+      "path": "Levels/Rain/Objects.level.bin",
+      "sha256": "20093bccf3bb1ea0936cb993e66cef0187b40a5a411df3573eb28e4def4f75c6",
+      "bytes": 457732,
+      "nodes": 2079,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Rain.json",
+      "markdown": "Objects对象清单/Rain.md"
+    },
+    {
+      "level": "RainEnd",
+      "path": "Levels/RainEnd/Objects.level.bin",
+      "sha256": "247912ec955153e3df80c16a861eb872573502a285a17943518bdce448a8d5e3",
+      "bytes": 427926,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainEnd.json",
+      "markdown": "Objects对象清单/RainEnd.md"
+    },
+    {
+      "level": "RainForest",
+      "path": "Levels/RainForest/Objects.level.bin",
+      "sha256": "2e69b3314c70c61bd99435f4bb4418fba540f227c83670e1af3b5358c64c3b73",
+      "bytes": 271409,
+      "nodes": 1306,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainForest.json",
+      "markdown": "Objects对象清单/RainForest.md"
+    },
+    {
+      "level": "SunsetEnd2",
+      "path": "Levels/SunsetEnd2/Objects.level.bin",
+      "sha256": "f76249413f9412f3db6d726aacf7425d5da546f8a9b88b9614c8a33fdb87e711",
+      "bytes": 209340,
+      "nodes": 975,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SunsetEnd2.json",
+      "markdown": "Objects对象清单/SunsetEnd2.md"
+    },
+    {
+      "level": "SunsetRace",
+      "path": "Levels/SunsetRace/Objects.level.bin",
+      "sha256": "2ebfc21451d30f976bcafafa0c42f409e322efeeb0f8403a4136899438e0b5dc",
+      "bytes": 333403,
+      "nodes": 1722,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SunsetRace.json",
+      "markdown": "Objects对象清单/SunsetRace.md"
+    }
+  ]
+}

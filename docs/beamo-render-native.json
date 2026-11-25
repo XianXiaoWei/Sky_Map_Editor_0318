@@ -1,0 +1,41 @@
+{
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "updatedAtUTC": "2026-11-21T12:49:00.137891+00:00",
+  "scope": "Full normal Scene lookup and shared VertexRender initializers. Barn material/renderable loop included separately; ResourceManager, RenderList context and GPU parameter/buffer calls are explicit services.",
+  "functions": [
+    {
+      "name": "Scene.GetRenderListByName",
+      "address": "0x10017e8d0",
+      "end": "0x10017ec20",
+      "instructions": 187,
+      "sha256": "7b4b7a66b75d668f62960972e853423b3a067b52ecdb38d176571466f5a4eeee",
+      "evidence": "evidence/beamo-render-0x10017e8d0.asm"
+    },
+    {
+      "name": "VertexRender.Initialize",
+      "address": "0x1007f5e90",
+      "end": "0x1007f5fb0",
+      "instructions": 73,
+      "sha256": "9bf6a9dc52914587849b4fe443bea0a084ebbaa1ed1ab041dc1732181ad6b586",
+      "evidence": "evidence/beamo-render-0x1007f5e90.asm"
+    },
+    {
+      "name": "VertexRender.InitializeFormat",
+      "address": "0x1007f5fb0",
+      "end": "0x1007f6150",
+      "instructions": 86,
+      "sha256": "e9acea112d06ec36e271d1b1754372bad78ca7e294520a2b0d021d3b6f9aa96f",
+      "evidence": "evidence/beamo-render-0x1007f5fb0.asm"
+    },
+    {
+      "name": "BeamoBarn.Load.materialRenderableLoop",
+      "address": "0x100196094",
+      "end": "0x100196447",
+      "wholeFunction": false,
+      "sha256": "00951c62986582e6fcdd649492dccd3f398126cc4806fc1268f8f53738148360",
+      "evidence": "evidence/beamo-Barn.Load.asm"
+    }
+  ],
+  "oracle": "docs/beamo-render-oracle.json",
+  "completeClassRuntime": false
+}

@@ -1,0 +1,83 @@
+{
+  "passed": true,
+  "scope": "Actual Vulkan 3D sampling: hardware cloud adapter versus direct native textureLod, plus analytical clamp/repeat/nearest/trilinear checks. Original bytes, LOD zero and sampler modes retained; native filtering precision may differ from the exact software-reference interpolation. No Windows FPS or original-game image claim.",
+  "cases": [
+    {
+      "format": "r8",
+      "linear": false,
+      "repeat": false,
+      "samples": 16,
+      "nativeAdapterDifferences": 0,
+      "maxAnalyticalDifference": 6.053961965069021e-8
+    },
+    {
+      "format": "r8",
+      "linear": false,
+      "repeat": true,
+      "samples": 16,
+      "nativeAdapterDifferences": 0,
+      "maxAnalyticalDifference": 6.965562404648296e-8
+    },
+    {
+      "format": "r8",
+      "linear": true,
+      "repeat": false,
+      "samples": 16,
+      "nativeAdapterDifferences": 0,
+      "maxAnalyticalDifference": 0.001960776717055024
+    },
+    {
+      "format": "r8",
+      "linear": true,
+      "repeat": true,
+      "samples": 16,
+      "nativeAdapterDifferences": 0,
+      "maxAnalyticalDifference": 0.0064916430260328895
+    },
+    {
+      "format": "rgba8",
+      "linear": false,
+      "repeat": false,
+      "samples": 16,
+      "nativeAdapterDifferences": 0,
+      "maxAnalyticalDifference": 7.292803594349806e-8
+    },
+    {
+      "format": "rgba8",
+      "linear": false,
+      "repeat": true,
+      "samples": 16,
+      "nativeAdapterDifferences": 0,
+      "maxAnalyticalDifference": 6.988936784857458e-8
+    },
+    {
+      "format": "rgba8",
+      "linear": true,
+      "repeat": false,
+      "samples": 16,
+      "nativeAdapterDifferences": 0,
+      "maxAnalyticalDifference": 0.003294025682935575
+    },
+    {
+      "format": "rgba8",
+      "linear": true,
+      "repeat": true,
+      "samples": 16,
+      "nativeAdapterDifferences": 0,
+      "maxAnalyticalDifference": 0.008246608225914165
+    }
+  ],
+  "device": {
+    "engine": "Sky Native Vulkan",
+    "backend": "Vulkan",
+    "device": "llvmpipe (LLVM 19.1.7, 128 bits)",
+    "apiVersion": 4210993,
+    "deviceType": 4,
+    "nativeSurface": false,
+    "shaderFloat16": true,
+    "gpuCanvasPacking": false,
+    "gpuExposureGather": false,
+    "samplerAnisotropyPolicy": "llvmpipe-trilinear",
+    "maxSamplerAnisotropy": 16
+  }
+}

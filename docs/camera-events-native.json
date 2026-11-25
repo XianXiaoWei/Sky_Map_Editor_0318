@@ -1,0 +1,107 @@
+{
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "functions": [
+    {
+      "name": "SetCameraShake.OnStart",
+      "address": "0x1003a0ec0",
+      "end": "0x1003a0ed0",
+      "instructions": 6,
+      "sha256": "8e00809684cc19911932ba13b2a266226b7481c129aebe78070d3448829ddedb",
+      "evidence": "evidence/camera-events-1003a0ec0.asm"
+    },
+    {
+      "name": "SetCameraShake.Update",
+      "address": "0x1003a0ee0",
+      "end": "0x1003a1120",
+      "instructions": 134,
+      "sha256": "85a147274925627881d6e665d33dae6326efc4f399a7497afeae105737562830",
+      "evidence": "evidence/camera-events-1003a0ee0.asm"
+    },
+    {
+      "name": "SetCameraKeyFrameShake.OnStart",
+      "address": "0x100591d90",
+      "end": "0x100591da0",
+      "instructions": 6,
+      "sha256": "a750da4822d111c95ae2b0eddc964ae86384bdc7ea65187076676b220560098d",
+      "evidence": "evidence/camera-events-100591d90.asm"
+    },
+    {
+      "name": "SetCameraKeyFrameShake.Update",
+      "address": "0x100591da0",
+      "end": "0x100591f80",
+      "instructions": 108,
+      "sha256": "21b6caebd30054187fe21d9b79c703b68be993314929a81b29e01bb0f7c2b0e8",
+      "evidence": "evidence/camera-events-100591da0.asm"
+    },
+    {
+      "name": "CameraSystem.AcquireCameraHandle",
+      "address": "0x1001e2ac0",
+      "end": "0x1001e2b70",
+      "instructions": 41,
+      "sha256": "3e1c893d6ec2f102f4849edb3a4073041730429468926e6f856ef11ded554c3c",
+      "evidence": "evidence/camera-events-1001e2ac0.asm"
+    },
+    {
+      "name": "CameraNode.GetMetaClass",
+      "address": "0x1001ddff0",
+      "end": "0x1001de000",
+      "instructions": 6,
+      "sha256": "2671a09fc26ab4ec95424d25651a68a5d91a30c3acd4c659ce5c772ffc0f3965",
+      "evidence": "evidence/camera-events-1001ddff0.asm"
+    },
+    {
+      "name": "WhiskerCamera.GetMetaClass",
+      "address": "0x10073aa80",
+      "end": "0x10073aa90",
+      "instructions": 6,
+      "sha256": "c9ae793ef7d7af56bee3fe4f98d65cd0f24c12454369dc6b0babf820101fa3f6",
+      "evidence": "evidence/camera-events-10073aa80.asm"
+    },
+    {
+      "name": "CameraKeyFrame.GetMetaClass",
+      "address": "0x1001ddf40",
+      "end": "0x1001ddf50",
+      "instructions": 6,
+      "sha256": "8636e418911862fb685097efe054574d03861f5c200af0624bcb54574f325502",
+      "evidence": "evidence/camera-events-1001ddf40.asm"
+    }
+  ],
+  "constants": [
+    {
+      "address": "0x100aa6a9c",
+      "float32": 9.999999747378752e-05,
+      "bytes": "17b7d138"
+    },
+    {
+      "address": "0x100aa6aa0",
+      "float32": 0.26600000262260437,
+      "bytes": "2731883e"
+    },
+    {
+      "address": "0x100aa78c4",
+      "float32": 9.999999747378752e-06,
+      "bytes": "acc52737"
+    },
+    {
+      "address": "0x100aa95d0",
+      "float32": -9.999999747378752e-06,
+      "bytes": "acc527b7"
+    }
+  ],
+  "verifiedStateWrites": {
+    "SetCameraShake": {
+      "timer": "event+0x4c",
+      "speed": "Whisker+0x378",
+      "force": "Whisker+0x37c",
+      "weight": "Whisker+0x380"
+    },
+    "SetCameraKeyFrameShake": {
+      "timer": "event+0x58",
+      "idle": "CameraKeyFrame+0x78",
+      "moving": "CameraKeyFrame+0x7c",
+      "speed": "CameraKeyFrame+0x80"
+    }
+  },
+  "oracle": "docs/camera-events-oracle.json",
+  "scope": "Whole-function evidence and timed state-write oracle. Runtime clock/debug values, reflection/metadata cast and assertion/logging services remain explicit inputs. Constructor defaults, automatic scene dispatch, full handle lifecycle, continuous camera shake sampling and final rendering remain unresolved."
+}

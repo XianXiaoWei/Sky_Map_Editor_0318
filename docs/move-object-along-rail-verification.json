@@ -1,0 +1,121 @@
+{
+  "passed": true,
+  "updatedUtc": "2026-11-25T06:33:42.482059+00:00",
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "nativeReports": [
+    "docs/move-object-along-rail-oracle.json"
+  ],
+  "newNativeCases": 193,
+  "newNativeComparedBytes": 63873040,
+  "newNativeServiceCalls": 4904,
+  "nativeScope": "Whole MoveObjectAlongRail placement, Load, Enable, Finish and Unload with full arena and ordered traces. Heap, metadata casts, Object transform, Rail nearest/distance and random are explicit services. The original Enable body is untouched; its caller supplies the unwritten scale W. Sway phase Z/W are cleared by native VMOVSS/VINSERTPS. Covers network allocation/assertions, null/repeated release, record padding, native time/speed clamps, XYZ normalization versus four-lane scales, NaN and callback rereads. Mode 6 also executes untouched original Rail nearest and distance-at-parameter against five actual fish configurations, six-Marker caches and 32-subdivision arc tables. Original caches use archived native atan2 replay. Full Rail lifecycle, Update, Model/EventBarn motion, rendering and complete creature acceptance remain pending",
+  "nativeCodeHashesBoundariesAssemblyAndConstantsVerified": true,
+  "wholeLifecycleFunctions": 5,
+  "actualFishLifecycleConfigurations": 5,
+  "actualFishLifecycleQueryNativeCombinationCompared": true,
+  "actualFishWholeUpdateVerified": false,
+  "actualInputsCaptureReproduced": true,
+  "projectRegression": {
+    "passed": true,
+    "tests": 699,
+    "command": "./node_modules/.bin/tsx --test tests/*.test.ts",
+    "log": "/root/sky-research/move-rail-project-tests.log"
+  },
+  "focusedRegression": {
+    "passed": true,
+    "tests": 3,
+    "command": "./node_modules/.bin/tsx --test tests/move-object-along-rail-runtime.test.ts tests/fish-group-scene-events.test.ts tests/on-region-runtime.test.ts",
+    "log": "/root/sky-research/move-rail-focused-tests.log"
+  },
+  "baselineRegression": {
+    "passed": true,
+    "tests": 698,
+    "command": "./node_modules/.bin/tsx --test tests/*.test.ts",
+    "log": "/root/sky-research/fish-group-project-tests.log"
+  },
+  "typecheck": {
+    "passed": true,
+    "command": "./node_modules/.bin/tsc --noEmit",
+    "log": "/root/sky-research/move-rail-final-types.log"
+  },
+  "windowsBuild": {
+    "passed": true,
+    "command": "node tools/build.mjs --windows",
+    "log": "/root/sky-research/move-rail-windows-build.log",
+    "machine": "AMD64",
+    "binarySha256": "8c135da0f22531a636e05fb4c2e5fc092f894888ea6a76208f57e285e0cba59d",
+    "windowsMachineRuntimeTested": false
+  },
+  "inventory": {
+    "passed": true,
+    "maps": 33,
+    "declaredClasses": 283,
+    "objects": 49824,
+    "references": 60016,
+    "brokenReferences": 0,
+    "completeRuntimeClasses": 0,
+    "allMapsRoundTripUnchanged": true,
+    "coreSubchainVerifiedClasses": 55,
+    "log": "/root/sky-research/move-rail-class-progress.log"
+  },
+  "categoryCensus": {
+    "passed": true,
+    "command": "python3 tools/objects-category-census.py",
+    "log": "/root/sky-research/move-rail-category-census.log",
+    "nativeCreatureFamilies": 52,
+    "mapDeclaredCreatureFamilies": 18,
+    "completeCreatureClasses": 0
+  },
+  "windowsSourcePlan": {
+    "passed": true,
+    "command": "python3 tools/package-windows-source.py --plan",
+    "report": "docs/windows-source-plan.json",
+    "log": "/root/sky-research/move-rail-windows-source-plan.log",
+    "includesNewRuntimeAndNativeFixtures": true,
+    "androidHostIncluded": false,
+    "buildOutputsIncluded": false,
+    "nodeModulesIncluded": false,
+    "cacheIncluded": false
+  },
+  "completeCreatureClasses": 0,
+  "autonomousViewportCreatureAcceptancePassed": false,
+  "newWindowsArchiveCreated": false,
+  "newSourceArchiveCreated": false,
+  "androidWorkPerformed": false,
+  "packagingReadiness": "Windows build passes. Five fish lifecycle/query configurations are independently compared; their whole Update, Model/pose/rendering and Windows scene acceptance remain pending. No new archive or packaging date.",
+  "remaining": [
+    "CharFishGroupAnim whole MoveObjectAlongRail.Update 0x100484a90..0x100486690; dynamic Rail ownership/cache invalidation; real Model resource lifecycle, animation update and pose mixing, shared EventBarn motion and viewport",
+    "DarkCreature outer Update remainder 0x10026e7da..0x10026ffc0 and real world/resource owners",
+    "Crab whole outer Update 0x10025bc10 and ground/world/interaction/resource owners",
+    "FishV2 real world/collision/Avatar/OBB/rail/resource/Model/animation/audio/particle and Barn lifecycle",
+    "Full creature scene behavior, repeated load/unload, stopping, level switching and Windows hardware acceptance"
+  ],
+  "artifactSha256": {
+    "src/core/move-object-along-rail-runtime.ts": "a9e91cf32023a8c2ab16de859e409a9d8b8fcfc03dd4a5e9769f64944c5e8dfe",
+    "src/core/scene-event-construction.ts": "841c0186c3092f18bbcd6b533f82d638aba913ebe8dfe1205edc56d95e814629",
+    "src/core/environment-object-state.ts": "eec19d90a73c2ed6d31f3ce409aa08ae8bf22a90febd791679b5bf5d3ced85df",
+    "src/core/environment-event-owner.ts": "07364b8132971d4912ef7848f4246e2b42e11b31d44e1d56a2647ecc8fa3a3dd",
+    "tools/native-move-object-along-rail-oracle.c": "438d951b12f0f28b629b59b04429e8f8822fa298f1fa4ab5ae5b9fe149ed18bd",
+    "tools/move-object-along-rail-cases.ts": "03a633f1bcf764d53d8324420533dd67a3c76755358de391ab39635e18d8a5fc",
+    "tools/move-object-along-rail-oracle.ts": "8c78948426033909f972e978a0a0ff97bf985ee30bbeb383f1215a7f5abbf750",
+    "tools/reverse-move-object-along-rail.py": "d5b5841bf7e8a3556285a7c8e206dc7b121fb82ad0f5b5e89392a36c57479dfb",
+    "tools/reverse-environment-defaults.py": "b420edee1263bd7c5b08d1d2ebeb17b312d668dafdb7c71e80d9706cf1b1eb42",
+    "tools/capture-fish-group-rail-lifecycle.ts": "fae11657680747297acdb182b43b28bacadfb78d9f4c71e91a65942587aedc81",
+    "tools/verify-move-object-along-rail.py": "3ae6ff3805c1228de045979ff5ddd6f3a665baac4ea7757b0ef08e282db9489d",
+    "tests/move-object-along-rail-runtime.test.ts": "6886b5877f4ab79af38327d5348233ccc5713df3f478fca487ff3cbaed2b1700",
+    "tests/fixtures/move-object-along-rail-native.json.gz": "49d10e05168087987967ae979b3f3d717275af48c2f13d9d3897b32a0a91638b",
+    "tests/fixtures/fish-group-rail-lifecycle-inputs.json": "d102328e9e4614d5147b85d7870db3ef9305c14cdbfbf064c990767625065262",
+    "docs/move-object-along-rail-native.json": "3bfba7fc80579a92df51dc6607f0ddfcc82b93442fb11d13437406d3e2cdbd63",
+    "docs/move-object-along-rail-oracle.json": "41e8d3cdf38f3c05d63cde518e8d71cb8e37cb10d737af348762760b7c540b16",
+    "docs/move-object-along-rail-defaults.json": "2bca9fe3f8df0c1e6d92a427c3f7f0fabdee5b8434762b0e58350cbc4b538234",
+    "docs/鱼群轨道生命周期续接.md": "39c17df253153ffa9deabcefd1ff0c8600e91d9f1791f804a41e634577e8d108",
+    "tools/objects-class-progress-spec.json": "d49bb85e6052cf9682a0693509aa3175cb1de2a4f18993a3c538897c8e8c8871",
+    "evidence/move-object-along-rail-placement.asm": "b169843394c2664d6614571793dcb69ff3c68846a7c8d45f9eed61d7c69dcbab",
+    "evidence/move-object-along-rail-load.asm": "0a4dc33f2251a3af9970852747d1800ca3aae544bd72fcf8b4b1cd9147b0da29",
+    "evidence/move-object-along-rail-enable.asm": "9d4046a510f2d6f6fe16a4b468f8243f8395dcd743acac212c9aeec642a2b734",
+    "evidence/move-object-along-rail-finish.asm": "7894a9b249087574f7d62567a587693702f60bf9d38ac4ce5b777910bea95cb9",
+    "evidence/move-object-along-rail-unload.asm": "718abf88af7e4fcde86d606f5ec00564075e891734a5c61934b1cd9fd5efd99c",
+    "evidence/move-object-along-rail-size-reference.asm": "c52e4b046beb0949b4fc9698082a706796135b7b242d2532f40d489c31f40bdf",
+    "evidence/move-object-along-rail-update-reference.asm": "085ed2c71ad44e5c40907d27bdd90335e714c58034b358107e63825e09bfd5aa"
+  }
+}

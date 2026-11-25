@@ -1,0 +1,36 @@
+#!/usr/bin/env python3
+"""SHA-gated static evidence for CloudCard culling and its Visibility dependency."""
+import json
+import pathlib
+import sys
+from native import Native
+
+n = Native(sys.argv[1])
+functions = {'cloud-card-visibility': 0x1002206f0, 'visibility-spheres': 0x100720dd0}
+for name, address in functions.items():
+    pathlib.Path('evidence', name+'.asm').write_text(n.annotated(address))
+report = {
+    'executableSha256': n.digest,
+    'scope': 'Static disassembly only. CloudCard six-plane tests/compaction have a separate execution oracle. Full external Visibility occlusion classification is not implemented or verified.',
+    'functions': {name: {'start': hex(n.bounds(address)[0]), 'end': hex(n.bounds(address)[1])} for name,address in functions.items()},
+    'cloudCard': {
+        'cameraFrustumMatrix': '+0x1c0..+0x1f0, column-major float32; explicit stored CPU matrix',
+        'planeTestOrder': ['row3+row0','row3-row0','row3+row2','row3+row1','row3-row1','row3-row2'],
+        'planeNormalization': 'lengthSquared = z*z + (x*x + y*y), float32 each operation; divide all four lanes by float32 sqrt only when lengthSquared > 0',
+        'sphereDot': 'float32((x*nx + z*nz) + (y*ny + d)) with float32 products/pairwise sums',
+        'reject': '-radius > planeDot; tangency and unordered comparisons keep the candidate',
+        'candidateStorage': 'record+0x70 xyzw sphere; initialized status 0xffffffff; sorted record traversal order',
+        'classifierCall': '0x100220aea -> 0x100720dd0, r8d=0',
+        'compaction': 'status==0: decrement count, copy last pointer/status/sphere to current slot, recheck same index',
+    },
+    'externalVisibilityPending': {
+        'fallback': 'global 0x10203be90 != 0, camera+0x10 null, or (Visibility+0x218 == 0 and global 0x10203bf08 != 1)',
+        'fallbackWrites': 'r8b==0: return without changing statuses. r8b!=0: memset(statuses, 0xff, count*4). CloudCard passes 0, retaining initialized 0xffffffff.',
+        'mxcsr': 'original MXCSR OR 0xe040: FTZ, DAZ, rounding bits 11 = toward zero; restored on return',
+        'cameraViewMatrix': '+0x140..+0x170',
+        'projectionScalars': ['+0x180','+0x194','+0x1a8','+0x1b8'],
+        'workRemaining': 'Four-sphere SIMD batch, reciprocal approximation/refinement, screen/mip selection, visibility buffer lookup, scalar tail recursion and debug branch; real buffers and complete classification are pending.',
+    },
+}
+pathlib.Path('docs/cloud-card-visibility-evidence.json').write_text(json.dumps(report,indent=2)+'\n')
+print(json.dumps({'executableSha256': n.digest, 'functions': report['functions'], 'scope': report['scope']}))

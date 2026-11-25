@@ -1,0 +1,27 @@
+import {wanderOriginalCreatureMotion,wanderOriginalCreatureSteering,fleeOriginalCreatureSteering} from '../src/core/creature-force-runtime';
+import {NativeObjectFoundationFailure} from '../src/core/object-foundation-runtime';
+export interface CreatureForceCase {label:string;mode:0|1|2;active?:number;weight?:number;weightW?:number;radius?:number;distance?:number;jitter?:number;vertical?:number;minimum?:number;maximum?:number;prediction?:number;predictionW?:number;position?:number[];target?:number[];velocity?:number[];targetVelocity?:number[];randoms?:number[];steps?:number;outputOffset?:number;cacheOffset?:number;seed?:number;}
+const base=0x440000000n;
+export function creatureForceCases(){const cases:CreatureForceCase[]=[],add=(mode:0|1|2,label:string,c:Partial<CreatureForceCase>={})=>cases.push({mode,label:'force primitive '+mode+' '+label,...c});
+ for(const mode of [0,1] as const)for(const radius of [0,.25,1,-1])for(const distance of [0,1,3])for(const steps of [1,3])add(mode,'wander radius/distance/repeat '+[radius,distance,steps],{radius,distance,steps});
+ for(const mode of [0,1] as const)for(const randoms of [[0,0,0],[0x40000000,0x40000000,0x40000000],[0x7fffffff,0x40000000,1],[0xffffffff,1,0]])add(mode,'random signed conversion '+randoms,{randoms});
+ for(const weight of [0,.00001,.0000101,-1,1])for(const weightW of [0,1])add(1,'wander weight/W '+[weight,weightW],{weight,weightW});
+ for(const outputOffset of [0x5000,0x2000,0x4000])for(const cacheOffset of [0x4000,0x2010])add(0,'output/cache alias '+[outputOffset,cacheOffset],{outputOffset,cacheOffset});
+ for(const minimum of [0,3,6])for(const maximum of [3,6,0])for(const target of [[0,0,0,1],[2,0,0,1],[3,4,0,1],[9,0,0,1]])add(2,'flee distance/falloff '+[minimum,maximum,target],{minimum,maximum,target});
+ for(const prediction of [0,.5,1,3])for(const weightW of [0,1])add(2,'prediction/W '+[prediction,weightW],{prediction,weightW,targetVelocity:[1,2,3,0]});
+ for(const weight of [0,.00001,.0000101,-1,1])add(2,'flee weight gate '+weight,{weight});
+ for(const mode of [1,2] as const)add(mode,'accumulation assertion',{active:0});return cases;}
+export function prepareCreatureForce(c:CreatureForceCase){const b=Buffer.alloc(0x8000);let rng=c.seed??97;for(let i=0;i<b.length;i++){rng=(Math.imul(rng,1664525)+1013904223)>>>0;b[i]=rng>>>24;}
+ const m={string:()=>{throw new Error('No force arena strings');},bytes:(p:bigint,n:number)=>b.subarray(Number(p-base),Number(p-base)+n),read32:(p:bigint)=>b.readUInt32LE(Number(p-base)),read64:(p:bigint)=>b.readBigUInt64LE(Number(p-base)),write32:(p:bigint,n:number)=>b.writeUInt32LE(n>>>0,Number(p-base)),write64:(p:bigint,n:bigint)=>b.writeBigUInt64LE(n,Number(p-base)),write8:(p:bigint,n:number)=>{b[Number(p-base)]=n;}};
+ const floats=(at:number,ns:number[])=>ns.forEach((n,i)=>b.writeFloatLE(n,at+i*4));
+ floats(0x2000,c.position??[0,0,0,1]);floats(0x2010,[1,0,0,0,0,1,0,0,0,0,-1,0]);floats(0x2040,c.velocity??[1,2,3,0]);floats(0x2050,[1,3,1]);
+ floats(0x3000,c.target??[2,3,4,1]);floats(0x3040,c.targetVelocity??[0,0,0,0]);floats(0x4000,[.2,.3,1,0]);b.copy(b,0x1020,0x2000,0x205c);floats(0x1000,[1,2,3,0]);b[0x1010]=c.active??1;floats(0x1090,[.2,.3,1,0]);
+ b.fill(0,0x7000,0x7050);const args=c.mode===0?[c.radius??1,c.distance??2,c.jitter??.2,c.vertical??.4,0]:c.mode===1?[c.weight??1,c.radius??1,c.distance??2,c.jitter??.2,c.vertical??.4]:[c.weight??1,c.minimum??3,c.maximum??6,c.prediction??1,0];args.forEach((n,i)=>b.writeFloatLE(n,0x7000+i*16));if(c.mode!==0)b.writeFloatLE(c.weightW??0,0x700c);if(c.mode===2)b.writeFloatLE(c.predictionW??0,0x703c);
+ b.writeUInt32LE(c.outputOffset??0x5000,0x7100);b.writeUInt32LE(c.cacheOffset??0x4000,0x7104);b.writeUInt32LE(c.steps??1,0x7108);(c.randoms??[0,0x40000000,0x7fffffff]).forEach((n,i)=>b.writeUInt32LE(n>>>0,0x7200+i*4));return {b,m};}
+export function evaluateCreatureForce(c:CreatureForceCase,probes:readonly number[][]){const {b,m}=prepareCreatureForce(c),rows:number[]=[],results=new Map(probes.map(row=>[`${row[0]}:${row[1]}:${row[2]}`,row[3]]));const arithmetic={resolveDualNaN:(op:'add'|'sub'|'mul'|'div',x:number,y:number)=>{const n=results.get(`${['add','sub','mul','div'].indexOf(op)}:${x>>>0}:${y>>>0}`);if(n===undefined)throw new Error('Force arithmetic probe missing');return n;}};const s={arithmetic,random:()=>{const n=b.readUInt32LE(0x7200+(rows.length%3)*4);rows.push(n);return n;}};let line=0,severity=0;
+ try{for(let step=0;step<(c.steps??1);step++){
+  if(c.mode===0)m.bytes(base+BigInt(c.outputOffset??0x5000),16).set(wanderOriginalCreatureMotion(m,base+0x2000n,base+BigInt(c.cacheOffset??0x4000),m.read32(base+0x7000n),m.read32(base+0x7010n),m.read32(base+0x7020n),m.read32(base+0x7030n),s));
+  if(c.mode===1)wanderOriginalCreatureSteering(m,base+0x1000n,m.read32(base+0x7000n),m.read32(base+0x7010n),m.read32(base+0x7020n),m.read32(base+0x7030n),m.read32(base+0x7040n),s,m.read32(base+0x700cn));
+  if(c.mode===2)fleeOriginalCreatureSteering(m,base+0x1000n,m.bytes(base+0x3000n,92),m.read32(base+0x7000n),m.read32(base+0x7010n),m.read32(base+0x7020n),m.read32(base+0x7030n),arithmetic,m.read32(base+0x700cn),m.read32(base+0x703cn));
+ }}catch(e){if(!(e instanceof NativeObjectFoundationFailure))throw e;line=e.line;severity=e.severity;}
+ const header=Buffer.alloc(12),trace=Buffer.alloc(rows.length*4);[line,severity,rows.length].forEach((n,i)=>header.writeUInt32LE(n,i*4));rows.forEach((n,i)=>trace.writeUInt32LE(n,i*4));return Buffer.concat([header,b,trace]);}

@@ -1,0 +1,116 @@
+{
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "groups": {
+    "events": {
+      "DetachFromBirdGuides.OnEnabled": {
+        "address": "0x1001aa480",
+        "end": "0x1001aa580",
+        "codeSha256": "88d99e87741c8e7f152e7fa4ea18218cc42c2acbecf6921ea8a040c9f9a55bc1",
+        "instructions": 69,
+        "evidence": "evidence/bird-guide-DetachFromBirdGuides.OnEnabled.asm",
+        "investigationOnly": false
+      },
+      "ReleaseBirds.OnEnabled": {
+        "address": "0x1001aa870",
+        "end": "0x1001aaa40",
+        "codeSha256": "79c7f2a0e9d553820e506b4a52f7ca2f55ed932341702dc5c99f25fd653b4b3b",
+        "instructions": 110,
+        "evidence": "evidence/bird-guide-ReleaseBirds.OnEnabled.asm",
+        "investigationOnly": false
+      }
+    },
+    "helpers": {
+      "AvatarBarn.GetPlayer": {
+        "address": "0x1001031d0",
+        "end": "0x1001031f0",
+        "codeSha256": "71180c9e4dc5d0b0bddf2c960c7c42ea1356113d377e6ccb823438234e82bc64",
+        "instructions": 8,
+        "evidence": "evidence/bird-guide-AvatarBarn.GetPlayer.asm",
+        "investigationOnly": false
+      },
+      "Avatar.IsActive": {
+        "address": "0x1000fe050",
+        "end": "0x1000fe060",
+        "codeSha256": "828141372ccd7cc85121164d7de874d651dd0fa10a9877b429c89f91b1711253",
+        "instructions": 6,
+        "evidence": "evidence/bird-guide-Avatar.IsActive.asm",
+        "investigationOnly": false
+      },
+      "BirdGuideReference.Get": {
+        "address": "0x100133f30",
+        "end": "0x100133f60",
+        "codeSha256": "8fa0bbd44f147b31f31c3c17255dc8718d273936b8493b713ab3d1b357dde2fa",
+        "instructions": 15,
+        "evidence": "evidence/bird-guide-BirdGuideReference.Get.asm",
+        "investigationOnly": false
+      },
+      "BirdGuideReference.Set": {
+        "address": "0x100133b50",
+        "end": "0x100133b90",
+        "codeSha256": "800aea64e45ce05b140321bc89c7f57dd1a30122cd3bf18d142d9d29fda23f29",
+        "instructions": 17,
+        "evidence": "evidence/bird-guide-BirdGuideReference.Set.asm",
+        "investigationOnly": false
+      },
+      "AvatarBarn.RequireAvatar": {
+        "address": "0x1000fc260",
+        "end": "0x1000fc290",
+        "codeSha256": "c06e8bc7987dbd8a015bf0efec5e3a35cd4c68dccb8d9682bc33cfd21edf467a",
+        "instructions": 14,
+        "evidence": "evidence/bird-guide-AvatarBarn.RequireAvatar.asm",
+        "investigationOnly": false
+      }
+    },
+    "next": {
+      "Crab.Update": {
+        "address": "0x10025bc10",
+        "end": "0x10025e590",
+        "codeSha256": "298b06a2e229c0ac7508000952b55695a0df4ef3e3d7d6eff81ae41f33762017",
+        "instructions": 1925,
+        "evidence": "evidence/bird-guide-Crab.Update.asm",
+        "investigationOnly": true
+      },
+      "BirdV2.Update": {
+        "address": "0x1001a2260",
+        "end": "0x1001a2770",
+        "codeSha256": "e80707a53241c54ee7aac950fbeb50a355975258f78b6787b0e20d55042fad77",
+        "instructions": 285,
+        "evidence": "evidence/bird-guide-BirdV2.Update.asm",
+        "investigationOnly": true
+      },
+      "BirdFlock.Update": {
+        "address": "0x10019bdc0",
+        "end": "0x10019dbf0",
+        "codeSha256": "485eae1090dc6001b9f3d4df6bf4100f29892b8ec18aacefd1dd79626e74b734",
+        "instructions": 1518,
+        "evidence": "evidence/bird-guide-BirdFlock.Update.asm",
+        "investigationOnly": true
+      },
+      "BirdFlocks.Update": {
+        "address": "0x10019b6f0",
+        "end": "0x10019bb70",
+        "codeSha256": "f19915835437ce66b454d94fc199f32907603fbc19704929adb9ffc22004a886",
+        "instructions": 248,
+        "evidence": "evidence/bird-guide-BirdFlocks.Update.asm",
+        "investigationOnly": true
+      },
+      "BirdFlock.Unload": {
+        "address": "0x10019bd00",
+        "end": "0x10019bdc0",
+        "codeSha256": "18ed668781218a1138388d47893e534b6e99ff05bad0b71c400a649e065aa1ae",
+        "instructions": 57,
+        "evidence": "evidence/bird-guide-BirdFlock.Unload.asm",
+        "investigationOnly": true
+      },
+      "BirdFlocks.Unload": {
+        "address": "0x10019b680",
+        "end": "0x10019b6f0",
+        "codeSha256": "70e35aaa728f3413b43fb688ff724a774b98281cc77e11638f08c0a7e2850a4c",
+        "instructions": 29,
+        "evidence": "evidence/bird-guide-BirdFlocks.Unload.asm",
+        "investigationOnly": true
+      }
+    }
+  },
+  "scope": "Guide normal call bodies and five helper bodies, with explicit Model fade/Avatar enabled/selection/statistics/metadata/Event services. Next group is investigation evidence only; it does not establish original creature updates."
+}

@@ -1,0 +1,2333 @@
+{
+  "passed": true,
+  "level": "SkyHub2",
+  "scope": "Actual Electron Vulkan original GLSL/material-texture map viewport. Model and terrain probes/light grids/filtering are declared adapters. Not complete original Model, interaction or Metal/game image parity.",
+  "errors": [],
+  "images": [
+    "docs/model-material-SkyHub2.png",
+    "docs/model-material-SkyHub2-viewport.png",
+    "docs/model-material-SkyHub2-render.png"
+  ],
+  "sourceHashes": {
+    "Objects.level.bin": "8b467f9b349d9d4ce0d038528c96e44dff30063149bf5bbf90232a56bb9dd36f",
+    "BstBaked.meshes": "f3476d70eff88c830334562840cc03c10330892f6fe39d412e6e89d8d9d57c59"
+  },
+  "nodeId": 80,
+  "label": "DayHubMidDoorLevel4L\nBstNode_1167523937",
+  "requestedCameraPose": [
+    480,
+    245,
+    115,
+    500,
+    208,
+    0
+  ],
+  "state": {
+    "dataset": {
+      "cameraMode": "editor",
+      "backend": "Vulkan",
+      "renderedSceneRevision": "5",
+      "level": "SkyHub2",
+      "frameSequence": "8",
+      "cameraPosition": "[480.00000000000034,245.00000000000003,115]",
+      "cameraForward": "[0.16333198585000844,-0.3021641738225156,-0.9391589186375484]",
+      "cameraProjection": "[2.077568554204636,0,0,0,0,2.1445069205095586,0,0,0,0,-1.000004278011974,-1,0,0,-0.2737927663443703,0]",
+      "cameraMatrix": "[0.9852117548196745,-3.469446951953614e-18,0.17134117475124774,0,0.05177316451049005,0.9532559006154415,-0.29769569593531775,0,-0.16333198585000844,0.3021641738225156,0.9391589186375484,0,480.00000000000034,245.00000000000003,115,1]",
+      "viewProjection": "[2.0468449610461232,0.11102790958942577,0.16333268458619962,0.1633319858500084,0,2.0442638758863865,-0.3021654664844693,-0.3021641738225156,0.3559730367036737,-0.6384104801391982,-0.9391629363706478,-0.9391589186375484,-1023.4224805230625,-480.72084097908146,103.36079560359924,103.63414502183029]",
+      "renderedGeometrySha256": "34408faf583128afdc76eed176fd76225d127456b26824512c046cbb59ca3e87"
+    },
+    "status": "已打开 SkyHub2"
+  },
+  "pixelCheck": {
+    "minimum": 0,
+    "maximum": 229,
+    "colors": 17291,
+    "edges": 9070
+  },
+  "viewport": {
+    "scope": "Original terrain/skirt GLSL, real packed geometry/material textures with declared gamma/mip handling and supported anisotropy (16x preview request), recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/MotionGen/MotionDilate/TemporalAa/Tonemap chain. PNG area-filtered mip generation and anisotropy strength remain preview adapters, not original exporter/Metal parity. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending. Resource models and prepared Beamo LOD0 draws use original GLSL, packed float3/color/SNORM normals/half4 UV pairs and baked lighting. Transparent descriptor states use original blend/depth/cull evidence; back-to-front bounds ordering is an editor adapter, not the original Scene sort. Beamo normals use observed RSQRTSS capability; external weight volumes, automatic LOD/Visibility, Barn/GPU ownership and complete original classes remain open.",
+    "geometrySha256": "34408faf583128afdc76eed176fd76225d127456b26824512c046cbb59ca3e87",
+    "draws": 197,
+    "terrainDraws": 20,
+    "modelDraws": 177,
+    "beamoDraws": 6,
+    "beamoInstances": 182,
+    "levelMeshDraws": 171,
+    "modelBoundaries": [
+      {
+        "nodeId": 4,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 14,
+        "reason": "Native skinning/animation unavailable"
+      },
+      {
+        "nodeId": 137,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 148,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 206,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 250,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 275,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 289,
+        "reason": "Native skinning/animation unavailable"
+      },
+      {
+        "nodeId": 309,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 321,
+        "reason": "Native skinning/animation unavailable"
+      },
+      {
+        "nodeId": 382,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 428,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 449,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 535,
+        "reason": "Native skinning/animation unavailable"
+      },
+      {
+        "nodeId": 669,
+        "reason": "RenderList Skybox"
+      },
+      {
+        "nodeId": 689,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 785,
+        "reason": "Native skinning/animation unavailable"
+      },
+      {
+        "nodeId": 942,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 968,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 1161,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 1378,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 1431,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 1624,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 1636,
+        "reason": "RenderList Skybox"
+      },
+      {
+        "nodeId": 1668,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 1720,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 1835,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 1946,
+        "reason": "Native skinning/animation unavailable"
+      },
+      {
+        "nodeId": 2044,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 2107,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 2125,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 2139,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 2186,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 2195,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 2233,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 2270,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 2329,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 2385,
+        "reason": "Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 2389,
+        "reason": "Native skinning/animation unavailable"
+      },
+      {
+        "nodeId": 1095,
+        "reason": "primary: Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 1388,
+        "reason": "primary: Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 1462,
+        "reason": "primary: Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 1704,
+        "reason": "primary: Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 1716,
+        "reason": "primary: Uniform u_averageProbeColor: 0 parameters"
+      },
+      {
+        "nodeId": 2114,
+        "reason": "primary: Uniform u_averageProbeColor: 0 parameters"
+      }
+    ],
+    "modelParameterBindings": [],
+    "modelBindings": [
+      {
+        "nodeId": 23,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 474
+      },
+      {
+        "nodeId": 42,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 168
+      },
+      {
+        "nodeId": 80,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 404
+      },
+      {
+        "nodeId": 87,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 14
+      },
+      {
+        "nodeId": 116,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 242
+      },
+      {
+        "nodeId": 133,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 182
+      },
+      {
+        "nodeId": 166,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 474
+      },
+      {
+        "nodeId": 181,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 278
+      },
+      {
+        "nodeId": 183,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 14
+      },
+      {
+        "nodeId": 203,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 668
+      },
+      {
+        "nodeId": 261,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 474
+      },
+      {
+        "nodeId": 280,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 278
+      },
+      {
+        "nodeId": 283,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 602
+      },
+      {
+        "nodeId": 330,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 14
+      },
+      {
+        "nodeId": 349,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 644
+      },
+      {
+        "nodeId": 361,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 168
+      },
+      {
+        "nodeId": 371,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 602
+      },
+      {
+        "nodeId": 383,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 182
+      },
+      {
+        "nodeId": 385,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 14
+      },
+      {
+        "nodeId": 448,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 182
+      },
+      {
+        "nodeId": 456,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 474
+      },
+      {
+        "nodeId": 474,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 168
+      },
+      {
+        "nodeId": 477,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 168
+      },
+      {
+        "nodeId": 497,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 474
+      },
+      {
+        "nodeId": 501,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 404
+      },
+      {
+        "nodeId": 571,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 540
+      },
+      {
+        "nodeId": 587,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 296
+      },
+      {
+        "nodeId": 602,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 474
+      },
+      {
+        "nodeId": 609,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 540
+      },
+      {
+        "nodeId": 679,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 429
+      },
+      {
+        "nodeId": 681,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 182
+      },
+      {
+        "nodeId": 694,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 168
+      },
+      {
+        "nodeId": 757,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 182
+      },
+      {
+        "nodeId": 789,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 468
+      },
+      {
+        "nodeId": 816,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 168
+      },
+      {
+        "nodeId": 872,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 474
+      },
+      {
+        "nodeId": 920,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 602
+      },
+      {
+        "nodeId": 929,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 474
+      },
+      {
+        "nodeId": 1010,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 546
+      },
+      {
+        "nodeId": 1013,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 296
+      },
+      {
+        "nodeId": 1037,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 168
+      },
+      {
+        "nodeId": 1058,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 278
+      },
+      {
+        "nodeId": 1072,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 474
+      },
+      {
+        "nodeId": 1143,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 540
+      },
+      {
+        "nodeId": 1145,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 474
+      },
+      {
+        "nodeId": 1180,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 602
+      },
+      {
+        "nodeId": 1206,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 168
+      },
+      {
+        "nodeId": 1233,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 546
+      },
+      {
+        "nodeId": 1255,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 168
+      },
+      {
+        "nodeId": 1313,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 278
+      },
+      {
+        "nodeId": 1316,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 168
+      },
+      {
+        "nodeId": 1320,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 474
+      },
+      {
+        "nodeId": 1414,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 242
+      },
+      {
+        "nodeId": 1429,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 242
+      },
+      {
+        "nodeId": 1480,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 429
+      },
+      {
+        "nodeId": 1484,
+        "shader": "MeshShSdf",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 85
+      },
+      {
+        "nodeId": 1508,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 429
+      },
+      {
+        "nodeId": 1525,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 278
+      },
+      {
+        "nodeId": 1547,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 474
+      },
+      {
+        "nodeId": 1557,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 522
+      },
+      {
+        "nodeId": 1635,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 182
+      },
+      {
+        "nodeId": 1643,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 168
+      },
+      {
+        "nodeId": 1722,
+        "shader": "RockFaceShMesh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 12
+      },
+      {
+        "nodeId": 1747,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 474
+      },
+      {
+        "nodeId": 1806,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 1742
+      },
+      {
+        "nodeId": 1858,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 429
+      },
+      {
+        "nodeId": 1865,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 182
+      },
+      {
+        "nodeId": 1886,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 242
+      },
+      {
+        "nodeId": 1922,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 982
+      },
+      {
+        "nodeId": 1941,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 168
+      },
+      {
+        "nodeId": 1983,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 14
+      },
+      {
+        "nodeId": 1991,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 474
+      },
+      {
+        "nodeId": 1999,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 474
+      },
+      {
+        "nodeId": 2052,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 404
+      },
+      {
+        "nodeId": 2058,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 168
+      },
+      {
+        "nodeId": 2094,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 168
+      },
+      {
+        "nodeId": 2095,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 51
+      },
+      {
+        "nodeId": 2105,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 474
+      },
+      {
+        "nodeId": 2145,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 242
+      },
+      {
+        "nodeId": 2149,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 602
+      },
+      {
+        "nodeId": 2154,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 474
+      },
+      {
+        "nodeId": 2158,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 14
+      },
+      {
+        "nodeId": 2162,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 546
+      },
+      {
+        "nodeId": 2191,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 278
+      },
+      {
+        "nodeId": 2194,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 63
+      },
+      {
+        "nodeId": 2203,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 14
+      },
+      {
+        "nodeId": 2218,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 182
+      },
+      {
+        "nodeId": 2240,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 474
+      },
+      {
+        "nodeId": 2242,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 14
+      },
+      {
+        "nodeId": 2266,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 602
+      },
+      {
+        "nodeId": 2273,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 242
+      },
+      {
+        "nodeId": 2371,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 522
+      },
+      {
+        "nodeId": 2381,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 168
+      },
+      {
+        "nodeId": 2386,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 602
+      },
+      {
+        "nodeId": 2400,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 474
+      },
+      {
+        "nodeId": 2409,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 168
+      },
+      {
+        "nodeId": 2410,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 474
+      },
+      {
+        "nodeId": 2435,
+        "shader": "MeshShSdf",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 67
+      },
+      {
+        "nodeId": 2446,
+        "shader": "DarkStone",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 582
+      },
+      {
+        "nodeId": 55,
+        "shader": "ChamAlpha",
+        "group": "Decal",
+        "baked": false,
+        "triangles": 60
+      },
+      {
+        "nodeId": 82,
+        "shader": "ChamAlpha",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 4
+      },
+      {
+        "nodeId": 127,
+        "shader": "ChamAlpha",
+        "group": "Decal",
+        "baked": false,
+        "triangles": 60
+      },
+      {
+        "nodeId": 152,
+        "shader": "ChamAlpha",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 16
+      },
+      {
+        "nodeId": 193,
+        "shader": "ChamAlpha",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 8
+      },
+      {
+        "nodeId": 243,
+        "shader": "ChamAlpha",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 38
+      },
+      {
+        "nodeId": 271,
+        "shader": "ChamAlpha",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 158
+      },
+      {
+        "nodeId": 301,
+        "shader": "ChamAlpha",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 16
+      },
+      {
+        "nodeId": 343,
+        "shader": "AncestorEngine",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 100
+      },
+      {
+        "nodeId": 534,
+        "shader": "ChamAlpha",
+        "group": "Decal",
+        "baked": false,
+        "triangles": 60
+      },
+      {
+        "nodeId": 550,
+        "shader": "ChamAlpha",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 180
+      },
+      {
+        "nodeId": 585,
+        "shader": "ChamAlpha",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 152
+      },
+      {
+        "nodeId": 627,
+        "shader": "Constellation",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 172
+      },
+      {
+        "nodeId": 655,
+        "shader": "ChamAlpha",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 4
+      },
+      {
+        "nodeId": 727,
+        "shader": "ChamAlpha",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 180
+      },
+      {
+        "nodeId": 892,
+        "shader": "AncestorEngine",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 100
+      },
+      {
+        "nodeId": 932,
+        "shader": "ChamAlpha",
+        "group": "Decal",
+        "baked": false,
+        "triangles": 122
+      },
+      {
+        "nodeId": 983,
+        "shader": "ChamAlpha",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 16
+      },
+      {
+        "nodeId": 993,
+        "shader": "ChamAlpha",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 172
+      },
+      {
+        "nodeId": 998,
+        "shader": "ChamAlpha",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 38
+      },
+      {
+        "nodeId": 1002,
+        "shader": "Constellation",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 158
+      },
+      {
+        "nodeId": 1062,
+        "shader": "ChamAlpha",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 4
+      },
+      {
+        "nodeId": 1099,
+        "shader": "AncestorEngine",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 100
+      },
+      {
+        "nodeId": 1100,
+        "shader": "Constellation",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 38
+      },
+      {
+        "nodeId": 1185,
+        "shader": "ChamAlpha",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 8
+      },
+      {
+        "nodeId": 1186,
+        "shader": "ChamAlpha",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 180
+      },
+      {
+        "nodeId": 1218,
+        "shader": "ChamAlpha",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 4
+      },
+      {
+        "nodeId": 1534,
+        "shader": "AncestorEngine",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 100
+      },
+      {
+        "nodeId": 1579,
+        "shader": "ChamAlpha",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 8
+      },
+      {
+        "nodeId": 1584,
+        "shader": "AncestorEngine",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 100
+      },
+      {
+        "nodeId": 1613,
+        "shader": "ChamAlpha",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 16
+      },
+      {
+        "nodeId": 1615,
+        "shader": "ChamAlpha",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 16
+      },
+      {
+        "nodeId": 1616,
+        "shader": "AncestorEngine",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 100
+      },
+      {
+        "nodeId": 1707,
+        "shader": "ChamAlpha",
+        "group": "Decal",
+        "baked": false,
+        "triangles": 60
+      },
+      {
+        "nodeId": 1717,
+        "shader": "ChamAlpha",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 16
+      },
+      {
+        "nodeId": 1810,
+        "shader": "ChamAlpha",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 16
+      },
+      {
+        "nodeId": 1822,
+        "shader": "AncestorEngine",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 100
+      },
+      {
+        "nodeId": 1829,
+        "shader": "ChamAlpha",
+        "group": "Decal",
+        "baked": false,
+        "triangles": 2
+      },
+      {
+        "nodeId": 1906,
+        "shader": "ChamAlpha",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 38
+      },
+      {
+        "nodeId": 1909,
+        "shader": "ChamAlpha",
+        "group": "Decal",
+        "baked": false,
+        "triangles": 141
+      },
+      {
+        "nodeId": 2021,
+        "shader": "ChamAlpha",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 38
+      },
+      {
+        "nodeId": 2222,
+        "shader": "AncestorEngine",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 100
+      },
+      {
+        "nodeId": 2281,
+        "shader": "Constellation",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 152
+      },
+      {
+        "nodeId": 2327,
+        "shader": "ChamAlpha",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 38
+      },
+      {
+        "nodeId": 2384,
+        "shader": "ChamAlpha",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 8
+      },
+      {
+        "nodeId": 2423,
+        "shader": "ChamAlpha",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 16
+      },
+      {
+        "nodeId": 50,
+        "shader": "UnlitAlphaColor",
+        "group": "Blended",
+        "baked": false,
+        "triangles": 12
+      },
+      {
+        "nodeId": 57,
+        "shader": "UnlitAlphaColor",
+        "group": "Blended",
+        "baked": false,
+        "triangles": 128
+      },
+      {
+        "nodeId": 150,
+        "shader": "UnlitAlphaColor",
+        "group": "Blended",
+        "baked": false,
+        "triangles": 128
+      },
+      {
+        "nodeId": 167,
+        "shader": "UnlitAlphaColor",
+        "group": "Blended",
+        "baked": false,
+        "triangles": 12
+      },
+      {
+        "nodeId": 307,
+        "shader": "UnlitAlphaColor",
+        "group": "Blended",
+        "baked": false,
+        "triangles": 12
+      },
+      {
+        "nodeId": 334,
+        "shader": "UnlitAlphaColor",
+        "group": "Blended",
+        "baked": false,
+        "triangles": 12
+      },
+      {
+        "nodeId": 373,
+        "shader": "UnlitAlphaColor",
+        "group": "Blended",
+        "baked": false,
+        "triangles": 12
+      },
+      {
+        "nodeId": 570,
+        "shader": "UnlitAlphaColor",
+        "group": "Blended",
+        "baked": false,
+        "triangles": 12
+      },
+      {
+        "nodeId": 803,
+        "shader": "UnlitAlphaColor",
+        "group": "Blended",
+        "baked": false,
+        "triangles": 12
+      },
+      {
+        "nodeId": 818,
+        "shader": "UnlitAlphaColor",
+        "group": "Blended",
+        "baked": false,
+        "triangles": 12
+      },
+      {
+        "nodeId": 858,
+        "shader": "UnlitAlphaColor",
+        "group": "Blended",
+        "baked": false,
+        "triangles": 128
+      },
+      {
+        "nodeId": 907,
+        "shader": "UnlitAlphaColor",
+        "group": "Blended",
+        "baked": false,
+        "triangles": 128
+      },
+      {
+        "nodeId": 973,
+        "shader": "UnlitAlphaColor",
+        "group": "Blended",
+        "baked": false,
+        "triangles": 12
+      },
+      {
+        "nodeId": 1160,
+        "shader": "UnlitAlphaColor",
+        "group": "Blended",
+        "baked": false,
+        "triangles": 128
+      },
+      {
+        "nodeId": 1250,
+        "shader": "UnlitAlphaColor",
+        "group": "Blended",
+        "baked": false,
+        "triangles": 12
+      },
+      {
+        "nodeId": 1558,
+        "shader": "UnlitAlphaColor",
+        "group": "Blended",
+        "baked": false,
+        "triangles": 12
+      },
+      {
+        "nodeId": 1796,
+        "shader": "UnlitAlphaColor",
+        "group": "Blended",
+        "baked": false,
+        "triangles": 12
+      },
+      {
+        "nodeId": 1916,
+        "shader": "UnlitAlphaColor",
+        "group": "Blended",
+        "baked": false,
+        "triangles": 128
+      },
+      {
+        "nodeId": 1944,
+        "shader": "UnlitAlphaColor",
+        "group": "Blended",
+        "baked": false,
+        "triangles": 12
+      },
+      {
+        "nodeId": 2023,
+        "shader": "UnlitAlphaColor",
+        "group": "Blended",
+        "baked": false,
+        "triangles": 12
+      },
+      {
+        "nodeId": 2046,
+        "shader": "UnlitAlphaColor",
+        "group": "Blended",
+        "baked": false,
+        "triangles": 12
+      },
+      {
+        "nodeId": 2111,
+        "shader": "UnlitAlphaColor",
+        "group": "Blended",
+        "baked": false,
+        "triangles": 12
+      },
+      {
+        "nodeId": 2193,
+        "shader": "UnlitAlphaColor",
+        "group": "Blended",
+        "baked": false,
+        "triangles": 12
+      },
+      {
+        "nodeId": 2247,
+        "shader": "UnlitAlphaColor",
+        "group": "Blended",
+        "baked": false,
+        "triangles": 12
+      },
+      {
+        "nodeId": 2331,
+        "shader": "UnlitAlphaColor",
+        "group": "Blended",
+        "baked": false,
+        "triangles": 12
+      },
+      {
+        "nodeId": 2343,
+        "shader": "UnlitAlphaColor",
+        "group": "Blended",
+        "baked": false,
+        "triangles": 12
+      },
+      {
+        "nodeId": 20,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 114801,
+        "beamoPass": "primary",
+        "beamoNodeIds": [
+          20,
+          40,
+          45,
+          90,
+          123,
+          124,
+          157,
+          187,
+          199,
+          200,
+          210,
+          246,
+          277,
+          290,
+          335,
+          360,
+          384,
+          394,
+          403,
+          411,
+          416,
+          451,
+          482,
+          493,
+          516,
+          531,
+          569,
+          588,
+          603,
+          604,
+          616,
+          644,
+          686,
+          773,
+          784,
+          835,
+          896,
+          919,
+          953,
+          957,
+          969,
+          979,
+          986,
+          1036,
+          1117,
+          1150,
+          1172,
+          1211,
+          1229,
+          1401,
+          1413,
+          1432,
+          1501,
+          1528,
+          1532,
+          1575,
+          1685,
+          1702,
+          1759,
+          1781,
+          1821,
+          1834,
+          1837,
+          1866,
+          1870,
+          1877,
+          1926,
+          1927,
+          1968,
+          2006,
+          2039,
+          2045,
+          2068,
+          2103,
+          2115,
+          2130,
+          2157,
+          2199,
+          2272,
+          2320,
+          2340,
+          2357,
+          2447
+        ],
+        "materialNodeId": 1959
+      },
+      {
+        "nodeId": 28,
+        "shader": "MeshSh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 18567,
+        "beamoPass": "primary",
+        "beamoNodeIds": [
+          28,
+          109,
+          234,
+          262,
+          270,
+          297,
+          310,
+          319,
+          400,
+          464,
+          494,
+          511,
+          541,
+          613,
+          676,
+          711,
+          721,
+          756,
+          759,
+          791,
+          798,
+          810,
+          813,
+          825,
+          856,
+          894,
+          917,
+          1023,
+          1053,
+          1080,
+          1128,
+          1142,
+          1156,
+          1164,
+          1192,
+          1227,
+          1321,
+          1330,
+          1332,
+          1335,
+          1396,
+          1448,
+          1543,
+          1629,
+          1815,
+          1880,
+          1962,
+          1989,
+          2037,
+          2040,
+          2061,
+          2078,
+          2089,
+          2091,
+          2101,
+          2124,
+          2225,
+          2230,
+          2243,
+          2284,
+          2292,
+          2300,
+          2366,
+          2421,
+          2438
+        ],
+        "materialNodeId": 1103
+      },
+      {
+        "nodeId": 198,
+        "shader": "RockFaceShMesh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 8281,
+        "beamoPass": "primary",
+        "beamoNodeIds": [
+          198,
+          223,
+          276,
+          328,
+          331,
+          528,
+          626,
+          685,
+          712,
+          814,
+          844,
+          916,
+          1077,
+          1166,
+          1182,
+          1407,
+          1415,
+          1509,
+          1583,
+          1850,
+          1919,
+          1952,
+          2013,
+          2279,
+          2430
+        ],
+        "materialNodeId": 764
+      },
+      {
+        "nodeId": 493,
+        "shader": "GrassShMesh",
+        "group": "Opaque",
+        "baked": true,
+        "triangles": 940,
+        "beamoPass": "secondary",
+        "beamoNodeIds": [
+          493,
+          569,
+          773,
+          894
+        ],
+        "materialNodeId": 1956
+      },
+      {
+        "nodeId": 141,
+        "shader": "MeshShAlphaSdf",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 620,
+        "beamoPass": "primary",
+        "beamoNodeIds": [
+          141,
+          622,
+          674,
+          939,
+          1027,
+          1065,
+          1661,
+          1965,
+          1978
+        ],
+        "materialNodeId": 455
+      },
+      {
+        "nodeId": 493,
+        "shader": "GrassShMeshAlpha",
+        "group": "Decal",
+        "baked": true,
+        "triangles": 1455,
+        "beamoPass": "alpha",
+        "beamoNodeIds": [
+          493,
+          569,
+          773,
+          894
+        ],
+        "materialNodeId": 1956
+      }
+    ],
+    "shaders": [
+      "RockFaceSh",
+      "SandSh",
+      "GrassSh",
+      "CloudSh",
+      "RockFaceShAlpha",
+      "SandShAlpha",
+      "GrassShAlpha",
+      "RockFaceShAlphaSkirt",
+      "SandShAlphaSkirt",
+      "GrassShAlphaSkirt",
+      "DarkStone",
+      "MeshSh",
+      "MeshShSdf",
+      "RockFaceShMesh",
+      "ChamAlpha",
+      "AncestorEngine",
+      "Constellation",
+      "UnlitAlphaColor",
+      "GrassShMesh",
+      "MeshShAlphaSdf",
+      "GrassShMeshAlpha"
+    ],
+    "triangles": 336284,
+    "textures": [
+      "CliffSh",
+      "GoldSh",
+      "Noise3Ch",
+      "GrassNorTex0",
+      "GrassNorTex1",
+      "GrassMask",
+      "Caustics",
+      "Black",
+      "StoneBase",
+      "StoneGrunge2",
+      "White",
+      "StoneBaseSh",
+      "StupaBell",
+      "StupaBellSh",
+      "StoneRamp",
+      "StormGate",
+      "StormGateAO",
+      "UpNormal",
+      "StoneBaseMotif",
+      "StoneBaseMotifSh",
+      "FriendshipStatue",
+      "FriendshipStatueSh",
+      "Clear",
+      "BlueL1",
+      "GreenL2",
+      "AncestorBlueL1",
+      "OrangeL1",
+      "Gray",
+      "OrangeL2",
+      "PaintBlueL1",
+      "CloudFarTex"
+    ],
+    "samplerPolicy": "llvmpipe-trilinear",
+    "textureSampling": [
+      {
+        "name": "CliffSh",
+        "mipLevels": 10,
+        "anisotropy": 16,
+        "effectiveAnisotropy": 1,
+        "gamma": false
+      },
+      {
+        "name": "GoldSh",
+        "mipLevels": 10,
+        "anisotropy": 16,
+        "effectiveAnisotropy": 1,
+        "gamma": false
+      },
+      {
+        "name": "Noise3Ch",
+        "mipLevels": 10,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": false
+      },
+      {
+        "name": "GrassNorTex0",
+        "mipLevels": 10,
+        "anisotropy": 16,
+        "effectiveAnisotropy": 1,
+        "gamma": false
+      },
+      {
+        "name": "GrassNorTex1",
+        "mipLevels": 9,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": false
+      },
+      {
+        "name": "GrassMask",
+        "mipLevels": 10,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": false
+      },
+      {
+        "name": "Caustics",
+        "mipLevels": 9,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": false
+      },
+      {
+        "name": "Black",
+        "mipLevels": 6,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": true
+      },
+      {
+        "name": "StoneBase",
+        "mipLevels": 10,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": true
+      },
+      {
+        "name": "StoneGrunge2",
+        "mipLevels": 10,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": true
+      },
+      {
+        "name": "White",
+        "mipLevels": 6,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": true
+      },
+      {
+        "name": "StoneBaseSh",
+        "mipLevels": 10,
+        "anisotropy": 16,
+        "effectiveAnisotropy": 1,
+        "gamma": false
+      },
+      {
+        "name": "StupaBell",
+        "mipLevels": 10,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": true
+      },
+      {
+        "name": "StupaBellSh",
+        "mipLevels": 10,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": false
+      },
+      {
+        "name": "StoneRamp",
+        "mipLevels": 1,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": true
+      },
+      {
+        "name": "StormGate",
+        "mipLevels": 1,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": true
+      },
+      {
+        "name": "StormGateAO",
+        "mipLevels": 1,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": true
+      },
+      {
+        "name": "UpNormal",
+        "mipLevels": 1,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": false
+      },
+      {
+        "name": "StoneBaseMotif",
+        "mipLevels": 1,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": true
+      },
+      {
+        "name": "StoneBaseMotifSh",
+        "mipLevels": 10,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": false
+      },
+      {
+        "name": "FriendshipStatue",
+        "mipLevels": 10,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": true
+      },
+      {
+        "name": "FriendshipStatueSh",
+        "mipLevels": 10,
+        "anisotropy": 16,
+        "effectiveAnisotropy": 1,
+        "gamma": false
+      },
+      {
+        "name": "Clear",
+        "mipLevels": 1,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": true
+      },
+      {
+        "name": "BlueL1",
+        "mipLevels": 1,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": true
+      },
+      {
+        "name": "GreenL2",
+        "mipLevels": 1,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": true
+      },
+      {
+        "name": "AncestorBlueL1",
+        "mipLevels": 1,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": true
+      },
+      {
+        "name": "OrangeL1",
+        "mipLevels": 1,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": true
+      },
+      {
+        "name": "Gray",
+        "mipLevels": 1,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": true
+      },
+      {
+        "name": "OrangeL2",
+        "mipLevels": 1,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": true
+      },
+      {
+        "name": "PaintBlueL1",
+        "mipLevels": 1,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": true
+      },
+      {
+        "name": "CloudFarTex",
+        "mipLevels": 11,
+        "anisotropy": 1,
+        "effectiveAnisotropy": 1,
+        "gamma": true
+      }
+    ],
+    "dynamics": {
+      "time": 0.7979999780654907,
+      "scrolls": [
+        [
+          0.01200117263942957,
+          0,
+          0,
+          0
+        ],
+        [
+          0.9770165085792542,
+          0,
+          0.9599982500076294,
+          0
+        ],
+        [
+          0.9918805956840515,
+          0,
+          0.014029232785105705,
+          0
+        ]
+      ]
+    },
+    "sceneUploads": 5,
+    "overlayUpdates": 5,
+    "cloud": {
+      "scope": "Original sparse cloud fields and CloudFluffy.vol; CloudCore history/signed depth, three depth passes, 1/8 and 1/4 R16F coarse passes, half-resolution dual RGBA16F CloudFluffy plus dynamic CloudCard, original FogUpsample, MotionGen/MotionDilate/TemporalAa and Tonemap GLSL. Native eight-phase scene and 32-phase half jitter, Gaussian taps and current-jitter correction of previous projection; editor frame clock. Stage-sized viewport uniforms; native top-row depth for AIR FragCoord and explicit lower-left storage for projected Coarse/Fog UV. Preview: zero sampled EnvironmentForces wind, static map-start environments, camera used for local avatar, original loaded GUID/remap lighting for compatible CloudCards; explicit neutral preview lighting only for unbaked cards, no Visibility occlusion, water/fog-volume/bloom/motion-blur inputs zero; recovered transparent color/log-depth outputs use opaque depth and feed FogUpsample, static opaque motion with original temporal resolve; deterministic editor rand31 stream with native conversion, explicit preview composed-HDR geometric-mean exposure and sRGB display transfer. Native opaque RGBA32F converted once to half RTE; transparent targets use explicit RGBA32F preview storage; original per-draw Metal half rounding/game image parity remain unverified.",
+      "enabled": true,
+      "frames": 5,
+      "volumeBlocks": 12136,
+      "proxyTriangles": 13388,
+      "visibleCards": 0,
+      "bakedCards": 7,
+      "unbakedCards": 0,
+      "cardBakeScope": "Prepared LevelData GUID/first-LOD gate and original Mesh remap; native resource/CloudCard lifecycle and unbaked default-light generation pending",
+      "passes": [
+        "CloudCore",
+        "OpaqueRGBDepth",
+        "DepthDownsample",
+        "DepthDownsampleGather",
+        "DepthDownsampleQuarter",
+        "CloudFluffySuperCoarse",
+        "CloudFluffyCoarse",
+        "CloudFluffy",
+        "AlphaColorLogDepth",
+        "PreviewLuminance",
+        "FogUpsample",
+        "MotionGen",
+        "MotionDilate",
+        "TemporalAa",
+        "Tonemap"
+      ],
+      "noise": "Tex3D/CloudFluffy.vol",
+      "screenNoiseImages": [
+        "NoiseBlue3Ch",
+        "HeatTex"
+      ],
+      "randomOffset": [
+        0.08528175204992294,
+        0.02127004787325859,
+        0.062297772616147995
+      ],
+      "sampling": {
+        "frame": 4,
+        "phase": 4,
+        "halfPhase": 0,
+        "pixelOffset": [
+          0.1875,
+          0.3125
+        ],
+        "jitter": [
+          -0.0002929687616415322,
+          -0.0005040322430431843
+        ],
+        "jitterHalf": [
+          -0.0007812500116415322,
+          -0.000806451600510627
+        ],
+        "clockScope": "Editor completed-frame counter; native sampling sequence, not original process frame timing"
+      },
+      "randomStreamScope": "Deterministic editor 31-bit sequence with original Compositor conversion; process-wide Darwin rand stream not reproduced",
+      "wind": {
+        "move": [
+          1.0640000104904175,
+          0,
+          0,
+          0
+        ],
+        "scroll": [
+          2.128000020980835,
+          0,
+          0,
+          0
+        ],
+        "time": 0.5320000052452087
+      },
+      "undulationScale": 0.25,
+      "cloudMat": [
+        0.4562634229660034,
+        0.4562634229660034,
+        0.4562634229660034,
+        1
+      ],
+      "cloudNoiseTweaks": [
+        2.5,
+        0.5,
+        0.5,
+        0.15000000596046448
+      ],
+      "lastMilliseconds": 8554.583434,
+      "averageLum": 0.4617804691344403,
+      "exposureScope": "Editor composed-HDR geometric mean and sRGB display transfer; original luminance feedback pending",
+      "statistics": {
+        "Opaque": {
+          "min": [
+            -0.14435891807079315,
+            -0.403918981552124,
+            -1.0676705837249756,
+            -53.25
+          ],
+          "max": [
+            2.3248062133789062,
+            4.8020453453063965,
+            10.4583740234375,
+            6293.40966796875
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "AlphaColor": {
+          "min": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "max": [
+            2.0637826919555664,
+            2.541001558303833,
+            1.8671125173568726,
+            0.7661922574043274
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "AlphaLogDepth": {
+          "min": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "max": [
+            1451.9158935546875,
+            0,
+            0,
+            0.7661922574043274
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CloudFluffySuperCoarse": {
+          "min": [
+            36.9375,
+            0,
+            0,
+            1
+          ],
+          "max": [
+            739,
+            0,
+            0,
+            1
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CloudFluffyCoarse": {
+          "min": [
+            37.34375,
+            0,
+            0,
+            1
+          ],
+          "max": [
+            740,
+            0,
+            0,
+            1
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CloudA": {
+          "min": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "max": [
+            0.94580078125,
+            2.0859375,
+            4.34375,
+            1
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "CloudB": {
+          "min": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "max": [
+            2318,
+            33.65625,
+            4.421875,
+            1
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "FogUpsample": {
+          "min": [
+            0.1654052734375,
+            0.08740234375,
+            0.042083740234375,
+            0
+          ],
+          "max": [
+            0.99951171875,
+            0.99951171875,
+            0.99951171875,
+            0
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "MotionGen": {
+          "min": [
+            -0.0005970001220703125,
+            -0.000274658203125,
+            34.03125,
+            0.00019991397857666016
+          ],
+          "max": [
+            33.65625,
+            4.421875,
+            62816,
+            1.1220703125
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "MotionDilate": {
+          "min": [
+            -0.0005970001220703125,
+            -0.000274658203125,
+            -21.078125,
+            -21.171875
+          ],
+          "max": [
+            33.53125,
+            4.421875,
+            -0.00009995698928833008,
+            -0.00009995698928833008
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "TemporalAa": {
+          "min": [
+            0.184814453125,
+            0.1802978515625,
+            0.105712890625,
+            0
+          ],
+          "max": [
+            0.9990234375,
+            0.9990234375,
+            0.9990234375,
+            0
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "temporal": {
+          "cameraCut": false,
+          "frames": 5,
+          "scope": "Original GLES motion and temporal fragments, supplied native camera Gaussian taps, previous composed color. Static opaque motion; moving model Motion list and original Metal quantization pending."
+        },
+        "Tonemap": {
+          "min": [
+            7.972907383191341e-7,
+            7.972907383191341e-7,
+            7.972907383191341e-7,
+            0
+          ],
+          "max": [
+            0.6483805179595947,
+            0.6541480422019958,
+            0.7872498035430908,
+            0
+          ],
+          "nonfinite": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "active": true
+    }
+  }
+}

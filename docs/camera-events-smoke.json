@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "checks": [
+    "Real Dawn SetCameraShake advances original elapsed clock, writes speed/force and feeds the whole recovered Whisker phase/noise/decay helper",
+    "Actual rendered Avatar eye equals base eye plus native positional noise; camera direction stays fixed and pause freezes elapsed/phase/offset without repeated accumulation",
+    "Stopping and restarting positional shake three times restores the same base eye without camera drift",
+    "Real Dawn SetCameraKeyFrameShake resolves serialized Clump references and writes timed idle/moving/speed parameters to isolated key-frame states",
+    "Leaving/reentering Avatar clears active camera event and session snapshots without dirtying Objects or meshes",
+    "Map change clears event candidates and targets; empty-map controls remain disabled and renderer has no errors"
+  ],
+  "scope": "Actual Electron/Vulkan UI. Explicit original-data camera event selection executes recovered OnStart/Update and whole Whisker shake helper with neutral physical/Wind/ray/sound and browser math preview services. Rendered positional shake, pause/stop without drift, key-frame parameter targets, mode/map cleanup and data isolation checked. Key-frame shake drawing, original avoidance, scene autoStart, full CameraGuide/Whisker runtime and Windows remain pending.",
+  "windowsTested": false,
+  "whisker": {
+    "id": 871,
+    "className": "SetCameraShake",
+    "running": true,
+    "elapsed": 0.4788999855518341,
+    "weight": 0.9621720910072327,
+    "parameters": {
+      "speed": 15,
+      "force": 0.30000001192092896
+    },
+    "positionShake": [
+      0.20712314546108246,
+      -0.1664479523897171,
+      0.0997670367360115
+    ],
+    "targets": []
+  },
+  "pausedShake": [
+    -0.18643520772457123,
+    -0.3227848410606384,
+    0.05583345890045166
+  ],
+  "keyframe": {
+    "id": 394,
+    "className": "SetCameraKeyFrameShake",
+    "running": true,
+    "elapsed": 0.3597000241279602,
+    "weight": null,
+    "parameters": null,
+    "positionShake": null,
+    "targets": [
+      {
+        "id": 145,
+        "idle": 0.0035970001481473446,
+        "moving": 0.0035970001481473446,
+        "speed": 5.395500183105469
+      }
+    ]
+  }
+}

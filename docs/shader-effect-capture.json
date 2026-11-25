@@ -1,0 +1,75 @@
+{
+  "passed": true,
+  "scope": "Isolated original terrain shader execution: synthetic sphere/packed lighting, explicit sky/probe, no point lights or water. Actual material parameters and game texture pixels. These are not editor terrain or original-game images.",
+  "images": [
+    {
+      "name": "RockFaceSh",
+      "file": "docs/shader-effects/RockFaceSh-isolated.png",
+      "materialId": 16,
+      "uvScale": 0.25,
+      "textures": [
+        {
+          "name": "u_topGeoTexture",
+          "texture": "CliffSh"
+        },
+        {
+          "name": "u_sideGeoTexture",
+          "texture": "CliffSh"
+        }
+      ],
+      "coloredPixels": 94760,
+      "colors": 416,
+      "nonfinite": 0
+    },
+    {
+      "name": "SandSh",
+      "file": "docs/shader-effects/SandSh-isolated.png",
+      "materialId": 32,
+      "uvScale": 0.25,
+      "textures": [
+        {
+          "name": "u_normalTex",
+          "texture": "Noise3Ch"
+        },
+        {
+          "name": "u_grassMaskTexture",
+          "texture": "Noise3Ch"
+        }
+      ],
+      "coloredPixels": 94760,
+      "colors": 1228,
+      "nonfinite": 0
+    },
+    {
+      "name": "GrassSh",
+      "file": "docs/shader-effects/GrassSh-isolated.png",
+      "materialId": 48,
+      "uvScale": 1,
+      "textures": [
+        {
+          "name": "u_grassNorm1Tex",
+          "texture": "GrassNorTex0"
+        },
+        {
+          "name": "u_grassNorm2Tex",
+          "texture": "GrassNorTex1"
+        },
+        {
+          "name": "u_grassMaskTex",
+          "texture": "GrassMask"
+        }
+      ],
+      "coloredPixels": 94760,
+      "colors": 901,
+      "nonfinite": 0
+    }
+  ],
+  "device": {
+    "engine": "Sky Native Vulkan",
+    "backend": "Vulkan",
+    "device": "llvmpipe (LLVM 19.1.7, 128 bits)",
+    "apiVersion": 4210993,
+    "deviceType": 4,
+    "shaderFloat16": true
+  }
+}

@@ -1,0 +1,13 @@
+0x100272160: push rbp
+0x100272161: mov rbp, rsp
+0x100272164: sub rsp, 0x10
+0x100272168: mov rax, qword ptr [rdi + 0x208]
+0x10027216f: vmovaps xmm0, xmmword ptr [rdi + 0x110]
+0x100272177: vmovaps xmmword ptr [rbp - 0x10], xmm0
+0x10027217c: lea rsi, [rbp - 0x10]
+0x100272180: mov rdi, rax
+0x100272183: call 0x1007f2930 ; 0x1007f2930
+0x100272188: add rsp, 0x10
+0x10027218c: pop rbp
+0x10027218d: ret 
+0x10027218e: nop 

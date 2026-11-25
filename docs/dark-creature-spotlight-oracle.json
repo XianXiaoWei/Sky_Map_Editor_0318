@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "cases": 504,
+  "comparedCases": 504,
+  "projectionOnlyCases": 244,
+  "combinedEyeAndProjectionCases": 260,
+  "comparedBytes": 68136704,
+  "serviceCalls": 12965,
+  "nativeArithmeticProbes": 16,
+  "start": "0x10026e7da",
+  "projectionStart": "0x10026eda3",
+  "end": "0x10026f41e",
+  "wholeDarkCreatureUpdateVerified": false,
+  "wholeEyeAndProjectionPhaseVerified": true,
+  "scope": "Consecutive eye look/smoothing and spotlight projection/radius/color/marker/expiration phases of original DarkCreature.Update 0x10026e7da..0x10026f41e. Includes velocity/target eye direction, alert sweep and cached quaternion, shortest-path quaternion interpolation with native NaN fallback, actual eye-model transform, rotating projected direction, native ray query, current target and radius. The same preceding body motion matrix, packed delta, absolute time and original palette scratch are caller inputs; subsequent interaction/audio, real resource/world owners and full viewport remain pending. Original instruction slices execute unchanged with an explicit native stack frame. Full caller arena and ordered head/ray/avatar/bird/color/eye/Marker services compare across consecutive frames, patrol/chase/alert eye basis/quaternion smoothing, missing targets, fixed 64-bird cap, radius and expiration thresholds, query padding, callback mutations, signed zero/NaN and scalar acos/sin/sincos/exp inputs. Linux native libc results and explicitly supplied sincos upper lanes are replayed; no macOS/JS math or complete rendered creature equivalence claim.",
+  "failures": []
+}

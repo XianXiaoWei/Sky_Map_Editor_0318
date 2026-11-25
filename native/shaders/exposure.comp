@@ -1,0 +1,14 @@
+#version 450
+// Gather the exact existing half-float meter samples in one dispatch instead
+// of thousands of separate image-copy regions. Host double arithmetic stays
+// unchanged; this shader performs no luminance reduction or exposure mapping.
+layout(local_size_x=64) in;
+layout(set=0,binding=0) uniform sampler2D sourceImage;
+layout(std430,set=0,binding=1) writeonly buffer Samples { uvec2 rgba[]; } outputSamples;
+layout(push_constant) uniform Dimensions { uint width; uint step; uint count; } size;
+void main(){
+    uint i=gl_GlobalInvocationID.x;if(i>=size.count)return;
+    uint p=i*size.step;
+    vec4 color=texelFetch(sourceImage,ivec2(p%size.width,p/size.width),0);
+    outputSamples.rgba[i]=uvec2(packHalf2x16(color.rg),packHalf2x16(color.ba));
+}

@@ -1,0 +1,826 @@
+{
+  "passed": true,
+  "checks": [
+    "Actual DayHubCave #43 writes saved targetValue 1 and finishes during initial dispatch because its saved time is 0",
+    "Platform stays fixed while OnFloat waits below threshold and while Delay runs; only the condition handoff and 0.5s delay start TransformObject. Pause freezes event/value/object state and the float32 camera stays fixed across screenshots",
+    "Resume reaches exact target 1; Stop/Restart restores the saved Float input and model transform",
+    "Mode/map cleanup clears live controllers and targets, without renderer errors or source/prepared file changes"
+  ],
+  "scope": "Actual DayHubCave SetFloat #43 runs its saved time=0 endpoint. A separate prepared map links SetFloat #43 / Float #874 to OnFloat #229 (>=0.35), Delay #65 (0.5s), TransformObject #270 and original PlatformRain_01 LevelMesh #339 through Enable #444; its changed controls are recorded. Electron/Vulkan editor visualization and JS Math fallback, not complete original Model/GPU, automatic scene startup, collision or Avatar. Source Objects/meshes and prepared saved documents remain unchanged.",
+  "windowsTested": false,
+  "prepared": {
+    "sourceSha256": "e4da920cc9f0b1569f14ad1a6d1990db7155dc07ebfc3214c4e385a367872457",
+    "changes": [
+      {
+        "node": 229,
+        "field": "value",
+        "before": 312,
+        "after": 874
+      },
+      {
+        "node": 229,
+        "field": "conditionOneValue",
+        "before": {
+          "uint": 1065353216,
+          "int": 1065353216,
+          "float": 1
+        },
+        "after": 0.35
+      },
+      {
+        "node": 229,
+        "field": "conditionOneOperator",
+        "before": {
+          "uint": 4,
+          "int": 4,
+          "float": 5.605193857299268e-45
+        },
+        "after": 1
+      },
+      {
+        "node": 43,
+        "field": "time",
+        "before": {
+          "uint": 0,
+          "int": 0,
+          "float": 0
+        },
+        "after": 1
+      },
+      {
+        "node": 43,
+        "field": "snappiness",
+        "before": {
+          "uint": 1065353216,
+          "int": 1065353216,
+          "float": 1
+        },
+        "after": 0.3
+      },
+      {
+        "node": 270,
+        "field": "progress01",
+        "before": 4294967295,
+        "after": 874
+      },
+      {
+        "node": 270,
+        "field": "completeAtEnd",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "node": 444,
+        "field": "enable",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "node": 444,
+        "field": "objects",
+        "before": 1042,
+        "after": 84
+      },
+      {
+        "node": 229,
+        "field": "trueEvents",
+        "before": 1011,
+        "after": 65
+      },
+      {
+        "node": 65,
+        "field": "events",
+        "before": 975,
+        "after": 359
+      },
+      {
+        "node": 65,
+        "field": "delay",
+        "before": {
+          "uint": 981668463,
+          "int": 981668463,
+          "float": 0.0010000000474974513
+        },
+        "after": 0.5
+      },
+      {
+        "node": 84,
+        "field": "[0]",
+        "before": 479,
+        "after": 43
+      },
+      {
+        "node": 84,
+        "field": "[1]",
+        "before": 910,
+        "after": 229
+      },
+      {
+        "node": 359,
+        "field": "[0]",
+        "before": 717,
+        "after": 270
+      }
+    ],
+    "root": 444,
+    "events": [
+      43,
+      65,
+      229,
+      270,
+      444
+    ],
+    "objects": [
+      339
+    ],
+    "map": "Prepared_OnFloat_Platform",
+    "sha256": "94e90c7e35de42b449a1194fbddeb1a1276c1bae1fb6599bdd94b0283a608027"
+  },
+  "actual": {
+    "id": 43,
+    "kind": "SetFloat",
+    "running": false,
+    "paused": false,
+    "progress": 1,
+    "elapsed": 0,
+    "events": [
+      {
+        "id": 43,
+        "kind": "SetFloat",
+        "running": false,
+        "pending": false,
+        "progress": 1,
+        "elapsed": 0,
+        "starts": 1
+      }
+    ],
+    "objects": [],
+    "values": [
+      {
+        "id": 874,
+        "value": 1,
+        "bits": 1065353216
+      }
+    ],
+    "error": null
+  },
+  "initial": {
+    "id": 444,
+    "kind": "Enable",
+    "running": true,
+    "paused": true,
+    "progress": 1,
+    "elapsed": 0,
+    "events": [
+      {
+        "id": 43,
+        "kind": "SetFloat",
+        "running": false,
+        "pending": true,
+        "progress": 0,
+        "elapsed": 0,
+        "starts": 0
+      },
+      {
+        "id": 65,
+        "kind": "Delay",
+        "running": false,
+        "pending": false,
+        "progress": 0,
+        "elapsed": 0,
+        "starts": 0
+      },
+      {
+        "id": 229,
+        "kind": "OnFloat",
+        "running": false,
+        "pending": true,
+        "progress": 0,
+        "elapsed": 0,
+        "starts": 0
+      },
+      {
+        "id": 270,
+        "kind": "TransformObject",
+        "running": false,
+        "pending": false,
+        "progress": 0,
+        "elapsed": 0,
+        "starts": 0
+      },
+      {
+        "id": 444,
+        "kind": "Enable",
+        "running": false,
+        "pending": false,
+        "progress": 1,
+        "elapsed": 0,
+        "starts": 1
+      }
+    ],
+    "objects": [
+      {
+        "id": 339,
+        "matrix": [
+          2.309699058532715,
+          0,
+          -0.9567090272903442,
+          0,
+          0,
+          2.5,
+          0,
+          0,
+          0.9567090272903442,
+          0,
+          2.309699058532715,
+          0,
+          0,
+          38,
+          0.011985000222921371,
+          1
+        ],
+        "enabled": true
+      }
+    ],
+    "values": [
+      {
+        "id": 874,
+        "value": 0,
+        "bits": 0
+      }
+    ],
+    "error": null
+  },
+  "initialCamera": {
+    "position": [
+      9.945129196621378,
+      43.62309192858855,
+      11.542185403385332
+    ],
+    "forward": [
+      -0.6281087071082564,
+      -0.261711961295107,
+      -0.7327934916262993
+    ],
+    "projection": [
+      2.349146142989556,
+      0,
+      0,
+      0,
+      0,
+      2.1445069205095586,
+      0,
+      0,
+      0,
+      0,
+      -1.0000015625012209,
+      -1,
+      0,
+      0,
+      -0.10000007812506104,
+      0
+    ],
+    "world": [
+      0.7592566023652967,
+      0,
+      -0.6507913734559684,
+      0,
+      -0.17031988674109794,
+      0.9651460248662211,
+      -0.19870653453128095,
+      0,
+      0.6281087071082564,
+      0.261711961295107,
+      0.7327934916262993,
+      0,
+      9.945129196621378,
+      43.62309192858855,
+      11.542185403385332,
+      1
+    ],
+    "viewProjection": [
+      1.7836047189857918,
+      -0.3652521758166887,
+      -0.6281096885288779,
+      -0.6281087071082563,
+      3.2600951701954816e-17,
+      2.0697623296279017,
+      -0.26171237022036603,
+      -0.261711961295107,
+      -1.528804044844964,
+      -0.4261275384528036,
+      -0.7327946366170246,
+      -0.7327934916262993,
+      -0.09243963497126739,
+      -81.73850924353306,
+      26.02138626735615,
+      26.121345530846927
+    ]
+  },
+  "moving": {
+    "id": 444,
+    "kind": "Enable",
+    "running": true,
+    "paused": true,
+    "progress": 1,
+    "elapsed": 0,
+    "events": [
+      {
+        "id": 43,
+        "kind": "SetFloat",
+        "running": true,
+        "pending": false,
+        "progress": 0.622076153755188,
+        "elapsed": 0,
+        "starts": 1
+      },
+      {
+        "id": 65,
+        "kind": "Delay",
+        "running": false,
+        "pending": false,
+        "progress": 1,
+        "elapsed": 0.523900032043457,
+        "starts": 1
+      },
+      {
+        "id": 229,
+        "kind": "OnFloat",
+        "running": false,
+        "pending": false,
+        "progress": 1,
+        "elapsed": 0,
+        "starts": 1
+      },
+      {
+        "id": 270,
+        "kind": "TransformObject",
+        "running": true,
+        "pending": false,
+        "progress": 0.622076153755188,
+        "elapsed": 0,
+        "starts": 1
+      },
+      {
+        "id": 444,
+        "kind": "Enable",
+        "running": false,
+        "pending": false,
+        "progress": 1,
+        "elapsed": 0,
+        "starts": 1
+      }
+    ],
+    "objects": [
+      {
+        "id": 339,
+        "matrix": [
+          2.309699296951294,
+          0,
+          -0.9567115902900696,
+          0,
+          0,
+          2.5,
+          0,
+          0,
+          0.9567115902900696,
+          0,
+          2.309699296951294,
+          0,
+          0,
+          25.247438430786133,
+          0.011985000222921371,
+          1
+        ],
+        "enabled": true
+      }
+    ],
+    "values": [
+      {
+        "id": 874,
+        "value": 0.622076153755188,
+        "bits": 1059012706
+      }
+    ],
+    "error": null
+  },
+  "waiting": {
+    "id": 444,
+    "kind": "Enable",
+    "running": true,
+    "paused": false,
+    "progress": 1,
+    "elapsed": 0,
+    "events": [
+      {
+        "id": 43,
+        "kind": "SetFloat",
+        "running": true,
+        "pending": false,
+        "progress": 0.35333240032196045,
+        "elapsed": 0,
+        "starts": 1
+      },
+      {
+        "id": 65,
+        "kind": "Delay",
+        "running": true,
+        "pending": false,
+        "progress": 0.03319999948143959,
+        "elapsed": 0.016599999740719795,
+        "starts": 1
+      },
+      {
+        "id": 229,
+        "kind": "OnFloat",
+        "running": false,
+        "pending": false,
+        "progress": 1,
+        "elapsed": 0,
+        "starts": 1
+      },
+      {
+        "id": 270,
+        "kind": "TransformObject",
+        "running": false,
+        "pending": false,
+        "progress": 0,
+        "elapsed": 0,
+        "starts": 0
+      },
+      {
+        "id": 444,
+        "kind": "Enable",
+        "running": false,
+        "pending": false,
+        "progress": 1,
+        "elapsed": 0,
+        "starts": 1
+      }
+    ],
+    "objects": [
+      {
+        "id": 339,
+        "matrix": [
+          2.309699058532715,
+          0,
+          -0.9567090272903442,
+          0,
+          0,
+          2.5,
+          0,
+          0,
+          0.9567090272903442,
+          0,
+          2.309699058532715,
+          0,
+          0,
+          38,
+          0.011985000222921371,
+          1
+        ],
+        "enabled": true
+      }
+    ],
+    "values": [
+      {
+        "id": 874,
+        "value": 0.35333240032196045,
+        "bits": 1052043260
+      }
+    ],
+    "error": null
+  },
+  "preTrigger": {
+    "id": 444,
+    "kind": "Enable",
+    "running": true,
+    "paused": false,
+    "progress": 1,
+    "elapsed": 0,
+    "events": [
+      {
+        "id": 43,
+        "kind": "SetFloat",
+        "running": true,
+        "pending": false,
+        "progress": 0.05193955451250076,
+        "elapsed": 0,
+        "starts": 1
+      },
+      {
+        "id": 65,
+        "kind": "Delay",
+        "running": false,
+        "pending": false,
+        "progress": 0,
+        "elapsed": 0,
+        "starts": 0
+      },
+      {
+        "id": 229,
+        "kind": "OnFloat",
+        "running": true,
+        "pending": false,
+        "progress": 0,
+        "elapsed": 0,
+        "starts": 1
+      },
+      {
+        "id": 270,
+        "kind": "TransformObject",
+        "running": false,
+        "pending": false,
+        "progress": 0,
+        "elapsed": 0,
+        "starts": 0
+      },
+      {
+        "id": 444,
+        "kind": "Enable",
+        "running": false,
+        "pending": false,
+        "progress": 1,
+        "elapsed": 0,
+        "starts": 1
+      }
+    ],
+    "objects": [
+      {
+        "id": 339,
+        "matrix": [
+          2.309699058532715,
+          0,
+          -0.9567090272903442,
+          0,
+          0,
+          2.5,
+          0,
+          0,
+          0.9567090272903442,
+          0,
+          2.309699058532715,
+          0,
+          0,
+          38,
+          0.011985000222921371,
+          1
+        ],
+        "enabled": true
+      }
+    ],
+    "values": [
+      {
+        "id": 874,
+        "value": 0.05193955451250076,
+        "bits": 1028963986
+      }
+    ],
+    "error": null
+  },
+  "observedSnapshots": 344,
+  "transformStart": {
+    "id": 444,
+    "kind": "Enable",
+    "running": true,
+    "paused": false,
+    "progress": 1,
+    "elapsed": 0,
+    "events": [
+      {
+        "id": 43,
+        "kind": "SetFloat",
+        "running": true,
+        "pending": false,
+        "progress": 0.44505080580711365,
+        "elapsed": 0,
+        "starts": 1
+      },
+      {
+        "id": 65,
+        "kind": "Delay",
+        "running": false,
+        "pending": false,
+        "progress": 1,
+        "elapsed": 0.523900032043457,
+        "starts": 1
+      },
+      {
+        "id": 229,
+        "kind": "OnFloat",
+        "running": false,
+        "pending": false,
+        "progress": 1,
+        "elapsed": 0,
+        "starts": 1
+      },
+      {
+        "id": 270,
+        "kind": "TransformObject",
+        "running": true,
+        "pending": false,
+        "progress": 0,
+        "elapsed": 0,
+        "starts": 1
+      },
+      {
+        "id": 444,
+        "kind": "Enable",
+        "running": false,
+        "pending": false,
+        "progress": 1,
+        "elapsed": 0,
+        "starts": 1
+      }
+    ],
+    "objects": [
+      {
+        "id": 339,
+        "matrix": [
+          2.309699058532715,
+          0,
+          -0.9567090272903442,
+          0,
+          0,
+          2.5,
+          0,
+          0,
+          0.9567090272903442,
+          0,
+          2.309699058532715,
+          0,
+          0,
+          38,
+          0.011985000222921371,
+          1
+        ],
+        "enabled": true
+      }
+    ],
+    "values": [
+      {
+        "id": 874,
+        "value": 0.44505080580711365,
+        "bits": 1055120819
+      }
+    ],
+    "error": null
+  },
+  "movingCamera": {
+    "position": [
+      9.945129196621378,
+      43.62309192858855,
+      11.542185403385332
+    ],
+    "forward": [
+      -0.6281087071082564,
+      -0.261711961295107,
+      -0.7327934916262993
+    ],
+    "projection": [
+      2.349146142989556,
+      0,
+      0,
+      0,
+      0,
+      2.1445069205095586,
+      0,
+      0,
+      0,
+      0,
+      -1.0000015625012209,
+      -1,
+      0,
+      0,
+      -0.10000007812506104,
+      0
+    ],
+    "world": [
+      0.7592566023652967,
+      0,
+      -0.6507913734559684,
+      0,
+      -0.17031988674109794,
+      0.9651460248662211,
+      -0.19870653453128095,
+      0,
+      0.6281087071082564,
+      0.261711961295107,
+      0.7327934916262993,
+      0,
+      9.945129196621378,
+      43.62309192858855,
+      11.542185403385332,
+      1
+    ],
+    "viewProjection": [
+      1.7836047189857918,
+      -0.3652521758166887,
+      -0.6281096885288779,
+      -0.6281087071082563,
+      3.2600951701954816e-17,
+      2.0697623296279017,
+      -0.26171237022036603,
+      -0.261711961295107,
+      -1.528804044844964,
+      -0.4261275384528036,
+      -0.7327946366170246,
+      -0.7327934916262993,
+      -0.09243963497126739,
+      -81.73850924353306,
+      26.02138626735615,
+      26.121345530846927
+    ]
+  },
+  "screenshots": [
+    "docs/float-condition-map-preview-before.png",
+    "docs/float-condition-map-preview-moving.png"
+  ],
+  "complete": {
+    "id": 444,
+    "kind": "Enable",
+    "running": true,
+    "paused": false,
+    "progress": 1,
+    "elapsed": 0,
+    "events": [
+      {
+        "id": 43,
+        "kind": "SetFloat",
+        "running": false,
+        "pending": false,
+        "progress": 1,
+        "elapsed": 0,
+        "starts": 1
+      },
+      {
+        "id": 65,
+        "kind": "Delay",
+        "running": false,
+        "pending": false,
+        "progress": 1,
+        "elapsed": 0.523900032043457,
+        "starts": 1
+      },
+      {
+        "id": 229,
+        "kind": "OnFloat",
+        "running": false,
+        "pending": false,
+        "progress": 1,
+        "elapsed": 0,
+        "starts": 1
+      },
+      {
+        "id": 270,
+        "kind": "TransformObject",
+        "running": true,
+        "pending": false,
+        "progress": 1,
+        "elapsed": 0,
+        "starts": 1
+      },
+      {
+        "id": 444,
+        "kind": "Enable",
+        "running": false,
+        "pending": false,
+        "progress": 1,
+        "elapsed": 0,
+        "starts": 1
+      }
+    ],
+    "objects": [
+      {
+        "id": 339,
+        "matrix": [
+          2.309699296951294,
+          0,
+          -0.9567115902900696,
+          0,
+          0,
+          2.5,
+          0,
+          0,
+          0.9567115902900696,
+          0,
+          2.309699296951294,
+          0,
+          0,
+          17.5,
+          0.011985000222921371,
+          1
+        ],
+        "enabled": true
+      }
+    ],
+    "values": [
+      {
+        "id": 874,
+        "value": 1,
+        "bits": 1065353216
+      }
+    ],
+    "error": null
+  }
+}

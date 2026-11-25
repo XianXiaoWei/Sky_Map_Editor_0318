@@ -1,0 +1,659 @@
+0x100244a30: push rbp
+0x100244a31: mov rbp, rsp
+0x100244a34: push r15
+0x100244a36: push r14
+0x100244a38: push r13
+0x100244a3a: push r12
+0x100244a3c: push rbx
+0x100244a3d: push rax
+0x100244a3e: mov r15, rsi
+0x100244a41: mov r14, rdi
+0x100244a44: mov eax, dword ptr [r15]
+0x100244a47: mov dword ptr [r14], eax
+0x100244a4a: cmp r14, r15
+0x100244a4d: je 0x100244cfb
+0x100244a53: xor ebx, ebx
+0x100244a55: nop word ptr cs:[rax + rax]
+0x100244a60: movzx eax, byte ptr [r15 + rbx + 8]
+0x100244a66: mov r13, rax
+0x100244a69: shr r13, 1
+0x100244a6c: and al, 1
+0x100244a6e: cmovne r13, qword ptr [r15 + rbx + 0x10]
+0x100244a74: test al, al
+0x100244a76: lea rax, [r15 + rbx + 9]
+0x100244a7b: cmovne rax, qword ptr [r15 + rbx + 0x18]
+0x100244a81: movzx ecx, byte ptr [r14 + rbx + 8]
+0x100244a87: test cl, 1
+0x100244a8a: jne 0x100244ab0
+0x100244a8c: mov esi, 0x16
+0x100244a91: mov rdx, r13
+0x100244a94: sub rdx, rsi
+0x100244a97: ja 0x100244ac4
+0x100244a99: test cl, 1
+0x100244a9c: jne 0x100244ae0
+0x100244a9e: lea r12, [r14 + rbx + 9]
+0x100244aa3: test r13, r13
+0x100244aa6: jne 0x100244aea
+0x100244aa8: jmp 0x100244afb ; 0x100244afb
+0x100244aaa: nop word ptr [rax + rax]
+0x100244ab0: mov rsi, qword ptr [r14 + rbx + 8]
+0x100244ab5: and rsi, 0xfffffffffffffffe
+0x100244ab9: dec rsi
+0x100244abc: mov rdx, r13
+0x100244abf: sub rdx, rsi
+0x100244ac2: jbe 0x100244a99
+0x100244ac4: lea rdi, [r14 + rbx + 8]
+0x100244ac9: test cl, 1
+0x100244acc: jne 0x100244b20
+0x100244ace: shr rcx, 1
+0x100244ad1: jmp 0x100244b25 ; 0x100244b25
+0x100244ad3: nop word ptr cs:[rax + rax]
+0x100244ae0: mov r12, qword ptr [r14 + rbx + 0x18]
+0x100244ae5: test r13, r13
+0x100244ae8: je 0x100244afb
+0x100244aea: mov rdi, r12
+0x100244aed: mov rsi, rax
+0x100244af0: mov rdx, r13
+0x100244af3: vzeroupper 
+0x100244af6: call 0x100aa28fa ; 0x100aa28fa _memmove
+0x100244afb: mov byte ptr [r12 + r13], 0
+0x100244b00: test byte ptr [r14 + rbx + 8], 1
+0x100244b06: jne 0x100244b40
+0x100244b08: add r13b, r13b
+0x100244b0b: mov byte ptr [r14 + rbx + 8], r13b
+0x100244b10: jmp 0x100244b45 ; 0x100244b45
+0x100244b12: nop word ptr cs:[rax + rax]
+0x100244b20: mov rcx, qword ptr [r14 + rbx + 0x10]
+0x100244b25: xor r8d, r8d
+0x100244b28: mov r9, rcx
+0x100244b2b: push rax
+0x100244b2c: push r13
+0x100244b2e: vzeroupper 
+0x100244b31: call 0x1000198c0 ; 0x1000198c0
+0x100244b36: add rsp, 0x10
+0x100244b3a: jmp 0x100244b45 ; 0x100244b45
+0x100244b3c: nop dword ptr [rax]
+0x100244b40: mov qword ptr [r14 + rbx + 0x10], r13
+0x100244b45: vmovups ymm0, ymmword ptr [r15 + rbx + 0xd8]
+0x100244b4f: vmovups ymmword ptr [r14 + rbx + 0xd8], ymm0
+0x100244b59: vmovups ymm0, ymmword ptr [r15 + rbx + 0xc0]
+0x100244b63: vmovups ymmword ptr [r14 + rbx + 0xc0], ymm0
+0x100244b6d: vmovups ymm0, ymmword ptr [r15 + rbx + 0xa0]
+0x100244b77: vmovups ymmword ptr [r14 + rbx + 0xa0], ymm0
+0x100244b81: vmovups ymm0, ymmword ptr [r15 + rbx + 0x20]
+0x100244b88: vmovups ymm1, ymmword ptr [r15 + rbx + 0x40]
+0x100244b8f: vmovups ymm2, ymmword ptr [r15 + rbx + 0x60]
+0x100244b96: vmovups ymm3, ymmword ptr [r15 + rbx + 0x80]
+0x100244ba0: vmovups ymmword ptr [r14 + rbx + 0x80], ymm3
+0x100244baa: vmovups ymmword ptr [r14 + rbx + 0x60], ymm2
+0x100244bb1: vmovups ymmword ptr [r14 + rbx + 0x40], ymm1
+0x100244bb8: vmovups ymmword ptr [r14 + rbx + 0x20], ymm0
+0x100244bbf: add rbx, 0xf0
+0x100244bc6: cmp rbx, 0x2ee0
+0x100244bcd: jne 0x100244a60
+0x100244bd3: mov eax, dword ptr [r15 + 0x2ee8]
+0x100244bda: mov dword ptr [r14 + 0x2ee8], eax
+0x100244be1: cmp r14, r15
+0x100244be4: je 0x100244d09
+0x100244bea: xor ebx, ebx
+0x100244bec: nop dword ptr [rax]
+0x100244bf0: movzx eax, byte ptr [r15 + rbx + 0x2ef0]
+0x100244bf9: mov r13, rax
+0x100244bfc: shr r13, 1
+0x100244bff: and al, 1
+0x100244c01: cmovne r13, qword ptr [r15 + rbx + 0x2ef8]
+0x100244c0a: test al, al
+0x100244c0c: lea rax, [r15 + rbx + 0x2ef1]
+0x100244c14: cmovne rax, qword ptr [r15 + rbx + 0x2f00]
+0x100244c1d: movzx ecx, byte ptr [r14 + rbx + 0x2ef0]
+0x100244c26: test cl, 1
+0x100244c29: jne 0x100244c50
+0x100244c2b: mov esi, 0x16
+0x100244c30: mov rdx, r13
+0x100244c33: sub rdx, rsi
+0x100244c36: ja 0x100244c67
+0x100244c38: test cl, 1
+0x100244c3b: jne 0x100244c80
+0x100244c3d: lea r12, [r14 + rbx + 0x2ef1]
+0x100244c45: test r13, r13
+0x100244c48: jne 0x100244c8d
+0x100244c4a: jmp 0x100244c9e ; 0x100244c9e
+0x100244c4c: nop dword ptr [rax]
+0x100244c50: mov rsi, qword ptr [r14 + rbx + 0x2ef0]
+0x100244c58: and rsi, 0xfffffffffffffffe
+0x100244c5c: dec rsi
+0x100244c5f: mov rdx, r13
+0x100244c62: sub rdx, rsi
+0x100244c65: jbe 0x100244c38
+0x100244c67: lea rdi, [r14 + rbx + 0x2ef0]
+0x100244c6f: test cl, 1
+0x100244c72: jne 0x100244cc0
+0x100244c74: shr rcx, 1
+0x100244c77: jmp 0x100244cc8 ; 0x100244cc8
+0x100244c79: nop dword ptr [rax]
+0x100244c80: mov r12, qword ptr [r14 + rbx + 0x2f00]
+0x100244c88: test r13, r13
+0x100244c8b: je 0x100244c9e
+0x100244c8d: mov rdi, r12
+0x100244c90: mov rsi, rax
+0x100244c93: mov rdx, r13
+0x100244c96: vzeroupper 
+0x100244c99: call 0x100aa28fa ; 0x100aa28fa _memmove
+0x100244c9e: mov byte ptr [r12 + r13], 0
+0x100244ca3: test byte ptr [r14 + rbx + 0x2ef0], 1
+0x100244cac: jne 0x100244ce0
+0x100244cae: add r13b, r13b
+0x100244cb1: mov byte ptr [r14 + rbx + 0x2ef0], r13b
+0x100244cb9: jmp 0x100244ce8 ; 0x100244ce8
+0x100244cbb: nop dword ptr [rax + rax]
+0x100244cc0: mov rcx, qword ptr [r14 + rbx + 0x2ef8]
+0x100244cc8: xor r8d, r8d
+0x100244ccb: mov r9, rcx
+0x100244cce: push rax
+0x100244ccf: push r13
+0x100244cd1: vzeroupper 
+0x100244cd4: call 0x1000198c0 ; 0x1000198c0
+0x100244cd9: add rsp, 0x10
+0x100244cdd: jmp 0x100244ce8 ; 0x100244ce8
+0x100244cdf: nop 
+0x100244ce0: mov qword ptr [r14 + rbx + 0x2ef8], r13
+0x100244ce8: add rbx, 0x18
+0x100244cec: cmp rbx, 0x180
+0x100244cf3: jne 0x100244bf0
+0x100244cf9: jmp 0x100244d09 ; 0x100244d09
+0x100244cfb: mov eax, dword ptr [r15 + 0x2ee8]
+0x100244d02: mov dword ptr [r14 + 0x2ee8], eax
+0x100244d09: mov eax, dword ptr [r15 + 0x3070]
+0x100244d10: mov dword ptr [r14 + 0x3070], eax
+0x100244d17: lea rdi, [r14 + 0x3078]
+0x100244d1e: lea rsi, [r15 + 0x3078]
+0x100244d25: vzeroupper 
+0x100244d28: call 0x100249280 ; 0x100249280
+0x100244d2d: lea rdi, [r14 + 0x3428]
+0x100244d34: lea rsi, [r15 + 0x3428]
+0x100244d3b: call 0x100249280 ; 0x100249280
+0x100244d40: lea rdi, [r14 + 0x37d8]
+0x100244d47: lea rsi, [r15 + 0x37d8]
+0x100244d4e: call 0x100249280 ; 0x100249280
+0x100244d53: lea rdi, [r14 + 0x3b88]
+0x100244d5a: lea rsi, [r15 + 0x3b88]
+0x100244d61: call 0x100249280 ; 0x100249280
+0x100244d66: lea rdi, [r14 + 0x3f38]
+0x100244d6d: lea rsi, [r15 + 0x3f38]
+0x100244d74: call 0x100249280 ; 0x100249280
+0x100244d79: lea rdi, [r14 + 0x42e8]
+0x100244d80: lea rsi, [r15 + 0x42e8]
+0x100244d87: call 0x100249280 ; 0x100249280
+0x100244d8c: lea rdi, [r14 + 0x4698]
+0x100244d93: lea rsi, [r15 + 0x4698]
+0x100244d9a: call 0x100249280 ; 0x100249280
+0x100244d9f: lea rdi, [r14 + 0x4a48]
+0x100244da6: lea rsi, [r15 + 0x4a48]
+0x100244dad: call 0x100249280 ; 0x100249280
+0x100244db2: lea rdi, [r14 + 0x4df8]
+0x100244db9: lea rsi, [r15 + 0x4df8]
+0x100244dc0: call 0x100249280 ; 0x100249280
+0x100244dc5: lea rdi, [r14 + 0x51a8]
+0x100244dcc: lea rsi, [r15 + 0x51a8]
+0x100244dd3: call 0x100249280 ; 0x100249280
+0x100244dd8: lea rdi, [r14 + 0x5558]
+0x100244ddf: lea rsi, [r15 + 0x5558]
+0x100244de6: call 0x100249280 ; 0x100249280
+0x100244deb: lea rdi, [r14 + 0x5908]
+0x100244df2: lea rsi, [r15 + 0x5908]
+0x100244df9: call 0x100249280 ; 0x100249280
+0x100244dfe: lea rdi, [r14 + 0x5cb8]
+0x100244e05: lea rsi, [r15 + 0x5cb8]
+0x100244e0c: call 0x100249280 ; 0x100249280
+0x100244e11: lea rdi, [r14 + 0x6068]
+0x100244e18: lea rsi, [r15 + 0x6068]
+0x100244e1f: call 0x100249280 ; 0x100249280
+0x100244e24: lea rdi, [r14 + 0x6418]
+0x100244e2b: lea rsi, [r15 + 0x6418]
+0x100244e32: call 0x100249280 ; 0x100249280
+0x100244e37: lea rdi, [r14 + 0x67c8]
+0x100244e3e: lea rsi, [r15 + 0x67c8]
+0x100244e45: call 0x100249280 ; 0x100249280
+0x100244e4a: lea rdi, [r14 + 0x6b78]
+0x100244e51: lea rsi, [r15 + 0x6b78]
+0x100244e58: call 0x100249280 ; 0x100249280
+0x100244e5d: lea rdi, [r14 + 0x6f28]
+0x100244e64: lea rsi, [r15 + 0x6f28]
+0x100244e6b: call 0x100249280 ; 0x100249280
+0x100244e70: lea rdi, [r14 + 0x72d8]
+0x100244e77: lea rsi, [r15 + 0x72d8]
+0x100244e7e: call 0x100249280 ; 0x100249280
+0x100244e83: lea rdi, [r14 + 0x7688]
+0x100244e8a: lea rsi, [r15 + 0x7688]
+0x100244e91: call 0x100249280 ; 0x100249280
+0x100244e96: lea rdi, [r14 + 0x7a38]
+0x100244e9d: lea rsi, [r15 + 0x7a38]
+0x100244ea4: call 0x100249280 ; 0x100249280
+0x100244ea9: lea rdi, [r14 + 0x7de8]
+0x100244eb0: lea rsi, [r15 + 0x7de8]
+0x100244eb7: call 0x100249280 ; 0x100249280
+0x100244ebc: lea rdi, [r14 + 0x8198]
+0x100244ec3: lea rsi, [r15 + 0x8198]
+0x100244eca: call 0x100249280 ; 0x100249280
+0x100244ecf: lea rdi, [r14 + 0x8548]
+0x100244ed6: lea rsi, [r15 + 0x8548]
+0x100244edd: call 0x100249280 ; 0x100249280
+0x100244ee2: lea rdi, [r14 + 0x88f8]
+0x100244ee9: lea rsi, [r15 + 0x88f8]
+0x100244ef0: call 0x100249280 ; 0x100249280
+0x100244ef5: lea rdi, [r14 + 0x8ca8]
+0x100244efc: lea rsi, [r15 + 0x8ca8]
+0x100244f03: call 0x100249280 ; 0x100249280
+0x100244f08: lea rdi, [r14 + 0x9058]
+0x100244f0f: lea rsi, [r15 + 0x9058]
+0x100244f16: call 0x100249280 ; 0x100249280
+0x100244f1b: lea rdi, [r14 + 0x9408]
+0x100244f22: lea rsi, [r15 + 0x9408]
+0x100244f29: call 0x100249280 ; 0x100249280
+0x100244f2e: lea rdi, [r14 + 0x97b8]
+0x100244f35: lea rsi, [r15 + 0x97b8]
+0x100244f3c: call 0x100249280 ; 0x100249280
+0x100244f41: lea rdi, [r14 + 0x9b68]
+0x100244f48: lea rsi, [r15 + 0x9b68]
+0x100244f4f: call 0x100249280 ; 0x100249280
+0x100244f54: lea rdi, [r14 + 0x9f18]
+0x100244f5b: lea rsi, [r15 + 0x9f18]
+0x100244f62: call 0x100249280 ; 0x100249280
+0x100244f67: lea rdi, [r14 + 0xa2c8]
+0x100244f6e: lea rsi, [r15 + 0xa2c8]
+0x100244f75: call 0x100249280 ; 0x100249280
+0x100244f7a: lea rdi, [r14 + 0xa678]
+0x100244f81: lea rsi, [r15 + 0xa678]
+0x100244f88: call 0x100249280 ; 0x100249280
+0x100244f8d: lea rdi, [r14 + 0xaa28]
+0x100244f94: lea rsi, [r15 + 0xaa28]
+0x100244f9b: call 0x100249280 ; 0x100249280
+0x100244fa0: lea rdi, [r14 + 0xadd8]
+0x100244fa7: lea rsi, [r15 + 0xadd8]
+0x100244fae: call 0x100249280 ; 0x100249280
+0x100244fb3: lea rdi, [r14 + 0xb188]
+0x100244fba: lea rsi, [r15 + 0xb188]
+0x100244fc1: call 0x100249280 ; 0x100249280
+0x100244fc6: lea rdi, [r14 + 0xb538]
+0x100244fcd: lea rsi, [r15 + 0xb538]
+0x100244fd4: call 0x100249280 ; 0x100249280
+0x100244fd9: lea rdi, [r14 + 0xb8e8]
+0x100244fe0: lea rsi, [r15 + 0xb8e8]
+0x100244fe7: call 0x100249280 ; 0x100249280
+0x100244fec: lea rdi, [r14 + 0xbc98]
+0x100244ff3: lea rsi, [r15 + 0xbc98]
+0x100244ffa: call 0x100249280 ; 0x100249280
+0x100244fff: lea rdi, [r14 + 0xc048]
+0x100245006: lea rsi, [r15 + 0xc048]
+0x10024500d: call 0x100249280 ; 0x100249280
+0x100245012: mov eax, dword ptr [r15 + 0xc3f8]
+0x100245019: mov dword ptr [r14 + 0xc3f8], eax
+0x100245020: lea rdi, [r14 + 0xc400]
+0x100245027: lea rsi, [r15 + 0xc400]
+0x10024502e: call 0x100249420 ; 0x100249420
+0x100245033: lea rdi, [r14 + 0xc730]
+0x10024503a: lea rsi, [r15 + 0xc730]
+0x100245041: call 0x100249420 ; 0x100249420
+0x100245046: lea rdi, [r14 + 0xca60]
+0x10024504d: lea rsi, [r15 + 0xca60]
+0x100245054: call 0x100249420 ; 0x100249420
+0x100245059: lea rdi, [r14 + 0xcd90]
+0x100245060: lea rsi, [r15 + 0xcd90]
+0x100245067: call 0x100249420 ; 0x100249420
+0x10024506c: lea rdi, [r14 + 0xd0c0]
+0x100245073: lea rsi, [r15 + 0xd0c0]
+0x10024507a: call 0x100249420 ; 0x100249420
+0x10024507f: lea rdi, [r14 + 0xd3f0]
+0x100245086: lea rsi, [r15 + 0xd3f0]
+0x10024508d: call 0x100249420 ; 0x100249420
+0x100245092: lea rdi, [r14 + 0xd720]
+0x100245099: lea rsi, [r15 + 0xd720]
+0x1002450a0: call 0x100249420 ; 0x100249420
+0x1002450a5: lea rdi, [r14 + 0xda50]
+0x1002450ac: lea rsi, [r15 + 0xda50]
+0x1002450b3: call 0x100249420 ; 0x100249420
+0x1002450b8: lea rdi, [r14 + 0xdd80]
+0x1002450bf: lea rsi, [r15 + 0xdd80]
+0x1002450c6: call 0x100249420 ; 0x100249420
+0x1002450cb: lea rdi, [r14 + 0xe0b0]
+0x1002450d2: lea rsi, [r15 + 0xe0b0]
+0x1002450d9: call 0x100249420 ; 0x100249420
+0x1002450de: lea rdi, [r14 + 0xe3e0]
+0x1002450e5: lea rsi, [r15 + 0xe3e0]
+0x1002450ec: call 0x100249420 ; 0x100249420
+0x1002450f1: lea rdi, [r14 + 0xe710]
+0x1002450f8: lea rsi, [r15 + 0xe710]
+0x1002450ff: call 0x100249420 ; 0x100249420
+0x100245104: lea rdi, [r14 + 0xea40]
+0x10024510b: lea rsi, [r15 + 0xea40]
+0x100245112: call 0x100249420 ; 0x100249420
+0x100245117: lea rdi, [r14 + 0xed70]
+0x10024511e: lea rsi, [r15 + 0xed70]
+0x100245125: call 0x100249420 ; 0x100249420
+0x10024512a: lea rdi, [r14 + 0xf0a0]
+0x100245131: lea rsi, [r15 + 0xf0a0]
+0x100245138: call 0x100249420 ; 0x100249420
+0x10024513d: lea rdi, [r14 + 0xf3d0]
+0x100245144: lea rsi, [r15 + 0xf3d0]
+0x10024514b: call 0x100249420 ; 0x100249420
+0x100245150: lea rdi, [r14 + 0xf700]
+0x100245157: lea rsi, [r15 + 0xf700]
+0x10024515e: call 0x100249420 ; 0x100249420
+0x100245163: lea rdi, [r14 + 0xfa30]
+0x10024516a: lea rsi, [r15 + 0xfa30]
+0x100245171: call 0x100249420 ; 0x100249420
+0x100245176: lea rdi, [r14 + 0xfd60]
+0x10024517d: lea rsi, [r15 + 0xfd60]
+0x100245184: call 0x100249420 ; 0x100249420
+0x100245189: lea rdi, [r14 + 0x10090]
+0x100245190: lea rsi, [r15 + 0x10090]
+0x100245197: call 0x100249420 ; 0x100249420
+0x10024519c: lea rdi, [r14 + 0x103c0]
+0x1002451a3: lea rsi, [r15 + 0x103c0]
+0x1002451aa: call 0x100249420 ; 0x100249420
+0x1002451af: lea rdi, [r14 + 0x106f0]
+0x1002451b6: lea rsi, [r15 + 0x106f0]
+0x1002451bd: call 0x100249420 ; 0x100249420
+0x1002451c2: lea rdi, [r14 + 0x10a20]
+0x1002451c9: lea rsi, [r15 + 0x10a20]
+0x1002451d0: call 0x100249420 ; 0x100249420
+0x1002451d5: lea rdi, [r14 + 0x10d50]
+0x1002451dc: lea rsi, [r15 + 0x10d50]
+0x1002451e3: call 0x100249420 ; 0x100249420
+0x1002451e8: lea rdi, [r14 + 0x11080]
+0x1002451ef: lea rsi, [r15 + 0x11080]
+0x1002451f6: call 0x100249420 ; 0x100249420
+0x1002451fb: lea rdi, [r14 + 0x113b0]
+0x100245202: lea rsi, [r15 + 0x113b0]
+0x100245209: call 0x100249420 ; 0x100249420
+0x10024520e: lea rdi, [r14 + 0x116e0]
+0x100245215: lea rsi, [r15 + 0x116e0]
+0x10024521c: call 0x100249420 ; 0x100249420
+0x100245221: lea rdi, [r14 + 0x11a10]
+0x100245228: lea rsi, [r15 + 0x11a10]
+0x10024522f: call 0x100249420 ; 0x100249420
+0x100245234: lea rdi, [r14 + 0x11d40]
+0x10024523b: lea rsi, [r15 + 0x11d40]
+0x100245242: call 0x100249420 ; 0x100249420
+0x100245247: lea rdi, [r14 + 0x12070]
+0x10024524e: lea rsi, [r15 + 0x12070]
+0x100245255: call 0x100249420 ; 0x100249420
+0x10024525a: lea rdi, [r14 + 0x123a0]
+0x100245261: lea rsi, [r15 + 0x123a0]
+0x100245268: call 0x100249420 ; 0x100249420
+0x10024526d: lea rdi, [r14 + 0x126d0]
+0x100245274: lea rsi, [r15 + 0x126d0]
+0x10024527b: call 0x100249420 ; 0x100249420
+0x100245280: lea rdi, [r14 + 0x12a00]
+0x100245287: lea rsi, [r15 + 0x12a00]
+0x10024528e: call 0x100249420 ; 0x100249420
+0x100245293: lea rdi, [r14 + 0x12d30]
+0x10024529a: lea rsi, [r15 + 0x12d30]
+0x1002452a1: call 0x100249420 ; 0x100249420
+0x1002452a6: lea rdi, [r14 + 0x13060]
+0x1002452ad: lea rsi, [r15 + 0x13060]
+0x1002452b4: call 0x100249420 ; 0x100249420
+0x1002452b9: lea rdi, [r14 + 0x13390]
+0x1002452c0: lea rsi, [r15 + 0x13390]
+0x1002452c7: call 0x100249420 ; 0x100249420
+0x1002452cc: lea rdi, [r14 + 0x136c0]
+0x1002452d3: lea rsi, [r15 + 0x136c0]
+0x1002452da: call 0x100249420 ; 0x100249420
+0x1002452df: lea rdi, [r14 + 0x139f0]
+0x1002452e6: lea rsi, [r15 + 0x139f0]
+0x1002452ed: call 0x100249420 ; 0x100249420
+0x1002452f2: lea rdi, [r14 + 0x13d20]
+0x1002452f9: lea rsi, [r15 + 0x13d20]
+0x100245300: call 0x100249420 ; 0x100249420
+0x100245305: lea rdi, [r14 + 0x14050]
+0x10024530c: lea rsi, [r15 + 0x14050]
+0x100245313: call 0x100249420 ; 0x100249420
+0x100245318: mov eax, dword ptr [r15 + 0x14380]
+0x10024531f: mov dword ptr [r14 + 0x14380], eax
+0x100245326: cmp r14, r15
+0x100245329: je 0x100245763
+0x10024532f: xor ebx, ebx
+0x100245331: nop word ptr cs:[rax + rax]
+0x100245340: vmovups ymm0, ymmword ptr [r15 + rbx + 0x14388]
+0x10024534a: vmovups ymm1, ymmword ptr [r15 + rbx + 0x143a8]
+0x100245354: vmovups ymm2, ymmword ptr [r15 + rbx + 0x143c8]
+0x10024535e: vmovups ymm3, ymmword ptr [r15 + rbx + 0x143e8]
+0x100245368: vmovups ymmword ptr [r14 + rbx + 0x143e8], ymm3
+0x100245372: vmovups ymmword ptr [r14 + rbx + 0x143c8], ymm2
+0x10024537c: vmovups ymmword ptr [r14 + rbx + 0x143a8], ymm1
+0x100245386: vmovups ymmword ptr [r14 + rbx + 0x14388], ymm0
+0x100245390: movzx eax, byte ptr [r15 + rbx + 0x14408]
+0x100245399: mov r13, rax
+0x10024539c: shr r13, 1
+0x10024539f: and al, 1
+0x1002453a1: cmovne r13, qword ptr [r15 + rbx + 0x14410]
+0x1002453aa: test al, al
+0x1002453ac: lea rax, [r15 + rbx + 0x14409]
+0x1002453b4: cmovne rax, qword ptr [r15 + rbx + 0x14418]
+0x1002453bd: movzx ecx, byte ptr [r14 + rbx + 0x14408]
+0x1002453c6: test cl, 1
+0x1002453c9: jne 0x1002453f0
+0x1002453cb: mov esi, 0x16
+0x1002453d0: mov rdx, r13
+0x1002453d3: sub rdx, rsi
+0x1002453d6: ja 0x100245407
+0x1002453d8: test cl, 1
+0x1002453db: jne 0x100245420
+0x1002453dd: lea r12, [r14 + rbx + 0x14409]
+0x1002453e5: test r13, r13
+0x1002453e8: jne 0x10024542d
+0x1002453ea: jmp 0x10024543e ; 0x10024543e
+0x1002453ec: nop dword ptr [rax]
+0x1002453f0: mov rsi, qword ptr [r14 + rbx + 0x14408]
+0x1002453f8: and rsi, 0xfffffffffffffffe
+0x1002453fc: dec rsi
+0x1002453ff: mov rdx, r13
+0x100245402: sub rdx, rsi
+0x100245405: jbe 0x1002453d8
+0x100245407: lea rdi, [r14 + rbx + 0x14408]
+0x10024540f: test cl, 1
+0x100245412: jne 0x100245460
+0x100245414: shr rcx, 1
+0x100245417: jmp 0x100245468 ; 0x100245468
+0x100245419: nop dword ptr [rax]
+0x100245420: mov r12, qword ptr [r14 + rbx + 0x14418]
+0x100245428: test r13, r13
+0x10024542b: je 0x10024543e
+0x10024542d: mov rdi, r12
+0x100245430: mov rsi, rax
+0x100245433: mov rdx, r13
+0x100245436: vzeroupper 
+0x100245439: call 0x100aa28fa ; 0x100aa28fa _memmove
+0x10024543e: mov byte ptr [r12 + r13], 0
+0x100245443: test byte ptr [r14 + rbx + 0x14408], 1
+0x10024544c: jne 0x100245480
+0x10024544e: add r13b, r13b
+0x100245451: mov byte ptr [r14 + rbx + 0x14408], r13b
+0x100245459: jmp 0x100245488 ; 0x100245488
+0x10024545b: nop dword ptr [rax + rax]
+0x100245460: mov rcx, qword ptr [r14 + rbx + 0x14410]
+0x100245468: xor r8d, r8d
+0x10024546b: mov r9, rcx
+0x10024546e: push rax
+0x10024546f: push r13
+0x100245471: vzeroupper 
+0x100245474: call 0x1000198c0 ; 0x1000198c0
+0x100245479: add rsp, 0x10
+0x10024547d: jmp 0x100245488 ; 0x100245488
+0x10024547f: nop 
+0x100245480: mov qword ptr [r14 + rbx + 0x14410], r13
+0x100245488: mov eax, dword ptr [r15 + rbx + 0x14420]
+0x100245490: mov dword ptr [r14 + rbx + 0x14420], eax
+0x100245498: add rbx, 0xa0
+0x10024549f: cmp rbx, 0x1400
+0x1002454a6: jne 0x100245340
+0x1002454ac: lea rdi, [r14 + 0x15788]
+0x1002454b3: lea rsi, [r15 + 0x15788]
+0x1002454ba: mov edx, 0x1108
+0x1002454bf: vzeroupper 
+0x1002454c2: call 0x100aa28f4 ; 0x100aa28f4 _memcpy
+0x1002454c7: cmp r14, r15
+0x1002454ca: je 0x10024577b
+0x1002454d0: xor ebx, ebx
+0x1002454d2: nop word ptr cs:[rax + rax]
+0x1002454e0: movzx eax, byte ptr [r15 + rbx + 0x16890]
+0x1002454e9: mov r13, rax
+0x1002454ec: shr r13, 1
+0x1002454ef: and al, 1
+0x1002454f1: cmovne r13, qword ptr [r15 + rbx + 0x16898]
+0x1002454fa: test al, al
+0x1002454fc: lea rax, [r15 + rbx + 0x16891]
+0x100245504: cmovne rax, qword ptr [r15 + rbx + 0x168a0]
+0x10024550d: movzx ecx, byte ptr [r14 + rbx + 0x16890]
+0x100245516: test cl, 1
+0x100245519: jne 0x100245540
+0x10024551b: mov esi, 0x16
+0x100245520: mov rdx, r13
+0x100245523: sub rdx, rsi
+0x100245526: ja 0x100245557
+0x100245528: test cl, 1
+0x10024552b: jne 0x100245570
+0x10024552d: lea r12, [r14 + rbx + 0x16891]
+0x100245535: test r13, r13
+0x100245538: jne 0x10024557d
+0x10024553a: jmp 0x10024558b ; 0x10024558b
+0x10024553c: nop dword ptr [rax]
+0x100245540: mov rsi, qword ptr [r14 + rbx + 0x16890]
+0x100245548: and rsi, 0xfffffffffffffffe
+0x10024554c: dec rsi
+0x10024554f: mov rdx, r13
+0x100245552: sub rdx, rsi
+0x100245555: jbe 0x100245528
+0x100245557: lea rdi, [r14 + rbx + 0x16890]
+0x10024555f: test cl, 1
+0x100245562: jne 0x1002455b0
+0x100245564: shr rcx, 1
+0x100245567: jmp 0x1002455b8 ; 0x1002455b8
+0x100245569: nop dword ptr [rax]
+0x100245570: mov r12, qword ptr [r14 + rbx + 0x168a0]
+0x100245578: test r13, r13
+0x10024557b: je 0x10024558b
+0x10024557d: mov rdi, r12
+0x100245580: mov rsi, rax
+0x100245583: mov rdx, r13
+0x100245586: call 0x100aa28fa ; 0x100aa28fa _memmove
+0x10024558b: mov byte ptr [r12 + r13], 0
+0x100245590: test byte ptr [r14 + rbx + 0x16890], 1
+0x100245599: jne 0x1002455d0
+0x10024559b: add r13b, r13b
+0x10024559e: mov byte ptr [r14 + rbx + 0x16890], r13b
+0x1002455a6: jmp 0x1002455d8 ; 0x1002455d8
+0x1002455a8: nop dword ptr [rax + rax]
+0x1002455b0: mov rcx, qword ptr [r14 + rbx + 0x16898]
+0x1002455b8: xor r8d, r8d
+0x1002455bb: mov r9, rcx
+0x1002455be: push rax
+0x1002455bf: push r13
+0x1002455c1: call 0x1000198c0 ; 0x1000198c0
+0x1002455c6: add rsp, 0x10
+0x1002455ca: jmp 0x1002455d8 ; 0x1002455d8
+0x1002455cc: nop dword ptr [rax]
+0x1002455d0: mov qword ptr [r14 + rbx + 0x16898], r13
+0x1002455d8: mov eax, dword ptr [r15 + rbx + 0x168b8]
+0x1002455e0: mov dword ptr [r14 + rbx + 0x168b8], eax
+0x1002455e8: vmovups xmm0, xmmword ptr [r15 + rbx + 0x168a8]
+0x1002455f2: vmovups xmmword ptr [r14 + rbx + 0x168a8], xmm0
+0x1002455fc: add rbx, 0x30
+0x100245600: cmp rbx, 0xc00
+0x100245607: jne 0x1002454e0
+0x10024560d: mov eax, dword ptr [r15 + 0x17490]
+0x100245614: mov dword ptr [r14 + 0x17490], eax
+0x10024561b: cmp r14, r15
+0x10024561e: je 0x100245789
+0x100245624: xor ebx, ebx
+0x100245626: nop word ptr cs:[rax + rax]
+0x100245630: movzx eax, byte ptr [r15 + rbx + 0x17498]
+0x100245639: mov r13, rax
+0x10024563c: shr r13, 1
+0x10024563f: and al, 1
+0x100245641: cmovne r13, qword ptr [r15 + rbx + 0x174a0]
+0x10024564a: test al, al
+0x10024564c: lea rax, [r15 + rbx + 0x17499]
+0x100245654: cmovne rax, qword ptr [r15 + rbx + 0x174a8]
+0x10024565d: movzx ecx, byte ptr [r14 + rbx + 0x17498]
+0x100245666: test cl, 1
+0x100245669: jne 0x100245690
+0x10024566b: mov esi, 0x16
+0x100245670: mov rdx, r13
+0x100245673: sub rdx, rsi
+0x100245676: ja 0x1002456a7
+0x100245678: test cl, 1
+0x10024567b: jne 0x1002456c0
+0x10024567d: lea r12, [r14 + rbx + 0x17499]
+0x100245685: test r13, r13
+0x100245688: jne 0x1002456cd
+0x10024568a: jmp 0x1002456de ; 0x1002456de
+0x10024568c: nop dword ptr [rax]
+0x100245690: mov rsi, qword ptr [r14 + rbx + 0x17498]
+0x100245698: and rsi, 0xfffffffffffffffe
+0x10024569c: dec rsi
+0x10024569f: mov rdx, r13
+0x1002456a2: sub rdx, rsi
+0x1002456a5: jbe 0x100245678
+0x1002456a7: lea rdi, [r14 + rbx + 0x17498]
+0x1002456af: test cl, 1
+0x1002456b2: jne 0x100245700
+0x1002456b4: shr rcx, 1
+0x1002456b7: jmp 0x100245708 ; 0x100245708
+0x1002456b9: nop dword ptr [rax]
+0x1002456c0: mov r12, qword ptr [r14 + rbx + 0x174a8]
+0x1002456c8: test r13, r13
+0x1002456cb: je 0x1002456de
+0x1002456cd: mov rdi, r12
+0x1002456d0: mov rsi, rax
+0x1002456d3: mov rdx, r13
+0x1002456d6: vzeroupper 
+0x1002456d9: call 0x100aa28fa ; 0x100aa28fa _memmove
+0x1002456de: mov byte ptr [r12 + r13], 0
+0x1002456e3: test byte ptr [r14 + rbx + 0x17498], 1
+0x1002456ec: jne 0x100245720
+0x1002456ee: add r13b, r13b
+0x1002456f1: mov byte ptr [r14 + rbx + 0x17498], r13b
+0x1002456f9: jmp 0x100245728 ; 0x100245728
+0x1002456fb: nop dword ptr [rax + rax]
+0x100245700: mov rcx, qword ptr [r14 + rbx + 0x174a0]
+0x100245708: xor r8d, r8d
+0x10024570b: mov r9, rcx
+0x10024570e: push rax
+0x10024570f: push r13
+0x100245711: vzeroupper 
+0x100245714: call 0x1000198c0 ; 0x1000198c0
+0x100245719: add rsp, 0x10
+0x10024571d: jmp 0x100245728 ; 0x100245728
+0x10024571f: nop 
+0x100245720: mov qword ptr [r14 + rbx + 0x174a0], r13
+0x100245728: vmovups ymm0, ymmword ptr [r15 + rbx + 0x174b0]
+0x100245732: vmovups ymm1, ymmword ptr [r15 + rbx + 0x174bc]
+0x10024573c: vmovups ymmword ptr [r14 + rbx + 0x174bc], ymm1
+0x100245746: vmovups ymmword ptr [r14 + rbx + 0x174b0], ymm0
+0x100245750: add rbx, 0x48
+0x100245754: cmp rbx, 0x480
+0x10024575b: jne 0x100245630
+0x100245761: jmp 0x100245789 ; 0x100245789
+0x100245763: lea rdi, [r14 + 0x15788]
+0x10024576a: lea rsi, [r15 + 0x15788]
+0x100245771: mov edx, 0x1108
+0x100245776: call 0x100aa28f4 ; 0x100aa28f4 _memcpy
+0x10024577b: mov eax, dword ptr [r15 + 0x17490]
+0x100245782: mov dword ptr [r14 + 0x17490], eax
+0x100245789: lea rdi, [r14 + 0x17918]
+0x100245790: add r15, 0x17918
+0x100245797: mov edx, 0x1f1c
+0x10024579c: mov rsi, r15
+0x10024579f: vzeroupper 
+0x1002457a2: call 0x100aa28f4 ; 0x100aa28f4 _memcpy
+0x1002457a7: mov rax, r14
+0x1002457aa: add rsp, 8
+0x1002457ae: pop rbx
+0x1002457af: pop r12
+0x1002457b1: pop r13
+0x1002457b3: pop r14
+0x1002457b5: pop r15
+0x1002457b7: pop rbp
+0x1002457b8: ret 
+0x1002457b9: nop dword ptr [rax]

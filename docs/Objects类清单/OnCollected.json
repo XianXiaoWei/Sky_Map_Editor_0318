@@ -1,0 +1,633 @@
+{
+  "className": "OnCollected",
+  "functionGroup": "收集物、蜡烛与解锁",
+  "functionRole": "收集与使用状态条件事件",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "OnCollected 的原默认值、继承初始化及 5 个序列化字段变体；原注册字段 4 项。"
+    },
+    {
+      "name": "收集与使用状态条件事件",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Collectible（7 条引用）、Clump（8 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "OnCollected",
+    "category": "收集物、蜡烛与解锁",
+    "functionGroupId": "collectibles",
+    "functionRole": "收集与使用状态条件事件",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "OnCollected 的原默认值、继承初始化及 5 个序列化字段变体；原注册字段 4 项。"
+      },
+      {
+        "name": "收集与使用状态条件事件",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Collectible（7 条引用）、Clump（8 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Clump",
+        "references": 8
+      },
+      {
+        "className": "Collectible",
+        "references": 7
+      }
+    ],
+    "rttiWorkingGroup": "交互、事件与任务",
+    "role": "对象实例类型",
+    "instances": 7,
+    "nestedInstances": 0,
+    "referenceFields": 15,
+    "declaredLevels": 4,
+    "levels": [
+      {
+        "level": "CandleSpace",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Dawn",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "HubReveal",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SkyHub2",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "collectible",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "mustAlsoBeenUsed",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "onCollected",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "onNotCollected",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100c98910",
+    "nativeRegisteredFields": [
+      {
+        "name": "collectible",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP11CollectibleERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x1002356e0",
+        "propertyAddress": "0x100c97710"
+      },
+      {
+        "name": "onCollected",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 64,
+        "registrationFunction": "0x1002356e0",
+        "propertyAddress": "0x100c97760"
+      },
+      {
+        "name": "onNotCollected",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 72,
+        "registrationFunction": "0x1002356e0",
+        "propertyAddress": "0x100c977b0"
+      },
+      {
+        "name": "mustAlsoBeenUsed",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 80,
+        "registrationFunction": "0x1002356e0",
+        "propertyAddress": "0x100c97800"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 4 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "CandleSpace:n328",
+      "level": "CandleSpace",
+      "nodeId": 328,
+      "name": "BstNode_2529558696",
+      "className": "OnCollected",
+      "classIndex": 63,
+      "sourceOffset": 71365,
+      "sourceLength": 37,
+      "sourceSha256": "8a4dbb0617f04bfecbc2f9a5dba747c513f01167ef608137c29fbbeeed225ea7",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n328/p3",
+          "fieldName": "collectible",
+          "target": "CandleSpace:n277",
+          "targetNodeId": 277,
+          "offset": 71394
+        },
+        {
+          "fieldId": "n328/p4",
+          "fieldName": "onCollected",
+          "target": "CandleSpace:n521",
+          "targetNodeId": 521,
+          "offset": 71398
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2427",
+      "level": "Dawn",
+      "nodeId": 2427,
+      "name": "BstNode_2504654960",
+      "className": "OnCollected",
+      "classIndex": 116,
+      "sourceOffset": 402914,
+      "sourceLength": 37,
+      "sourceSha256": "f349fbdb962ab4518a82cf03b188c921f5a5cdbc3ef80ca36edcae8c7648a05a",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2427/p3",
+          "fieldName": "collectible",
+          "target": "Dawn:n1746",
+          "targetNodeId": 1746,
+          "offset": 402943
+        },
+        {
+          "fieldId": "n2427/p4",
+          "fieldName": "onCollected",
+          "target": "Dawn:n3658",
+          "targetNodeId": 3658,
+          "offset": 402947
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n403",
+      "level": "HubReveal",
+      "nodeId": 403,
+      "name": "BstNode_2529558563",
+      "className": "OnCollected",
+      "classIndex": 67,
+      "sourceOffset": 99079,
+      "sourceLength": 37,
+      "sourceSha256": "cce38d1d59d261178b060d678f2da85fb9e0099833580d95c170ba274256d256",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n403/p3",
+          "fieldName": "collectible",
+          "target": "HubReveal:n40",
+          "targetNodeId": 40,
+          "offset": 99108
+        },
+        {
+          "fieldId": "n403/p4",
+          "fieldName": "onCollected",
+          "target": "HubReveal:n1579",
+          "targetNodeId": 1579,
+          "offset": 99112
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n1295",
+      "level": "HubReveal",
+      "nodeId": 1295,
+      "name": "BstNode_2446917737",
+      "className": "OnCollected",
+      "classIndex": 67,
+      "sourceOffset": 249255,
+      "sourceLength": 37,
+      "sourceSha256": "994c665312e87a488fcf78ba3a05357304e29bb04114efa801b969ff7ded161d",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1295/p1",
+          "fieldName": "onNotCollected",
+          "target": "HubReveal:n1756",
+          "targetNodeId": 1756,
+          "offset": 249279
+        },
+        {
+          "fieldId": "n1295/p3",
+          "fieldName": "collectible",
+          "target": "HubReveal:n663",
+          "targetNodeId": 663,
+          "offset": 249284
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n1474",
+      "level": "HubReveal",
+      "nodeId": 1474,
+      "name": "BstNode_2446917771",
+      "className": "OnCollected",
+      "classIndex": 67,
+      "sourceOffset": 277329,
+      "sourceLength": 37,
+      "sourceSha256": "b3a5a37718e811301a77a0b3c45a5a9d2ce0bf80146f5159ab94d5c3c2869f3d",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1474/p3",
+          "fieldName": "collectible",
+          "target": "HubReveal:n663",
+          "targetNodeId": 663,
+          "offset": 277358
+        },
+        {
+          "fieldId": "n1474/p4",
+          "fieldName": "onCollected",
+          "target": "HubReveal:n1815",
+          "targetNodeId": 1815,
+          "offset": 277362
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n107",
+      "level": "SkyHub2",
+      "nodeId": 107,
+      "name": "BstNode_2529558661",
+      "className": "OnCollected",
+      "classIndex": 28,
+      "sourceOffset": 53264,
+      "sourceLength": 37,
+      "sourceSha256": "929f61c3ef8578310447bdbb8ee0f57d17460b2f010cd80c662d3ca99de3c26c",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n107/p1",
+          "fieldName": "onNotCollected",
+          "target": "SkyHub2:n1511",
+          "targetNodeId": 1511,
+          "offset": 53288
+        },
+        {
+          "fieldId": "n107/p3",
+          "fieldName": "collectible",
+          "target": "SkyHub2:n1015",
+          "targetNodeId": 1015,
+          "offset": 53293
+        },
+        {
+          "fieldId": "n107/p4",
+          "fieldName": "onCollected",
+          "target": "SkyHub2:n878",
+          "targetNodeId": 878,
+          "offset": 53297
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1220",
+      "level": "SkyHub2",
+      "nodeId": 1220,
+      "name": "BstNode_2529558669",
+      "className": "OnCollected",
+      "classIndex": 28,
+      "sourceOffset": 254414,
+      "sourceLength": 37,
+      "sourceSha256": "f0c71c83fec1d822b0668ac5d0467ae45637657b2f749a591fa6869b813b9f33",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1220/p3",
+          "fieldName": "collectible",
+          "target": "SkyHub2:n1015",
+          "targetNodeId": 1015,
+          "offset": 254443
+        },
+        {
+          "fieldId": "n1220/p4",
+          "fieldName": "onCollected",
+          "target": "SkyHub2:n774",
+          "targetNodeId": 774,
+          "offset": 254447
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "CandleSpace",
+      "path": "Levels/CandleSpace/Objects.level.bin",
+      "sha256": "db7140d2dd5ee9cd2fcdcbb61a898b9facf1683ff21fec83fcbef81b885f56db",
+      "bytes": 92607,
+      "nodes": 564,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/CandleSpace.json",
+      "markdown": "Objects对象清单/CandleSpace.md"
+    },
+    {
+      "level": "Dawn",
+      "path": "Levels/Dawn/Objects.level.bin",
+      "sha256": "16e26aafc7f9d120a548bf5d8bec04fbc18146bc8db531ef75144889b1ff197a",
+      "bytes": 504637,
+      "nodes": 3798,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dawn.json",
+      "markdown": "Objects对象清单/Dawn.md"
+    },
+    {
+      "level": "HubReveal",
+      "path": "Levels/HubReveal/Objects.level.bin",
+      "sha256": "4b32f12bbe4b246cde9ca1e4ba0982000ff108359865bb4340aba640e609861b",
+      "bytes": 289438,
+      "nodes": 1829,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/HubReveal.json",
+      "markdown": "Objects对象清单/HubReveal.md"
+    },
+    {
+      "level": "SkyHub2",
+      "path": "Levels/SkyHub2/Objects.level.bin",
+      "sha256": "8b467f9b349d9d4ce0d038528c96e44dff30063149bf5bbf90232a56bb9dd36f",
+      "bytes": 475656,
+      "nodes": 2886,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SkyHub2.json",
+      "markdown": "Objects对象清单/SkyHub2.md"
+    }
+  ]
+}

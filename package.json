@@ -1,0 +1,41 @@
+{
+  "name": "sky-map-editor",
+  "version": "0.3.8",
+  "private": true,
+  "description": "Sky binary map editor for Windows",
+  "main": "dist/main.cjs",
+  "scripts": {
+    "build:native": "python3 tools/build-vulkan.py --windows",
+    "build": "node tools/build.mjs",
+    "test": "tsx --test tests/*.test.ts",
+    "audit": "tsx tools/audit.ts",
+    "audit:shaders": "tsx tools/shader-audit.ts",
+    "audit:vulkan": "tsx tools/vulkan-shader-audit.ts",
+    "precompile:viewport": "tsx tools/precompile-viewport-shaders.ts",
+    "verify:viewport:shaders": "tsx tools/verify-viewport-shader-bundle.ts",
+    "audit:creatures": "tsx tools/basic-creature-audit.ts",
+    "verify:creatures": "node tools/verify-basic-creatures.mjs",
+    "package:windows:creatures": "node tools/package-basic-creatures-windows.mjs",
+    "verify:windows:creatures": "node tools/verify-basic-creature-release.mjs",
+    "build:desktop": "node tools/build.mjs",
+    "build:native:desktop": "python3 tools/build-vulkan.py",
+    "package:windows:preview": "node tools/package-preview-windows.mjs",
+    "build:windows": "node tools/build.mjs --windows",
+    "package:windows:source": "python3 tools/package-windows-source.py"
+  },
+  "dependencies": {
+    "three": "0.180.0",
+    "three-mesh-bvh": "0.9.18"
+  },
+  "devDependencies": {
+    "@electron/asar": "3.4.1",
+    "@electron/get": "^5.0.0",
+    "@types/node": "22.18.6",
+    "@types/three": "0.180.0",
+    "electron": "^45.3.2",
+    "esbuild": "0.25.10",
+    "playwright": "^1.58.2",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3"
+  }
+}

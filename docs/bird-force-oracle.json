@@ -1,0 +1,67 @@
+{
+  "passed": true,
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "start": "0x1001a2260",
+  "end": "0x1001a2770",
+  "forces": {
+    "BirdV2Ai.TargetDistance": {
+      "start": "0x1001a0450",
+      "end": "0x1001a06a0",
+      "codeSha256": "bac59f4890b334456843bdc584da36d3410be26f2b72da465f80a831bff57a0e",
+      "assembly": "evidence/birdv2ai-targetdistance.asm"
+    },
+    "BirdV2Ai.SteerTarget": {
+      "start": "0x1001a0d20",
+      "end": "0x1001a0e70",
+      "codeSha256": "60f6e64dc5152ca9eb8f187b2d10419c9b621c101712050d2906bf17706bf218",
+      "assembly": "evidence/birdv2ai-steertarget.asm"
+    },
+    "BirdV2Ai.SteerGuide": {
+      "start": "0x1001a0e70",
+      "end": "0x1001a10d0",
+      "codeSha256": "1285f947ea3ceddc19a3fc372245dabdd0d2d186c913f40206e3dd8065d9c729",
+      "assembly": "evidence/birdv2ai-steerguide.asm"
+    },
+    "Steering.Wander": {
+      "start": "0x10062e8f0",
+      "end": "0x10062e970",
+      "codeSha256": "bafd141346e6f2be13e9232919812bcf39406407cc91a089fd57fa2a87be14d3",
+      "assembly": "evidence/steering-wander.asm"
+    },
+    "Motion.Wander": {
+      "start": "0x10062d010",
+      "end": "0x10062d220",
+      "codeSha256": "ce96c46b0337b27c52e242774fbe3c8b6b5d5684481bad4abf042c48b9f1350e",
+      "assembly": "evidence/motion-wander.asm"
+    },
+    "Steering.Flee": {
+      "start": "0x10062f540",
+      "end": "0x10062f660",
+      "codeSha256": "79636082576e1cff22e5f9718fe8f14bbb77575770163847b21e09254b0a49c8",
+      "assembly": "evidence/steering-flee.asm"
+    }
+  },
+  "nativeArithmeticProbes": 16,
+  "motion": {
+    "start": "0x1001a34c0",
+    "end": "0x1001a3980",
+    "codeSha256": "abccec0298363690869504c72f877a3bf82609586f7bab8869a73dbf9d556d7d"
+  },
+  "flightIntegration": {
+    "start": "0x1001a2f30",
+    "end": "0x1001a34c0",
+    "codeSha256": "c75c5c2b8e22d34b0c5d90296e683d9f736402f61e2a9117952cf29a6cac880f"
+  },
+  "acceleration": {
+    "start": "0x1001a0060",
+    "end": "0x1001a0450",
+    "codeSha256": "ad5a07968b6f49f1265c8b7448408be122157c8e8b3eae432c4c0754d008b42b"
+  },
+  "scratchScope": "The 112-byte private TypeScript motion/output scratch models original stack storage and is cleared before exporting caller arena bytes. Every captured motion byte supplied to downstream services is recorded and compared; original object memory, steering state and service trace bytes are not excluded.",
+  "cases": 117,
+  "comparedCases": 117,
+  "comparedBytes": 47610100,
+  "serviceCalls": 10021,
+  "scope": "Whole ordinary bird/manta target-distance, target-force and guide-force callers, raw/Wander accumulation and Flee force. Original Seek and shared Flocking execute in the same chain. World raycast/neighborhood, metadata, Avatar state and owners remain explicit services. Raw target/guide forces, landing probe selection and original shared Flocking are composed with acceleration, Steering.Begin/End, flight, motion and Model.SetTransform in BirdV2.Update. Rail choice/follow, object-follow, direction interpolation/bank, world collision and real resource owners remain explicit boundaries. Complete caller arena and ordered services compared, including consecutive frames and live callback changes. Original acosf/sincosf/powf inputs and outputs are recorded and replayed as explicit math services; no JavaScript/libm equivalence claim.",
+  "failures": []
+}

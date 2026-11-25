@@ -1,0 +1,113 @@
+0x1000ddc10: push rbp
+0x1000ddc11: mov rbp, rsp
+0x1000ddc14: push r15
+0x1000ddc16: push r14
+0x1000ddc18: push r12
+0x1000ddc1a: push rbx
+0x1000ddc1b: sub rsp, 0x50
+0x1000ddc1f: mov r15, rsi
+0x1000ddc22: mov rbx, rdi
+0x1000ddc25: mov rax, qword ptr [rip + 0xb2fcac] ; 0x100c0d8d8
+0x1000ddc2c: mov rax, qword ptr [rax]
+0x1000ddc2f: mov qword ptr [rbp - 0x28], rax
+0x1000ddc33: cmp dword ptr [rbx], 1
+0x1000ddc36: jne 0x1000ddc51
+0x1000ddc38: movzx eax, byte ptr [r15]
+0x1000ddc3c: test al, 1
+0x1000ddc3e: jne 0x1000ddc96
+0x1000ddc40: mov rcx, rax
+0x1000ddc43: shr rcx, 1
+0x1000ddc46: cmp rcx, 0x40
+0x1000ddc4a: jb 0x1000ddca4
+0x1000ddc4c: jmp 0x1000ddd60 ; 0x1000ddd60
+0x1000ddc51: lea r12, [rbp - 0x70]
+0x1000ddc55: mov edx, 0x40
+0x1000ddc5a: mov rdi, rbx
+0x1000ddc5d: mov rsi, r12
+0x1000ddc60: call 0x10076a0a0 ; 0x10076a0a0
+0x1000ddc65: mov rdi, r12
+0x1000ddc68: call 0x100aa2c7e ; 0x100aa2c7e _strlen
+0x1000ddc6d: mov r14, rax
+0x1000ddc70: movzx ecx, byte ptr [r15]
+0x1000ddc74: test cl, 1
+0x1000ddc77: jne 0x1000ddcad
+0x1000ddc79: mov esi, 0x16
+0x1000ddc7e: mov rdx, r14
+0x1000ddc81: sub rdx, rsi
+0x1000ddc84: ja 0x1000ddcbf
+0x1000ddc86: test cl, 1
+0x1000ddc89: jne 0x1000ddcf3
+0x1000ddc8b: lea rbx, [r15 + 1]
+0x1000ddc8f: test r14, r14
+0x1000ddc92: jne 0x1000ddcfc
+0x1000ddc94: jmp 0x1000ddd0b ; 0x1000ddd0b
+0x1000ddc96: mov rcx, qword ptr [r15 + 8]
+0x1000ddc9a: cmp rcx, 0x40
+0x1000ddc9e: jae 0x1000ddd60
+0x1000ddca4: test al, 1
+0x1000ddca6: jne 0x1000ddcc9
+0x1000ddca8: inc r15
+0x1000ddcab: jmp 0x1000ddccd ; 0x1000ddccd
+0x1000ddcad: mov rsi, qword ptr [r15]
+0x1000ddcb0: and rsi, 0xfffffffffffffffe
+0x1000ddcb4: dec rsi
+0x1000ddcb7: mov rdx, r14
+0x1000ddcba: sub rdx, rsi
+0x1000ddcbd: jbe 0x1000ddc86
+0x1000ddcbf: test cl, 1
+0x1000ddcc2: jne 0x1000ddd1e
+0x1000ddcc4: shr rcx, 1
+0x1000ddcc7: jmp 0x1000ddd22 ; 0x1000ddd22
+0x1000ddcc9: mov r15, qword ptr [r15 + 0x10]
+0x1000ddccd: lea r14, [rbp - 0x70]
+0x1000ddcd1: mov edx, 0x40
+0x1000ddcd6: mov rdi, r14
+0x1000ddcd9: mov rsi, r15
+0x1000ddcdc: call 0x100aa2c90 ; 0x100aa2c90 _strncpy
+0x1000ddce1: mov edx, 0x40
+0x1000ddce6: mov rdi, rbx
+0x1000ddce9: mov rsi, r14
+0x1000ddcec: call 0x10076a0a0 ; 0x10076a0a0
+0x1000ddcf1: jmp 0x1000ddd3e ; 0x1000ddd3e
+0x1000ddcf3: mov rbx, qword ptr [r15 + 0x10]
+0x1000ddcf7: test r14, r14
+0x1000ddcfa: je 0x1000ddd0b
+0x1000ddcfc: lea rsi, [rbp - 0x70]
+0x1000ddd00: mov rdi, rbx
+0x1000ddd03: mov rdx, r14
+0x1000ddd06: call 0x100aa28fa ; 0x100aa28fa _memmove
+0x1000ddd0b: mov byte ptr [rbx + r14], 0
+0x1000ddd10: test byte ptr [r15], 1
+0x1000ddd14: jne 0x1000ddd3a
+0x1000ddd16: add r14b, r14b
+0x1000ddd19: mov byte ptr [r15], r14b
+0x1000ddd1c: jmp 0x1000ddd3e ; 0x1000ddd3e
+0x1000ddd1e: mov rcx, qword ptr [r15 + 8]
+0x1000ddd22: xor r8d, r8d
+0x1000ddd25: mov rdi, r15
+0x1000ddd28: mov r9, rcx
+0x1000ddd2b: push r12
+0x1000ddd2d: push r14
+0x1000ddd2f: call 0x1000198c0 ; 0x1000198c0
+0x1000ddd34: add rsp, 0x10
+0x1000ddd38: jmp 0x1000ddd3e ; 0x1000ddd3e
+0x1000ddd3a: mov qword ptr [r15 + 8], r14
+0x1000ddd3e: mov rax, qword ptr [rip + 0xb2fb93] ; 0x100c0d8d8
+0x1000ddd45: mov rax, qword ptr [rax]
+0x1000ddd48: cmp rax, qword ptr [rbp - 0x28]
+0x1000ddd4c: jne 0x1000ddd5b
+0x1000ddd4e: add rsp, 0x50
+0x1000ddd52: pop rbx
+0x1000ddd53: pop r12
+0x1000ddd55: pop r14
+0x1000ddd57: pop r15
+0x1000ddd59: pop rbp
+0x1000ddd5a: ret 
+0x1000ddd5b: call 0x100aa251c ; 0x100aa251c ___stack_chk_fail
+0x1000ddd60: lea rdi, [rip + 0xa883df] ; 0x100b66146 str->size() < kMaxLen
+0x1000ddd67: lea rsi, [rip + 0xa883a3] ; 0x100b66111 AnimationList.cpp
+0x1000ddd6e: mov edx, 0x149
+0x1000ddd73: mov ecx, 3
+0x1000ddd78: call 0x1007e5f70 ; 0x1007e5f70
+0x1000ddd7d: ud2 
+0x1000ddd7f: nop 

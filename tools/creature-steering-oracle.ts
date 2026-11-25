@@ -1,0 +1,16 @@
+import fs from 'node:fs';import os from 'node:os';import path from 'node:path';import crypto from 'node:crypto';import {gzipSync} from 'node:zlib';import {spawnSync} from 'node:child_process';
+import {steeringCases,prepareSteering,evaluateSteering,STEERING_ARENA_BYTES,STEERING_TRACE_BYTES} from './creature-steering-cases';
+const exe=process.argv[2]??'/storage/emulated/0/Download/地图编辑器/sky-map-editor/reference/Sky.app/Contents/MacOS/Sky',sha=(b:Uint8Array)=>crypto.createHash('sha256').update(b).digest('hex'),executableSha256='3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20';
+if(sha(fs.readFileSync(exe))!==executableSha256)throw new Error('Original executable SHA differs');
+const cases=steeringCases(),temp=fs.mkdtempSync(path.join(os.tmpdir(),'sky-creature-steering-')),rows:unknown[]=[],failures:unknown[]=[];let comparedBytes=0,serviceCalls=0;
+try{
+ const runner=path.join(temp,'oracle'),build=spawnSync('x86_64-linux-gnu-gcc',['-O2','-mavx','-mno-red-zone','-Wall','-Wextra','tools/native-creature-steering-oracle.c','-o',runner]);if(build.status!==0)throw new Error(build.stderr.toString());
+ const header=Buffer.alloc(4);header.writeUInt32LE(cases.length);const input=Buffer.concat([header,...cases.flatMap(c=>{const mode=Buffer.alloc(4);mode.writeUInt32LE(c.mode);return [mode,prepareSteering(c).b];})]);
+ const run=spawnSync('qemu-x86_64',['-L','/usr/x86_64-linux-gnu','-cpu','max',runner,exe],{input,timeout:60000,maxBuffer:20e6});if(run.status!==0){const completed=Math.floor((run.stdout.length-4)/(12+STEERING_TRACE_BYTES+STEERING_ARENA_BYTES));throw new Error(`Native steering case ${completed} ${JSON.stringify(cases[completed])}: ${run.status}: ${run.signal}: ${run.stderr}`);}let at=4;
+ for(const c of cases){const length=12+STEERING_TRACE_BYTES+STEERING_ARENA_BYTES,native=run.stdout.subarray(at,at+length);at+=length;comparedBytes+=length;serviceCalls+=native.readUInt32LE(8)/6;const actual=evaluateSteering(c);
+  if(!actual.equals(native)){const differences=[];for(let i=0;i<length&&differences.length<20;i++)if(actual[i]!==native[i])differences.push({at:i,actual:actual[i],native:native[i]});failures.push({input:c,differences});}rows.push({input:c,nativeSha256:sha(native)});
+ }
+ if(at!==run.stdout.length)throw new Error('Native steering stream differs');
+}finally{fs.rmSync(temp,{recursive:true,force:true});}
+const report={passed:!failures.length,executableSha256,wholeBodies:3,cases:cases.length,comparedBytes,serviceCalls,scope:'Original SteeringBehaviors.Begin/Seek/End used by CrabAi.Update. Full arena, float32 force/arrival/clamping/NaN/W lanes, ordered collision calls, aliases and assertion writes compared. Collision avoidance/world queries remain explicit services; complete Crab AI, motion integration, gameplay and automatic viewport animation remain pending.',failures};
+fs.writeFileSync('docs/creature-steering-oracle.json',JSON.stringify(report,null,2)+'\n');if(report.passed)fs.writeFileSync('tests/fixtures/creature-steering-native.json.gz',gzipSync(JSON.stringify({executableSha256,cases:rows},(_key,v)=>typeof v==='number'&&!Number.isFinite(v)?String(v):v),{level:9}));console.log(JSON.stringify(report));if(!report.passed)process.exitCode=1;

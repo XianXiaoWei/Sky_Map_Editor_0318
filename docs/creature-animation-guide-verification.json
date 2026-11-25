@@ -1,0 +1,119 @@
+{
+  "passed": true,
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "nativeCases": 482,
+  "nativeComparedBytes": 312238156,
+  "nativeServiceCalls": 1882,
+  "reports": [
+    "docs/bird-guide-oracle.json",
+    "docs/bird-flock-oracle.json",
+    "docs/bird-natural-animation-oracle.json",
+    "docs/creature-steering-oracle.json"
+  ],
+  "projectRegression": {
+    "command": "npm test",
+    "passed": true,
+    "tests": 578,
+    "log": "/root/sky-research/creature-animation-guide-tests.log",
+    "scope": "Full project after guide/animation preview integration, before final frame-idle, geometry-capability/bounds fixes and independent flock/takeoff/steering kernels."
+  },
+  "finalFocusedRegression": {
+    "passed": true,
+    "tests": 22,
+    "log": "/root/sky-research/creature-animation-guide-final-tests.log",
+    "scope": "Latest steering, takeoff, flock manager/unload, model animation/pose, old-native capability fallback, cached bounds/order, viewport recovery, original visibility, geometry packet and nature event owner tests."
+  },
+  "typecheck": {
+    "command": "npx tsc --noEmit",
+    "passed": true,
+    "log": "/root/sky-research/creature-animation-guide-typecheck.log"
+  },
+  "classProgress": {
+    "command": "SKY_DATA=/root/sky-research/original-runtime-corpus npx tsx tools/objects-class-progress.ts",
+    "passed": true,
+    "levels": 33,
+    "totalNodes": 49824,
+    "nodeClasses": 280,
+    "declaredClasses": 283,
+    "nestedOnlyClasses": 0,
+    "declarationOnlyClasses": 3,
+    "references": 60016,
+    "brokenReferences": 0,
+    "coreSubchainVerifiedClasses": 47,
+    "completeRuntimeClasses": 0,
+    "completedCheckpoints": 877,
+    "totalCheckpoints": 2830,
+    "meanClassCheckpointPercent": 30.99,
+    "histogram": {
+      "20": 19,
+      "30": 217,
+      "40": 47
+    },
+    "log": "/root/sky-research/creature-animation-guide-class-progress.log"
+  },
+  "desktopBuild": {
+    "command": "npm run build:desktop",
+    "passed": true,
+    "log": "/root/sky-research/creature-animation-guide-desktop-build.log",
+    "artifactsSha256": {
+      "dist/main.cjs": "3e89b106b7aba08d03ba9972224ce3ffed192b8e6ed953678c42fbc1ff2048af",
+      "dist/app.js": "9a66f606b6d832454f17154bff93210f2600285a2d3fddfbe0f07b61f717bf37",
+      "dist/native/sky-vulkan": "4611c412915b2197ef0cbc793297b3e3d274bc78bf9d6b6c96f65fdf992c7a65"
+    },
+    "probe": {
+      "engine": "Sky Native Vulkan",
+      "backend": "Vulkan",
+      "device": "llvmpipe (LLVM 19.1.7, 128 bits)",
+      "apiVersion": 4210993,
+      "deviceType": 4,
+      "nativeSurface": false,
+      "dynamicGeometry": true,
+      "shaderFloat16": true,
+      "gpuCanvasPacking": false,
+      "gpuExposureGather": false,
+      "samplerAnisotropyPolicy": "llvmpipe-trilinear",
+      "maxSamplerAnisotropy": 16.0
+    }
+  },
+  "windowsNativeBuild": {
+    "command": "python3 tools/build-vulkan.py --windows",
+    "passed": true,
+    "log": "/root/sky-research/creature-animation-guide-windows-build.log",
+    "sha256": "396d1c5662db262ef25c560468321bccb999924e06b87d1ea7ab54621fc46242",
+    "scope": "Cross-compile only; Windows hardware and updated ZIP not tested or packaged."
+  },
+  "androidWebBuild": {
+    "command": "npm run build",
+    "passed": true,
+    "log": "/root/sky-research/creature-animation-guide-android-web-build.log",
+    "artifactsSha256": {
+      "android/app/src/main/assets/runtime/server.cjs": "fb404a214833de4c78557aff121f78df07908d219bce522f44ca26a5eab7fd44",
+      "android/app/src/main/assets/runtime/web/app.js": "592a1fd93a7512e724307a11e42e273f12464fd3046089b5b92918003532e3c8"
+    },
+    "scope": "Web/service bundle updated; native NDK build and APK not produced. Older native geometry fallback verified in regression."
+  },
+  "desktopSmoke": {
+    "passed": true,
+    "report": "docs/model-animation-preview-smoke.json",
+    "geometryUploads": 5,
+    "sourceUnchanged": true,
+    "scope": "Actual saved DayHubCave flower UI to Vulkan dynamic geometry, pause/stop restoration and switch to WorldEmpty during playback."
+  },
+  "sourceSha256": {
+    "src/core/bird-guide-runtime.ts": "b7efe6de9139c4faa9d0159af83c0b10476107b27b7bab08d4372cc23367c6d3",
+    "src/core/bird-flock-runtime.ts": "b9f695dca7e0c5c20361db5a990b69ff5e8cb71d3d50f337ce7956f608a1cb91",
+    "src/core/bird-natural-animation-runtime.ts": "0a9b7f022dcf851589b304723b2ef58444f8016bf18cd4f685682d43a8672d9c",
+    "src/core/creature-steering-runtime.ts": "6255571c2b5790b22ec68403a1e42e7e62ef075664c726ed6bdcb720f813edcb",
+    "src/core/resource-model-animation-preview.ts": "66a169e101d3fa39fd29804cde1fd0ee0166d3e2907fc46cdb052e750fcfaeda",
+    "src/renderer/model-animation-preview.ts": "7ffb723dbb30eef6bf84fe52db8169402b08c2c7681d1ec9dc307f2a8377fee3",
+    "src/core/viewport-draw-visibility.ts": "23be49d731b0912e56a5009c2c32f8d0f36429f21f6d933281fa779fa0b65382",
+    "src/core/viewport-material-order.ts": "7e5dc9537661c55d247e4d7f62abfd11fe99c999944fa8ba0791736ce4932ab5",
+    "src/main/vulkan-baked.ts": "91bd966190c9cf5cbb4c8f7e6922e38e904d35a3191babb1be29c0ba4b029545",
+    "src/main/vulkan.ts": "893cc7d53586308f32c979aafedd73a0e1be27e9ce9f8bffa647c7cd121c0d9b",
+    "src/renderer/vulkan-viewport.ts": "e2edfd4e81ccd0e547ac57068c0ccbdebe66be019f51aa1ebb7bd1d2b15c99b1",
+    "native/vulkan-renderer.cpp": "6f830f19533cffd850d73076b9bc802ab62f36cc6397addaeefeb4cac235873f",
+    "tests/model-pose-updates.test.ts": "d4cc99121b38ddcc13702612fecda8ae0870e4b47ec6d059566cca3bd4705b1d",
+    "tools/objects-class-progress-spec.json": "cf5d7170777d6de4281dc3477823f934c53b07af152d8a9fdc16bac5d4c69154"
+  },
+  "scope": "Named original subchains, explicit animation preview and documented graphics adapter fixes. Autonomous BirdV2/BirdFlock/Crab/DarkCreature AI, real Model/animation/world ownership, full skinning layers/root motion/effects and complete creature classes remain open. No final class acceptance or automatic species movement claim."
+}

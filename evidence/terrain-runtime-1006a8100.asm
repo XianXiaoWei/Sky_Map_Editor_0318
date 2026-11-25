@@ -1,0 +1,53 @@
+0x1006a8100: push rbp
+0x1006a8101: mov rbp, rsp
+0x1006a8104: push r15
+0x1006a8106: push r14
+0x1006a8108: push r13
+0x1006a810a: push r12
+0x1006a810c: push rbx
+0x1006a810d: sub rsp, 0x18
+0x1006a8111: mov r14d, edx
+0x1006a8114: mov rbx, rsi
+0x1006a8117: mov r15, rdi
+0x1006a811a: lea rsi, [r15 + 0x470]
+0x1006a8121: lea rdi, [rbp - 0x30]
+0x1006a8125: call 0x1007e9360 ; 0x1007e9360
+0x1006a812a: mov r12, qword ptr [rbx + 0x1a8]
+0x1006a8131: mov rcx, qword ptr [rbx + 0x1b0]
+0x1006a8138: mov r13d, r14d
+0x1006a813b: movzx eax, word ptr [r12 + r13*2]
+0x1006a8140: cmp eax, 2
+0x1006a8143: ja 0x1006a8190
+0x1006a8145: mov qword ptr [rbp - 0x38], rcx
+0x1006a8149: mov r14, qword ptr [rbx + 0x1c8]
+0x1006a8150: imul rbx, r13, 0x3e0
+0x1006a8157: lea rdi, [r15 + 0x4b8]
+0x1006a815e: lea rsi, [r14 + rbx + 0x20]
+0x1006a8163: call 0x10077e4b0 ; 0x10077e4b0
+0x1006a8168: add r15, 0x4f0
+0x1006a816f: lea rsi, [r14 + rbx + 0x30]
+0x1006a8174: mov rdi, r15
+0x1006a8177: call 0x10077e4b0 ; 0x10077e4b0
+0x1006a817c: add r14, rbx
+0x1006a817f: mov esi, 0x3e0
+0x1006a8184: mov rdi, r14
+0x1006a8187: call 0x100aa24aa ; 0x100aa24aa ___bzero
+0x1006a818c: mov rcx, qword ptr [rbp - 0x38]
+0x1006a8190: mov word ptr [r12 + r13*2], 0xffff
+0x1006a8197: mov word ptr [rcx + r13*2], 0xfffe
+0x1006a819e: lea rdi, [rbp - 0x30]
+0x1006a81a2: call 0x1007e9480 ; 0x1007e9480
+0x1006a81a7: add rsp, 0x18
+0x1006a81ab: pop rbx
+0x1006a81ac: pop r12
+0x1006a81ae: pop r13
+0x1006a81b0: pop r14
+0x1006a81b2: pop r15
+0x1006a81b4: pop rbp
+0x1006a81b5: ret 
+0x1006a81b6: mov rbx, rax
+0x1006a81b9: lea rdi, [rbp - 0x30]
+0x1006a81bd: call 0x1007e9480 ; 0x1007e9480
+0x1006a81c2: mov rdi, rbx
+0x1006a81c5: call 0x100aa2192 ; 0x100aa2192 __Unwind_Resume
+0x1006a81ca: nop word ptr [rax + rax]

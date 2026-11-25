@@ -1,0 +1,128 @@
+{
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "functions": {
+    "Vertex.SetStream": "0x1007f5430",
+    "Vertex.SetNameAndCount": "0x1007f53c0",
+    "Model.constructor": "0x100467330",
+    "LevelMesh.Create": "0x100401040",
+    "Model.submit": "0x10046b780"
+  },
+  "formatByteSizes": [
+    4,
+    8,
+    12,
+    16,
+    4,
+    8,
+    12,
+    16,
+    4,
+    8,
+    12,
+    16,
+    2,
+    4,
+    6,
+    8,
+    2,
+    4,
+    6,
+    8,
+    1,
+    2,
+    3,
+    4,
+    1,
+    2,
+    3,
+    4,
+    2,
+    4,
+    6,
+    8,
+    36,
+    48,
+    64
+  ],
+  "constants": {
+    "0x100aace00": [
+      3,
+      28,
+      1,
+      2
+    ],
+    "0x100aace10": [
+      32,
+      32,
+      5,
+      6
+    ],
+    "0x100ac3160": [
+      28,
+      28,
+      28,
+      13
+    ]
+  },
+  "modelStreams": [
+    {
+      "buffer": 0,
+      "formats": [
+        3,
+        28
+      ],
+      "semantics": [
+        1,
+        2
+      ],
+      "stride": 16,
+      "source": "Mesh LOD +0x60; float3 position, UNORM color"
+    },
+    {
+      "buffer": 2,
+      "formats": [
+        24
+      ],
+      "semantics": [
+        3
+      ],
+      "stride": 4,
+      "source": "Mesh LOD +0x68; SNORM normal"
+    },
+    {
+      "buffer": 3,
+      "formats": [
+        32,
+        32
+      ],
+      "semantics": [
+        5,
+        6
+      ],
+      "stride": 16,
+      "source": "Mesh LOD +0x70; half4 UV0/1 pairs"
+    },
+    {
+      "buffer": 4,
+      "formats": [
+        28,
+        28,
+        28
+      ],
+      "semantics": [
+        13,
+        14,
+        15
+      ],
+      "stride": 12,
+      "source": "compatible Model bake, three UNORM4 lighting vectors"
+    }
+  ],
+  "visibility": {
+    "constructorVisible": "0x1004675ae writes Model +0x227 = 1, enabled +0x228 = 1",
+    "render": "LevelMesh +0x105 to ModelOptions +0xd / Model +0x32d at 0x10040133c",
+    "visibleInWorld": "LevelMesh +0x108 is distinct; not object enable. Complete update consumer remains pending",
+    "savedEnabled": "0x10040177f..0x1004017ae calls Model.SetEnabled from LevelMesh +0xd0"
+  },
+  "scope": "Native setter normal body and assertions can execute independently; RenderBuffer callback is an explicit service. Constructor stream callsites/constants are disassembly evidence, not complete constructor execution. Original allocator/GPU/visibility/animation/lifecycle remain open."
+}

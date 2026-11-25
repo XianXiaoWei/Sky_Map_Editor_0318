@@ -1,0 +1,45 @@
+{
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "functions": {
+    "FlowerBarn.CreateFlowerPatch": "0x10034f110",
+    "FlowerBarn.OnLevelUnload": "0x10034f050",
+    "CandleBarn.CreateCandleObject": "0x1001ea9e0",
+    "CandleObject.SetTransform": "0x1001e8c10",
+    "CandleObject.GetTransform": "0x1001e8c40",
+    "CandleObject.SetEnabled": "0x1001e8cb0",
+    "CandleObject.GetEnabled": "0x1001e8cd0",
+    "Ocean.CreateWater": "0x1004d5eb0"
+  },
+  "owners": {
+    "FlowerPatch": {
+      "owner": "FlowerBarn",
+      "Initialize": "0x10034e2b0",
+      "Update": "0x10034e530",
+      "OnLevelLoad": "0x10034f030",
+      "OnLevelUnload": "0x10034f050",
+      "BuildScene": "0x10034f090",
+      "RenderFlush": "0x10034f0e0",
+      "Create": "0x10034f110"
+    },
+    "CandleObject": {
+      "owner": "CandleBarn",
+      "Initialize": "0x1001e8d00",
+      "Create": "0x1001ea9e0",
+      "Update": "0x1001e9ba0",
+      "OnLevelLoad": "0x1001e9320",
+      "OnLevelUnload": "0x1001e99c0",
+      "RenderFlush": "0x1001ea220"
+    },
+    "Water": {
+      "owner": "Ocean",
+      "Initialize": "0x1004d4270",
+      "OnLevelLoad": "0x1004d4910",
+      "OnLevelUnload": "0x1004d50e0",
+      "Update": "0x1004d5190",
+      "BuildScene": "0x1004d5e50",
+      "RenderFlush": "0x1004d5e80",
+      "Create": "0x1004d5eb0"
+    }
+  },
+  "scope": "Checked native Barn allocation kernels and Candle matrix/enabled accessors; TGCL metadata/defaults, resources, full owner construction and actual effect drawing remain separate."
+}

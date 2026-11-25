@@ -1,0 +1,18 @@
+0x100522390: push rbp
+0x100522391: mov rbp, rsp
+0x100522394: push r14
+0x100522396: push rbx
+0x100522397: mov r14, rdi
+0x10052239a: mov ebx, 0x10
+0x10052239f: nop 
+0x1005223a0: lea rsi, [r14 + rbx]
+0x1005223a4: mov rdi, r14
+0x1005223a7: call 0x1005227a0 ; 0x1005227a0
+0x1005223ac: add rbx, 0x90
+0x1005223b3: cmp rbx, 0x4810
+0x1005223ba: jne 0x1005223a0
+0x1005223bc: pop rbx
+0x1005223bd: pop r14
+0x1005223bf: pop rbp
+0x1005223c0: ret 
+0x1005223c1: nop word ptr cs:[rax + rax]

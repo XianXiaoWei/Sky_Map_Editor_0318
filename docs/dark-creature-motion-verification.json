@@ -1,0 +1,118 @@
+{
+  "passed": true,
+  "updatedUtc": "2026-11-25T03:53:55.736250+00:00",
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "nativeReport": "docs/dark-creature-motion-oracle.json",
+  "nativeCases": 587,
+  "nativeCaseBreakdown": {
+    "partialUpdateWithObservedHelpers": 238,
+    "wholeAppearanceWithActualSeekAndSwitchRail": 23,
+    "wholeRawFollowRail": 88,
+    "partialUpdateWithUnmodifiedProductionComposition": 238
+  },
+  "nativeComparedBytes": 80561452,
+  "nativeServiceCalls": 5656,
+  "nativeCodeHashesBoundariesAndAssemblyVerified": true,
+  "nativeFunctionCount": 3,
+  "wholeOuterUpdateVerified": false,
+  "partialOuterUpdate": {
+    "start": "0x10026ddb0",
+    "stop": "0x10026e7da",
+    "wholeFunctionEnd": "0x10026ffc0",
+    "instructions": 439,
+    "stopAfter": "Model.SetTransform and model callback-owner writes"
+  },
+  "nativeScope": "Exact original DarkCreature.Update motion phase 0x10026ddb0..0x10026e7da, stopping after Model.SetTransform and callback-owner writes. This is a partial outer Update, not the complete function. Complete original appearance/return-to-patrol helper and Motion.FollowRail are separately compared and composed. Caller-owned palette and private force scratch, original libm and world/model/audio services remain explicit; chase/attack consumers and the outer Update remainder are pending. Complete caller arena and ordered services compare state dispatch, movement/orientation, appearance audio, real raw Seek/FollowRail and return-to-patrol composition, thresholds, target validity, callback owner rereads, explicit private W scratch and consecutive frames. Native sinf/expf/fmodf inputs and outputs are recorded/replayed explicitly; no JS/macOS libm equivalence claim.",
+  "baselineRegression": {
+    "passed": true,
+    "tests": 673,
+    "command": "./node_modules/.bin/tsx --test tests/*.test.ts",
+    "log": "/root/sky-research/crab-codec-final-tests.log"
+  },
+  "focusedRegression": {
+    "passed": true,
+    "tests": 8,
+    "command": "./node_modules/.bin/tsx --test tests/dark-creature-motion-runtime.test.ts tests/dark-creature-detect-runtime.test.ts tests/dark-creature-state-runtime.test.ts tests/dark-creature-rail-runtime.test.ts",
+    "log": "/root/sky-research/dark-creature-motion-focused.log"
+  },
+  "projectRegression": {
+    "passed": true,
+    "tests": 677,
+    "command": "./node_modules/.bin/tsx --test tests/*.test.ts",
+    "log": "/root/sky-research/dark-creature-motion-final-tests.log"
+  },
+  "typecheck": {
+    "passed": true,
+    "command": "./node_modules/.bin/tsc --noEmit",
+    "log": "/root/sky-research/dark-creature-motion-final-types.log"
+  },
+  "windowsBuild": {
+    "passed": true,
+    "command": "node tools/build.mjs --windows",
+    "log": "/root/sky-research/dark-creature-motion-windows-build.log",
+    "windowsMachineRuntimeTested": false,
+    "machine": "AMD64",
+    "binarySha256": "7caa4210316a810913eff4d2e74807301c39422586ebfb17e72d15afcd5d686f"
+  },
+  "windowsSourcePlan": {
+    "passed": true,
+    "command": "python3 tools/package-windows-source.py --plan",
+    "report": "docs/windows-source-plan.json",
+    "log": "/root/sky-research/dark-creature-motion-windows-source-plan.log",
+    "includesNewRuntimeAndNativeFixtures": true,
+    "androidHostIncluded": false,
+    "buildOutputsIncluded": false,
+    "nodeModulesIncluded": false,
+    "cacheIncluded": false
+  },
+  "inventory": {
+    "passed": true,
+    "maps": 33,
+    "declaredClasses": 283,
+    "objects": 49824,
+    "references": 60016,
+    "brokenReferences": 0,
+    "completeRuntimeClasses": 0,
+    "allMapsRoundTripUnchanged": true,
+    "coreSubchainVerifiedClasses": 53,
+    "log": "/root/sky-research/dark-creature-motion-class-progress.log"
+  },
+  "categoryCensus": {
+    "passed": true,
+    "command": "python3 tools/objects-category-census.py",
+    "log": "/root/sky-research/dark-creature-motion-category-census.log",
+    "nativeCreatureFamilies": 52,
+    "mapDeclaredCreatureFamilies": 18,
+    "completeCreatureClasses": 0
+  },
+  "completeCreatureClasses": 0,
+  "autonomousViewportCreatureAcceptancePassed": false,
+  "newWindowsArchiveCreated": false,
+  "newSourceArchiveCreated": false,
+  "androidWorkPerformed": false,
+  "packagingReadiness": "Windows build passes. User requires completed creatures before packaging. DarkCreature outer Update movement is only the verified first phase; chase/attack internals, outer remainder and actual scene/Model/animation/GPU owners remain pending. No reliable packaging date is available.",
+  "remaining": [
+    "DarkCreature chase 0x1002703d0 and attack 0x100270960 internals, plus outer Update remainder 0x10026e7da..0x10026ffc0",
+    "Crab whole outer Update 0x10025bc10 and original ground/world/interaction/resource owners",
+    "Real world/Avatar/rail geometry/audio/network/Barn lifecycle and Model/animation/GPU ownership for creature families",
+    "Autonomous viewport behavior, stopping, level switches, repeated loading/unload and Windows hardware acceptance"
+  ],
+  "artifactSha256": {
+    "src/core/dark-creature-motion-runtime.ts": "07202844edd40d367d8f22e7f17f5b1c7894513c61a772e5b2b3b7a2a4d9301b",
+    "src/core/dark-creature-appear-runtime.ts": "4f5033b34093a170d2f0f248a9da0a7bfac1b7dea4f5c3a7c5c6bb6f1d625d13",
+    "src/core/creature-motion-rail-runtime.ts": "1737e2306392c7b0e8219a5bc8abe3c0e69eef2592e7ffa715046e03c8c84fe2",
+    "tools/dark-creature-motion-cases.ts": "916193339c4ef2d6e65aa36d61a37491d754bf170fd0370581a5fedff6633cf0",
+    "tools/dark-creature-motion-oracle.ts": "68daa0e9d10f7d80fab8e8d7c329ff2c77ab2fd1def2aed91da7595fcb92cbda",
+    "tools/native-dark-creature-motion-oracle.c": "48014da015a116aab8eb81ee4a0ad7e647c5a414839e79b01d93192c51aca15b",
+    "tools/reverse-dark-creature-motion.py": "5232f79b786dfd19474b59dc9f41a89c6dec6c2a95318e11cc773f738485f79f",
+    "tests/dark-creature-motion-runtime.test.ts": "f36cbb59732abb43694c37f54945f5a29c95a2d62740dcd542f2f3e76efaf85b",
+    "tests/fixtures/dark-creature-motion-native.json.gz": "67f08f91b84ed8721990a2b9022e04f282454e028f842b39348e0c70b5ab8aff",
+    "docs/冥龙移动前半段与打包门槛.md": "730aaae574e2ee06f5d2a8376d751a0b4806a0b76f7b01800ddcc63c4baf7ddb",
+    "docs/dark-creature-motion-native.json": "1c40ed8f743cf263167ab905523e4d7f917c512751358c83e5b0df3138bd7277",
+    "docs/dark-creature-motion-oracle.json": "3887ae344389e575eba49bf8f8d15e32ac2e3498dbb7b69d6fa5ce861bd5de7f",
+    "tools/objects-class-progress-spec.json": "be9863b878001a580a49a93c98b4d27e9929eff476df26512ce85a05fed85ff5",
+    "evidence/darkcreature-update-motionphase.asm": "8f1d4bda406a8a651eba494d3b4c067194e084acc8d9229e0570111743cc2cbe",
+    "evidence/darkcreature-appear.asm": "52bd0e42b91ff19ea731dea4d7647399fe47d8a842bf830066030ddeba577e85",
+    "evidence/motion-followrail.asm": "6cbbaf273c11da378f9f44255f96ad4be95730fa4f2c22f1cba53a4862d5d79f"
+  }
+}

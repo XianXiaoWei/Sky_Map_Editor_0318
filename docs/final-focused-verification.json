@@ -1,0 +1,184 @@
+{
+  "passed": true,
+  "baselineProjectTests": 735,
+  "baselineScope": "735-test project regression before final Mote/clock corrections, followed by focused tests for the final source and current-build integration.",
+  "focused": [
+    {
+      "name": "lod-focused-tests.log",
+      "tests": 21,
+      "sha256": "1772a1576c2d25a12c0a6f86c0417a8b84e32a5c1e6a08c56bc646cbb81a8572",
+      "testNames": [
+        "Marker byte transforms, factory reflection, OBB and lifecycle match the original executable corpus",
+        "All four quaternion decomposition branches produce the original rotations",
+        "SetTransform stores nonnegative axis lengths and preserves translation W, scale padding and enabled",
+        "Registered GetObb returns a local half box; world OBB and extents include Marker scale",
+        "Matrix padding NaNs assert before any Marker write, including signaling payloads",
+        "Factory null, missing, case-sensitive and fallback paths retain identity defaults",
+        "Raw Buffer aliasing captures position before output and re-reads axes after input translation writes",
+        "Finite-arithmetic boundaries stay explicit while Infinity translation itself is accepted",
+        "Rail and Avatar Marker component adapter uses the verified byte kernel on every saved Marker",
+        "Bird motion weights blend original move/idle primary poses with independent clocks",
+        "Saved default requests animate unnamed flags and night rays; speed, random starts and static default actions remain original",
+        "Original named bird, ray, crab run and flower tracks reach packed skinning with independent request clocks",
+        "Viewport sends pose vertices through incremental IPC and resubmits materials and restored geometry when their identities change",
+        "Preview resolves original action names and rejects missing/external/mirrored/additive resources",
+        "Viewport animation clones only its own geometry, preserves UV/color/bake/transform, pauses and restores the source on stop",
+        "Original LOD selector, threshold setter and closest OBB agree with native x64 output",
+        "Camera inside a large model retains its near LOD and narrow FOV retains detail",
+        "Static model pose updates preserve geometry and reject invalid lists atomically",
+        "Animation vertex replacements refresh cached bounds and transparent order with an unchanged model matrix",
+        "Pose rendering negotiates native geometry support and falls back to material uploads for older binaries",
+        "Dynamic model vertices preserve UV/color/bake/index/material bytes and reject invalid batches before any write"
+      ]
+    },
+    {
+      "name": "lod-adapter-focused-tests.log",
+      "tests": 6,
+      "sha256": "23f6380ebed6f99bf165a6b0b89a4e38d722accecb5034c3814e80b5dbaabf34",
+      "testNames": [
+        "Observed original RSQRTSS capability keeps source identity and rejects unknown edited inputs",
+        "Actual SkyHub2 Beamo and Decal draw bytes match independent original LOD0 upload observations",
+        "World-space Beamo draws preserve bytes, merge static owners and isolate moved or hidden instances",
+        "Primary clock, ordered pose blend, root-motion gates and unchanged Transform bytes match 8910 original updates",
+        "Per-owner Beamo LOD changes retain merge identity and the untouched instance bytes, then restore exact high geometry",
+        "A failed low-level resource retains high geometry, and edited transforms are read on the next decision"
+      ]
+    },
+    {
+      "name": "final-basic-focused-tests.log",
+      "tests": 17,
+      "sha256": "4f81867bae3dd14887d14d09340002690a4eae0955b32f021dae26e109645ca8",
+      "testNames": [
+        "Bird motion weights blend original move/idle primary poses with independent clocks",
+        "Saved default requests animate unnamed flags and night rays; speed, random starts and static default actions remain original",
+        "Original named bird, ray, crab run and flower tracks reach packed skinning with independent request clocks",
+        "Viewport sends pose vertices through incremental IPC and resubmits materials and restored geometry when their identities change",
+        "Preview resolves original action names and rejects missing/external/mirrored/additive resources",
+        "Viewport animation clones only its own geometry, preserves UV/color/bake/transform, pauses and restores the source on stop",
+        "Original LOD selector, threshold setter and closest OBB agree with native x64 output",
+        "Camera inside a large model retains its near LOD and narrow FOV retains detail",
+        "Per-owner Beamo LOD changes retain merge identity and the untouched instance bytes, then restore exact high geometry",
+        "A failed low-level resource retains high geometry, and edited transforms are read on the next decision",
+        "Original Visibility frustum queries follow camera/model changes and keep intersecting bounds",
+        "Original query adapter retains unsupported projections and projective model transforms",
+        "Vulkan reserves the vertex-only UBO binding across stages, validates binaries and preserves cache integrity",
+        "SPIR-V malformed instruction streams are rejected before reflection",
+        "GLES varying names share locations despite reordered declarations and unused vertex outputs",
+        "Runtime cloud and depth materials resolve embedded AIR only for the exact original shader pair",
+        "Recovered AIR stages link with float32 external interfaces and explicit half capability without relaxed conversion"
+      ]
+    },
+    {
+      "name": "final-uniform-tests.log",
+      "tests": 1,
+      "sha256": "144843560e8cf30ec198a5f9ff81731b93c7051dd35071666ff8c739c16f9014",
+      "testNames": [
+        "Cached uniform layouts preserve row-major padding, nested arrays and independent result buffers"
+      ]
+    },
+    {
+      "name": "final-probe-tests.log",
+      "tests": 10,
+      "sha256": "75aeac2b5e3f56c0901a3ff83831e724f8797cdc86f3e47cc2f8417ea3da22c0",
+      "testNames": [
+        "Atmosphere colors and planet rays preserve original native float bits, including fog underflow NaNs",
+        "Six initial Ambience field groups match original stores for both quality branches and explicit sun globals",
+        "Atmosphere preview probe projects constant radiance into diffuse SH and preserves the original cube upload layout",
+        "Directional preview probe produces directional SH without altering its source cubemap",
+        "Failed frames retain the displayed canvas and recover with all GPU scene bindings resubmitted",
+        "Scene owners can wait for the submitted frame before map rebuild and disposal",
+        "Document commits wait for the frame holding old effect storage, including final diagnostics",
+        "A failed Vulkan frame does not block editing or the recovered renderer",
+        "Vulkan material export merges identical passes while preserving packed normal/lighting bytes and triangle order",
+        "Vulkan material export respects world transforms and attribute inspection removes programmable material draws"
+      ]
+    },
+    {
+      "name": "final-bird-motion-tests.log",
+      "tests": 8,
+      "sha256": "f5b707cafeff0420da7547fd4e548f3d2d7a4f6c7224f2d9728a64be068808e9",
+      "testNames": [
+        "Creature arithmetic capability preserves all captured signed quiet-NaN results and rejects unobserved payloads",
+        "DuskGraveyard ray keeps finite movement when SIMD padding produces opposite NaN signs",
+        "Saved Dawn birds use native targets, separate flight state and restorable motion",
+        "Original whole FishV2 Update matches native memory, thresholds, callbacks and consecutive frames",
+        "Original whole Creature TurnDirection matches native memory, thresholds, callbacks and consecutive frames",
+        "Original whole Creature Bank matches native memory, thresholds, callbacks and consecutive frames",
+        "Original whole Creature motion transform matches native memory, thresholds, callbacks and consecutive frames",
+        "Original whole FishV2 Update using production movement composition matches native memory, thresholds, callbacks and consecutive frames"
+      ]
+    },
+    {
+      "name": "continue-creature-focused.log",
+      "tests": 11,
+      "sha256": "de505b28fde8db85f29b328aba842f99e3d98eddfc4db35d6e072236e6e5d42b",
+      "testNames": [
+        "Basic creature plan follows saved model references, float speeds, dormant instances and fish ownership",
+        "Open rail motion turns around continuously; closed rail wraps and degenerate points stay finite",
+        "Visible creature fallback moves, pauses without catch-up, restores and clears on map reset",
+        "Repeated creature loads remove effects and generated meshes while preserving borrowed fish",
+        "A late resource response cannot resurrect a reset scene",
+        "Stopping restores a real crab pose and playing again restarts its independent animation",
+        "Dark patrol spotlight hits terrain, becomes red near player, returns blue and hides on stop",
+        "Real dragon uses the original nine-joint spine, scale and negative Z forward; pause and restart retain ownership",
+        "Creature arithmetic capability preserves all captured signed quiet-NaN results and rejects unobserved payloads",
+        "DuskGraveyard ray keeps finite movement when SIMD padding produces opposite NaN signs",
+        "Saved Dawn birds use native targets, separate flight state and restorable motion"
+      ]
+    },
+    {
+      "name": "continue-fixes-tests.log",
+      "tests": 24,
+      "sha256": "97d761f62c35fc49d1214226a903ea369aa6fee2075f9b4ecb08cded32f07e5c",
+      "testNames": [
+        "Basic creature plan follows saved model references, float speeds, dormant instances and fish ownership",
+        "Open rail motion turns around continuously; closed rail wraps and degenerate points stay finite",
+        "Visible creature fallback moves, pauses without catch-up, restores and clears on map reset",
+        "Repeated creature loads remove effects and generated meshes while preserving borrowed fish",
+        "A late resource response cannot resurrect a reset scene",
+        "Stopping restores a real crab pose and playing again restarts its independent animation",
+        "Dark patrol spotlight hits terrain, becomes red near player, returns blue and hides on stop",
+        "Real dragon uses the original nine-joint spine, scale and negative Z forward; pause and restart retain ownership",
+        "Creature scene BVH retains closest hits, original face IDs and edited transforms/geometry",
+        "Crab feet stay on the floor at wall base, reject roofs/vertical faces and missing ground",
+        "Crab flat-ground contact suppresses numeric height chatter and follows a walkable slope",
+        "Original butterfly-field auto spawns create independent finite Motes and preserve inactive events",
+        "Dark search footprint conforms to actual terrain and hides without any surface",
+        "Motes keep original small visual size, light timers and independent phase when avatar distance changes",
+        "Bird motion weights blend original move/idle primary poses with independent clocks",
+        "Saved default requests animate unnamed flags and night rays; speed, random starts and static default actions remain original",
+        "Original named bird, ray, crab run and flower tracks reach packed skinning with independent request clocks",
+        "Viewport sends pose vertices through incremental IPC and resubmits materials and restored geometry when their identities change",
+        "Preview resolves original action names and rejects missing/external/mirrored/additive resources",
+        "Viewport animation clones only its own geometry, preserves UV/color/bake/transform, pauses and restores the source on stop",
+        "Single-frame crab idle retains the original clock but avoids skinning and redundant GPU revisions",
+        "Settled single-frame idle keeps byte-identical original request clocks across delta changes",
+        "Crab idle/run transitions reuse geometry and index while preserving independent clocks and final restoration",
+        "Unchanged static pose cache still restores externally edited or replaced vertex attributes"
+      ]
+    },
+    {
+      "name": "continue-dark-preview-tests.log",
+      "tests": 15,
+      "sha256": "610e6165fb67eef3db029eda1f87125399350aa35d79e070e799d32bbc57b212",
+      "testNames": [
+        "Basic creature plan follows saved model references, float speeds, dormant instances and fish ownership",
+        "Open rail motion turns around continuously; closed rail wraps and degenerate points stay finite",
+        "Visible creature fallback moves, pauses without catch-up, restores and clears on map reset",
+        "Repeated creature loads remove effects and generated meshes while preserving borrowed fish",
+        "A late resource response cannot resurrect a reset scene",
+        "Stopping restores a real crab pose and playing again restarts its independent animation",
+        "Dark patrol spotlight hits terrain, becomes red near player, returns blue and hides on stop",
+        "Real dragon uses the original nine-joint spine, scale and negative Z forward; pause and restart retain ownership",
+        "Original partial DarkCreature Update movement and owner callbacks matches native memory and ordered services",
+        "Original whole DarkCreature appearance with real Seek and rail return matches native memory and ordered services",
+        "Original whole raw Motion FollowRail with caller private W matches native memory and ordered services",
+        "Original partial DarkCreature Update using production motion composition matches native memory and ordered services",
+        "DarkCreature original eye and searchlight phases match projection, target, color, radius and expiration",
+        "original Rail arc intervals, complete tables and both lazy conversions match all 402 map rails",
+        "Rail arc preserves negative zero and explicitly rejects unsupported query domains"
+      ]
+    }
+  ],
+  "typeCheckPassed": true
+}

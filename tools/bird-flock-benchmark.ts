@@ -1,0 +1,9 @@
+import fs from 'node:fs';import {createRequire} from 'node:module';import {BirdFlockStream,type BirdFlockSection} from '../src/core/bird-flock-stream';
+const require=createRequire(import.meta.url),before=process.argv[2]?require(process.argv[2]).BirdFlockStream:undefined;
+function measure(Stream:typeof BirdFlockStream,count:number){
+ const sections:BirdFlockSection[]=[0,1,2].map(i=>({center:[0,0,i*1000,1],right:[1,0,0,0],up:[0,1,0,0],quaternion:new Int8Array([0,0,0,127])}));
+ const stream=new Stream(sections,true,{maxInstances:count,spawnRate:0,travelSpeed:4,spinScalar:0,enabled:true});stream.count=count;for(let i=0;i<count;i++){stream.view.setFloat32(i*48,i*.0001,true);stream.view.setFloat32(i*48+24,1,true);stream.view.setFloat32(i*48+28,1000,true);}
+ const rows:{step:number;transport:number;total:number}[]=[];for(let i=0;i<120;i++){const begin=performance.now();stream.step(1/120);const moved=performance.now();stream.geometry();const end=performance.now();if(i>=20)rows.push({step:moved-begin,transport:end-moved,total:end-begin});}
+ const metrics=(key:keyof typeof rows[number])=>{const values=rows.map(r=>r[key]).sort((a,b)=>a-b);return {medianMs:values[50],p95Ms:values[95]};};return {birds:count,step:metrics('step'),transport:metrics('transport'),total:metrics('total')};
+}
+const rows=[100,1000,10000].map(count=>({before:before?measure(before,count):undefined,after:measure(BirdFlockStream,count)}));const report={scope:'Node CPU flock state + expanded Vulkan vertex preparation only. Original cached-rail motion retained. Excludes IPC, map shading, GPU work and display; this does not establish 120 rendered FPS.',platform:process.platform,architecture:process.arch,rows};fs.writeFileSync('docs/bird-flock-performance.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));

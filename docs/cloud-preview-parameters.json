@@ -1,0 +1,55 @@
+{
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "cloudEnvConstructor": {
+    "address": "0x100215a20",
+    "writes": "8 zero bytes at destination; undulationScale +4 = 0"
+  },
+  "tweaks": {
+    "noiseDepth": {
+      "address": "0x100c95814",
+      "value": 2.5
+    },
+    "sparkle": {
+      "address": "0x100c95818",
+      "value": 0.15000000596046448
+    },
+    "translucentDepth": {
+      "address": "0x100c9581c",
+      "value": 0.5
+    },
+    "windMult": {
+      "address": "0x100c95824",
+      "value": 0.4000000059604645
+    }
+  },
+  "cloudMaterial": {
+    "load": "0x100212a40",
+    "materialId": 80,
+    "rgb": "MaterialDefBarn.GetDef(0x50).color",
+    "alpha": "BstBaked.meshes sunOcclusionScale"
+  },
+  "screenNoise": {
+    "u_texBlueNoise": {
+      "resource": "NoiseBlue3Ch",
+      "resolve": "0x10023d67c",
+      "bind": "0x10023d81b",
+      "filter": "nearest",
+      "gamma": "ImageDefs default enabled; see original comment"
+    },
+    "u_texPerturb": {
+      "resource": "HeatTex",
+      "source": "Heat.png",
+      "resolve": "0x10023d6e1",
+      "bind": "0x10023d855",
+      "gamma": false
+    }
+  },
+  "cameraQuery": {
+    "call": "0x100212722",
+    "mode": "r8=1",
+    "parameters": "[max(noiseDepth,.001), queryDistance + max(noiseDepth,.001), translucentDepth, sparkle]",
+    "parameterWrite": "0x10021277c",
+    "verification": "cloud-camera-query-oracle.json"
+  },
+  "scope": "Read-only original binding/constant/constructor evidence. Map CloudEnvParams uses spatial autoStart evaluation. Camera r8=1 and Update parameter bytes verified separately in cloud-camera-query-oracle.json. Original compositor luminance feedback remains unverified."
+}

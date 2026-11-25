@@ -1,0 +1,10 @@
+import fs from 'node:fs';import zlib from 'node:zlib';import crypto from 'node:crypto';import assert from 'node:assert/strict';import test from 'node:test';
+import {evaluateModelBake} from '../tools/model-baked-evaluate';import type {ModelBakeCase} from '../tools/model-baked-cases';
+const fixture=JSON.parse(zlib.gunzipSync(fs.readFileSync('tests/fixtures/model-unbaked-native.json.gz')).toString()) as {executableSha256:string;cases:{input:ModelBakeCase;native:any}[]};
+const run=(name:string)=>evaluateModelBake(fixture.cases.find(r=>r.input.name===name)!.input,true,true);
+test('Whole unbaked consumer with original registered lookup and ResourceRef matches every Mesh LOD snapshot',()=>{
+ assert.equal(fixture.executableSha256,'3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20');assert.equal(fixture.cases.length,1436);assert.equal(fixture.cases.filter(r=>r.input.source).length,1231);
+ for(const r of fixture.cases){const actual=evaluateModelBake(r.input,true,true);assert.deepEqual({...actual,memory:crypto.createHash('sha256').update(Buffer.from(actual.memory,'hex')).digest('hex')},r.native,r.input.name);}
+});
+test('Not-ready Mesh skips even invalid LOD initialization, clears exactly 21 bytes, and releases its reference',()=>{for(const index of [-1,0,2,0x7fffffff]){const v=run(`ready-0-${index}`),b=Buffer.from(v.memory,'hex');assert.equal(v.line,0);assert.ok(b.subarray(0,21).equals(Buffer.alloc(21)));assert.equal(b[21],0xa5);assert.equal(b[24],0xa5);assert.equal(b.readBigUInt64LE(0x440),0n);assert.ok(v.services.some(s=>s[0]===10));}assert.equal(run('ready-1--1').line,60);assert.equal(run('ready-255-2').line,60);});
+test('Missing unbaked Mesh requests the exact resource type name before the Observed assertion',()=>{const v=run('resources-0');assert.equal(v.line,109);assert.ok(v.services.some(s=>s[0]===6&&s[1]===0x180&&s[2]===0x80));assert.ok(!v.services.some(s=>s[0]===10));const loaded=run('ready-2-0'),b=Buffer.from(loaded.memory,'hex');assert.equal(loaded.line,0);assert.equal(b.readBigUInt64LE(8),0n);assert.equal(b[20],1);});

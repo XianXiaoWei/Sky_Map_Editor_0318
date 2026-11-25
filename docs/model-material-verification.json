@@ -1,0 +1,241 @@
+{
+  "passed": true,
+  "stage": "Original model stream/submit and real model material viewport with shared playback interfaces",
+  "nativeCases": 895,
+  "nativeComparedBytes": 6898612,
+  "nativeDifferences": 0,
+  "projectTests": 376,
+  "renderingSubsetTests": 16,
+  "typecheck": true,
+  "build": true,
+  "maps": 33,
+  "levelMeshes": 4133,
+  "staticShaderDependenciesAvailable": 1968,
+  "initiallyVisibleAvailable": 1511,
+  "dayHubModelDraws": 70,
+  "dayHubTerrainDraws": 22,
+  "playbackSnapshots": 838,
+  "reports": [
+    "vertex-stream-oracle.json",
+    "model-submit-oracle.json",
+    "model-draw-availability.json",
+    "model-default-gpu-check.json",
+    "model-uv-gpu-check.json",
+    "model-material-map-smoke.json",
+    "model-material-playback-smoke.json",
+    "model-material-playback-pixels.json",
+    "material-degenerate-uv-check.json"
+  ],
+  "files": [
+    {
+      "file": "src/core/resources.ts",
+      "sha256": "10856a36942eff13f86bfb53f1b812468ccf0ff4c738fb393b9a38b238f101a7"
+    },
+    {
+      "file": "src/core/model-draw.ts",
+      "sha256": "9cc63276c6cd417f43b11f85e281a8e6bffaf123b51d6c50991b0087e1f950a4"
+    },
+    {
+      "file": "src/core/vertex-stream-runtime.ts",
+      "sha256": "97a63802e93e057c063eb6a9b525be1a5483c5847a3f3e6c3ceacedef9b5d957"
+    },
+    {
+      "file": "src/core/model-submit-runtime.ts",
+      "sha256": "a2cfb5c60f4169e2f9206c43937dae4f91ecc07640e4414bc62e98b74b0de5a6"
+    },
+    {
+      "file": "src/core/vulkan-protocol.ts",
+      "sha256": "c9d4e02d3a1652dd710c52030be1673e926d9fd702d57026cb8f130a01816b91"
+    },
+    {
+      "file": "src/renderer/resource-model-renderer.ts",
+      "sha256": "1440e1ef0f38d84785f78f4fcd35fb9ceb0732d6c43ff93a2cdb159b80b66242"
+    },
+    {
+      "file": "src/renderer/vulkan-viewport.ts",
+      "sha256": "104a3d72159b357f976d4be5cf877a58d1afba7e98dd79d2d6b31cbca66e6a32"
+    },
+    {
+      "file": "src/renderer/app.ts",
+      "sha256": "de270b5139efca6f0b8ce68c4f7b4a547ff5962cd026e7f02bb611bd5f984d75"
+    },
+    {
+      "file": "src/main/vulkan.ts",
+      "sha256": "3c7a72229c2161b5da71f5abee88550e6943cf2581ae6f5cf813427264166e96"
+    },
+    {
+      "file": "src/main/vulkan-material.ts",
+      "sha256": "1dfcffa8a6b18e5d75766adbd28593cbd1b868d4714b5505374690873de6221c"
+    },
+    {
+      "file": "src/main/vulkan-baked.ts",
+      "sha256": "fa3cd7be390a0f677436226f2a88a50faf75bde65fb0af9827f5fbbdba4e646a"
+    },
+    {
+      "file": "src/main/main.ts",
+      "sha256": "ab33478da3690a703450949538d957f1f568003e1362b6768e3f131d77510ae4"
+    },
+    {
+      "file": "native/vulkan-material.hpp",
+      "sha256": "f21a82bacfccdc472cab7a91a40d61228f123cc377a7ece7e771c747496b9331"
+    },
+    {
+      "file": "native/vulkan-renderer.cpp",
+      "sha256": "83f5cfb66e8259df2b42e327efd9590970cc754f62ebdc7a771508a901902a6b"
+    },
+    {
+      "file": "tools/reverse-model-draw.py",
+      "sha256": "8cc760c865e14bba7121441243a6c32f20ae1a478120aa816cd35ddd39adb694"
+    },
+    {
+      "file": "tools/vertex-stream-oracle.ts",
+      "sha256": "bb2228f1e05037d0f66fc214310f4dbf2986372f0071e0988d41085c2d328d19"
+    },
+    {
+      "file": "tools/native-vertex-stream-oracle.c",
+      "sha256": "a26e20d1243ff6de2c8f41cbbb3d2d37a405a3e5faa895a735b186d4d0687c5c"
+    },
+    {
+      "file": "tools/model-submit-oracle.ts",
+      "sha256": "ca96bd6c0c495a4a12f6f4f078d4e73251fd9b1376191e7445821a0431b2cb33"
+    },
+    {
+      "file": "tools/native-model-submit-oracle.c",
+      "sha256": "38bb8cbc68843d4a60f79bf6cd2dd804039f0fa9207e8116cadd3e9cfeb7815c"
+    },
+    {
+      "file": "tools/model-uv-gpu-check.ts",
+      "sha256": "aa9d07db44e58dc50fb21674f41eee7330048801e826ad7dbf7e74c0377a450c"
+    },
+    {
+      "file": "tools/model-default-gpu-check.ts",
+      "sha256": "88a1f882ae13018a60f6f5fb65d870a496871832fb0daacb2981daf5f0b6dcf0"
+    },
+    {
+      "file": "tools/model-draw-availability.ts",
+      "sha256": "73c6f3eb122d84aa3231e02bf741ef6243510370ebc6b5486331ee6499f086b8"
+    },
+    {
+      "file": "tools/model-material-map-smoke.mjs",
+      "sha256": "f201671ab7f9bda89174b256f28932ffd7bd48ac946c1c0b0fdd87887b5771c9"
+    },
+    {
+      "file": "tools/model-material-playback-smoke.mjs",
+      "sha256": "37b8b97b66e16334f6e726fe2edb9569fec8f7dd65be7f6e6467157b5ebd1dfb"
+    },
+    {
+      "file": "tests/fixtures/vertex-stream-native.json.gz",
+      "sha256": "bb8dfe1b111cf44daec3f7a44df934412be21190218b81dd4dccc6ec8587a27f"
+    },
+    {
+      "file": "tests/fixtures/model-submit-native.json.gz",
+      "sha256": "110d9fc1085d04807d8769d2b2f35953c8f24acef2931f87bc17f39da7d8183e"
+    },
+    {
+      "file": "tests/fixtures/material-degenerate-uv-input.json",
+      "sha256": "69dda8d582bab08c628ed4dbb4bcf5114f3c9c0937b1f23d15ab001df9755bdd"
+    },
+    {
+      "file": "tests/model-draw.test.ts",
+      "sha256": "abef69322a6f60663acf58e2168acf8b2a0acc2553883d813cdcee725d31ef27"
+    },
+    {
+      "file": "tests/model-submit-runtime.test.ts",
+      "sha256": "8cc603071d13bc19460c21fd80cc74eaafb76b515c63a16fe22c165cfecfb232"
+    },
+    {
+      "file": "tests/vertex-stream-runtime.test.ts",
+      "sha256": "ca8a1d625a0e6177ce827f81ba1d7794aa90c933cb8539c4a04f6aa9a770145b"
+    },
+    {
+      "file": "tests/resource-model-renderer.test.ts",
+      "sha256": "25c5f384e1d2ff073fd9273b048899bfd4d1a6db7bdb8a20def4f9539b2b45c5"
+    },
+    {
+      "file": "docs/模型原始渲染与逻辑接口.md",
+      "sha256": "3cd154bdc9530143fc41674cd41bf1c57af63c1fe2b88065b86384e371125bf4"
+    },
+    {
+      "file": "docs/Objects续接状态.md",
+      "sha256": "91fdaaec1a0170a8e6d899ce47085397c29b432a0522b135c6d86d830a7df28d"
+    },
+    {
+      "file": "docs/model-material-DayHubCave-render.png",
+      "sha256": "80b547195a2c3d8306049cfac1068b9aa173443c34a5669a6cf119b9e796d13a"
+    },
+    {
+      "file": "docs/model-material-playback-render-before.png",
+      "sha256": "57750afedc5d52dc0bb6f449cda1e9d011442d1bfd057fc5837ef7fd01bd2ca1"
+    },
+    {
+      "file": "docs/model-material-playback-render-moving.png",
+      "sha256": "8d3d94ed707eac5b9d04bc19fd180712d9a4052a51e7b7c8f53be188f5f5abe0"
+    },
+    {
+      "file": "docs/material-DayHubCave-cloud-check.json",
+      "sha256": "df85d6df9431a403250ab7268a7f8f6f40ce021ed581a3da7b54c9b5f4525f88"
+    },
+    {
+      "file": "docs/viewport-cloud-check.json",
+      "sha256": "82399a46270d32c838d577d8786d19dc54c9d3142f8923759683ecef423c05f0"
+    },
+    {
+      "file": "dist/main.cjs",
+      "sha256": "b03aaea8a58641ccba7437c654c2ae1d71c9f802c30980ef865caecf61d0e1cf"
+    },
+    {
+      "file": "dist/app.js",
+      "sha256": "b2e539d054d00dfa5c8b6b28c2d4ed6042fe3bc4bddb5eb72f4978bc43c1eac0"
+    },
+    {
+      "file": "dist/native/sky-vulkan",
+      "sha256": "3ee3ac32e32d6ea1a870532732f68cf59e9288a6fa2cd2b29d86836dc678ad41"
+    },
+    {
+      "file": "docs/vertex-stream-oracle.json",
+      "sha256": "6aa3c4b3e7c64fede774c0027b5bfaa19b80c3c7da97bf5f32fb71b8698c5431"
+    },
+    {
+      "file": "docs/model-submit-oracle.json",
+      "sha256": "45b462ed6b786d0038d79fe395478e3313faa9f9b2fa9ff1947e48ff4985139e"
+    },
+    {
+      "file": "docs/model-draw-availability.json",
+      "sha256": "f9bbe9945cd3e1e323754115e78631a42cabddd86754ac4ab28c7c1cb21d9b74"
+    },
+    {
+      "file": "docs/model-default-gpu-check.json",
+      "sha256": "1c521b14f9ad9659c5284b5d19ad0ac32c5b52ab78904c0a7caa18d1a263d789"
+    },
+    {
+      "file": "docs/model-uv-gpu-check.json",
+      "sha256": "84ab4ae440fb9934f00432081173bbd68415b3159b564f8f4048c0f68d7febb5"
+    },
+    {
+      "file": "docs/model-material-map-smoke.json",
+      "sha256": "7f30945895320ad0ee2927c2546f4862da3cb9f5d6a635e37026a0957ff9b158"
+    },
+    {
+      "file": "docs/model-material-playback-smoke.json",
+      "sha256": "e648cc8dd8786b1c1acbe57ff46a1afb87874a059bb2d2e1c68244d4d1c7826d"
+    },
+    {
+      "file": "docs/model-material-playback-pixels.json",
+      "sha256": "30489669f720d49ef78d0b27356618847e41a4f54bf820baa92b7983f4ddf2fe"
+    },
+    {
+      "file": "docs/material-degenerate-uv-check.json",
+      "sha256": "99be8a7a551fb69ef7a0333d5f80e33cd01fa727ebc7fa1a21c4b6c8f084a986"
+    },
+    {
+      "file": "dist/native/sky-vulkan.exe",
+      "sha256": "03aeefd9d23df35a30770a4d3179cb6abea0971547037c648721cb0ccb9f568f"
+    }
+  ],
+  "scope": "Whole listed normal native subchains with explicit buffer/queue services; original GLSL and packed model/UV/lighting plus asset textures rendered in Vulkan. Prepared condition chain uses 15 recorded control/ref changes. Full original Model construction/visibility/lifecycle, Beamo/animation/all interaction/Avatar/Metal/Windows remain pending. Static preflight counts are not class completion. Software llvmpipe sampler policy is an adapter.",
+  "completeOriginalClasses": 0,
+  "completeOriginalGameRuntime": false,
+  "windowsTested": false,
+  "syncReceipt": "/root/sky-research/model-material-sync-verification.json",
+  "windowsNativeCompile": true
+}

@@ -1,0 +1,856 @@
+{
+  "className": "SoulDeposit",
+  "functionGroup": "光点、碎片与灵魂",
+  "functionRole": "灵魂提交类型、摄像机与事件",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "SoulDeposit 的原默认值、继承初始化及 14 个序列化字段变体；原注册字段 13 项。"
+    },
+    {
+      "name": "灵魂提交类型、摄像机与事件",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "LensFlair（9 条引用）、Clump（9 条引用）、Marker（9 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "SoulDeposit",
+    "category": "光点、碎片与灵魂",
+    "functionGroupId": "fragments",
+    "functionRole": "灵魂提交类型、摄像机与事件",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "SoulDeposit 的原默认值、继承初始化及 14 个序列化字段变体；原注册字段 13 项。"
+      },
+      {
+        "name": "灵魂提交类型、摄像机与事件",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "LensFlair（9 条引用）、Clump（9 条引用）、Marker（9 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Clump",
+        "references": 9
+      },
+      {
+        "className": "LensFlair",
+        "references": 9
+      },
+      {
+        "className": "Marker",
+        "references": 9
+      }
+    ],
+    "rttiWorkingGroup": "系统和其余类型",
+    "role": "对象实例类型",
+    "instances": 9,
+    "nestedInstances": 0,
+    "referenceFields": 27,
+    "declaredLevels": 2,
+    "levels": [
+      {
+        "level": "DayEnd",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "StormEnd",
+        "nodes": 6,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "cameraGuide",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "collectible",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "depositType",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "manualDepositCamera",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "megaBird",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "networked",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "onDepositEvent",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "position",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "rewardType",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "shrineNameUnlock",
+        "type": 1,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "spirit",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "startDepositing",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "teleportToHub",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100ce02d0",
+    "nativeRegisteredFields": [
+      {
+        "name": "position",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP6MarkerERK8MetaTypev",
+        "nativeOffset": 72,
+        "registrationFunction": "0x100507f20",
+        "propertyAddress": "0x100cdb4c0"
+      },
+      {
+        "name": "megaBird",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP9LensFlairERK8MetaTypev",
+        "nativeOffset": 88,
+        "registrationFunction": "0x100507f20",
+        "propertyAddress": "0x100cdb510"
+      },
+      {
+        "name": "onDepositEvent",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 80,
+        "registrationFunction": "0x100507f20",
+        "propertyAddress": "0x100cdb560"
+      },
+      {
+        "name": "depositType",
+        "typeGetter": "__Z17GetMetaTypeByTypeI15SoulDepositTypeERK8MetaTypev",
+        "nativeOffset": 96,
+        "registrationFunction": "0x100507f20",
+        "propertyAddress": "0x100cdb5b0"
+      },
+      {
+        "name": "rewardType",
+        "typeGetter": "__Z17GetMetaTypeByTypeI21SoulDepositRewardTypeERK8MetaTypev",
+        "nativeOffset": 100,
+        "registrationFunction": "0x100507f20",
+        "propertyAddress": "0x100cdb600"
+      },
+      {
+        "name": "cameraGuide",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP11CameraGuideERK8MetaTypev",
+        "nativeOffset": 64,
+        "registrationFunction": "0x100507f20",
+        "propertyAddress": "0x100cdb650"
+      },
+      {
+        "name": "spirit",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP3NpcERK8MetaTypev",
+        "nativeOffset": 120,
+        "registrationFunction": "0x100507f20",
+        "propertyAddress": "0x100cdb6a0"
+      },
+      {
+        "name": "collectible",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP11CollectibleERK8MetaTypev",
+        "nativeOffset": 104,
+        "registrationFunction": "0x100507f20",
+        "propertyAddress": "0x100cdb6f0"
+      },
+      {
+        "name": "shrineNameUnlock",
+        "typeGetter": "__Z17GetMetaTypeByTypeINSt3__112basic_stringIcNS0_11char_traitsIcEE16StlPoolAllocatorIcEEEERK8MetaTypev",
+        "nativeOffset": 128,
+        "registrationFunction": "0x100507f20",
+        "propertyAddress": "0x100cdb740"
+      },
+      {
+        "name": "networked",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 152,
+        "registrationFunction": "0x100507f20",
+        "propertyAddress": "0x100cdb790"
+      },
+      {
+        "name": "teleportToHub",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 153,
+        "registrationFunction": "0x100507f20",
+        "propertyAddress": "0x100cdb7e0"
+      },
+      {
+        "name": "startDepositing",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 154,
+        "registrationFunction": "0x100507f20",
+        "propertyAddress": "0x100cdb830"
+      },
+      {
+        "name": "manualDepositCamera",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP14CameraKeyFrameERK8MetaTypev",
+        "nativeOffset": 112,
+        "registrationFunction": "0x100507f20",
+        "propertyAddress": "0x100cdb880"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 13 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "DayEnd:n252",
+      "level": "DayEnd",
+      "nodeId": 252,
+      "name": "BstNode_2446917726",
+      "className": "SoulDeposit",
+      "classIndex": 44,
+      "sourceOffset": 73159,
+      "sourceLength": 64,
+      "sourceSha256": "09915806c88e5890ff5e1a65188811f1e87a51e15be60addaa215248328a9947",
+      "declaredFieldCount": 14,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n252/p2",
+          "fieldName": "megaBird",
+          "target": "DayEnd:n202",
+          "targetNodeId": 202,
+          "offset": 73187
+        },
+        {
+          "fieldId": "n252/p8",
+          "fieldName": "onDepositEvent",
+          "target": "DayEnd:n1297",
+          "targetNodeId": 1297,
+          "offset": 73205
+        },
+        {
+          "fieldId": "n252/p9",
+          "fieldName": "position",
+          "target": "DayEnd:n467",
+          "targetNodeId": 467,
+          "offset": 73209
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n581",
+      "level": "DayEnd",
+      "nodeId": 581,
+      "name": "BstNode_2446917723",
+      "className": "SoulDeposit",
+      "classIndex": 44,
+      "sourceOffset": 135049,
+      "sourceLength": 64,
+      "sourceSha256": "86596f315a1a54eb9e0289aecbbd47fbc8b2b8f7ee340aeffdf3138970ff983c",
+      "declaredFieldCount": 14,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n581/p2",
+          "fieldName": "megaBird",
+          "target": "DayEnd:n202",
+          "targetNodeId": 202,
+          "offset": 135077
+        },
+        {
+          "fieldId": "n581/p8",
+          "fieldName": "onDepositEvent",
+          "target": "DayEnd:n1346",
+          "targetNodeId": 1346,
+          "offset": 135095
+        },
+        {
+          "fieldId": "n581/p9",
+          "fieldName": "position",
+          "target": "DayEnd:n370",
+          "targetNodeId": 370,
+          "offset": 135099
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n933",
+      "level": "DayEnd",
+      "nodeId": 933,
+      "name": "BstNode_2446917728",
+      "className": "SoulDeposit",
+      "classIndex": 44,
+      "sourceOffset": 200583,
+      "sourceLength": 64,
+      "sourceSha256": "419afd6ffac65e280d954e302312c3de18b3f12018fe0fc7f52f976244c5a792",
+      "declaredFieldCount": 14,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n933/p2",
+          "fieldName": "megaBird",
+          "target": "DayEnd:n202",
+          "targetNodeId": 202,
+          "offset": 200611
+        },
+        {
+          "fieldId": "n933/p8",
+          "fieldName": "onDepositEvent",
+          "target": "DayEnd:n1399",
+          "targetNodeId": 1399,
+          "offset": 200629
+        },
+        {
+          "fieldId": "n933/p9",
+          "fieldName": "position",
+          "target": "DayEnd:n455",
+          "targetNodeId": 455,
+          "offset": 200633
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n36",
+      "level": "StormEnd",
+      "nodeId": 36,
+      "name": "BstNode_2446917900",
+      "className": "SoulDeposit",
+      "classIndex": 11,
+      "sourceOffset": 28489,
+      "sourceLength": 80,
+      "sourceSha256": "9c6ac02cb4dc8cbf02b0f6cd90b7bbd4ad40f54d8c5e0e8dbfefdb06296089cf",
+      "declaredFieldCount": 14,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n36/p2",
+          "fieldName": "megaBird",
+          "target": "StormEnd:n1041",
+          "targetNodeId": 1041,
+          "offset": 28517
+        },
+        {
+          "fieldId": "n36/p8",
+          "fieldName": "onDepositEvent",
+          "target": "StormEnd:n1156",
+          "targetNodeId": 1156,
+          "offset": 28535
+        },
+        {
+          "fieldId": "n36/p9",
+          "fieldName": "position",
+          "target": "StormEnd:n564",
+          "targetNodeId": 564,
+          "offset": 28539
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n144",
+      "level": "StormEnd",
+      "nodeId": 144,
+      "name": "BstNode_2446917898",
+      "className": "SoulDeposit",
+      "classIndex": 11,
+      "sourceOffset": 45805,
+      "sourceLength": 79,
+      "sourceSha256": "fe14906d1bd84d7b905c010a407e6f0d669081d421f898672a8fdff3435c5925",
+      "declaredFieldCount": 14,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n144/p2",
+          "fieldName": "megaBird",
+          "target": "StormEnd:n1041",
+          "targetNodeId": 1041,
+          "offset": 45833
+        },
+        {
+          "fieldId": "n144/p8",
+          "fieldName": "onDepositEvent",
+          "target": "StormEnd:n1161",
+          "targetNodeId": 1161,
+          "offset": 45851
+        },
+        {
+          "fieldId": "n144/p9",
+          "fieldName": "position",
+          "target": "StormEnd:n884",
+          "targetNodeId": 884,
+          "offset": 45855
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n245",
+      "level": "StormEnd",
+      "nodeId": 245,
+      "name": "BstNode_2446917894",
+      "className": "SoulDeposit",
+      "classIndex": 11,
+      "sourceOffset": 63509,
+      "sourceLength": 79,
+      "sourceSha256": "f985103ceb0375ec4e423a82bc331a3939688f2b3a97f540c9e61d5864c3b032",
+      "declaredFieldCount": 14,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n245/p2",
+          "fieldName": "megaBird",
+          "target": "StormEnd:n1041",
+          "targetNodeId": 1041,
+          "offset": 63537
+        },
+        {
+          "fieldId": "n245/p8",
+          "fieldName": "onDepositEvent",
+          "target": "StormEnd:n1167",
+          "targetNodeId": 1167,
+          "offset": 63555
+        },
+        {
+          "fieldId": "n245/p9",
+          "fieldName": "position",
+          "target": "StormEnd:n871",
+          "targetNodeId": 871,
+          "offset": 63559
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n485",
+      "level": "StormEnd",
+      "nodeId": 485,
+      "name": "BstNode_2446917896",
+      "className": "SoulDeposit",
+      "classIndex": 11,
+      "sourceOffset": 110179,
+      "sourceLength": 81,
+      "sourceSha256": "5afecc09e61c689975c73d041c1b25409829f34d27d898af282574357277d0a5",
+      "declaredFieldCount": 14,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n485/p2",
+          "fieldName": "megaBird",
+          "target": "StormEnd:n1041",
+          "targetNodeId": 1041,
+          "offset": 110207
+        },
+        {
+          "fieldId": "n485/p8",
+          "fieldName": "onDepositEvent",
+          "target": "StormEnd:n1179",
+          "targetNodeId": 1179,
+          "offset": 110225
+        },
+        {
+          "fieldId": "n485/p9",
+          "fieldName": "position",
+          "target": "StormEnd:n972",
+          "targetNodeId": 972,
+          "offset": 110229
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n854",
+      "level": "StormEnd",
+      "nodeId": 854,
+      "name": "BstNode_3156082775",
+      "className": "SoulDeposit",
+      "classIndex": 11,
+      "sourceOffset": 164157,
+      "sourceLength": 79,
+      "sourceSha256": "495ace3afb0161139846169ff478a0b30fa9097fe0bc810c06049699787425a0",
+      "declaredFieldCount": 14,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n854/p2",
+          "fieldName": "megaBird",
+          "target": "StormEnd:n1041",
+          "targetNodeId": 1041,
+          "offset": 164185
+        },
+        {
+          "fieldId": "n854/p8",
+          "fieldName": "onDepositEvent",
+          "target": "StormEnd:n1229",
+          "targetNodeId": 1229,
+          "offset": 164203
+        },
+        {
+          "fieldId": "n854/p9",
+          "fieldName": "position",
+          "target": "StormEnd:n903",
+          "targetNodeId": 903,
+          "offset": 164207
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "StormEnd:n875",
+      "level": "StormEnd",
+      "nodeId": 875,
+      "name": "BstNode_2446917892",
+      "className": "SoulDeposit",
+      "classIndex": 11,
+      "sourceOffset": 168521,
+      "sourceLength": 78,
+      "sourceSha256": "d61526cfe445a807b6f26a7909c01393f2113a6c71d59613dd8bfc05dfa0915d",
+      "declaredFieldCount": 14,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n875/p2",
+          "fieldName": "megaBird",
+          "target": "StormEnd:n1041",
+          "targetNodeId": 1041,
+          "offset": 168549
+        },
+        {
+          "fieldId": "n875/p8",
+          "fieldName": "onDepositEvent",
+          "target": "StormEnd:n1233",
+          "targetNodeId": 1233,
+          "offset": 168567
+        },
+        {
+          "fieldId": "n875/p9",
+          "fieldName": "position",
+          "target": "StormEnd:n349",
+          "targetNodeId": 349,
+          "offset": 168571
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "DayEnd",
+      "path": "Levels/DayEnd/Objects.level.bin",
+      "sha256": "9b5c568cefa987e504a10236c5b61e5de4b748d965d09e42db3602e4e52cc904",
+      "bytes": 268140,
+      "nodes": 1459,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DayEnd.json",
+      "markdown": "Objects对象清单/DayEnd.md"
+    },
+    {
+      "level": "StormEnd",
+      "path": "Levels/StormEnd/Objects.level.bin",
+      "sha256": "a9c13b592198ee01ab2922a0c7901f4516ae172d56a22d9b7f806ff7464c9162",
+      "bytes": 224465,
+      "nodes": 1243,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/StormEnd.json",
+      "markdown": "Objects对象清单/StormEnd.md"
+    }
+  ]
+}

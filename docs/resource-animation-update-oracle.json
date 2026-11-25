@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "resources": 99,
+  "allResourcesCompared": true,
+  "comparedCases": 3564,
+  "comparedFrames": 16632,
+  "comparedBytes": 652729200,
+  "serviceCalls": 66528,
+  "reciprocalInputs": 32435,
+  "scope": "Whole original Animation.Update calls unmodified primary, secondary, additive and flush bodies on the same controller across consecutive frames. Original pack reader, request clock, sample, weighted pose blend, Transform lazy world-cache traversal, dirty propagation and palette multiplication execute unmodified. Every controller, mask, Transform cache/padding and palette byte and ordered effect/scene call is compared each frame. Cases cover empty/default poses, priority, transitions/compaction, changing root transform, human/nonhuman dynamic masks including unclamped blend, SIMD groups/tails and zero/large deltas. Global weight arrays are explicit live owner input, not inferred from mesh names. Sound/emitter/debug consumers remain traced services. powf results are native libc traces with verified arguments/order; RSQRTPS inputs independently execute on the QEMU reference CPU, without an Intel/AMD approximation parity claim. This closes the shared animation update composition; Model/resource loading, creature owners, scene rendering and complete creature classes remain pending.",
+  "wholeAnimationUpdateVerified": true,
+  "wholeTransformWorldCacheVerified": true,
+  "completeCreatureClasses": 0,
+  "failures": []
+}

@@ -1,0 +1,659 @@
+{
+  "className": "TrackAvatarOnRail",
+  "functionGroup": "轨道、导航与引导",
+  "functionRole": "按玩家位置跟踪轨道对象",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "TrackAvatarOnRail 的原默认值、继承初始化及 7 个序列化字段变体；原注册字段 6 项。"
+    },
+    {
+      "name": "按玩家位置跟踪轨道对象",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Clump（8 条引用）、Rail（7 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "TrackAvatarOnRail",
+    "category": "轨道、导航与引导",
+    "functionGroupId": "paths",
+    "functionRole": "按玩家位置跟踪轨道对象",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "TrackAvatarOnRail 的原默认值、继承初始化及 7 个序列化字段变体；原注册字段 6 项。"
+      },
+      {
+        "name": "按玩家位置跟踪轨道对象",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Clump（8 条引用）、Rail（7 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Clump",
+        "references": 8
+      },
+      {
+        "className": "Rail",
+        "references": 7
+      }
+    ],
+    "rttiWorkingGroup": "场景与路径基础",
+    "role": "对象实例类型",
+    "instances": 7,
+    "nestedInstances": 0,
+    "referenceFields": 15,
+    "declaredLevels": 4,
+    "levels": [
+      {
+        "level": "CarryLand2",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "HubReveal",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_ButterflyFields",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_Village",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "leadDistance",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "maxFollowSpeed",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "minFollowSpeed",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "objects",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "onEndEvents",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "rail",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100cccb90",
+    "nativeRegisteredFields": [
+      {
+        "name": "rail",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP4RailERK8MetaTypev",
+        "nativeOffset": 80,
+        "registrationFunction": "0x100487480",
+        "propertyAddress": "0x100ccc710"
+      },
+      {
+        "name": "objects",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 72,
+        "registrationFunction": "0x100487480",
+        "propertyAddress": "0x100ccc760"
+      },
+      {
+        "name": "leadDistance",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 60,
+        "registrationFunction": "0x100487480",
+        "propertyAddress": "0x100ccc7b0"
+      },
+      {
+        "name": "maxFollowSpeed",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 64,
+        "registrationFunction": "0x100487480",
+        "propertyAddress": "0x100ccc800"
+      },
+      {
+        "name": "minFollowSpeed",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 68,
+        "registrationFunction": "0x100487480",
+        "propertyAddress": "0x100ccc850"
+      },
+      {
+        "name": "onEndEvents",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 88,
+        "registrationFunction": "0x100487480",
+        "propertyAddress": "0x100ccc8a0"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 6 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "CarryLand2:n76",
+      "level": "CarryLand2",
+      "nodeId": 76,
+      "name": "BstNode_3707306153",
+      "className": "TrackAvatarOnRail",
+      "classIndex": 15,
+      "sourceOffset": 25436,
+      "sourceLength": 48,
+      "sourceSha256": "075486b0c77b194a52541bb7fb25b529c95ccacb2d3fa86eeba1796334f48bd7",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n76/p1",
+          "fieldName": "objects",
+          "target": "CarryLand2:n243",
+          "targetNodeId": 243,
+          "offset": 25460
+        },
+        {
+          "fieldId": "n76/p3",
+          "fieldName": "rail",
+          "target": "CarryLand2:n173",
+          "targetNodeId": 173,
+          "offset": 25468
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand2:n169",
+      "level": "CarryLand2",
+      "nodeId": 169,
+      "name": "BstNode_3707306155",
+      "className": "TrackAvatarOnRail",
+      "classIndex": 15,
+      "sourceOffset": 41105,
+      "sourceLength": 48,
+      "sourceSha256": "054b51a927e6fbd2d037a43d5037f52a806112fbb9c4ff1670a506b6032efb8f",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n169/p1",
+          "fieldName": "objects",
+          "target": "CarryLand2:n246",
+          "targetNodeId": 246,
+          "offset": 41129
+        },
+        {
+          "fieldId": "n169/p3",
+          "fieldName": "rail",
+          "target": "CarryLand2:n173",
+          "targetNodeId": 173,
+          "offset": 41137
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n887",
+      "level": "HubReveal",
+      "nodeId": 887,
+      "name": "BstNode_2446917637",
+      "className": "TrackAvatarOnRail",
+      "classIndex": 85,
+      "sourceOffset": 178029,
+      "sourceLength": 48,
+      "sourceSha256": "513f25eb7044132b391d79a0927fe6a5803ae6df53342ca69e6587d8a4f8b91e",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n887/p1",
+          "fieldName": "objects",
+          "target": "HubReveal:n1668",
+          "targetNodeId": 1668,
+          "offset": 178053
+        },
+        {
+          "fieldId": "n887/p3",
+          "fieldName": "rail",
+          "target": "HubReveal:n877",
+          "targetNodeId": 877,
+          "offset": 178061
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n844",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 844,
+      "name": "BstNode_1167523907",
+      "className": "TrackAvatarOnRail",
+      "classIndex": 60,
+      "sourceOffset": 187174,
+      "sourceLength": 48,
+      "sourceSha256": "3689a45c63b9e8fbe26f472c87f94fbbee14b49ec5ac86017a1d83130ff51396",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n844/p1",
+          "fieldName": "objects",
+          "target": "Prairie_ButterflyFields:n1446",
+          "targetNodeId": 1446,
+          "offset": 187198
+        },
+        {
+          "fieldId": "n844/p3",
+          "fieldName": "rail",
+          "target": "Prairie_ButterflyFields:n342",
+          "targetNodeId": 342,
+          "offset": 187206
+        },
+        {
+          "fieldId": "n844/p6",
+          "fieldName": "onEndEvents",
+          "target": "Prairie_ButterflyFields:n1447",
+          "targetNodeId": 1447,
+          "offset": 187218
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n1444",
+      "level": "Prairie_Village",
+      "nodeId": 1444,
+      "name": "BstNode_1584",
+      "className": "TrackAvatarOnRail",
+      "classIndex": 92,
+      "sourceOffset": 262516,
+      "sourceLength": 42,
+      "sourceSha256": "9f7291528a227cd07b11bc25d1cd5c9456e5fa5899afff10fd7691cf4f46fbf3",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1444/p1",
+          "fieldName": "objects",
+          "target": "Prairie_Village:n3420",
+          "targetNodeId": 3420,
+          "offset": 262534
+        },
+        {
+          "fieldId": "n1444/p3",
+          "fieldName": "rail",
+          "target": "Prairie_Village:n2435",
+          "targetNodeId": 2435,
+          "offset": 262542
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2706",
+      "level": "Prairie_Village",
+      "nodeId": 2706,
+      "name": "BstNode_1571",
+      "className": "TrackAvatarOnRail",
+      "classIndex": 92,
+      "sourceOffset": 458660,
+      "sourceLength": 42,
+      "sourceSha256": "5857298d8674dbceca08e1ac36d87fecc20f2da0a6e3bf01c4686c5f5443a273",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2706/p1",
+          "fieldName": "objects",
+          "target": "Prairie_Village:n3656",
+          "targetNodeId": 3656,
+          "offset": 458678
+        },
+        {
+          "fieldId": "n2706/p3",
+          "fieldName": "rail",
+          "target": "Prairie_Village:n2435",
+          "targetNodeId": 2435,
+          "offset": 458686
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_Village:n2876",
+      "level": "Prairie_Village",
+      "nodeId": 2876,
+      "name": "BstNode_1560",
+      "className": "TrackAvatarOnRail",
+      "classIndex": 92,
+      "sourceOffset": 489745,
+      "sourceLength": 42,
+      "sourceSha256": "4498fa73ffa780ba7eefec27cd43ba6e7241b5089109a1b07256ecc6f1d3dc11",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2876/p1",
+          "fieldName": "objects",
+          "target": "Prairie_Village:n3683",
+          "targetNodeId": 3683,
+          "offset": 489763
+        },
+        {
+          "fieldId": "n2876/p3",
+          "fieldName": "rail",
+          "target": "Prairie_Village:n2435",
+          "targetNodeId": 2435,
+          "offset": 489771
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "CarryLand2",
+      "path": "Levels/CarryLand2/Objects.level.bin",
+      "sha256": "e20b1611daee8e87548c3e2902ef3f5d7b5ce43f48c62c2510b08374c9ac55d2",
+      "bytes": 52809,
+      "nodes": 249,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/CarryLand2.json",
+      "markdown": "Objects对象清单/CarryLand2.md"
+    },
+    {
+      "level": "HubReveal",
+      "path": "Levels/HubReveal/Objects.level.bin",
+      "sha256": "4b32f12bbe4b246cde9ca1e4ba0982000ff108359865bb4340aba640e609861b",
+      "bytes": 289438,
+      "nodes": 1829,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/HubReveal.json",
+      "markdown": "Objects对象清单/HubReveal.md"
+    },
+    {
+      "level": "Prairie_ButterflyFields",
+      "path": "Levels/Prairie_ButterflyFields/Objects.level.bin",
+      "sha256": "29d8d61a082f3e3414ecfbb501b5f65499deb37ad4a1078ce2e9b88ac0d1e441",
+      "bytes": 297606,
+      "nodes": 1513,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_ButterflyFields.json",
+      "markdown": "Objects对象清单/Prairie_ButterflyFields.md"
+    },
+    {
+      "level": "Prairie_Village",
+      "path": "Levels/Prairie_Village/Objects.level.bin",
+      "sha256": "4656296b54402016b59b894b4653fbdc71e106a21e0900294f73f2c7b7112385",
+      "bytes": 549989,
+      "nodes": 3724,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_Village.json",
+      "markdown": "Objects对象清单/Prairie_Village.md"
+    }
+  ]
+}

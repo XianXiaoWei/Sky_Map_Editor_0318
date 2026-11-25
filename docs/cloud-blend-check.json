@@ -1,0 +1,135 @@
+{
+  "passed": true,
+  "complete": true,
+  "device": {
+    "engine": "Sky Native Vulkan",
+    "backend": "Vulkan",
+    "device": "llvmpipe (LLVM 19.1.7, 128 bits)",
+    "apiVersion": 4210993,
+    "deviceType": 4,
+    "shaderFloat16": true
+  },
+  "scope": "Independent analytical blend oracle for native same-pass multi-draw: first draw writes both/all attachments and depth, two overlapping Cloud draws use distinct pipeline/geometry/uniform descriptors, reversed winding, and depths behind baseline. RGB srcAlpha+dstOne and alpha srcOne+dstOne only for first two attachments; third/fourth overwrite. RGBA16F/RGBA32F exact bytes, repeated frames, single-scene reset and empty list draw checked. Explicit small shaders/geometry; not original Metal or full CloudCard/game execution.",
+  "fixtures": [
+    {
+      "kind": "two-cloud-overlays",
+      "format": "rgba16f",
+      "attachments": 2,
+      "frames": 2,
+      "comparedComponents": 2048,
+      "failedComponents": 0,
+      "firstFailures": [],
+      "passed": true
+    },
+    {
+      "kind": "single-scene-reset",
+      "format": "rgba16f",
+      "attachments": 2,
+      "frames": 1,
+      "comparedComponents": 1024,
+      "failedComponents": 0,
+      "firstFailures": [],
+      "passed": true
+    },
+    {
+      "kind": "empty-cloud-draw",
+      "format": "rgba16f",
+      "attachments": 2,
+      "frames": 1,
+      "comparedComponents": 1024,
+      "failedComponents": 0,
+      "firstFailures": [],
+      "passed": true
+    },
+    {
+      "kind": "two-cloud-overlays",
+      "format": "rgba32f",
+      "attachments": 2,
+      "frames": 2,
+      "comparedComponents": 2048,
+      "failedComponents": 0,
+      "firstFailures": [],
+      "passed": true
+    },
+    {
+      "kind": "single-scene-reset",
+      "format": "rgba32f",
+      "attachments": 2,
+      "frames": 1,
+      "comparedComponents": 1024,
+      "failedComponents": 0,
+      "firstFailures": [],
+      "passed": true
+    },
+    {
+      "kind": "empty-cloud-draw",
+      "format": "rgba32f",
+      "attachments": 2,
+      "frames": 1,
+      "comparedComponents": 1024,
+      "failedComponents": 0,
+      "firstFailures": [],
+      "passed": true
+    },
+    {
+      "kind": "two-cloud-overlays",
+      "format": "rgba16f",
+      "attachments": 4,
+      "frames": 2,
+      "comparedComponents": 4096,
+      "failedComponents": 0,
+      "firstFailures": [],
+      "passed": true
+    },
+    {
+      "kind": "single-scene-reset",
+      "format": "rgba16f",
+      "attachments": 4,
+      "frames": 1,
+      "comparedComponents": 2048,
+      "failedComponents": 0,
+      "firstFailures": [],
+      "passed": true
+    },
+    {
+      "kind": "empty-cloud-draw",
+      "format": "rgba16f",
+      "attachments": 4,
+      "frames": 1,
+      "comparedComponents": 2048,
+      "failedComponents": 0,
+      "firstFailures": [],
+      "passed": true
+    },
+    {
+      "kind": "two-cloud-overlays",
+      "format": "rgba32f",
+      "attachments": 4,
+      "frames": 2,
+      "comparedComponents": 4096,
+      "failedComponents": 0,
+      "firstFailures": [],
+      "passed": true
+    },
+    {
+      "kind": "single-scene-reset",
+      "format": "rgba32f",
+      "attachments": 4,
+      "frames": 1,
+      "comparedComponents": 2048,
+      "failedComponents": 0,
+      "firstFailures": [],
+      "passed": true
+    },
+    {
+      "kind": "empty-cloud-draw",
+      "format": "rgba32f",
+      "attachments": 4,
+      "frames": 1,
+      "comparedComponents": 2048,
+      "failedComponents": 0,
+      "firstFailures": [],
+      "passed": true
+    }
+  ]
+}

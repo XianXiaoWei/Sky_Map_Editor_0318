@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "scope": "Native camera sampling applied to production Vulkan depth/MotionGen/MotionDilate/TemporalAa. All 32 half-order entries, eight scene phases, signed 2x2 depth selection, static opaque motion cancellation, constant color and explicit camera translation. Does not validate Metal, full cloud lighting, moving model list or complete original camera lifecycle.",
+  "device": {
+    "engine": "Sky Native Vulkan",
+    "backend": "Vulkan",
+    "device": "llvmpipe (LLVM 19.1.7, 128 bits)",
+    "apiVersion": 4210993,
+    "deviceType": 4,
+    "shaderFloat16": true
+  },
+  "checks": {
+    "frames": 32,
+    "scenePhases": 8,
+    "halfPositions": 4,
+    "maxStaticMotion": 0.00008392333984375,
+    "flatMismatches": 0,
+    "selectionMismatches": 0,
+    "minMismatches": 0,
+    "maxMovedMotionError": 0.0006249999999994316,
+    "cameraCut": true
+  }
+}

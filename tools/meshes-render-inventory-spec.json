@@ -1,0 +1,686 @@
+{
+  "scope": "Objects.level.bin 第一；BstBaked.meshes 和 Avatar 模式第二。先逆向原加载、创建、注册、更新和销毁整体调用链，再按原依赖从基础类向功能类推进。引用到未实现的玩法、交互、UI、贴图、音频、shader、BstBaked 或 Avatar 功能时一同恢复。最终目标为原游戏逻辑 100% 还原；五个 BstBaked 段仍以各 9/10 为真机验收前阶段目标，最后一项为真机与原游戏校验。\n\n主视口已运行原地形/裙边、CloudCore 历史、三段深度、粗细云和动态 CloudCard，再运行原 FogUpsample/Tonemap。曝光、完整风场、真实光照/阴影、Visibility、透明/水/泛光和 Metal 画面对照仍有缺口，见地形与实体云渲染预览。\n\nWind 单体、附加标记点/轨道分支、优先级合成与计时子段已按显式运行快照对照原机器码。全局阵风核心另有 256 组原子段/数学回调对照；Rail 缓存和正常输入求值已核验；完整初始化/事件、动态缓存、自动交互力和视口风场接入仍待恢复。独立理想材质采样及 Metal 失败报告保留。",
+  "owners": [
+    "LevelData",
+    "LevelDataBarn",
+    "Mesh",
+    "LevelMeshBarn",
+    "TerrainBarn",
+    "SkirtBarn",
+    "CloudBarn",
+    "CloudCard",
+    "CloudCardBarn",
+    "CloudParticleBarn",
+    "MaterialDefBarn",
+    "Compositor",
+    "Visibility",
+    "OcclusionSphereBarn",
+    "Ambience",
+    "Noise",
+    "Scene",
+    "EnvironmentForces",
+    "Wind",
+    "Rail"
+  ],
+  "reports": [
+    "meshes-evidence.json",
+    "meshes-render-state.json",
+    "cloud-render-graph.json",
+    "cloud-card-layout-oracle.json",
+    "cloud-card-sort-oracle.json",
+    "cloud-card-visibility-evidence.json",
+    "baked-lookup-oracle.json",
+    "occluder-native.json",
+    "visibility-lifecycle-oracle.json",
+    "terrain-frustum-oracle.json",
+    "terrain-lod-oracle.json",
+    "terrain-bin-draw-oracle.json",
+    "terrain-bin-geometry-oracle.json",
+    "terrain-bin-lifecycle-oracle.json",
+    "skirt-barn-oracle.json",
+    "object-runtime-native.json"
+  ],
+  "stages": [
+    {
+      "id": "R01",
+      "name": "BstBaked.meshes LOD0/烘焙/几何读取",
+      "status": "已实现，原加载链部分恢复",
+      "addresses": [
+        "0x1003f4840",
+        "0x1003f68d0",
+        "0x100455e90"
+      ],
+      "implementation": [
+        "src/core/meshes.ts",
+        "src/core/resources.ts",
+        "src/core/baking.ts"
+      ],
+      "evidence": [
+        "docs/corpus-audit.json",
+        "docs/bake-evidence.json"
+      ],
+      "gap": "完整 LevelDataBarn 原加载/资源注册与未解释字段；不包含修改后的重建"
+    },
+    {
+      "id": "R02",
+      "name": "MaterialDefBarn 原定义、地图覆盖和参数",
+      "status": "部分实现并验证",
+      "addresses": [
+        "0x10043fb70",
+        "0x100443f50",
+        "0x100443810",
+        "0x100443a70"
+      ],
+      "implementation": [
+        "src/core/mesh-surfaces.ts",
+        "src/core/materials.ts"
+      ],
+      "evidence": [
+        "docs/meshes-evidence.json",
+        "docs/meshes-oracle.json"
+      ],
+      "gap": "真实默认资源/句柄、全局参数自动绑定"
+    },
+    {
+      "id": "R03",
+      "name": "TerrainBarn 基础/叠加表面和三角形分批",
+      "status": "分批已实现并原机器码验证",
+      "addresses": [
+        "0x1006a1c50",
+        "0x1006a7280"
+      ],
+      "implementation": [
+        "src/core/mesh-surfaces.ts"
+      ],
+      "evidence": [
+        "docs/meshes-oracle.json"
+      ],
+      "gap": "初始化其他字段/完整资源创建，真实运行 LOD/剔除"
+    },
+    {
+      "id": "R04",
+      "name": "地形运行可见性、Job、LOD 与细分",
+      "status": "OBB/LOD、bin 几何/packet、显隐/动态登记清理及任务入口已核验；完整运行待恢复",
+      "addresses": [
+        "0x1006a24d0",
+        "0x1006a2630",
+        "0x1006a7b50",
+        "0x1006a8f80",
+        "0x1006aa110",
+        "0x1006ade10",
+        "0x10015e420",
+        "0x1006a3118",
+        "0x1006a3274",
+        "0x1006a9000",
+        "0x1006a88c0",
+        "0x100789e80",
+        "0x10078c950",
+        "0x1006a8100",
+        "0x10077e4b0",
+        "0x1006ad3f0"
+      ],
+      "implementation": [
+        "src/core/terrain-visibility.ts",
+        "src/core/terrain-bin-runtime.ts",
+        "src/core/terrain-bin-geometry.ts",
+        "src/core/mesh-surfaces.ts",
+        "src/core/meshes.ts"
+      ],
+      "evidence": [
+        "docs/terrain-frustum-oracle.json",
+        "docs/terrain-lod-oracle.json",
+        "docs/Visibility生命周期与地形候选.md",
+        "docs/terrain-bin-draw-oracle.json",
+        "docs/terrain-bin-geometry-oracle.json",
+        "docs/地形bin创建与绘制准备.md",
+        "docs/terrain-bin-lifecycle-oracle.json",
+        "docs/地形bin显隐与LOD任务入口.md"
+      ],
+      "gap": "原 OBB 与 LOD 子段已核验；完整原创建正常路径核对 31 地图／77 记录／96,309 bins 的 sphere／bounds、packet 与 59 索引流，完整纯 bin 绘制准备 170 组／1,028 次通过。明确 CPU heap／导入服务与跳过碰撞快照；其他 model 字段、实际加载／变换／资源、Camera、碰撞／LOD 转场／Job 与视口调度待闭合。 新增显隐/原动态登记清理/任务分发 345 组／1,558 步，原 packet 覆盖 31 地图全部 77 记录抽样 5,339 bins；真实队列、worker、回收及主视口仍未闭合。"
+    },
+    {
+      "id": "R05",
+      "name": "SkirtBarn 原顶点拆流、材质存在规则和上传",
+      "status": "部分实现并数据审计",
+      "addresses": [
+        "0x1005abf50",
+        "0x1005aca70",
+        "0x1005acaf0",
+        "0x1007f6ae0"
+      ],
+      "implementation": [
+        "src/core/mesh-surfaces.ts",
+        "src/renderer/baked-renderer.ts",
+        "src/core/skirt-barn-runtime.ts"
+      ],
+      "evidence": [
+        "docs/meshes-evidence.json",
+        "docs/meshes-render-state.json",
+        "docs/skirt-barn-oracle.json",
+        "docs/skirt-barn-native.json",
+        "docs/裙边加载与绘制调度逆向.md"
+      ],
+      "gap": "已恢复显式已加载记录下的完整 CPU 拆流/全局 u32 索引/XYZ bounds/材质掩码，正常终止与重复终止、显式摄像机查询结果下的绘制驱动和原 chunk 合并；83 组/33 地图全部 2533 裙边/45,939,862 项比较通过。实际资源 fallback/引用所有权、Camera/距离数学、GPU 完整生命周期、隐藏 sentinel chunk 槽、生成/烘焙/碰撞与主视口原调度仍待恢复；不提升完整生命周期/可见性检查项。"
+    },
+    {
+      "id": "R06",
+      "name": "CloudBarn 五图集/距离/代理/噪声",
+      "status": "核心已实现并原机器码验证",
+      "addresses": [
+        "0x100211690",
+        "0x100214810",
+        "0x1004b72d0",
+        "0x100212510"
+      ],
+      "implementation": [
+        "src/core/cloud-volume.ts",
+        "src/core/volu.ts",
+        "src/main/assets.ts",
+        "src/core/cloud-wind.ts"
+      ],
+      "evidence": [
+        "docs/cloud-oracle.json",
+        "docs/volu-oracle.json",
+        "docs/cloud-wind-oracle.json"
+      ],
+      "gap": "完整自动初始化/运行资源绑定、真实风场和代理遮挡提交；CloudBarn非debug Update偏移已验证，依赖样本明确提供"
+    },
+    {
+      "id": "R07",
+      "name": "CloudCard 原注册/资源和 bake 关联",
+      "status": "TGCL 适配已实现，原完整注册待恢复",
+      "addresses": [
+        "0x10021fb40",
+        "0x1002216b0"
+      ],
+      "implementation": [
+        "src/core/cloud-card-level.ts"
+      ],
+      "evidence": [
+        "docs/cloud-card-layout-oracle.json"
+      ],
+      "gap": "原 LevelModelBarn 注册时序、原资源管理器和 bake 绑定"
+    },
+    {
+      "id": "R08",
+      "name": "CloudCard 世界球、连接组、组排序和累计索引",
+      "status": "已实现并原机器码验证",
+      "addresses": [
+        "0x10021fa30",
+        "0x10021fd80",
+        "0x100220090",
+        "0x1002202c0",
+        "0x100220360",
+        "0x100222830",
+        "0x100223420",
+        "0x100223d00"
+      ],
+      "implementation": [
+        "src/core/cloud-card-layout.ts",
+        "src/core/cloud-card-sort.ts",
+        "src/core/cloud-card-indices.ts"
+      ],
+      "evidence": [
+        "docs/cloud-card-layout-oracle.json",
+        "docs/cloud-card-sort-oracle.json",
+        "docs/cloud-card-index-oracle.json"
+      ],
+      "gap": "加载函数其他资源/生命周期部分仍未实现"
+    },
+    {
+      "id": "R09",
+      "name": "CloudCard 六平面、球测试、原剔除压缩",
+      "status": "已实现并原机器码验证",
+      "addresses": [
+        "0x1002206f0",
+        "0x100220b10"
+      ],
+      "implementation": [
+        "src/core/cloud-card-visibility.ts"
+      ],
+      "evidence": [
+        "docs/cloud-card-visibility-oracle.json",
+        "docs/cloud-card-visibility-ipc-check.json"
+      ],
+      "gap": "Visibility 分类为明确输入"
+    },
+    {
+      "id": "R10",
+      "name": "真实 Visibility 遮挡分类/缓冲",
+      "status": "球／AABB 与完整生命周期原方法已按显式资源快照核验；真实加载／视口待恢复",
+      "addresses": [
+        "0x100720dd0",
+        "0x100721ce0",
+        "0x10071d660",
+        "0x10071d9f0",
+        "0x10071e020",
+        "0x10071d9b0"
+      ],
+      "implementation": [
+        "src/core/visibility-spheres.ts",
+        "src/core/visibility-aabbs.ts",
+        "src/core/cloud-card-visibility.ts",
+        "src/core/visibility-runtime.ts"
+      ],
+      "evidence": [
+        "docs/cloud-card-visibility-evidence.json",
+        "docs/visibility-spheres-oracle.json",
+        "docs/visibility-aabbs-oracle.json",
+        "docs/visibility-lifecycle-oracle.json",
+        "docs/Visibility生命周期与地形候选.md"
+      ],
+      "gap": "2,928 组查询与 227 组／2,724 步完整生命周期通过，原资源名红黑树／类型／metadata-ID 查找及引用链实际执行；heap／scratch 初始快照、资源虚方法和导入为明确主机服务。默认 Update 只绘制调试视锥，不修改 Camera。真实 Camera 生产／class 默认／模块调度／资源加载／对象和主视口链仍未闭合，QEMU 不代表原硬件。"
+    },
+    {
+      "id": "R11",
+      "name": "CloudCard 原矩阵求逆、局部相机方向",
+      "status": "已实现并原机器码验证",
+      "addresses": [
+        "0x100076940",
+        "0x100220bd0"
+      ],
+      "implementation": [
+        "src/core/cloud-card-inverse.ts",
+        "src/core/cloud-card-facing.ts"
+      ],
+      "evidence": [
+        "docs/cloud-card-facing-oracle.json"
+      ],
+      "gap": "已衔接桌面可见性准备入口；原 Camera getter 为明确输入回调，后续旋转/动态顶点另列 R12/R13"
+    },
+    {
+      "id": "R12",
+      "name": "CloudCard 朝向旋转与动态位置",
+      "status": "子段已实现并原机器码/GPU验证",
+      "addresses": [
+        "0x100220cc0",
+        "0x100076df0",
+        "0x100220e70"
+      ],
+      "implementation": [
+        "src/core/cloud-card-dynamic.ts",
+        "src/core/cloud-card-level.ts"
+      ],
+      "evidence": [
+        "docs/cloud-card-dynamic-oracle.json",
+        "docs/cloud-card-dynamic-gpu-check.json",
+        "docs/material-animation-smoke.json"
+      ],
+      "gap": "原Mac libm逐bit精度、完整注册/Visibility和主视口自动云合成；bake/default光照必须明确提供"
+    },
+    {
+      "id": "R13",
+      "name": "CloudCard 28-byte 动态顶点属性",
+      "status": "子段已实现并原机器码/GPU验证",
+      "addresses": [
+        "0x100220f90",
+        "0x1002210c0"
+      ],
+      "implementation": [
+        "src/core/cloud-card-dynamic.ts",
+        "src/core/cloud-card-level.ts"
+      ],
+      "evidence": [
+        "docs/cloud-card-dynamic-oracle.json",
+        "docs/cloud-card-dynamic-gpu-check.json",
+        "docs/material-animation-smoke.json"
+      ],
+      "gap": "真实TGCL alphaMult和原half/SNORM字节已接IPC；完整原光照/动态云视口合成待恢复"
+    },
+    {
+      "id": "R14",
+      "name": "CloudCard 距离排序与 first/count 绘制队列",
+      "status": "已实现并原机器码验证",
+      "addresses": [
+        "0x100221270",
+        "0x100224290",
+        "0x1007f6ae0"
+      ],
+      "implementation": [
+        "src/core/cloud-card-draw.ts",
+        "src/core/cloud-card-sort.ts"
+      ],
+      "evidence": [
+        "docs/cloud-card-draw-oracle.json",
+        "docs/cloud-card-visibility-ipc-check.json"
+      ],
+      "gap": "GPU draw 为捕获回调，动态几何上传未接入自动视口"
+    },
+    {
+      "id": "R15",
+      "name": "蓬松云粒子发射、物理、寿命与实例排序",
+      "status": "核心发射/队列、最近三个交互源、积分与寿命/实例/排序已按各自范围原机器码验证",
+      "addresses": [
+        "0x100225cc0",
+        "0x100225f30",
+        "0x10022660f",
+        "0x1002279f2",
+        "0x100229600",
+        "0x100229d10",
+        "0x100225e90",
+        "0x100228a30",
+        "0x1002289b0",
+        "0x1001a1140",
+        "0x1001a1670",
+        "0x1001a4e90",
+        "0x100226920",
+        "0x10022757e"
+      ],
+      "implementation": [
+        "src/main/vulkan-program.ts",
+        "src/core/cloud-particle-dynamic.ts",
+        "src/core/cloud-card-sort.ts",
+        "src/core/cloud-particle-emission.ts",
+        "src/core/cloud-particle-selection.ts",
+        "src/core/cloud-particle-physics.ts",
+        "src/core/cloud-particle-runtime.ts"
+      ],
+      "evidence": [
+        "docs/cloud-card-air-check.json",
+        "docs/cloud-card-carry-air-check.json",
+        "docs/cloud-particle-life-oracle.json",
+        "docs/cloud-particle-pack-oracle.json",
+        "docs/cloud-particle-sort-oracle.json",
+        "docs/cloud-particle-emission-oracle.json",
+        "docs/cloud-particle-selection-oracle.json",
+        "docs/cloud-particle-physics-oracle.json",
+        "docs/云粒子发射与物理逆向进展.md"
+      ],
+      "gap": "Avatar/模型自动状态与全局 RNG、192 字节 source 准备、逐 sphere 交互力、原 GPU 实例注册和自动云合成；运行链仍要求明确交互结果"
+    },
+    {
+      "id": "R16",
+      "name": "原地形/裙边 shader 与场景光照资源",
+      "status": "主视口原 GLSL/贴图/顶点流、HDR 混合已接入；33 张地图采样绘制通过",
+      "addresses": [
+        "0x1007f5430",
+        "0x1007f6280",
+        "0x1003879d0",
+        "0x100328050",
+        "0x100324a80"
+      ],
+      "implementation": [
+        "src/main/vulkan-material.ts",
+        "src/main/vulkan-program.ts",
+        "src/renderer/baked-renderer.ts",
+        "src/main/vulkan-baked.ts",
+        "src/main/vulkan-environment.ts",
+        "src/main/viewport-environment.ts",
+        "src/core/png.ts",
+        "src/core/material-dynamics.ts"
+      ],
+      "evidence": [
+        "docs/vulkan-gpu.json",
+        "docs/meshes-gpu.json",
+        "docs/viewport-material-check.json",
+        "docs/viewport-terrain-maps-check.json",
+        "docs/viewport-environment-smoke.json",
+        "docs/material-dynamics-oracle.json",
+        "docs/material-gradient-check.json",
+        "docs/material-gradient-ideal-sampler-failure.json",
+        "docs/material-animation-smoke.json"
+      ],
+      "gap": "完整初始化/事件、场景探针、阴影/点光源、原 mip/默认纹理和完整合成；完整EnvironmentForces风场和理想CPU/原Metal采样精度"
+    },
+    {
+      "id": "R17",
+      "name": "Scene 列表、Opaque/Decal/Skirts 状态与排序",
+      "status": "状态/排序核心已实现并验证",
+      "addresses": [
+        "0x10058f9d0",
+        "0x10058ed00",
+        "0x1007b9cd0",
+        "0x1007ba0c0",
+        "0x1007bcc00"
+      ],
+      "implementation": [
+        "src/core/mesh-render-state.ts",
+        "src/core/cloud-render-state.ts"
+      ],
+      "evidence": [
+        "docs/meshes-render-state.json"
+      ],
+      "gap": "真实句柄和完整列表生产/消费调度"
+    },
+    {
+      "id": "R18",
+      "name": "Compositor 原目标/深度/粗细云/Cloud pass",
+      "status": "显式输入管线已实现并验证，自动场景待接入",
+      "addresses": [
+        "0x10023d350",
+        "0x10023de50",
+        "0x100243a30"
+      ],
+      "implementation": [
+        "src/core/cloud-render-graph.ts",
+        "src/main/vulkan-depth.ts",
+        "src/main/vulkan-cloud.ts"
+      ],
+      "evidence": [
+        "docs/cloud-render-graph.json",
+        "docs/cloud-depth-ipc-check.json",
+        "docs/cloud-pass-ipc-check.json"
+      ],
+      "gap": "真实 RGB/深度、水/蓝噪声、历史/重投影和主视口合成"
+    },
+    {
+      "id": "R19",
+      "name": "遮挡几何属性及运行提交",
+      "status": "顶点／光栅／裁剪／连续提交数值链与深度 mip 已原函数核验；实际资源和生命周期待恢复",
+      "addresses": [
+        "0x1007236a0",
+        "0x10071e020",
+        "0x100720250",
+        "0x10071e7f0",
+        "0x10071ee60",
+        "0x10071f790",
+        "0x100720560",
+        "0x10071d9f0",
+        "0x100076df0"
+      ],
+      "implementation": [
+        "src/core/meshes.ts",
+        "src/core/visibility-float.ts",
+        "src/core/visibility-transform.ts",
+        "src/core/visibility-raster.ts",
+        "src/core/visibility-clip.ts",
+        "src/core/visibility-submit.ts",
+        "src/core/visibility-depth.ts"
+      ],
+      "evidence": [
+        "docs/meshes-coverage.json",
+        "docs/occluder-native.json",
+        "docs/visibility-oracle.json",
+        "docs/visibility-raster-oracle.json",
+        "docs/visibility-clip-oracle.json",
+        "docs/visibility-submit-oracle.json"
+      ],
+      "gap": "完整数值提交链按全部 33 地图遮挡顶点/索引和显式投影核验；球/AABB 数值查询见 R10。堆/scratch 初始内存为回调快照，诊断开关关闭。变换 W scratch 和运算 NaN payload 排除；QEMU RCPPS/MIN/MAX 能力明确记录，原硬件、真实 Resize/Update、实际查询来源、DropOcclusion 和视口剔除待恢复。第 15 字节语义未定。"
+    },
+    {
+      "id": "R20",
+      "name": "原 Metal/Windows/完整画面验收",
+      "status": "未通过",
+      "addresses": [
+        "0x100a6afc0",
+        "0x100a6d530"
+      ],
+      "implementation": [
+        "native/vulkan-renderer.cpp"
+      ],
+      "evidence": [
+        "docs/cloud-pass-check.json",
+        "docs/cloud-depth-air-check.json",
+        "docs/vulkan-target-formats.json"
+      ],
+      "gap": "混合舍入、quarter 光栅边界、half 溢出；Windows GPU 和原游戏画面对照"
+    },
+    {
+      "id": "R21",
+      "name": "EnvironmentForces 风采样与 Wind 计时",
+      "status": "显式快照核心已实现并原机器码验证",
+      "addresses": [
+        "0x100328200",
+        "0x100328810",
+        "0x10078ce10",
+        "0x100324b62",
+        "0x1003276f0"
+      ],
+      "implementation": [
+        "src/core/environment-wind.ts",
+        "src/core/rail.ts"
+      ],
+      "evidence": [
+        "docs/environment-wind-oracle.json",
+        "docs/wind-rail-oracle.json"
+      ],
+      "gap": "基础1,422组和新增1,638组原 Wind→Rail 连续调用已核验；完整构造/事件/globalWind 初始化、动态轨道生命周期/通用元数据分发、自动交互力、macOS libm 和视口接入待恢复。计时仅原子段，整个 Update 未恢复。"
+    },
+    {
+      "id": "R22",
+      "name": "EnvironmentForces 全局阵风噪声与平滑",
+      "status": "原指令子段/明确数学回调对照通过；预览数学有失败",
+      "addresses": [
+        "0x100326666"
+      ],
+      "implementation": [
+        "src/core/environment-gust.ts"
+      ],
+      "evidence": [
+        "docs/environment-gust-oracle.json"
+      ],
+      "gap": "256 组 /2,304 分量原子段与回调精确通过；JS Math 对 Linux libc 1/256 失败保留。完整 Update/SetWind 事件/初始状态、macOS libm 和视口接入待恢复。"
+    },
+    {
+      "id": "R23",
+      "name": "Marker getter 与 Rail 缓存/样条/最近点/变换",
+      "status": "正常初始化输入已原函数核验；辅助线已接入",
+      "addresses": [
+        "0x10043e2d0",
+        "0x10043e470",
+        "0x1004d2260",
+        "0x10055cf30",
+        "0x10078a710",
+        "0x10055d820",
+        "0x10055e420",
+        "0x1005609d0",
+        "0x100560b40",
+        "0x100789ac0"
+      ],
+      "implementation": [
+        "src/core/rail.ts",
+        "src/core/rail-level.ts",
+        "src/renderer/app.ts"
+      ],
+      "evidence": [
+        "docs/rail-cache-oracle.json",
+        "docs/rail-oracle.json",
+        "docs/wind-rail-oracle.json"
+      ],
+      "gap": "402 条实际 Rail 缓存与正常输入核验；四个退化查询、动态缓存失效/参数推进、通用 Object 分发/加载/事件/销毁、macOS libm 待恢复；JS sincos 求值12组、Wind4组差异保留。"
+    },
+    {
+      "id": "R24",
+      "name": "Rail 弧长表、双向转换与懒重建",
+      "status": "初始化快照原函数核验通过；异常端点明确排除",
+      "addresses": [
+        "0x10055c6a0",
+        "0x10055b560",
+        "0x10055d410",
+        "0x10055d4e0",
+        "0x10055bc50"
+      ],
+      "implementation": [
+        "src/core/rail-arc.ts"
+      ],
+      "evidence": [
+        "docs/rail-arc-oracle.json"
+      ],
+      "gap": "594 组／249,514 有效 float32 分量，全部 402 条 Rail 表和两种懒查询覆盖。20 次旧长度端点超过重建末项的不安全扫描／日志断言排除；原自动分配、selfUpdating 位移失效、MoveObjectAlongRail 推进、通用生命周期与原游戏验收待恢复。"
+    },
+    {
+      "id": "R25",
+      "name": "模型烘焙 GUID 查找与三种消费兼容检查",
+      "status": "明确已载入快照／原兼容子段通过",
+      "addresses": [
+        "0x1003f68d0",
+        "0x100195050",
+        "0x10021fb40",
+        "0x10045fa00"
+      ],
+      "implementation": [
+        "src/core/baked-lookup.ts"
+      ],
+      "evidence": [
+        "docs/baked-lookup-oracle.json",
+        "docs/baked-bindings-native.json"
+      ],
+      "gap": "11,710 查询／全部 33 地图 10,653 GUID 快照通过；Beamo LOD 数量、CloudCard 和模型首个展开 LOD 顶点数规则分别核验。原 loaded-state／缺失资源 GUID 改写、Object GUID 虚表来源、完整类/材质/Skirt/Visibility 链与视口接入仍未闭合。"
+    },
+    {
+      "id": "R26",
+      "name": "共享数值、基础事件和运行依赖音效",
+      "status": "28 个原函数明确范围成批恢复；EventBarn 连续驱动数值/音效已核验，完整对象/烘焙场景仍待闭合",
+      "addresses": [
+        "0x1007191a0",
+        "0x100717b20",
+        "0x10032ef60",
+        "0x1007194a0",
+        "0x100717f80",
+        "0x100718320",
+        "0x1007176f0",
+        "0x100717730",
+        "0x10032eea0",
+        "0x10032f0f0",
+        "0x10032f110",
+        "0x10032f130",
+        "0x10032f170",
+        "0x10032f1e0",
+        "0x10032f200",
+        "0x10032f220",
+        "0x100534410",
+        "0x1005343d0",
+        "0x10032e2c0",
+        "0x10032e2f0",
+        "0x10032f5b0",
+        "0x10032ea90",
+        "0x10032e540",
+        "0x10032e920",
+        "0x10032ec50",
+        "0x10032f3e0",
+        "0x100330980",
+        "0x1003315d0"
+      ],
+      "implementation": [
+        "src/core/object-numeric-runtime.ts",
+        "src/core/object-flow-runtime.ts",
+        "src/core/set-float-runtime.ts",
+        "src/core/event-start-runtime.ts",
+        "src/core/sound-event-runtime.ts",
+        "src/core/audio-wave.ts",
+        "src/main/audio-assets.ts",
+        "src/core/event-barn-runtime.ts",
+        "src/core/event-original-sort.ts",
+        "src/core/event-derived-drivers.ts"
+      ],
+      "evidence": [
+        "docs/object-numeric-oracle.json",
+        "docs/object-batch-oracle.json",
+        "docs/sound-event-oracle.json",
+        "docs/audio-runtime-inventory.json",
+        "docs/数值类事件与依赖音效逆向.md",
+        "docs/event-barn-oracle.json",
+        "docs/对象启用与EventBarn调度逆向.md"
+      ],
+      "gap": "原 ObjectFactory/缺字段默认值、Get/SetEnabled 元数据方法、EventBarn 类型索引树/切图卸载、真实 GameTime、Mac libm、FMOD bank 路由/解码/播放/卸载、LevelMesh/Beamo 创建/更新/材质/动画和 BstBaked 完整运行仍待闭合"
+    }
+  ],
+  "deferred": [
+    "地形拓扑/碰撞树修改与重建",
+    "新增裙边的照明/边界重建",
+    "云距离场/代理/碰撞同步编辑",
+    "原版新烘焙生成",
+    "右上角导航方块",
+    "Objects 区域触发、摄像机按钮文字与 Avatar 原入口/玩家状态/衣柜/动作联合阶段，见 Objects与Avatar清单.md"
+  ]
+}

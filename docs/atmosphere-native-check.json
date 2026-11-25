@@ -1,0 +1,34 @@
+{
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "passed": true,
+  "comparison": "exact float32 bits; no tolerance",
+  "runtime": "QEMU x86_64 -cpu max; unmodified game functions 0x100064820, 0x100064a20, 0x100064c60; imported expf/exp2f bound to Linux libm",
+  "limitation": "Explicit runtime inputs; does not validate event initialization, macOS libm, probe generation or the viewport.",
+  "cases": 1280,
+  "components": 5120,
+  "nonfiniteComponents": 33,
+  "mismatches": 0,
+  "maxAbsoluteError": 0,
+  "maxUlp": 0,
+  "perKind": {
+    "sky": {
+      "components": 2080,
+      "mismatches": 0,
+      "maxAbsoluteError": 0,
+      "maxUlp": 0
+    },
+    "cheapFog": {
+      "components": 2080,
+      "mismatches": 0,
+      "maxAbsoluteError": 0,
+      "maxUlp": 0
+    },
+    "ray": {
+      "components": 960,
+      "mismatches": 0,
+      "maxAbsoluteError": 0,
+      "maxUlp": 0
+    }
+  },
+  "failures": []
+}

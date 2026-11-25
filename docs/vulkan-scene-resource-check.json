@@ -1,0 +1,54 @@
+{
+  "scope": "Vulkan resource upload and shader sampling; analytical fixtures, not game image parity",
+  "passed": true,
+  "device": {
+    "engine": "Sky Native Vulkan",
+    "backend": "Vulkan",
+    "device": "llvmpipe (LLVM 19.1.7, 128 bits)",
+    "apiVersion": 4210993,
+    "deviceType": 4,
+    "nativeSurface": false,
+    "shaderFloat16": true,
+    "samplerAnisotropyPolicy": "llvmpipe-trilinear",
+    "maxSamplerAnisotropy": 16
+  },
+  "cases": [
+    {
+      "integerFormat": "r8ui",
+      "cubeFaces": 6,
+      "mipLevels": 3,
+      "pixelsVerified": 18
+    },
+    {
+      "integerFormat": "rg8ui",
+      "cubeFaces": 6,
+      "mipLevels": 3,
+      "pixelsVerified": 18
+    },
+    {
+      "integerFormat": "r16ui",
+      "cubeFaces": 6,
+      "mipLevels": 3,
+      "pixelsVerified": 18
+    },
+    {
+      "integerFormat": "rg16ui",
+      "cubeFaces": 6,
+      "mipLevels": 3,
+      "pixelsVerified": 18
+    },
+    {
+      "integerFormat": "r32ui",
+      "cubeFaces": 6,
+      "mipLevels": 3,
+      "pixelsVerified": 18
+    },
+    {
+      "integerFormat": "rgba8ui",
+      "cubeFaces": 6,
+      "mipLevels": 3,
+      "pixelsVerified": 18
+    }
+  ],
+  "componentsVerified": 448
+}

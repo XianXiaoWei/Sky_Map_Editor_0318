@@ -1,0 +1,9 @@
+0x10032e2c0: push rbp
+0x10032e2c1: mov rbp, rsp
+0x10032e2c4: test sil, sil
+0x10032e2c7: je 0x10032e2cf
+0x10032e2c9: pop rbp
+0x10032e2ca: jmp 0x10032e2f0 ; 0x10032e2f0
+0x10032e2cf: pop rbp
+0x10032e2d0: jmp 0x10032ef60 ; 0x10032ef60
+0x10032e2d5: nop word ptr cs:[rax + rax]

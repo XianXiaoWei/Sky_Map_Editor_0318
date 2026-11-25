@@ -1,0 +1,967 @@
+{
+  "className": "StrobeObject",
+  "functionGroup": "场景基础与对象变换",
+  "functionRole": "对象闪烁、时长与结束状态",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "StrobeObject 的原默认值、继承初始化及 19 个序列化字段变体；原注册字段 18 项。"
+    },
+    {
+      "name": "对象闪烁、时长与结束状态",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Clump（22 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "StrobeObject",
+    "category": "场景基础与对象变换",
+    "functionGroupId": "scene",
+    "functionRole": "对象闪烁、时长与结束状态",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "StrobeObject 的原默认值、继承初始化及 19 个序列化字段变体；原注册字段 18 项。"
+      },
+      {
+        "name": "对象闪烁、时长与结束状态",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Clump（22 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Clump",
+        "references": 22
+      }
+    ],
+    "rttiWorkingGroup": "系统和其余类型",
+    "role": "对象实例类型",
+    "instances": 12,
+    "nestedInstances": 0,
+    "referenceFields": 22,
+    "declaredLevels": 3,
+    "levels": [
+      {
+        "level": "Dawn",
+        "nodes": 6,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Prairie_NestAndKeeper",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SkyHub2",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "createLightTrigs",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "durationMax",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "durationMin",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "endOnA",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "endOnRandom",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "fadeoutTime",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "frequencyMax",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "frequencyMin",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "fxOnEnd",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "isSingleVal",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "itemOffset",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "meshes",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "meshParamName",
+        "type": 1,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "paramA",
+        "type": 0,
+        "size": 16,
+        "nestedClass": null
+      },
+      {
+        "name": "paramB",
+        "type": 0,
+        "size": 16,
+        "nestedClass": null
+      },
+      {
+        "name": "synchAcrossClumps",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "threshhold",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "threshholdBlend",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100d014b0",
+    "nativeRegisteredFields": [
+      {
+        "name": "meshes",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x100699cb0",
+        "propertyAddress": "0x100d00e10"
+      },
+      {
+        "name": "createLightTrigs",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 64,
+        "registrationFunction": "0x100699cb0",
+        "propertyAddress": "0x100d00e60"
+      },
+      {
+        "name": "fxOnEnd",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 72,
+        "registrationFunction": "0x100699cb0",
+        "propertyAddress": "0x100d00eb0"
+      },
+      {
+        "name": "meshParamName",
+        "typeGetter": "__Z17GetMetaTypeByTypeINSt3__112basic_stringIcNS0_11char_traitsIcEE16StlPoolAllocatorIcEEEERK8MetaTypev",
+        "nativeOffset": 120,
+        "registrationFunction": "0x100699cb0",
+        "propertyAddress": "0x100d00f00"
+      },
+      {
+        "name": "paramA",
+        "typeGetter": "__Z17GetMetaTypeByTypeIN10Vectormath3Aos7Vector4EERK8MetaTypev",
+        "nativeOffset": 80,
+        "registrationFunction": "0x100699cb0",
+        "propertyAddress": "0x100d00f50"
+      },
+      {
+        "name": "paramB",
+        "typeGetter": "__Z17GetMetaTypeByTypeIN10Vectormath3Aos7Vector4EERK8MetaTypev",
+        "nativeOffset": 96,
+        "registrationFunction": "0x100699cb0",
+        "propertyAddress": "0x100d00fa0"
+      },
+      {
+        "name": "endOnA",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 112,
+        "registrationFunction": "0x100699cb0",
+        "propertyAddress": "0x100d00ff0"
+      },
+      {
+        "name": "endOnRandom",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 113,
+        "registrationFunction": "0x100699cb0",
+        "propertyAddress": "0x100d01040"
+      },
+      {
+        "name": "isSingleVal",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 144,
+        "registrationFunction": "0x100699cb0",
+        "propertyAddress": "0x100d01090"
+      },
+      {
+        "name": "durationMin",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 148,
+        "registrationFunction": "0x100699cb0",
+        "propertyAddress": "0x100d010e0"
+      },
+      {
+        "name": "durationMax",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 152,
+        "registrationFunction": "0x100699cb0",
+        "propertyAddress": "0x100d01130"
+      },
+      {
+        "name": "frequencyMin",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 156,
+        "registrationFunction": "0x100699cb0",
+        "propertyAddress": "0x100d01180"
+      },
+      {
+        "name": "frequencyMax",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 160,
+        "registrationFunction": "0x100699cb0",
+        "propertyAddress": "0x100d011d0"
+      },
+      {
+        "name": "threshhold",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 164,
+        "registrationFunction": "0x100699cb0",
+        "propertyAddress": "0x100d01220"
+      },
+      {
+        "name": "threshholdBlend",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 168,
+        "registrationFunction": "0x100699cb0",
+        "propertyAddress": "0x100d01270"
+      },
+      {
+        "name": "itemOffset",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 172,
+        "registrationFunction": "0x100699cb0",
+        "propertyAddress": "0x100d012c0"
+      },
+      {
+        "name": "synchAcrossClumps",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 176,
+        "registrationFunction": "0x100699cb0",
+        "propertyAddress": "0x100d01310"
+      },
+      {
+        "name": "fadeoutTime",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 180,
+        "registrationFunction": "0x100699cb0",
+        "propertyAddress": "0x100d01360"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 18 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "Dawn:n101",
+      "level": "Dawn",
+      "nodeId": 101,
+      "name": "BstNode_1786",
+      "className": "StrobeObject",
+      "classIndex": 28,
+      "sourceOffset": 49138,
+      "sourceLength": 110,
+      "sourceSha256": "a41cabeddcac5719fb2668b79c327cb3077de9e560e8a899f9c0d7220d50985e",
+      "declaredFieldCount": 19,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n438",
+      "level": "Dawn",
+      "nodeId": 438,
+      "name": "BstNode_963",
+      "className": "StrobeObject",
+      "classIndex": 28,
+      "sourceOffset": 98693,
+      "sourceLength": 98,
+      "sourceSha256": "a7a7094f358fb8f0e3057dfd727f16186af58fbc6d4602f1740cef75fc8901a7",
+      "declaredFieldCount": 19,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n438/p2",
+          "fieldName": "createLightTrigs",
+          "target": "Dawn:n3098",
+          "targetNodeId": 3098,
+          "offset": 98714
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n737",
+      "level": "Dawn",
+      "nodeId": 737,
+      "name": "BstNode_1790",
+      "className": "StrobeObject",
+      "classIndex": 28,
+      "sourceOffset": 150850,
+      "sourceLength": 111,
+      "sourceSha256": "ef9ddc4dd157da71b340f21c096d7d7f25b102c1e5c5a551373f4e0cff441887",
+      "declaredFieldCount": 19,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n865",
+      "level": "Dawn",
+      "nodeId": 865,
+      "name": "BstNode_2504654904",
+      "className": "StrobeObject",
+      "classIndex": 28,
+      "sourceOffset": 170575,
+      "sourceLength": 116,
+      "sourceSha256": "3eed7873df0fc27b0df9afc5631a253adba10a9f412a16e8594562aea3b1b1bd",
+      "declaredFieldCount": 19,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n865/p2",
+          "fieldName": "createLightTrigs",
+          "target": "Dawn:n3193",
+          "targetNodeId": 3193,
+          "offset": 170603
+        },
+        {
+          "fieldId": "n865/p5",
+          "fieldName": "fxOnEnd",
+          "target": "Dawn:n3194",
+          "targetNodeId": 3194,
+          "offset": 170612
+        },
+        {
+          "fieldId": "n865/p12",
+          "fieldName": "meshes",
+          "target": "Dawn:n1683",
+          "targetNodeId": 1683,
+          "offset": 170646
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n1638",
+      "level": "Dawn",
+      "nodeId": 1638,
+      "name": "BstNode_2504654898",
+      "className": "StrobeObject",
+      "classIndex": 28,
+      "sourceOffset": 280662,
+      "sourceLength": 116,
+      "sourceSha256": "5136ebfc30e384c0d0ba17e10cbbcd7175b707517f823ff02495b7abb3f2c4e4",
+      "declaredFieldCount": 19,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1638/p2",
+          "fieldName": "createLightTrigs",
+          "target": "Dawn:n3411",
+          "targetNodeId": 3411,
+          "offset": 280690
+        },
+        {
+          "fieldId": "n1638/p5",
+          "fieldName": "fxOnEnd",
+          "target": "Dawn:n3412",
+          "targetNodeId": 3412,
+          "offset": 280699
+        },
+        {
+          "fieldId": "n1638/p12",
+          "fieldName": "meshes",
+          "target": "Dawn:n1683",
+          "targetNodeId": 1683,
+          "offset": 280733
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2763",
+      "level": "Dawn",
+      "nodeId": 2763,
+      "name": "BstNode_2504654906",
+      "className": "StrobeObject",
+      "classIndex": 28,
+      "sourceOffset": 455538,
+      "sourceLength": 116,
+      "sourceSha256": "fc81df6e583c1e257fe6b46024b51c2085aa061c3d0ce9741ebf2d99216fb286",
+      "declaredFieldCount": 19,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2763/p2",
+          "fieldName": "createLightTrigs",
+          "target": "Dawn:n3738",
+          "targetNodeId": 3738,
+          "offset": 455566
+        },
+        {
+          "fieldId": "n2763/p5",
+          "fieldName": "fxOnEnd",
+          "target": "Dawn:n3739",
+          "targetNodeId": 3739,
+          "offset": 455575
+        },
+        {
+          "fieldId": "n2763/p12",
+          "fieldName": "meshes",
+          "target": "Dawn:n1683",
+          "targetNodeId": 1683,
+          "offset": 455609
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n148",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 148,
+      "name": "BstNode_34603521",
+      "className": "StrobeObject",
+      "classIndex": 27,
+      "sourceOffset": 54414,
+      "sourceLength": 114,
+      "sourceSha256": "155e2c55d01faec67cc7e46e861d36150ae0ab00d86ff8fad8e6c90dcff17800",
+      "declaredFieldCount": 19,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n148/p2",
+          "fieldName": "createLightTrigs",
+          "target": "Prairie_NestAndKeeper:n991",
+          "targetNodeId": 991,
+          "offset": 54440
+        },
+        {
+          "fieldId": "n148/p12",
+          "fieldName": "meshes",
+          "target": "Prairie_NestAndKeeper:n938",
+          "targetNodeId": 938,
+          "offset": 54483
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n343",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 343,
+      "name": "BstNode_34603291",
+      "className": "StrobeObject",
+      "classIndex": 27,
+      "sourceOffset": 99887,
+      "sourceLength": 114,
+      "sourceSha256": "9e443a6a4951055d8451e82415ed5c4b859a0b344c0bd9238c146f225764c88b",
+      "declaredFieldCount": 19,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n343/p2",
+          "fieldName": "createLightTrigs",
+          "target": "Prairie_NestAndKeeper:n1014",
+          "targetNodeId": 1014,
+          "offset": 99913
+        },
+        {
+          "fieldId": "n343/p12",
+          "fieldName": "meshes",
+          "target": "Prairie_NestAndKeeper:n260",
+          "targetNodeId": 260,
+          "offset": 99956
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_NestAndKeeper:n912",
+      "level": "Prairie_NestAndKeeper",
+      "nodeId": 912,
+      "name": "BstNode_2279670078",
+      "className": "StrobeObject",
+      "classIndex": 27,
+      "sourceOffset": 224245,
+      "sourceLength": 116,
+      "sourceSha256": "20fa049d8c8370f08ae35e7a3799e2e2e9a59cda7a409f16cbb4066b1228b854",
+      "declaredFieldCount": 19,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n912/p2",
+          "fieldName": "createLightTrigs",
+          "target": "Prairie_NestAndKeeper:n1075",
+          "targetNodeId": 1075,
+          "offset": 224273
+        },
+        {
+          "fieldId": "n912/p12",
+          "fieldName": "meshes",
+          "target": "Prairie_NestAndKeeper:n712",
+          "targetNodeId": 712,
+          "offset": 224316
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n180",
+      "level": "SkyHub2",
+      "nodeId": 180,
+      "name": "BstNode_1049165988",
+      "className": "StrobeObject",
+      "classIndex": 36,
+      "sourceOffset": 65346,
+      "sourceLength": 116,
+      "sourceSha256": "1a34fbcbcca08917e12e483a6685c788fe0d87c13b80982ef493227155ddcdb8",
+      "declaredFieldCount": 19,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n180/p2",
+          "fieldName": "createLightTrigs",
+          "target": "SkyHub2:n2485",
+          "targetNodeId": 2485,
+          "offset": 65374
+        },
+        {
+          "fieldId": "n180/p12",
+          "fieldName": "meshes",
+          "target": "SkyHub2:n472",
+          "targetNodeId": 472,
+          "offset": 65417
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n369",
+      "level": "SkyHub2",
+      "nodeId": 369,
+      "name": "BstNode_1049165985",
+      "className": "StrobeObject",
+      "classIndex": 36,
+      "sourceOffset": 102766,
+      "sourceLength": 116,
+      "sourceSha256": "7ee7e6c4b08e4887a194c99d2687528a58afa771ac3d2a837c247da49501e0c4",
+      "declaredFieldCount": 19,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n369/p2",
+          "fieldName": "createLightTrigs",
+          "target": "SkyHub2:n2517",
+          "targetNodeId": 2517,
+          "offset": 102794
+        },
+        {
+          "fieldId": "n369/p12",
+          "fieldName": "meshes",
+          "target": "SkyHub2:n2064",
+          "targetNodeId": 2064,
+          "offset": 102837
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n758",
+      "level": "SkyHub2",
+      "nodeId": 758,
+      "name": "BstNode_1049165986",
+      "className": "StrobeObject",
+      "classIndex": 36,
+      "sourceOffset": 171593,
+      "sourceLength": 116,
+      "sourceSha256": "f1f3e6b9317d54315cd4bfc3ddaec4732484b4663ccde922b2ce63e465cdbbb5",
+      "declaredFieldCount": 19,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n758/p2",
+          "fieldName": "createLightTrigs",
+          "target": "SkyHub2:n2573",
+          "targetNodeId": 2573,
+          "offset": 171621
+        },
+        {
+          "fieldId": "n758/p12",
+          "fieldName": "meshes",
+          "target": "SkyHub2:n2123",
+          "targetNodeId": 2123,
+          "offset": 171664
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "Dawn",
+      "path": "Levels/Dawn/Objects.level.bin",
+      "sha256": "16e26aafc7f9d120a548bf5d8bec04fbc18146bc8db531ef75144889b1ff197a",
+      "bytes": 504637,
+      "nodes": 3798,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dawn.json",
+      "markdown": "Objects对象清单/Dawn.md"
+    },
+    {
+      "level": "Prairie_NestAndKeeper",
+      "path": "Levels/Prairie_NestAndKeeper/Objects.level.bin",
+      "sha256": "5eabe877e07c84e5f9270035aaab73fa20144c87f6e9136e5285dbaff3f85b7a",
+      "bytes": 239403,
+      "nodes": 1077,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_NestAndKeeper.json",
+      "markdown": "Objects对象清单/Prairie_NestAndKeeper.md"
+    },
+    {
+      "level": "SkyHub2",
+      "path": "Levels/SkyHub2/Objects.level.bin",
+      "sha256": "8b467f9b349d9d4ce0d038528c96e44dff30063149bf5bbf90232a56bb9dd36f",
+      "bytes": 475656,
+      "nodes": 2886,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SkyHub2.json",
+      "markdown": "Objects对象清单/SkyHub2.md"
+    }
+  ]
+}

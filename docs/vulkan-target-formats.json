@@ -1,0 +1,73 @@
+{
+  "passed": false,
+  "complete": true,
+  "device": {
+    "engine": "Sky Native Vulkan",
+    "backend": "Vulkan",
+    "device": "llvmpipe (LLVM 19.1.7, 128 bits)",
+    "apiVersion": 4210993,
+    "deviceType": 4,
+    "shaderFloat16": true
+  },
+  "scope": "All 63,488 finite half encodings uploaded in each of R16F/RG16F/RGBA16F, copied through matching native Vulkan attachments and read back as float32 RGBA. Float32-to-R16F storage checks include subnormals, negative zero, ties and overflow. Exact float32 bytes checked, including missing channels. No original Metal GPU acceptance.",
+  "fixtures": [
+    {
+      "name": "r16f",
+      "pixels": 63488,
+      "components": 253952,
+      "failedComponents": 0,
+      "firstFailures": [],
+      "passed": true
+    },
+    {
+      "name": "rg16f",
+      "pixels": 31744,
+      "components": 126976,
+      "failedComponents": 0,
+      "firstFailures": [],
+      "passed": true
+    },
+    {
+      "name": "rgba16f",
+      "pixels": 15872,
+      "components": 63488,
+      "failedComponents": 0,
+      "firstFailures": [],
+      "passed": true
+    },
+    {
+      "name": "float32-to-r16f",
+      "pixels": 256,
+      "components": 1024,
+      "failedComponents": 12,
+      "firstFailures": [
+        [
+          144,
+          65504.0,
+          "Infinity"
+        ],
+        [
+          148,
+          65504.0,
+          "Infinity"
+        ],
+        [
+          152,
+          65504.0,
+          "Infinity"
+        ],
+        [
+          156,
+          -65504.0,
+          "-Infinity"
+        ],
+        [
+          160,
+          -65504.0,
+          "-Infinity"
+        ]
+      ],
+      "passed": false
+    }
+  ]
+}

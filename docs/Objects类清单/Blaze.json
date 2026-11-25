@@ -1,0 +1,1320 @@
+{
+  "className": "Blaze",
+  "functionGroup": "粒子、灯光与场景效果",
+  "functionRole": "燃烧对象、网格和灰烬参数",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "partial",
+      "description": "Blaze 的原默认值、继承初始化及 17 个序列化字段变体；原注册字段 17 项。"
+    },
+    {
+      "name": "燃烧对象、网格和灰烬参数",
+      "status": "partial",
+      "description": "原池创建／启用／变换／Reset／SetActive／释放和普通 Load 已独立核验；使用保存模型时保留原克隆、重复缩放与透明度，生成分支保留贴图引用和 Flame 配置。实际 Model／资源／音效 owner、Blaze.Update 与动态绘制仍待接；本语料未发现直接 Darkshroom 引用，不计为黑暗植物实现。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Clump（15 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "Blaze",
+    "category": "粒子、灯光与场景效果",
+    "functionGroupId": "effects",
+    "functionRole": "燃烧对象、网格和灰烬参数",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "partial",
+        "description": "Blaze 的原默认值、继承初始化及 17 个序列化字段变体；原注册字段 17 项。"
+      },
+      {
+        "name": "燃烧对象、网格和灰烬参数",
+        "status": "partial",
+        "description": "原池创建／启用／变换／Reset／SetActive／释放和普通 Load 已独立核验；使用保存模型时保留原克隆、重复缩放与透明度，生成分支保留贴图引用和 Flame 配置。实际 Model／资源／音效 owner、Blaze.Update 与动态绘制仍待接；本语料未发现直接 Darkshroom 引用，不计为黑暗植物实现。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Clump（15 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Clump",
+        "references": 15
+      }
+    ],
+    "rttiWorkingGroup": "系统和其余类型",
+    "role": "对象实例类型",
+    "instances": 17,
+    "nestedInstances": 0,
+    "referenceFields": 15,
+    "declaredLevels": 2,
+    "levels": [
+      {
+        "level": "Night",
+        "nodes": 11,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Rain",
+        "nodes": 6,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "activeTime",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "autoSave",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "backlit",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "bstGuid",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "children",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "emberChance",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "enabled",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "hint",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "meshType",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "middleStep",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "onActivate",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "onFail",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "randomChild",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "root",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "savepoint",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "transform",
+        "type": 0,
+        "size": 64,
+        "nestedClass": null
+      },
+      {
+        "name": "turnOnDelay",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100c8ba40",
+    "nativeRegisteredFields": [
+      {
+        "name": "transform",
+        "typeGetter": "__Z17GetMetaTypeByTypeIN10Vectormath3Aos7Matrix4EERK8MetaTypev",
+        "nativeOffset": 16,
+        "registrationFunction": "0x1001b3050",
+        "propertyAddress": "0x100c8b228"
+      },
+      {
+        "name": "enabled",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 84,
+        "registrationFunction": "0x1001b3050",
+        "propertyAddress": "0x100c8b278"
+      },
+      {
+        "name": "root",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 85,
+        "registrationFunction": "0x1001b3050",
+        "propertyAddress": "0x100c8b2c8"
+      },
+      {
+        "name": "bstGuid",
+        "typeGetter": "__Z17GetMetaTypeByTypeIjERK8MetaTypev",
+        "nativeOffset": 104,
+        "registrationFunction": "0x1001b3050",
+        "propertyAddress": "0x100c8b318"
+      },
+      {
+        "name": "savepoint",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 87,
+        "registrationFunction": "0x1001b3050",
+        "propertyAddress": "0x100c8b368"
+      },
+      {
+        "name": "hint",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 97,
+        "registrationFunction": "0x1001b3050",
+        "propertyAddress": "0x100c8b3b8"
+      },
+      {
+        "name": "backlit",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 96,
+        "registrationFunction": "0x1001b3050",
+        "propertyAddress": "0x100c8b408"
+      },
+      {
+        "name": "autoSave",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 145,
+        "registrationFunction": "0x1001b3050",
+        "propertyAddress": "0x100c8b458"
+      },
+      {
+        "name": "middleStep",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 144,
+        "registrationFunction": "0x1001b3050",
+        "propertyAddress": "0x100c8b4a8"
+      },
+      {
+        "name": "emberChance",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 100,
+        "registrationFunction": "0x1001b3050",
+        "propertyAddress": "0x100c8b4f8"
+      },
+      {
+        "name": "children",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 112,
+        "registrationFunction": "0x1001b3050",
+        "propertyAddress": "0x100c8b548"
+      },
+      {
+        "name": "meshType",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP9LevelMeshERK8MetaTypev",
+        "nativeOffset": 88,
+        "registrationFunction": "0x1001b3050",
+        "propertyAddress": "0x100c8b598"
+      },
+      {
+        "name": "activeTime",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 120,
+        "registrationFunction": "0x1001b3050",
+        "propertyAddress": "0x100c8b5e8"
+      },
+      {
+        "name": "randomChild",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 124,
+        "registrationFunction": "0x1001b3050",
+        "propertyAddress": "0x100c8b638"
+      },
+      {
+        "name": "onActivate",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 128,
+        "registrationFunction": "0x1001b3050",
+        "propertyAddress": "0x100c8b688"
+      },
+      {
+        "name": "onFail",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 136,
+        "registrationFunction": "0x1001b3050",
+        "propertyAddress": "0x100c8b6d8"
+      },
+      {
+        "name": "turnOnDelay",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 148,
+        "registrationFunction": "0x1001b3050",
+        "propertyAddress": "0x100c8b728"
+      }
+    ],
+    "completedCheckpoints": 4,
+    "partialCheckpoints": 2,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 40,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": true,
+    "implementation": [
+      "src/core/blaze-runtime.ts",
+      "src/core/blaze-load-runtime.ts",
+      "src/core/environment-object-state.ts"
+    ],
+    "evidence": [
+      "docs/黑暗植物与生物加载续接.md",
+      "docs/creature-plant-load-native.json",
+      "docs/blaze-oracle.json",
+      "docs/blaze-load-oracle.json"
+    ],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 17 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "partial",
+        "note": "原池创建／启用／变换／Reset／SetActive／释放和普通 Load 已独立核验；使用保存模型时保留原克隆、重复缩放与透明度，生成分支保留贴图引用和 Flame 配置。实际 Model／资源／音效 owner、Blaze.Update 与动态绘制仍待接；本语料未发现直接 Darkshroom 引用，不计为黑暗植物实现。",
+        "evidence": [
+          "docs/黑暗植物与生物加载续接.md",
+          "docs/creature-plant-load-native.json",
+          "docs/blaze-oracle.json",
+          "docs/blaze-load-oracle.json"
+        ]
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "partial",
+        "note": "原池创建／启用／变换／Reset／SetActive／释放和普通 Load 已独立核验；使用保存模型时保留原克隆、重复缩放与透明度，生成分支保留贴图引用和 Flame 配置。实际 Model／资源／音效 owner、Blaze.Update 与动态绘制仍待接；本语料未发现直接 Darkshroom 引用，不计为黑暗植物实现。",
+        "evidence": [
+          "docs/黑暗植物与生物加载续接.md",
+          "docs/creature-plant-load-native.json",
+          "docs/blaze-oracle.json",
+          "docs/blaze-load-oracle.json"
+        ]
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "verified",
+        "note": "原池创建／启用／变换／Reset／SetActive／释放和普通 Load 已独立核验；使用保存模型时保留原克隆、重复缩放与透明度，生成分支保留贴图引用和 Flame 配置。实际 Model／资源／音效 owner、Blaze.Update 与动态绘制仍待接；本语料未发现直接 Darkshroom 引用，不计为黑暗植物实现。",
+        "evidence": [
+          "docs/黑暗植物与生物加载续接.md",
+          "docs/creature-plant-load-native.json",
+          "docs/blaze-oracle.json",
+          "docs/blaze-load-oracle.json"
+        ]
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "原池创建／启用／变换／Reset／SetActive／释放和普通 Load 已独立核验；使用保存模型时保留原克隆、重复缩放与透明度，生成分支保留贴图引用和 Flame 配置。实际 Model／资源／音效 owner、Blaze.Update 与动态绘制仍待接；本语料未发现直接 Darkshroom 引用，不计为黑暗植物实现。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "Night:n84",
+      "level": "Night",
+      "nodeId": 84,
+      "name": "BstNode_2204",
+      "className": "Blaze",
+      "classIndex": 25,
+      "sourceOffset": 35204,
+      "sourceLength": 121,
+      "sourceSha256": "793527614cbd5f861ae058d1357df1d4e9858ac4f2864959721f7b7cd59776a7",
+      "declaredFieldCount": 17,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2204,
+            "int": 2204,
+            "float": 3.088461815371897e-42
+          },
+          "raw": "9c080000"
+        },
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n84/p4",
+          "fieldName": "children",
+          "target": "Night:n3124",
+          "targetNodeId": 3124,
+          "offset": 35231
+        }
+      ],
+      "incomingReferenceCount": 5,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n111",
+      "level": "Night",
+      "nodeId": 111,
+      "name": "BstNode_2198",
+      "className": "Blaze",
+      "classIndex": 25,
+      "sourceOffset": 38308,
+      "sourceLength": 121,
+      "sourceSha256": "9cb8c3a11eac0cc4ca082e53988acca2abf1070149e77e4511b81f2ae0f53569",
+      "declaredFieldCount": 17,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2198,
+            "int": 2198,
+            "float": 3.080054024585948e-42
+          },
+          "raw": "96080000"
+        },
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n111/p4",
+          "fieldName": "children",
+          "target": "Night:n3136",
+          "targetNodeId": 3136,
+          "offset": 38335
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n313",
+      "level": "Night",
+      "nodeId": 313,
+      "name": "BstNode_2190",
+      "className": "Blaze",
+      "classIndex": 25,
+      "sourceOffset": 68940,
+      "sourceLength": 121,
+      "sourceSha256": "97dabdeece264b0c412da04e86691babddd50ba220a12b0b552b96271c0caeca",
+      "declaredFieldCount": 17,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2190,
+            "int": 2190,
+            "float": 3.0688436368713494e-42
+          },
+          "raw": "8e080000"
+        },
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n313/p4",
+          "fieldName": "children",
+          "target": "Night:n3172",
+          "targetNodeId": 3172,
+          "offset": 68967
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n483",
+      "level": "Night",
+      "nodeId": 483,
+      "name": "BstNode_2205",
+      "className": "Blaze",
+      "classIndex": 25,
+      "sourceOffset": 95758,
+      "sourceLength": 121,
+      "sourceSha256": "1dfc9d810c21d778100c0c6dae3702ffcdac892c5ea47136a4b47c98211519db",
+      "declaredFieldCount": 17,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2205,
+            "int": 2205,
+            "float": 3.0898631138362216e-42
+          },
+          "raw": "9d080000"
+        },
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n483/p4",
+          "fieldName": "children",
+          "target": "Night:n3199",
+          "targetNodeId": 3199,
+          "offset": 95785
+        }
+      ],
+      "incomingReferenceCount": 5,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n958",
+      "level": "Night",
+      "nodeId": 958,
+      "name": "BstNode_2185",
+      "className": "Blaze",
+      "classIndex": 25,
+      "sourceOffset": 167012,
+      "sourceLength": 121,
+      "sourceSha256": "a835ced0b808c2af8352efe37fc768fe451ef9104728243689cde7cbb528d5a1",
+      "declaredFieldCount": 17,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2185,
+            "int": 2185,
+            "float": 3.061837144549725e-42
+          },
+          "raw": "89080000"
+        },
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n958/p4",
+          "fieldName": "children",
+          "target": "Night:n3281",
+          "targetNodeId": 3281,
+          "offset": 167039
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2179",
+      "level": "Night",
+      "nodeId": 2179,
+      "name": "BstNode_2191",
+      "className": "Blaze",
+      "classIndex": 25,
+      "sourceOffset": 345349,
+      "sourceLength": 121,
+      "sourceSha256": "d850a22c39dc2bd964b3ac6924a37ed29e4fde44139360a257cfcc27119c84ff",
+      "declaredFieldCount": 17,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2191,
+            "int": 2191,
+            "float": 3.070244935335674e-42
+          },
+          "raw": "8f080000"
+        },
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n2179/p4",
+          "fieldName": "children",
+          "target": "Night:n3517",
+          "targetNodeId": 3517,
+          "offset": 345376
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2492",
+      "level": "Night",
+      "nodeId": 2492,
+      "name": "BstNode_2231",
+      "className": "Blaze",
+      "classIndex": 25,
+      "sourceOffset": 391309,
+      "sourceLength": 121,
+      "sourceSha256": "393867c51ae8c977b429d15c87b243f9a0d6f0a6d35652ac4fcba1d114e2286b",
+      "declaredFieldCount": 17,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2231,
+            "int": 2231,
+            "float": 3.126296873908667e-42
+          },
+          "raw": "b7080000"
+        },
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 5,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2782",
+      "level": "Night",
+      "nodeId": 2782,
+      "name": "BstNode_2199",
+      "className": "Blaze",
+      "classIndex": 25,
+      "sourceOffset": 432510,
+      "sourceLength": 121,
+      "sourceSha256": "b864ebf0637181cdf2bbab217d1d8afedfa0c3a0461038539182e8df3616c9e9",
+      "declaredFieldCount": 17,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2199,
+            "int": 2199,
+            "float": 3.081455323050273e-42
+          },
+          "raw": "97080000"
+        },
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n2782/p4",
+          "fieldName": "children",
+          "target": "Night:n3645",
+          "targetNodeId": 3645,
+          "offset": 432537
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n2807",
+      "level": "Night",
+      "nodeId": 2807,
+      "name": "BstNode_2206",
+      "className": "Blaze",
+      "classIndex": 25,
+      "sourceOffset": 435711,
+      "sourceLength": 121,
+      "sourceSha256": "b805ecf817dce68a6c15a031f2e298e5ff66b9a00ad5646e6e3c7b72b1c458ad",
+      "declaredFieldCount": 17,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2206,
+            "int": 2206,
+            "float": 3.0912644123005465e-42
+          },
+          "raw": "9e080000"
+        },
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n2807/p4",
+          "fieldName": "children",
+          "target": "Night:n3651",
+          "targetNodeId": 3651,
+          "offset": 435738
+        }
+      ],
+      "incomingReferenceCount": 4,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n3001",
+      "level": "Night",
+      "nodeId": 3001,
+      "name": "BstNode_2200",
+      "className": "Blaze",
+      "classIndex": 25,
+      "sourceOffset": 466147,
+      "sourceLength": 121,
+      "sourceSha256": "9adc67d6dffc4fb4fd448b6823fb79646c1614533e8431851d0ed44ffb2da312",
+      "declaredFieldCount": 17,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2200,
+            "int": 2200,
+            "float": 3.0828566215145976e-42
+          },
+          "raw": "98080000"
+        },
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n3001/p4",
+          "fieldName": "children",
+          "target": "Night:n3693",
+          "targetNodeId": 3693,
+          "offset": 466174
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Night:n3085",
+      "level": "Night",
+      "nodeId": 3085,
+      "name": "BstNode_2208",
+      "className": "Blaze",
+      "classIndex": 25,
+      "sourceOffset": 481577,
+      "sourceLength": 121,
+      "sourceSha256": "da1f5541b9eb0a4ce922b7e49171d3d1469a7fe240dd2faf34ac6e5717454b1a",
+      "declaredFieldCount": 17,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2208,
+            "int": 2208,
+            "float": 3.094067009229196e-42
+          },
+          "raw": "a0080000"
+        },
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n3085/p4",
+          "fieldName": "children",
+          "target": "Night:n3709",
+          "targetNodeId": 3709,
+          "offset": 481604
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n1146",
+      "level": "Rain",
+      "nodeId": 1146,
+      "name": "BstNode_2345992852",
+      "className": "Blaze",
+      "classIndex": 75,
+      "sourceOffset": 286675,
+      "sourceLength": 127,
+      "sourceSha256": "55e364f29682edb28b3ff0e70979694f2208417e79b97728441a809b308bdc6e",
+      "declaredFieldCount": 17,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2345992852,
+            "int": -1948974444,
+            "float": -8.204849476225396e-32
+          },
+          "raw": "9402d58b"
+        },
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1146/p4",
+          "fieldName": "children",
+          "target": "Rain:n1987",
+          "targetNodeId": 1987,
+          "offset": 286708
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n1415",
+      "level": "Rain",
+      "nodeId": 1415,
+      "name": "BstNode_2345992845",
+      "className": "Blaze",
+      "classIndex": 75,
+      "sourceOffset": 344085,
+      "sourceLength": 127,
+      "sourceSha256": "5ea093aa10cdcbb8aa77e7e500ddefbee06c4402a3c1cae3bb819c6fe5c48353",
+      "declaredFieldCount": 17,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2345992845,
+            "int": -1948974451,
+            "float": -8.204845361995168e-32
+          },
+          "raw": "8d02d58b"
+        },
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1415/p4",
+          "fieldName": "children",
+          "target": "Rain:n2031",
+          "targetNodeId": 2031,
+          "offset": 344118
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n1462",
+      "level": "Rain",
+      "nodeId": 1462,
+      "name": "BstNode_2345992302",
+      "className": "Blaze",
+      "classIndex": 75,
+      "sourceOffset": 355132,
+      "sourceLength": 127,
+      "sourceSha256": "d5bf222f29fd434e16bfbdc0f3f63e25fcf3761b42f31a2dab6a9331e4293e2c",
+      "declaredFieldCount": 17,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2345992302,
+            "int": -1948974994,
+            "float": -8.20452621527892e-32
+          },
+          "raw": "6e00d58b"
+        },
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1462/p4",
+          "fieldName": "children",
+          "target": "Rain:n2037",
+          "targetNodeId": 2037,
+          "offset": 355165
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n1571",
+      "level": "Rain",
+      "nodeId": 1571,
+      "name": "BstNode_2345992304",
+      "className": "Blaze",
+      "classIndex": 75,
+      "sourceOffset": 378497,
+      "sourceLength": 127,
+      "sourceSha256": "19722e0533f6a7b97036949d75b320a1cfcb179f4e121fef5d5017c6c890ddee",
+      "declaredFieldCount": 17,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2345992304,
+            "int": -1948974992,
+            "float": -8.204527390773271e-32
+          },
+          "raw": "7000d58b"
+        },
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1571/p4",
+          "fieldName": "children",
+          "target": "Rain:n2045",
+          "targetNodeId": 2045,
+          "offset": 378530
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n1626",
+      "level": "Rain",
+      "nodeId": 1626,
+      "name": "BstNode_2345992865",
+      "className": "Blaze",
+      "classIndex": 75,
+      "sourceOffset": 390859,
+      "sourceLength": 127,
+      "sourceSha256": "8860993ac16bc4bdc650b1406b2299401b81d78e8a4ab9c2a007816f5f251b43",
+      "declaredFieldCount": 17,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2345992865,
+            "int": -1948974431,
+            "float": -8.204857116938676e-32
+          },
+          "raw": "a102d58b"
+        },
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 4,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n1819",
+      "level": "Rain",
+      "nodeId": 1819,
+      "name": "BstNode_2345992303",
+      "className": "Blaze",
+      "classIndex": 75,
+      "sourceOffset": 438883,
+      "sourceLength": 127,
+      "sourceSha256": "c552d91f85cefd772f9da78d4ad0579c7fcf1cfabb3363aec4ea57997d2bb51a",
+      "declaredFieldCount": 17,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2345992303,
+            "int": -1948974993,
+            "float": -8.204526803026095e-32
+          },
+          "raw": "6f00d58b"
+        },
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1819/p4",
+          "fieldName": "children",
+          "target": "Rain:n2073",
+          "targetNodeId": 2073,
+          "offset": 438916
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "Night",
+      "path": "Levels/Night/Objects.level.bin",
+      "sha256": "6ce612c9efb82834d648de81251033b341a44f4d9374d8338d868575aab6a723",
+      "bytes": 499756,
+      "nodes": 3719,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Night.json",
+      "markdown": "Objects对象清单/Night.md"
+    },
+    {
+      "level": "Rain",
+      "path": "Levels/Rain/Objects.level.bin",
+      "sha256": "20093bccf3bb1ea0936cb993e66cef0187b40a5a411df3573eb28e4def4f75c6",
+      "bytes": 457732,
+      "nodes": 2079,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Rain.json",
+      "markdown": "Objects对象清单/Rain.md"
+    }
+  ]
+}

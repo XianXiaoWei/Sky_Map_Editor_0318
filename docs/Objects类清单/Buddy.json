@@ -1,0 +1,360 @@
+{
+  "className": "Buddy",
+  "functionGroup": "生物、群体与 AI",
+  "functionRole": "伙伴实例",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "partial",
+      "description": "Buddy 的原默认值、继承初始化及 3 个序列化字段变体；原注册字段 3 项。"
+    },
+    {
+      "name": "伙伴实例",
+      "status": "partial",
+      "description": "原父构造、共享 BuddyParams 五项动作初始化、普通 Load 与空 Unload 已独立核验；保留 8 项 BuddyBarn 注册顺序、玩家 ID、Marker／Model／OBB、随机状态和发现位掩码（含 32 项移位结果）。真实 Update、碰撞、联网、音效及动画 Model 生命周期仍待接；DayHubCave 保存禁用实例的独立引用已核验。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "BuddyParams（1 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "Buddy",
+    "category": "生物、群体与 AI",
+    "functionGroupId": "creatures",
+    "functionRole": "伙伴实例",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "partial",
+        "description": "Buddy 的原默认值、继承初始化及 3 个序列化字段变体；原注册字段 3 项。"
+      },
+      {
+        "name": "伙伴实例",
+        "status": "partial",
+        "description": "原父构造、共享 BuddyParams 五项动作初始化、普通 Load 与空 Unload 已独立核验；保留 8 项 BuddyBarn 注册顺序、玩家 ID、Marker／Model／OBB、随机状态和发现位掩码（含 32 项移位结果）。真实 Update、碰撞、联网、音效及动画 Model 生命周期仍待接；DayHubCave 保存禁用实例的独立引用已核验。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "BuddyParams（1 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "BuddyParams",
+        "references": 1
+      }
+    ],
+    "rttiWorkingGroup": "系统和其余类型",
+    "role": "对象实例类型",
+    "instances": 1,
+    "nestedInstances": 0,
+    "referenceFields": 1,
+    "declaredLevels": 1,
+    "levels": [
+      {
+        "level": "DayHubCave",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "enabled",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "params",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "transform",
+        "type": 0,
+        "size": 64,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100c8e2d0",
+    "nativeRegisteredFields": [
+      {
+        "name": "params",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP11BuddyParamsERK8MetaTypev",
+        "nativeOffset": 128,
+        "registrationFunction": "0x1001d5000",
+        "propertyAddress": "0x100c8df10"
+      },
+      {
+        "name": "transform",
+        "typeGetter": "__Z17GetMetaTypeByTypeIN10Vectormath3Aos7Matrix4EERK8MetaTypev",
+        "nativeOffset": 144,
+        "registrationFunction": "0x1001d5000",
+        "propertyAddress": "0x100c8df60"
+      },
+      {
+        "name": "enabled",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 120,
+        "registrationFunction": "0x1001d5000",
+        "propertyAddress": "0x100c8dfb0"
+      }
+    ],
+    "completedCheckpoints": 4,
+    "partialCheckpoints": 2,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 40,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": true,
+    "implementation": [
+      "src/core/environment-object-state.ts",
+      "src/core/creature-construction-runtime.ts",
+      "src/core/buddy-runtime.ts"
+    ],
+    "evidence": [
+      "docs/creature-construction.json",
+      "docs/creature-construction-oracle.json",
+      "docs/creature-objects-defaults.json",
+      "docs/creature-objects-default-oracle.json",
+      "docs/objects-nature-audit.json",
+      "docs/生物类续接.md",
+      "docs/buddy-native.json",
+      "docs/buddy-oracle.json"
+    ],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 3 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "partial",
+        "note": "原父构造、共享 BuddyParams 五项动作初始化、普通 Load 与空 Unload 已独立核验；保留 8 项 BuddyBarn 注册顺序、玩家 ID、Marker／Model／OBB、随机状态和发现位掩码（含 32 项移位结果）。真实 Update、碰撞、联网、音效及动画 Model 生命周期仍待接；DayHubCave 保存禁用实例的独立引用已核验。",
+        "evidence": [
+          "docs/creature-construction.json",
+          "docs/creature-construction-oracle.json",
+          "docs/creature-objects-defaults.json",
+          "docs/creature-objects-default-oracle.json",
+          "docs/objects-nature-audit.json",
+          "docs/生物类续接.md",
+          "docs/buddy-native.json",
+          "docs/buddy-oracle.json"
+        ]
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "partial",
+        "note": "原父构造、共享 BuddyParams 五项动作初始化、普通 Load 与空 Unload 已独立核验；保留 8 项 BuddyBarn 注册顺序、玩家 ID、Marker／Model／OBB、随机状态和发现位掩码（含 32 项移位结果）。真实 Update、碰撞、联网、音效及动画 Model 生命周期仍待接；DayHubCave 保存禁用实例的独立引用已核验。",
+        "evidence": [
+          "docs/creature-construction.json",
+          "docs/creature-construction-oracle.json",
+          "docs/creature-objects-defaults.json",
+          "docs/creature-objects-default-oracle.json",
+          "docs/objects-nature-audit.json",
+          "docs/生物类续接.md",
+          "docs/buddy-native.json",
+          "docs/buddy-oracle.json"
+        ]
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "verified",
+        "note": "原父构造、共享 BuddyParams 五项动作初始化、普通 Load 与空 Unload 已独立核验；保留 8 项 BuddyBarn 注册顺序、玩家 ID、Marker／Model／OBB、随机状态和发现位掩码（含 32 项移位结果）。真实 Update、碰撞、联网、音效及动画 Model 生命周期仍待接；DayHubCave 保存禁用实例的独立引用已核验。",
+        "evidence": [
+          "docs/creature-construction.json",
+          "docs/creature-construction-oracle.json",
+          "docs/creature-objects-defaults.json",
+          "docs/creature-objects-default-oracle.json",
+          "docs/objects-nature-audit.json",
+          "docs/生物类续接.md",
+          "docs/buddy-native.json",
+          "docs/buddy-oracle.json"
+        ]
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "原父构造、共享 BuddyParams 五项动作初始化、普通 Load 与空 Unload 已独立核验；保留 8 项 BuddyBarn 注册顺序、玩家 ID、Marker／Model／OBB、随机状态和发现位掩码（含 32 项移位结果）。真实 Update、碰撞、联网、音效及动画 Model 生命周期仍待接；DayHubCave 保存禁用实例的独立引用已核验。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "DayHubCave:n508",
+      "level": "DayHubCave",
+      "nodeId": 508,
+      "name": "BstNode_234",
+      "className": "Buddy",
+      "classIndex": 51,
+      "sourceOffset": 120261,
+      "sourceLength": 85,
+      "sourceSha256": "a8a314c7a4e34c9be16675cd4f930b508a55c80c8fe1ddb31a8cf57de63f12e8",
+      "declaredFieldCount": 3,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 0,
+          "raw": "00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n508/p2",
+          "fieldName": "params",
+          "target": "DayHubCave:n139",
+          "targetNodeId": 139,
+          "offset": 120342
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "DayHubCave",
+      "path": "Levels/DayHubCave/Objects.level.bin",
+      "sha256": "e4da920cc9f0b1569f14ad1a6d1990db7155dc07ebfc3214c4e385a367872457",
+      "bytes": 202745,
+      "nodes": 1128,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DayHubCave.json",
+      "markdown": "Objects对象清单/DayHubCave.md"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "scope": "Production Vulkan sampler and original Fxaa GLES fragment with existing fullscreen adapter. Explicit high-frequency/flat test images; real-map checks tracked separately. PNG mip preview generation and 16x anisotropy request are not original exporter/Metal parity.",
+  "samplers": [
+    {
+      "name": "base-only",
+      "mipLevels": 1,
+      "anisotropy": 1,
+      "horizontalVariance": 0.0032296801296778457
+    },
+    {
+      "name": "trilinear-mips",
+      "mipLevels": 7,
+      "anisotropy": 1,
+      "horizontalVariance": 5.697093368492222e-31
+    },
+    {
+      "name": "anisotropic-mips",
+      "mipLevels": 7,
+      "anisotropy": 16,
+      "horizontalVariance": 5.697093368492222e-31
+    }
+  ],
+  "device": {
+    "engine": "Sky Native Vulkan",
+    "backend": "Vulkan",
+    "device": "llvmpipe (LLVM 19.1.7, 128 bits)",
+    "apiVersion": 4210993,
+    "deviceType": 4,
+    "shaderFloat16": true
+  },
+  "fxaa": {
+    "beforeLaplacianEnergy": 0.0692587171282087,
+    "afterLaplacianEnergy": 0.02454162505315229,
+    "flatMismatches": 0
+  }
+}

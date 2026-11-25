@@ -1,0 +1,90 @@
+{
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "storageBytes": 248,
+  "vptr": "0x100c17210",
+  "functions": {
+    "placement": {
+      "start": "0x100486f40",
+      "end": "0x100486f90",
+      "codeSha256": "16dfe2816495a6566f75785d48f042800497bf964d9bf121fdeb114e092e022e",
+      "instructions": 20,
+      "assembly": "evidence/move-object-along-rail-placement.asm",
+      "wholeFunctionRestored": true
+    },
+    "Load": {
+      "start": "0x1004844b0",
+      "end": "0x1004845f0",
+      "codeSha256": "e2fde1b2abcc5bf320ff09ea07bf294e7d6c888354e4946ae9d3899473512caf",
+      "instructions": 72,
+      "assembly": "evidence/move-object-along-rail-load.asm",
+      "wholeFunctionRestored": true
+    },
+    "Enable": {
+      "start": "0x100484640",
+      "end": "0x100484a70",
+      "codeSha256": "fd696113b8c6cceb4d5fde9a5ac4bff39375130f5eab7238f81faed4ebceec17",
+      "instructions": 209,
+      "assembly": "evidence/move-object-along-rail-enable.asm",
+      "wholeFunctionRestored": true
+    },
+    "Finish": {
+      "start": "0x100484a70",
+      "end": "0x100484a90",
+      "codeSha256": "06ed365214a1532d3c01dffbc69667c595a07938970a541deaf4665d0bf79051",
+      "instructions": 10,
+      "assembly": "evidence/move-object-along-rail-finish.asm",
+      "wholeFunctionRestored": true
+    },
+    "Unload": {
+      "start": "0x1004845f0",
+      "end": "0x100484640",
+      "codeSha256": "972928fec176a6b41d05d768a7b649533d32197e91073d913562985428a4a9ae",
+      "instructions": 19,
+      "assembly": "evidence/move-object-along-rail-unload.asm",
+      "wholeFunctionRestored": true
+    },
+    "Size.reference": {
+      "start": "0x100486ea0",
+      "end": "0x100486eb0",
+      "codeSha256": "271f906f6232ba61b1a277fc297cb63a858f2e99c533959cc36dead1637a538d",
+      "instructions": 6,
+      "assembly": "evidence/move-object-along-rail-size-reference.asm",
+      "wholeFunctionRestored": false
+    },
+    "Update.reference": {
+      "start": "0x100484a90",
+      "end": "0x100486690",
+      "codeSha256": "e892718a11c4836d694cbf14f3d82c62ea4d093326054e8212759159f30aea9e",
+      "instructions": 1435,
+      "assembly": "evidence/move-object-along-rail-update-reference.asm",
+      "wholeFunctionRestored": false
+    }
+  },
+  "constants": {
+    "minimumTime": {
+      "address": "0x100aa6a9c",
+      "bits": 953267991
+    },
+    "normalizationThreshold": {
+      "address": "0x100aa78c4",
+      "bits": 925353388
+    },
+    "randomScale": {
+      "address": "0x100aa70f0",
+      "bits": 805306368
+    },
+    "randomAmplitude": {
+      "address": "0x100aa77f0",
+      "bits": 1077936128
+    },
+    "randomPhase": {
+      "address": "0x100ac3a18",
+      "bits": 1078523331
+    }
+  },
+  "stateRecordBytes": 96,
+  "swayRecordBytes": 32,
+  "privateScaleW": "Unwritten rbp-0xa0 W supplied explicitly by caller. Native Enable retains it across objects.",
+  "swayPhaseZW": "Native memory VMOVSS clears upper XMM0 lanes; VINSERTPS zero masks and packing leave phase Z/W zero. No incoming-register W is required.",
+  "scope": "Five whole lifecycle functions restored and independently compared. Update is reference evidence only. Heap/metadata/Object transform/Rail queries/random are explicit services; full scene and creature behavior remain pending."
+}

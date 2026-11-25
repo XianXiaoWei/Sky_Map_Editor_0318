@@ -1,0 +1,156 @@
+{
+  "passed": true,
+  "verifiedAtUTC": "2026-11-22T05:08:49.639843+00:00",
+  "scope": "Recovered shared original RenderList CPU registration, submission, context and composed lifecycle; not a new viewport FPS release.",
+  "originalOracle": {
+    "passed": true,
+    "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+    "cases": 248,
+    "preparedCases": 248,
+    "actualMapCases": 0,
+    "snapshots": 798,
+    "comparedBytes": 26291400,
+    "serviceCalls": 87,
+    "entries": [
+      "0x1007b97b0",
+      "0x1007b9820",
+      "0x1007b9990",
+      "0x1007f65d0",
+      "0x1007f6540",
+      "0x1007f6770",
+      "0x1007ba080",
+      "0x1007b9fc0"
+    ],
+    "composition": [
+      "Whole original VertexRender Initialize 0x1007f5e90 → real register/context lookup → whole format initializer 0x1007f5fb0, graphics services explicit.",
+      "Whole original Model submit 0x10046b780 → whole VertexRender queue → primitive count and real RenderList append; debug disabled.",
+      "Whole original Renderable reset 0x1007f6b80 → real unregister → whole RenderPipeline free 0x1007c0cc0 with prepared zero-UBO reflection; graphics/free services explicit."
+    ],
+    "scope": "Fixed registration holes/duplicates/capacity failure, stable unregister and unchanged tail/queued flag, exact queue gates, indexed/non-indexed chunks, uint32 overflow, optional/aliased context outputs and format refresh with live registration/capacity callbacks. All cases are prepared ABI inputs. GPU program/parameters/copy/format refresh/assertions are explicit services.",
+    "actualViewportUsesOriginalQueue": false,
+    "completeSceneRestored": false,
+    "completeModelRestored": false,
+    "remaining": [
+      "Original Scene/Barn allocation and queue-count frame ownership",
+      "Original sort modes and distance functions beyond prior mode 3 evidence",
+      "Full Model constructor, automatic LOD/Visibility/animation/loader",
+      "GPU format/program lifecycle and actual Windows hardware performance"
+    ]
+  },
+  "tests": {
+    "project": {
+      "passed": 469,
+      "failed": 0,
+      "log": "/root/sky-research/render-list-all-tests.log"
+    },
+    "relatedBeforeLastAddedCase": {
+      "passed": 9,
+      "failed": 0,
+      "log": "/root/sky-research/render-list-tests.log"
+    },
+    "typecheck": {
+      "passed": true,
+      "log": "/root/sky-research/render-list-typecheck-final.log"
+    },
+    "desktopBuild": {
+      "passed": true,
+      "platform": "Linux native and Electron bundle",
+      "log": "/root/sky-research/render-list-desktop-build.log"
+    }
+  },
+  "originalObjectsFilesUnchanged": 33,
+  "originalExecutableUnchanged": true,
+  "classSummary": {
+    "levels": 33,
+    "totalNodes": 49824,
+    "nodeClasses": 280,
+    "declaredClasses": 283,
+    "nestedOnlyClasses": 0,
+    "declarationOnlyClasses": 3,
+    "references": 60016,
+    "brokenReferences": 0,
+    "coreSubchainVerifiedClasses": 31,
+    "completeRuntimeClasses": 0,
+    "completedCheckpoints": 861,
+    "totalCheckpoints": 2830,
+    "meanClassCheckpointPercent": 30.42,
+    "histogram": {
+      "20": 19,
+      "30": 233,
+      "40": 31
+    }
+  },
+  "behaviorSummary": {
+    "declaredClasses": 283,
+    "classesWithObjects": 280,
+    "objects": 49824,
+    "behaviorAccepted": 0,
+    "statusCounts": {
+      "待实现": 227,
+      "部分实现": 49,
+      "实现中": 4,
+      "仅声明待核实": 3
+    }
+  },
+  "sourceSha256": {
+    "src/core/render-list-runtime.ts": "8d5b7e18f00f00b1ef9b525ca3bb1c091178bcd53fabf37098e20eceeb9faeee",
+    "src/core/vertex-render-runtime.ts": "9b249e8a0b7eea928d08569feec4b77bfc20f0782f77b15b1c6e574747f2d426",
+    "src/core/model-submit-runtime.ts": "c184885b38bc5f6236546d644d4e5b21a76bcbe3e7febfc2243eafdad8a7afeb",
+    "src/core/render-pipeline-runtime.ts": "6e9cf08117e34e70d50f0fab15f34ff599f1bc25c1da44173018f8d3371a5517",
+    "tools/native-render-list-oracle.c": "8fb46bf8f5f0df6cbf6ef993c2cc43156a71733acbfd270a3c8379d9baee8cf4",
+    "tools/render-list-cases.ts": "565c8165f7dbaba792f22d4446e49be9bc777ea3e1747b2619f20c0940ec3c25",
+    "tools/render-list-oracle.ts": "8fd5b3ef285e1c8f2fde2da22a6e3a24affcc6d64e5f4497f2177daa3f5f941a",
+    "tools/reverse-render-list.py": "fe4e9884b56bc013a51e6551f642167d636183f7c6303c9b73425bcfd106c422",
+    "tests/render-list-runtime.test.ts": "f1d8d239bfc7129060560587b0076377f7dc56655504a078e1bf1a1c76fb4e7f",
+    "tests/fixtures/render-list-native.json.gz": "23fcc46700fc6a7b3c5060fe62150466238dea3b05748f41c0ae3f7ca330a389",
+    "docs/render-list-oracle.json": "4f2281c886b39e403423e4a4fb3d333bc690ea7b142cde171109113ed2fb5147",
+    "docs/render-list-native.json": "38215add0576d5c122474765003681f87b120e9cb5a863c01578690a9afe78f0",
+    "docs/RenderList原注册提交与生命周期推进.md": "7caed5d970a582bd8f018c59dfc4c1f6fed1f546a5b4c0f343eb30eaa7a7eac9",
+    "docs/Objects续接状态.md": "21deeba806989ea0f967f80c39c1f3236bc89666426c296f44182b06e2581f29",
+    "docs/Objects引擎共享类清单.md": "c9d126610fc8735395e2e7f4ac922d448b311918ed90d34b45a31c890b8972e7",
+    "tools/objects-class-progress-spec.json": "aad3e65346861cb8315447577cb6fe344eeb3705163adc8342b443963516cec3",
+    "tools/objects-execution-policy.json": "cda4e711cf2fee3d4e66bc6d74af5f3a55d803808f7a99c6b211a03eefe37a6d",
+    "tools/objects-behavior-checklist.ts": "24eb4bce1685c3a9f350c378263ba23da870f3d312ff90c36469013d36c98aff",
+    "tools/objects-avatar-inventory.ts": "5201be37e620bf1fe4ea224f338a29620ae2949112fb81058445d0033c3e19c3",
+    "tools/model-material-inventory.ts": "6df9846753e537b7c7a7960c162dfb20c8d6d064430c01b0fdff84a2e5d44c01",
+    "docs/Objects.level.bin类进度.json": "a8e1592f8e74d6e39af1cf71bb5be55503194d7c5841a050f02fc290f95fa0bc",
+    "docs/Objects.level.bin逻辑实现列表.json": "02b10eac6be664653e175432bd47eeadd7cd10b2b2c5a57b38702b022aecf478",
+    "docs/Objects与Avatar进度.json": "a3b545b7be2e49f2225a0c3d6c36728fba1fe473c45ac72cab505ded879aea60",
+    "docs/model-material-dependencies.json": "59d376ccd2ab659ee42f1c3d6aae7507dc74c2323a399c3162e130502cf22c7e",
+    "docs/模型材质底层统一清单.md": "952b7a8a38a989dd6b90673a5e501ffb15549e3fdbcebd61906801ef638feae0",
+    "dist/main.cjs": "6ae2b80e5929e82fa7fcfc5875611b29ec88196a0a70b2e5fb451c6acf5a47ab",
+    "dist/preload.cjs": "d3be392ee6b8100d0cab0c84e83d925930ebe5eb448dfa102f7310f0a550c36c",
+    "dist/app.js": "fa4ebeb8a40f6d4aaa87873da35c7cb4c1e33806b148e76b52388c5ba2bf15fa",
+    "evidence/render-list-append.asm": "5184ff9500290f4597ab92581b019a34d9b313c8c1670f8ff397d1319cde17c4",
+    "evidence/render-list-end-queue.asm": "3847e76b0ae4403c84b575b8c3644f772b2ef302d674b341d6284cb97ba84574",
+    "evidence/render-list-find-context.asm": "8fd18c54450701f221145bfad92cbed955577aa2b79ba46e9fb212461ac7e4aa",
+    "evidence/render-list-introsort.asm": "8c3fbb0bed5067f850ea4af1238bdd1d2654c5b959ec78bd3e1e1e4682932d19",
+    "evidence/render-list-primitive-count.asm": "6c77bc0884fff4fe7051c8a509a691e6a948252b8ad22beedf1a92910e526921",
+    "evidence/render-list-queue.asm": "161b28849d6d429934039c07362247490a40435cbb23a9a63769b432021a37a2",
+    "evidence/render-list-register.asm": "49c57090eda29c84e293338e08be84fc41aa271a14df62fa6f6156d7a3e215ee",
+    "evidence/render-list-set-context.asm": "bd5e0cff02369b23c92fc613bddc1308a5ab6cfec4de0a9db873b6b2202d76ac",
+    "evidence/render-list-shader-compare.asm": "318389d30326d96493efa5cbe942dbaf74cf9ea49e698b5b091c037b46dc1e3a",
+    "evidence/render-list-shader-key.asm": "09a55b9dbcd85b6e3dc8ceef55ed788e8108a8164ace26598afc63936bd6476f",
+    "evidence/render-list-sort.asm": "5f3041e8d22200a7d827b3d2a7725fbd646212f0c79ac603fefd75a5851a28a1",
+    "evidence/render-list-unregister.asm": "fcd843ffcf9567db4a4f3a44fcc6a034f61ca004d670cb57301528952b1762d1"
+  },
+  "sourceSync": {
+    "target": "/storage/emulated/0/Download/地图编辑器/sky-map-editor",
+    "verified": true,
+    "receipt": "/root/sky-research/render-list-sync-verification.json"
+  },
+  "releaseRepackaged": false,
+  "actualViewportUsesOriginalQueue": false,
+  "windowsRuntimeVerified": false,
+  "windowsHardwareFpsVerified": false,
+  "firstLoadInstant": false,
+  "completeOriginalRenderer": false,
+  "completeOriginalClasses": 0,
+  "completeOriginalObjects": 0,
+  "remaining": [
+    "Original Scene/Barn allocation and queue-count frame ownership",
+    "Original sort modes and distance functions beyond prior mode 3 evidence",
+    "Full Model constructor, automatic LOD/Visibility/animation/loader",
+    "GPU format/program lifecycle and actual Windows hardware performance"
+  ]
+}

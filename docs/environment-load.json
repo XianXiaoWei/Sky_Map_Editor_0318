@@ -1,0 +1,105 @@
+{
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "functions": {
+    "module-field-order": "0x1007b02c0",
+    "module-build": "0x1007b0620",
+    "module-function-table": "0x1007b1330",
+    "module-callback": "0x1007b17c0",
+    "module-callback-find": "0x1007b17e0",
+    "module-dispatch": "0x1007b1b40",
+    "env-constructor": "0x10031c720",
+    "env-node-constructor": "0x10031c830",
+    "env-load-queue": "0x1003198d0",
+    "env-queue-create": "0x100319d40",
+    "env-node-load-register": "0x10031acb0",
+    "env-create-wrapper": "0x10031cd70",
+    "game-module-initialize": "0x100376f80",
+    "cloud-initialize": "0x100211690",
+    "module-sort": "0x1007b3dc0"
+  },
+  "modules": [
+    {
+      "name": "environment",
+      "gameOffset": 680,
+      "propertyAddress": "0x100cb46f0"
+    },
+    {
+      "name": "cloudBarn",
+      "gameOffset": 952,
+      "propertyAddress": "0x100cb4ce0"
+    }
+  ],
+  "moduleOrderRule": "ascending address of container field storage; callbacks replace existing slots",
+  "initializeDispatch": {
+    "groupMask": 1,
+    "reverse": false,
+    "callSite": "0x1003777fe"
+  },
+  "groups": [
+    {
+      "className": "AmbienceSun",
+      "globalRegistrationIndex": 0,
+      "nodeRegistrationIndex": 0,
+      "callSite": "0x1003764ee"
+    },
+    {
+      "className": "AmbienceSky",
+      "globalRegistrationIndex": 1,
+      "nodeRegistrationIndex": 1,
+      "callSite": "0x100376502"
+    },
+    {
+      "className": "AmbienceFog",
+      "globalRegistrationIndex": 2,
+      "nodeRegistrationIndex": 2,
+      "callSite": "0x100376519"
+    },
+    {
+      "className": "AmbienceBloom",
+      "globalRegistrationIndex": 3,
+      "nodeRegistrationIndex": 3,
+      "callSite": "0x100376530"
+    },
+    {
+      "className": "AmbienceToneMap",
+      "globalRegistrationIndex": 4,
+      "nodeRegistrationIndex": 4,
+      "callSite": "0x100376547"
+    },
+    {
+      "className": "AmbiencePointLight",
+      "globalRegistrationIndex": 5,
+      "nodeRegistrationIndex": 5,
+      "callSite": "0x10037655e"
+    },
+    {
+      "className": "FogVolumeParams",
+      "globalRegistrationIndex": 6,
+      "nodeRegistrationIndex": 7,
+      "callSite": "0x100376572"
+    },
+    {
+      "className": "CloudEnvParams",
+      "globalRegistrationIndex": 7,
+      "nodeRegistrationIndex": 6,
+      "callSite": "0x1002124a4"
+    }
+  ],
+  "queue": {
+    "limit": 16,
+    "stride": 1040,
+    "environmentOffset": 172384,
+    "countOffset": 189024,
+    "constructedSlots": 16,
+    "creationOrder": "TGCL serialized node order through ObjectFactory",
+    "loadOrder": "ascending queue index; preserve append order within each layer",
+    "resetRule": "OnLevelLoad clears all default pointers and per-group layer counts, then closes registration and registers the existing queue; queue count and outputs are retained"
+  },
+  "defaultsRule": "TGCL reads serialized properties, then copies cached Tool_DefaultValue records only for properties absent from serialized class declaration",
+  "unresolved": [
+    "complete initial Ambience outputs",
+    "automatic SetEnvDefault/SetEnvHull event dispatch and ordering",
+    "complete module allocator and TGCL factory execution",
+    "full camera/rendering integration"
+  ]
+}

@@ -1,0 +1,6703 @@
+{
+  "level": "CarryLand",
+  "path": "Levels/CarryLand/Objects.level.bin",
+  "fileSha256": "05b7ec8214f29c52ae93d689df8bbea764240612425e0524259f3b185907993c",
+  "bytes": 26338,
+  "nodes": 109,
+  "checkpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "scope": "此文件逐一列出全部顶层对象。实例进度只计实例自身的格式和引用验证；共享类实现另列，未当作该实例已运行。引用仅证明序列化依赖，不证明原事件或启用顺序。",
+  "classes": [
+    {
+      "id": 0,
+      "name": "TerrainBlob",
+      "properties": [
+        {
+          "id": 0,
+          "name": "groundSecondaryNoiseDepth",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 1,
+          "name": "transform",
+          "type": 0,
+          "size": 64,
+          "classIndex": 0
+        },
+        {
+          "id": 2,
+          "name": "spiralHeightBegin_End",
+          "type": 0,
+          "size": 16,
+          "classIndex": 0
+        },
+        {
+          "id": 3,
+          "name": "rail",
+          "type": 2,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 4,
+          "name": "order",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 5,
+          "name": "groundSecondaryNoiseOffsetX_Z",
+          "type": 0,
+          "size": 16,
+          "classIndex": 0
+        },
+        {
+          "id": 6,
+          "name": "spiralWidthBegin_End",
+          "type": 0,
+          "size": 16,
+          "classIndex": 0
+        },
+        {
+          "id": 7,
+          "name": "stickiness",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 8,
+          "name": "sideSecondaryNoiseOffsetXYZ",
+          "type": 0,
+          "size": 16,
+          "classIndex": 0
+        },
+        {
+          "id": 9,
+          "name": "groundNoiseDepth",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 10,
+          "name": "pyroDepth",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 11,
+          "name": "groundSecondaryNoiseScale",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 12,
+          "name": "wedgeBulge",
+          "type": 0,
+          "size": 16,
+          "classIndex": 0
+        },
+        {
+          "id": 13,
+          "name": "sideSecondaryNoiseScaleXZ_Y",
+          "type": 0,
+          "size": 16,
+          "classIndex": 0
+        },
+        {
+          "id": 14,
+          "name": "materialBottom",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 15,
+          "name": "hardness",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 16,
+          "name": "erosionParams",
+          "type": 0,
+          "size": 16,
+          "classIndex": 0
+        },
+        {
+          "id": 17,
+          "name": "groundNoiseType",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 18,
+          "name": "railUseMarkerShape",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 19,
+          "name": "sideNoiseScaleXZ_Y",
+          "type": 0,
+          "size": 16,
+          "classIndex": 0
+        },
+        {
+          "id": 20,
+          "name": "groundSecondaryNoiseType",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 21,
+          "name": "sideNoiseOffsetXYZ",
+          "type": 0,
+          "size": 16,
+          "classIndex": 0
+        },
+        {
+          "id": 22,
+          "name": "spiralTwistBegin_End",
+          "type": 0,
+          "size": 16,
+          "classIndex": 0
+        },
+        {
+          "id": 23,
+          "name": "groundNoiseScale",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 24,
+          "name": "materialTop",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 25,
+          "name": "bstGuid",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 26,
+          "name": "spiralCurl",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 27,
+          "name": "cornerRadius",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 28,
+          "name": "spiralAngleBegin_End",
+          "type": 0,
+          "size": 16,
+          "classIndex": 0
+        },
+        {
+          "id": 29,
+          "name": "type",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 30,
+          "name": "railBluntness",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 31,
+          "name": "sideSecondaryNoiseDepth",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 32,
+          "name": "groundNoiseOffsetX_Z",
+          "type": 0,
+          "size": 16,
+          "classIndex": 0
+        },
+        {
+          "id": 33,
+          "name": "sideNoiseType",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 34,
+          "name": "materialAngleGradient",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 35,
+          "name": "sideAngle",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 36,
+          "name": "density",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 37,
+          "name": "sideSecondaryNoiseType",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 38,
+          "name": "sideNoiseDepth",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 39,
+          "name": "shape",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 40,
+          "name": "railMarkerScaling",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 41,
+          "name": "previewDetail",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 42,
+          "name": "spiralFlatten",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 43,
+          "name": "materialAngle",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Beamo",
+      "properties": [
+        {
+          "id": 44,
+          "name": "transform",
+          "type": 0,
+          "size": 64,
+          "classIndex": 0
+        },
+        {
+          "id": 45,
+          "name": "skirtHeight",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 46,
+          "name": "blurLighting",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 47,
+          "name": "simpleBake",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 48,
+          "name": "materialBstGuid",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 49,
+          "name": "density",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 50,
+          "name": "autoMoss",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 51,
+          "name": "lodEnables",
+          "type": 0,
+          "size": 16,
+          "classIndex": 0
+        },
+        {
+          "id": 52,
+          "name": "materialBstGuidSecondary",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 53,
+          "name": "meshName",
+          "type": 1,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 54,
+          "name": "bstGuid",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 55,
+          "name": "lodDists",
+          "type": 0,
+          "size": 16,
+          "classIndex": 0
+        },
+        {
+          "id": 56,
+          "name": "occlusionEnable",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "RiseWhenStoodOn",
+      "properties": [
+        {
+          "id": 57,
+          "name": "autoStart",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 58,
+          "name": "riseAmount",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 59,
+          "name": "meshes",
+          "type": 2,
+          "size": 0,
+          "classIndex": 0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Marker",
+      "properties": [
+        {
+          "id": 60,
+          "name": "enabled",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 61,
+          "name": "scale",
+          "type": 0,
+          "size": 16,
+          "classIndex": 0
+        },
+        {
+          "id": 62,
+          "name": "quat",
+          "type": 0,
+          "size": 16,
+          "classIndex": 0
+        },
+        {
+          "id": 63,
+          "name": "pos",
+          "type": 0,
+          "size": 16,
+          "classIndex": 0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "PlayMusic",
+      "properties": [
+        {
+          "id": 64,
+          "name": "autoStart",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 65,
+          "name": "continueIfSame",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 66,
+          "name": "prevFadeOutTime",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 67,
+          "name": "volume",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 68,
+          "name": "fadeTime",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 69,
+          "name": "setVolume",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 70,
+          "name": "music",
+          "type": 1,
+          "size": 0,
+          "classIndex": 0
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "TerrainBlobGroup",
+      "properties": [
+        {
+          "id": 71,
+          "name": "seaLevelCutoff",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 72,
+          "name": "subsurfaceDensity",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 73,
+          "name": "generateOctree",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 74,
+          "name": "isCloud",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 75,
+          "name": "maxVertCount",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 76,
+          "name": "blobPrefabs",
+          "type": 2,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 77,
+          "name": "cutoffLevel",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 78,
+          "name": "canPassThrough",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 79,
+          "name": "blobs",
+          "type": 2,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 80,
+          "name": "isBackground",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 81,
+          "name": "gridResolution",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 82,
+          "name": "isEnabled",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 83,
+          "name": "bstGuid",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 84,
+          "name": "enableTessellation",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 85,
+          "name": "fineMode",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Clump",
+      "properties": [
+        {
+          "id": 86,
+          "name": "data",
+          "type": 3,
+          "size": 0,
+          "classIndex": 4294967295
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "StarFragment",
+      "properties": [
+        {
+          "id": 87,
+          "name": "params",
+          "type": 2,
+          "size": 0,
+          "classIndex": 0
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "LevelMaterial",
+      "properties": [
+        {
+          "id": 88,
+          "name": "useCustomShader",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 89,
+          "name": "shaderName",
+          "type": 1,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 90,
+          "name": "material",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 91,
+          "name": "name",
+          "type": 1,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 92,
+          "name": "physicsMaterialOverrideActive",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 93,
+          "name": "physicsMaterialOverride",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 94,
+          "name": "bstGuid",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 95,
+          "name": "shaderParams",
+          "type": 3,
+          "size": 0,
+          "classIndex": 21
+        },
+        {
+          "id": 96,
+          "name": "baseColor",
+          "type": 0,
+          "size": 16,
+          "classIndex": 0
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "DisplayText",
+      "properties": [
+        {
+          "id": 97,
+          "name": "autoStart",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 98,
+          "name": "shadow",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 99,
+          "name": "color",
+          "type": 0,
+          "size": 16,
+          "classIndex": 0
+        },
+        {
+          "id": 100,
+          "name": "duration",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 101,
+          "name": "screenCenter",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 102,
+          "name": "worldScale",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 103,
+          "name": "textCenter",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 104,
+          "name": "speed",
+          "type": 0,
+          "size": 16,
+          "classIndex": 0
+        },
+        {
+          "id": 105,
+          "name": "background",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 106,
+          "name": "fadeInTime",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 107,
+          "name": "fadeOutTime",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 108,
+          "name": "alpha",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 109,
+          "name": "x",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 110,
+          "name": "y",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 111,
+          "name": "worldSpace",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 112,
+          "name": "usePixelSizeFont",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 113,
+          "name": "textFloat",
+          "type": 2,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 114,
+          "name": "transform",
+          "type": 0,
+          "size": 64,
+          "classIndex": 0
+        },
+        {
+          "id": 115,
+          "name": "text",
+          "type": 1,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 116,
+          "name": "delay",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 117,
+          "name": "scale",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "PlatformingRegion",
+      "properties": [
+        {
+          "id": 118,
+          "name": "enabled",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 119,
+          "name": "transform",
+          "type": 0,
+          "size": 64,
+          "classIndex": 0
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "FragmentCollectActivity",
+      "properties": [
+        {
+          "id": 120,
+          "name": "fragments",
+          "type": 2,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 121,
+          "name": "collectCountToSucceed",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "WorldQuest",
+      "properties": [
+        {
+          "id": 122,
+          "name": "onLoadIfNotAvailable",
+          "type": 2,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 123,
+          "name": "activity",
+          "type": 2,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 124,
+          "name": "onLoadIfNotJoinable",
+          "type": 2,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 125,
+          "name": "startType",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 126,
+          "name": "onReward",
+          "type": 2,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 127,
+          "name": "onActivityComplete",
+          "type": 2,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 128,
+          "name": "onSucceed",
+          "type": 2,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 129,
+          "name": "startMeditation",
+          "type": 2,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 130,
+          "name": "questDef",
+          "type": 1,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 131,
+          "name": "onLoadIfJoinable",
+          "type": 2,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 132,
+          "name": "holdRegion",
+          "type": 2,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 133,
+          "name": "onStart",
+          "type": 2,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 134,
+          "name": "onFail",
+          "type": 2,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 135,
+          "name": "joinType",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 136,
+          "name": "onStop",
+          "type": 2,
+          "size": 0,
+          "classIndex": 0
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "OnLevelStart",
+      "properties": [
+        {
+          "id": 137,
+          "name": "autoStart",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 138,
+          "name": "onlyOnWorldLoad",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 139,
+          "name": "events",
+          "type": 2,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 140,
+          "name": "skipOnWorldLoad",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "StarFragmentParams",
+      "properties": [
+        {
+          "id": 141,
+          "name": "type",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 142,
+          "name": "minPlayers",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 143,
+          "name": "travelRail",
+          "type": 2,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 144,
+          "name": "travelRailSpeed",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 145,
+          "name": "target",
+          "type": 2,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 146,
+          "name": "minPlayersScaleDown",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 147,
+          "name": "requiresCarry",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "LevelMesh",
+      "properties": [
+        {
+          "id": 148,
+          "name": "render",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 149,
+          "name": "transform",
+          "type": 0,
+          "size": 64,
+          "classIndex": 0
+        },
+        {
+          "id": 150,
+          "name": "animationRandomStartFrame",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 151,
+          "name": "isCloud",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 152,
+          "name": "spriteThreshold",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 153,
+          "name": "animationSpeedMult",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 154,
+          "name": "preprocessVerts",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 155,
+          "name": "lodEnables",
+          "type": 0,
+          "size": 16,
+          "classIndex": 0
+        },
+        {
+          "id": 156,
+          "name": "motionBlur",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 157,
+          "name": "animationPlayDefault",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 158,
+          "name": "collision",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 159,
+          "name": "floppySpine",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 160,
+          "name": "enabled",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 161,
+          "name": "spriteRendering",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 162,
+          "name": "visibleInWorld",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 163,
+          "name": "useCustomShader",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 164,
+          "name": "vertSpringsCoef",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 165,
+          "name": "vertSprings",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 166,
+          "name": "jumpAuto",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 167,
+          "name": "lodDists",
+          "type": 0,
+          "size": 16,
+          "classIndex": 0
+        },
+        {
+          "id": 168,
+          "name": "animated",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 169,
+          "name": "selfShadow",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 170,
+          "name": "simpleBake",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 171,
+          "name": "bstGuid",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 172,
+          "name": "spriteTextureRegion",
+          "type": 1,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 173,
+          "name": "castShadow",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 174,
+          "name": "baked",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 175,
+          "name": "preprocessAnimation",
+          "type": 1,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 176,
+          "name": "spriteSizeMult",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 177,
+          "name": "spriteEmissionType",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 178,
+          "name": "selfShadowIntensity",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 179,
+          "name": "shaderName",
+          "type": 1,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 180,
+          "name": "blurLighting",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 181,
+          "name": "spriteAlpha",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 182,
+          "name": "charAnimPack2",
+          "type": 1,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 183,
+          "name": "clothGravity",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 184,
+          "name": "material",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 185,
+          "name": "stripAnimation",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 186,
+          "name": "spriteEmissionSizeMult",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 187,
+          "name": "noCreatureCover",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 188,
+          "name": "antialiasing",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 189,
+          "name": "jumpable",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 190,
+          "name": "selfShadowResolution",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 191,
+          "name": "spriteSizeUseVertDensity",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 192,
+          "name": "preprocessAnimationFile",
+          "type": 1,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 193,
+          "name": "resourceName",
+          "type": 1,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 194,
+          "name": "occludeCamera",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 195,
+          "name": "networked",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 196,
+          "name": "clothPhysics",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 197,
+          "name": "morphable",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 198,
+          "name": "skirtHeight",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 199,
+          "name": "density",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 200,
+          "name": "transparency",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 201,
+          "name": "jumpGuardOnly",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 202,
+          "name": "charAnimPack1",
+          "type": 1,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 203,
+          "name": "chamTouch",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 204,
+          "name": "addSkirt",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 205,
+          "name": "shaderParams",
+          "type": 3,
+          "size": 0,
+          "classIndex": 22
+        },
+        {
+          "id": 206,
+          "name": "background",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "TerrainBlobPrefab",
+      "properties": [
+        {
+          "id": 207,
+          "name": "previewGridResolution",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 208,
+          "name": "transform",
+          "type": 0,
+          "size": 64,
+          "classIndex": 0
+        },
+        {
+          "id": 209,
+          "name": "stickiness",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 210,
+          "name": "order",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 211,
+          "name": "bstGuid",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 212,
+          "name": "prefabFilename",
+          "type": 1,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 213,
+          "name": "previewDetail",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "AvatarSetPos",
+      "properties": [
+        {
+          "id": 214,
+          "name": "autoStart",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 215,
+          "name": "setLevelStartPosition",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 216,
+          "name": "onGround",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 217,
+          "name": "relMarker",
+          "type": 2,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 218,
+          "name": "marker",
+          "type": 2,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 219,
+          "name": "breakHandHold",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 220,
+          "name": "randomGroundInMarker",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 221,
+          "name": "killMomentum",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "MeditationArea",
+      "properties": [
+        {
+          "id": 222,
+          "name": "disableMergeWithAnyProgress",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 223,
+          "name": "onlyFireWhenLocalPresent",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 224,
+          "name": "fullBonus",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 225,
+          "name": "minimumLocalPresentTime",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 226,
+          "name": "altar",
+          "type": 2,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 227,
+          "name": "minRequired",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 228,
+          "name": "enabled",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 229,
+          "name": "type",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 230,
+          "name": "confirmHintText",
+          "type": 1,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 231,
+          "name": "onComplete",
+          "type": 2,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 232,
+          "name": "spawnSeatTail",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 233,
+          "name": "transform",
+          "type": 0,
+          "size": 64,
+          "classIndex": 0
+        },
+        {
+          "id": 234,
+          "name": "needSit",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 235,
+          "name": "time",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 236,
+          "name": "keyFrame",
+          "type": 2,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 237,
+          "name": "spawnSeatFX",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 238,
+          "name": "goals",
+          "type": 2,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 239,
+          "name": "spawnSeatSFX",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 240,
+          "name": "progressObjs",
+          "type": 2,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 241,
+          "name": "meditationSound",
+          "type": 1,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 242,
+          "name": "holyAreas",
+          "type": 2,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 243,
+          "name": "progressOut",
+          "type": 2,
+          "size": 0,
+          "classIndex": 0
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "EnvNode",
+      "properties": [
+        {
+          "id": 244,
+          "name": "transform",
+          "type": 0,
+          "size": 64,
+          "classIndex": 0
+        },
+        {
+          "id": 245,
+          "name": "cheapFogTintMidTop",
+          "type": 0,
+          "size": 16,
+          "classIndex": 0
+        },
+        {
+          "id": 246,
+          "name": "cheapFogFar",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 247,
+          "name": "duration",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 248,
+          "name": "cheapFogTintMidMid",
+          "type": 0,
+          "size": 16,
+          "classIndex": 0
+        },
+        {
+          "id": 249,
+          "name": "sunAngleXZ",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 250,
+          "name": "undulationScale",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 251,
+          "name": "enabled",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 252,
+          "name": "tintBot",
+          "type": 0,
+          "size": 16,
+          "classIndex": 0
+        },
+        {
+          "id": 253,
+          "name": "sunAngleY",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 254,
+          "name": "bloomIntensity",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 255,
+          "name": "cheapFogEnabled",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 256,
+          "name": "exposure",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 257,
+          "name": "sunInt",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 258,
+          "name": "pos",
+          "type": 0,
+          "size": 16,
+          "classIndex": 0
+        },
+        {
+          "id": 259,
+          "name": "cheapFogHeight",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 260,
+          "name": "tintTop",
+          "type": 0,
+          "size": 16,
+          "classIndex": 0
+        },
+        {
+          "id": 261,
+          "name": "scale",
+          "type": 0,
+          "size": 16,
+          "classIndex": 0
+        },
+        {
+          "id": 262,
+          "name": "cheapFogTintBot",
+          "type": 0,
+          "size": 16,
+          "classIndex": 0
+        },
+        {
+          "id": 263,
+          "name": "quat",
+          "type": 0,
+          "size": 16,
+          "classIndex": 0
+        },
+        {
+          "id": 264,
+          "name": "sunToMoon",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 265,
+          "name": "pointIntensity",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 266,
+          "name": "layer",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 267,
+          "name": "bloomOverbright",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 268,
+          "name": "cheapFogHeightDensity",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 269,
+          "name": "tintMidTop",
+          "type": 0,
+          "size": 16,
+          "classIndex": 0
+        },
+        {
+          "id": 270,
+          "name": "sunSize",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 271,
+          "name": "fogHeight",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 272,
+          "name": "atmosphereDensity",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 273,
+          "name": "fadeInTime",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 274,
+          "name": "tintMidMid",
+          "type": 0,
+          "size": 16,
+          "classIndex": 0
+        },
+        {
+          "id": 275,
+          "name": "fogVolumeIntensity",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 276,
+          "name": "pointColor",
+          "type": 0,
+          "size": 16,
+          "classIndex": 0
+        },
+        {
+          "id": 277,
+          "name": "fogDensity",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 278,
+          "name": "fadeOutTime",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 279,
+          "name": "moonPhase",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 280,
+          "name": "tintMidBot",
+          "type": 0,
+          "size": 16,
+          "classIndex": 0
+        },
+        {
+          "id": 281,
+          "name": "sunColor",
+          "type": 0,
+          "size": 16,
+          "classIndex": 0
+        },
+        {
+          "id": 282,
+          "name": "falloff",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 283,
+          "name": "drawDistance",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 284,
+          "name": "cheapFogTintTop",
+          "type": 0,
+          "size": 16,
+          "classIndex": 0
+        },
+        {
+          "id": 285,
+          "name": "cheapFogLumReduction",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 286,
+          "name": "cheapFogTintMidBot",
+          "type": 0,
+          "size": 16,
+          "classIndex": 0
+        },
+        {
+          "id": 287,
+          "name": "cheapFogNear",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "LevelParameters",
+      "properties": [
+        {
+          "id": 288,
+          "name": "blurPasses",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 289,
+          "name": "worldName",
+          "type": 1,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 290,
+          "name": "gridSize",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 291,
+          "name": "isWorld",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 292,
+          "name": "previewGridResolution",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 293,
+          "name": "defaultCloudDensity",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 294,
+          "name": "bounceCount",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 295,
+          "name": "tapCount",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 296,
+          "name": "lightProbeAABB",
+          "type": 2,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 297,
+          "name": "defaultLandDensity",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 298,
+          "name": "halfResClouds",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "LevelShaderParam",
+      "properties": [
+        {
+          "id": 299,
+          "name": "tex",
+          "type": 1,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 300,
+          "name": "type",
+          "type": 0,
+          "size": 1,
+          "classIndex": 0
+        },
+        {
+          "id": 301,
+          "name": "name",
+          "type": 1,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 302,
+          "name": "vec",
+          "type": 0,
+          "size": 16,
+          "classIndex": 0
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "LevelMeshShaderParam",
+      "properties": [
+        {
+          "id": 303,
+          "name": "valueType",
+          "type": 0,
+          "size": 4,
+          "classIndex": 0
+        },
+        {
+          "id": 304,
+          "name": "vecValue",
+          "type": 0,
+          "size": 16,
+          "classIndex": 0
+        },
+        {
+          "id": 305,
+          "name": "uniformName",
+          "type": 1,
+          "size": 0,
+          "classIndex": 0
+        },
+        {
+          "id": 306,
+          "name": "texValue",
+          "type": 1,
+          "size": 0,
+          "classIndex": 0
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "key": "CarryLand:n0",
+      "level": "CarryLand",
+      "nodeId": 0,
+      "name": "BstNode_480",
+      "className": "TerrainBlob",
+      "classIndex": 0,
+      "sourceOffset": 8972,
+      "sourceLength": 384,
+      "sourceSha256": "aec3e60f40725c960b67d696e03fff861243fbeba818214d6c26f09b794c5f16",
+      "declaredFieldCount": 44,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 480,
+            "int": 480,
+            "float": 6.726232628759122e-43
+          },
+          "raw": "e0010000"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n1",
+      "level": "CarryLand",
+      "nodeId": 1,
+      "name": "BstNode_3707306043",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 9356,
+      "sourceLength": 149,
+      "sourceSha256": "fff2a3e484bda76c4346baf8f5ec91fff300f5c026f2879fcf0b50a65f5db95d",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306043,
+            "int": -587661253,
+            "float": -560700180832190460
+          },
+          "raw": "3b00f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n2",
+      "level": "CarryLand",
+      "nodeId": 2,
+      "name": "BstNode_3707306073",
+      "className": "RiseWhenStoodOn",
+      "classIndex": 2,
+      "sourceOffset": 9505,
+      "sourceLength": 32,
+      "sourceSha256": "0541a81acadd5ce751509098cf01cc7e189c8a6893ef05e4d4b6d77b7d22821d",
+      "declaredFieldCount": 3,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n2/p2",
+          "fieldName": "meshes",
+          "target": "CarryLand:n8",
+          "targetNodeId": 8,
+          "offset": 9533
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n3",
+      "level": "CarryLand",
+      "nodeId": 3,
+      "name": "BstNode_3707306051",
+      "className": "Marker",
+      "classIndex": 3,
+      "sourceOffset": 9537,
+      "sourceLength": 72,
+      "sourceSha256": "e3a3b5f3810d3ce0aef83e668e5ab46fdbf0743c80c7437a0f80bc5b2d1f1d0b",
+      "declaredFieldCount": 4,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n4",
+      "level": "CarryLand",
+      "nodeId": 4,
+      "name": "BstNode_3707305990",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 9609,
+      "sourceLength": 149,
+      "sourceSha256": "a529851c50dcd600ceeae1b5180c47ea07a86c1d950702485d461af9835ae334",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707305990,
+            "int": -587661306,
+            "float": -560698359766056960
+          },
+          "raw": "0600f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n5",
+      "level": "CarryLand",
+      "nodeId": 5,
+      "name": "BstNode_528",
+      "className": "PlayMusic",
+      "classIndex": 4,
+      "sourceOffset": 9758,
+      "sourceLength": 42,
+      "sourceSha256": "0bde07ce0e0a5628ff49e973c390bfef052c9220f32026e8752b76e6d7b3f2c1",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n6",
+      "level": "CarryLand",
+      "nodeId": 6,
+      "name": "BstNode_6",
+      "className": "TerrainBlobGroup",
+      "classIndex": 5,
+      "sourceOffset": 9800,
+      "sourceLength": 50,
+      "sourceSha256": "fbb97c9fb501e2be58d7548d097c7b13a58b4bacc49805787055ce8485ca2e16",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 6,
+            "int": 6,
+            "float": 8.407790785948902e-45
+          },
+          "raw": "06000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n6/p8",
+          "fieldName": "blobs",
+          "target": "CarryLand:n20",
+          "targetNodeId": 20,
+          "offset": 9834
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n7",
+      "level": "CarryLand",
+      "nodeId": 7,
+      "name": "BstNode_3707305995",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 9850,
+      "sourceLength": 149,
+      "sourceSha256": "ae3c0cd59348e8bc56273bb55d1fc2c4616731cd384d740aa67f33c5b2f74318",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707305995,
+            "int": -587661301,
+            "float": -560698531564748800
+          },
+          "raw": "0b00f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n8",
+      "level": "CarryLand",
+      "nodeId": 8,
+      "name": "BstNode_3707306068",
+      "className": "Clump",
+      "classIndex": 6,
+      "sourceOffset": 9999,
+      "sourceLength": 71,
+      "sourceSha256": "b6e2112a4fc6613199b1a9a44f2939907bddca523987adf7be369a3998feec3a",
+      "declaredFieldCount": 1,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n8/p0/a0",
+          "fieldName": "[0]",
+          "target": "CarryLand:n102",
+          "targetNodeId": 102,
+          "offset": 10026
+        },
+        {
+          "fieldId": "n8/p0/a1",
+          "fieldName": "[1]",
+          "target": "CarryLand:n63",
+          "targetNodeId": 63,
+          "offset": 10030
+        },
+        {
+          "fieldId": "n8/p0/a2",
+          "fieldName": "[2]",
+          "target": "CarryLand:n36",
+          "targetNodeId": 36,
+          "offset": 10034
+        },
+        {
+          "fieldId": "n8/p0/a3",
+          "fieldName": "[3]",
+          "target": "CarryLand:n98",
+          "targetNodeId": 98,
+          "offset": 10038
+        },
+        {
+          "fieldId": "n8/p0/a4",
+          "fieldName": "[4]",
+          "target": "CarryLand:n91",
+          "targetNodeId": 91,
+          "offset": 10042
+        },
+        {
+          "fieldId": "n8/p0/a5",
+          "fieldName": "[5]",
+          "target": "CarryLand:n92",
+          "targetNodeId": 92,
+          "offset": 10046
+        },
+        {
+          "fieldId": "n8/p0/a6",
+          "fieldName": "[6]",
+          "target": "CarryLand:n53",
+          "targetNodeId": 53,
+          "offset": 10050
+        },
+        {
+          "fieldId": "n8/p0/a7",
+          "fieldName": "[7]",
+          "target": "CarryLand:n94",
+          "targetNodeId": 94,
+          "offset": 10054
+        },
+        {
+          "fieldId": "n8/p0/a8",
+          "fieldName": "[8]",
+          "target": "CarryLand:n101",
+          "targetNodeId": 101,
+          "offset": 10058
+        },
+        {
+          "fieldId": "n8/p0/a9",
+          "fieldName": "[9]",
+          "target": "CarryLand:n72",
+          "targetNodeId": 72,
+          "offset": 10062
+        },
+        {
+          "fieldId": "n8/p0/a10",
+          "fieldName": "[10]",
+          "target": "CarryLand:n56",
+          "targetNodeId": 56,
+          "offset": 10066
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n9",
+      "level": "CarryLand",
+      "nodeId": 9,
+      "name": "BstNode_3707306005",
+      "className": "StarFragment",
+      "classIndex": 7,
+      "sourceOffset": 10070,
+      "sourceLength": 27,
+      "sourceSha256": "d6f30a44d146691fa396c756f57ba35468fa769aeab79740f2a627c6bc48ab5a",
+      "declaredFieldCount": 1,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n9/p0",
+          "fieldName": "params",
+          "target": "CarryLand:n44",
+          "targetNodeId": 44,
+          "offset": 10093
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n10",
+      "level": "CarryLand",
+      "nodeId": 10,
+      "name": "BstNode_3707306002",
+      "className": "LevelMaterial",
+      "classIndex": 8,
+      "sourceOffset": 10097,
+      "sourceLength": 252,
+      "sourceSha256": "61f80d7a2b73923991de5f132d96e7e3af57c1d19d99ef020992451605c47baf",
+      "declaredFieldCount": 9,
+      "serializedState": {
+        "material": {
+          "kind": "u8",
+          "encoding": null,
+          "value": 25,
+          "raw": "19"
+        },
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "Tile",
+          "raw": "54696c6500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306002,
+            "int": -587661294,
+            "float": -560698772082917400
+          },
+          "raw": "1200f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n11",
+      "level": "CarryLand",
+      "nodeId": 11,
+      "name": "BstNode_3707306032",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 10349,
+      "sourceLength": 149,
+      "sourceSha256": "1b50401b84515001c04b9945e2a627c39e3689437fd0f559fbc18e128e1d55fc",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306032,
+            "int": -587661264,
+            "float": -560699802875068400
+          },
+          "raw": "3000f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n12",
+      "level": "CarryLand",
+      "nodeId": 12,
+      "name": "BstNode_137",
+      "className": "TerrainBlob",
+      "classIndex": 0,
+      "sourceOffset": 10498,
+      "sourceLength": 384,
+      "sourceSha256": "d8f1127a7189dfa67232448be191ca51146fd3e22ae648571d949e2ec5c884e7",
+      "declaredFieldCount": 44,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 137,
+            "int": 137,
+            "float": 1.9197788961249994e-43
+          },
+          "raw": "89000000"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n13",
+      "level": "CarryLand",
+      "nodeId": 13,
+      "name": "BstNode_3707306038",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 10882,
+      "sourceLength": 149,
+      "sourceSha256": "c52c27daf0c9c270cf3dc46d1c17f5bffc37310b776bea02102cb86dccb057f3",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306038,
+            "int": -587661258,
+            "float": -560700009033498600
+          },
+          "raw": "3600f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n14",
+      "level": "CarryLand",
+      "nodeId": 14,
+      "name": "BstNode_3707306040",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 11031,
+      "sourceLength": 149,
+      "sourceSha256": "47868ab9d59ae1c43d79645950c80895cbc7a80bc71a67c57a5db342b5f179d5",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306040,
+            "int": -587661256,
+            "float": -560700077752975360
+          },
+          "raw": "3800f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n15",
+      "level": "CarryLand",
+      "nodeId": 15,
+      "name": "BstNode_3707306027",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 11180,
+      "sourceLength": 149,
+      "sourceSha256": "5af54e61673369c6ee56fb795d54b8eaa8b823e80ca412480da2d1e25537ae38",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306027,
+            "int": -587661269,
+            "float": -560699631076376600
+          },
+          "raw": "2b00f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n16",
+      "level": "CarryLand",
+      "nodeId": 16,
+      "name": "BstNode_3707306057",
+      "className": "DisplayText",
+      "classIndex": 9,
+      "sourceOffset": 11329,
+      "sourceLength": 188,
+      "sourceSha256": "f606b69c67459faaab3da92d815c2a5d6a4782aa530d947f4be7200bccda208d",
+      "declaredFieldCount": 21,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n17",
+      "level": "CarryLand",
+      "nodeId": 17,
+      "name": "BstNode_3707306053",
+      "className": "Marker",
+      "classIndex": 3,
+      "sourceOffset": 11517,
+      "sourceLength": 72,
+      "sourceSha256": "2926d154601974774b1189edb21509aa2c0d44fdc3ed9b89b432ca40e758216b",
+      "declaredFieldCount": 4,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n18",
+      "level": "CarryLand",
+      "nodeId": 18,
+      "name": "BstNode_3707306074",
+      "className": "PlatformingRegion",
+      "classIndex": 10,
+      "sourceOffset": 11589,
+      "sourceLength": 88,
+      "sourceSha256": "88ac94709a0642f8fae0bd2a932335b2d41ff5be32ae2623494cb78923bd4274",
+      "declaredFieldCount": 2,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n19",
+      "level": "CarryLand",
+      "nodeId": 19,
+      "name": "BstNode_5",
+      "className": "TerrainBlobGroup",
+      "classIndex": 5,
+      "sourceOffset": 11677,
+      "sourceLength": 50,
+      "sourceSha256": "b2100863cb53bc74047b6b400adc2329acea1ee608b0c2fffab8b48b06b4fd22",
+      "declaredFieldCount": 15,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 5,
+            "int": 5,
+            "float": 7.006492321624085e-45
+          },
+          "raw": "05000000"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n19/p5",
+          "fieldName": "blobPrefabs",
+          "target": "CarryLand:n50",
+          "targetNodeId": 50,
+          "offset": 11702
+        },
+        {
+          "fieldId": "n19/p8",
+          "fieldName": "blobs",
+          "target": "CarryLand:n28",
+          "targetNodeId": 28,
+          "offset": 11711
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n20",
+      "level": "CarryLand",
+      "nodeId": 20,
+      "name": "BstNode_4",
+      "className": "Clump",
+      "classIndex": 6,
+      "sourceOffset": 11727,
+      "sourceLength": 22,
+      "sourceSha256": "44f90fef47ead6148133ed8073a1b01b0d59e3d6174dbdbb3675cd9b0d378e8c",
+      "declaredFieldCount": 1,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n20/p0/a0",
+          "fieldName": "[0]",
+          "target": "CarryLand:n12",
+          "targetNodeId": 12,
+          "offset": 11745
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n21",
+      "level": "CarryLand",
+      "nodeId": 21,
+      "name": "BstNode_3707306025",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 11749,
+      "sourceLength": 149,
+      "sourceSha256": "c5683a1b02c64fa5ddb89658a409fbd8571d2413c8c7a0d1f72413ef4c60ce9e",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306025,
+            "int": -587661271,
+            "float": -560699562356899840
+          },
+          "raw": "2900f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n22",
+      "level": "CarryLand",
+      "nodeId": 22,
+      "name": "BstNode_3707306016",
+      "className": "FragmentCollectActivity",
+      "classIndex": 11,
+      "sourceOffset": 11898,
+      "sourceLength": 31,
+      "sourceSha256": "4068529368bc6c144680d16394dc3b468d55c501c665471c52f332aa1dbd91e1",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n22/p0",
+          "fieldName": "fragments",
+          "target": "CarryLand:n106",
+          "targetNodeId": 106,
+          "offset": 11921
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n23",
+      "level": "CarryLand",
+      "nodeId": 23,
+      "name": "BstNode_3707306000",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 11929,
+      "sourceLength": 149,
+      "sourceSha256": "990106aa21674745a1577f762f00e23602b92cb4024852b8b2084fc08f5cd9b5",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306000,
+            "int": -587661296,
+            "float": -560698703363440640
+          },
+          "raw": "1000f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n24",
+      "level": "CarryLand",
+      "nodeId": 24,
+      "name": "BstNode_3707305994",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 12078,
+      "sourceLength": 149,
+      "sourceSha256": "a3bf25c61a09813927a81da9823c70393784741af726e589701f4b6a78bea049",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707305994,
+            "int": -587661302,
+            "float": -560698497205010400
+          },
+          "raw": "0a00f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n25",
+      "level": "CarryLand",
+      "nodeId": 25,
+      "name": "BstNode_3707306020",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 12227,
+      "sourceLength": 149,
+      "sourceSha256": "039351392633c9417b493a160d0f99c4f276a74255568d2b9e888766fb3c5db1",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306020,
+            "int": -587661276,
+            "float": -560699390558208000
+          },
+          "raw": "2400f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n26",
+      "level": "CarryLand",
+      "nodeId": 26,
+      "name": "BstNode_529",
+      "className": "TerrainBlob",
+      "classIndex": 0,
+      "sourceOffset": 12376,
+      "sourceLength": 384,
+      "sourceSha256": "d11cc188e562f1203625c05cdac73811b7557e84aa9f62c78e75ff95eba6be90",
+      "declaredFieldCount": 44,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 529,
+            "int": 529,
+            "float": 7.412868876278282e-43
+          },
+          "raw": "11020000"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n27",
+      "level": "CarryLand",
+      "nodeId": 27,
+      "name": "BstNode_3707306045",
+      "className": "FragmentCollectActivity",
+      "classIndex": 11,
+      "sourceOffset": 12760,
+      "sourceLength": 31,
+      "sourceSha256": "03437177957a5905ee6956d685346e19309972a78d78ca4705a1721e4b91cbfe",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n27/p0",
+          "fieldName": "fragments",
+          "target": "CarryLand:n107",
+          "targetNodeId": 107,
+          "offset": 12783
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n28",
+      "level": "CarryLand",
+      "nodeId": 28,
+      "name": "BstNode_3",
+      "className": "Clump",
+      "classIndex": 6,
+      "sourceOffset": 12791,
+      "sourceLength": 26,
+      "sourceSha256": "f56a35ebd83c6fab3849a665f8a5e058f351a1f30bd6241a0f4a9b2eaebcbf90",
+      "declaredFieldCount": 1,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n28/p0/a0",
+          "fieldName": "[0]",
+          "target": "CarryLand:n26",
+          "targetNodeId": 26,
+          "offset": 12809
+        },
+        {
+          "fieldId": "n28/p0/a1",
+          "fieldName": "[1]",
+          "target": "CarryLand:n0",
+          "targetNodeId": 0,
+          "offset": 12813
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n29",
+      "level": "CarryLand",
+      "nodeId": 29,
+      "name": "BstNode_3707305999",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 12817,
+      "sourceLength": 149,
+      "sourceSha256": "44ae04a9a5c026d8cf9e31f3c20b790c223af847defbe696efb91845966fae7a",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707305999,
+            "int": -587661297,
+            "float": -560698669003702300
+          },
+          "raw": "0f00f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n30",
+      "level": "CarryLand",
+      "nodeId": 30,
+      "name": "BstNode_3707306029",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 12966,
+      "sourceLength": 149,
+      "sourceSha256": "0c9ccaa32b95a0b5ae78ef738e8af59baaf8398984b07659a9204d39220e9a89",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306029,
+            "int": -587661267,
+            "float": -560699699795853300
+          },
+          "raw": "2d00f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n31",
+      "level": "CarryLand",
+      "nodeId": 31,
+      "name": "BstNode_8",
+      "className": "Marker",
+      "classIndex": 3,
+      "sourceOffset": 13115,
+      "sourceLength": 63,
+      "sourceSha256": "7c79f494d2c911d21329fcb1f96953aa743b6e670b3261de0135f7c35ac73de4",
+      "declaredFieldCount": 4,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n32",
+      "level": "CarryLand",
+      "nodeId": 32,
+      "name": "BstNode_3707305987",
+      "className": "WorldQuest",
+      "classIndex": 12,
+      "sourceOffset": 13178,
+      "sourceLength": 80,
+      "sourceSha256": "e6de2fefd741da2db697b86514adf633788046e567ad633733abc8f1a5f19d85",
+      "declaredFieldCount": 15,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n32/p1",
+          "fieldName": "activity",
+          "target": "CarryLand:n66",
+          "targetNodeId": 66,
+          "offset": 13205
+        },
+        {
+          "fieldId": "n32/p7",
+          "fieldName": "startMeditation",
+          "target": "CarryLand:n57",
+          "targetNodeId": 57,
+          "offset": 13229
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n33",
+      "level": "CarryLand",
+      "nodeId": 33,
+      "name": "BstNode_3707305991",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 13258,
+      "sourceLength": 149,
+      "sourceSha256": "baca53fb3a029ada46c340d2a96a81f33bd10cf0f18a4742c0e964b71dbc85b8",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707305991,
+            "int": -587661305,
+            "float": -560698394125795300
+          },
+          "raw": "0700f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n34",
+      "level": "CarryLand",
+      "nodeId": 34,
+      "name": "BstNode_10",
+      "className": "OnLevelStart",
+      "classIndex": 13,
+      "sourceOffset": 13407,
+      "sourceLength": 22,
+      "sourceSha256": "49e88a25de5aa5584c9e98b4023802fd84e04c330a3ca4796dc7131b4c9897c7",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n34/p2",
+          "fieldName": "events",
+          "target": "CarryLand:n95",
+          "targetNodeId": 95,
+          "offset": 13424
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n35",
+      "level": "CarryLand",
+      "nodeId": 35,
+      "name": "BstNode_3707306017",
+      "className": "StarFragmentParams",
+      "classIndex": 14,
+      "sourceOffset": 13429,
+      "sourceLength": 48,
+      "sourceSha256": "cf667787aa1b64f3ac11a6580e7e805dc3ba5d94eac2cb67dae38cf332d860d7",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n35/p4",
+          "fieldName": "target",
+          "target": "CarryLand:n58",
+          "targetNodeId": 58,
+          "offset": 13468
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n36",
+      "level": "CarryLand",
+      "nodeId": 36,
+      "name": "BstNode_3707306059",
+      "className": "LevelMesh",
+      "classIndex": 15,
+      "sourceOffset": 13477,
+      "sourceLength": 467,
+      "sourceSha256": "44dd473e196c1be53efbae0298b84f1360c04ad9054ad964b863aa4366196076",
+      "declaredFieldCount": 59,
+      "serializedState": {
+        "render": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306059,
+            "int": -587661237,
+            "float": -560700730588004350
+          },
+          "raw": "4b00f9dc"
+        },
+        "material": {
+          "kind": "u8",
+          "encoding": null,
+          "value": 26,
+          "raw": "1a"
+        },
+        "resourceName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n37",
+      "level": "CarryLand",
+      "nodeId": 37,
+      "name": "BstNode_3707305992",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 13944,
+      "sourceLength": 149,
+      "sourceSha256": "a61896c7175c6007077cf847ceccf2a873e76975c1f0b178d07fb319a161467d",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707305992,
+            "int": -587661304,
+            "float": -560698428485533700
+          },
+          "raw": "0800f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n38",
+      "level": "CarryLand",
+      "nodeId": 38,
+      "name": "BstNode_2345992196",
+      "className": "TerrainBlobPrefab",
+      "classIndex": 16,
+      "sourceOffset": 14093,
+      "sourceLength": 128,
+      "sourceSha256": "db75306c086c5604f1c03419e1c297b31cb265052bf8f6cef3eabc1037c5ea53",
+      "declaredFieldCount": 7,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2345992196,
+            "int": -1948975100,
+            "float": -8.204463914078326e-32
+          },
+          "raw": "0400d58b"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n39",
+      "level": "CarryLand",
+      "nodeId": 39,
+      "name": "BstNode_3707306044",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 14221,
+      "sourceLength": 149,
+      "sourceSha256": "d53b06ac5b3970bde4742f860404ff31b935f3ae9848978c48dc6fdd5eb76359",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306044,
+            "int": -587661252,
+            "float": -560700215191928800
+          },
+          "raw": "3c00f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n40",
+      "level": "CarryLand",
+      "nodeId": 40,
+      "name": "BstNode_3707305996",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 14370,
+      "sourceLength": 149,
+      "sourceSha256": "04bc335f7ac1e75dcb4fb705c4bf4ddfc35d17482281deb2421e4827aedca6c7",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707305996,
+            "int": -587661300,
+            "float": -560698565924487200
+          },
+          "raw": "0c00f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n41",
+      "level": "CarryLand",
+      "nodeId": 41,
+      "name": "BstNode_3707306042",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 14519,
+      "sourceLength": 149,
+      "sourceSha256": "39387336274abf554bd1ff2e807d5456bf42e5da280fefa7eafeb009f558be84",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306042,
+            "int": -587661254,
+            "float": -560700146472452100
+          },
+          "raw": "3a00f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n42",
+      "level": "CarryLand",
+      "nodeId": 42,
+      "name": "BstNode_3707306070",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 14668,
+      "sourceLength": 149,
+      "sourceSha256": "104ad3492f47e5bd16ca66d4ae3a1f2cbf4e08bcd1d348a299ef9fa3f6ff62d6",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306070,
+            "int": -587661226,
+            "float": -560701108545126400
+          },
+          "raw": "5600f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n43",
+      "level": "CarryLand",
+      "nodeId": 43,
+      "name": "BstNode_3707306071",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 14817,
+      "sourceLength": 149,
+      "sourceSha256": "e34555c76d2c42ab6114720e86b4899b089ad4dc8c53993161bfb8921f5803ea",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306071,
+            "int": -587661225,
+            "float": -560701142904864800
+          },
+          "raw": "5700f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n44",
+      "level": "CarryLand",
+      "nodeId": 44,
+      "name": "BstNode_3707306006",
+      "className": "StarFragmentParams",
+      "classIndex": 14,
+      "sourceOffset": 14966,
+      "sourceLength": 48,
+      "sourceSha256": "bee509c4bef97a78445df37e167e62ad986b943b797ad6297867b3241919d266",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n44/p4",
+          "fieldName": "target",
+          "target": "CarryLand:n46",
+          "targetNodeId": 46,
+          "offset": 15005
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n45",
+      "level": "CarryLand",
+      "nodeId": 45,
+      "name": "BstNode_3707306041",
+      "className": "WorldQuest",
+      "classIndex": 12,
+      "sourceOffset": 15014,
+      "sourceLength": 80,
+      "sourceSha256": "c3ab510b7eaa88c4862779d8c315a399c1f5693e2e036d1c2bd1f5f8581318f7",
+      "declaredFieldCount": 15,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n45/p1",
+          "fieldName": "activity",
+          "target": "CarryLand:n27",
+          "targetNodeId": 27,
+          "offset": 15041
+        },
+        {
+          "fieldId": "n45/p7",
+          "fieldName": "startMeditation",
+          "target": "CarryLand:n52",
+          "targetNodeId": 52,
+          "offset": 15065
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n46",
+      "level": "CarryLand",
+      "nodeId": 46,
+      "name": "BstNode_3707306007",
+      "className": "Marker",
+      "classIndex": 3,
+      "sourceOffset": 15094,
+      "sourceLength": 72,
+      "sourceSha256": "c489540d6b45ce2fe231e67bd889853e5fd4d1192548c52a6d4ed966d93d5ad0",
+      "declaredFieldCount": 4,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n47",
+      "level": "CarryLand",
+      "nodeId": 47,
+      "name": "BstNode_3707306013",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 15166,
+      "sourceLength": 149,
+      "sourceSha256": "41c9bef052c48d54e19c1aebc3206d6150404928fce1ab2a81f9238ffc48aae6",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306013,
+            "int": -587661283,
+            "float": -560699150040039400
+          },
+          "raw": "1d00f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n48",
+      "level": "CarryLand",
+      "nodeId": 48,
+      "name": "BstNode_3707306015",
+      "className": "WorldQuest",
+      "classIndex": 12,
+      "sourceOffset": 15315,
+      "sourceLength": 80,
+      "sourceSha256": "4663789ef67c3482f28d967901959c51bf3e42b1a9f38814afdfa46a97e77528",
+      "declaredFieldCount": 15,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n48/p1",
+          "fieldName": "activity",
+          "target": "CarryLand:n22",
+          "targetNodeId": 22,
+          "offset": 15342
+        },
+        {
+          "fieldId": "n48/p7",
+          "fieldName": "startMeditation",
+          "target": "CarryLand:n76",
+          "targetNodeId": 76,
+          "offset": 15366
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n49",
+      "level": "CarryLand",
+      "nodeId": 49,
+      "name": "BstNode_3707305988",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 15395,
+      "sourceLength": 149,
+      "sourceSha256": "c19a78aee66c28ecd906d29112b717c964a0cc8a834bdfc81d0d7468108417a7",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707305988,
+            "int": -587661308,
+            "float": -560698291046580200
+          },
+          "raw": "0400f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n50",
+      "level": "CarryLand",
+      "nodeId": 50,
+      "name": "BstNode_2345992195",
+      "className": "Clump",
+      "classIndex": 6,
+      "sourceOffset": 15544,
+      "sourceLength": 39,
+      "sourceSha256": "d8fd0fc623b03b3d009b179d70203d3316ec144b43f9010f90ae13d2844fd777",
+      "declaredFieldCount": 1,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n50/p0/a0",
+          "fieldName": "[0]",
+          "target": "CarryLand:n85",
+          "targetNodeId": 85,
+          "offset": 15571
+        },
+        {
+          "fieldId": "n50/p0/a1",
+          "fieldName": "[1]",
+          "target": "CarryLand:n38",
+          "targetNodeId": 38,
+          "offset": 15575
+        },
+        {
+          "fieldId": "n50/p0/a2",
+          "fieldName": "[2]",
+          "target": "CarryLand:n61",
+          "targetNodeId": 61,
+          "offset": 15579
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n51",
+      "level": "CarryLand",
+      "nodeId": 51,
+      "name": "BstNode_11",
+      "className": "AvatarSetPos",
+      "classIndex": 17,
+      "sourceOffset": 15583,
+      "sourceLength": 29,
+      "sourceSha256": "65613a109d89cd63f7da535f11c7100a463c6ef5ab0912ed659f2c8c82179dad",
+      "declaredFieldCount": 8,
+      "serializedState": {
+        "setLevelStartPosition": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n51/p4",
+          "fieldName": "marker",
+          "target": "CarryLand:n31",
+          "targetNodeId": 31,
+          "offset": 15605
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n52",
+      "level": "CarryLand",
+      "nodeId": 52,
+      "name": "BstNode_3707306048",
+      "className": "MeditationArea",
+      "classIndex": 18,
+      "sourceOffset": 15612,
+      "sourceLength": 150,
+      "sourceSha256": "9acf07495d9f6c2950d95ca13a88e3e5996cfbef5a438770555a2c30b713f5f9",
+      "declaredFieldCount": 22,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n53",
+      "level": "CarryLand",
+      "nodeId": 53,
+      "name": "BstNode_3707306062",
+      "className": "LevelMesh",
+      "classIndex": 15,
+      "sourceOffset": 15762,
+      "sourceLength": 467,
+      "sourceSha256": "788043b97fa90f9ff3f0c69df608566b5ecbe28c74e702a25f4f82fbdd7a7796",
+      "declaredFieldCount": 59,
+      "serializedState": {
+        "render": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306062,
+            "int": -587661234,
+            "float": -560700833667219460
+          },
+          "raw": "4e00f9dc"
+        },
+        "material": {
+          "kind": "u8",
+          "encoding": null,
+          "value": 26,
+          "raw": "1a"
+        },
+        "resourceName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n54",
+      "level": "CarryLand",
+      "nodeId": 54,
+      "name": "BstNode_3707306022",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 16229,
+      "sourceLength": 149,
+      "sourceSha256": "aee53c738681b9cfa140112fb4f2e1f79a9e40e856549e255c5141692ce0c821",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306022,
+            "int": -587661274,
+            "float": -560699459277684740
+          },
+          "raw": "2600f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n55",
+      "level": "CarryLand",
+      "nodeId": 55,
+      "name": "BstNode_3707306003",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 16378,
+      "sourceLength": 149,
+      "sourceSha256": "6e6fe06fd94bc53c2963e8d40a18b09dedd3519f5271f3be6ab1e6a29e061f29",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306003,
+            "int": -587661293,
+            "float": -560698806442655740
+          },
+          "raw": "1300f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n56",
+      "level": "CarryLand",
+      "nodeId": 56,
+      "name": "BstNode_3707306067",
+      "className": "LevelMesh",
+      "classIndex": 15,
+      "sourceOffset": 16527,
+      "sourceLength": 467,
+      "sourceSha256": "b96d761cfc9a505598e36feec761436b7bbb43501a1868ce992549e9a39458b9",
+      "declaredFieldCount": 59,
+      "serializedState": {
+        "render": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306067,
+            "int": -587661229,
+            "float": -560701005465911300
+          },
+          "raw": "5300f9dc"
+        },
+        "material": {
+          "kind": "u8",
+          "encoding": null,
+          "value": 26,
+          "raw": "1a"
+        },
+        "resourceName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n57",
+      "level": "CarryLand",
+      "nodeId": 57,
+      "name": "BstNode_3707306008",
+      "className": "MeditationArea",
+      "classIndex": 18,
+      "sourceOffset": 16994,
+      "sourceLength": 150,
+      "sourceSha256": "03cd69650e532500c0cec2a4f64caf79b574891cd4a078431d82589c8b4b4721",
+      "declaredFieldCount": 22,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n58",
+      "level": "CarryLand",
+      "nodeId": 58,
+      "name": "BstNode_3707306018",
+      "className": "Marker",
+      "classIndex": 3,
+      "sourceOffset": 17144,
+      "sourceLength": 72,
+      "sourceSha256": "ed718fab5316bf6cf6a7b2629608d9d494b49ef05b101cc220a671061fcce1a2",
+      "declaredFieldCount": 4,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n59",
+      "level": "CarryLand",
+      "nodeId": 59,
+      "name": "BstNode_3707305998",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 17216,
+      "sourceLength": 149,
+      "sourceSha256": "db829636d2546cc3c9d2fd1d93ce958ca397fa8e9fdc6cb0321763acc2185f1f",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707305998,
+            "int": -587661298,
+            "float": -560698634643963900
+          },
+          "raw": "0e00f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n60",
+      "level": "CarryLand",
+      "nodeId": 60,
+      "name": "BstNode_3707306011",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 17365,
+      "sourceLength": 149,
+      "sourceSha256": "6ab2f84047fd2d2b155048239e3ffb29aac18d93d13fdb45ed7495fdc5a9427c",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306011,
+            "int": -587661285,
+            "float": -560699081320562700
+          },
+          "raw": "1b00f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n61",
+      "level": "CarryLand",
+      "nodeId": 61,
+      "name": "BstNode_2345992198",
+      "className": "TerrainBlobPrefab",
+      "classIndex": 16,
+      "sourceOffset": 17514,
+      "sourceLength": 128,
+      "sourceSha256": "597c717c88e6fdca44e5f8f529ed37ebc4f8381d4deabb8dde9e116bc75bc246",
+      "declaredFieldCount": 7,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2345992198,
+            "int": -1948975098,
+            "float": -8.204465089572677e-32
+          },
+          "raw": "0600d58b"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n62",
+      "level": "CarryLand",
+      "nodeId": 62,
+      "name": "BstNode_3707306034",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 17642,
+      "sourceLength": 149,
+      "sourceSha256": "3a651dbfb50b903741db126a64047b509eda9921de403176c11768a6e3403e9e",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306034,
+            "int": -587661262,
+            "float": -560699871594545150
+          },
+          "raw": "3200f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n63",
+      "level": "CarryLand",
+      "nodeId": 63,
+      "name": "BstNode_3707306058",
+      "className": "LevelMesh",
+      "classIndex": 15,
+      "sourceOffset": 17791,
+      "sourceLength": 467,
+      "sourceSha256": "7c255016deb63aa7f3ae2379e435d1d086156503a2d85d8b389053dd7237d445",
+      "declaredFieldCount": 59,
+      "serializedState": {
+        "render": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306058,
+            "int": -587661238,
+            "float": -560700696228266000
+          },
+          "raw": "4a00f9dc"
+        },
+        "material": {
+          "kind": "u8",
+          "encoding": null,
+          "value": 26,
+          "raw": "1a"
+        },
+        "resourceName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n64",
+      "level": "CarryLand",
+      "nodeId": 64,
+      "name": "BstNode_3707306028",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 18258,
+      "sourceLength": 149,
+      "sourceSha256": "52bb35a8d1538e0f7d54ea238cade44ed13deffd690c0e6bb451776552f78064",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306028,
+            "int": -587661268,
+            "float": -560699665436114940
+          },
+          "raw": "2c00f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n65",
+      "level": "CarryLand",
+      "nodeId": 65,
+      "name": "BstNode_3707306012",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 18407,
+      "sourceLength": 149,
+      "sourceSha256": "75a974833cb53ae4eabb60a0e89a5513c899bfd19a392d4cc9a343924bd16d13",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306012,
+            "int": -587661284,
+            "float": -560699115680301060
+          },
+          "raw": "1c00f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n66",
+      "level": "CarryLand",
+      "nodeId": 66,
+      "name": "BstNode_3707306004",
+      "className": "FragmentCollectActivity",
+      "classIndex": 11,
+      "sourceOffset": 18556,
+      "sourceLength": 31,
+      "sourceSha256": "e2051c50e16735a361451e576328f228578f5e988fbb270bb28b3593a885414e",
+      "declaredFieldCount": 2,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n66/p0",
+          "fieldName": "fragments",
+          "target": "CarryLand:n108",
+          "targetNodeId": 108,
+          "offset": 18579
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n67",
+      "level": "CarryLand",
+      "nodeId": 67,
+      "name": "BstNode_3707306039",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 18587,
+      "sourceLength": 149,
+      "sourceSha256": "750170950f87c16321dbeee53443d31461bc201cb2f8965b739ff85065295ed6",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306039,
+            "int": -587661257,
+            "float": -560700043393237000
+          },
+          "raw": "3700f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n68",
+      "level": "CarryLand",
+      "nodeId": 68,
+      "name": "BstNode_3707306050",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 18736,
+      "sourceLength": 149,
+      "sourceSha256": "86e75e92f4de10134e786ccc50ff4e06c0dc66968c2b4ee0de59a63447b91a0d",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306050,
+            "int": -587661246,
+            "float": -560700421350359040
+          },
+          "raw": "4200f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n69",
+      "level": "CarryLand",
+      "nodeId": 69,
+      "name": "BstNode_3707306030",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 18885,
+      "sourceLength": 149,
+      "sourceSha256": "dbdf9f23dc058b87f943944573fb36014165d7af5f1783af885507229a37c6fd",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306030,
+            "int": -587661266,
+            "float": -560699734155591700
+          },
+          "raw": "2e00f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n70",
+      "level": "CarryLand",
+      "nodeId": 70,
+      "name": "BstNode_3707306031",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 19034,
+      "sourceLength": 149,
+      "sourceSha256": "ea0bb386fa5b74b3b4eaf4a3ac028aabf55aebea07feb72ef7c116505059b851",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306031,
+            "int": -587661265,
+            "float": -560699768515330050
+          },
+          "raw": "2f00f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n71",
+      "level": "CarryLand",
+      "nodeId": 71,
+      "name": "BstNode_3707306009",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 19183,
+      "sourceLength": 149,
+      "sourceSha256": "6fb163155a41fb1eb44d48475d8d0882922641497ddf547e7daf9ad905f0e4ee",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306009,
+            "int": -587661287,
+            "float": -560699012601085950
+          },
+          "raw": "1900f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n72",
+      "level": "CarryLand",
+      "nodeId": 72,
+      "name": "BstNode_3707306066",
+      "className": "LevelMesh",
+      "classIndex": 15,
+      "sourceOffset": 19332,
+      "sourceLength": 467,
+      "sourceSha256": "a3b7904e50288fa3e3d4c61588d6b5a650e0cf741aa2b6e8a65bc72b6afab6fe",
+      "declaredFieldCount": 59,
+      "serializedState": {
+        "render": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306066,
+            "int": -587661230,
+            "float": -560700971106172900
+          },
+          "raw": "5200f9dc"
+        },
+        "material": {
+          "kind": "u8",
+          "encoding": null,
+          "value": 26,
+          "raw": "1a"
+        },
+        "resourceName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n73",
+      "level": "CarryLand",
+      "nodeId": 73,
+      "name": "BstNode_3707306056",
+      "className": "DisplayText",
+      "classIndex": 9,
+      "sourceOffset": 19799,
+      "sourceLength": 195,
+      "sourceSha256": "b7dbf548ddae1ac0de76fc13cd19ab203f9fd4edf011e703c9687711d9bb47a7",
+      "declaredFieldCount": 21,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n74",
+      "level": "CarryLand",
+      "nodeId": 74,
+      "name": "BstNode_3707306026",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 19994,
+      "sourceLength": 149,
+      "sourceSha256": "aa1026d9d81ce8374eefd3be6831b081d675272e35ed3350dd5cfe192426abe4",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306026,
+            "int": -587661270,
+            "float": -560699596716638200
+          },
+          "raw": "2a00f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n75",
+      "level": "CarryLand",
+      "nodeId": 75,
+      "name": "BstNode_3707306033",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 20143,
+      "sourceLength": 149,
+      "sourceSha256": "6e1049dfc6d25e5862569d93be2d8efb45db30ad34b7a1deb24bf2cae02ae87f",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306033,
+            "int": -587661263,
+            "float": -560699837234806800
+          },
+          "raw": "3100f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n76",
+      "level": "CarryLand",
+      "nodeId": 76,
+      "name": "BstNode_3707306019",
+      "className": "MeditationArea",
+      "classIndex": 18,
+      "sourceOffset": 20292,
+      "sourceLength": 150,
+      "sourceSha256": "703ab5250d6a381f9ca64848e5055dc2c48f4c22473b4aac777012574cafc76a",
+      "declaredFieldCount": 22,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n77",
+      "level": "CarryLand",
+      "nodeId": 77,
+      "name": "BstNode_3707306014",
+      "className": "StarFragment",
+      "classIndex": 7,
+      "sourceOffset": 20442,
+      "sourceLength": 27,
+      "sourceSha256": "b680442a182a9882d4066a63f3f0bbb9f1400d41ff2f3500209a36ca9e133164",
+      "declaredFieldCount": 1,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n77/p0",
+          "fieldName": "params",
+          "target": "CarryLand:n35",
+          "targetNodeId": 35,
+          "offset": 20465
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n78",
+      "level": "CarryLand",
+      "nodeId": 78,
+      "name": "BstNode_3707305997",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 20469,
+      "sourceLength": 149,
+      "sourceSha256": "ad8087169d8948be19567ae301c6af736a5c96c0448c21f4e32912a5dd692c41",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707305997,
+            "int": -587661299,
+            "float": -560698600284225540
+          },
+          "raw": "0d00f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n79",
+      "level": "CarryLand",
+      "nodeId": 79,
+      "name": "BstNode_3707306037",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 20618,
+      "sourceLength": 149,
+      "sourceSha256": "3ae872df696b8a3cab4e0a8c57d00cf0152c77688d333f940d97950d4d1c9276",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306037,
+            "int": -587661259,
+            "float": -560699974673760260
+          },
+          "raw": "3500f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n80",
+      "level": "CarryLand",
+      "nodeId": 80,
+      "name": "BstNode_3707306049",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 20767,
+      "sourceLength": 149,
+      "sourceSha256": "0683aab116351dee5976499099c836ee18e706226a30451a54bd49350dd193c5",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306049,
+            "int": -587661247,
+            "float": -560700386990620700
+          },
+          "raw": "4100f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n81",
+      "level": "CarryLand",
+      "nodeId": 81,
+      "name": "BstNode_3707306047",
+      "className": "StarFragment",
+      "classIndex": 7,
+      "sourceOffset": 20916,
+      "sourceLength": 27,
+      "sourceSha256": "2fdb378e6a4ac2139500bfb134684e8b6ef19f3db9f00cd51679404ec40ff35f",
+      "declaredFieldCount": 1,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n81/p0",
+          "fieldName": "params",
+          "target": "CarryLand:n104",
+          "targetNodeId": 104,
+          "offset": 20939
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n82",
+      "level": "CarryLand",
+      "nodeId": 82,
+      "name": "BstNode_3707306001",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 20943,
+      "sourceLength": 149,
+      "sourceSha256": "c7f8e69270d865cb5c441014a562c56c6c3684ddd57ec76ad00ebb0063ed1def",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306001,
+            "int": -587661295,
+            "float": -560698737723179000
+          },
+          "raw": "1100f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n83",
+      "level": "CarryLand",
+      "nodeId": 83,
+      "name": "BstNode_3707305993",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 21092,
+      "sourceLength": 149,
+      "sourceSha256": "416fd35213747a19d572203600505bccacb83981134f520cc378832c35f99a34",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707305993,
+            "int": -587661303,
+            "float": -560698462845272060
+          },
+          "raw": "0900f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n84",
+      "level": "CarryLand",
+      "nodeId": 84,
+      "name": "BstNode_3707306069",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 21241,
+      "sourceLength": 149,
+      "sourceSha256": "574ae3c59099cedba8c00c8b0394dae96932d6359ab7596920f5fd8a99c8562e",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306069,
+            "int": -587661227,
+            "float": -560701074185388000
+          },
+          "raw": "5500f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n85",
+      "level": "CarryLand",
+      "nodeId": 85,
+      "name": "BstNode_2345992194",
+      "className": "TerrainBlobPrefab",
+      "classIndex": 16,
+      "sourceOffset": 21390,
+      "sourceLength": 129,
+      "sourceSha256": "25d1736ac712f895ebaf866bb43c7b60eeec445cbd91d13e93ddfed86e735309",
+      "declaredFieldCount": 7,
+      "serializedState": {
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 2345992194,
+            "int": -1948975102,
+            "float": -8.204462738583976e-32
+          },
+          "raw": "0200d58b"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n86",
+      "level": "CarryLand",
+      "nodeId": 86,
+      "name": "BstNode_3707306023",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 21519,
+      "sourceLength": 149,
+      "sourceSha256": "5f0b51e58de82e90aaca5bacab41491e7db05cdfda699267024136e6f45980d9",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306023,
+            "int": -587661273,
+            "float": -560699493637423100
+          },
+          "raw": "2700f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n87",
+      "level": "CarryLand",
+      "nodeId": 87,
+      "name": "BstNode_3707306052",
+      "className": "Marker",
+      "classIndex": 3,
+      "sourceOffset": 21668,
+      "sourceLength": 72,
+      "sourceSha256": "a958be1270c2e84d276d1dfea1caa736079434fea3753f41df23c845b95f842d",
+      "declaredFieldCount": 4,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n88",
+      "level": "CarryLand",
+      "nodeId": 88,
+      "name": "BstNode_3707306054",
+      "className": "Marker",
+      "classIndex": 3,
+      "sourceOffset": 21740,
+      "sourceLength": 72,
+      "sourceSha256": "6bf715539091d4a88c2e1486b512a597da19baf5dd28ee4901eb536133a9fea4",
+      "declaredFieldCount": 4,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n89",
+      "level": "CarryLand",
+      "nodeId": 89,
+      "name": "BstNode_3707306055",
+      "className": "DisplayText",
+      "classIndex": 9,
+      "sourceOffset": 21812,
+      "sourceLength": 188,
+      "sourceSha256": "88a46ac494786c42a2eb99d7354ac15e3f7268ff5ba3a52ebddefa47df1d5fad",
+      "declaredFieldCount": 21,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n90",
+      "level": "CarryLand",
+      "nodeId": 90,
+      "name": "BstNode_3707306021",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 22000,
+      "sourceLength": 149,
+      "sourceSha256": "cbd791aa02a739d8d4ff5013f9a66b1121772a4b1c4f4c9ec34d62d424259b9a",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306021,
+            "int": -587661275,
+            "float": -560699424917946400
+          },
+          "raw": "2500f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n91",
+      "level": "CarryLand",
+      "nodeId": 91,
+      "name": "BstNode_3707306060",
+      "className": "LevelMesh",
+      "classIndex": 15,
+      "sourceOffset": 22149,
+      "sourceLength": 467,
+      "sourceSha256": "3c47adfa0e8f3e3b9830a8b092f9f64856d2d97b32403af0f37357274f98f0f4",
+      "declaredFieldCount": 59,
+      "serializedState": {
+        "render": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306060,
+            "int": -587661236,
+            "float": -560700764947742700
+          },
+          "raw": "4c00f9dc"
+        },
+        "material": {
+          "kind": "u8",
+          "encoding": null,
+          "value": 26,
+          "raw": "1a"
+        },
+        "resourceName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n92",
+      "level": "CarryLand",
+      "nodeId": 92,
+      "name": "BstNode_3707306061",
+      "className": "LevelMesh",
+      "classIndex": 15,
+      "sourceOffset": 22616,
+      "sourceLength": 467,
+      "sourceSha256": "c27179ba56adcfb4139be9bd61f9b61c2c73c12fd81fa3415355fa188ef18591",
+      "declaredFieldCount": 59,
+      "serializedState": {
+        "render": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306061,
+            "int": -587661235,
+            "float": -560700799307481100
+          },
+          "raw": "4d00f9dc"
+        },
+        "material": {
+          "kind": "u8",
+          "encoding": null,
+          "value": 26,
+          "raw": "1a"
+        },
+        "resourceName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n93",
+      "level": "CarryLand",
+      "nodeId": 93,
+      "name": "BstNode_2345992193",
+      "className": "EnvNode",
+      "classIndex": 19,
+      "sourceOffset": 23083,
+      "sourceLength": 433,
+      "sourceSha256": "ba2f5e1be53f2e65ff455a929d0ec76404f578cb695797234490a6e97c40aa73",
+      "declaredFieldCount": 44,
+      "serializedState": {
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n94",
+      "level": "CarryLand",
+      "nodeId": 94,
+      "name": "BstNode_3707306064",
+      "className": "LevelMesh",
+      "classIndex": 15,
+      "sourceOffset": 23516,
+      "sourceLength": 467,
+      "sourceSha256": "010543dd01a2ac818a750d7fd7b77ca534740398bcc2589cf139817f5c928b35",
+      "declaredFieldCount": 59,
+      "serializedState": {
+        "render": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306064,
+            "int": -587661232,
+            "float": -560700902386696200
+          },
+          "raw": "5000f9dc"
+        },
+        "material": {
+          "kind": "u8",
+          "encoding": null,
+          "value": 26,
+          "raw": "1a"
+        },
+        "resourceName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n95",
+      "level": "CarryLand",
+      "nodeId": 95,
+      "name": "BstNode_14",
+      "className": "Clump",
+      "classIndex": 6,
+      "sourceOffset": 23983,
+      "sourceLength": 27,
+      "sourceSha256": "e44fbf201ed9c16c2d843532569276b1465244053cbde39fd049341f7ce6bdcd",
+      "declaredFieldCount": 1,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n95/p0/a0",
+          "fieldName": "[0]",
+          "target": "CarryLand:n51",
+          "targetNodeId": 51,
+          "offset": 24002
+        },
+        {
+          "fieldId": "n95/p0/a1",
+          "fieldName": "[1]",
+          "target": "CarryLand:n5",
+          "targetNodeId": 5,
+          "offset": 24006
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n96",
+      "level": "CarryLand",
+      "nodeId": 96,
+      "name": "BstNode_3707306035",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 24010,
+      "sourceLength": 149,
+      "sourceSha256": "fcf1239335676827e8406190892a2531544bb0247467064e87b632c4dbabef23",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306035,
+            "int": -587661261,
+            "float": -560699905954283500
+          },
+          "raw": "3300f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n97",
+      "level": "CarryLand",
+      "nodeId": 97,
+      "name": "BstNode_3707305989",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 24159,
+      "sourceLength": 149,
+      "sourceSha256": "5541e5dd79c1ec0f33a28f0980a8d392fd1d20a70fb939dea99378fe6b20832d",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707305989,
+            "int": -587661307,
+            "float": -560698325406318600
+          },
+          "raw": "0500f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n98",
+      "level": "CarryLand",
+      "nodeId": 98,
+      "name": "BstNode_3707306063",
+      "className": "LevelMesh",
+      "classIndex": 15,
+      "sourceOffset": 24308,
+      "sourceLength": 467,
+      "sourceSha256": "4cb802540015aaf378ee18588b6904021a6cb2cfc7181a92f740f00702cdb820",
+      "declaredFieldCount": 59,
+      "serializedState": {
+        "render": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306063,
+            "int": -587661233,
+            "float": -560700868026957800
+          },
+          "raw": "4f00f9dc"
+        },
+        "material": {
+          "kind": "u8",
+          "encoding": null,
+          "value": 26,
+          "raw": "1a"
+        },
+        "resourceName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n99",
+      "level": "CarryLand",
+      "nodeId": 99,
+      "name": "BstNode_3707306024",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 24775,
+      "sourceLength": 149,
+      "sourceSha256": "a2d69bd82f1d5ad28e3fb4c1f5d674a3ec17c652093d8c05574bec1709372e1c",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306024,
+            "int": -587661272,
+            "float": -560699527997161500
+          },
+          "raw": "2800f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n100",
+      "level": "CarryLand",
+      "nodeId": 100,
+      "name": "BstNode_3707306036",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 24924,
+      "sourceLength": 149,
+      "sourceSha256": "e858e0791dabf4ffcf505d137801706915c24831993652128805bcf9ec099af1",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306036,
+            "int": -587661260,
+            "float": -560699940314021900
+          },
+          "raw": "3400f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n101",
+      "level": "CarryLand",
+      "nodeId": 101,
+      "name": "BstNode_3707306065",
+      "className": "LevelMesh",
+      "classIndex": 15,
+      "sourceOffset": 25073,
+      "sourceLength": 467,
+      "sourceSha256": "af60097e42f4450c92914cbcf54ff852d2b1a9583d82dbe516a738eb7d5a065d",
+      "declaredFieldCount": 59,
+      "serializedState": {
+        "render": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306065,
+            "int": -587661231,
+            "float": -560700936746434560
+          },
+          "raw": "5100f9dc"
+        },
+        "material": {
+          "kind": "u8",
+          "encoding": null,
+          "value": 26,
+          "raw": "1a"
+        },
+        "resourceName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n102",
+      "level": "CarryLand",
+      "nodeId": 102,
+      "name": "BstNode_3707306072",
+      "className": "LevelMesh",
+      "classIndex": 15,
+      "sourceOffset": 25540,
+      "sourceLength": 467,
+      "sourceSha256": "5b8acda90ee33101c0005ebb2bb644029dd58a8e1a146bb82a963eab4d70f574",
+      "declaredFieldCount": 59,
+      "serializedState": {
+        "render": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "enabled": {
+          "kind": "u8",
+          "encoding": "bool",
+          "value": 1,
+          "raw": "01"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306072,
+            "int": -587661224,
+            "float": -560701177264603140
+          },
+          "raw": "5800f9dc"
+        },
+        "material": {
+          "kind": "u8",
+          "encoding": null,
+          "value": 26,
+          "raw": "1a"
+        },
+        "resourceName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n103",
+      "level": "CarryLand",
+      "nodeId": 103,
+      "name": "BstNode_3707306010",
+      "className": "Beamo",
+      "classIndex": 1,
+      "sourceOffset": 26007,
+      "sourceLength": 149,
+      "sourceSha256": "2a2ee8ebe7566b390844ce32c5b11a967b1ba99e6590129159f8045353bb2235",
+      "declaredFieldCount": 13,
+      "serializedState": {
+        "meshName": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DCube",
+          "raw": "444375626500"
+        },
+        "bstGuid": {
+          "kind": "bits32",
+          "encoding": "uint",
+          "value": {
+            "uint": 3707306010,
+            "int": -587661286,
+            "float": -560699046960824300
+          },
+          "raw": "1a00f9dc"
+        }
+      },
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n104",
+      "level": "CarryLand",
+      "nodeId": 104,
+      "name": "BstNode_3707306046",
+      "className": "StarFragmentParams",
+      "classIndex": 14,
+      "sourceOffset": 26156,
+      "sourceLength": 48,
+      "sourceSha256": "d417d84fbaafb4e2796d121cfde83add0d51609842f7926887d2ad02a3d4a729",
+      "declaredFieldCount": 7,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n104/p4",
+          "fieldName": "target",
+          "target": "CarryLand:n3",
+          "targetNodeId": 3,
+          "offset": 26195
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n105",
+      "level": "CarryLand",
+      "nodeId": 105,
+      "name": "BstNode_7",
+      "className": "LevelParameters",
+      "classIndex": 20,
+      "sourceOffset": 26204,
+      "sourceLength": 59,
+      "sourceSha256": "9554aa87faedcc4c41a60fa93e6f1929845a90c2c2686cb440b439ba359d6670",
+      "declaredFieldCount": 11,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n106",
+      "level": "CarryLand",
+      "nodeId": 106,
+      "name": "AutoClump106",
+      "className": "Clump",
+      "classIndex": 6,
+      "sourceOffset": 26263,
+      "sourceLength": 25,
+      "sourceSha256": "2034566bae977aff5a9d4a91b0a831691df765c725e520964986f9383117f48f",
+      "declaredFieldCount": 1,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n106/p0/a0",
+          "fieldName": "[0]",
+          "target": "CarryLand:n77",
+          "targetNodeId": 77,
+          "offset": 26284
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n107",
+      "level": "CarryLand",
+      "nodeId": 107,
+      "name": "AutoClump107",
+      "className": "Clump",
+      "classIndex": 6,
+      "sourceOffset": 26288,
+      "sourceLength": 25,
+      "sourceSha256": "310e2d98f69852f33622577830806c16483c0c733213dd70076976a1b9a5c2fe",
+      "declaredFieldCount": 1,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n107/p0/a0",
+          "fieldName": "[0]",
+          "target": "CarryLand:n81",
+          "targetNodeId": 81,
+          "offset": 26309
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CarryLand:n108",
+      "level": "CarryLand",
+      "nodeId": 108,
+      "name": "AutoClump108",
+      "className": "Clump",
+      "classIndex": 6,
+      "sourceOffset": 26313,
+      "sourceLength": 25,
+      "sourceSha256": "d6888fe2815e62d55cc2fa86064ed2f1028f0506440747a25a1e111918ffc46d",
+      "declaredFieldCount": 1,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n108/p0/a0",
+          "fieldName": "[0]",
+          "target": "CarryLand:n9",
+          "targetNodeId": 9,
+          "offset": 26334
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ]
+}

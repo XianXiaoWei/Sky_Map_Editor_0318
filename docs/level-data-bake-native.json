@@ -1,0 +1,37 @@
+{
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "function": "0x1003f4840",
+  "endExclusive": "0x1003f5df0",
+  "restoredSubchains": [
+    "0x1003f4c63..0x1003f4c6e",
+    "0x1003f4db5..0x1003f4f67"
+  ],
+  "nativeOracleReturn": "0x1003f4d99",
+  "record": {
+    "stride": 48,
+    "guid": 24,
+    "lodCount": 28,
+    "uniform": 32,
+    "lodPointer": 40
+  },
+  "loadedLod": {
+    "stride": 24,
+    "renderVertexCount": 0,
+    "opaqueByteCount": 4,
+    "lightingPointer": 8,
+    "opaquePointer": 16
+  },
+  "meshLod": {
+    "stride": 184,
+    "renderVertexCount": 52,
+    "sampleCount": 64,
+    "remapPointer": 152
+  },
+  "rules": [
+    "Absent named resource invalidates GUID to uint32 0xffffffff",
+    "Sample count mismatch/absent mesh still consumes light and opaque bytes, then clears all 24 loaded LOD bytes",
+    "Compatible opaque bytes remain level-heap owned; remap comes from Mesh resource, not this opaque block",
+    "Uniform uses sample zero; non-uniform reads uint32 remap; writes last 4 then first 8 bytes per render vertex"
+  ],
+  "scope": "Stable prepared serializer/resource/heap inputs, instruction subchains only. Full LevelData loading/unloading and async IO, resource lookup/Observe/asserts, unchecked invalid LOD/remap memory, allocation failure/unwind and bake generation remain unverified."
+}

@@ -1,0 +1,48 @@
+{
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "functions": {
+    "constructor": "0x1007c2530",
+    "observe": "0x1007c2310",
+    "destructor": "0x1007c2570",
+    "cleanup": "0x1007c2600"
+  },
+  "refLayout": {
+    "requiredConstructorBytes": 25,
+    "handle": 0,
+    "next": 8,
+    "previous": 16,
+    "observed": 24
+  },
+  "resourceLayout": {
+    "embeddedHandle": 64,
+    "head": 64,
+    "tail": 72,
+    "resourcePointer": 80
+  },
+  "virtualCallbacks": {
+    "beforeDestroy": "0x30",
+    "afterObserveInsertion": "0x38",
+    "beforeReobserveRemoval": "0x40"
+  },
+  "connectedTracingPrefixes": {
+    "constructor": {
+      "start": "0x1007c2530",
+      "bytes": "554889e5c5f857c0c5f8114709c5f811075dc3",
+      "length": 19,
+      "continuation": null
+    },
+    "observe": {
+      "start": "0x1007c2310",
+      "bytes": "554889e54156534889f34989fe488b0b",
+      "length": 16,
+      "continuation": "0x1007c2320"
+    },
+    "destructor": {
+      "start": "0x1007c2570",
+      "bytes": "554889e54156534889fb488b034885c0",
+      "length": 16,
+      "continuation": "0x1007c2580"
+    }
+  },
+  "scope": "Standalone original bodies execute unchanged at original addresses. Connected Model consumer traces calls using exact instruction-aligned PC-independent prefixes and original tails. Constructor writes 25 bytes; normal cleanup/destructor clear 24 and retain observed byte. Virtual callback implementations, resource allocation/manager lookup, concurrent state, unwind/terminate and full game remain open."
+}

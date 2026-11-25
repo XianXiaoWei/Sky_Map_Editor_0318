@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "cases": 256,
+  "exactFloat32Components": 2304,
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "function": "0x100324a80",
+  "span": "0x100326666..0x1003273b6",
+  "scope": "Original global gust instruction span, original RIP and branch control, explicit entry/RET exit harness. Initialized state/time/delta, selected ambient target and preceding boundary force are explicit. libm cosf/expf/sincosf calls bind Linux libc and are traced; trace-return production arithmetic is compared exactly. Full Update/lifecycle/SetWind events, macOS libm, scratch W, Vulkan integration and game acceptance are excluded.",
+  "previewMath": {
+    "passed": false,
+    "failures": [
+      {
+        "state": {
+          "ambient": 7.752132415771484,
+          "phase0": 90.68513488769531,
+          "phase1": 17072.0625,
+          "smoothedWind": [
+            2.506465196609497,
+            0,
+            6.381596565246582
+          ]
+        },
+        "input": {
+          "time": 40061.01171875,
+          "scaledDelta": 0.26600000262260437,
+          "ambientTarget": 5,
+          "boundaryForce": [
+            3.3511695861816406,
+            2.518313407897949,
+            0.5618021488189697
+          ]
+        },
+        "mathTrace": [
+          1.153170108795166,
+          0.40559184551239014,
+          2.306340217590332,
+          -0.670990526676178,
+          1.4710875749588013,
+          0.09954361617565155,
+          -0.27053460478782654,
+          0.7629715204238892,
+          1.8837285041809082,
+          -0.3078497350215912,
+          0.6258642077445984,
+          0.810457170009613,
+          1.2517284154891968,
+          0.3136816620826721,
+          0.1974281221628189,
+          0.9805743098258972,
+          0.3948562443256378,
+          0.9230518937110901,
+          0.7897124886512756,
+          0.7040495276451111,
+          0.31753402948379517,
+          0.95000821352005,
+          0.6350680589675903,
+          0.8050312995910645,
+          1.2701361179351807,
+          0.2961508631706238,
+          -0.5287716388702393,
+          -0.504473090171814,
+          0.8634274005889893,
+          -1.7806854248046875,
+          0.16852259635925293
+        ],
+        "nativeHex": "8d31e3402d20b64233618546eed8f23f0000000094dd5a3e04f3a7400c2c2140a989463f",
+        "previewPassed": false,
+        "previewHex": "8d31e3402d20b64233618546eed8f23f0000000090dd5a3e04f3a7400c2c2140a889463f"
+      }
+    ],
+    "scope": "float32-rounded JavaScript Math against Linux libc callbacks; macOS libm remains unverified"
+  },
+  "failures": []
+}

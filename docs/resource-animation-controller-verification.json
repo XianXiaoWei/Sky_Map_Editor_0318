@@ -1,0 +1,122 @@
+{
+  "passed": true,
+  "scope": "Independent original animation kernels/events, skeleton initialization/human masks/Transform links, sequence timing/capacity/fade, BuildMirrorMap/Finalize, normal/mirrored sampling and Load/LoadPack with original ResourceRef bodies. RegisterPack invokes restored skeleton and finalization. Actual default-pose rendering is accepted separately; registry arrays, metadata selection boundaries, manager/type/virtual callbacks and allocation padding remain explicit owner services. Complete Model/LevelMesh/creature creation, AI/events/effects and dynamic viewport remain incomplete.",
+  "checks": {
+    "resource-animation-request": {
+      "report": "docs/resource-animation-request-oracle.json",
+      "cases": 3194,
+      "comparedBytes": 100713208,
+      "passed": true
+    },
+    "resource-animation-primary": {
+      "report": "docs/resource-animation-primary-oracle.json",
+      "cases": 8910,
+      "comparedBytes": 333618480,
+      "passed": true
+    },
+    "resource-animation-secondary": {
+      "report": "docs/resource-animation-secondary-oracle.json",
+      "cases": 8910,
+      "comparedBytes": 333618480,
+      "passed": true
+    },
+    "play-animation": {
+      "report": "docs/play-animation-oracle.json",
+      "cases": 107,
+      "comparedBytes": 7451908,
+      "passed": true
+    },
+    "resource-animation-control": {
+      "report": "docs/resource-animation-control-oracle.json",
+      "cases": 11856,
+      "comparedBytes": 373843392,
+      "passed": true
+    },
+    "resource-animation-lifecycle": {
+      "report": "docs/resource-animation-lifecycle-oracle.json",
+      "cases": 3960,
+      "comparedBytes": 519045120,
+      "passed": true
+    },
+    "resource-animation-additive": {
+      "report": "docs/resource-animation-additive-oracle.json",
+      "cases": 8910,
+      "comparedBytes": 333618480,
+      "passed": true
+    },
+    "resource-animation-skeleton": {
+      "report": "docs/resource-animation-skeleton-oracle.json",
+      "cases": 3145,
+      "comparedBytes": 1236664320,
+      "passed": true
+    },
+    "resource-animation-sequence": {
+      "report": "docs/resource-animation-sequence-oracle.json",
+      "cases": 5098,
+      "comparedBytes": 265157176,
+      "passed": true
+    },
+    "resource-animation-finalize": {
+      "report": "docs/resource-animation-finalize-oracle.json",
+      "cases": 830,
+      "comparedBytes": 326369280,
+      "passed": true
+    },
+    "resource-animation-load": {
+      "report": "docs/resource-animation-load-oracle.json",
+      "cases": 2376,
+      "comparedBytes": 934281216,
+      "passed": true
+    },
+    "resource-animation-mirrored-sample": {
+      "report": "docs/resource-animation-mirrored-sample-oracle.json",
+      "cases": 3990,
+      "comparedBytes": 4494336,
+      "passed": true
+    }
+  },
+  "projectChecks": {
+    "fullSuite": {
+      "tests": 544,
+      "passed": 544,
+      "log": "/root/sky-research/resource-animation-finalize-load-mirrored-full-tests.tap",
+      "scope": "Final source includes mirror generation/finalization, resource animation loading, mirrored sampling and request argument adapter."
+    },
+    "subsequentAdditiveAndAffectedTests": {
+      "tests": 4,
+      "passed": 4,
+      "log": "/root/sky-research/resource-animation-additive-final-tests.tap"
+    },
+    "typescript": {
+      "passed": true,
+      "log": "/root/sky-research/resource-animation-finalize-load-mirrored-final-tsc.log"
+    },
+    "desktopBuild": {
+      "passed": true,
+      "log": "/root/sky-research/resource-animation-finalize-load-mirrored-final-build.log"
+    },
+    "windowsZipRepacked": false,
+    "subsequentRegistrationAndAffectedTests": {
+      "tests": 6,
+      "passed": 6,
+      "log": "/root/sky-research/resource-animation-registration-final-tests.tap"
+    },
+    "subsequentFinalizationLoadMirroredTests": {
+      "tests": 6,
+      "passed": 6,
+      "log": "/root/sky-research/resource-animation-finalize-load-mirrored-tests.tap"
+    },
+    "nativeEvidence": {
+      "functions": 61,
+      "passed": true,
+      "log": "/root/sky-research/resource-animation-finalize-load-mirrored-evidence.log"
+    }
+  },
+  "runtimeComplete": false,
+  "next": [
+    "Actual animation pack-group and sequence registry loading",
+    "Complete Model constructor and Model/LevelMesh shared ownership",
+    "Creature AI, dynamic geometry and sound/emitter consumers",
+    "Candle, dark plant, flower/grass and environment lifecycles"
+  ]
+}

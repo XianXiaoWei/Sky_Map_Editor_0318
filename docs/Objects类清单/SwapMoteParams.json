@@ -1,0 +1,867 @@
+{
+  "className": "SwapMoteParams",
+  "functionGroup": "光点、碎片与灵魂",
+  "functionRole": "光点参数在区域与阶段间切换",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "SwapMoteParams 的原默认值、继承初始化及 5 个序列化字段变体；原注册字段 4 项。"
+    },
+    {
+      "name": "光点参数在区域与阶段间切换",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Clump（14 条引用）、MoteParams（14 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "SwapMoteParams",
+    "category": "光点、碎片与灵魂",
+    "functionGroupId": "fragments",
+    "functionRole": "光点参数在区域与阶段间切换",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "SwapMoteParams 的原默认值、继承初始化及 5 个序列化字段变体；原注册字段 4 项。"
+      },
+      {
+        "name": "光点参数在区域与阶段间切换",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Clump（14 条引用）、MoteParams（14 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Clump",
+        "references": 14
+      },
+      {
+        "className": "MoteParams",
+        "references": 14
+      }
+    ],
+    "rttiWorkingGroup": "系统和其余类型",
+    "role": "对象实例类型",
+    "instances": 14,
+    "nestedInstances": 0,
+    "referenceFields": 28,
+    "declaredLevels": 2,
+    "levels": [
+      {
+        "level": "Prairie_ButterflyFields",
+        "nodes": 13,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Rain",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "continuously",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "paramsBefore",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "paramsFinish",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "regions",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100ccb570",
+    "nativeRegisteredFields": [
+      {
+        "name": "regions",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 72,
+        "registrationFunction": "0x100481c40",
+        "propertyAddress": "0x100cca820"
+      },
+      {
+        "name": "continuously",
+        "typeGetter": "__Z17GetMetaTypeByTypeIbERK8MetaTypev",
+        "nativeOffset": 80,
+        "registrationFunction": "0x100481c40",
+        "propertyAddress": "0x100cca870"
+      },
+      {
+        "name": "paramsBefore",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x100481c40",
+        "propertyAddress": "0x100cca8c0"
+      },
+      {
+        "name": "paramsFinish",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP10MoteParamsERK8MetaTypev",
+        "nativeOffset": 64,
+        "registrationFunction": "0x100481c40",
+        "propertyAddress": "0x100cca910"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 4 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "Prairie_ButterflyFields:n171",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 171,
+      "name": "BstNode_858",
+      "className": "SwapMoteParams",
+      "classIndex": 29,
+      "sourceOffset": 59110,
+      "sourceLength": 30,
+      "sourceSha256": "27a3e985a8ec3e5a979b5f7835f60165f8f4e5bb7cfc96d3eb512309fd5c2b83",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n171/p1",
+          "fieldName": "paramsBefore",
+          "target": "Prairie_ButterflyFields:n1394",
+          "targetNodeId": 1394,
+          "offset": 59127
+        },
+        {
+          "fieldId": "n171/p3",
+          "fieldName": "paramsFinish",
+          "target": "Prairie_ButterflyFields:n122",
+          "targetNodeId": 122,
+          "offset": 59132
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n258",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 258,
+      "name": "BstNode_973",
+      "className": "SwapMoteParams",
+      "classIndex": 29,
+      "sourceOffset": 80325,
+      "sourceLength": 30,
+      "sourceSha256": "b6b5e8578b99ef4a4b430469d8e890a35b81bebd44072a74d11b437232cc770d",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n258/p1",
+          "fieldName": "paramsBefore",
+          "target": "Prairie_ButterflyFields:n1403",
+          "targetNodeId": 1403,
+          "offset": 80342
+        },
+        {
+          "fieldId": "n258/p3",
+          "fieldName": "paramsFinish",
+          "target": "Prairie_ButterflyFields:n122",
+          "targetNodeId": 122,
+          "offset": 80347
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n295",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 295,
+      "name": "BstNode_944",
+      "className": "SwapMoteParams",
+      "classIndex": 29,
+      "sourceOffset": 88513,
+      "sourceLength": 30,
+      "sourceSha256": "b55d3167e317966f800bcd96b6e474f7b7891dbff8b977d65ddfe701ca6a5edd",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n295/p1",
+          "fieldName": "paramsBefore",
+          "target": "Prairie_ButterflyFields:n1408",
+          "targetNodeId": 1408,
+          "offset": 88530
+        },
+        {
+          "fieldId": "n295/p3",
+          "fieldName": "paramsFinish",
+          "target": "Prairie_ButterflyFields:n122",
+          "targetNodeId": 122,
+          "offset": 88535
+        }
+      ],
+      "incomingReferenceCount": 3,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n361",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 361,
+      "name": "BstNode_1118",
+      "className": "SwapMoteParams",
+      "classIndex": 29,
+      "sourceOffset": 103470,
+      "sourceLength": 31,
+      "sourceSha256": "964ed06526d37e316252211c2f2e119e4c867a8b53dbe28a3b252ac0c1329551",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n361/p1",
+          "fieldName": "paramsBefore",
+          "target": "Prairie_ButterflyFields:n1411",
+          "targetNodeId": 1411,
+          "offset": 103488
+        },
+        {
+          "fieldId": "n361/p3",
+          "fieldName": "paramsFinish",
+          "target": "Prairie_ButterflyFields:n122",
+          "targetNodeId": 122,
+          "offset": 103493
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n380",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 380,
+      "name": "BstNode_1392",
+      "className": "SwapMoteParams",
+      "classIndex": 29,
+      "sourceOffset": 107004,
+      "sourceLength": 31,
+      "sourceSha256": "36e2ba7390ec475da106c434339b816ae4e48e38ae391657b39214b9c8915a0f",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n380/p1",
+          "fieldName": "paramsBefore",
+          "target": "Prairie_ButterflyFields:n1413",
+          "targetNodeId": 1413,
+          "offset": 107022
+        },
+        {
+          "fieldId": "n380/p3",
+          "fieldName": "paramsFinish",
+          "target": "Prairie_ButterflyFields:n122",
+          "targetNodeId": 122,
+          "offset": 107027
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n1009",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 1009,
+      "name": "BstNode_2033",
+      "className": "SwapMoteParams",
+      "classIndex": 29,
+      "sourceOffset": 218037,
+      "sourceLength": 31,
+      "sourceSha256": "eca34a4d8642a4a1b0efbf416a8e8ba5ef2363ee4ffb82804fc8d3896be37492",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1009/p1",
+          "fieldName": "paramsBefore",
+          "target": "Prairie_ButterflyFields:n1458",
+          "targetNodeId": 1458,
+          "offset": 218055
+        },
+        {
+          "fieldId": "n1009/p3",
+          "fieldName": "paramsFinish",
+          "target": "Prairie_ButterflyFields:n1214",
+          "targetNodeId": 1214,
+          "offset": 218060
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n1068",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 1068,
+      "name": "BstNode_1534",
+      "className": "SwapMoteParams",
+      "classIndex": 29,
+      "sourceOffset": 232184,
+      "sourceLength": 31,
+      "sourceSha256": "41c5d53480fa2314fbdebc413fa4b3a3ee80309c793831ce025b4428aeb7ab78",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1068/p1",
+          "fieldName": "paramsBefore",
+          "target": "Prairie_ButterflyFields:n1468",
+          "targetNodeId": 1468,
+          "offset": 232202
+        },
+        {
+          "fieldId": "n1068/p3",
+          "fieldName": "paramsFinish",
+          "target": "Prairie_ButterflyFields:n122",
+          "targetNodeId": 122,
+          "offset": 232207
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n1091",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 1091,
+      "name": "BstNode_907",
+      "className": "SwapMoteParams",
+      "classIndex": 29,
+      "sourceOffset": 237352,
+      "sourceLength": 30,
+      "sourceSha256": "3eac8081afcd94abe039806a9ddfef2668ad9f77757ae961d354c703409c91a9",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1091/p1",
+          "fieldName": "paramsBefore",
+          "target": "Prairie_ButterflyFields:n1471",
+          "targetNodeId": 1471,
+          "offset": 237369
+        },
+        {
+          "fieldId": "n1091/p3",
+          "fieldName": "paramsFinish",
+          "target": "Prairie_ButterflyFields:n122",
+          "targetNodeId": 122,
+          "offset": 237374
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n1178",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 1178,
+      "name": "BstNode_1076",
+      "className": "SwapMoteParams",
+      "classIndex": 29,
+      "sourceOffset": 255537,
+      "sourceLength": 31,
+      "sourceSha256": "2d077795a992faf2a2734674293753dd103c3ab2be932e30a5f1d3389e82bc48",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1178/p1",
+          "fieldName": "paramsBefore",
+          "target": "Prairie_ButterflyFields:n1481",
+          "targetNodeId": 1481,
+          "offset": 255555
+        },
+        {
+          "fieldId": "n1178/p3",
+          "fieldName": "paramsFinish",
+          "target": "Prairie_ButterflyFields:n122",
+          "targetNodeId": 122,
+          "offset": 255560
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n1259",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 1259,
+      "name": "BstNode_1235",
+      "className": "SwapMoteParams",
+      "classIndex": 29,
+      "sourceOffset": 272999,
+      "sourceLength": 31,
+      "sourceSha256": "0fa51fd12d4f330a1feb4e27de8839b0ce05b3ac2ff176dcf8f2bd7ae56c1dbf",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1259/p1",
+          "fieldName": "paramsBefore",
+          "target": "Prairie_ButterflyFields:n1491",
+          "targetNodeId": 1491,
+          "offset": 273017
+        },
+        {
+          "fieldId": "n1259/p3",
+          "fieldName": "paramsFinish",
+          "target": "Prairie_ButterflyFields:n122",
+          "targetNodeId": 122,
+          "offset": 273022
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n1281",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 1281,
+      "name": "BstNode_1292",
+      "className": "SwapMoteParams",
+      "classIndex": 29,
+      "sourceOffset": 277658,
+      "sourceLength": 31,
+      "sourceSha256": "28a73a66b54843ed508851bbe40d1137627ea38b7d7b3ae1c3c11e4d41b0604b",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1281/p1",
+          "fieldName": "paramsBefore",
+          "target": "Prairie_ButterflyFields:n1492",
+          "targetNodeId": 1492,
+          "offset": 277676
+        },
+        {
+          "fieldId": "n1281/p3",
+          "fieldName": "paramsFinish",
+          "target": "Prairie_ButterflyFields:n122",
+          "targetNodeId": 122,
+          "offset": 277681
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n1334",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 1334,
+      "name": "BstNode_985",
+      "className": "SwapMoteParams",
+      "classIndex": 29,
+      "sourceOffset": 287463,
+      "sourceLength": 30,
+      "sourceSha256": "82ded8dbf71a7f81f1f13e6733346d9cc480e24b116710516ef43f4a4930833f",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1334/p1",
+          "fieldName": "paramsBefore",
+          "target": "Prairie_ButterflyFields:n1503",
+          "targetNodeId": 1503,
+          "offset": 287480
+        },
+        {
+          "fieldId": "n1334/p3",
+          "fieldName": "paramsFinish",
+          "target": "Prairie_ButterflyFields:n122",
+          "targetNodeId": 122,
+          "offset": 287485
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Prairie_ButterflyFields:n1364",
+      "level": "Prairie_ButterflyFields",
+      "nodeId": 1364,
+      "name": "BstNode_1033",
+      "className": "SwapMoteParams",
+      "classIndex": 29,
+      "sourceOffset": 292849,
+      "sourceLength": 31,
+      "sourceSha256": "73df06ef2f988ffe0c514a6bc131d047cd01c7b34730261ac08c411c756050e5",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1364/p1",
+          "fieldName": "paramsBefore",
+          "target": "Prairie_ButterflyFields:n1512",
+          "targetNodeId": 1512,
+          "offset": 292867
+        },
+        {
+          "fieldId": "n1364/p3",
+          "fieldName": "paramsFinish",
+          "target": "Prairie_ButterflyFields:n122",
+          "targetNodeId": 122,
+          "offset": 292872
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Rain:n1446",
+      "level": "Rain",
+      "nodeId": 1446,
+      "name": "BstNode_1548",
+      "className": "SwapMoteParams",
+      "classIndex": 86,
+      "sourceOffset": 352506,
+      "sourceLength": 31,
+      "sourceSha256": "a74420f5e5333fe96015669d2a41e168a0f2eb10664ff19e5bafad978be7fc7b",
+      "declaredFieldCount": 5,
+      "serializedState": {},
+      "references": [
+        {
+          "fieldId": "n1446/p1",
+          "fieldName": "paramsBefore",
+          "target": "Rain:n2035",
+          "targetNodeId": 2035,
+          "offset": 352524
+        },
+        {
+          "fieldId": "n1446/p3",
+          "fieldName": "paramsFinish",
+          "target": "Rain:n1017",
+          "targetNodeId": 1017,
+          "offset": 352529
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "Prairie_ButterflyFields",
+      "path": "Levels/Prairie_ButterflyFields/Objects.level.bin",
+      "sha256": "29d8d61a082f3e3414ecfbb501b5f65499deb37ad4a1078ce2e9b88ac0d1e441",
+      "bytes": 297606,
+      "nodes": 1513,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Prairie_ButterflyFields.json",
+      "markdown": "Objects对象清单/Prairie_ButterflyFields.md"
+    },
+    {
+      "level": "Rain",
+      "path": "Levels/Rain/Objects.level.bin",
+      "sha256": "20093bccf3bb1ea0936cb993e66cef0187b40a5a411df3573eb28e4def4f75c6",
+      "bytes": 457732,
+      "nodes": 2079,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Rain.json",
+      "markdown": "Objects对象清单/Rain.md"
+    }
+  ]
+}

@@ -1,0 +1,277 @@
+{
+  "passed": true,
+  "packaged": true,
+  "compilerExecutablesAvailable": false,
+  "emptyInitialProfile": true,
+  "maps": [
+    {
+      "level": "Dawn",
+      "frames": 9,
+      "passes": [
+        "CloudCore",
+        "OpaqueRGBDepth",
+        "WaterSim",
+        "Ocean",
+        "OceanMesh",
+        "Flower",
+        "Flame",
+        "DepthDownsample",
+        "DepthDownsampleGather",
+        "DepthDownsampleQuarter",
+        "CloudFluffySuperCoarse",
+        "CloudFluffyCoarse",
+        "CloudFluffy",
+        "CloudCard",
+        "AlphaColorLogDepth",
+        "FogVolume",
+        "PreviewLuminance",
+        "FogUpsample",
+        "MotionGen",
+        "MotionDilate",
+        "TemporalAa",
+        "Tonemap"
+      ],
+      "water": {
+        "objects": 1,
+        "frames": 9,
+        "shader": "OceanMesh",
+        "ocean": {
+          "enabled": true,
+          "shader": "Ocean",
+          "indices": 54150,
+          "rows": 96,
+          "grid": [
+            96,
+            96
+          ],
+          "math": "Browser float libm and reciprocal square root; original captured arithmetic verified independently"
+        },
+        "normal": "OceanNormal",
+        "caustics": "Caustics",
+        "puddleNormal": null,
+        "grid": [
+          256,
+          256
+        ],
+        "terms": [
+          427.625,
+          498.25,
+          0,
+          0.0625
+        ],
+        "waterNodeIds": [
+          365
+        ],
+        "scope": "Original 96x96 Ocean projected sphere grid under the shared SetOceanRender state, Plane10x10 local Water transforms and original Ocean/OceanMesh variants; WaterSim/Reset two-target GLSL with GPU history and restored material wind scroll. The water opaque sampler maps viewport zero sky depth to the equivalent 256000m far distance; actual surface depth is unchanged. Browser Ocean math, editor camera grid focus, zero Avatar contact impulses, sky-only probe and empty point-light grid are explicit adapters. Wet variants bind the PuddleSim signed zero-gradient reset. Actual PuddleSim/rain drops, scene reflections, complete Ocean lifecycle and Metal image parity remain pending",
+        "renderPath": "gpu-resident",
+        "enabled": true
+      },
+      "modes": [
+        "smooth",
+        "balanced",
+        "native"
+      ]
+    },
+    {
+      "level": "Rain",
+      "frames": 6,
+      "passes": [
+        "CloudCore",
+        "OpaqueRGBDepth",
+        "WaterSim",
+        "OceanMeshWet",
+        "Flower",
+        "DepthDownsample",
+        "DepthDownsampleGather",
+        "DepthDownsampleQuarter",
+        "CloudFluffySuperCoarse",
+        "CloudFluffyCoarse",
+        "CloudFluffy",
+        "AlphaColorLogDepth",
+        "PreviewLuminance",
+        "FogUpsample",
+        "MotionGen",
+        "MotionDilate",
+        "TemporalAa",
+        "Tonemap"
+      ],
+      "water": {
+        "objects": 3,
+        "frames": 6,
+        "shader": "OceanMeshWet",
+        "ocean": {
+          "enabled": false,
+          "shader": "Ocean",
+          "indices": 0,
+          "rows": 0,
+          "grid": [
+            96,
+            96
+          ],
+          "math": "Browser float libm and reciprocal square root; original captured arithmetic verified independently"
+        },
+        "normal": "OceanNormal",
+        "caustics": "Caustics",
+        "puddleNormal": "PuddleSim zero-gradient reset",
+        "grid": [
+          256,
+          256
+        ],
+        "terms": [
+          276.625,
+          8.375,
+          0,
+          0.0625
+        ],
+        "waterNodeIds": [
+          146,
+          582,
+          1350
+        ],
+        "scope": "Original 96x96 Ocean projected sphere grid under the shared SetOceanRender state, Plane10x10 local Water transforms and original Ocean/OceanMesh variants; WaterSim/Reset two-target GLSL with GPU history and restored material wind scroll. The water opaque sampler maps viewport zero sky depth to the equivalent 256000m far distance; actual surface depth is unchanged. Browser Ocean math, editor camera grid focus, zero Avatar contact impulses, sky-only probe and empty point-light grid are explicit adapters. Wet variants bind the PuddleSim signed zero-gradient reset. Actual PuddleSim/rain drops, scene reflections, complete Ocean lifecycle and Metal image parity remain pending",
+        "renderPath": "gpu-resident",
+        "enabled": true
+      },
+      "modes": [
+        "smooth",
+        "balanced",
+        "native"
+      ]
+    },
+    {
+      "level": "RainEnd",
+      "frames": 7,
+      "passes": [
+        "CloudCore",
+        "OpaqueRGBDepth",
+        "WaterSim",
+        "OceanDarkMeshWet",
+        "Flower",
+        "Flame",
+        "DepthDownsample",
+        "DepthDownsampleGather",
+        "DepthDownsampleQuarter",
+        "CloudFluffySuperCoarse",
+        "CloudFluffyCoarse",
+        "CloudFluffy",
+        "AlphaColorLogDepth",
+        "PreviewLuminance",
+        "FogUpsample",
+        "MotionGen",
+        "MotionDilate",
+        "TemporalAa",
+        "Tonemap"
+      ],
+      "water": {
+        "objects": 5,
+        "frames": 7,
+        "shader": "OceanDarkMeshWet",
+        "ocean": {
+          "enabled": false,
+          "shader": "OceanDark",
+          "indices": 0,
+          "rows": 0,
+          "grid": [
+            96,
+            96
+          ],
+          "math": "Browser float libm and reciprocal square root; original captured arithmetic verified independently"
+        },
+        "normal": "OceanNormal",
+        "caustics": "Caustics",
+        "puddleNormal": "PuddleSim zero-gradient reset",
+        "grid": [
+          256,
+          256
+        ],
+        "terms": [
+          347.75,
+          637.4375,
+          0,
+          0.0625
+        ],
+        "waterNodeIds": [
+          191,
+          362,
+          931,
+          1071,
+          1140
+        ],
+        "scope": "Original 96x96 Ocean projected sphere grid under the shared SetOceanRender state, Plane10x10 local Water transforms and original Ocean/OceanMesh variants; WaterSim/Reset two-target GLSL with GPU history and restored material wind scroll. The water opaque sampler maps viewport zero sky depth to the equivalent 256000m far distance; actual surface depth is unchanged. Browser Ocean math, editor camera grid focus, zero Avatar contact impulses, sky-only probe and empty point-light grid are explicit adapters. Wet variants bind the PuddleSim signed zero-gradient reset. Actual PuddleSim/rain drops, scene reflections, complete Ocean lifecycle and Metal image parity remain pending",
+        "renderPath": "gpu-resident",
+        "enabled": true
+      },
+      "modes": [
+        "smooth",
+        "balanced",
+        "native"
+      ]
+    },
+    {
+      "level": "CandleSpace",
+      "frames": 6,
+      "passes": [
+        "CloudCore",
+        "OpaqueRGBDepth",
+        "WaterSim",
+        "OceanCandle",
+        "DepthDownsample",
+        "DepthDownsampleGather",
+        "DepthDownsampleQuarter",
+        "CloudFluffySuperCoarse",
+        "CloudFluffyCoarse",
+        "CloudFluffy",
+        "AlphaColorLogDepth",
+        "PreviewLuminance",
+        "FogUpsample",
+        "MotionGen",
+        "MotionDilate",
+        "TemporalAa",
+        "Tonemap"
+      ],
+      "water": {
+        "objects": 0,
+        "frames": 6,
+        "shader": "OceanMesh",
+        "ocean": {
+          "enabled": true,
+          "shader": "OceanCandle",
+          "indices": 54150,
+          "rows": 96,
+          "grid": [
+            96,
+            96
+          ],
+          "math": "Browser float libm and reciprocal square root; original captured arithmetic verified independently"
+        },
+        "normal": "OceanNormal",
+        "caustics": "Caustics",
+        "puddleNormal": null,
+        "grid": [
+          256,
+          256
+        ],
+        "terms": [
+          221,
+          253.75,
+          0,
+          0.0625
+        ],
+        "waterNodeIds": [],
+        "scope": "Original 96x96 Ocean projected sphere grid under the shared SetOceanRender state, Plane10x10 local Water transforms and original Ocean/OceanMesh variants; WaterSim/Reset two-target GLSL with GPU history and restored material wind scroll. The water opaque sampler maps viewport zero sky depth to the equivalent 256000m far distance; actual surface depth is unchanged. Browser Ocean math, editor camera grid focus, zero Avatar contact impulses, sky-only probe and empty point-light grid are explicit adapters. Wet variants bind the PuddleSim signed zero-gradient reset. Actual PuddleSim/rain drops, scene reflections, complete Ocean lifecycle and Metal image parity remain pending",
+        "renderPath": "gpu-resident",
+        "enabled": true
+      },
+      "modes": [
+        "smooth",
+        "balanced",
+        "native"
+      ]
+    }
+  ],
+  "errors": [],
+  "windowsHardwareTested": false,
+  "scope": "Shipped ASAR and patched shader resources on Linux/Vulkan with no compiler executable or prior shader cache.",
+  "asarSha256": "1649361e73f8381920095b86daf9ff8dd2f64867f70f3463ef7952401dc5c9f3",
+  "shaderCacheEntries": []
+}

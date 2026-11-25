@@ -1,0 +1,70 @@
+{
+  "complete": true,
+  "device": {
+    "engine": "Sky Native Vulkan",
+    "backend": "Vulkan",
+    "device": "llvmpipe (LLVM 19.1.7, 128 bits)",
+    "apiVersion": 4210993,
+    "deviceType": 4,
+    "shaderFloat16": true
+  },
+  "scope": "Independent same-pass fixed-function blend over 4,096 finite half base/source texels, including signed zero/subnormals and seeded random non-tie values. Float32 result and RTE/RTZ half references are reported separately. A matching conversion describes this driver; original Metal conversion remains unverified.",
+  "fixtures": [
+    {
+      "format": "rgba16f",
+      "pixels": 4096,
+      "components": 16384,
+      "modes": {
+        "rte": {
+          "failedComponents": 7211,
+          "firstFailures": [
+            [
+              1,
+              -12.328125,
+              -12.3203125
+            ],
+            [
+              2,
+              1.0966796875,
+              1.095703125
+            ],
+            [
+              8,
+              -32.0,
+              -31.984375
+            ],
+            [
+              9,
+              0.5341796875,
+              0.53369140625
+            ],
+            [
+              14,
+              6.109476089477539e-05,
+              6.103515625e-05
+            ]
+          ],
+          "matched": false
+        },
+        "rtz": {
+          "failedComponents": 0,
+          "firstFailures": [],
+          "matched": true
+        }
+      }
+    },
+    {
+      "format": "rgba32f",
+      "pixels": 4096,
+      "components": 16384,
+      "modes": {
+        "float32": {
+          "failedComponents": 0,
+          "firstFailures": [],
+          "matched": true
+        }
+      }
+    }
+  ],
+  "originalMetalVerified": false
+}

@@ -1,0 +1,108 @@
+{
+  "passed": true,
+  "updatedUtc": "2026-11-25T03:07:35.386538+00:00",
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "nativeReport": "docs/crab-codec-oracle.json",
+  "nativeCases": 432,
+  "nativeComparedBytes": 113345280,
+  "nativeServiceCalls": 489,
+  "nativeCodeHashesBoundariesAndAssemblyVerified": true,
+  "nativeFunctionCount": 13,
+  "nativeScope": "Whole original Crab field codec composed with actual BinaryStream bit/byte/range/quantization/bool/vector operations and player-ID contexts and NetPlayerBarn mappings. Actual caller-owned packet buffers, stream cursors/status and memory are compared. Real network transport, world collision, outer Crab/DarkCreature Update and Model/animation/GPU owners remain pending. Actual encoded buffers, decoded fields, stream validity/cursor/bit offset and whole Crab/Barn arenas are compared. Includes real packet send/receive, PlayerId contexts and mappings, bit alignment/OR behavior, quantization/clamping, capacities and original failures. Caller-private packet scratch is explicitly seeded by a wrapper after the actual count coder; no packet field codec is stubbed. No network traffic is emitted.",
+  "actualBarnPacketWriteCases": 45,
+  "actualBarnPacketWriteThenReadCases": 45,
+  "baselineRegression": {
+    "passed": true,
+    "tests": 663,
+    "command": "./node_modules/.bin/tsx --test tests/*.test.ts",
+    "log": "/root/sky-research/crab-dark-final-tests.log"
+  },
+  "focusedRegression": {
+    "passed": true,
+    "tests": 20,
+    "command": "./node_modules/.bin/tsx --test tests/crab-codec-runtime.test.ts tests/crab-network-runtime.test.ts tests/crab-ai-update-runtime.test.ts tests/crab-state-runtime.test.ts tests/dark-creature-detect-runtime.test.ts",
+    "log": "/root/sky-research/crab-codec-focused.log"
+  },
+  "projectRegression": {
+    "passed": true,
+    "tests": 673,
+    "command": "./node_modules/.bin/tsx --test tests/*.test.ts",
+    "log": "/root/sky-research/crab-codec-final-tests.log"
+  },
+  "finalNativeFixtureRegression": {
+    "passed": true,
+    "tests": 10,
+    "command": "./node_modules/.bin/tsx --test tests/crab-codec-runtime.test.ts",
+    "log": "/root/sky-research/crab-codec-final-fixtures.log"
+  },
+  "typecheck": {
+    "passed": true,
+    "command": "./node_modules/.bin/tsc --noEmit",
+    "log": "/root/sky-research/crab-codec-final-types.log"
+  },
+  "windowsBuild": {
+    "passed": true,
+    "command": "node tools/build.mjs --windows",
+    "log": "/root/sky-research/crab-codec-windows-build.log",
+    "windowsMachineRuntimeTested": false,
+    "machine": "AMD64",
+    "binarySha256": "91d8612a3e3847e574447b11fbce4ffc6697ab84dac4f832c8e79fbabd3f8b00"
+  },
+  "windowsSourcePlan": {
+    "passed": true,
+    "command": "python3 tools/package-windows-source.py --plan",
+    "report": "docs/windows-source-plan.json",
+    "log": "/root/sky-research/crab-codec-windows-source-plan.log",
+    "includesNewRuntimeAndNativeFixtures": true,
+    "androidHostIncluded": false,
+    "buildOutputsIncluded": false,
+    "nodeModulesIncluded": false,
+    "cacheIncluded": false
+  },
+  "inventory": {
+    "passed": true,
+    "maps": 33,
+    "declaredClasses": 283,
+    "objects": 49824,
+    "references": 60016,
+    "brokenReferences": 0,
+    "completeRuntimeClasses": 0,
+    "allMapsRoundTripUnchanged": true,
+    "coreSubchainVerifiedClasses": 53,
+    "log": "/root/sky-research/crab-codec-class-progress.log"
+  },
+  "categoryCensus": {
+    "passed": true,
+    "command": "python3 tools/objects-category-census.py",
+    "log": "/root/sky-research/crab-codec-category-census.log",
+    "nativeCreatureFamilies": 52,
+    "mapDeclaredCreatureFamilies": 18,
+    "completeCreatureClasses": 0
+  },
+  "completeCreatureClasses": 0,
+  "autonomousViewportCreatureAcceptancePassed": false,
+  "newWindowsArchiveCreated": false,
+  "newSourceArchiveCreated": false,
+  "androidWorkPerformed": false,
+  "packagingReadiness": "Windows build passes; original requirement is to finish creatures before packaging. Whole scene motion, collision/interaction, Model/animation/GPU ownership, autonomous playback and stop/level-switch/unload acceptance remain pending. No reliable packaging date is available.",
+  "remaining": [
+    "Crab whole outer Update 0x10025bc10 and original ground/world/interaction/resource owners",
+    "DarkCreature whole outer Update 0x10026ddb0, other states/attacks and actual world/Avatar/raycast/animation owners",
+    "Real scene/world/network/Barn lifecycle and Model/animation/GPU ownership for creature families",
+    "Autonomous viewport behavior, stopping, level switches, repeated loading and Windows hardware acceptance"
+  ],
+  "artifactSha256": {
+    "src/core/binary-stream-runtime.ts": "f342eae31ef034cd69e6f743967a0a9603c2ba34da8c9284b0f1e69e2fc6e77c",
+    "src/core/crab-codec-runtime.ts": "73ebf825e3ef94a36102197d78436b36b5d8839f65ff3e5cb9135dfd8393aaf5",
+    "tools/crab-codec-cases.ts": "0b37d46f36cf5f69800d8f2e2bb3eb675b8a00023701a57cf96783c466a2295d",
+    "tools/crab-codec-oracle.ts": "0e85f65ee5dd5bb678f5619c44f70fc5bf5ce65b71c5bb7450623420caa8189b",
+    "tools/native-crab-codec-oracle.c": "d706a43cabce772c85be15b3f39832a5ad7c953ed07624cb1cf332e411db0d3d",
+    "tools/reverse-crab-codec.py": "93c1f55a315b1464594e16f088c7746e1d5af9e3567e32dba5de7f2dd186c444",
+    "tests/crab-codec-runtime.test.ts": "8a8b7925031a74f22aea1cd622bdafdbf8f6bae8b785078730d07979b6ec6f8e",
+    "tests/fixtures/crab-codec-native.json.gz": "87bcf3e7727d6dcc1bcdf523d840fbfbfd21475cf8009abe3ed65be9b2a3ab88",
+    "docs/螃蟹真实包编解码与打包门槛.md": "438602b8b7f8d82e9e380522680ee47376b41ad30fe5779f8ebbd0da0876ae07",
+    "docs/crab-codec-native.json": "96a51a1598659c0628fe1b055c8bbaa026323816dfe85999bcc03b106d5375c7",
+    "docs/crab-codec-oracle.json": "62ec35879129af29dccef82902a18e7f63718fb6ff2d70d4ab5eef9fafc43789",
+    "tools/objects-class-progress-spec.json": "4c18c850b1da6741f46beb51ca3104d008fa2155b72d154d97ad33f109da805b"
+  }
+}

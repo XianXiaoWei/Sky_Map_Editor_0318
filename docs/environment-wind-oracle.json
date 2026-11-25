@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+  "cases": 1422,
+  "exactFloat32Components": 4664,
+  "volumeCases": 910,
+  "aggregateCases": 256,
+  "timerCases": 256,
+  "corpusWindObjects": 90,
+  "excludedReferencedWindObjects": 30,
+  "functions": {
+    "volume": "0x100328810",
+    "aggregate": "0x100328200",
+    "matrixProduct": "0x100076df0",
+    "boxDistance": "0x10078ce10",
+    "timerSpan": "0x100324b62..0x100324b8d"
+  },
+  "scope": "Unmodified original Wind sample (real matrix multiplication, OBB distance, additional Marker cast/minimum distance and rail-radius/direction/fade branches) and complete EnvironmentForces sampling control flow; original timer instruction span at original RIP with explicit entry/RET exit harness. Explicit initialized timers/global wind, Marker virtual matrix getter outputs, rail closest-position/transform callbacks and interaction-force samples. xyz, volume weight and timer are compared exactly. SIMD scratch W, full update/lifecycle, actual rail nearest-point/getter bodies, automatic force sources and game/Metal acceptance are excluded.",
+  "failures": []
+}

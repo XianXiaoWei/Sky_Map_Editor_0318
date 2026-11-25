@@ -1,0 +1,7 @@
+0x1006d6370: push rbp
+0x1006d6371: mov rbp, rsp
+0x1006d6374: cmp byte ptr [rdi + 0x7d], 0
+0x1006d6378: je 0x1006d637e
+0x1006d637a: mov byte ptr [rdi + 0x7d], 0
+0x1006d637e: pop rbp
+0x1006d637f: ret 

@@ -1,0 +1,899 @@
+{
+  "className": "SetMixChannelLowpassFreq",
+  "functionGroup": "声音、音乐与混音",
+  "functionRole": "混音通道低通频率过渡",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "SetMixChannelLowpassFreq 的原默认值、继承初始化及 4 个序列化字段变体；原注册字段 3 项。"
+    },
+    {
+      "name": "混音通道低通频率过渡",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "当前无非空序列化依赖；原虚方法、资源或全局调用仍需恢复。"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "SetMixChannelLowpassFreq",
+    "category": "声音、音乐与混音",
+    "functionGroupId": "sound",
+    "functionRole": "混音通道低通频率过渡",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "SetMixChannelLowpassFreq 的原默认值、继承初始化及 4 个序列化字段变体；原注册字段 3 项。"
+      },
+      {
+        "name": "混音通道低通频率过渡",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "当前无非空序列化依赖；原虚方法、资源或全局调用仍需恢复。"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [],
+    "rttiWorkingGroup": "交互、事件与任务",
+    "role": "对象实例类型",
+    "instances": 23,
+    "nestedInstances": 0,
+    "referenceFields": 0,
+    "declaredLevels": 5,
+    "levels": [
+      {
+        "level": "Dusk",
+        "nodes": 6,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "NightEnd",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Storm",
+        "nodes": 4,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Sunset",
+        "nodes": 6,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SunsetEnd",
+        "nodes": 6,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "fadeTime",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "freq",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      },
+      {
+        "name": "mixChannel",
+        "type": 0,
+        "size": 4,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100ce8be0",
+    "nativeRegisteredFields": [
+      {
+        "name": "freq",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x100538940",
+        "propertyAddress": "0x100ce7790"
+      },
+      {
+        "name": "fadeTime",
+        "typeGetter": "__Z17GetMetaTypeByTypeIfERK8MetaTypev",
+        "nativeOffset": 60,
+        "registrationFunction": "0x100538940",
+        "propertyAddress": "0x100ce77e0"
+      },
+      {
+        "name": "mixChannel",
+        "typeGetter": "__Z17GetMetaTypeByTypeI10MixChannelERK8MetaTypev",
+        "nativeOffset": 64,
+        "registrationFunction": "0x100538940",
+        "propertyAddress": "0x100ce7830"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 3 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "Dusk:n492",
+      "level": "Dusk",
+      "nodeId": 492,
+      "name": "BstNode_2783838229",
+      "className": "SetMixChannelLowpassFreq",
+      "classIndex": 51,
+      "sourceOffset": 114779,
+      "sourceLength": 36,
+      "sourceSha256": "4a45da1b436d1b7ba67b05258fb5a90993c6b70f7428e04ffc4274df4254b413",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n845",
+      "level": "Dusk",
+      "nodeId": 845,
+      "name": "BstNode_2783838221",
+      "className": "SetMixChannelLowpassFreq",
+      "classIndex": 51,
+      "sourceOffset": 176988,
+      "sourceLength": 36,
+      "sourceSha256": "a37577345ea308434af3dd6ab9b84bddb4b059c7e1ba55f2c02327e17fa9d073",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n954",
+      "level": "Dusk",
+      "nodeId": 954,
+      "name": "BstNode_2783838219",
+      "className": "SetMixChannelLowpassFreq",
+      "classIndex": 51,
+      "sourceOffset": 194998,
+      "sourceLength": 36,
+      "sourceSha256": "c43c6e9720c18d3408879b25c50c8e1377dc5357a98a901b408ad5bcafd7e5db",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n974",
+      "level": "Dusk",
+      "nodeId": 974,
+      "name": "BstNode_2783838228",
+      "className": "SetMixChannelLowpassFreq",
+      "classIndex": 51,
+      "sourceOffset": 199377,
+      "sourceLength": 36,
+      "sourceSha256": "17632eb29f471417fc5287c15cf3640de913028e08864c09fdd917751c13ff8c",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n1002",
+      "level": "Dusk",
+      "nodeId": 1002,
+      "name": "BstNode_2783838227",
+      "className": "SetMixChannelLowpassFreq",
+      "classIndex": 51,
+      "sourceOffset": 205642,
+      "sourceLength": 36,
+      "sourceSha256": "e5d13c138b4cecfef52a3c7c9359e754ad45af1211450f4717ee6a10f6a8fb73",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dusk:n1011",
+      "level": "Dusk",
+      "nodeId": 1011,
+      "name": "BstNode_2783838220",
+      "className": "SetMixChannelLowpassFreq",
+      "classIndex": 51,
+      "sourceOffset": 207090,
+      "sourceLength": 36,
+      "sourceSha256": "bf38c956c490eada9612fc5c736a8aeaa3c73ae86feb0c2e669b3b4415baf55c",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "NightEnd:n459",
+      "level": "NightEnd",
+      "nodeId": 459,
+      "name": "BstNode_209",
+      "className": "SetMixChannelLowpassFreq",
+      "classIndex": 46,
+      "sourceOffset": 99647,
+      "sourceLength": 29,
+      "sourceSha256": "1462dba841901d542621e16bfd45e2f0422e313d52b51f938ff3513798f43920",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n74",
+      "level": "Storm",
+      "nodeId": 74,
+      "name": "BstNode_1288",
+      "className": "SetMixChannelLowpassFreq",
+      "classIndex": 18,
+      "sourceOffset": 36878,
+      "sourceLength": 30,
+      "sourceSha256": "4834eae5076cb56479609bb05a6e1d31a0d683fb126e6c0bcf5aa7fcb1fbbc88",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n78",
+      "level": "Storm",
+      "nodeId": 78,
+      "name": "BstNode_2783838218",
+      "className": "SetMixChannelLowpassFreq",
+      "classIndex": 18,
+      "sourceOffset": 37806,
+      "sourceLength": 36,
+      "sourceSha256": "517b56d920eb09907b2ae443b759fa1b23e22a0e049246a184e50a1567d1b71f",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n1336",
+      "level": "Storm",
+      "nodeId": 1336,
+      "name": "BstNode_1289",
+      "className": "SetMixChannelLowpassFreq",
+      "classIndex": 18,
+      "sourceOffset": 258934,
+      "sourceLength": 30,
+      "sourceSha256": "60ecb8948970f9616b2ea279acc5ca5af7b0c4d86798c2e3bf3eff3ac59f581f",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Storm:n1657",
+      "level": "Storm",
+      "nodeId": 1657,
+      "name": "BstNode_2783838213",
+      "className": "SetMixChannelLowpassFreq",
+      "classIndex": 18,
+      "sourceOffset": 315759,
+      "sourceLength": 36,
+      "sourceSha256": "a3a1738deacf40acfa8e0a63694d85a94d04f5f72ae509e400799b7e1fe1fe33",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n94",
+      "level": "Sunset",
+      "nodeId": 94,
+      "name": "BstNode_2783838223",
+      "className": "SetMixChannelLowpassFreq",
+      "classIndex": 19,
+      "sourceOffset": 42842,
+      "sourceLength": 36,
+      "sourceSha256": "9e9d105837f55196f745c1d6d6053201b5d99f426b86240fabda4846f080f7e1",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n415",
+      "level": "Sunset",
+      "nodeId": 415,
+      "name": "BstNode_2783838224",
+      "className": "SetMixChannelLowpassFreq",
+      "classIndex": 19,
+      "sourceOffset": 103362,
+      "sourceLength": 36,
+      "sourceSha256": "dac5a77a43258160ff9a7dfa76b1f3b2d9f9077bd2bcafc7ab70ffde187e8f17",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n452",
+      "level": "Sunset",
+      "nodeId": 452,
+      "name": "BstNode_2783838225",
+      "className": "SetMixChannelLowpassFreq",
+      "classIndex": 19,
+      "sourceOffset": 110347,
+      "sourceLength": 36,
+      "sourceSha256": "a436d8a7bb4126935fd396dc977df469c0cc6eea012be21b2c3167987ddfc0fc",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n636",
+      "level": "Sunset",
+      "nodeId": 636,
+      "name": "BstNode_2783838222",
+      "className": "SetMixChannelLowpassFreq",
+      "classIndex": 19,
+      "sourceOffset": 141291,
+      "sourceLength": 36,
+      "sourceSha256": "764cecc4d1c8875c1450c552f2bd68f3506010aa04222888a8d845158c88efca",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n1028",
+      "level": "Sunset",
+      "nodeId": 1028,
+      "name": "BstNode_2783838226",
+      "className": "SetMixChannelLowpassFreq",
+      "classIndex": 19,
+      "sourceOffset": 201740,
+      "sourceLength": 36,
+      "sourceSha256": "9f73024aac3280f3b485d5a5eb62c5e5d9673ebc1b5e63d3796896c38063d29a",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Sunset:n1395",
+      "level": "Sunset",
+      "nodeId": 1395,
+      "name": "BstNode_2783838221",
+      "className": "SetMixChannelLowpassFreq",
+      "classIndex": 19,
+      "sourceOffset": 261184,
+      "sourceLength": 36,
+      "sourceSha256": "3ed2726da6e32bcc9e97631b91d6c42f00e6e574cf9764bd14e7c28a91a2b086",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n475",
+      "level": "SunsetEnd",
+      "nodeId": 475,
+      "name": "BstNode_2783838224",
+      "className": "SetMixChannelLowpassFreq",
+      "classIndex": 55,
+      "sourceOffset": 108218,
+      "sourceLength": 36,
+      "sourceSha256": "1bae9d937dc16a678217ed098ec1f61326496c91089b5c03a1fce7a68f050db0",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n507",
+      "level": "SunsetEnd",
+      "nodeId": 507,
+      "name": "BstNode_2783838225",
+      "className": "SetMixChannelLowpassFreq",
+      "classIndex": 55,
+      "sourceOffset": 114005,
+      "sourceLength": 36,
+      "sourceSha256": "97d205f388d6d245231b3c87434cebc8e211f5d6a51f2797f96cdf770cf76171",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n530",
+      "level": "SunsetEnd",
+      "nodeId": 530,
+      "name": "BstNode_2783838229",
+      "className": "SetMixChannelLowpassFreq",
+      "classIndex": 55,
+      "sourceOffset": 117382,
+      "sourceLength": 36,
+      "sourceSha256": "2767a3a51deb10112e0090939ec34b36de354f31acef987767123db90296780f",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n758",
+      "level": "SunsetEnd",
+      "nodeId": 758,
+      "name": "BstNode_2783838230",
+      "className": "SetMixChannelLowpassFreq",
+      "classIndex": 55,
+      "sourceOffset": 152450,
+      "sourceLength": 36,
+      "sourceSha256": "e242798b06a9c829f0fb9337c7f9c08647fc7880444807aa880ca9436e31755f",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n779",
+      "level": "SunsetEnd",
+      "nodeId": 779,
+      "name": "BstNode_2783838222",
+      "className": "SetMixChannelLowpassFreq",
+      "classIndex": 55,
+      "sourceOffset": 155780,
+      "sourceLength": 36,
+      "sourceSha256": "f268a3562c7fd7e9e9c4df7a05c3f61d44ae9ba3a7d0acf96d8d5cee814ad38f",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd:n1539",
+      "level": "SunsetEnd",
+      "nodeId": 1539,
+      "name": "BstNode_2783838231",
+      "className": "SetMixChannelLowpassFreq",
+      "classIndex": 55,
+      "sourceOffset": 288822,
+      "sourceLength": 36,
+      "sourceSha256": "da14af3e3fb43e2a51c75decbadcc34d523908f7487f03ea9cee79d354a153b9",
+      "declaredFieldCount": 4,
+      "serializedState": {},
+      "references": [],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "Dusk",
+      "path": "Levels/Dusk/Objects.level.bin",
+      "sha256": "9222b248f17fb4122cd4ad9650543ab86aab8b077b6965248c70ac2341bf2d5d",
+      "bytes": 242331,
+      "nodes": 1288,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dusk.json",
+      "markdown": "Objects对象清单/Dusk.md"
+    },
+    {
+      "level": "NightEnd",
+      "path": "Levels/NightEnd/Objects.level.bin",
+      "sha256": "0dd8919c4f0ca58e9dc979e211b84dc990e012815929082b1004ed620af32422",
+      "bytes": 156479,
+      "nodes": 1090,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/NightEnd.json",
+      "markdown": "Objects对象清单/NightEnd.md"
+    },
+    {
+      "level": "Storm",
+      "path": "Levels/Storm/Objects.level.bin",
+      "sha256": "4be187f31f1ef86611831abeb45ed9c1deff5e925f3bae80a6be49af85fa52bd",
+      "bytes": 324849,
+      "nodes": 1954,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Storm.json",
+      "markdown": "Objects对象清单/Storm.md"
+    },
+    {
+      "level": "Sunset",
+      "path": "Levels/Sunset/Objects.level.bin",
+      "sha256": "8126f2db693502576075505797624e0b5e53dc064fe6af82e90f2261ca427f8a",
+      "bytes": 325410,
+      "nodes": 1899,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Sunset.json",
+      "markdown": "Objects对象清单/Sunset.md"
+    },
+    {
+      "level": "SunsetEnd",
+      "path": "Levels/SunsetEnd/Objects.level.bin",
+      "sha256": "9995ebfef7aa72982f6b95073a98a4ef01376bd8ac56c3b79b09729f97f43d6e",
+      "bytes": 352573,
+      "nodes": 1998,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SunsetEnd.json",
+      "markdown": "Objects对象清单/SunsetEnd.md"
+    }
+  ]
+}

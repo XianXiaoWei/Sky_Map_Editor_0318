@@ -1,0 +1,69 @@
+0x1002427c0: push rbp
+0x1002427c1: mov rbp, rsp
+0x1002427c4: push r15
+0x1002427c6: push r14
+0x1002427c8: push r13
+0x1002427ca: push r12
+0x1002427cc: push rbx
+0x1002427cd: push rax
+0x1002427ce: mov r14, rcx
+0x1002427d1: mov r15, rdx
+0x1002427d4: mov r12, rsi
+0x1002427d7: mov rbx, rdi
+0x1002427da: lea rdi, [rbx + 0x870]
+0x1002427e1: lea r8, [r12 + 0x1060]
+0x1002427e9: lea rcx, [rip + 0x939404] ; 0x100b7bbf4 Scanout
+0x1002427f0: mov r9d, 0xb
+0x1002427f6: mov rsi, rbx
+0x1002427f9: call 0x1007f5d90 ; 0x1007f5d90
+0x1002427fe: lea rdi, [rbx + 0xdb0]
+0x100242805: lea r13, [rbx + 0x438]
+0x10024280c: lea r8, [r12 + 0x1400]
+0x100242814: lea rcx, [rip + 0x9344a3] ; 0x100b76cbe MovieFrame
+0x10024281b: mov r9d, 0xb
+0x100242821: mov rsi, r13
+0x100242824: mov rdx, r15
+0x100242827: call 0x1007f5d90 ; 0x1007f5d90
+0x10024282c: lea rdi, [rbx + 0x12f0]
+0x100242833: lea r8, [r12 + 0x1318]
+0x10024283b: lea rcx, [rip + 0x934471] ; 0x100b76cb3 Screenshot
+0x100242842: mov r9d, 0xb
+0x100242848: mov rsi, r13
+0x10024284b: mov rdx, r15
+0x10024284e: call 0x1007f5d90 ; 0x1007f5d90
+0x100242853: cmp byte ptr [rbx + 0xda8], 0
+0x10024285a: je 0x1002428c7
+0x10024285c: lea rdi, [rbx + 0xae0]
+0x100242863: lea rsi, [rip + 0x9391c6] ; 0x100b7ba30 u_texColor
+0x10024286a: xor ecx, ecx
+0x10024286c: mov rdx, r14
+0x10024286f: call 0x1007be8b0 ; 0x1007be8b0
+0x100242874: cmp byte ptr [rbx + 0x12e8], 0
+0x10024287b: je 0x1002428c7
+0x10024287d: lea rdi, [rbx + 0x1020]
+0x100242884: lea rsi, [rip + 0x9391a5] ; 0x100b7ba30 u_texColor
+0x10024288b: xor ecx, ecx
+0x10024288d: mov rdx, r14
+0x100242890: call 0x1007be8b0 ; 0x1007be8b0
+0x100242895: cmp byte ptr [rbx + 0x1828], 0
+0x10024289c: je 0x1002428c7
+0x10024289e: add rbx, 0x1560
+0x1002428a5: lea rsi, [rip + 0x939184] ; 0x100b7ba30 u_texColor
+0x1002428ac: xor ecx, ecx
+0x1002428ae: mov rdi, rbx
+0x1002428b1: mov rdx, r14
+0x1002428b4: add rsp, 8
+0x1002428b8: pop rbx
+0x1002428b9: pop r12
+0x1002428bb: pop r13
+0x1002428bd: pop r14
+0x1002428bf: pop r15
+0x1002428c1: pop rbp
+0x1002428c2: jmp 0x1007be8b0 ; 0x1007be8b0
+0x1002428c7: lea rdi, [rip + 0x93441c] ; 0x100b76cea IsInitialized()
+0x1002428ce: lea rsi, [rip + 0x91f9a6] ; 0x100b6227b ../../../Code/Base/Vertex.h
+0x1002428d5: mov edx, 0xa8
+0x1002428da: mov ecx, 3
+0x1002428df: call 0x1007e5f70 ; 0x1007e5f70
+0x1002428e4: ud2 
+0x1002428e6: nop word ptr cs:[rax + rax]

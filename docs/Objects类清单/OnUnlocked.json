@@ -1,0 +1,2042 @@
+{
+  "className": "OnUnlocked",
+  "functionGroup": "收集物、蜡烛与解锁",
+  "functionRole": "解锁、未确认与未解锁事件",
+  "functionalTasks": [
+    {
+      "name": "原输入与构造",
+      "status": "pending",
+      "description": "OnUnlocked 的原默认值、继承初始化及 5 个序列化字段变体；原注册字段 4 项。"
+    },
+    {
+      "name": "解锁、未确认与未解锁事件",
+      "status": "pending",
+      "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+    },
+    {
+      "name": "依赖调用与事件",
+      "status": "pending",
+      "description": "Clump（59 条引用）"
+    },
+    {
+      "name": "实际场景与功能接入",
+      "status": "pending",
+      "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+    },
+    {
+      "name": "注销、恢复与真机行为",
+      "status": "pending",
+      "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+    }
+  ],
+  "classProgress": {
+    "name": "OnUnlocked",
+    "category": "收集物、蜡烛与解锁",
+    "functionGroupId": "collectibles",
+    "functionRole": "解锁、未确认与未解锁事件",
+    "functionalTasks": [
+      {
+        "name": "原输入与构造",
+        "status": "pending",
+        "description": "OnUnlocked 的原默认值、继承初始化及 5 个序列化字段变体；原注册字段 4 项。"
+      },
+      {
+        "name": "解锁、未确认与未解锁事件",
+        "status": "pending",
+        "description": "此功能完整分支、输出与边界行为待恢复；字段声明不代替原运行验证。"
+      },
+      {
+        "name": "依赖调用与事件",
+        "status": "pending",
+        "description": "Clump（59 条引用）"
+      },
+      {
+        "name": "实际场景与功能接入",
+        "status": "pending",
+        "description": "按该类职责接入原更新、UI、渲染或物理调用，不把预览当作完整原逻辑。"
+      },
+      {
+        "name": "注销、恢复与真机行为",
+        "status": "pending",
+        "description": "逐类闭合原销毁/切图状态及原游戏真机行为。"
+      }
+    ],
+    "serializedDependencies": [
+      {
+        "className": "Clump",
+        "references": 59
+      }
+    ],
+    "rttiWorkingGroup": "交互、事件与任务",
+    "role": "对象实例类型",
+    "instances": 37,
+    "nestedInstances": 0,
+    "referenceFields": 59,
+    "declaredLevels": 10,
+    "levels": [
+      {
+        "level": "CandleSpace",
+        "nodes": 5,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "Dawn",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DayEnd",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "DuskMid",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "HubReveal",
+        "nodes": 3,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "NightEnd",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "RainEnd",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SkyHub2",
+        "nodes": 21,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "SunsetEnd2",
+        "nodes": 1,
+        "nested": 0,
+        "declared": true
+      },
+      {
+        "level": "TitleWater",
+        "nodes": 2,
+        "nested": 0,
+        "declared": true
+      }
+    ],
+    "serializedFields": [
+      {
+        "name": "autoStart",
+        "type": 0,
+        "size": 1,
+        "nestedClass": null
+      },
+      {
+        "name": "name",
+        "type": 1,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "notUnlockedFx",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "onUnacknowledgedFx",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      },
+      {
+        "name": "onUnlockedFx",
+        "type": 2,
+        "size": 0,
+        "nestedClass": null
+      }
+    ],
+    "rttiAddress": "0x100c97980",
+    "nativeRegisteredFields": [
+      {
+        "name": "name",
+        "typeGetter": "__Z17GetMetaTypeByTypeINSt3__112basic_stringIcNS0_11char_traitsIcEE16StlPoolAllocatorIcEEEERK8MetaTypev",
+        "nativeOffset": 56,
+        "registrationFunction": "0x1002356e0",
+        "propertyAddress": "0x100c96d10"
+      },
+      {
+        "name": "onUnlockedFx",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 80,
+        "registrationFunction": "0x1002356e0",
+        "propertyAddress": "0x100c96d60"
+      },
+      {
+        "name": "onUnacknowledgedFx",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 88,
+        "registrationFunction": "0x1002356e0",
+        "propertyAddress": "0x100c96db0"
+      },
+      {
+        "name": "notUnlockedFx",
+        "typeGetter": "__Z17GetMetaTypeByTypeIP5ClumpERK8MetaTypev",
+        "nativeOffset": 96,
+        "registrationFunction": "0x1002356e0",
+        "propertyAddress": "0x100c96e00"
+      }
+    ],
+    "completedCheckpoints": 3,
+    "partialCheckpoints": 0,
+    "totalCheckpoints": 10,
+    "checkpointProgressPercent": 30,
+    "overallNativeLogicPercent": null,
+    "completeClassRuntimeVerified": false,
+    "coreSubchainVerified": false,
+    "implementation": [],
+    "evidence": [],
+    "checkpoints": [
+      {
+        "id": "inventory",
+        "name": "实际类声明、实例与引用清点",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "roundTrip",
+        "name": "全地图解析和无修改逐字节回写",
+        "status": "verified",
+        "note": "所有含此类声明/数据的真实地图均完整解析，引用有效且原样回写一致。",
+        "evidence": [
+          "docs/Objects.level.bin类进度.json"
+        ]
+      },
+      {
+        "id": "properties",
+        "name": "此类原字段注册证据已提取",
+        "status": "verified",
+        "note": "已提取 4 个原注册字段；此项表示字段证据，完整继承与缺字段默认值分别验收。",
+        "evidence": [
+          "docs/native-properties.json"
+        ]
+      },
+      {
+        "id": "defaults",
+        "name": "完整原构造与缺字段默认值",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "loading",
+        "name": "完整加载、注册与启用传播",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "core",
+        "name": "明确范围的原核心子链已独立核验",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "behavior",
+        "name": "完整类行为、事件及依赖调用",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "integration",
+        "name": "实际场景、绘制或游戏 UI 接入",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "lifecycle",
+        "name": "切图、注销、销毁及状态恢复",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "hardware",
+        "name": "Windows 真机与原游戏验收",
+        "status": "pending",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "note": "已完成格式、实例/引用清点和原字节回写；原默认值、加载启用、核心行为、事件/资源依赖、实际接入和生命周期仍待恢复。",
+    "remaining": [
+      "完整原构造与缺字段默认值",
+      "完整加载、注册与启用传播",
+      "明确范围的原核心子链已独立核验",
+      "完整类行为、事件及依赖调用",
+      "实际场景、绘制或游戏 UI 接入",
+      "切图、注销、销毁及状态恢复",
+      "Windows 真机与原游戏验收"
+    ]
+  },
+  "instanceCheckpoints": [
+    {
+      "id": "inventory",
+      "name": "实际对象身份、原始字节范围与引用清点"
+    },
+    {
+      "id": "roundTrip",
+      "name": "该对象原始字节完整解析及无修改回写"
+    },
+    {
+      "id": "defaults",
+      "name": "该实例完整原构造、缺字段默认值与继承初始化"
+    },
+    {
+      "id": "load",
+      "name": "该实例原资源加载、注册与启用传播"
+    },
+    {
+      "id": "startup",
+      "name": "该实例原启动状态、入口和调用顺序"
+    },
+    {
+      "id": "events",
+      "name": "该实例全部事件、依赖调用与反馈结果"
+    },
+    {
+      "id": "update",
+      "name": "该实例原更新、状态转换及边界行为"
+    },
+    {
+      "id": "integration",
+      "name": "该实例实际场景、绘制、物理或游戏 UI 接入"
+    },
+    {
+      "id": "lifecycle",
+      "name": "该实例注销、销毁、切图及状态恢复"
+    },
+    {
+      "id": "hardware",
+      "name": "该实例 Windows 真机与原游戏行为验收"
+    }
+  ],
+  "instances": [
+    {
+      "key": "CandleSpace:n143",
+      "level": "CandleSpace",
+      "nodeId": 143,
+      "name": "BstNode_2529559051",
+      "className": "OnUnlocked",
+      "classIndex": 40,
+      "sourceOffset": 41817,
+      "sourceLength": 48,
+      "sourceSha256": "04ac51039e55533f77e326429ffbb11bfa13fe7328d210e7c47d2cde948516bc",
+      "declaredFieldCount": 5,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "GainedFlame",
+          "raw": "4761696e6564466c616d6500"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n143/p2",
+          "fieldName": "onUnacknowledgedFx",
+          "target": "CandleSpace:n492",
+          "targetNodeId": 492,
+          "offset": 41845
+        },
+        {
+          "fieldId": "n143/p4",
+          "fieldName": "notUnlockedFx",
+          "target": "CandleSpace:n294",
+          "targetNodeId": 294,
+          "offset": 41861
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CandleSpace:n215",
+      "level": "CandleSpace",
+      "nodeId": 215,
+      "name": "BstNode_1293287436",
+      "className": "OnUnlocked",
+      "classIndex": 40,
+      "sourceOffset": 52490,
+      "sourceLength": 51,
+      "sourceSha256": "8bb3f3e4997dc46c3cbc619ee92907dd2503c869f01ce252b8ca5bafc1203427",
+      "declaredFieldCount": 5,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "QuestStoneForm",
+          "raw": "517565737453746f6e65466f726d00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n215/p2",
+          "fieldName": "onUnacknowledgedFx",
+          "target": "CandleSpace:n99",
+          "targetNodeId": 99,
+          "offset": 52518
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CandleSpace:n348",
+      "level": "CandleSpace",
+      "nodeId": 348,
+      "name": "BstNode_3156082716",
+      "className": "OnUnlocked",
+      "classIndex": 40,
+      "sourceOffset": 74923,
+      "sourceLength": 50,
+      "sourceSha256": "27a3d164ca28ab45c36b6335a112620d6aafd092e097eefa9e291546bc886ef3",
+      "declaredFieldCount": 5,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "HubStatueForm",
+          "raw": "487562537461747565466f726d00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n348/p2",
+          "fieldName": "onUnacknowledgedFx",
+          "target": "CandleSpace:n233",
+          "targetNodeId": 233,
+          "offset": 74951
+        },
+        {
+          "fieldId": "n348/p4",
+          "fieldName": "notUnlockedFx",
+          "target": "CandleSpace:n529",
+          "targetNodeId": 529,
+          "offset": 74969
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CandleSpace:n422",
+      "level": "CandleSpace",
+      "nodeId": 422,
+      "name": "BstNode_2529558564",
+      "className": "OnUnlocked",
+      "classIndex": 40,
+      "sourceOffset": 85990,
+      "sourceLength": 52,
+      "sourceSha256": "e88824d675defc9a96131c95fc8c37e007328423dcad34491da480856f1ce7b7",
+      "declaredFieldCount": 5,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "GotFriendWaxTut",
+          "raw": "476f74467269656e6457617854757400"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n422/p4",
+          "fieldName": "notUnlockedFx",
+          "target": "CandleSpace:n551",
+          "targetNodeId": 551,
+          "offset": 86038
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "CandleSpace:n444",
+      "level": "CandleSpace",
+      "nodeId": 444,
+      "name": "BstNode_2446917742",
+      "className": "OnUnlocked",
+      "classIndex": 40,
+      "sourceOffset": 88170,
+      "sourceLength": 50,
+      "sourceSha256": "8ddc5682b5517edfdd6689b72c3feca6351c5c4068afdd535bcdf567121eae98",
+      "declaredFieldCount": 5,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "LearnedResume",
+          "raw": "4c6561726e6564526573756d6500"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n444/p2",
+          "fieldName": "onUnacknowledgedFx",
+          "target": "CandleSpace:n418",
+          "targetNodeId": 418,
+          "offset": 88198
+        },
+        {
+          "fieldId": "n444/p4",
+          "fieldName": "notUnlockedFx",
+          "target": "CandleSpace:n25",
+          "targetNodeId": 25,
+          "offset": 88216
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "Dawn:n2724",
+      "level": "Dawn",
+      "nodeId": 2724,
+      "name": "BstNode_2529558650",
+      "className": "OnUnlocked",
+      "classIndex": 121,
+      "sourceOffset": 451667,
+      "sourceLength": 48,
+      "sourceSha256": "65a7ee50190b0463da44ad55a6e5b5e0097081625bb0db637c8ea40dbb25064b",
+      "declaredFieldCount": 5,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "GainedFlame",
+          "raw": "4761696e6564466c616d6500"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n2724/p2",
+          "fieldName": "onUnacknowledgedFx",
+          "target": "Dawn:n2726",
+          "targetNodeId": 2726,
+          "offset": 451695
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DayEnd:n776",
+      "level": "DayEnd",
+      "nodeId": 776,
+      "name": "BstNode_2446917741",
+      "className": "OnUnlocked",
+      "classIndex": 65,
+      "sourceOffset": 171772,
+      "sourceLength": 48,
+      "sourceSha256": "c8ab02db64ef57cd1683ab370862890587bb7a04f7696fe0c33e3d587003d47f",
+      "declaredFieldCount": 5,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DayStormKey",
+          "raw": "44617953746f726d4b657900"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n776/p2",
+          "fieldName": "onUnacknowledgedFx",
+          "target": "DayEnd:n1377",
+          "targetNodeId": 1377,
+          "offset": 171800
+        },
+        {
+          "fieldId": "n776/p4",
+          "fieldName": "notUnlockedFx",
+          "target": "DayEnd:n1378",
+          "targetNodeId": 1378,
+          "offset": 171816
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "DuskMid:n1086",
+      "level": "DuskMid",
+      "nodeId": 1086,
+      "name": "BstNode_2446917654",
+      "className": "OnUnlocked",
+      "classIndex": 67,
+      "sourceOffset": 226136,
+      "sourceLength": 49,
+      "sourceSha256": "cb0538d59df40e726d9df1c423430edd6205a04c04220e6216a2d2360b35e76d",
+      "declaredFieldCount": 5,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DuskStormKey",
+          "raw": "4475736b53746f726d4b657900"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1086/p2",
+          "fieldName": "onUnacknowledgedFx",
+          "target": "DuskMid:n1261",
+          "targetNodeId": 1261,
+          "offset": 226164
+        },
+        {
+          "fieldId": "n1086/p4",
+          "fieldName": "notUnlockedFx",
+          "target": "DuskMid:n1262",
+          "targetNodeId": 1262,
+          "offset": 226181
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n439",
+      "level": "HubReveal",
+      "nodeId": 439,
+      "name": "BstNode_2446917663",
+      "className": "OnUnlocked",
+      "classIndex": 70,
+      "sourceOffset": 105323,
+      "sourceLength": 45,
+      "sourceSha256": "d21f1ea75995fa7258de150c2112a06df3d5e0e1ec5d894ffafeeac91caac19f",
+      "declaredFieldCount": 5,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "GainGift",
+          "raw": "4761696e4769667400"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n439/p4",
+          "fieldName": "notUnlockedFx",
+          "target": "HubReveal:n1088",
+          "targetNodeId": 1088,
+          "offset": 105364
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n584",
+      "level": "HubReveal",
+      "nodeId": 584,
+      "name": "BstNode_3156082787",
+      "className": "OnUnlocked",
+      "classIndex": 70,
+      "sourceOffset": 128931,
+      "sourceLength": 45,
+      "sourceSha256": "dbb905c4452d1d74ad885f7dbd4a12e287e5fbf554a9624a3e6980faac766682",
+      "declaredFieldCount": 5,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "GainGift",
+          "raw": "4761696e4769667400"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n584/p4",
+          "fieldName": "notUnlockedFx",
+          "target": "HubReveal:n1611",
+          "targetNodeId": 1611,
+          "offset": 128972
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "HubReveal:n739",
+      "level": "HubReveal",
+      "nodeId": 739,
+      "name": "BstNode_3156082760",
+      "className": "OnUnlocked",
+      "classIndex": 70,
+      "sourceOffset": 153239,
+      "sourceLength": 48,
+      "sourceSha256": "f2f824bcda642d1fa6e26e390e7ddeff5293fdd53c0e22013a2d134db4b8cb54",
+      "declaredFieldCount": 5,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "GainedFlame",
+          "raw": "4761696e6564466c616d6500"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n739/p4",
+          "fieldName": "notUnlockedFx",
+          "target": "HubReveal:n1632",
+          "targetNodeId": 1632,
+          "offset": 153283
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "NightEnd:n317",
+      "level": "NightEnd",
+      "nodeId": 317,
+      "name": "BstNode_2446917656",
+      "className": "OnUnlocked",
+      "classIndex": 37,
+      "sourceOffset": 74100,
+      "sourceLength": 50,
+      "sourceSha256": "afe7d84a724886427d3d5e1599711db7b44aca253335a0204e541315cc677564",
+      "declaredFieldCount": 5,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "NightStormKey",
+          "raw": "4e6967687453746f726d4b657900"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n317/p2",
+          "fieldName": "onUnacknowledgedFx",
+          "target": "NightEnd:n894",
+          "targetNodeId": 894,
+          "offset": 74128
+        },
+        {
+          "fieldId": "n317/p4",
+          "fieldName": "notUnlockedFx",
+          "target": "NightEnd:n895",
+          "targetNodeId": 895,
+          "offset": 74146
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "RainEnd:n133",
+      "level": "RainEnd",
+      "nodeId": 133,
+      "name": "BstNode_2446917736",
+      "className": "OnUnlocked",
+      "classIndex": 27,
+      "sourceOffset": 60048,
+      "sourceLength": 49,
+      "sourceSha256": "9d500b7ea8c506b77f2fa185e43de31831bfd5c494ae975c214be5587b210c88",
+      "declaredFieldCount": 5,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "RainStormKey",
+          "raw": "5261696e53746f726d4b657900"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n133/p2",
+          "fieldName": "onUnacknowledgedFx",
+          "target": "RainEnd:n1696",
+          "targetNodeId": 1696,
+          "offset": 60076
+        },
+        {
+          "fieldId": "n133/p4",
+          "fieldName": "notUnlockedFx",
+          "target": "RainEnd:n346",
+          "targetNodeId": 346,
+          "offset": 60093
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n15",
+      "level": "SkyHub2",
+      "nodeId": 15,
+      "name": "BstNode_2446917890",
+      "className": "OnUnlocked",
+      "classIndex": 9,
+      "sourceOffset": 34606,
+      "sourceLength": 63,
+      "sourceSha256": "ab37abaea10a6764ae3addc753645dc1f0f2627610b89e47c2b5c03a4886a50a",
+      "declaredFieldCount": 5,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "StormDoorTutorialActivated",
+          "raw": "53746f726d446f6f725475746f7269616c41637469766174656400"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n15/p1",
+          "fieldName": "onUnlockedFx",
+          "target": "SkyHub2:n1310",
+          "targetNodeId": 1310,
+          "offset": 34630
+        },
+        {
+          "fieldId": "n15/p2",
+          "fieldName": "onUnacknowledgedFx",
+          "target": "SkyHub2:n1310",
+          "targetNodeId": 1310,
+          "offset": 34634
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n106",
+      "level": "SkyHub2",
+      "nodeId": 106,
+      "name": "BstNode_1167523964",
+      "className": "OnUnlocked",
+      "classIndex": 9,
+      "sourceOffset": 53209,
+      "sourceLength": 55,
+      "sourceSha256": "8b4acdacfa60b78e95e1f99d614a197fbb0a0600807edbfaadba0a5b6a4f936a",
+      "declaredFieldCount": 5,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "SkyHubFirstArrival",
+          "raw": "536b7948756246697273744172726976616c00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n106/p2",
+          "fieldName": "onUnacknowledgedFx",
+          "target": "SkyHub2:n898",
+          "targetNodeId": 898,
+          "offset": 53237
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n184",
+      "level": "SkyHub2",
+      "nodeId": 184,
+      "name": "BstNode_2529558876",
+      "className": "OnUnlocked",
+      "classIndex": 9,
+      "sourceOffset": 66499,
+      "sourceLength": 51,
+      "sourceSha256": "031266ef4b445070966277cda73f566fef832f7cacc9226d77d1ecbdef5a58ef",
+      "declaredFieldCount": 5,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "RainStatueForm",
+          "raw": "5261696e537461747565466f726d00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n184/p2",
+          "fieldName": "onUnacknowledgedFx",
+          "target": "SkyHub2:n216",
+          "targetNodeId": 216,
+          "offset": 66527
+        },
+        {
+          "fieldId": "n184/p4",
+          "fieldName": "notUnlockedFx",
+          "target": "SkyHub2:n2486",
+          "targetNodeId": 2486,
+          "offset": 66546
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n341",
+      "level": "SkyHub2",
+      "nodeId": 341,
+      "name": "BstNode_2529558878",
+      "className": "OnUnlocked",
+      "classIndex": 9,
+      "sourceOffset": 98342,
+      "sourceLength": 51,
+      "sourceSha256": "6e6f4b356986b36d1c085e7c52ef89cdaf21907ef3b8f7e21c327a1f58f8a7b2",
+      "declaredFieldCount": 5,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DuskStatueForm",
+          "raw": "4475736b537461747565466f726d00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n341/p2",
+          "fieldName": "onUnacknowledgedFx",
+          "target": "SkyHub2:n1068",
+          "targetNodeId": 1068,
+          "offset": 98370
+        },
+        {
+          "fieldId": "n341/p4",
+          "fieldName": "notUnlockedFx",
+          "target": "SkyHub2:n2507",
+          "targetNodeId": 2507,
+          "offset": 98389
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n496",
+      "level": "SkyHub2",
+      "nodeId": 496,
+      "name": "BstNode_2446917770",
+      "className": "OnUnlocked",
+      "classIndex": 9,
+      "sourceOffset": 125957,
+      "sourceLength": 45,
+      "sourceSha256": "606cd43accfc351cfc6111a7d485982a903c066fdcd759d7edaa2ca789ab8f21",
+      "declaredFieldCount": 5,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "GainGift",
+          "raw": "4761696e4769667400"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n496/p2",
+          "fieldName": "onUnacknowledgedFx",
+          "target": "SkyHub2:n1497",
+          "targetNodeId": 1497,
+          "offset": 125985
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n776",
+      "level": "SkyHub2",
+      "nodeId": 776,
+      "name": "BstNode_2446917899",
+      "className": "OnUnlocked",
+      "classIndex": 9,
+      "sourceOffset": 174420,
+      "sourceLength": 43,
+      "sourceSha256": "ea91e26b454c80c8d630a78543f0ed7fd7400333a60229c14c515201916a97c1",
+      "declaredFieldCount": 5,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "1stHub",
+          "raw": "31737448756200"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n776/p2",
+          "fieldName": "onUnacknowledgedFx",
+          "target": "SkyHub2:n898",
+          "targetNodeId": 898,
+          "offset": 174448
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n786",
+      "level": "SkyHub2",
+      "nodeId": 786,
+      "name": "BstNode_2529558880",
+      "className": "OnUnlocked",
+      "classIndex": 9,
+      "sourceOffset": 177622,
+      "sourceLength": 52,
+      "sourceSha256": "5f2feb80a34cd922ea41a7b1a2401ae8551f8dbef5ec6a754faa6a47984a5768",
+      "declaredFieldCount": 5,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "StormStatueForm",
+          "raw": "53746f726d537461747565466f726d00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n786/p2",
+          "fieldName": "onUnacknowledgedFx",
+          "target": "SkyHub2:n2310",
+          "targetNodeId": 2310,
+          "offset": 177650
+        },
+        {
+          "fieldId": "n786/p4",
+          "fieldName": "notUnlockedFx",
+          "target": "SkyHub2:n2576",
+          "targetNodeId": 2576,
+          "offset": 177670
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n903",
+      "level": "SkyHub2",
+      "nodeId": 903,
+      "name": "BstNode_2529558731",
+      "className": "OnUnlocked",
+      "classIndex": 9,
+      "sourceOffset": 197590,
+      "sourceLength": 45,
+      "sourceSha256": "37a588981160b28e1f623100250edbf6753762ff8ac669e53e4adaf973c88ce1",
+      "declaredFieldCount": 5,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "GainGift",
+          "raw": "4761696e4769667400"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n903/p4",
+          "fieldName": "notUnlockedFx",
+          "target": "SkyHub2:n2605",
+          "targetNodeId": 2605,
+          "offset": 197631
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1003",
+      "level": "SkyHub2",
+      "nodeId": 1003,
+      "name": "BstNode_2529558732",
+      "className": "OnUnlocked",
+      "classIndex": 9,
+      "sourceOffset": 216469,
+      "sourceLength": 45,
+      "sourceSha256": "2aa2af27277c077defa1d44df011ba8d98bab757e3cae3a28846c1729f1fbb21",
+      "declaredFieldCount": 5,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "GainGift",
+          "raw": "4761696e4769667400"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1003/p4",
+          "fieldName": "notUnlockedFx",
+          "target": "SkyHub2:n2613",
+          "targetNodeId": 2613,
+          "offset": 216510
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1031",
+      "level": "SkyHub2",
+      "nodeId": 1031,
+      "name": "BstNode_2446917881",
+      "className": "OnUnlocked",
+      "classIndex": 9,
+      "sourceOffset": 220329,
+      "sourceLength": 50,
+      "sourceSha256": "d20ae0faafa69944f80d716067dcae2ee99bec036b0fd615a1a087775db5ea96",
+      "declaredFieldCount": 5,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DayStatueForm",
+          "raw": "446179537461747565466f726d00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1031/p2",
+          "fieldName": "onUnacknowledgedFx",
+          "target": "SkyHub2:n1526",
+          "targetNodeId": 1526,
+          "offset": 220357
+        },
+        {
+          "fieldId": "n1031/p4",
+          "fieldName": "notUnlockedFx",
+          "target": "SkyHub2:n2621",
+          "targetNodeId": 2621,
+          "offset": 220375
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1135",
+      "level": "SkyHub2",
+      "nodeId": 1135,
+      "name": "BstNode_2529558877",
+      "className": "OnUnlocked",
+      "classIndex": 9,
+      "sourceOffset": 239828,
+      "sourceLength": 53,
+      "sourceSha256": "c5bf9f655b9dce9269baf4431d9e0257e1d10680605a04a8005cbe6e1f9b4c03",
+      "declaredFieldCount": 5,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "SunsetStatueForm",
+          "raw": "53756e736574537461747565466f726d00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1135/p2",
+          "fieldName": "onUnacknowledgedFx",
+          "target": "SkyHub2:n2004",
+          "targetNodeId": 2004,
+          "offset": 239856
+        },
+        {
+          "fieldId": "n1135/p4",
+          "fieldName": "notUnlockedFx",
+          "target": "SkyHub2:n2641",
+          "targetNodeId": 2641,
+          "offset": 239877
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1372",
+      "level": "SkyHub2",
+      "nodeId": 1372,
+      "name": "BstNode_2446917893",
+      "className": "OnUnlocked",
+      "classIndex": 9,
+      "sourceOffset": 274102,
+      "sourceLength": 50,
+      "sourceSha256": "02a0d1fce746032c324ab1b153120774cb2666892cc1ad1b8636236b30cadcaf",
+      "declaredFieldCount": 5,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DayStatueForm",
+          "raw": "446179537461747565466f726d00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1372/p2",
+          "fieldName": "onUnacknowledgedFx",
+          "target": "SkyHub2:n1765",
+          "targetNodeId": 1765,
+          "offset": 274130
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1466",
+      "level": "SkyHub2",
+      "nodeId": 1466,
+      "name": "BstNode_1167523895",
+      "className": "OnUnlocked",
+      "classIndex": 9,
+      "sourceOffset": 285266,
+      "sourceLength": 63,
+      "sourceSha256": "08272ea72c29c8cbdfea76a7d3c39785d4575894af2d9b14ca8972b7c83d3869",
+      "declaredFieldCount": 5,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "StormDoorTutorialActivated",
+          "raw": "53746f726d446f6f725475746f7269616c41637469766174656400"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1466/p2",
+          "fieldName": "onUnacknowledgedFx",
+          "target": "SkyHub2:n2700",
+          "targetNodeId": 2700,
+          "offset": 285294
+        },
+        {
+          "fieldId": "n1466/p4",
+          "fieldName": "notUnlockedFx",
+          "target": "SkyHub2:n2701",
+          "targetNodeId": 2701,
+          "offset": 285325
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1552",
+      "level": "SkyHub2",
+      "nodeId": 1552,
+      "name": "BstNode_1293287436",
+      "className": "OnUnlocked",
+      "classIndex": 9,
+      "sourceOffset": 298943,
+      "sourceLength": 51,
+      "sourceSha256": "ad404ac152016211c7f142631c9ffd5e68b4f1c50ff52b08870bfecc1352f937",
+      "declaredFieldCount": 5,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "QuestStoneForm",
+          "raw": "517565737453746f6e65466f726d00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1552/p2",
+          "fieldName": "onUnacknowledgedFx",
+          "target": "SkyHub2:n1568",
+          "targetNodeId": 1568,
+          "offset": 298971
+        },
+        {
+          "fieldId": "n1552/p4",
+          "fieldName": "notUnlockedFx",
+          "target": "SkyHub2:n2730",
+          "targetNodeId": 2730,
+          "offset": 298990
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1723",
+      "level": "SkyHub2",
+      "nodeId": 1723,
+      "name": "BstNode_2529558604",
+      "className": "OnUnlocked",
+      "classIndex": 9,
+      "sourceOffset": 328499,
+      "sourceLength": 45,
+      "sourceSha256": "8785ec44d941dc0f72a21b727d9f1e59d85c52095b8a2d1287aeb667130909cc",
+      "declaredFieldCount": 5,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "GainGift",
+          "raw": "4761696e4769667400"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1723/p4",
+          "fieldName": "notUnlockedFx",
+          "target": "SkyHub2:n1293",
+          "targetNodeId": 1293,
+          "offset": 328540
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1775",
+      "level": "SkyHub2",
+      "nodeId": 1775,
+      "name": "BstNode_2529558843",
+      "className": "OnUnlocked",
+      "classIndex": 9,
+      "sourceOffset": 334985,
+      "sourceLength": 51,
+      "sourceSha256": "286162ea9331836a13e506818a678668de7d53443c189b41841cd9c34afcfa41",
+      "declaredFieldCount": 5,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "DawnStatueForm",
+          "raw": "4461776e537461747565466f726d00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1775/p2",
+          "fieldName": "onUnacknowledgedFx",
+          "target": "SkyHub2:n2228",
+          "targetNodeId": 2228,
+          "offset": 335013
+        },
+        {
+          "fieldId": "n1775/p4",
+          "fieldName": "notUnlockedFx",
+          "target": "SkyHub2:n2774",
+          "targetNodeId": 2774,
+          "offset": 335032
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n1778",
+      "level": "SkyHub2",
+      "nodeId": 1778,
+      "name": "BstNode_2529558859",
+      "className": "OnUnlocked",
+      "classIndex": 9,
+      "sourceOffset": 335850,
+      "sourceLength": 63,
+      "sourceSha256": "9e322664d61e6072f5e1a3792f8c9f563a32ccce00df75d2d77db0ee3ae1eb86",
+      "declaredFieldCount": 5,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "StormDoorTutorialActivated",
+          "raw": "53746f726d446f6f725475746f7269616c41637469766174656400"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n1778/p2",
+          "fieldName": "onUnacknowledgedFx",
+          "target": "SkyHub2:n1765",
+          "targetNodeId": 1765,
+          "offset": 335878
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n2134",
+      "level": "SkyHub2",
+      "nodeId": 2134,
+      "name": "BstNode_1167524069",
+      "className": "OnUnlocked",
+      "classIndex": 9,
+      "sourceOffset": 400825,
+      "sourceLength": 52,
+      "sourceSha256": "0bc1c3080ee9e48ec3cc7eeba9e2de0d81a7e02e1ce629148a377dead0d047a5",
+      "declaredFieldCount": 5,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "NightStatueForm",
+          "raw": "4e69676874537461747565466f726d00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n2134/p4",
+          "fieldName": "notUnlockedFx",
+          "target": "SkyHub2:n2839",
+          "targetNodeId": 2839,
+          "offset": 400873
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n2175",
+      "level": "SkyHub2",
+      "nodeId": 2175,
+      "name": "BstNode_2446917842",
+      "className": "OnUnlocked",
+      "classIndex": 9,
+      "sourceOffset": 409438,
+      "sourceLength": 62,
+      "sourceSha256": "dfae0aaf8d4cfa8f10bff6d04c56f7305ef93ff50e6c2d71300d78506a206d7d",
+      "declaredFieldCount": 5,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "MoreContentHintStatueForm",
+          "raw": "4d6f7265436f6e74656e7448696e74537461747565466f726d00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n2175/p2",
+          "fieldName": "onUnacknowledgedFx",
+          "target": "SkyHub2:n169",
+          "targetNodeId": 169,
+          "offset": 409466
+        },
+        {
+          "fieldId": "n2175/p4",
+          "fieldName": "notUnlockedFx",
+          "target": "SkyHub2:n2846",
+          "targetNodeId": 2846,
+          "offset": 409496
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n2262",
+      "level": "SkyHub2",
+      "nodeId": 2262,
+      "name": "BstNode_2529558730",
+      "className": "OnUnlocked",
+      "classIndex": 9,
+      "sourceOffset": 426169,
+      "sourceLength": 45,
+      "sourceSha256": "5bad38023a0a7a1cf5ce100de1e482dcf422526836a852f59bd735b5a8421a5d",
+      "declaredFieldCount": 5,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "GainGift",
+          "raw": "4761696e4769667400"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n2262/p4",
+          "fieldName": "notUnlockedFx",
+          "target": "SkyHub2:n1741",
+          "targetNodeId": 1741,
+          "offset": 426210
+        }
+      ],
+      "incomingReferenceCount": 2,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SkyHub2:n2333",
+      "level": "SkyHub2",
+      "nodeId": 2333,
+      "name": "BstNode_2529558879",
+      "className": "OnUnlocked",
+      "classIndex": 9,
+      "sourceOffset": 440330,
+      "sourceLength": 52,
+      "sourceSha256": "2c604fd953abd743e3f9332e8e20018955ccc73c036a0c1d959eedde90e9c933",
+      "declaredFieldCount": 5,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "NightStatueForm",
+          "raw": "4e69676874537461747565466f726d00"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n2333/p2",
+          "fieldName": "onUnacknowledgedFx",
+          "target": "SkyHub2:n26",
+          "targetNodeId": 26,
+          "offset": 440358
+        },
+        {
+          "fieldId": "n2333/p4",
+          "fieldName": "notUnlockedFx",
+          "target": "SkyHub2:n2872",
+          "targetNodeId": 2872,
+          "offset": 440378
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "SunsetEnd2:n732",
+      "level": "SunsetEnd2",
+      "nodeId": 732,
+      "name": "BstNode_2446917658",
+      "className": "OnUnlocked",
+      "classIndex": 58,
+      "sourceOffset": 180875,
+      "sourceLength": 51,
+      "sourceSha256": "1058165478cce48926f3c0c09dc8055cb5a8678c36ed37943bc7bd0fb7683ab7",
+      "declaredFieldCount": 5,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "SunsetStormKey",
+          "raw": "53756e73657453746f726d4b657900"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n732/p2",
+          "fieldName": "onUnacknowledgedFx",
+          "target": "SunsetEnd2:n952",
+          "targetNodeId": 952,
+          "offset": 180903
+        },
+        {
+          "fieldId": "n732/p4",
+          "fieldName": "notUnlockedFx",
+          "target": "SunsetEnd2:n724",
+          "targetNodeId": 724,
+          "offset": 180922
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "TitleWater:n79",
+      "level": "TitleWater",
+      "nodeId": 79,
+      "name": "BstNode_1528234019",
+      "className": "OnUnlocked",
+      "classIndex": 29,
+      "sourceOffset": 27276,
+      "sourceLength": 48,
+      "sourceSha256": "e12cd009182a595f707027697297291a08c215a08471b5fbd8ed4d8613978d1e",
+      "declaredFieldCount": 5,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "GainedFlame",
+          "raw": "4761696e6564466c616d6500"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n79/p1",
+          "fieldName": "onUnlockedFx",
+          "target": "TitleWater:n125",
+          "targetNodeId": 125,
+          "offset": 27300
+        },
+        {
+          "fieldId": "n79/p2",
+          "fieldName": "onUnacknowledgedFx",
+          "target": "TitleWater:n125",
+          "targetNodeId": 125,
+          "offset": 27304
+        },
+        {
+          "fieldId": "n79/p4",
+          "fieldName": "notUnlockedFx",
+          "target": "TitleWater:n57",
+          "targetNodeId": 57,
+          "offset": 27320
+        }
+      ],
+      "incomingReferenceCount": 1,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    },
+    {
+      "key": "TitleWater:n143",
+      "level": "TitleWater",
+      "nodeId": 143,
+      "name": "BstNode_3156082691",
+      "className": "OnUnlocked",
+      "classIndex": 29,
+      "sourceOffset": 36339,
+      "sourceLength": 48,
+      "sourceSha256": "9c148e169901ffc73e94e66f96db810966a6115e773be5030674a8b9aba82131",
+      "declaredFieldCount": 5,
+      "serializedState": {
+        "name": {
+          "kind": "string",
+          "encoding": null,
+          "value": "GainedFlame",
+          "raw": "4761696e6564466c616d6500"
+        }
+      },
+      "references": [
+        {
+          "fieldId": "n143/p2",
+          "fieldName": "onUnacknowledgedFx",
+          "target": "TitleWater:n226",
+          "targetNodeId": 226,
+          "offset": 36367
+        },
+        {
+          "fieldId": "n143/p4",
+          "fieldName": "notUnlockedFx",
+          "target": "TitleWater:n227",
+          "targetNodeId": 227,
+          "offset": 36383
+        }
+      ],
+      "incomingReferenceCount": 0,
+      "verifiedCheckpoints": [
+        "inventory",
+        "roundTrip"
+      ],
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "checkpointProgressPercent": 20,
+      "completeInstanceRuntimeVerified": false,
+      "overallNativeLogicPercent": null
+    }
+  ],
+  "sourceFiles": [
+    {
+      "level": "CandleSpace",
+      "path": "Levels/CandleSpace/Objects.level.bin",
+      "sha256": "db7140d2dd5ee9cd2fcdcbb61a898b9facf1683ff21fec83fcbef81b885f56db",
+      "bytes": 92607,
+      "nodes": 564,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/CandleSpace.json",
+      "markdown": "Objects对象清单/CandleSpace.md"
+    },
+    {
+      "level": "Dawn",
+      "path": "Levels/Dawn/Objects.level.bin",
+      "sha256": "16e26aafc7f9d120a548bf5d8bec04fbc18146bc8db531ef75144889b1ff197a",
+      "bytes": 504637,
+      "nodes": 3798,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/Dawn.json",
+      "markdown": "Objects对象清单/Dawn.md"
+    },
+    {
+      "level": "DayEnd",
+      "path": "Levels/DayEnd/Objects.level.bin",
+      "sha256": "9b5c568cefa987e504a10236c5b61e5de4b748d965d09e42db3602e4e52cc904",
+      "bytes": 268140,
+      "nodes": 1459,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DayEnd.json",
+      "markdown": "Objects对象清单/DayEnd.md"
+    },
+    {
+      "level": "DuskMid",
+      "path": "Levels/DuskMid/Objects.level.bin",
+      "sha256": "899ca33226dabd04afecfe7888750938ff4e460cb586603364e150591e9cbda5",
+      "bytes": 234288,
+      "nodes": 1268,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/DuskMid.json",
+      "markdown": "Objects对象清单/DuskMid.md"
+    },
+    {
+      "level": "HubReveal",
+      "path": "Levels/HubReveal/Objects.level.bin",
+      "sha256": "4b32f12bbe4b246cde9ca1e4ba0982000ff108359865bb4340aba640e609861b",
+      "bytes": 289438,
+      "nodes": 1829,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/HubReveal.json",
+      "markdown": "Objects对象清单/HubReveal.md"
+    },
+    {
+      "level": "NightEnd",
+      "path": "Levels/NightEnd/Objects.level.bin",
+      "sha256": "0dd8919c4f0ca58e9dc979e211b84dc990e012815929082b1004ed620af32422",
+      "bytes": 156479,
+      "nodes": 1090,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/NightEnd.json",
+      "markdown": "Objects对象清单/NightEnd.md"
+    },
+    {
+      "level": "RainEnd",
+      "path": "Levels/RainEnd/Objects.level.bin",
+      "sha256": "247912ec955153e3df80c16a861eb872573502a285a17943518bdce448a8d5e3",
+      "bytes": 427926,
+      "nodes": 1938,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/RainEnd.json",
+      "markdown": "Objects对象清单/RainEnd.md"
+    },
+    {
+      "level": "SkyHub2",
+      "path": "Levels/SkyHub2/Objects.level.bin",
+      "sha256": "8b467f9b349d9d4ce0d038528c96e44dff30063149bf5bbf90232a56bb9dd36f",
+      "bytes": 475656,
+      "nodes": 2886,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SkyHub2.json",
+      "markdown": "Objects对象清单/SkyHub2.md"
+    },
+    {
+      "level": "SunsetEnd2",
+      "path": "Levels/SunsetEnd2/Objects.level.bin",
+      "sha256": "f76249413f9412f3db6d726aacf7425d5da546f8a9b88b9614c8a33fdb87e711",
+      "bytes": 209340,
+      "nodes": 975,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/SunsetEnd2.json",
+      "markdown": "Objects对象清单/SunsetEnd2.md"
+    },
+    {
+      "level": "TitleWater",
+      "path": "Levels/TitleWater/Objects.level.bin",
+      "sha256": "46841a22d17b360fcc3c7ceb8406d8c7e73441fd59023f64b4bce4057e1b9414",
+      "bytes": 45511,
+      "nodes": 238,
+      "fullParseAndUnchangedRoundTrip": true,
+      "json": "Objects对象清单/TitleWater.json",
+      "markdown": "Objects对象清单/TitleWater.md"
+    }
+  ]
+}

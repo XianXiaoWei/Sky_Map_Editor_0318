@@ -1,0 +1,12 @@
+{
+  "updatedAtUTC": "2026-11-22",
+  "priorities": [
+    "Windows Vulkan original rendering/performance",
+    "Objects.level.bin and shared dependencies",
+    "BstBaked.meshes and Avatar"
+  ],
+  "scope": "优先 Windows 原材质 Vulkan 的原游戏渲染方法、卡顿与换图优化，再继续 Objects.level.bin；沿 Model/LOD/Visibility/RenderList 及环境依赖推进。先逆向原加载、创建、注册、更新和销毁整体调用链，再按原依赖从基础类向功能类推进。引用到未实现的玩法、交互、UI、贴图、音频、shader、BstBaked 或 Avatar 功能时一同恢复。最终目标为原游戏逻辑 100% 还原；五个 BstBaked 段仍以各 9/10 为真机验收前阶段目标，最后一项为真机与原游戏校验。",
+  "dependencyOrder": "original executable call chain, native inheritance, virtual calls, fields and actual resource dependencies",
+  "restoreReferencedMissingFeaturesTogether": true,
+  "targetOriginalLogicPercent": 100
+}

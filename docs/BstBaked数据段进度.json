@@ -1,0 +1,731 @@
+{
+  "updatedAtUTC": "2026-11-21T12:49:31.182192+00:00",
+  "method": "已验证检查项 / 每段明确列出的 10 项。本表是阶段清单进度，不是全部原函数、工作量或原游戏还原比例；未恢复项不记分。原函数依赖尚未闭合，完整还原百分比保持 null。",
+  "inputVersions": {
+    "51": 1,
+    "52": 32
+  },
+  "inputLevels": 33,
+  "segments": [
+    {
+      "name": "Mesh.bin",
+      "purpose": "模型烘焙",
+      "checkpointProgressPercent": 50,
+      "completedCheckpoints": 5,
+      "totalCheckpoints": 10,
+      "overallNativeLogicPercent": null,
+      "coverage": {
+        "bytes": 53203032,
+        "records": 10653,
+        "levels": 32
+      },
+      "checkpoints": [
+        {
+          "name": "完整烘焙记录布局",
+          "complete": true,
+          "evidence": "bake-evidence.json"
+        },
+        {
+          "name": "33 地图记录解析和原样回写",
+          "complete": true,
+          "evidence": "meshes-coverage.json"
+        },
+        {
+          "name": "Mesh v28 所有 LOD 几何/采样数读取",
+          "complete": true,
+          "evidence": "bake-audit.json"
+        },
+        {
+          "name": "按原 u32 remap 展开 12-byte 照明",
+          "complete": true,
+          "evidence": "bake-evidence.json"
+        },
+        {
+          "name": "三组烘焙属性解码及采样检查",
+          "complete": true,
+          "evidence": "bake-audit.json"
+        },
+        {
+          "name": "完整对象注册、资源/GUID/LOD 绑定及 61 条未匹配解决",
+          "complete": false,
+          "evidence": "meshes-object-links.json",
+          "partialEvidence": [
+            "level-data-bake-oracle.json",
+            "beamo-bake-bindings.json",
+            "beamo-upload-oracle.json",
+            "beamo-render-oracle.json"
+          ],
+          "partialScope": "已有明确范围的原绑定/接受/上传/初始化子链核验；完整项目仍未验收。"
+        },
+        {
+          "name": "LevelMesh/Beamo/BeamoDecal/CloudCard 与调用依赖的完整运行逻辑",
+          "complete": false,
+          "evidence": null,
+          "partialEvidence": [
+            "level-data-bake-oracle.json",
+            "beamo-bake-bindings.json",
+            "beamo-upload-oracle.json",
+            "beamo-render-oracle.json"
+          ],
+          "partialScope": "已有明确范围的原绑定/接受/上传/初始化子链核验；完整项目仍未验收。"
+        },
+        {
+          "name": "所有模型原材质与烘焙照明主视口绘制",
+          "complete": false,
+          "evidence": null,
+          "partialEvidence": [
+            "level-data-bake-oracle.json",
+            "beamo-bake-bindings.json",
+            "beamo-upload-oracle.json",
+            "beamo-render-oracle.json"
+          ],
+          "partialScope": "已有明确范围的原绑定/接受/上传/初始化子链核验；完整项目仍未验收。"
+        },
+        {
+          "name": "原烘焙生成、阴影/bounce/blur 与对应资源重建",
+          "complete": false,
+          "evidence": null
+        },
+        {
+          "name": "Windows 真机和原游戏验收",
+          "complete": false,
+          "evidence": null
+        }
+      ],
+      "remaining": "完整资源/对象注册和启动、GPU及所有RenderList绘制/Visibility/生命周期、原烘焙生成。旧61条未匹配统计已由最新beamo-bake-bindings.json和LevelData加载验收细化；保留历史报告，不把该旧数当当前完整实现缺口。",
+      "targetCheckpointProgressPercent": 90,
+      "partialEvidence": {
+        "loadGuidLod": "docs/level-data-bake-oracle.json",
+        "independentObjectAcceptance": "docs/beamo-bake-oracle.json",
+        "allLodUpload": "docs/beamo-upload-oracle.json",
+        "barnUpload": "docs/beamo-upload-barn-oracle.json",
+        "spatial": "docs/beamo-spatial-oracle.json",
+        "materialGroups": "docs/beamo-material-groups-oracle.json",
+        "materialRenderLoop": "docs/beamo-render-oracle.json",
+        "scope": "原加载GUID/LOD校验与四类绑定关系、Beamo/Decal全部LOD消费与合并材质初始化已部分恢复。完整注册/资源/GPU生命周期/主视口绘制/重烘焙生成器仍未闭合，部分证据不计为整项完成。"
+      }
+    },
+    {
+      "name": "Terrain.bin",
+      "purpose": "地形",
+      "checkpointProgressPercent": 60,
+      "completedCheckpoints": 6,
+      "totalCheckpoints": 10,
+      "overallNativeLogicPercent": null,
+      "coverage": {
+        "bytes": 80898875,
+        "records": 77,
+        "levels": 31
+      },
+      "checkpoints": [
+        {
+          "name": "完整布局及 36-byte 顶点",
+          "complete": true,
+          "evidence": "meshes-evidence.json"
+        },
+        {
+          "name": "77 记录全量解析和原样回写",
+          "complete": true,
+          "evidence": "meshes-coverage.json"
+        },
+        {
+          "name": "压缩边表和完整三角形索引解码",
+          "complete": true,
+          "evidence": "meshes-oracle.json"
+        },
+        {
+          "name": "30 项原材质和地图覆盖",
+          "complete": true,
+          "evidence": "meshes-oracle.json"
+        },
+        {
+          "name": "59 批次分类与索引 scatter 原机器码对照",
+          "complete": true,
+          "evidence": "meshes-oracle.json"
+        },
+        {
+          "name": "原 shader/贴图/packed 属性与材质层序主视口接入",
+          "complete": true,
+          "evidence": "viewport-terrain-maps-check.json"
+        },
+        {
+          "name": "TerrainBlob/Group/Prefab 完整加载与事件调用链",
+          "complete": false,
+          "evidence": "meshes-object-links.json"
+        },
+        {
+          "name": "原 Visibility/Job/LOD/细分/碰撞运行",
+          "complete": false,
+          "evidence": "meshes-render-functions.json"
+        },
+        {
+          "name": "原新地形烘焙及拓扑/碰撞重建",
+          "complete": false,
+          "evidence": null
+        },
+        {
+          "name": "Windows 真机和原游戏画面对照",
+          "complete": false,
+          "evidence": null
+        }
+      ],
+      "remaining": "原 LOD/Visibility/Job、TerrainBlob 类链、碰撞和新烘焙。",
+      "targetCheckpointProgressPercent": 90
+    },
+    {
+      "name": "Cloud.bin",
+      "purpose": "实体云",
+      "checkpointProgressPercent": 70,
+      "completedCheckpoints": 7,
+      "totalCheckpoints": 10,
+      "overallNativeLogicPercent": null,
+      "coverage": {
+        "bytes": 33300014,
+        "records": 27,
+        "levels": 27
+      },
+      "checkpoints": [
+        {
+          "name": "稀疏块、距离、照明和代理布局",
+          "complete": true,
+          "evidence": "cloud-oracle.json"
+        },
+        {
+          "name": "27 地图全量解析和原样回写",
+          "complete": true,
+          "evidence": "meshes-coverage.json"
+        },
+        {
+          "name": "Tex3D 原噪声与 CPU 距离/采样原机器码对照",
+          "complete": true,
+          "evidence": "volu-oracle.json"
+        },
+        {
+          "name": "相机/Avatar 云查询与原噪声参数对照",
+          "complete": true,
+          "evidence": "cloud-camera-query-oracle.json"
+        },
+        {
+          "name": "原目标格式、CloudCore 历史及粗细云深度图",
+          "complete": true,
+          "evidence": "cloud-render-graph.json"
+        },
+        {
+          "name": "原 AIR 阶段和显式输入 Vulkan 执行检查",
+          "complete": true,
+          "evidence": "cloud-depth-graph-check.json"
+        },
+        {
+          "name": "CloudCard 原布局、动态顶点和排序子段检查",
+          "complete": true,
+          "evidence": "cloud-card-facing-oracle.json"
+        },
+        {
+          "name": "完整风场、自动粒子来源、完整交互力",
+          "complete": false,
+          "evidence": "云粒子发射与物理逆向进展.md"
+        },
+        {
+          "name": "完整光照/曝光/Visibility/透明合成、原 shader 数值规则及云烘焙重建",
+          "complete": false,
+          "evidence": "地形与实体云渲染预览.md"
+        },
+        {
+          "name": "Windows 真机、原 Metal 像素和原游戏验收",
+          "complete": false,
+          "evidence": null
+        }
+      ],
+      "remaining": "完整风场、光照/曝光、遮挡、自动粒子及 Metal 画面一致性；时间抗锯齿本轮新接入，仍为预览适配。",
+      "targetCheckpointProgressPercent": 90
+    },
+    {
+      "name": "Skirt.bin",
+      "purpose": "裙边",
+      "checkpointProgressPercent": 50,
+      "completedCheckpoints": 5,
+      "totalCheckpoints": 10,
+      "overallNativeLogicPercent": null,
+      "coverage": {
+        "bytes": 17251060,
+        "records": 2533,
+        "levels": 27
+      },
+      "checkpoints": [
+        {
+          "name": "完整旧版 40-byte 顶点/索引布局",
+          "complete": true,
+          "evidence": "meshes-evidence.json"
+        },
+        {
+          "name": "2533 记录全量解析和原样回写",
+          "complete": true,
+          "evidence": "meshes-coverage.json"
+        },
+        {
+          "name": "原材质存在规则和完整索引范围",
+          "complete": true,
+          "evidence": "meshes-oracle.json"
+        },
+        {
+          "name": "a_userData1 和原 packed 照明拆流",
+          "complete": true,
+          "evidence": "meshes-evidence.json"
+        },
+        {
+          "name": "原裙边 shader 与混合/深度状态主视口接入",
+          "complete": true,
+          "evidence": "viewport-terrain-maps-check.json"
+        },
+        {
+          "name": "原 SkirtBarn 完整注册和生命周期",
+          "complete": false,
+          "evidence": "meshes-render-functions.json",
+          "partialScope": "原完整 Initialize 已找到资源正常 CPU 输出与终止分发已核验；真实资源/注册/所有权/GPU 生命周期尚未闭合。"
+        },
+        {
+          "name": "与对象/地形生成来源的依赖关联",
+          "complete": false,
+          "evidence": "meshes-object-links.json"
+        },
+        {
+          "name": "原可见性、LOD、材质调度与边界更新",
+          "complete": false,
+          "evidence": "meshes-render-functions.json",
+          "partialScope": "原绘制驱动与 chunk 合并、全量 XYZ bounds 和材质掩码已核验；实际 Camera/视锥/距离、原渲染调度仍未闭合。"
+        },
+        {
+          "name": "原照明烘焙、碰撞/生成/重建",
+          "complete": false,
+          "evidence": null
+        },
+        {
+          "name": "Windows 真机和原游戏验收",
+          "complete": false,
+          "evidence": null
+        }
+      ],
+      "remaining": "SkirtBarn 完整运行、生成来源与对象关系、照明/边界/碰撞重建。",
+      "targetCheckpointProgressPercent": 90,
+      "runtimeEvidence": [
+        "skirt-barn-oracle.json",
+        "裙边加载与绘制调度逆向.md"
+      ]
+    },
+    {
+      "name": "Occluder.bin",
+      "purpose": "遮挡",
+      "checkpointProgressPercent": 20,
+      "completedCheckpoints": 2,
+      "totalCheckpoints": 10,
+      "overallNativeLogicPercent": null,
+      "coverage": {
+        "bytes": 5344318,
+        "records": 33,
+        "levels": 33
+      },
+      "checkpoints": [
+        {
+          "name": "位置/索引及有符号法线布局，末字节保留",
+          "complete": true,
+          "evidence": "meshes-evidence.json"
+        },
+        {
+          "name": "33 记录全量解析和原样回写",
+          "complete": true,
+          "evidence": "meshes-coverage.json"
+        },
+        {
+          "name": "第 15 字节语义",
+          "complete": false,
+          "evidence": null
+        },
+        {
+          "name": "原加载注册和生命周期",
+          "complete": false,
+          "evidence": "meshes-render-functions.json"
+        },
+        {
+          "name": "原遮挡几何提交与屏幕缓冲",
+          "complete": false,
+          "evidence": "visibility-submit-oracle.json",
+          "partialScope": "完整数值提交链、顶点/光栅/裁剪和深度 mip 已显式快照核验；实际 Visibility 资源/加载/生命周期/查询未闭合，整项仍待完成。"
+        },
+        {
+          "name": "原 Visibility 分类/查询完整运行",
+          "complete": false,
+          "evidence": "meshes-render-functions.json"
+        },
+        {
+          "name": "与模型、Clump、遮挡相关对象的运行依赖",
+          "complete": false,
+          "evidence": "meshes-object-links.json"
+        },
+        {
+          "name": "真实结果接入地形、模型及云剔除",
+          "complete": false,
+          "evidence": null
+        },
+        {
+          "name": "原遮挡生成和重建",
+          "complete": false,
+          "evidence": null
+        },
+        {
+          "name": "Windows 真机和原游戏验收",
+          "complete": false,
+          "evidence": null
+        }
+      ],
+      "remaining": "第 15 字节语义、真实 Visibility Resize/Update/球和 AABB 查询、原硬件、对象运行依赖、实际剔除和遮挡生成。",
+      "nativeNumericWork": {
+        "floatTransformMip": {
+          "report": "visibility-oracle.json",
+          "passed": true,
+          "scope": "Full unmodified transform 0x10071e7f0 and mip reducer 0x100720560 executed under QEMU x86_64 -cpu max with original Update MXCSR |= 0xe040. Transform xyz includes counts <4, SIMD/scalar summation, last-four scalar overwrite, raw signed normals and 512 batching; W scratch lane and arithmetic NaN payloads excluded. Mips compare every raw word, padding, signed zeros, operand payload forwarding, neighboring mip alias reads and explicit guard memory. Resize layout loop 0x10071db19..0x10071dbae uses a return trampoline before allocation/GPU lifecycle; viewport-to-logical conversion is not included in that slice. SSE probe covers RTZ/FTZ/DAZ; QEMU RCPPS and MAX raw denormal forwarding are explicit capabilities, actual Intel/Mac hardware remains unverified. No rasterization, classification or GPU/game runtime claimed."
+        },
+        "raster": {
+          "report": "visibility-raster-oracle.json",
+          "passed": true,
+          "scope": "Complete unmodified 0x10071ee60 body with original MXCSR |= 0xe040 under QEMU -cpu max. Original stack cookie points to fixed oracle cookie; no function instructions patched. Explicit float4 screen vertices, uint16 indices, depth+guard snapshots and nullable selected list/count/capacity. All output words, four-triangle batch truncation, winding/int32 overflow, bounding boxes, mixed/nonpositive depth diversion, tiled 2x2 edge tests and depth interpolation compared. Map cases use first 120 indices per map and synthetic screen matrix, not full real-camera geometry submission. RCPPS and MIN behavior are emulator capabilities; clipping/selected-triangle expansion, full submission, queries, GPU and real game excluded."
+        },
+        "clip": {
+          "report": "visibility-clip-oracle.json",
+          "passed": true,
+          "scope": "Unmodified complete numeric path of 0x10071f790 under original RTZ/FTZ/DAZ MXCSR and QEMU -cpu max. Original stack cookie is an explicit fixed oracle cookie. Original diagnostic/render switch 0x10203c2f8 disabled; logging and debug geometry calls excluded. Raw signed-normal bias, homogeneous summation, z>=0 clipping with original edge order, signed perspective divide, large-triangle product filter, emitted triangle/quad indices, count reset and dummy vertex/index padding included. Every output slot and untouched sentinel compared; arithmetic NaN payloads excluded. No full loaded resource/geometry submit, hardware/game/GPU execution or real queries claimed."
+        },
+        "submit": {
+          "report": "visibility-submit-oracle.json",
+          "passed": true,
+          "scope": "Original complete numeric geometry submission 0x100720250, original matrix multiply 0x100076df0, transform 0x10071e7f0, both triangle depth calls 0x10071ee60 and clipping 0x10071f790 execute continuously. Only external scratch getter/allocation/free are callbacks with explicit 0xef initial snapshots; debug diagnostic flag disabled and stack cookie supplied. Depth including guard, allocation sizes, selected list, clipping buffer slots and release counts compared; transformed scratch W and arithmetic NaN payloads excluded. All 33 maps use every occluder vertex/index with explicit synthetic orthographic projection. Original camera/resource/loading, real heap lifetime, diagnostic rendering, full Visibility Update/Resize, mip queries, hardware/GPU/game runtime remain unverified. QEMU reciprocal/MIN capabilities are explicit."
+        }
+      },
+      "targetCheckpointProgressPercent": 90
+    }
+  ],
+  "priority": [
+    "Mesh.bin、Terrain.bin、Cloud.bin、Skirt.bin、Occluder.bin 五段同等优先推进至各 9/10（90%）；第 10 项保留 Windows 真机和原游戏校验；共享对象、资源、生成及 Visibility 依赖一起恢复。",
+    "Objects.level.bin 全部类和每个对象建立独立实现清单，最终必须 100% 还原原游戏逻辑；基础对象/模型/环境/区域/资源/生成/Visibility 共享依赖一起恢复。",
+    "Avatar 完整原游戏游玩体验仍在 BstBaked 与 Objects 后；物理球后置。"
+  ],
+  "dataLinks": {
+    "levels": 33,
+    "versions": {
+      "51": 1,
+      "52": 32
+    },
+    "segments": {
+      "Mesh.bin": {
+        "bytes": 53203032,
+        "records": 10653,
+        "levels": 32
+      },
+      "Terrain.bin": {
+        "bytes": 80898875,
+        "records": 77,
+        "levels": 31
+      },
+      "Cloud.bin": {
+        "bytes": 33300014,
+        "records": 27,
+        "levels": 27
+      },
+      "Skirt.bin": {
+        "bytes": 17251060,
+        "records": 2533,
+        "levels": 27
+      },
+      "Occluder.bin": {
+        "bytes": 5344318,
+        "records": 33,
+        "levels": 33
+      }
+    },
+    "bakeRecords": 10653,
+    "guidMatchedRecords": 10592,
+    "nameAndGuidMatchedRecords": 10592,
+    "unresolvedNameAndGuidRecords": 61,
+    "classesWithBakeOwners": [
+      "LevelMesh",
+      "Beamo",
+      "CloudCard",
+      "BeamoDecal"
+    ],
+    "METR": {
+      "presentLevels": 0,
+      "applicable": false,
+      "reason": "Supplied v51/v52 LOD0 is fully partitioned into five logical regions; no METR TOC tag or trailing bytes. Later-version reference-project METR definitions are not adopted as this executable evidence."
+    }
+  },
+  "excludedSegments": [
+    {
+      "name": "METR.bin",
+      "purpose": "其他格式版本的统计/元数据段候选",
+      "checkpointProgressPercent": null,
+      "overallNativeLogicPercent": null,
+      "applicableToSuppliedVersion": false,
+      "presentLevels": 0,
+      "evidence": "meshes-object-links.json",
+      "remaining": "当前 v51/v52 无此段；未把参考项目的后续版本定义当作原游戏证据。"
+    }
+  ],
+  "cameraSampling": {
+    "documentation": "相机采样与云地形时间历史逆向.md",
+    "nativeOracle": "camera-jitter-oracle.json",
+    "gpuCheck": "camera-temporal-check.json",
+    "realMapCheck": "viewport-camera-sampling-check.json",
+    "checkpointsAdded": 0
+  },
+  "bakedLookup": {
+    "report": "docs/baked-lookup-oracle.json",
+    "nativeBindings": "docs/baked-bindings-native.json",
+    "passed": true,
+    "queries": 11710,
+    "corpusMaps": 33,
+    "corpusRecords": 10653,
+    "scope": "Unmodified original 0x1003f68d0 body plus original Beamo/CloudCard/model acceptance instruction slices with return trampolines at their continuations. Explicit table snapshots include all 10,653 serialized GUIDs; expanded counts use existing bake audit, unsuccessful expansions explicitly represented by zero. Native lookup does not consult names. Null handles/resources, signed load index, duplicates/first-match, unchanged output on failure and distinct count acceptance rules tested. This does not prove actual loaded state, invalid-GUID rewriting, arbitrary Object GUID dispatch, allocation, class lifecycle or game runtime.",
+    "loadedStateRestored": false,
+    "objectGuidDispatchRestored": false,
+    "viewportIntegrated": false,
+    "completeModelLifecycleRestored": false,
+    "unassociatedSerializedRecords": 61,
+    "checks": {
+      "tests": 135,
+      "typecheck": true,
+      "build": true
+    },
+    "details": "模型烘焙绑定逆向.md"
+  },
+  "occluder": {
+    "report": "docs/occluder-native.json",
+    "signedNormalBytesRestored": 3,
+    "packedNormalsExposed": true,
+    "fourthByteSemanticsRestored": false,
+    "nativeEntryFunctionsLocated": 14,
+    "fullSoftwareDepthRuntimeRestored": false,
+    "viewportCullingIntegrated": false
+  },
+  "visibilityQueries": {
+    "sphereReport": "docs/visibility-spheres-oracle.json",
+    "aabbReport": "docs/visibility-aabbs-oracle.json",
+    "numericSphereQueriesVerified": true,
+    "numericAabbQueriesVerified": true,
+    "sphereCases": 1398,
+    "aabbCases": 1530,
+    "compared": 177670,
+    "corpusMaps": 33,
+    "cloudCardWorldSpheres": 356,
+    "geometryVertexBounds": 2669,
+    "cloudCardCandidateOrderAdapter": "src/core/cloud-card-visibility.ts:cloudCardOcclusionPlan",
+    "nativeCameraPreparationVerified": false,
+    "realResourceLifecycleVerified": false,
+    "objectDropOcclusionDependenciesRestored": false,
+    "viewportIntegrated": false,
+    "originalHardwareVerified": false,
+    "originalGameVerified": false,
+    "originalMethodsVerifiedWithExplicitResources": true,
+    "originalNameTypeLookupAndIntrusiveReferencesVerified": true
+  },
+  "visibilityLifecycle": {
+    "report": "docs/visibility-lifecycle-oracle.json",
+    "details": "docs/Visibility生命周期与地形候选.md",
+    "passed": true,
+    "cases": 227,
+    "steps": 2724,
+    "compared": 2411020,
+    "corpusMaps": 33,
+    "originalMethodsVerifiedWithExplicitResources": true,
+    "originalNameTypeLookupAndIntrusiveReferencesVerified": true,
+    "debugFrustumEntry": "0x1002bcda0",
+    "debugFrustumUpdatesStoredCamera": false,
+    "cameraCopyFlag": "0x100d0d4c0",
+    "realLoaderAndResourceVirtualMethodsRestored": false,
+    "cameraProducerAndClassDefaultsRestored": false,
+    "globalModuleSchedulingRestored": false,
+    "viewportIntegrated": false,
+    "originalHardwareVerified": false,
+    "originalGameVerified": false,
+    "checks": {
+      "tests": 157,
+      "typecheck": true,
+      "build": true,
+      "originalHardware": false,
+      "originalGame": false,
+      "windowsRuntime": false
+    }
+  },
+  "terrainVisibility": {
+    "frustumReport": "docs/terrain-frustum-oracle.json",
+    "lodReport": "docs/terrain-lod-oracle.json",
+    "frustumCases": 3044,
+    "lodCases": 1732,
+    "compared": 80416,
+    "corpusMaps": 31,
+    "corpusRecords": 77,
+    "numericObbVerified": true,
+    "numericLodSpansVerified": true,
+    "candidateAdapter": "src/core/terrain-visibility.ts:terrainOcclusionCandidates",
+    "binQueryAdapter": "src/core/terrain-visibility.ts:queryTerrainBinLods",
+    "realObjectAndBinProductionRestored": false,
+    "lodTransitionsAndJobsRestored": false,
+    "viewportIntegrated": false,
+    "checks": {
+      "tests": 157,
+      "typecheck": true,
+      "build": true,
+      "originalHardware": false,
+      "originalGame": false,
+      "windowsRuntime": false
+    }
+  },
+  "terrainBinGeometry": {
+    "geometryReport": "docs/terrain-bin-geometry-oracle.json",
+    "drawReport": "docs/terrain-bin-draw-oracle.json",
+    "details": "docs/地形bin创建与绘制准备.md",
+    "geometryCases": 170,
+    "corpusMaps": 31,
+    "corpusRecords": 77,
+    "corpusBins": 96309,
+    "geometryCompared": 76061296,
+    "drawCases": 170,
+    "drawSteps": 1028,
+    "binGeometryAndPacketsVerified": true,
+    "initialDrawPreparationVerified": true,
+    "actualLoaderRestored": false,
+    "collisionRegistrationRestored": false,
+    "lodTransitionsAndJobsRestored": false,
+    "viewportIntegrated": false,
+    "checks": {
+      "tests": 162,
+      "typecheck": true,
+      "build": true,
+      "originalHardware": false,
+      "originalGame": false,
+      "windowsRuntime": false
+    }
+  },
+  "targetEachSegmentCheckpointPercent": 90,
+  "hardwareCheckpointReserved": true,
+  "terrainBinLifecycle": {
+    "passed": true,
+    "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+    "cases": 345,
+    "steps": 1558,
+    "exclusiveSections": 9058,
+    "jobDispatches": 100,
+    "compared": 56684094,
+    "failed": 0,
+    "corpusMaps": 31,
+    "corpusRecords": 77,
+    "corpusBins": 96309,
+    "selectedBins": 5339,
+    "visibilityTransitionsVerified": true,
+    "heapReferenceRemovalVerified": true,
+    "postLockLodRereadVerified": true,
+    "jobDispatchVerified": true,
+    "allocationReclamationRestored": false,
+    "lodTransitionsAndJobsRestored": false,
+    "actualLoaderRestored": false,
+    "viewportIntegrated": false,
+    "report": "docs/terrain-bin-lifecycle-oracle.json",
+    "details": "docs/地形bin显隐与LOD任务入口.md",
+    "checks": {
+      "tests": 167,
+      "typecheck": true,
+      "build": true,
+      "originalHardware": false,
+      "originalGame": false,
+      "windowsRuntime": false
+    }
+  },
+  "objectsClassProgress": {
+    "report": "docs/Objects.level.bin类进度.json",
+    "markdown": "docs/Objects.level.bin类进度清单.md",
+    "html": "docs/Objects.level.bin类进度.html",
+    "uiCheck": "docs/objects-class-progress-ui-check.json",
+    "summary": {
+      "levels": 33,
+      "totalNodes": 49824,
+      "nodeClasses": 280,
+      "declaredClasses": 283,
+      "nestedOnlyClasses": 0,
+      "declarationOnlyClasses": 3,
+      "references": 60016,
+      "brokenReferences": 0,
+      "coreSubchainVerifiedClasses": 6,
+      "completeRuntimeClasses": 0,
+      "completedCheckpoints": 836,
+      "totalCheckpoints": 2830,
+      "meanClassCheckpointPercent": 29.54,
+      "histogram": {
+        "20": 19,
+        "30": 258,
+        "40": 6
+      }
+    },
+    "fullRuntimePercent": null
+  },
+  "fullOriginalGameLogicTargetPercent": 100,
+  "fullOriginalGameLogicVerified": false,
+  "fullOriginalGameLogicPercent": null,
+  "originalLogicAcceptance": {
+    "fullOriginalGameLogicPercent": 100,
+    "bstBakedPreHardwareStagePercent": 90,
+    "hardwareValidationRequired": true,
+    "acceptance": "全部原构造/默认值、继承/虚表、加载注册、启用传播、启动顺序、事件/依赖、更新状态、实际场景/UI/物理/渲染、销毁切图与真机原游戏行为闭合。预览、近似实现、格式解析和局部函数对照不等于完整类或实例验收。"
+  },
+  "skirtBarnRuntime": {
+    "passed": true,
+    "executableSha256": "3fa493e2542638299fd54d64e1b62aeb5b81c8f290176d955c3e38a27fa72b20",
+    "cases": 83,
+    "compared": 45939862,
+    "failed": 0,
+    "corpusMaps": 33,
+    "corpusRecords": 2533,
+    "corpusVertices": 363788,
+    "corpusIndices": 1339572,
+    "drawChunks": 4415,
+    "loadedGeometryAndDescriptorsVerified": true,
+    "normalTerminationDispatchVerified": true,
+    "drawDriverAndChunkAppendVerified": true,
+    "actualResourceLifecycleRestored": false,
+    "cameraAndVisibilityQueriesRestored": false,
+    "generationRestored": false,
+    "viewportIntegrated": false,
+    "originalHardwareVerified": false,
+    "originalGameVerified": false,
+    "report": "docs/skirt-barn-oracle.json",
+    "details": "docs/裙边加载与绘制调度逆向.md",
+    "checks": {
+      "tests": 171,
+      "typecheck": true,
+      "build": true,
+      "originalHardware": false,
+      "originalGame": false,
+      "windowsRuntime": false
+    }
+  },
+  "objectsInstanceProgress": {
+    "report": "docs/Objects.level.bin对象实现清单.json",
+    "markdown": "docs/Objects.level.bin全部实现清单.md",
+    "html": "docs/Objects.level.bin对象实现清单.html",
+    "perLevelFolder": "docs/Objects对象清单",
+    "uiCheck": "docs/objects-instance-progress-ui-check.json",
+    "summary": {
+      "levels": 33,
+      "declaredClasses": 283,
+      "nodeClasses": 280,
+      "totalObjects": 49824,
+      "listedObjects": 49824,
+      "references": 60016,
+      "brokenReferences": 0,
+      "nestedInstances": 0,
+      "individuallyRuntimeVerifiedObjects": 0,
+      "completedInstanceCheckpoints": 99648,
+      "totalInstanceCheckpoints": 498240,
+      "instanceFormatChecklistPercent": 20,
+      "fullNativeLogicPercent": null
+    },
+    "fullRuntimePercent": null
+  }
+}

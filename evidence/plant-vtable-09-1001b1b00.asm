@@ -1,0 +1,46 @@
+0x1001b1b00: push rbp
+0x1001b1b01: mov rbp, rsp
+0x1001b1b04: push rbx
+0x1001b1b05: push rax
+0x1001b1b06: mov rbx, rdi
+0x1001b1b09: mov rax, qword ptr [rbx + 0x38]
+0x1001b1b0d: cmp byte ptr [rax + 0x98], 0
+0x1001b1b14: je 0x1001b1b46
+0x1001b1b16: mov edx, 0xb6
+0x1001b1b1b: add rdx, qword ptr [rax + 0x110]
+0x1001b1b22: mov ecx, 1
+0x1001b1b27: cmp byte ptr [rdx], 0
+0x1001b1b2a: jne 0x1001b1b54
+0x1001b1b2c: cmp byte ptr [rax + 0xa4], 0
+0x1001b1b33: jne 0x1001b1b54
+0x1001b1b35: movzx ecx, byte ptr [rax + 0xa5]
+0x1001b1b3c: movzx eax, byte ptr [rbx + 0x49]
+0x1001b1b40: cmp ecx, eax
+0x1001b1b42: je 0x1001b1b5c
+0x1001b1b44: jmp 0x1001b1b88 ; 0x1001b1b88
+0x1001b1b46: lea rdx, [rax + 0x56]
+0x1001b1b4a: mov ecx, 1
+0x1001b1b4f: cmp byte ptr [rdx], 0
+0x1001b1b52: je 0x1001b1b2c
+0x1001b1b54: movzx eax, byte ptr [rbx + 0x49]
+0x1001b1b58: cmp ecx, eax
+0x1001b1b5a: jne 0x1001b1b88
+0x1001b1b5c: cmp byte ptr [rbx + 0x4a], 0
+0x1001b1b60: jne 0x1001b1b8c
+0x1001b1b62: mov rdi, qword ptr [rbx + 0x40]
+0x1001b1b66: mov esi, 1
+0x1001b1b6b: call 0x1004d1f60 ; 0x1004d1f60
+0x1001b1b70: mov byte ptr [rbx + 0x4a], 1
+0x1001b1b74: cmp byte ptr [rbx + 0x48], 0
+0x1001b1b78: je 0x1001b1b8c
+0x1001b1b7a: mov rdi, rbx
+0x1001b1b7d: add rsp, 8
+0x1001b1b81: pop rbx
+0x1001b1b82: pop rbp
+0x1001b1b83: jmp 0x10032ef60 ; 0x10032ef60
+0x1001b1b88: mov byte ptr [rbx + 0x4a], 0
+0x1001b1b8c: add rsp, 8
+0x1001b1b90: pop rbx
+0x1001b1b91: pop rbp
+0x1001b1b92: ret 
+0x1001b1b93: nop word ptr cs:[rax + rax]

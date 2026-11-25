@@ -1,0 +1,885 @@
+{
+  "passed": true,
+  "runtime": "linux arm64",
+  "images": [
+    {
+      "level": "WorldEmpty",
+      "file": "docs/shader-effects/WorldEmpty-viewport.png",
+      "sequence": 2,
+      "nonblack": 343680,
+      "colors": 33,
+      "pixels": 343680
+    },
+    {
+      "level": "Dawn",
+      "file": "docs/shader-effects/Dawn-viewport.png",
+      "sequence": 3,
+      "nonblack": 343680,
+      "colors": 10571,
+      "pixels": 343680,
+      "materials": {
+        "scope": "Original terrain/skirt GLSL, real packed geometry/material textures, recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/Tonemap chain. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending.",
+        "draws": 20,
+        "shaders": [
+          "RockFaceSh",
+          "SandSh",
+          "GrassSh",
+          "RockFaceShAlpha",
+          "SandShAlpha",
+          "GrassShAlpha",
+          "RockFaceShAlphaSkirt",
+          "SandShAlphaSkirt",
+          "GrassShAlphaSkirt"
+        ],
+        "triangles": 138277,
+        "textures": [
+          "CliffSh",
+          "CliffWetSh",
+          "Noise3Ch",
+          "GrassNorTex0",
+          "GrassNorTex1",
+          "GrassMask"
+        ],
+        "dynamics": {
+          "time": 0,
+          "scrolls": [
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        "sceneUploads": 4,
+        "overlayUpdates": 4,
+        "cloud": {
+          "scope": "Original sparse cloud fields and CloudFluffy.vol; CloudCore history/signed depth, three depth passes, 1/8 and 1/4 R16F coarse passes, half-resolution dual RGBA16F CloudFluffy plus dynamic CloudCard, original FogUpsample and Tonemap GLSL. Stage-sized viewport uniforms; native top-row depth for AIR FragCoord and explicit lower-left storage for projected Coarse/Fog UV. Preview: zero sampled EnvironmentForces wind, static map-start environments, camera used for local avatar, neutral unbaked card lighting, no Visibility occlusion, water/fog-volume/transparent-list/bloom/motion inputs zero, explicit preview composed-HDR geometric-mean exposure and sRGB display transfer. Native opaque RGBA32F converted once to half RTE; original per-draw Metal half rounding/game image parity remain unverified.",
+          "enabled": true,
+          "frames": 1,
+          "volumeBlocks": 6361,
+          "proxyTriangles": 24781,
+          "visibleCards": 3,
+          "passes": [
+            "CloudCore",
+            "OpaqueRGBDepth",
+            "DepthDownsample",
+            "DepthDownsampleGather",
+            "DepthDownsampleQuarter",
+            "CloudFluffySuperCoarse",
+            "CloudFluffyCoarse",
+            "CloudFluffy",
+            "CloudCard",
+            "PreviewLuminance",
+            "FogUpsample",
+            "Fxaa",
+            "Tonemap"
+          ],
+          "noise": "Tex3D/CloudFluffy.vol",
+          "screenNoiseImages": [
+            "NoiseBlue3Ch",
+            "HeatTex"
+          ],
+          "wind": {
+            "move": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "scroll": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "time": 0
+          },
+          "undulationScale": 1,
+          "cloudMat": [
+            0.4562634229660034,
+            0.4562634229660034,
+            0.4562634229660034,
+            0.10000000149011612
+          ],
+          "cloudNoiseTweaks": [
+            2.5,
+            0.5,
+            0.5,
+            0.15000000596046448
+          ],
+          "lastMilliseconds": 13967.713014999998,
+          "averageLum": 0.00212436929140243,
+          "exposureScope": "Editor composed-HDR geometric mean and sRGB display transfer; original luminance feedback pending",
+          "statistics": {
+            "Opaque": {
+              "min": [
+                -0.0005177435232326388,
+                -0.0006742741679772735,
+                -0.0005956763634458184,
+                -18
+              ],
+              "max": [
+                0.042740240693092346,
+                0.033522263169288635,
+                0.02466023527085781,
+                11.733833312988281
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "CloudFluffySuperCoarse": {
+              "min": [
+                2.5,
+                0,
+                0,
+                1
+              ],
+              "max": [
+                162,
+                0,
+                0,
+                1
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "CloudFluffyCoarse": {
+              "min": [
+                2.5,
+                0,
+                0,
+                1
+              ],
+              "max": [
+                163.25,
+                0,
+                0,
+                1
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "CloudA": {
+              "min": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "max": [
+                0.0611572265625,
+                0.0194244384765625,
+                0.00823974609375,
+                1.0703125
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "CloudB": {
+              "min": [
+                0,
+                -0.00030517578125,
+                -5.05078125,
+                0
+              ],
+              "max": [
+                1946,
+                0.000152587890625,
+                0.0001220703125,
+                1.0703125
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "FogUpsample": {
+              "min": [
+                0.202880859375,
+                0.2125244140625,
+                0.262451171875,
+                0
+              ],
+              "max": [
+                0.90087890625,
+                0.900390625,
+                0.9365234375,
+                0
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "Fxaa": {
+              "min": [
+                0.2073974609375,
+                0.260986328125,
+                0.3134765625,
+                0.5
+              ],
+              "max": [
+                0.90087890625,
+                0.900390625,
+                0.9365234375,
+                0.5
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "Tonemap": {
+              "min": [
+                0.007521365769207478,
+                0.0075966836884617805,
+                0.003054250031709671,
+                0
+              ],
+              "max": [
+                0.6031283140182495,
+                0.5134902000427246,
+                0.4377756714820862,
+                0
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          },
+          "active": true
+        }
+      }
+    },
+    {
+      "level": "Dawn",
+      "file": "docs/shader-effects/Dawn-detail.png",
+      "sequence": 4,
+      "nonblack": 343680,
+      "colors": 2406,
+      "pixels": 343680,
+      "view": "Controller zoom; editor inspection camera, not original game spawn"
+    },
+    {
+      "level": "Prairie_ButterflyFields",
+      "file": "docs/shader-effects/Prairie_ButterflyFields-viewport.png",
+      "sequence": 7,
+      "nonblack": 343680,
+      "colors": 10678,
+      "pixels": 343680,
+      "materials": {
+        "scope": "Original terrain/skirt GLSL, real packed geometry/material textures, recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/Tonemap chain. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending.",
+        "draws": 20,
+        "shaders": [
+          "RockFaceSh",
+          "SandSh",
+          "SandRainSh",
+          "GrassSh",
+          "CloudSh",
+          "RockFaceShAlpha",
+          "SandShAlpha",
+          "GrassShAlpha",
+          "CloudShAlpha",
+          "RockFaceShAlphaSkirt",
+          "SandShAlphaSkirt",
+          "GrassShAlphaSkirt"
+        ],
+        "triangles": 242704,
+        "textures": [
+          "CliffSh",
+          "Noise3Ch",
+          "UpNormal",
+          "GrassNorTex0",
+          "GrassNorTex1",
+          "GrassMask"
+        ],
+        "dynamics": {
+          "time": 0.26600000262260437,
+          "scrolls": [
+            [
+              0.004000390879809856,
+              0,
+              0,
+              0
+            ],
+            [
+              0.9923388361930847,
+              0,
+              0.9866660833358765,
+              0
+            ],
+            [
+              0.9972935318946838,
+              0,
+              0.004676410928368568,
+              0
+            ]
+          ]
+        },
+        "sceneUploads": 5,
+        "overlayUpdates": 5,
+        "cloud": {
+          "scope": "Original sparse cloud fields and CloudFluffy.vol; CloudCore history/signed depth, three depth passes, 1/8 and 1/4 R16F coarse passes, half-resolution dual RGBA16F CloudFluffy plus dynamic CloudCard, original FogUpsample and Tonemap GLSL. Stage-sized viewport uniforms; native top-row depth for AIR FragCoord and explicit lower-left storage for projected Coarse/Fog UV. Preview: zero sampled EnvironmentForces wind, static map-start environments, camera used for local avatar, neutral unbaked card lighting, no Visibility occlusion, water/fog-volume/transparent-list/bloom/motion inputs zero, explicit preview composed-HDR geometric-mean exposure and sRGB display transfer. Native opaque RGBA32F converted once to half RTE; original per-draw Metal half rounding/game image parity remain unverified.",
+          "enabled": true,
+          "frames": 1,
+          "volumeBlocks": 26623,
+          "proxyTriangles": 24934,
+          "visibleCards": 14,
+          "passes": [
+            "CloudCore",
+            "OpaqueRGBDepth",
+            "DepthDownsample",
+            "DepthDownsampleGather",
+            "DepthDownsampleQuarter",
+            "CloudFluffySuperCoarse",
+            "CloudFluffyCoarse",
+            "CloudFluffy",
+            "CloudCard",
+            "PreviewLuminance",
+            "FogUpsample",
+            "Fxaa",
+            "Tonemap"
+          ],
+          "noise": "Tex3D/CloudFluffy.vol",
+          "screenNoiseImages": [
+            "NoiseBlue3Ch",
+            "HeatTex"
+          ],
+          "wind": {
+            "move": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "scroll": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "time": 0
+          },
+          "undulationScale": 1,
+          "cloudMat": [
+            0.4562634229660034,
+            0.4562634229660034,
+            0.4562634229660034,
+            0.10000000149011612
+          ],
+          "cloudNoiseTweaks": [
+            2.5,
+            0.5,
+            0.5,
+            0.15000000596046448
+          ],
+          "lastMilliseconds": 5929.108070000002,
+          "averageLum": 0.016289837737777507,
+          "exposureScope": "Editor composed-HDR geometric mean and sRGB display transfer; original luminance feedback pending",
+          "statistics": {
+            "Opaque": {
+              "min": [
+                -0.0028102793730795383,
+                -0.004794431384652853,
+                -0.007328942883759737,
+                -200
+              ],
+              "max": [
+                0.9865078926086426,
+                1.0288655757904053,
+                3.0681028366088867,
+                210.47288513183594
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "CloudFluffySuperCoarse": {
+              "min": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "max": [
+                2060,
+                0,
+                0,
+                1
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "CloudFluffyCoarse": {
+              "min": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "max": [
+                2060,
+                0,
+                0,
+                1
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "CloudA": {
+              "min": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "max": [
+                1.03515625,
+                1.0654296875,
+                1.19921875,
+                1.0986328125
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "CloudB": {
+              "min": [
+                0,
+                -0.0001678466796875,
+                -0.007518768310546875,
+                0
+              ],
+              "max": [
+                2964,
+                0.000335693359375,
+                0.031402587890625,
+                1.0986328125
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "FogUpsample": {
+              "min": [
+                0.019134521484375,
+                0.018035888671875,
+                0.0013055801391601562,
+                0
+              ],
+              "max": [
+                0.9990234375,
+                0.982421875,
+                0.71630859375,
+                0
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "Fxaa": {
+              "min": [
+                0.0207366943359375,
+                0.019683837890625,
+                0.0013055801391601562,
+                0.5
+              ],
+              "max": [
+                0.9990234375,
+                0.982421875,
+                0.71630859375,
+                0.5
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "Tonemap": {
+              "min": [
+                7.105761028469715e-7,
+                0.000231276368140243,
+                0.06489342451095581,
+                0
+              ],
+              "max": [
+                0.9562876224517822,
+                0.9584805965423584,
+                0.9971386194229126,
+                0
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          },
+          "active": true
+        }
+      }
+    },
+    {
+      "level": "Prairie_ButterflyFields",
+      "file": "docs/shader-effects/Prairie_ButterflyFields-detail.png",
+      "sequence": 9,
+      "nonblack": 343680,
+      "colors": 11440,
+      "pixels": 343680,
+      "view": "Controller zoom; editor inspection camera, not original game spawn"
+    },
+    {
+      "level": "Sunset",
+      "file": "docs/shader-effects/Sunset-viewport.png",
+      "sequence": 13,
+      "nonblack": 315985,
+      "colors": 4876,
+      "pixels": 343680,
+      "materials": {
+        "scope": "Original terrain/skirt GLSL, real packed geometry/material textures, recovered float32 shader time and three-layer scroll accumulation. Explicit zero sampled wind field with original texture drift; full EnvironmentForces global noise/local winds/rails remain pending. Shared float32 HDR color/depth and linear decal/skirt blending. Main material viewport feeds the cloud depth/FogUpsample/Tonemap chain. Scene probe, point lights/shadows, water/puddle, startup events, bloom/motion and original Metal per-draw half quantization remain pending.",
+        "draws": 17,
+        "shaders": [
+          "RockFaceSh",
+          "SandSh",
+          "RockFaceShAlpha",
+          "SandShAlpha",
+          "CloudShAlpha",
+          "RockFaceShAlphaSkirt",
+          "SandShAlphaSkirt"
+        ],
+        "triangles": 169136,
+        "textures": [
+          "CliffSh",
+          "GlacierSh",
+          "TileFloorSh",
+          "WallSh",
+          "WallBrickSh",
+          "Noise3Ch"
+        ],
+        "dynamics": {
+          "time": 0.26600000262260437,
+          "scrolls": [
+            [
+              0.004000390879809856,
+              0,
+              0,
+              0
+            ],
+            [
+              0.9923388361930847,
+              0,
+              0.9866660833358765,
+              0
+            ],
+            [
+              0.9972935318946838,
+              0,
+              0.004676410928368568,
+              0
+            ]
+          ]
+        },
+        "sceneUploads": 8,
+        "overlayUpdates": 8,
+        "cloud": {
+          "scope": "Original sparse cloud fields and CloudFluffy.vol; CloudCore history/signed depth, three depth passes, 1/8 and 1/4 R16F coarse passes, half-resolution dual RGBA16F CloudFluffy plus dynamic CloudCard, original FogUpsample and Tonemap GLSL. Stage-sized viewport uniforms; native top-row depth for AIR FragCoord and explicit lower-left storage for projected Coarse/Fog UV. Preview: zero sampled EnvironmentForces wind, static map-start environments, camera used for local avatar, neutral unbaked card lighting, no Visibility occlusion, water/fog-volume/transparent-list/bloom/motion inputs zero, explicit preview composed-HDR geometric-mean exposure and sRGB display transfer. Native opaque RGBA32F converted once to half RTE; original per-draw Metal half rounding/game image parity remain unverified.",
+          "enabled": true,
+          "frames": 1,
+          "volumeBlocks": 19843,
+          "proxyTriangles": 16871,
+          "visibleCards": 20,
+          "passes": [
+            "CloudCore",
+            "OpaqueRGBDepth",
+            "DepthDownsample",
+            "DepthDownsampleGather",
+            "DepthDownsampleQuarter",
+            "CloudFluffySuperCoarse",
+            "CloudFluffyCoarse",
+            "CloudFluffy",
+            "CloudCard",
+            "PreviewLuminance",
+            "FogUpsample",
+            "Fxaa",
+            "Tonemap"
+          ],
+          "noise": "Tex3D/CloudFluffy.vol",
+          "screenNoiseImages": [
+            "NoiseBlue3Ch",
+            "HeatTex"
+          ],
+          "wind": {
+            "move": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "scroll": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "time": 0
+          },
+          "undulationScale": 0,
+          "cloudMat": [
+            0.4562634229660034,
+            0.4562634229660034,
+            0.4562634229660034,
+            0.20000000298023224
+          ],
+          "cloudNoiseTweaks": [
+            2.5,
+            0.5,
+            0.5,
+            0.15000000596046448
+          ],
+          "lastMilliseconds": 5415.4624979999935,
+          "averageLum": 0.46963336560531477,
+          "exposureScope": "Editor composed-HDR geometric mean and sRGB display transfer; original luminance feedback pending",
+          "statistics": {
+            "Opaque": {
+              "min": [
+                -0.17131920158863068,
+                -0.24539533257484436,
+                -0.4065016806125641,
+                -162.75
+              ],
+              "max": [
+                1.7064998149871826,
+                1.1147184371948242,
+                1.1811381578445435,
+                118.79204559326172
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "CloudFluffySuperCoarse": {
+              "min": [
+                12.5,
+                0,
+                0,
+                1
+              ],
+              "max": [
+                1628,
+                0,
+                0,
+                1
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "CloudFluffyCoarse": {
+              "min": [
+                2.5,
+                0,
+                0,
+                1
+              ],
+              "max": [
+                1593,
+                0,
+                0,
+                1
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "CloudA": {
+              "min": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "max": [
+                1.115234375,
+                0.611328125,
+                0.521484375,
+                1.9833984375
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "CloudB": {
+              "min": [
+                0,
+                -0.0001983642578125,
+                -478,
+                0
+              ],
+              "max": [
+                5268,
+                0.00020778179168701172,
+                23.90625,
+                1.9833984375
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "FogUpsample": {
+              "min": [
+                0.21533203125,
+                0.294921875,
+                0.28173828125,
+                0
+              ],
+              "max": [
+                0.99951171875,
+                0.99951171875,
+                0.99951171875,
+                0
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "Fxaa": {
+              "min": [
+                0.3193359375,
+                0.3193359375,
+                0.3193359375,
+                0.5
+              ],
+              "max": [
+                0.998046875,
+                0.99755859375,
+                0.99658203125,
+                0.5
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "Tonemap": {
+              "min": [
+                0.0000032730170005379478,
+                0.000005114436589792604,
+                0.000010025626579590607,
+                0
+              ],
+              "max": [
+                0.44418948888778687,
+                0.44418948888778687,
+                0.44418948888778687,
+                0
+              ],
+              "nonfinite": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          },
+          "active": true
+        }
+      }
+    },
+    {
+      "level": "Sunset",
+      "file": "docs/shader-effects/Sunset-detail.png",
+      "sequence": 15,
+      "nonblack": 313100,
+      "colors": 5459,
+      "pixels": 343680,
+      "view": "Controller zoom; editor inspection camera, not original game spawn"
+    }
+  ],
+  "checks": [
+    "Empty map presents an actual Vulkan atmosphere, not a solid background",
+    "Raw lighting inspection clears original material draws; restoring material mode rebuilds real terrain shaders",
+    "Map switches load original terrain/skirt shader batches and textures; orbit changes the frame and preserves source assets"
+  ],
+  "limitation": "Static map defaults and spatial environment, spherical atmosphere background and original Sun shader. Original terrain/skirt GLSL now renders real map packed attributes and textures, with HDR linear blending and preview display adaptation. Scene probe, point lights, shadows, original model shading, full lighting and original luminance feedback remain incomplete; cloud depth/coarse/fine/Card/FogUpsample/Tonemap are now connected with explicit editor exposure adaptation."
+}

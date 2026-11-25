@@ -1,0 +1,34 @@
+{
+  "checks": [
+    "First-use Data configuration and WorldEmpty opening",
+    "Live property edit and cancel mode exit",
+    "Real IPC save with resized string",
+    "Create plane in native skirt record",
+    "Native 30-definition material palette, skirt batch IPC, userData1 stream and original shader dependency inspector",
+    "Real IPC meshes save and backup",
+    "Native Vulkan device and real RGBA viewport presentation",
+    "1063 RTTI classes visible",
+    "Original Mesh0 vertex shader compiles to Vulkan SPIR-V",
+    "Real Dawn LevelMesh parameters, texture metadata, native shader hash and unresolved pipeline bindings",
+    "Nested shader parameter UI edit, live descriptor update and native save",
+    "Real Dawn serialized EnvNode queue position and original global group order, including FogVolume before Cloud",
+    "Real EnvNode public-field conversion, all eight native parameter groups, live fog update and native object save",
+    "Dawn terrain native opaque/decal batches, captured depth/blend/cull states, linked TerrainBlobGroup and per-surface shader dependencies",
+    "Original vertex-to-sample mapping, one-sample lighting UI edit, channel selector, undo/redo and native meshes save",
+    "Mode-to-map navigation waits for scene rebuild; real Storm Clump hull, first-Marker controller navigation, camera spatial query and live enabled edit with native save",
+    "No renderer page errors"
+  ],
+  "runtime": "linux arm64",
+  "windowsTested": false,
+  "vulkan": {
+    "engine": "Sky Native Vulkan",
+    "backend": "Vulkan",
+    "device": "llvmpipe (LLVM 19.1.7, 128 bits)",
+    "apiVersion": 4210993,
+    "deviceType": 4
+  },
+  "shaderDiagnostic": "Vulkan SPIR-V 编译通过。/tmp/sky-vulkan-shaders-2Y8dzp/shader.vert\n",
+  "limitation": "Linux ARM64 native Vulkan viewport and explicit diagnostic rasterization. Original full shader resources, cloud composition and Windows GPU verification remain incomplete.",
+  "pairedShaderDiagnostic": "Vulkan SPIR-V 编译与链接通过。/tmp/sky-vulkan-shaders-0uKnjM/shader.vert\n/tmp/sky-vulkan-shaders-0uKnjM/shader.frag\nWARNING: /tmp/sky-vulkan-shaders-0uKnjM/shader.frag:2: '' : all default precisions are highp; use precision statements to quiet warning, e.g.:\n         \"precision mediump int; precision highp float;\" \n\n",
+  "success": true
+}
